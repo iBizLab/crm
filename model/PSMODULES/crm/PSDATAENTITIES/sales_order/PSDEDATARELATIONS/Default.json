@@ -1,6 +1,0 @@
-{
-  "codeName" : "Default",
-  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDATARELATIONS/Default.json",
-  "formCaption" : "销售订单",
-  "name" : "销售订单默认关系界面组"
-}

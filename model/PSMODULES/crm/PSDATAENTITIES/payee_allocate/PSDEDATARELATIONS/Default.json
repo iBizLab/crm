@@ -1,9 +1,0 @@
-{
-  "codeName" : "Default",
-  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/payee_allocate/PSDEDATARELATIONS/Default.json",
-  "getFormCapPSLanguageRes" : {
-    "lanResTag" : "DE.LNAME.PAYEE_ALLOCATE"
-  },
-  "formCaption" : "回款分配",
-  "name" : "回款分配默认关系界面组"
-}

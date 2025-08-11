@@ -1,9 +1,0 @@
-{
-  "codeName" : "Default",
-  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/schedule/PSDEDATARELATIONS/Default.json",
-  "getFormCapPSLanguageRes" : {
-    "lanResTag" : "DE.LNAME.SCHEDULE"
-  },
-  "formCaption" : "日程",
-  "name" : "日程默认关系界面组"
-}
