@@ -1,0 +1,3016 @@
+{
+  "getAllPSApps" : [ {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSSYSAPP.json"
+  } ],
+  "getAllPSCodeLists" : [ {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList64.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList75.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList68.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList95.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList27.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList118.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList42.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/outgoing_call_status.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/assessment_type.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList60.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList81.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList83.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList94.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList79.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList30.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList113.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/manufacturer.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList11.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList116.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList84.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList65.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/WFStates.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList77.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/UsrCodeList0625594962.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList70.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/dealstage.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList48.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/weeklies_period.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList38.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/lead_status.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/work_progress_type_task.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/schedulet_ype.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList5.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList24.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList114.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList41.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/TrueFalse.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList37.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList111.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList34.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList28.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList62.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList6.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList46.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList23.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/type.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList86.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList89.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList2.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList90.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList19.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList67.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList4.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/payee_status.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList102.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList20.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList50.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList9.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList29.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList45.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/tax.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList74.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/industry.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList39.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/lead_source.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList101.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList3.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList1.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/business_line.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList32.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList87.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList57.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList16.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList7.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList40.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList58.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/statistics_type.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList10.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList36.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList93.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/work_progress_cztype.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList92.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList107.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList88.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/order_status.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList80.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList52.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList8.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList103.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList35.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList55.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList33.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList59.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/task_relation_owner_type.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/owner_type.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList104.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList99.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/work_progress_type.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList21.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/Rating.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList108.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/owner.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList96.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList112.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/collection_type.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList14.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList56.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/task_status.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/payee_type.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/activityType.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/distribution_model.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList100.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/UsrCodeList0710231620.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList117.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList66.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/YesNo.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/runtime/PSCODELISTS/UsrCodeList0618913512.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/campaign_type.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/SysOperator.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList13.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList54.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/ownership.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList12.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList71.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList98.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList31.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList105.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList22.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList17.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/product_category.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/sysuser.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList47.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList61.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/stage.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList106.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList97.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/priority.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList18.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList69.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList115.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList63.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList49.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList26.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/campaign_status.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList91.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList85.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList82.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList72.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList110.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList78.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList109.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/SortDir.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList15.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList53.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/CodeList76.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSCODELISTS/account_type.json"
+  } ],
+  "getAllPSDEOPPrivs" : [ {
+    "logicName" : "建立",
+    "name" : "CREATE"
+  }, {
+    "logicName" : "删除",
+    "name" : "DELETE"
+  }, {
+    "logicName" : "拒绝",
+    "name" : "DENY"
+  }, {
+    "logicName" : "无控制",
+    "name" : "NONE"
+  }, {
+    "logicName" : "读取",
+    "name" : "READ"
+  }, {
+    "logicName" : "分配关联销售",
+    "getMapPSSysUniRes" : {
+      "modelref" : true,
+      "id" : "ASSIGNRELATEDSALES"
+    },
+    "mapSysUniResCode" : "ASSIGNRELATEDSALES",
+    "name" : "SRFUR__ASSIGNRELATEDSALES",
+    "mapSysUniRes" : true
+  }, {
+    "logicName" : "（其他）特殊处理",
+    "getMapPSSysUniRes" : {
+      "modelref" : true,
+      "id" : "SPECIAL"
+    },
+    "mapSysUniResCode" : "SPECIAL",
+    "name" : "SRFUR__SPECIAL",
+    "mapSysUniRes" : true
+  }, {
+    "logicName" : "更新",
+    "name" : "UPDATE"
+  }, {
+    "logicName" : "流程启动",
+    "name" : "WFSTART"
+  } ],
+  "getAllPSDataEntities" : [ {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/account.json",
+    "name" : "ACCOUNT"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/activitiy.json",
+    "name" : "ACTIVITIY"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/attachment.json",
+    "name" : "ATTACHMENT"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/call.json",
+    "name" : "CALL"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/campaign.json",
+    "name" : "CAMPAIGN"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/contact.json",
+    "name" : "CONTACT"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/custom_button.json",
+    "name" : "CUSTOM_BUTTON"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/deal.json",
+    "name" : "DEAL"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/deal_history.json",
+    "name" : "DEAL_HISTORY"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/deal_stage.json",
+    "name" : "DEAL_STAGE"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/event.json",
+    "name" : "EVENT"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/executor.json",
+    "name" : "EXECUTOR"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/invoice.json",
+    "name" : "INVOICE"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/item.json",
+    "name" : "ITEM"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/lead.json",
+    "name" : "LEAD"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/maneuver.json",
+    "name" : "MANEUVER"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach.json",
+    "name" : "NOTE_ATTACH"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/order_allocate.json",
+    "name" : "ORDER_ALLOCATE"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/payee.json",
+    "name" : "PAYEE"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/payee_allocate.json",
+    "name" : "PAYEE_ALLOCATE"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan.json",
+    "name" : "PAYEE_PLAN"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic.json",
+    "name" : "PAYEE_STATISTIC"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/price_book.json",
+    "name" : "PRICE_BOOK"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/product.json",
+    "name" : "PRODUCT"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/product_certificate.json",
+    "name" : "PRODUCT_CERTIFICATE"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/project.json",
+    "name" : "PROJECT"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/purchase_order.json",
+    "name" : "PURCHASE_ORDER"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/quote.json",
+    "name" : "QUOTE"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/recent.json",
+    "name" : "RECENT"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/relation.json",
+    "name" : "RELATION"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/reservation.json",
+    "name" : "RESERVATION"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order.json",
+    "name" : "SALES_ORDER"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/schedule.json",
+    "name" : "SCHEDULE"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/service_case.json",
+    "name" : "CASE"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/solution.json",
+    "name" : "SOLUTION"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_person.json",
+    "name" : "SYS_PERSON"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role.json",
+    "name" : "SYS_ROLE_UAA"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role_member.json",
+    "name" : "SYS_ROLE_MEMBER"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/tag.json",
+    "name" : "TAG"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/task.json",
+    "name" : "TASK"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/task_executor.json",
+    "name" : "TASK_EXECUTOR"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/user.json",
+    "name" : "USER"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/vendor.json",
+    "name" : "VENDOR"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies.json",
+    "name" : "WEEKLIES"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/weekly_detail.json",
+    "name" : "WEEKLY_DETAIL"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/work_progress.json",
+    "name" : "WORK_PROGRESS"
+  } ],
+  "getAllPSSubSysServiceAPIs" : [ {
+    "modelref" : true,
+    "path" : "PSMODULES/runtime/PSSUBSYSSERVICEAPIS/ibizsysmgr.json"
+  } ],
+  "getAllPSSysBackServices" : [ {
+    "modelref" : true,
+    "path" : "PSSYSBACKSERVICES/DENotifyDeamon.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSBACKSERVICES/SysDataSyncAgentDeamon.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSBACKSERVICES/WFCallbackDeamon.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSBACKSERVICES/SysAdminDeamon.json"
+  } ],
+  "getAllPSSysCounters" : [ {
+    "codeName" : "Portal",
+    "counterType" : "CUSTOM",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/Portal.json",
+    "name" : "门户界面计数器",
+    "getPSCounterId" : "PORTAL",
+    "timer" : 60000,
+    "uniqueTag" : "Portal"
+  }, {
+    "codeName" : "WFExpBar",
+    "counterType" : "CUSTOM",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/WFExpBar.json",
+    "name" : "流程导航栏计数器",
+    "getPSCounterId" : "WFEXPBAR",
+    "timer" : 60000,
+    "uniqueTag" : "WFExpBar"
+  }, {
+    "codeName" : "lead_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/lead_main_view_dr.json",
+    "name" : "线索main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/lead.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "lead_main_view_dr"
+  }, {
+    "codeName" : "case_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/case_main_view_dr.json",
+    "name" : "服务支持main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/service_case/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/service_case.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "case_main_view_dr"
+  }, {
+    "codeName" : "contact_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/contact_main_view_dr.json",
+    "name" : "联系人main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/contact/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/contact.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "contact_main_view_dr"
+  }, {
+    "codeName" : "maneuver_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/maneuver_main_view_dr.json",
+    "name" : "活动main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/maneuver/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/maneuver.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "maneuver_main_view_dr"
+  }, {
+    "codeName" : "solution_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/solution_main_view_dr.json",
+    "name" : "解决方案main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/solution/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/solution.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "solution_main_view_dr"
+  }, {
+    "codeName" : "deal_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/deal_main_view_dr.json",
+    "name" : "商机main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "deal_main_view_dr"
+  }, {
+    "codeName" : "vendor_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/vendor_main_view_dr.json",
+    "name" : "供应商main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/vendor/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/vendor.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "vendor_main_view_dr"
+  }, {
+    "codeName" : "campaign_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/campaign_main_view_dr.json",
+    "name" : "市场活动main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/campaign/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/campaign.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "campaign_main_view_dr"
+  }, {
+    "codeName" : "account_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/account_main_view_dr.json",
+    "name" : "客户main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/account/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "account_main_view_dr"
+  }, {
+    "codeName" : "event_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/event_main_view_dr.json",
+    "name" : "会议main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/event/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/event.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "event_main_view_dr"
+  }, {
+    "codeName" : "product_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/product_main_view_dr.json",
+    "name" : "产品main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/product/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/product.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "product_main_view_dr"
+  }, {
+    "codeName" : "payee_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/payee_main_view_dr.json",
+    "name" : "收付款main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "payee_main_view_dr"
+  }, {
+    "codeName" : "quote_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/quote_main_view_dr.json",
+    "name" : "报价main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/quote/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/quote.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "quote_main_view_dr"
+  }, {
+    "codeName" : "call_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/call_main_view_dr.json",
+    "name" : "通话main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/call/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/call.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "call_main_view_dr"
+  }, {
+    "codeName" : "price_book_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/price_book_main_view_dr.json",
+    "name" : "价格表main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "price_book_main_view_dr"
+  }, {
+    "codeName" : "sales_order_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/sales_order_main_view_dr.json",
+    "name" : "销售订单main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "sales_order_main_view_dr"
+  }, {
+    "codeName" : "invoice_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/invoice_main_view_dr.json",
+    "name" : "发货单main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/invoice/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/invoice.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "invoice_main_view_dr"
+  }, {
+    "codeName" : "project_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/project_main_view_dr.json",
+    "name" : "在线项目main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/project/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/project.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "project_main_view_dr"
+  }, {
+    "codeName" : "product_certificate_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/product_certificate_main_view_dr.json",
+    "name" : "产品证书main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/product_certificate/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/product_certificate.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "product_certificate_main_view_dr"
+  }, {
+    "codeName" : "purchase_order_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/purchase_order_main_view_dr.json",
+    "name" : "采购订单main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/purchase_order/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/purchase_order.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "purchase_order_main_view_dr"
+  }, {
+    "codeName" : "task_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/task_main_view_dr.json",
+    "name" : "任务main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "task_main_view_dr"
+  }, {
+    "codeName" : "payee_plan_main_view_dr",
+    "counterType" : "DEDR",
+    "dynaModelFilePath" : "PSSYSCOUNTERS/payee_plan_main_view_dr.json",
+    "name" : "收款计划main_view关系",
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan.json"
+    },
+    "timer" : 60000,
+    "uniqueTag" : "payee_plan_main_view_dr"
+  } ],
+  "getAllPSSysDBSchemes" : [ {
+    "modelref" : true,
+    "path" : "PSSYSDBSCHEMES/DEFAULT.json"
+  } ],
+  "getAllPSSysDBValueFuncs" : [ {
+    "modelref" : true,
+    "path" : "PSSYSDBVFS/DATEDIFFNOW2.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSDBVFS/DATEDIFFNOW.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSDBVFS/STRLEN.json"
+  } ],
+  "getAllPSSysDEGroups" : [ {
+    "codeName" : "AttachmentInit",
+    "dynaModelFilePath" : "PSSYSDEGROUPS/AttachmentInit.json",
+    "name" : "02.附件自定义关系、一对多属性",
+    "getPSDEGroupDetails" : [ {
+      "codeName" : "payee_plan",
+      "name" : "PAYEE_PLAN",
+      "orderValue" : 100,
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan.json"
+      }
+    } ]
+  }, {
+    "codeName" : "CustomButtonInit",
+    "dynaModelFilePath" : "PSSYSDEGROUPS/CustomButtonInit.json",
+    "name" : "03.链接自定义关系",
+    "getPSDEGroupDetails" : [ {
+      "codeName" : "payee_plan",
+      "name" : "PAYEE_PLAN",
+      "orderValue" : 100,
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan.json"
+      }
+    } ]
+  }, {
+    "codeName" : "MainInit",
+    "dynaModelFilePath" : "PSSYSDEGROUPS/MainInit.json",
+    "name" : "05.主数据视图",
+    "getPSDEGroupDetails" : [ {
+      "codeName" : "payee_plan",
+      "name" : "PAYEE_PLAN",
+      "orderValue" : 100,
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan.json"
+      }
+    } ]
+  }, {
+    "codeName" : "NoteAttachInit",
+    "dynaModelFilePath" : "PSSYSDEGROUPS/NoteAttachInit.json",
+    "name" : "01.备注自定义关系",
+    "getPSDEGroupDetails" : [ {
+      "codeName" : "payee_plan",
+      "name" : "PAYEE_PLAN",
+      "orderValue" : 100,
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan.json"
+      }
+    } ]
+  }, {
+    "codeName" : "RecentInit",
+    "dynaModelFilePath" : "PSSYSDEGROUPS/RecentInit.json",
+    "name" : "04.Get生成最近访问",
+    "getPSDEGroupDetails" : [ {
+      "codeName" : "payee_plan",
+      "name" : "PAYEE_PLAN",
+      "orderValue" : 100,
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan.json"
+      }
+    } ]
+  } ],
+  "getAllPSSysDynaModels" : [ {
+    "modelref" : true,
+    "path" : "PSSYSDYNAMODELS/MainInit.json"
+  } ],
+  "getAllPSSysERMaps" : [ {
+    "modelref" : true,
+    "path" : "PSSYSERMAPS/Usr0628743320.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSSYSERMAPS/zoho.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSSYSERMAPS/Usr0619854844.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSSYSERMAPS/product.json"
+  } ],
+  "getAllPSSysEditorStyles" : [ {
+    "codeName" : "A3db8f2f369ff51395a",
+    "dynaModelFilePath" : "PSSYSEDITORSTYLES/A3db8f2f369ff51395a.json",
+    "editorHeight" : -1.0,
+    "editorType" : "MOBDATE",
+    "editorWidth" : -1.0,
+    "name" : "精确到小时",
+    "styleCode" : "A3db8f2f369ff51395a",
+    "replaceDefault" : false
+  }, {
+    "codeName" : "A8e25807ee9795aff94",
+    "dynaModelFilePath" : "PSSYSEDITORSTYLES/A8e25807ee9795aff94.json",
+    "editorHeight" : -1.0,
+    "editorType" : "MOBTEXT",
+    "editorWidth" : -1.0,
+    "name" : "电话号码",
+    "styleCode" : "A8e25807ee9795aff94",
+    "replaceDefault" : false
+  }, {
+    "codeName" : "Ad92efdf150be73b553",
+    "dynaModelFilePath" : "PSSYSEDITORSTYLES/Ad92efdf150be73b553.json",
+    "editorHeight" : -1.0,
+    "editorType" : "MOBTEXT",
+    "editorWidth" : -1.0,
+    "name" : "数字",
+    "styleCode" : "Ad92efdf150be73b553",
+    "replaceDefault" : false
+  }, {
+    "codeName" : "COMMENT_ITEM",
+    "dynaModelFilePath" : "PSSYSEDITORSTYLES/COMMENT_ITEM.json",
+    "editorHeight" : -1.0,
+    "editorType" : "RAW",
+    "editorWidth" : -1.0,
+    "name" : "评论列表项",
+    "getPSSysPFPlugin" : {
+      "pluginType" : "EDITOR_CUSTOMSTYLE",
+      "pluginCode" : "COMMENT_ITEM",
+      "runtimeObject" : true
+    },
+    "styleCode" : "COMMENT_ITEM",
+    "replaceDefault" : false
+  }, {
+    "codeName" : "A3b311448b3c77b1116",
+    "dynaModelFilePath" : "PSSYSEDITORSTYLES/A3b311448b3c77b1116.json",
+    "editorHeight" : -1.0,
+    "editorType" : "MOBTEXT",
+    "editorWidth" : -1.0,
+    "name" : "网址",
+    "styleCode" : "A3b311448b3c77b1116",
+    "replaceDefault" : false
+  }, {
+    "codeName" : "PERSONNEL_INFO",
+    "dynaModelFilePath" : "PSSYSEDITORSTYLES/PERSONNEL_INFO.json",
+    "editorHeight" : -1.0,
+    "editorType" : "SPAN",
+    "editorWidth" : -1.0,
+    "name" : "人员信息",
+    "getPSSysPFPlugin" : {
+      "pluginType" : "EDITOR_CUSTOMSTYLE",
+      "pluginCode" : "PERSONNEL_INFO",
+      "runtimeObject" : true
+    },
+    "styleCode" : "PERSONNEL_INFO",
+    "replaceDefault" : false
+  }, {
+    "codeName" : "COMMENT_PROJECT",
+    "dynaModelFilePath" : "PSSYSEDITORSTYLES/COMMENT_PROJECT.json",
+    "editorHeight" : -1.0,
+    "editorType" : "HTMLEDITOR",
+    "editorWidth" : -1.0,
+    "name" : "HTML（评论）（项目）",
+    "getPSSysPFPlugin" : {
+      "pluginType" : "EDITOR_CUSTOMSTYLE",
+      "pluginCode" : "COMMENT",
+      "runtimeObject" : true
+    },
+    "styleCode" : "COMMENT_PROJECT",
+    "replaceDefault" : false
+  }, {
+    "codeName" : "Afe299e4725e315af5c",
+    "dynaModelFilePath" : "PSSYSEDITORSTYLES/Afe299e4725e315af5c.json",
+    "editorHeight" : -1.0,
+    "editorType" : "MOBDATE",
+    "editorWidth" : -1.0,
+    "name" : "只有小时分钟",
+    "styleCode" : "Afe299e4725e315af5c",
+    "replaceDefault" : false
+  }, {
+    "codeName" : "Af77981cb7cacfab434",
+    "dynaModelFilePath" : "PSSYSEDITORSTYLES/Af77981cb7cacfab434.json",
+    "editorHeight" : -1.0,
+    "editorType" : "MOBTEXT",
+    "editorWidth" : -1.0,
+    "name" : "密码框",
+    "styleCode" : "Af77981cb7cacfab434",
+    "replaceDefault" : false
+  }, {
+    "codeName" : "A077fcdf942a132fedd",
+    "dynaModelFilePath" : "PSSYSEDITORSTYLES/A077fcdf942a132fedd.json",
+    "editorHeight" : -1.0,
+    "editorType" : "MOBTEXT",
+    "editorWidth" : -1.0,
+    "name" : "邮箱",
+    "styleCode" : "A077fcdf942a132fedd",
+    "replaceDefault" : false
+  }, {
+    "codeName" : "Aa708288b814c6529c0",
+    "dynaModelFilePath" : "PSSYSEDITORSTYLES/Aa708288b814c6529c0.json",
+    "editorHeight" : -1.0,
+    "editorType" : "MOBDATE",
+    "editorWidth" : -1.0,
+    "name" : "精确到分钟",
+    "styleCode" : "Aa708288b814c6529c0",
+    "replaceDefault" : false
+  }, {
+    "codeName" : "Aaa73b9bd3be66e7778",
+    "dynaModelFilePath" : "PSSYSEDITORSTYLES/Aaa73b9bd3be66e7778.json",
+    "editorHeight" : -1.0,
+    "editorType" : "MOBDATE",
+    "editorWidth" : -1.0,
+    "name" : "精确到天",
+    "styleCode" : "Aaa73b9bd3be66e7778",
+    "replaceDefault" : false
+  }, {
+    "codeName" : "CRM_IMAGE_UPLOAD",
+    "dynaModelFilePath" : "PSSYSEDITORSTYLES/CRM_IMAGE_UPLOAD.json",
+    "editorHeight" : -1.0,
+    "editorType" : "PICTURE_ONE",
+    "editorWidth" : -1.0,
+    "name" : "CRM图片上传",
+    "getPSSysPFPlugin" : {
+      "pluginType" : "EDITOR_CUSTOMSTYLE",
+      "pluginCode" : "CRM_IMAGE_UPLOAD",
+      "runtimeObject" : true
+    },
+    "styleCode" : "CRM_IMAGE_UPLOAD",
+    "replaceDefault" : false
+  } ],
+  "getAllPSSysI18Ns" : [ {
+    "modelref" : true,
+    "path" : "PSSYSI18NS/DEFAULT.json"
+  } ],
+  "getAllPSSysLogics" : [ {
+    "codeName" : "SRFFILLAPPDATA",
+    "customObject" : "#",
+    "dynaModelFilePath" : "PSSYSDELOGICNODES/SRFFILLAPPDATA.json",
+    "memo" : "function main(sys, appdata, ctx,session){\n    var search = sys.filter(\"user\").eq(\"sysuserid\",sys.user().userid);\n\tvar user = search.selectOne(true);\n\tif(user != null){\n        ctx.set(\"userid\",user.get(\"id\"));\n\t}\n\tif(session){\n\t\tsession.set(\"userid\",user.get(\"id\"))\n\t}\n\n}",
+    "name" : "填充应用数据",
+    "scriptCode" : "function main(sys, appdata, ctx,session){\r\n    var search = sys.filter(\"user\").eq(\"sysuserid\",sys.user().userid);\r\n\tvar user = search.selectOne(true);\r\n\tif(user != null){\r\n        ctx.set(\"userid\",user.get(\"id\"));\r\n        if(session){\r\n\t\tsession.set(\"userid\",user.get(\"id\"))\r\n\t    }\r\n\t}\r\n\t\r\n}",
+    "customCode" : true
+  } ],
+  "getAllPSSysMsgQueues" : [ {
+    "codeName" : "Default",
+    "dynaModelFilePath" : "PSSYSMSGQUEUES/Default.json",
+    "msgQueueType" : "RUNTIME",
+    "name" : "默认消息队列"
+  } ],
+  "getAllPSSysMsgTargets" : [ {
+    "codeName" : "SalesLeader",
+    "dynaModelFilePath" : "PSSYSMSGTARGETS/SalesLeader.json",
+    "msgTargetType" : "DE",
+    "name" : "销售领导",
+    "getPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "SalesLeader"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/user.json"
+    },
+    "getTargetPSDEField" : {
+      "name" : "SYSUSERID",
+      "codeName" : "sysuserId"
+    }
+  }, {
+    "codeName" : "project_executor",
+    "dynaModelFilePath" : "PSSYSMSGTARGETS/project_executor.json",
+    "msgTargetType" : "DE",
+    "name" : "订单执行人",
+    "getPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "project_notify"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/executor.json"
+    },
+    "getTargetPSDEField" : {
+      "name" : "SYSUSERID",
+      "codeName" : "sysuserid"
+    }
+  }, {
+    "codeName" : "lead_executor",
+    "dynaModelFilePath" : "PSSYSMSGTARGETS/lead_executor.json",
+    "msgTargetType" : "DE",
+    "name" : "线索跟踪人",
+    "getPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "lead_notify"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/executor.json"
+    },
+    "getTargetPSDEField" : {
+      "name" : "SYSUSERID",
+      "codeName" : "sysuserid"
+    }
+  }, {
+    "codeName" : "task_executor",
+    "dynaModelFilePath" : "PSSYSMSGTARGETS/task_executor.json",
+    "msgTargetType" : "DE",
+    "name" : "任务执行人",
+    "getPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "executor_notify"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task_executor.json"
+    },
+    "getTargetPSDEField" : {
+      "name" : "SYSUSERID",
+      "codeName" : "sysuserid"
+    }
+  } ],
+  "getAllPSSysMsgTempls" : [ {
+    "codeName" : "project_change",
+    "content" : "<div class=\"notice-card\" style=\"display: flex; align-items: flex-start;\">\n    <div class=\"notice-card__avatar\" style=\"flex-shrink: 0;\">\n        <span class=\"notice-card__avatar-icon\" style=\"background-color: skyblue; border-radius: 50%; margin-right: 10px; width: 36px; height: 36px; display: flex; justify-content: center; align-items: center; font-size: 10px;\">${data.update_mantext?substring(0,2)!}</span>\n    </div>\n    <div class=\"notice-card__content\" style=\"flex-grow: 1;width: calc(100% - 46px);\">\n        <div class=\"notice-card__event\">\n            <div class=\"notice-card__event-title\" style=\"font-size: 14px; color: #000;\">\n                <span class=\"notice-card__event-name\" style=\"color: #999; font-size: 14px; text-transform: lowercase; display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">${data.update_mantext}</span> \n                <span class=\"notice-card__event-desc\" style=\"font-size: 14px; text-transform: lowercase; display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\"><#if data.create_time == data.update_time>新建了<#else>更新了</#if>订单</span>\n            </div>\n        </div>\n\t\t<div class=\"notice-card-object\" style=\"display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%;\">\n\t\t\t<span class=\"notice-card__object-name\" title=\"${data.name}\">${data.name}</span>\t\n\t\t</div>\n\t\t<div class=\"notice-card-pilot\" style=\"font-size: 12px; color: #999; text-transform: lowercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;><span class=\"notice-time\">${data.update_time?string(\"yyyy-MM-dd HH:mm:ss\")}</span></div>\n    </div>\n</div>\n",
+    "contentType" : "HTML",
+    "dDContent" : "${data.update_mantext}更改了${data.work_item_type_name} ${data.title}状态：<#if last.codeitem(\"STATE\")??>${last.codeitem(\"STATE\").text}<#else>无</#if>  → <#if data.codeitem(\"STATE\")??>${data.codeitem(\"STATE\").text}<#else>无</#if>",
+    "dynaModelFilePath" : "PSSYSMSGTEMPLS/project_change.json",
+    "name" : "订单新建、更新通知模板",
+    "subject" : "订单新建、更新通知模板",
+    "taskUrl" : "route://-/index/project=${data.id}/project_main_view/-",
+    "mailGroupSend" : false
+  }, {
+    "codeName" : "deal_change",
+    "content" : "<div class=\"notice-card\" style=\"display: flex; align-items: flex-start;\">\n    <div class=\"notice-card__avatar\" style=\"flex-shrink: 0;\">\n        <span class=\"notice-card__avatar-icon\" style=\"background-color: skyblue; border-radius: 50%; margin-right: 10px; width: 36px; height: 36px; display: flex; justify-content: center; align-items: center; font-size: 10px;\">${data.update_mantext?substring(0,2)!}</span>\n    </div>\n    <div class=\"notice-card__content\" style=\"flex-grow: 1;width: calc(100% - 46px);\">\n        <div class=\"notice-card__event\">\n            <div class=\"notice-card__event-title\" style=\"font-size: 14px; color: #000;\">\n                <span class=\"notice-card__event-name\" style=\"color: #999; font-size: 14px; text-transform: lowercase; display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">${data.update_mantext}</span> \n                <span class=\"notice-card__event-desc\" style=\"font-size: 14px; text-transform: lowercase; display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\"><#if data.create_time == data.update_time>新建了<#else>更新了</#if>商机</span>\n            </div>\n        </div>\n\t\t<div class=\"notice-card-object\" style=\"display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%;\">\n\t\t\t<span class=\"notice-card__object-name\" title=\"${data.deal_name}\">${data.deal_name}</span>\t\n\t\t</div>\n\t\t<div class=\"notice-card-pilot\" style=\"font-size: 12px; color: #999; text-transform: lowercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;><span class=\"notice-time\">${data.update_time?string(\"yyyy-MM-dd HH:mm:ss\")}</span></div>\n    </div>\n</div>\n",
+    "contentType" : "HTML",
+    "dDContent" : "${data.update_mantext}更改了${data.work_item_type_name} ${data.title}状态：<#if last.codeitem(\"STATE\")??>${last.codeitem(\"STATE\").text}<#else>无</#if>  → <#if data.codeitem(\"STATE\")??>${data.codeitem(\"STATE\").text}<#else>无</#if>",
+    "dynaModelFilePath" : "PSSYSMSGTEMPLS/deal_change.json",
+    "name" : "商机新建、更新通知模板",
+    "subject" : "商机新建、更新通知",
+    "taskUrl" : "route://-/index/deal=${data.id}/deal_main_view/-",
+    "mailGroupSend" : false
+  }, {
+    "codeName" : "task_change",
+    "content" : "<div class=\"notice-card\" style=\"display: flex; align-items: flex-start;\">\n    <div class=\"notice-card__avatar\" style=\"flex-shrink: 0;\">\n        <span class=\"notice-card__avatar-icon\" style=\"background-color: skyblue; border-radius: 50%; margin-right: 10px; width: 36px; height: 36px; display: flex; justify-content: center; align-items: center; font-size: 10px;\">${data.update_mantext?substring(0,2)!}</span>\n    </div>\n    <div class=\"notice-card__content\" style=\"flex-grow: 1;width: calc(100% - 46px);\">\n        <div class=\"notice-card__event\">\n            <div class=\"notice-card__event-title\" style=\"font-size: 14px; color: #000;\">\n                <span class=\"notice-card__event-name\" style=\"color: #999; font-size: 14px; text-transform: lowercase; display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">${data.update_mantext}</span> \n                <span class=\"notice-card__event-desc\" style=\"font-size: 14px; text-transform: lowercase; display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\"><#if data.create_time == data.update_time>新建了<#else>更新了</#if><#if data.type == 'TASK'>任务<#else>活动</#if></span>\n            </div>\n        </div>\n\t\t<div class=\"notice-card-object\" style=\"display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%;\">\n\t\t\t<span class=\"notice-card__object-name\" title=\"${data.subject}\">${data.subject}</span>\t\n\t\t</div>\n\t\t<div class=\"notice-card-pilot\" style=\"font-size: 12px; color: #999; text-transform: lowercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;><span class=\"notice-time\">${data.update_time?string(\"yyyy-MM-dd HH:mm:ss\")}</span></div>\n    </div>\n</div>",
+    "contentType" : "HTML",
+    "dDContent" : "${data.update_mantext}更改了${data.work_item_type_name} ${data.title}状态：<#if last.codeitem(\"STATE\")??>${last.codeitem(\"STATE\").text}<#else>无</#if>  → <#if data.codeitem(\"STATE\")??>${data.codeitem(\"STATE\").text}<#else>无</#if>",
+    "dynaModelFilePath" : "PSSYSMSGTEMPLS/task_change.json",
+    "name" : "任务新建、更新通知模板",
+    "subject" : "任务新建、更新通知模板",
+    "taskUrl" : "route://-/index/task=${data.id}/task_main_view/-",
+    "mailGroupSend" : false
+  }, {
+    "codeName" : "comment_at",
+    "content" : "<div class=\"notice-card\" style=\"display: flex; align-items: flex-start;\">\n    <div class=\"notice-card__avatar\" style=\"flex-shrink: 0;\">\n        <span class=\"notice-card__avatar-icon\" style=\"background-color: skyblue; border-radius: 50%; margin-right: 10px; width: 36px; height: 36px; display: flex; justify-content: center; align-items: center; font-size: 10px;\">${data.update_mantext?substring(0,2)!}</span>\n    </div>\n    <div class=\"notice-card__content\" style=\"flex-grow: 1;width: calc(100% - 46px);\">\n        <div class=\"notice-card__event\">\n            <div class=\"notice-card__event-title\" style=\"font-size: 14px; color: #000;\">\n                <span class=\"notice-card__event-name\" style=\"color: #999; font-size: 14px; text-transform: lowercase; display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">${data.update_mantext}</span> \n                <span class=\"notice-card__event-desc\" style=\"font-size: 14px; text-transform: lowercase; display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">在评论中提及了你</span>\n            </div>\n        </div>\n\t\t<#if data.parent(\"principal_id\")??>\n\t\t\t<#assign parent= data.parent(\"principal_id\")>\n\t\t\t\t<div class=\"notice-card-object\" style=\"display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%;\">\n\t\t\t\t\t<#if parent.show_identifier??>\n\t\t\t\t\t\t<span class=\"notice-card__object-id\" style=\"color: #999; font-size:14px;\">${parent.show_identifier}</span>\n\t\t\t\t\t</#if>\n\t\t\t\t\t<#if data.principal_type == 'CUSTOMER' || data.principal_type == 'PAGE'>\n\t\t\t\t\t\t<span class=\"notice-card__object-name\" title=\"${parent.name}\">${parent.name}</span>\n\t\t\t\t\t<#else>\n\t\t\t\t\t\t<span class=\"notice-card__object-name\" title=\"${parent.title}\">${parent.title}</span>\n\t\t\t\t\t</#if>\t\t\n\t\t\t\t</div>\n\t\t\t<#assign content = data.content?replace('<img[^>]*>', '', 'r')?replace('<p[^>]*>', '', 'r')?replace('</?p[^>]*>', '', 'r')?replace('@','')><#assign regex = \"(\\\\{.*?\\\\})\">\n\t\t\t\t<#list content?matches(regex) as match>\n\t\t\t\t\t<#assign jsonStr = match>\n\t\t\t\t\t\t<#assign jsonObject = (jsonStr)?eval>  \n\t\t\t\t\t\t\t<#if jsonObject.name??>\n\t\t\t\t\t\t\t\t<#assign name = jsonObject.name>\n\t\t\t\t\t\t\t\t\t<#assign content = content?replace(jsonStr, '@' + name)>\n\t\t\t\t\t\t\t</#if>\n\t\t\t\t</#list>\n\t\t\t<div class=\"notice-card-object\" style=\"display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%;\">\n\t\t\t\t<span class=\"notice-card__object-name\" title=\"${content}\">${content}</span>\n\t\t\t</div>\n\t\t</#if>\n\t\t<#if parent.parent(\"project_id\")??>\n\t\t<#assign project= parent.parent(\"project_id\")>\n\t\t\t<div class=\"notice-card-pilot\" style=\"font-size: 12px; color: #999; text-transform: lowercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;><span class=\"notice-time\">${data.update_time?string(\"yyyy-MM-dd HH:mm:ss\")}</span><span class=\"notice-pilot-info\">· 项目管理 · ${project.name}</span></div>\n\t\t<#elseif parent.parent(\"product_id\")??>\n        <#assign product= parent.parent(\"product_id\")>\n\t\t\t<div class=\"notice-card-pilot\" style=\"font-size: 12px; color: #999; text-transform: lowercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;><span class=\"notice-time\">${data.update_time?string(\"yyyy-MM-dd HH:mm:ss\")}</span><span class=\"notice-pilot-info\">· 产品管理 · ${product.name}</span></div>\n\t\t<#elseif parent.parent(\"plan_id\")??>\n        <#assign plan= parent.parent(\"plan_id\")>\n\t\t\t<div class=\"notice-card-pilot\" style=\"font-size: 12px; color: #999; text-transform: lowercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;><span class=\"notice-time\">${data.update_time?string(\"yyyy-MM-dd HH:mm:ss\")}</span><span class=\"notice-pilot-info\">· 测试管理 · ${plan.library_name}</span></div>\n\t\t<#elseif parent.parent(\"test_library_id\")??>\n        <#assign library= parent.parent(\"test_library_id\")>\n\t\t\t<div class=\"notice-card-pilot\" style=\"font-size: 12px; color: #999; text-transform: lowercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;><span class=\"notice-time\">${data.update_time?string(\"yyyy-MM-dd HH:mm:ss\")}</span><span class=\"notice-pilot-info\">· 测试管理 · ${library.name}</span></div>\n\t\t<#elseif parent.parent(\"space_id\")??>\n        <#assign space= parent.parent(\"space_id\")>\n\t\t\t<div class=\"notice-card-pilot\" style=\"font-size: 12px; color: #999; text-transform: lowercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;><span class=\"notice-time\">${data.update_time?string(\"yyyy-MM-dd HH:mm:ss\")}</span><span class=\"notice-pilot-info\">· 知识库管理 · ${space.name}</span></div>\n\t\t</#if>\n    </div>\n</div>",
+    "contentType" : "HTML",
+    "dDContent" : "${data.update_mantext}在<#if data.principal_type == 'WORK_ITEM'>${data.parent(\"principal_id\").work_item_type_name}<#elseif data.principal_type == 'IDEA'>需求<#elseif data.principal_type == 'TICKET'>工单<#elseif data.principal_type == 'TEST_CASE'>测试用例<#elseif data.principal_type == 'CUSTOMER'>客户<#elseif data.principal_type == 'RUN'>执行用例<#elseif data.principal_type == 'PAGE'>页面</#if>：\n<#if data.owner_type == 'CUSTOMER' || data.owner_type == 'PAGE'>${data.parent(\"principal_id\").name}<#else>${data.parent(\"principal_id\").title}</#if>的评论中提及了你",
+    "dynaModelFilePath" : "PSSYSMSGTEMPLS/comment_at.json",
+    "name" : "评论@通知模板",
+    "subject" : "评论@通知",
+    "taskUrl" : "<#if data.parent(\"principal_id\")??><#if data.principal_type == 'PAGE'>view://article_pageshow_view_model?srfnavctx={\"article_page\":\"${data.parent(\"principal_id\").id}\",\"space\":\"${data.parent(\"principal_id\").space_id}\"}<#else>view://${data.principal_type?lower_case}main_view?srfnavctx={\"${data.principal_type?lower_case}\":\"${data.principal_id}\"<#assign p = data.parent(\"principal_id\")><#if p.parent(\"project_id\")??>,\"project\":\"${p.parent('project_id').id}\"<#elseif p.parent(\"product_id\")??>,\"product\":\"${p.parent('product_id').id}\"<#elseif p.parent(\"test_library_id\")??>,\"library\":\"${p.parent('test_library_id').id}\"<#elseif p.parent(\"case_id\")??>,\"test_case\":\"${p.parent('case_id').id}\",\"library\":\"${p.parent('case_id').test_library_id}\"</#if>}</#if></#if>",
+    "mailGroupSend" : false
+  }, {
+    "codeName" : "maneuver_change",
+    "content" : "<div class=\"notice-card\" style=\"display: flex; align-items: flex-start;\">\n    <div class=\"notice-card__avatar\" style=\"flex-shrink: 0;\">\n        <span class=\"notice-card__avatar-icon\" style=\"background-color: skyblue; border-radius: 50%; margin-right: 10px; width: 36px; height: 36px; display: flex; justify-content: center; align-items: center; font-size: 10px;\">${data.update_mantext?substring(0,2)!}</span>\n    </div>\n    <div class=\"notice-card__content\" style=\"flex-grow: 1;width: calc(100% - 46px);\">\n        <div class=\"notice-card__event\">\n            <div class=\"notice-card__event-title\" style=\"font-size: 14px; color: #000;\">\n                <span class=\"notice-card__event-name\" style=\"color: #999; font-size: 14px; text-transform: lowercase; display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">${data.update_mantext}</span> \n                <span class=\"notice-card__event-desc\" style=\"font-size: 14px; text-transform: lowercase; display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\"><#if data.create_time == data.update_time>新建了<#else>更新了</#if><#if data.type == 'TASK'>任务<#else>活动</#if></span>\n            </div>\n        </div>\n\t\t<div class=\"notice-card-object\" style=\"display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%;\">\n\t\t\t<span class=\"notice-card__object-name\" title=\"${data.subject}\">${data.subject}</span>\t\n\t\t</div>\n\t\t<div class=\"notice-card-pilot\" style=\"font-size: 12px; color: #999; text-transform: lowercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;><span class=\"notice-time\">${data.update_time?string(\"yyyy-MM-dd HH:mm:ss\")}</span></div>\n    </div>\n</div>",
+    "contentType" : "HTML",
+    "dDContent" : "${data.update_mantext}更改了${data.work_item_type_name} ${data.title}状态：<#if last.codeitem(\"STATE\")??>${last.codeitem(\"STATE\").text}<#else>无</#if>  → <#if data.codeitem(\"STATE\")??>${data.codeitem(\"STATE\").text}<#else>无</#if>",
+    "dynaModelFilePath" : "PSSYSMSGTEMPLS/maneuver_change.json",
+    "name" : "活动新建、更新通知模板",
+    "subject" : "活动新建、更新通知模板",
+    "taskUrl" : "route://-/index/task=${data.id}/task_maneuver_main_view/-",
+    "mailGroupSend" : false
+  }, {
+    "codeName" : "progress_assess",
+    "content" : "<div class=\"notice-card\" style=\"display: flex; align-items: flex-start;\">\n    <div class=\"notice-card__avatar\" style=\"flex-shrink: 0;\">\n        <span class=\"notice-card__avatar-icon\" style=\"background-color: skyblue; border-radius: 50%; margin-right: 10px; width: 36px; height: 36px; display: flex; justify-content: center; align-items: center; font-size: 10px;\">${data.update_mantext?substring(0,2)!}</span>\n    </div>\n    <div class=\"notice-card__content\" style=\"flex-grow: 1; padding-right: 15px;\">\n        <div class=\"notice-card__event\">\n            <div class=\"notice-card__event-title\" style=\"font-size: 14px; color: #000;\">\n                <span class=\"notice-card__event-name\" style=\"color: #999; font-size: 14px; text-transform: lowercase;\">${data.update_mantext}</span> \n                <span class=\"notice-card__event-desc\" style=\"font-size: 14px; text-transform: lowercase;\">评估了<#if data.principal_type == 'TASK'>任务<#elseif data.principal_type == 'DEAL'>商机<#elseif data.principal_type == 'PROJECT'>订单<#elseif data.principal_type == 'LEAD'>线索</#if></span>\n            </div>\n        </div>\n\n\t\t<#if data.parent(\"principal_id\")??>  \n\t\t\t<#assign parent= data.parent(\"principal_id\")>\n\t\t\t<div class=\"notice-card-object\">\n            <span class=\"notice-card__object-name\" title=\"<#if data.principal_type == 'TASK'>${parent.subject}<#elseif data.principal_type == 'DEAL'>${parent.deal_name}<#elseif data.principal_type == 'PROJECT'>${parent.name}<#elseif data.principal_type == 'LEAD'>${parent.subject}</#if>\"><#if data.principal_type == 'TASK'>${parent.subject}<#elseif data.principal_type == 'DEAL'>${parent.deal_name}<#elseif data.principal_type == 'PROJECT'>${parent.name}<#elseif data.principal_type == 'LEAD'>${parent.subject}</#if></span> \n\t\t\t</div>\t\t\n\t\t<#else>  \n\t\t\t<div class=\"notice-card-object\">\n            <span class=\"notice-card__object-name\" title=\"data.principal_name\">${data.principal_name}</span> \n\t\t\t</div>\t\t\n\t\t</#if>\n        <#assign content = data.content?replace('<img[^>]*>', '[图片]', 'r')?replace('<p[^>]*>', '', 'r')?replace('</?p[^>]*>', '', 'r')>\n        <#assign regex = \"(\\\\@\\\\{.*?\\\\})\">\n            <#list content?matches(regex) as match>\n                <#assign jsonStr = match>\n                <#assign jsonObject = (jsonStr?replace(\"@\", \"\"))?eval>  \n                <#if jsonObject.name??>\n                    <#assign name = jsonObject.name>\n                    <#assign content = content?replace(jsonStr, \"<span class='comment-tag'>@\" + name + \"</span>\")>\n                </#if>\n            </#list>\n        <#assign regex = \"\\\\#\\\\{\\\"id\\\":\\\"(.*?)\\\",\\\"name\\\":\\\"(.+?)\\\",\\\"identifier\\\":\\\"(.+?)\\\",\\\"icon\\\":\\\"((.|[\\\\t\\\\r\\\\f\\\\n\\\\s])+?)\\\"\\\\}\">\n            <#list content?matches(regex) as match>\n                <#assign jsonStr = match>\n                <#assign content = content?replace(jsonStr,\"<span class='comment-tag'>\" + match?groups[4]+ match?groups[3] + match?groups[2] + \"</span>\")>\n            </#list>\n        <div class=\"notice-card-object\">\n            <span class=\"notice-card__object-name\">${content}</span>\n        </div>\n        <div class=\"notice-card-pilot\" style=\"font-size: 12px; color: #999; text-transform: lowercase;\"><span class=\"notice-time\">${data.update_time?string(\"yyyy-MM-dd HH:mm:ss\")}</span></div>\n    </div>\n</div>",
+    "contentType" : "HTML",
+    "dynaModelFilePath" : "PSSYSMSGTEMPLS/progress_assess.json",
+    "name" : "进展评估通知模板",
+    "subject" : "进展评估通知模板",
+    "taskUrl" : "route://-/index/${data.principal_type?lower_case}=${data.principal_id}/${data.principal_type?lower_case}_main_view/-",
+    "mailGroupSend" : false
+  } ],
+  "getAllPSSysPDTViews" : [ {
+    "caption" : "流程跟踪列表视图",
+    "codeName" : "PDTView6",
+    "dynaModelFilePath" : "PSSYSPDTVIEWS/PDTView6.json",
+    "name" : "流程跟踪列表视图"
+  }, {
+    "caption" : "流程后加签操作视图",
+    "codeName" : "PDTView2",
+    "dynaModelFilePath" : "PSSYSPDTVIEWS/PDTView2.json",
+    "name" : "流程后加签操作视图"
+  }, {
+    "caption" : "流程回退操作视图",
+    "codeName" : "PDTView4",
+    "dynaModelFilePath" : "PSSYSPDTVIEWS/PDTView4.json",
+    "name" : "流程回退操作视图"
+  }, {
+    "caption" : "流程征求意见操作视图",
+    "codeName" : "PDTView9",
+    "dynaModelFilePath" : "PSSYSPDTVIEWS/PDTView9.json",
+    "name" : "流程征求意见操作视图"
+  }, {
+    "caption" : "流程前加签操作视图",
+    "codeName" : "PDTView3",
+    "dynaModelFilePath" : "PSSYSPDTVIEWS/PDTView3.json",
+    "name" : "流程前加签操作视图"
+  }, {
+    "caption" : "常规数据附件列表",
+    "codeName" : "PDTView",
+    "dynaModelFilePath" : "PSSYSPDTVIEWS/PDTView.json",
+    "name" : "常规数据附件列表"
+  }, {
+    "caption" : "流程补充信息操作视图",
+    "codeName" : "PDTView8",
+    "dynaModelFilePath" : "PSSYSPDTVIEWS/PDTView8.json",
+    "name" : "流程补充信息操作视图"
+  }, {
+    "caption" : "流程跟踪图形视图",
+    "codeName" : "PDTView7",
+    "dynaModelFilePath" : "PSSYSPDTVIEWS/PDTView7.json",
+    "name" : "流程跟踪图形视图"
+  }, {
+    "caption" : "流程催办列表视图",
+    "codeName" : "PDTView5",
+    "dynaModelFilePath" : "PSSYSPDTVIEWS/PDTView5.json",
+    "name" : "流程催办列表视图"
+  } ],
+  "getAllPSSysSFPlugins" : [ {
+    "codeName" : "AddTags",
+    "dynaModelFilePath" : "PSSYSSFPLUGINS/AddTags.json",
+    "name" : "（通用）添加标签",
+    "pluginCode" : "AddTags",
+    "pluginType" : "DEACTION",
+    "rTObjectName" : "cn.ibizlab.plugin.action.AddTags",
+    "rTObjectSource" : 1,
+    "templCode" : "package cn.ibizlab.plugin.action\r\n\r\nimport net.ibizsys.central.dataentity.action.DEActionRuntimeBase\r\nimport net.ibizsys.central.util.IEntityDTO\r\n\r\n/**\r\n * （通用）添加标签\r\n *\r\n * @author xignzi\r\n * @date 2024/3/19\r\n */\r\nclass AddTags extends DEActionRuntimeBase {\r\n\r\n    @Override\r\n    protected Object onExecute(IEntityDTO iEntityDTO) throws Throwable {\r\n        return iEntityDTO\r\n    }\r\n\r\n}\r\n",
+    "runtimeObject" : true
+  }, {
+    "codeName" : "CreateTask",
+    "dynaModelFilePath" : "PSSYSSFPLUGINS/CreateTask.json",
+    "name" : "（通用）创建任务",
+    "pluginCode" : "CreateTask",
+    "pluginType" : "DEACTION",
+    "rTObjectName" : "cn.ibizlab.plugin.action.CreateTask",
+    "rTObjectSource" : 1,
+    "templCode" : "package cn.ibizlab.plugin.action\r\n\r\nimport net.ibizsys.central.dataentity.IDataEntityRuntime\r\nimport net.ibizsys.central.dataentity.action.DEActionRuntimeBase\r\nimport net.ibizsys.central.util.IEntityDTO\r\n\r\n/**\r\n * （通用）创建任务\r\n *\r\n * @author xignzi\r\n * @date 2024/3/19\r\n */\r\nclass CreateTask extends DEActionRuntimeBase {\r\n\r\n    @Override\r\n    protected Object onExecute(IEntityDTO iEntityDTO) throws Throwable {\r\n        Object key = this.getDataEntityRuntime().getKeyFieldValue(iEntityDTO)\r\n        if (!key)\r\n            return\r\n        List params = iEntityDTO.get(\"srfactionparam\")\r\n        if (params) {\r\n            IDataEntityRuntime iDataEntityRuntime = this.getSystemRuntime().getDataEntityRuntime(\"TASK\")\r\n            for (Map param  : params) {\r\n                IEntityDTO task = iDataEntityRuntime.createEntity()\r\n                task.reload(param,false)\r\n                task.put(\"owner_type\",this.getDataEntityRuntime().getName())\r\n                task.put(\"owner_id\",key)\r\n                iDataEntityRuntime.create(task)\r\n            }\r\n        }\r\n        return iEntityDTO\r\n    }\r\n\r\n}\r\n",
+    "runtimeObject" : true
+  }, {
+    "codeName" : "GetAndCreateRecent",
+    "dynaModelFilePath" : "PSSYSSFPLUGINS/GetAndCreateRecent.json",
+    "name" : "（通用）获取并生成最近访问",
+    "pluginCode" : "GetAndCreateRecent",
+    "pluginType" : "DEACTION",
+    "rTObjectName" : "cn.ibizlab.plugin.action.GetAndCreateRecent",
+    "rTObjectSource" : 1,
+    "templCode" : "package cn.ibizlab.plugin.action\r\n\r\nimport net.ibizsys.central.dataentity.IDataEntityRuntime\r\nimport net.ibizsys.central.dataentity.action.DEActionRuntimeBase\r\nimport net.ibizsys.central.util.IEntityDTO\r\nimport net.ibizsys.runtime.security.UserContext\r\nimport org.apache.commons.logging.Log\r\nimport org.apache.commons.logging.LogFactory\r\n\r\n/**\r\n * 获取并生成最近访问\r\n *\r\n * @author xignzi\r\n * @date 2024/3/18\r\n */\r\npublic class GetAndCreateRecent extends DEActionRuntimeBase {\r\n\r\n    private static final Log log = LogFactory.getLog(GetAndCreateRecent.class)\r\n\r\n    @Override\r\n    protected Object onExecute(IEntityDTO iEntityDTO) throws Throwable {\r\n        IDataEntityRuntime iDataEntityRuntime = this.getDataEntityRuntime()\r\n        iEntityDTO = iDataEntityRuntime.getSimpleEntity(iDataEntityRuntime.getKeyFieldValue(iEntityDTO))\r\n\r\n//        createRecent(iEntityDTO)\r\n\r\n        return iEntityDTO;\r\n    }\r\n\r\n    @Override\r\n    protected Object onExecute(Object arg) throws Throwable {\r\n        IDataEntityRuntime iDataEntityRuntime = this.getDataEntityRuntime()\r\n        IEntityDTO iEntityDTO = iDataEntityRuntime.getSimpleEntity(arg)\r\n\r\n        createRecent(iEntityDTO)\r\n\r\n        return iEntityDTO;\r\n    }\r\n\r\n\r\n    protected void createRecent(IEntityDTO iEntityDTO) {\r\n        IDataEntityRuntime iDataEntityRuntime = this.getDataEntityRuntime()\r\n        try {\r\n            IDataEntityRuntime recentDataEntityRuntime = this.getSystemRuntime().getDataEntityRuntime(\"RECENT\")\r\n            IEntityDTO recent = recentDataEntityRuntime.createEntity()\r\n            recent.set(\"OWNER_ID\", iDataEntityRuntime.getKeyFieldValue(iEntityDTO))\r\n            recent.set(\"OWNER_TYPE\", iDataEntityRuntime.getName())\r\n            recent.set(\"OWNER_SUBTYPE\", iDataEntityRuntime.getName())\r\n            recent.set(\"CREATE_MAN\", UserContext.getCurrent().getUserid())\r\n            recent.set(\"TYPE\", \"2\")\r\n            recent.set(recentDataEntityRuntime.getMajorPSDEField().getName(), iDataEntityRuntime.getFieldValue(iEntityDTO, iDataEntityRuntime.getMajorPSDEField()))\r\n            recentDataEntityRuntime.executeAction(\"Save\", null, [recent])\r\n        } catch (Throwable e) {\r\n            log.error(String.format(\"生成[%s]最近访问失败：主键[%s]\", iDataEntityRuntime.getName(), iEntityDTO.get(iDataEntityRuntime.getKeyNamePSDEField().getName())))\r\n        }\r\n    }\r\n\r\n}\r\n",
+    "runtimeObject" : true
+  }, {
+    "codeName" : "RemoveTags",
+    "dynaModelFilePath" : "PSSYSSFPLUGINS/RemoveTags.json",
+    "name" : "（通用）移除标签",
+    "pluginCode" : "RemoveTags",
+    "pluginType" : "DEACTION",
+    "rTObjectName" : "cn.ibizlab.plugin.action.RemoveTags",
+    "rTObjectSource" : 1,
+    "templCode" : "package cn.ibizlab.plugin.action\r\n\r\nimport net.ibizsys.central.dataentity.action.DEActionRuntimeBase\r\nimport net.ibizsys.central.util.IEntityDTO\r\n\r\n/**\r\n * （通用）移除标签\r\n *\r\n * @author xignzi\r\n * @date 2024/3/19\r\n */\r\nclass RemoveTags extends DEActionRuntimeBase {\r\n\r\n    @Override\r\n    protected Object onExecute(IEntityDTO iEntityDTO) throws Throwable {\r\n        return iEntityDTO\r\n    }\r\n\r\n}\r\n",
+    "runtimeObject" : true
+  }, {
+    "codeName" : "Update",
+    "dynaModelFilePath" : "PSSYSSFPLUGINS/Update.json",
+    "name" : "（通用）更新",
+    "pluginCode" : "Update",
+    "pluginType" : "DEACTION",
+    "rTObjectName" : "cn.ibizlab.plugin.action.Update",
+    "rTObjectSource" : 1,
+    "templCode" : "package cn.ibizlab.plugin.action\r\n\r\nimport net.ibizsys.central.dataentity.action.DEActionRuntimeBase\r\nimport net.ibizsys.central.util.IEntityDTO\r\n\r\n/**\r\n * （通用）更新\r\n *\r\n * @author xignzi\r\n * @date 2024/3/19\r\n */\r\nclass Update extends DEActionRuntimeBase {\r\n\r\n    @Override\r\n    protected Object onExecute(IEntityDTO iEntityDTO) throws Throwable {\r\n        return iEntityDTO\r\n    }\r\n\r\n}\r\n",
+    "runtimeObject" : true
+  }, {
+    "codeName" : "UsrSFPlugin0201416283",
+    "dynaModelFilePath" : "PSSYSSFPLUGINS/UsrSFPlugin0201416283.json",
+    "name" : "SysAtContentTranslatorRuntime",
+    "pluginCode" : "UsrSFPlugin0201416283",
+    "pluginType" : "USER",
+    "rTObjectName" : "net.ibizsys.central.res.SysAtContentTranslatorRuntime",
+    "rTObjectSource" : 1,
+    "runtimeObject" : true
+  }, {
+    "codeName" : "UsrSFPlugin0321285737",
+    "dynaModelFilePath" : "PSSYSSFPLUGINS/UsrSFPlugin0321285737.json",
+    "name" : "（通用）main_view关系计数器",
+    "pluginCode" : "UsrSFPlugin0321285737",
+    "pluginType" : "DEACTION",
+    "rTObjectName" : "cn.ibizlab.plugin.action.MainViewDRCount",
+    "rTObjectSource" : 1,
+    "templCode" : "package cn.ibizlab.plugin.action\r\n\r\nimport net.ibizsys.central.cloud.core.dataentity.IDataEntityRuntime\r\nimport net.ibizsys.central.dataentity.action.DEActionRuntimeBase\r\nimport net.ibizsys.central.util.IEntityDTO\r\nimport net.ibizsys.central.util.SearchContextDTO\r\nimport org.springframework.data.domain.Page\r\n\r\n/**\r\n * （通用）main_view关系计数器\r\n *\r\n * @author xignzi\r\n * @date 2024/3/19\r\n */\r\nclass MainViewDRCount extends DEActionRuntimeBase {\r\n\r\n    @Override\r\n    protected Object onExecute(IEntityDTO iEntityDTO) throws Throwable {\r\n        SearchContextDTO ctx\r\n        Page page\r\n        Object[] args\r\n        //进展评估\r\n        IDataEntityRuntime NOTE_ATTACHRuntime = this.getSystemRuntime().getDataEntityRuntime('NOTE_ATTACH', true)\r\n        ctx = NOTE_ATTACHRuntime.createSearchContext()\r\n        ctx.setPageable(1, 1, 0)\r\n        ctx.eq(\"PRINCIPAL_ID\", this.getDataEntityRuntime().getKeyFieldValue(iEntityDTO))\r\n        ctx.eq(\"OWNER_TYPE\", this.getDataEntityRuntime().getName())\r\n        args = [ctx]\r\n        page = NOTE_ATTACHRuntime.fetchDataSet(\"DEFAULT\", null, args)\r\n        iEntityDTO.put(\"note_attach\", page.getTotalElements())\r\n\r\n        //附件\r\n        IDataEntityRuntime ATTACHMENTRuntime = this.getSystemRuntime().getDataEntityRuntime('ATTACHMENT', true)\r\n        ctx = ATTACHMENTRuntime.createSearchContext()\r\n        ctx.setPageable(1, 1, 0)\r\n        ctx.eq(\"OWNER_ID\", this.getDataEntityRuntime().getKeyFieldValue(iEntityDTO))\r\n        ctx.eq(\"OWNER_TYPE\", this.getDataEntityRuntime().getName())\r\n        args = [ctx]\r\n        page = ATTACHMENTRuntime.fetchDataSet(\"DEFAULT\", null, args)\r\n        iEntityDTO.put(\"attachment\", page.getTotalElements())\r\n\r\n        //待办任务\r\n        IDataEntityRuntime TASKRuntime = this.getSystemRuntime().getDataEntityRuntime('TASK', true)\r\n        ctx = TASKRuntime.createSearchContext()\r\n        ctx.setPageable(1, 1, 0)\r\n        ctx.set(\"PRINCIPAL_ID\",this.getDataEntityRuntime().getKeyFieldValue(iEntityDTO))\r\n        args = [ctx]\r\n        page = TASKRuntime.fetchDataSet(\"not_close_task_related\", null, args)\r\n        iEntityDTO.put(\"not_close\", page.getTotalElements())\r\n\r\n        //已完成的任务\r\n        page = TASKRuntime.fetchDataSet(\"close_task_related\", null, args)\r\n        iEntityDTO.put(\"finishtask\", page.getTotalElements())\r\n\r\n        //历史活动\r\n        page = TASKRuntime.fetchDataSet(\"maneuver_related\", null, args)\r\n        iEntityDTO.put(\"hisact\", page.getTotalElements())\r\n\r\n        //已完成的任务和历史活动\r\n        page = TASKRuntime.fetchDataSet(\"maneuver_task_related\", null, args)\r\n        iEntityDTO.put(\"taskhisact\", page.getTotalElements())\r\n\r\n        //产品\r\n        IDataEntityRuntime PRODUCTRuntime = this.getSystemRuntime().getDataEntityRuntime('PRODUCT', true)\r\n        ctx = PRODUCTRuntime.createSearchContext()\r\n        ctx.setPageable(1, 1, 0)\r\n        ctx.set(\"PRINCIPAL_ID\",this.getDataEntityRuntime().getKeyFieldValue(iEntityDTO))\r\n        ctx.set(\"PRINCIPAL_TYPE\",\"DEAL\")\r\n        args = [ctx]\r\n        page = PRODUCTRuntime.fetchDataSet(\"relation_target\", null, args)\r\n        iEntityDTO.put(\"product\", page.getTotalElements())\r\n\r\n        //联系人\r\n        IDataEntityRuntime CONTACTRuntime = this.getSystemRuntime().getDataEntityRuntime('CONTACT', true)\r\n        ctx = CONTACTRuntime.createSearchContext()\r\n        ctx.setPageable(1, 1, 0)\r\n        ctx.eq(\"ACCOUNT_ID\", this.getDataEntityRuntime().getKeyFieldValue(iEntityDTO))\r\n        args = [ctx]\r\n        page = CONTACTRuntime.fetchDataSet(\"DEFAULT\", null, args)\r\n        iEntityDTO.put(\"contact\", page.getTotalElements())\r\n\r\n        //关联销售人员\r\n        IDataEntityRuntime USERRuntime = this.getSystemRuntime().getDataEntityRuntime('USER', true)\r\n        ctx = USERRuntime.createSearchContext()\r\n        ctx.setPageable(1, 1, 0)\r\n        ctx.set(\"PRINCIPAL_ID\",this.getDataEntityRuntime().getKeyFieldValue(iEntityDTO))\r\n        args = [ctx]\r\n        page = USERRuntime.fetchDataSet(\"account_reluser\", null, args)\r\n        iEntityDTO.put(\"user\", page.getTotalElements())\r\n\r\n\r\n        //商机-客户\r\n        IDataEntityRuntime DEALRuntime = this.getSystemRuntime().getDataEntityRuntime('DEAL', true)\r\n        ctx = DEALRuntime.createSearchContext()\r\n        ctx.setPageable(1, 1, 0)\r\n        ctx.set(\"PRINCIPAL_ID\",this.getDataEntityRuntime().getKeyFieldValue(iEntityDTO))\r\n        ctx.set(\"PRINCIPAL_TYPE\",\"ACCOUNT\")\r\n        args = [ctx]\r\n        page = DEALRuntime.fetchDataSet(\"target_relation\", null, args)\r\n        iEntityDTO.put(\"deal\", page.getTotalElements())\r\n\r\n        //商机-产品\r\n        IDataEntityRuntime DEALPRORuntime = this.getSystemRuntime().getDataEntityRuntime('DEAL', true)\r\n        ctx = DEALPRORuntime.createSearchContext()\r\n        ctx.setPageable(1, 1, 0)\r\n        ctx.set(\"PRINCIPAL_ID\",this.getDataEntityRuntime().getKeyFieldValue(iEntityDTO))\r\n        ctx.set(\"PRINCIPAL_TYPE\",\"PRODUCT\")\r\n        args = [ctx]\r\n        page = DEALPRORuntime.fetchDataSet(\"target_relation\", null, args)\r\n        iEntityDTO.put(\"deal_product\", page.getTotalElements())\r\n\r\n        //产品证书\r\n        IDataEntityRuntime PRODUCTCERTIFICATERuntime = this.getSystemRuntime().getDataEntityRuntime('PRODUCT_CERTIFICATE', true)\r\n        ctx = PRODUCTCERTIFICATERuntime.createSearchContext()\r\n        ctx.setPageable(1, 1, 0)\r\n        ctx.eq(\"PRODUCT_ID\", this.getDataEntityRuntime().getKeyFieldValue(iEntityDTO))\r\n        args = [ctx]\r\n        page = PRODUCTCERTIFICATERuntime.fetchDataSet(\"DEFAULT\", null, args)\r\n        iEntityDTO.put(\"certificate\", page.getTotalElements())\r\n\r\n        //阶段历史\r\n        IDataEntityRuntime DEALHISRuntime = this.getSystemRuntime().getDataEntityRuntime('DEAL_HISTORY', true)\r\n        ctx = DEALHISRuntime.createSearchContext()\r\n        ctx.setPageable(1, 1, 0)\r\n        ctx.eq(\"DEAL_ID\",this.getDataEntityRuntime().getKeyFieldValue(iEntityDTO))\r\n        args = [ctx]\r\n        page = DEALHISRuntime.fetchDataSet(\"DEFAULT\", null, args)\r\n        iEntityDTO.put(\"dealhis\", page.getTotalElements())\r\n\r\n        //线索-产品\r\n        IDataEntityRuntime LEADPRORuntime = this.getSystemRuntime().getDataEntityRuntime('PRODUCT', true)\r\n        ctx = LEADPRORuntime.createSearchContext()\r\n        ctx.setPageable(1, 1, 0)\r\n        ctx.set(\"PRINCIPAL_ID\",this.getDataEntityRuntime().getKeyFieldValue(iEntityDTO))\r\n        ctx.set(\"PRINCIPAL_TYPE\",\"LEAD\")\r\n        args = [ctx]\r\n        page = LEADPRORuntime.fetchDataSet(\"relation_target\", null, args)\r\n        iEntityDTO.put(\"lead_product\", page.getTotalElements())\r\n\r\n        return iEntityDTO\r\n    }\r\n\r\n}\r\n",
+    "runtimeObject" : true
+  }, {
+    "codeName" : "UsrSFPlugin0407757309",
+    "dynaModelFilePath" : "PSSYSSFPLUGINS/UsrSFPlugin0407757309.json",
+    "name" : "TreeGridDEDataSetRuntime",
+    "pluginCode" : "UsrSFPlugin0407757309",
+    "pluginType" : "USER",
+    "rTObjectName" : "net.ibizsys.central.plugin.util.dataentity.ds.TreeGridDEDataSetRuntime",
+    "rTObjectSource" : 1,
+    "runtimeObject" : true
+  } ],
+  "getAllPSSysSFPubs" : [ {
+    "modelref" : true,
+    "path" : "PSSYSSFPUBS/crm.json"
+  } ],
+  "getAllPSSysServiceAPIs" : [ {
+    "modelref" : true,
+    "path" : "PSSYSSERVICEAPIS/ServiceAPI.json"
+  } ],
+  "getAllPSSysTranslators" : [ {
+    "modelref" : true,
+    "path" : "PSSYSTRANSLATORS/AtContent.json"
+  } ],
+  "getAllPSSysUniReses" : [ {
+    "name" : "（菜单）用户管理",
+    "resCode" : "USERMANAGE",
+    "id" : "USERMANAGE"
+  }, {
+    "name" : "（其他）销售领导",
+    "resCode" : "SALESLEADER",
+    "id" : "SALESLEADER"
+  }, {
+    "name" : "（按钮）分配关联销售",
+    "resCode" : "ASSIGNRELATEDSALES",
+    "id" : "ASSIGNRELATEDSALES"
+  }, {
+    "name" : "（菜单）工作进展",
+    "resCode" : "WORKPROGRESS",
+    "id" : "WORKPROGRESS"
+  }, {
+    "name" : "（其他）特殊处理",
+    "resCode" : "SPECIAL",
+    "id" : "SPECIAL"
+  }, {
+    "name" : "（其他）销售员工",
+    "resCode" : "SALESSTAFF",
+    "id" : "SALESSTAFF"
+  }, {
+    "name" : "（菜单）全部任务",
+    "resCode" : "ALLTASK",
+    "id" : "ALLTASK"
+  }, {
+    "name" : "（菜单）全部活动",
+    "resCode" : "ALLMANEUVER",
+    "id" : "ALLMANEUVER"
+  } ],
+  "getAllPSSysUserRoles" : [ {
+    "codeName" : "AUTHOR_USERS",
+    "defaultUser" : "ACCESSUSER",
+    "dynaModelFilePath" : "PSSYSUSERROLES/AUTHOR_USERS.json",
+    "name" : "访问用户",
+    "getPSSysUserRoleDatas" : [ {
+      "name" : "访问用户-SYS_PERSON[全部数据-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_person/PSDEUSERROLES/ALL_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_person.json"
+      }
+    }, {
+      "name" : "访问用户-SYS_ROLE_MEMBER[全部数据-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role_member/PSDEUSERROLES/ALL_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role_member.json"
+      }
+    }, {
+      "name" : "访问用户-SYS_ROLE_UAA[全部数据-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role/PSDEUSERROLES/ALL_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role.json"
+      }
+    } ],
+    "roleTag" : "AUTHOR_USERS",
+    "roleType" : "CUSTOM"
+  }, {
+    "codeName" : "UsrSysRole0516180322",
+    "dynaModelFilePath" : "PSSYSUSERROLES/UsrSysRole0516180322.json",
+    "name" : "销售人员",
+    "getPSSysUserRoleDatas" : [ {
+      "name" : "销售人员-DEAL[所有者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEUSERROLES/OWNER_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/deal.json"
+      }
+    }, {
+      "name" : "销售人员-CUSTOM_BUTTON[所有者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/custom_button/PSDEUSERROLES/OWNER_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/custom_button.json"
+      }
+    }, {
+      "name" : "销售人员-WORK_PROGRESS[创建者-读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/work_progress/PSDEUSERROLES/CREATEMAN_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/work_progress.json"
+      }
+    }, {
+      "name" : "销售人员-LEAD[所有者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDEUSERROLES/OWNER_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/lead.json"
+      }
+    }, {
+      "name" : "销售人员-USER[全部数据-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/user/PSDEUSERROLES/ALL_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/user.json"
+      }
+    }, {
+      "name" : "销售人员-ACCOUNT[分配的客户-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/account/PSDEUSERROLES/ASSIGNED_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+      }
+    }, {
+      "name" : "销售人员-USER[当前数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/user/PSDEUSERROLES/CUR_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/user.json"
+      }
+    }, {
+      "name" : "销售人员-PAYEE_STATISTIC[所有者-读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic/PSDEUSERROLES/OWNER_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic.json"
+      }
+    }, {
+      "name" : "销售人员-CONTACT[所有者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/contact/PSDEUSERROLES/OWNER_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/contact.json"
+      }
+    }, {
+      "name" : "销售人员-SCHEDULE[所有者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/schedule/PSDEUSERROLES/OWNER_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/schedule.json"
+      }
+    }, {
+      "name" : "销售人员-SYS_ROLE_UAA[全部数据-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role/PSDEUSERROLES/ALL_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role.json"
+      }
+    }, {
+      "name" : "销售人员-SCHEDULE[创建者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/schedule/PSDEUSERROLES/CREATEMAN_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/schedule.json"
+      }
+    }, {
+      "name" : "销售人员-NOTE_ATTACH[全部数据-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach/PSDEUSERROLES/ALL_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach.json"
+      }
+    }, {
+      "name" : "销售人员-TASK[执行人-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEUSERROLES/EXECUTOR_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+      }
+    }, {
+      "name" : "销售人员-PAYEE_PLAN[执行人-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan/PSDEUSERROLES/EXECUTOR_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan.json"
+      }
+    }, {
+      "name" : "销售人员-ACTIVITIY[全部数据-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/activitiy/PSDEUSERROLES/ALL_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/activitiy.json"
+      }
+    }, {
+      "name" : "销售人员-CUSTOM_BUTTON[创建者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/custom_button/PSDEUSERROLES/CREATEMAN_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/custom_button.json"
+      }
+    }, {
+      "name" : "销售人员-SYS_ROLE_MEMBER[全部数据-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role_member/PSDEUSERROLES/ALL_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role_member.json"
+      }
+    }, {
+      "name" : "销售人员-PRODUCT[全部数据-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/product/PSDEUSERROLES/ALL_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/product.json"
+      }
+    }, {
+      "name" : "销售人员-LEAD[创建者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDEUSERROLES/CREATEMAN_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/lead.json"
+      }
+    }, {
+      "name" : "销售人员-TASK[创建者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEUSERROLES/CREATEMAN_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+      }
+    }, {
+      "name" : "销售人员-ACCOUNT[创建者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/account/PSDEUSERROLES/CREATEMAN_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+      }
+    }, {
+      "name" : "销售人员-DEAL_STAGE[全部数据-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/deal_stage/PSDEUSERROLES/ALL_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/deal_stage.json"
+      }
+    }, {
+      "name" : "销售人员-DEAL[创建者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEUSERROLES/CREATEMAN_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/deal.json"
+      }
+    }, {
+      "name" : "销售人员-VENDOR[全部数据-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/vendor/PSDEUSERROLES/ALL_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/vendor.json"
+      }
+    }, {
+      "name" : "销售人员-PRODUCT_CERTIFICATE[全部数据-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/product_certificate/PSDEUSERROLES/ALL_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/product_certificate.json"
+      }
+    }, {
+      "name" : "销售人员-WEEKLIES[创建者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEUSERROLES/CREATEMAN_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies.json"
+      }
+    }, {
+      "name" : "销售人员-TASK[所有者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEUSERROLES/OWNER_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+      }
+    }, {
+      "name" : "销售人员-LEAD[执行人-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDEUSERROLES/EXECUTOR_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/lead.json"
+      }
+    }, {
+      "name" : "销售人员-EVENT[所有者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/event/PSDEUSERROLES/OWNER_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/event.json"
+      }
+    }, {
+      "name" : "销售人员-EVENT[创建者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/event/PSDEUSERROLES/CREATEMAN_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/event.json"
+      }
+    }, {
+      "name" : "销售人员-PROJECT[执行人-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/project/PSDEUSERROLES/EXECUTOR_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/project.json"
+      }
+    }, {
+      "name" : "销售人员-DEAL[执行人-读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEUSERROLES/EXECUTOR_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/deal.json"
+      }
+    }, {
+      "name" : "销售人员-PAYEE[执行人-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee/PSDEUSERROLES/EXECUTOR_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee.json"
+      }
+    }, {
+      "name" : "销售人员-NOTE_ATTACH[创建者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach/PSDEUSERROLES/CREATEMAN_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach.json"
+      }
+    }, {
+      "name" : "销售人员-ACCOUNT[所有者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/account/PSDEUSERROLES/OWNER_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+      }
+    }, {
+      "name" : "销售人员-CONTACT[创建者-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/contact/PSDEUSERROLES/CREATEMAN_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/contact.json"
+      }
+    } ],
+    "getPSSysUserRoleReses" : [ {
+      "name" : "销售人员-（其他）销售员工",
+      "getPSSysUniRes" : {
+        "modelref" : true,
+        "id" : "SALESSTAFF"
+      },
+      "sysUniResCode" : "SALESSTAFF"
+    } ],
+    "roleTag" : "SalesStaff",
+    "roleType" : "CUSTOM",
+    "uniResTags" : [ "SALESSTAFF" ]
+  }, {
+    "codeName" : "UsrSysRole0516195506",
+    "dynaModelFilePath" : "PSSYSUSERROLES/UsrSysRole0516195506.json",
+    "name" : "销售领导",
+    "getPSSysUserRoleDatas" : [ {
+      "name" : "销售领导-EVENT[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/event/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/event.json"
+      }
+    }, {
+      "name" : "销售领导-PAYEE[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee.json"
+      }
+    }, {
+      "name" : "销售领导-ACCOUNT[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/account/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+      }
+    }, {
+      "name" : "销售领导-CUSTOM_BUTTON[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/custom_button/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/custom_button.json"
+      }
+    }, {
+      "name" : "销售领导-SCHEDULE[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/schedule/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/schedule.json"
+      }
+    }, {
+      "name" : "销售领导-SYS_ROLE_UAA[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role.json"
+      }
+    }, {
+      "name" : "销售领导-WEEKLIES[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies.json"
+      }
+    }, {
+      "name" : "销售领导-PRODUCT_CERTIFICATE[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/product_certificate/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/product_certificate.json"
+      }
+    }, {
+      "name" : "销售领导-SYS_ROLE_MEMBER[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role_member/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role_member.json"
+      }
+    }, {
+      "name" : "销售领导-PROJECT[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/project/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/project.json"
+      }
+    }, {
+      "name" : "销售领导-PAYEE_PLAN[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan.json"
+      }
+    }, {
+      "name" : "销售领导-TASK[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+      }
+    }, {
+      "name" : "销售领导-VENDOR[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/vendor/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/vendor.json"
+      }
+    }, {
+      "name" : "销售领导-LEAD[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/lead.json"
+      }
+    }, {
+      "name" : "销售领导-WORK_PROGRESS[全部数据-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/work_progress/PSDEUSERROLES/ALL_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/work_progress.json"
+      }
+    }, {
+      "name" : "销售领导-CONTACT[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/contact/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/contact.json"
+      }
+    }, {
+      "name" : "销售领导-DEAL[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/deal.json"
+      }
+    }, {
+      "name" : "销售领导-PRODUCT[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/product/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/product.json"
+      }
+    }, {
+      "name" : "销售领导-NOTE_ATTACH[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach.json"
+      }
+    }, {
+      "name" : "销售领导-SYS_PERSON[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_person/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_person.json"
+      }
+    }, {
+      "name" : "销售领导-PAYEE_STATISTIC[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic.json"
+      }
+    }, {
+      "name" : "销售领导-DEAL_STAGE[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/deal_stage/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/deal_stage.json"
+      }
+    }, {
+      "name" : "销售领导-WORK_PROGRESS[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/work_progress/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/work_progress.json"
+      }
+    }, {
+      "name" : "销售领导-ACTIVITIY[全部数据-只读]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/activitiy/PSDEUSERROLES/ALL_R.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/activitiy.json"
+      }
+    }, {
+      "name" : "销售领导-USER[全部数据-读写]",
+      "getPSDEUserRole" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/user/PSDEUSERROLES/ALL_CRUD.json"
+      },
+      "getPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/user.json"
+      }
+    } ],
+    "getPSSysUserRoleReses" : [ {
+      "name" : "销售领导-（按钮）分配关联销售",
+      "getPSSysUniRes" : {
+        "modelref" : true,
+        "id" : "ASSIGNRELATEDSALES"
+      },
+      "sysUniResCode" : "ASSIGNRELATEDSALES"
+    }, {
+      "name" : "销售领导-（其他）销售领导",
+      "getPSSysUniRes" : {
+        "modelref" : true,
+        "id" : "SALESLEADER"
+      },
+      "sysUniResCode" : "SALESLEADER"
+    }, {
+      "name" : "销售领导-（其他）特殊处理",
+      "getPSSysUniRes" : {
+        "modelref" : true,
+        "id" : "SPECIAL"
+      },
+      "sysUniResCode" : "SPECIAL"
+    }, {
+      "name" : "销售领导-（菜单）全部活动",
+      "getPSSysUniRes" : {
+        "modelref" : true,
+        "id" : "ALLMANEUVER"
+      },
+      "sysUniResCode" : "ALLMANEUVER"
+    }, {
+      "name" : "销售领导-（菜单）全部任务",
+      "getPSSysUniRes" : {
+        "modelref" : true,
+        "id" : "ALLTASK"
+      },
+      "sysUniResCode" : "ALLTASK"
+    }, {
+      "name" : "销售领导-（菜单）用户管理",
+      "getPSSysUniRes" : {
+        "modelref" : true,
+        "id" : "USERMANAGE"
+      },
+      "sysUniResCode" : "USERMANAGE"
+    }, {
+      "name" : "销售领导-（菜单）工作进展",
+      "getPSSysUniRes" : {
+        "modelref" : true,
+        "id" : "WORKPROGRESS"
+      },
+      "sysUniResCode" : "WORKPROGRESS"
+    } ],
+    "roleTag" : "SalesLeader",
+    "roleType" : "CUSTOM",
+    "uniResTags" : [ "ASSIGNRELATEDSALES", "SALESLEADER", "SPECIAL", "ALLMANEUVER", "ALLTASK", "USERMANAGE", "WORKPROGRESS" ]
+  } ],
+  "getAllPSSysUtils" : [ {
+    "codeName" : "Audit",
+    "dynaModelFilePath" : "PSSYSUTILDES/Audit.json",
+    "name" : "审计",
+    "getUtilPSDE" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/activitiy.json"
+    },
+    "utilPSDEName" : "ACTIVITIY",
+    "utilType" : "DATAAUDIT",
+    "regToSys" : false
+  } ],
+  "getAllPSSysValueRules" : [ {
+    "modelref" : true,
+    "path" : "PSSYSVALUERULES/UsrValueRule0407250158.json"
+  } ],
+  "getAllPSSystemDBConfigs" : [ {
+    "modelref" : true,
+    "path" : "PSSYSTEMDBCFGS/MYSQL5.json"
+  } ],
+  "getAllPSSystemModules" : [ {
+    "getAllPSCodeLists" : [ {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList64.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList75.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList68.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList95.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList27.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList118.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList42.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/outgoing_call_status.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/assessment_type.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList60.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList81.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList83.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList94.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList79.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList30.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList113.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/manufacturer.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList11.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList116.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList84.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList65.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/WFStates.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList77.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/UsrCodeList0625594962.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList70.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/dealstage.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList48.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/weeklies_period.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList38.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/lead_status.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/work_progress_type_task.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/schedulet_ype.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList5.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList24.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList114.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList41.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/TrueFalse.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList37.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList111.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList34.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList28.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList62.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList6.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList46.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList23.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/type.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList86.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList89.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList2.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList90.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList19.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList67.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList4.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/payee_status.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList102.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList20.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList50.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList9.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList29.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList45.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/tax.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList74.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/industry.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList39.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/lead_source.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList101.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList3.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList1.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/business_line.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList32.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList87.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList57.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList16.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList7.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList40.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList58.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/statistics_type.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList10.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList36.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList93.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/work_progress_cztype.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList92.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList107.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList88.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/order_status.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList80.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList52.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList8.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList103.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList35.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList55.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList33.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList59.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/task_relation_owner_type.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/owner_type.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList104.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList99.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/work_progress_type.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList21.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/Rating.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList108.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/owner.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList96.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList112.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/collection_type.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList14.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList56.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/task_status.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/payee_type.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/activityType.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/distribution_model.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList100.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/UsrCodeList0710231620.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList117.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList66.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/YesNo.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/campaign_type.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/SysOperator.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList13.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList54.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/ownership.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList12.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList71.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList98.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList31.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList105.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList22.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList17.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/product_category.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/sysuser.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList47.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList61.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/stage.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList106.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList97.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/priority.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList18.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList69.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList115.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList63.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList49.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList26.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/campaign_status.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList91.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList85.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList82.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList72.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList110.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList78.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList109.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/SortDir.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList15.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList53.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/CodeList76.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/account_type.json"
+    } ],
+    "getAllPSDataEntities" : [ {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/activitiy.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/attachment.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/call.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/campaign.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/contact.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/custom_button.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal_history.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal_stage.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/event.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/executor.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/invoice.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/item.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/lead.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/maneuver.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/order_allocate.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_allocate.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/product.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/product_certificate.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/project.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/purchase_order.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/quote.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/recent.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/relation.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/reservation.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/schedule.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/service_case.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/solution.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/tag.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task_executor.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/user.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/vendor.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weekly_detail.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/work_progress.json"
+    } ],
+    "codeName" : "crm",
+    "dynaModelFilePath" : "PSMODULES/crm.json",
+    "name" : "crm",
+    "defaultModule" : true
+  }, {
+    "getAllPSCodeLists" : [ {
+      "modelref" : true,
+      "path" : "PSMODULES/runtime/PSCODELISTS/UsrCodeList0618913512.json"
+    } ],
+    "getAllPSDataEntities" : [ {
+      "modelref" : true,
+      "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_person.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role.json"
+    }, {
+      "modelref" : true,
+      "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role_member.json"
+    } ],
+    "codeName" : "runtime",
+    "dynaModelFilePath" : "PSMODULES/runtime.json",
+    "name" : "系统管理"
+  } ],
+  "codeName" : "iBizCRM",
+  "defaultLanguage" : "ZH_CN",
+  "getDefaultPSSysI18N" : {
+    "modelref" : true,
+    "path" : "PSSYSI18NS/DEFAULT.json"
+  },
+  "getDefaultPSSysSFPub" : {
+    "codeName" : "crm",
+    "contentType" : "CODE",
+    "defaultFlag" : true,
+    "dynaModelFilePath" : "PSSYSSFPUBS/crm.json",
+    "modelFolder" : "model",
+    "name" : "crm",
+    "pKGCodeName" : "cn.ibizlab.crm",
+    "versionString" : "1.0.0.0",
+    "codeMode" : true,
+    "enableModelRT" : true,
+    "mainPSSysSFPub" : true,
+    "pubModel" : true
+  },
+  "deploySysId" : "ibizcrm",
+  "engineVer" : 240,
+  "logicName" : "iBiz客户关系管理系统",
+  "name" : "iBizCRM",
+  "vCName" : "trunk",
+  "id" : "PSSYSTEM.json"
+}

@@ -1,0 +1,15 @@
+{
+  "codeName" : "UsrDRItem0531475305",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/user/PSDEDRITEMS/UsrDRItem0531475305.json",
+  "itemType" : "CUSTOM",
+  "name" : "商机多模式图表表格导航视图",
+  "parentDataJO" : {
+    "srfparentdename" : "USER",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "chart_grid_view_multimode",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/deal.json"
+  }
+}

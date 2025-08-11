@@ -1,0 +1,56 @@
+package cn.ibizlab.crm.crm.logic.deallogic.sccreatedealstagehis;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.deal dealsccreatedealstagehisdefault;
+                global cn.ibizlab.crm.core.crm.domain.deal_history dealsccreatedealstagehisdeal_history;
+                    global cn.ibizlab.crm.core.crm.service.Ideal_historyService deal_historyservice;
+        global cn.ibizlab.crm.core.crm.service.IdealService iBzSysDealDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "dealsccreatedealstagehisbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "dealsccreatedealstagehisend1"
+            when
+            then
+                        update(dealsccreatedealstagehisdefault);//更新fact中变量值
+                        update(dealsccreatedealstagehisdeal_history);//更新fact中变量值
+            end
+
+            //逻辑处理节点[阶段历史对象属性赋值]
+            rule "prepareparam1"
+            ruleflow-group "dealsccreatedealstagehisprepareparam1"
+            when
+            then
+                            dealsccreatedealstagehisdeal_history.set("stage",dealsccreatedealstagehisdefault.get("stage"));
+                            dealsccreatedealstagehisdeal_history.set("dealid",dealsccreatedealstagehisdefault.get("id"));
+                            dealsccreatedealstagehisdeal_history.set("amount",dealsccreatedealstagehisdefault.get("amount"));
+                            dealsccreatedealstagehisdeal_history.set("probability",dealsccreatedealstagehisdefault.get("probability"));
+                            dealsccreatedealstagehisdeal_history.set("expectedrevenue",dealsccreatedealstagehisdefault.get("expectedrevenue"));
+                            dealsccreatedealstagehisdeal_history.set("closingdate",dealsccreatedealstagehisdefault.get("closingdate"));
+                        update(dealsccreatedealstagehisdefault);//更新fact中变量值
+                        update(dealsccreatedealstagehisdeal_history);//更新fact中变量值
+            end
+
+            //逻辑处理节点[生成阶段历史数据]
+            rule "deaction1"
+            ruleflow-group "dealsccreatedealstagehisdeaction1"
+            when
+            then
+                        deal_historyservice.create(dealsccreatedealstagehisdeal_history);
+                        update(dealsccreatedealstagehisdefault);//更新fact中变量值
+                        update(dealsccreatedealstagehisdeal_history);//更新fact中变量值
+            end

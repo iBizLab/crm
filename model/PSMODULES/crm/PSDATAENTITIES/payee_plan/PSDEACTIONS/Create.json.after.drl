@@ -1,0 +1,13 @@
+global cn.ibizlab.crm.core.crm.service.Ipayee_statisticService  payeeStatisticService;
+global cn.ibizlab.crm.core.crm.domain.payee_plan et;
+
+    no-loop
+
+    rule "payee_statisticcalculation"
+    ruleflow-group "f5a0226baa700ee0307c184a8872acae"
+    when
+    then
+    cn.ibizlab.crm.core.crm.domain.payee_statistic actionLogicDE =new cn.ibizlab.crm.core.crm.domain.payee_statistic();
+    et.copyTo(actionLogicDE,true);
+    payeeStatisticService.calculation(actionLogicDE);
+    end

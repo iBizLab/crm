@@ -1,0 +1,9 @@
+{
+  "codeName" : "Default",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/product_certificate/PSDEDATARELATIONS/Default.json",
+  "getFormCapPSLanguageRes" : {
+    "lanResTag" : "DE.LNAME.PRODUCT_CERTIFICATE"
+  },
+  "formCaption" : "产品证书",
+  "name" : "产品证书默认关系界面组"
+}

@@ -1,0 +1,104 @@
+package cn.ibizlab.crm.crm.logic.deallogic.add_deal;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.deal dealadd_dealdefault;
+                global cn.ibizlab.crm.core.crm.domain.deal dealadd_dealitem;
+                global cn.ibizlab.crm.core.crm.domain.relation dealadd_dealrelation;
+                global java.util.Map dealadd_dealsrfactionparam;
+                global java.util.Map dealadd_dealsub;
+                    global cn.ibizlab.crm.core.crm.service.IrelationService relationservice;
+        global cn.ibizlab.crm.core.crm.service.IdealService iBzSysDealDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "dealadd_dealbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[获取选择商机集合]
+            rule "prepareparam1"
+            ruleflow-group "dealadd_dealprepareparam1"
+            when
+            then
+                            dealadd_dealsrfactionparam.set("",dealadd_dealdefault.get("srfactionparam"));
+                        update(dealadd_dealdefault);//更新fact中变量值
+                        update(dealadd_dealitem);//更新fact中变量值
+                        update(dealadd_dealrelation);//更新fact中变量值
+                        update(dealadd_dealsrfactionparam);//更新fact中变量值
+                        update(dealadd_dealsub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[循环获取商机数据集]
+            rule "loopsubcall1"
+            ruleflow-group "dealadd_dealloopsubcall1"
+            when
+            then
+                        update(dealadd_dealdefault);//更新fact中变量值
+                        update(dealadd_dealitem);//更新fact中变量值
+                        update(dealadd_dealrelation);//更新fact中变量值
+                        update(dealadd_dealsrfactionparam);//更新fact中变量值
+                        update(dealadd_dealsub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[拷贝商机数据至中间对象]
+            rule "copyparam1"
+            ruleflow-group "dealadd_dealcopyparam1"
+            when
+            then
+                        update(dealadd_dealdefault);//更新fact中变量值
+                        update(dealadd_dealitem);//更新fact中变量值
+                        update(dealadd_dealrelation);//更新fact中变量值
+                        update(dealadd_dealsrfactionparam);//更新fact中变量值
+                        update(dealadd_dealsub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "dealadd_dealend1"
+            when
+            then
+                        update(dealadd_dealdefault);//更新fact中变量值
+                        update(dealadd_dealitem);//更新fact中变量值
+                        update(dealadd_dealrelation);//更新fact中变量值
+                        update(dealadd_dealsrfactionparam);//更新fact中变量值
+                        update(dealadd_dealsub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[设置关联数据]
+            rule "prepareparam2"
+            ruleflow-group "dealadd_dealprepareparam2"
+            when
+            then
+                            dealadd_dealrelation.set("principalid",dealadd_dealitem.get("id"));
+                            dealadd_dealrelation.set("targettype",dealadd_dealdefault.get("principal_type"));
+                            dealadd_dealrelation.set("targetid",dealadd_dealdefault.get("principal_id"));
+                            dealadd_dealrelation.set("principaltype","PRODUCT");
+                                dealadd_dealrelation.set("id",null);
+                        update(dealadd_dealdefault);//更新fact中变量值
+                        update(dealadd_dealitem);//更新fact中变量值
+                        update(dealadd_dealrelation);//更新fact中变量值
+                        update(dealadd_dealsrfactionparam);//更新fact中变量值
+                        update(dealadd_dealsub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[创建关联数据]
+            rule "deaction1"
+            ruleflow-group "dealadd_dealdeaction1"
+            when
+            then
+                        relationservice.save(dealadd_dealrelation);
+                        update(dealadd_dealdefault);//更新fact中变量值
+                        update(dealadd_dealitem);//更新fact中变量值
+                        update(dealadd_dealrelation);//更新fact中变量值
+                        update(dealadd_dealsrfactionparam);//更新fact中变量值
+                        update(dealadd_dealsub);//更新fact中变量值
+            end

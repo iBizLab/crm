@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:g="http://www.jboss.org/drools/flow/gpd" xmlns:tns="http://www.jboss.org/drools" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.mvel.org/2.0" id="Definition" name="" targetNamespace="http://www.jboss.org/drools" typeLanguage="http://www.java.com/javaTypes">
+        <process id="cn.ibizlab.crm.core.crm.service.logic.weekliesopendetail2" isClosed="false" isExecutable="true" name="crm_weeklies_opendetail2_ruleFlow" processType="Private" tns:packageName="cn.ibizlab.crm.core.crm.service.logic.weekliesopendetail2">
+            <extensionElements>
+                <tns:import name="java.util.Map" />
+                <tns:import name="org.springframework.util.StringUtils"/>
+                <tns:import name="cn.ibizlab.crm.util.helper.RuleUtils"/>
+                                <tns:metaData express="" name="weekliesopendetail2default" type="entity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.task()" name="weekliesopendetail2activities" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.note_attach()" name="weekliesopendetail2notes" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.task()" name="weekliesopendetail2tasks" type="refentity"/>
+                    <tns:metaData express="T(cn.ibizlab.crm.util.security.SpringContextHolder).getBean(T(cn.ibizlab.crm.core.crm.service.IweekliesService))" name="iBzSysWeekliesDefaultService" type="service"/>
+                    <tns:metaData express="T(cn.ibizlab.crm.util.security.AuthenticationUser).getAuthenticationUser()" name="curuser" type="session"/>
+                            <tns:global identifier="weekliesopendetail2default" type="cn.ibizlab.crm.core.crm.domain.weeklies" />
+                            <tns:global identifier="weekliesopendetail2activities" type="cn.ibizlab.crm.core.crm.domain.task" />
+                            <tns:global identifier="weekliesopendetail2notes" type="cn.ibizlab.crm.core.crm.domain.note_attach" />
+                            <tns:global identifier="weekliesopendetail2tasks" type="cn.ibizlab.crm.core.crm.domain.task" />
+            </extensionElements>
+                        <startEvent id="begin" isInterrupting="true"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="weekliesopendetail2debugparam1" id="debugparam1" implementation="http://www.jboss.org/drools/rule" name="调试逻辑参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="weekliesopendetail2end1" id="end1" implementation="http://www.jboss.org/drools/rule" name="结束"/>
+                        <endEvent id="end1_end" name="end"/>
+                        <sequenceFlow id="end1_end_line" sourceRef="end1" targetRef="end1_end"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="weekliesopendetail2rawsqlcall1" id="rawsqlcall1" implementation="http://www.jboss.org/drools/rule" name="本周活动"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="weekliesopendetail2rawsqlcall2" id="rawsqlcall2" implementation="http://www.jboss.org/drools/rule" name="本周进展评估"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="weekliesopendetail2rawsqlcall3" id="rawsqlcall3" implementation="http://www.jboss.org/drools/rule" name="下周计划"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="weekliesopendetail2prepareparam2" id="prepareparam2" implementation="http://www.jboss.org/drools/rule" name="填充数据"/>
+                    <sequenceFlow id="begin_debugparam1" sourceRef="begin" targetRef="debugparam1">
+                    </sequenceFlow>
+                    <sequenceFlow id="debugparam1_rawsqlcall1" sourceRef="debugparam1" targetRef="rawsqlcall1">
+                    </sequenceFlow>
+                    <sequenceFlow id="rawsqlcall1_rawsqlcall2" sourceRef="rawsqlcall1" targetRef="rawsqlcall2">
+                    </sequenceFlow>
+                    <sequenceFlow id="rawsqlcall2_rawsqlcall3" sourceRef="rawsqlcall2" targetRef="rawsqlcall3">
+                    </sequenceFlow>
+                    <sequenceFlow id="rawsqlcall3_prepareparam2" sourceRef="rawsqlcall3" targetRef="prepareparam2">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam2_end1" sourceRef="prepareparam2" targetRef="end1">
+                    </sequenceFlow>
+        </process>
+    </definitions>

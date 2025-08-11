@@ -1,0 +1,34 @@
+{
+  "codeListTag" : "crm__CodeList65",
+  "codeListType" : "STATIC",
+  "codeName" : "CodeList65",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSCODELISTS/CodeList65.json",
+  "emptyText" : "未定义",
+  "name" : "数据库触发器操作",
+  "getPSCodeItems" : [ {
+    "codeName" : "before",
+    "text" : "Before",
+    "value" : "BEFORE"
+  }, {
+    "codeName" : "after",
+    "text" : "After",
+    "value" : "AFTER"
+  }, {
+    "codeName" : "insteadof",
+    "text" : "Instead of",
+    "value" : "INSTEADOF"
+  } ],
+  "getPSCodeListTemplId" : "CODELIST_00072",
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "refFlag" : false,
+  "systemTag" : "iBizCRM",
+  "codeItemValueNumber" : false,
+  "enableCache" : true,
+  "subSysAsCloud" : false,
+  "subSysCodeList" : false,
+  "userScope" : false
+}

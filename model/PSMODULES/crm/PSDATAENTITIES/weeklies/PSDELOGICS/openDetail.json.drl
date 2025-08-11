@@ -1,0 +1,217 @@
+package cn.ibizlab.crm.crm.logic.weeklieslogic.opendetail;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.weeklies weekliesopendetaildefault;
+                global cn.ibizlab.crm.core.crm.domain.task weekliesopendetailactivities;
+                global java.util.Map weekliesopendetailnews;
+                global cn.ibizlab.crm.core.crm.domain.note_attach weekliesopendetailnotes;
+                global cn.ibizlab.crm.core.crm.domain.task weekliesopendetailtasks;
+                global cn.ibizlab.crm.core.crm.domain.task weekliesopendetailworks;
+        global cn.ibizlab.crm.core.crm.service.IweekliesService iBzSysWeekliesDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "weekliesopendetailbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "weekliesopendetailend1"
+            when
+            then
+                        update(weekliesopendetaildefault);//更新fact中变量值
+                        update(weekliesopendetailactivities);//更新fact中变量值
+                        update(weekliesopendetailnews);//更新fact中变量值
+                        update(weekliesopendetailnotes);//更新fact中变量值
+                        update(weekliesopendetailtasks);//更新fact中变量值
+                        update(weekliesopendetailworks);//更新fact中变量值
+            end
+
+            //逻辑处理节点[输出填充数据]
+            rule "debugparam2"
+            ruleflow-group "weekliesopendetaildebugparam2"
+            when
+            then
+                        update(weekliesopendetaildefault);//更新fact中变量值
+                        update(weekliesopendetailactivities);//更新fact中变量值
+                        update(weekliesopendetailnews);//更新fact中变量值
+                        update(weekliesopendetailnotes);//更新fact中变量值
+                        update(weekliesopendetailtasks);//更新fact中变量值
+                        update(weekliesopendetailworks);//更新fact中变量值
+            end
+
+            //逻辑处理节点[本周活动和任务]
+            rule "rawsqlcall1"
+            ruleflow-group "weekliesopendetailrawsqlcall1"
+            when
+            then
+    Map param =new HashMap();
+        param.put("param0",weekliesopendetaildefault.get("createman"));
+        param.put("param1",weekliesopendetaildefault.get("owner"));
+        param.put("param2",weekliesopendetaildefault.get("startdate"));
+        param.put("param3",weekliesopendetaildefault.get("startdate"));
+    String strSql="select 	ID as TARGET_ID, 	SUBJECT  as NAME, 	TYPE as TARGET_TYPE,    	COALESCE(START_TIME, DUE_DATE) AS START_TIME,     PRIORITY,     STATUS,     COST,     DESCRIPTION  from 	TASK where 	(CREATE_MAN = #{et.param0} 	or OWNER = #{et.param1})     and  	(          (YEARWEEK(START_TIME , 1) = YEARWEEK(#{et.param2}, 1)and TYPE = 'MANEUVER')         or          (YEARWEEK(DUE_DATE, 1) = YEARWEEK(#{et.param3}, 1) and TYPE = 'TASK' ) 	) ORDER BY START_TIME desc;";
+                        java.util.List<JSONObject> entities=iBzSysWeekliesDefaultService.select(strSql,param);//SQL调用
+                            if(entities.size()>0){
+                            JSONObject entity=entities.get(0);
+                                    cn.ibizlab.crm.core.crm.domain.task targetEntity =new cn.ibizlab.crm.core.crm.domain.task();
+                                    for (Map.Entry entry : entity.entrySet()) {
+                                    targetEntity.set(String.valueOf(entry.getKey()),entry.getValue());
+                                    }
+                                    org.springframework.cglib.beans.BeanCopier copier= org.springframework.cglib.beans.BeanCopier.create(targetEntity.getClass(),weekliesopendetailactivities.getClass(), false);
+                                    copier.copy(targetEntity,weekliesopendetailactivities,null);
+                            }
+                        update(weekliesopendetaildefault);//更新fact中变量值
+                        update(weekliesopendetailactivities);//更新fact中变量值
+                        update(weekliesopendetailnews);//更新fact中变量值
+                        update(weekliesopendetailnotes);//更新fact中变量值
+                        update(weekliesopendetailtasks);//更新fact中变量值
+                        update(weekliesopendetailworks);//更新fact中变量值
+            end
+
+            //逻辑处理节点[本周进展评估]
+            rule "rawsqlcall2"
+            ruleflow-group "weekliesopendetailrawsqlcall2"
+            when
+            then
+    Map param =new HashMap();
+        param.put("param0",weekliesopendetaildefault.get("createman"));
+        param.put("param1",weekliesopendetaildefault.get("owner"));
+        param.put("param2",weekliesopendetaildefault.get("createman"));
+        param.put("param3",weekliesopendetaildefault.get("owner"));
+        param.put("param4",weekliesopendetaildefault.get("createman"));
+        param.put("param5",weekliesopendetaildefault.get("owner"));
+        param.put("param6",weekliesopendetaildefault.get("createman"));
+        param.put("param7",weekliesopendetaildefault.get("owner"));
+        param.put("param8",weekliesopendetaildefault.get("startdate"));
+        param.put("param9",weekliesopendetaildefault.get("enddate"));
+    String strSql="SELECT T1.* FROM ( select t1.id,t1.principal_type,t1.principal_name,t1.update_time,t1.principal_id,t1.content,t1.create_man from note_attach t1,task t2 where t1.PRINCIPAL_TYPE = 'TASK' and t1.principal_id = t2.id and (t1.CREATE_MAN = #{et.param0} or EXISTS (SELECT 1 FROM task_executor T21 WHERE T21.TASK_ID = T1.PRINCIPAL_ID AND T21.USER_ID = #{et.param1})) UNION ALL select t1.id,t1.principal_type,CONCAT('（',t3.account_name,'）',t1.principal_name) as principal_name,t1.update_time,t1.principal_id,t1.content,t1.create_man from note_attach t1,project t2,account t3 where t1.PRINCIPAL_TYPE = 'PROJECT' and t1.principal_id = t2.id and t2.account_id = t3.id and (t1.CREATE_MAN = #{et.param2} or EXISTS (SELECT 1 FROM executor T31 WHERE T31.PRINCIPAL_ID = T1.PRINCIPAL_ID AND T31.USER_ID = #{et.param3})) UNION ALL select t1.id,t1.principal_type,CONCAT('（',t3.account_name,'）',t1.principal_name) as principal_name,t1.update_time,t1.principal_id,t1.content,t1.create_man from note_attach t1,lead t2,account t3 where t1.PRINCIPAL_TYPE = 'LEAD' and t1.principal_id = t2.id and t2.account_id = t3.id and (t1.CREATE_MAN = #{et.param4} or EXISTS (SELECT 1 FROM executor T31 WHERE T31.PRINCIPAL_ID = T1.PRINCIPAL_ID AND T31.USER_ID = #{et.param5})) UNION ALL select t1.id,t1.principal_type,CONCAT('（',t3.account_name,'）',t1.principal_name) as principal_name,t1.update_time,t1.principal_id,t1.content,t1.create_man from note_attach t1,deal t2,account t3 where t1.PRINCIPAL_TYPE = 'DEAL' and t1.principal_id = t2.id and t2.account_id = t3.id and (t1.CREATE_MAN = #{et.param6} or t2.owner = #{et.param7}) ) T1 WHERE T1.UPDATE_TIME >= #{et.param8} AND T1.UPDATE_TIME <= DATE_ADD(STR_TO_DATE(#{et.param9}, '%Y-%m-%d'), INTERVAL 1 DAY) ORDER BY T1.UPDATE_TIME desc";
+                        java.util.List<JSONObject> entities=iBzSysWeekliesDefaultService.select(strSql,param);//SQL调用
+                            if(entities.size()>0){
+                            JSONObject entity=entities.get(0);
+                                    cn.ibizlab.crm.core.crm.domain.note_attach targetEntity =new cn.ibizlab.crm.core.crm.domain.note_attach();
+                                    for (Map.Entry entry : entity.entrySet()) {
+                                    targetEntity.set(String.valueOf(entry.getKey()),entry.getValue());
+                                    }
+                                    org.springframework.cglib.beans.BeanCopier copier= org.springframework.cglib.beans.BeanCopier.create(targetEntity.getClass(),weekliesopendetailnotes.getClass(), false);
+                                    copier.copy(targetEntity,weekliesopendetailnotes,null);
+                            }
+                        update(weekliesopendetaildefault);//更新fact中变量值
+                        update(weekliesopendetailactivities);//更新fact中变量值
+                        update(weekliesopendetailnews);//更新fact中变量值
+                        update(weekliesopendetailnotes);//更新fact中变量值
+                        update(weekliesopendetailtasks);//更新fact中变量值
+                        update(weekliesopendetailworks);//更新fact中变量值
+            end
+
+            //逻辑处理节点[新建的商机或线索]
+            rule "rawsqlcall4"
+            ruleflow-group "weekliesopendetailrawsqlcall4"
+            when
+            then
+    Map param =new HashMap();
+        param.put("param0",weekliesopendetaildefault.get("startdate"));
+        param.put("param1",weekliesopendetaildefault.get("enddate"));
+        param.put("param2",weekliesopendetaildefault.get("createman"));
+        param.put("param3",weekliesopendetaildefault.get("owner"));
+        param.put("param4",weekliesopendetaildefault.get("owner"));
+        param.put("param5",weekliesopendetaildefault.get("startdate"));
+        param.put("param6",weekliesopendetaildefault.get("enddate"));
+        param.put("param7",weekliesopendetaildefault.get("createman"));
+        param.put("param8",weekliesopendetaildefault.get("owner"));
+    String strSql="(select t1.id,CONCAT('（',t2.account_name,'）',t1.subject) as name,t1.create_time,'线索' as `type`, 'LEAD' as `link_type`,t1.description from `lead` t1,account t2 where t1.account_id = t2.id and t1.create_time >= STR_TO_DATE(#{et.param0}, '%Y-%m-%d') and t1.create_time <= DATE_ADD(STR_TO_DATE(#{et.param1}, '%Y-%m-%d'), INTERVAL 1 DAY) and (t1.create_man = #{et.param2} or t1.owner = #{et.param3} or EXISTS (SELECT 1 FROM executor T11 WHERE T11.PRINCIPAL_ID = T1.id AND T11.USER_ID = #{et.param4})))  union all (select t1.id,CONCAT('（',t2.account_name,'）',t1.deal_name) as name,t1.create_time,'商机' as `type`, 'DEAL' as `link_type`,t1.description from `deal` t1,account t2 where t1.account_id = t2.id and t1.create_time >= STR_TO_DATE(#{et.param5}, '%Y-%m-%d') and t1.create_time <= DATE_ADD(STR_TO_DATE(#{et.param6}, '%Y-%m-%d'), INTERVAL 1 DAY) and (t1.create_man = #{et.param7} or t1.owner = #{et.param8} )) ORDER BY create_time desc";
+                        java.util.List<JSONObject> entities=iBzSysWeekliesDefaultService.select(strSql,param);//SQL调用
+                            if(entities.size()>0){
+                            JSONObject entity=entities.get(0);
+                                weekliesopendetailnews.putAll(entity);
+                            }
+                        update(weekliesopendetaildefault);//更新fact中变量值
+                        update(weekliesopendetailactivities);//更新fact中变量值
+                        update(weekliesopendetailnews);//更新fact中变量值
+                        update(weekliesopendetailnotes);//更新fact中变量值
+                        update(weekliesopendetailtasks);//更新fact中变量值
+                        update(weekliesopendetailworks);//更新fact中变量值
+            end
+
+            //逻辑处理节点[填充数据]
+            rule "prepareparam2"
+            ruleflow-group "weekliesopendetailprepareparam2"
+            when
+            then
+                            weekliesopendetaildefault.set("activities",weekliesopendetailactivities.get(""));
+                            weekliesopendetaildefault.set("works",weekliesopendetailworks.get(""));
+                            weekliesopendetaildefault.set("news",weekliesopendetailnews.get(""));
+                            weekliesopendetaildefault.set("tasks",weekliesopendetailtasks.get(""));
+                            weekliesopendetaildefault.set("notes",weekliesopendetailnotes.get(""));
+                        update(weekliesopendetaildefault);//更新fact中变量值
+                        update(weekliesopendetailactivities);//更新fact中变量值
+                        update(weekliesopendetailnews);//更新fact中变量值
+                        update(weekliesopendetailnotes);//更新fact中变量值
+                        update(weekliesopendetailtasks);//更新fact中变量值
+                        update(weekliesopendetailworks);//更新fact中变量值
+            end
+
+            //逻辑处理节点[下周计划]
+            rule "rawsqlcall3"
+            ruleflow-group "weekliesopendetailrawsqlcall3"
+            when
+            then
+    Map param =new HashMap();
+        param.put("param0",weekliesopendetaildefault.get("owner"));
+        param.put("param1",weekliesopendetaildefault.get("startdate"));
+        param.put("param2",weekliesopendetaildefault.get("startdate"));
+        param.put("param3",weekliesopendetaildefault.get("startdate"));
+        param.put("param4",weekliesopendetaildefault.get("startdate"));
+    String strSql="SELECT       ID as TARGET_ID,       SUBJECT as NAME,       'TASK' as TARGET_TYPE,     PRIORITY,     STATUS,     DUE_DATE,     DESCRIPTION FROM       TASK  T1 WHERE       T1.`TYPE` = 'TASK'       AND EXISTS (SELECT 1 FROM task_executor T2 WHERE T2.TASK_ID = T1.ID AND T2.USER_ID = #{et.param0})       		AND T1.DUE_DATE >=  DATE_ADD(#{et.param1} + INTERVAL (7-WEEKDAY(#{et.param2})) DAY, INTERVAL 0 DAY) 		AND T1.DUE_DATE <= DATE_ADD(#{et.param3}, INTERVAL (13-WEEKDAY(#{et.param4})) DAY)     ORDER BY T1.DUE_DATE desc";
+                        java.util.List<JSONObject> entities=iBzSysWeekliesDefaultService.select(strSql,param);//SQL调用
+                            if(entities.size()>0){
+                            JSONObject entity=entities.get(0);
+                                    cn.ibizlab.crm.core.crm.domain.task targetEntity =new cn.ibizlab.crm.core.crm.domain.task();
+                                    for (Map.Entry entry : entity.entrySet()) {
+                                    targetEntity.set(String.valueOf(entry.getKey()),entry.getValue());
+                                    }
+                                    org.springframework.cglib.beans.BeanCopier copier= org.springframework.cglib.beans.BeanCopier.create(targetEntity.getClass(),weekliesopendetailtasks.getClass(), false);
+                                    copier.copy(targetEntity,weekliesopendetailtasks,null);
+                            }
+                        update(weekliesopendetaildefault);//更新fact中变量值
+                        update(weekliesopendetailactivities);//更新fact中变量值
+                        update(weekliesopendetailnews);//更新fact中变量值
+                        update(weekliesopendetailnotes);//更新fact中变量值
+                        update(weekliesopendetailtasks);//更新fact中变量值
+                        update(weekliesopendetailworks);//更新fact中变量值
+            end
+
+            //逻辑处理节点[本周任务]
+            rule "rawsqlcall5"
+            ruleflow-group "weekliesopendetailrawsqlcall5"
+            when
+            then
+    Map param =new HashMap();
+        param.put("param0",curuser.getSessionParams().get("srfuserid"));
+        param.put("param1",curuser.getSessionParams().get("userid"));
+        param.put("param2",weekliesopendetaildefault.get("startdate"));
+    String strSql="select 	ID as TARGET_ID, 	SUBJECT  as NAME, 	'TASK' as TARGET_TYPE,     START_TIME,     PRIORITY,     STATUS,     COST,     DESCRIPTION  from 	TASK where 	`TYPE` = 'TASK' 	and (CREATE_MAN = #{et.param0} 		or OWNER = #{et.param1})         and YEARWEEK(START_TIME , 1) = YEARWEEK(#{et.param2}, 1) order by START_TIME desc		";
+                        java.util.List<JSONObject> entities=iBzSysWeekliesDefaultService.select(strSql,param);//SQL调用
+                            if(entities.size()>0){
+                            JSONObject entity=entities.get(0);
+                                    for (Map.Entry entry : entity.entrySet()) {
+                                    weekliesopendetailworks.set(String.valueOf(entry.getKey()),entry.getValue());
+                                    }
+                            }
+                        update(weekliesopendetaildefault);//更新fact中变量值
+                        update(weekliesopendetailactivities);//更新fact中变量值
+                        update(weekliesopendetailnews);//更新fact中变量值
+                        update(weekliesopendetailnotes);//更新fact中变量值
+                        update(weekliesopendetailtasks);//更新fact中变量值
+                        update(weekliesopendetailworks);//更新fact中变量值
+            end

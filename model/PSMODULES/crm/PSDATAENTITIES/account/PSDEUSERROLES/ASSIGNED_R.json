@@ -1,0 +1,20 @@
+{
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/account/PSDEUSERROLES/ASSIGNED_R.json",
+  "name" : "分配的客户-只读",
+  "getPSDEDataSet" : {
+    "modelref" : true,
+    "id" : "assigned"
+  },
+  "getPSDEUserRoleOPPrivs" : [ {
+    "dataAccessAction" : "READ",
+    "name" : "READ",
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    }
+  } ],
+  "roleTag" : "ASSIGNED_R",
+  "userDRAction" : "READ",
+  "enableUserDR" : true,
+  "systemReserved" : true
+}

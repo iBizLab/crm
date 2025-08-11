@@ -1,0 +1,27 @@
+{
+  "codeListTag" : "crm__campaign_status",
+  "codeListType" : "STATIC",
+  "codeName" : "crm__campaign_status",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__campaign_status.json",
+  "emptyText" : "未定义",
+  "name" : "活动状态",
+  "getPSCodeItems" : [ {
+    "codeName" : "item_1",
+    "text" : "计划中",
+    "value" : "计划中"
+  }, {
+    "codeName" : "item_2",
+    "text" : "活动的",
+    "value" : "活动的"
+  }, {
+    "codeName" : "item_3",
+    "text" : "非活动",
+    "value" : "非活动"
+  }, {
+    "codeName" : "item_4",
+    "text" : "完成",
+    "value" : "完成"
+  } ],
+  "enableCache" : true
+}

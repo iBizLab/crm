@@ -1,0 +1,16 @@
+{
+  "codeName" : "UsrDRItem0320003115",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/invoice/PSDEDRITEMS/UsrDRItem0320003115.json",
+  "itemType" : "CUSTOM",
+  "memo" : "自动生成",
+  "name" : "审计时间轴",
+  "parentDataJO" : {
+    "srfparentdename" : "INVOICE",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "time_line_view",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/activitiy.json"
+  }
+}

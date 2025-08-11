@@ -1,0 +1,20 @@
+{
+  "codeName" : "searchbar",
+  "controlType" : "SEARCHBAR",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/service_case/PSSEARCHBARS/searchbar.json",
+  "logicName" : "默认搜索栏",
+  "memo" : "自动生成",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/service_case.json"
+  },
+  "quickGroupCount" : -1,
+  "quickSearchMode" : 1,
+  "quickSearchWidth" : 0,
+  "enableFilter" : false,
+  "enableGroup" : false,
+  "enableQuickSearch" : true,
+  "mobileSearchBar" : false,
+  "modelid" : "91998b354e1b81e8840bd2f3dfcdaf76",
+  "modeltype" : "PSSYSSEARCHBAR"
+}

@@ -1,0 +1,251 @@
+{
+  "codeName" : "scdealstagehis",
+  "dEFLogicMode" : "ONCHANGE",
+  "defaultParamName" : "Default",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEFLOGICS/scdealstagehis.json",
+  "logicName" : "商机阶段更新时生成历史",
+  "logicSubType" : "DEFIELD",
+  "name" : "商机阶段更新时生成历史",
+  "getPSDEField" : {
+    "name" : "STAGE",
+    "codeName" : "Stage"
+  },
+  "getPSDELogicNodes" : [ {
+    "codeName" : "Begin",
+    "leftPos" : 200,
+    "logicNodeType" : "BEGIN",
+    "name" : "开始",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RAWSQLCALL1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "Begin"
+      }
+    } ],
+    "topPos" : 200,
+    "parallelOutput" : true
+  }, {
+    "codeName" : "END1",
+    "leftPos" : 1135,
+    "logicNodeType" : "END",
+    "name" : "结束",
+    "topPos" : 200
+  }, {
+    "codeName" : "RAWSQLCALL1",
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "DEAL_HISTORY_STAGE_TIME"
+    },
+    "leftPos" : 380,
+    "logicNodeType" : "RAWSQLCALL",
+    "name" : "查询历史阶段持续天数",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RAWSQLCALL1"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "name" : "Default[ID]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "ID",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    } ],
+    "sql" : "SELECT\r\n\tDATEDIFF(SYSDATE(), MAX(t.CREATE_TIME))  AS STAGE_DURATION_CALENDAR_DAYS \r\nFROM\r\n\tdeal_history t \r\nWHERE\r\n\tt.deal_id =?;",
+    "topPos" : 208,
+    "fillDstLogicParam" : true
+  }, {
+    "codeName" : "PREPAREPARAM1",
+    "leftPos" : 620,
+    "logicNodeType" : "PREPAREPARAM",
+    "name" : "阶段历史对象属性赋值",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "DEACTION1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM1"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "dstFieldName" : "STAGE",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "DEAL_HISTORY"
+      },
+      "name" : "Default[STAGE] ==> DEAL_HISTORY[STAGE]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "STAGE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "dstFieldName" : "DEAL_ID",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "DEAL_HISTORY"
+      },
+      "name" : "Default[ID] ==> DEAL_HISTORY[DEAL_ID]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "ID",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "dstFieldName" : "AMOUNT",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "DEAL_HISTORY"
+      },
+      "name" : "Default[AMOUNT] ==> DEAL_HISTORY[AMOUNT]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "AMOUNT",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "dstFieldName" : "PROBABILITY",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "DEAL_HISTORY"
+      },
+      "name" : "Default[PROBABILITY] ==> DEAL_HISTORY[PROBABILITY]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "PROBABILITY",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "dstFieldName" : "EXPECTED_REVENUE",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "DEAL_HISTORY"
+      },
+      "name" : "Default[EXPECTED_REVENUE] ==> DEAL_HISTORY[EXPECTED_REVENUE]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "EXPECTED_REVENUE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "dstFieldName" : "CLOSING_DATE",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "DEAL_HISTORY"
+      },
+      "name" : "Default[CLOSING_DATE] ==> DEAL_HISTORY[CLOSING_DATE]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "CLOSING_DATE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "dstFieldName" : "STAGE_DURATION_CALENDAR_DAYS",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "DEAL_HISTORY"
+      },
+      "name" : "DEAL_HISTORY_STAGE_TIME[STAGE_DURATION_CALENDAR_DAYS] ==> DEAL_HISTORY[STAGE_DURATION_CALENDAR_DAYS]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "STAGE_DURATION_CALENDAR_DAYS",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "DEAL_HISTORY_STAGE_TIME"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    } ],
+    "topPos" : 208
+  }, {
+    "codeName" : "DEACTION1",
+    "getDstPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal_history/PSDEACTIONS/Create.json"
+    },
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "DEAL_HISTORY"
+    },
+    "getDstPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal_history.json"
+    },
+    "leftPos" : 875,
+    "logicNodeType" : "DEACTION",
+    "name" : "生成阶段历史数据",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "END1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "DEACTION1"
+      }
+    } ],
+    "topPos" : 208
+  } ],
+  "getPSDELogicParams" : [ {
+    "codeName" : "Default",
+    "logicName" : "传入变量",
+    "name" : "传入变量",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal.json"
+    },
+    "default" : true,
+    "entityParam" : true
+  }, {
+    "codeName" : "DEAL_HISTORY",
+    "logicName" : "商机阶段历史",
+    "name" : "商机阶段历史",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal_history.json"
+    },
+    "entityParam" : true
+  }, {
+    "codeName" : "DEAL_HISTORY_STAGE_TIME",
+    "logicName" : "商机历史阶段持续时间",
+    "name" : "商机历史阶段持续时间",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal_history.json"
+    },
+    "entityParam" : true
+  } ],
+  "getStartPSDELogicNode" : {
+    "modelref" : true,
+    "id" : "Begin"
+  },
+  "enableBackend" : true,
+  "enableFront" : false
+}

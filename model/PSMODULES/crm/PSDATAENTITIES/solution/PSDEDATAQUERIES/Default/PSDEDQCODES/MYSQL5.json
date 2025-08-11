@@ -1,0 +1,58 @@
+{
+  "dBType" : "MYSQL5",
+  "name" : "MySQL5",
+  "getPSDEDataQueryCodeExps" : [ {
+    "expression" : "t1.`ADD_COMMENT`",
+    "name" : "ADD_COMMENT"
+  }, {
+    "expression" : "t1.`ANSWER`",
+    "name" : "ANSWER"
+  }, {
+    "expression" : "t1.`QUESTION`",
+    "name" : "QUESTION"
+  }, {
+    "expression" : "t1.`COMMENTS`",
+    "name" : "COMMENTS"
+  }, {
+    "expression" : "t1.`CREATE_MAN`",
+    "name" : "CREATE_MAN"
+  }, {
+    "expression" : "t1.`CREATE_TIME`",
+    "name" : "CREATE_TIME"
+  }, {
+    "expression" : "t1.`ID`",
+    "name" : "ID"
+  }, {
+    "expression" : "t1.`LOCKED__S`",
+    "name" : "LOCKED__S"
+  }, {
+    "expression" : "t1.`NAME`",
+    "name" : "NAME"
+  }, {
+    "expression" : "t1.`NO_OF_COMMENTS`",
+    "name" : "NO_OF_COMMENTS"
+  }, {
+    "expression" : "t1.`PUBLISHED`",
+    "name" : "PUBLISHED"
+  }, {
+    "expression" : "t1.`SOLUTION_NUMBER`",
+    "name" : "SOLUTION_NUMBER"
+  }, {
+    "expression" : "t1.`SOLUTION_TITLE`",
+    "name" : "SOLUTION_TITLE"
+  }, {
+    "expression" : "t1.`STATUS`",
+    "name" : "STATUS"
+  }, {
+    "expression" : "t1.`TAG`",
+    "name" : "TAG"
+  }, {
+    "expression" : "t1.`UPDATE_MAN`",
+    "name" : "UPDATE_MAN"
+  }, {
+    "expression" : "t1.`UPDATE_TIME`",
+    "name" : "UPDATE_TIME"
+  } ],
+  "queryCode" : "SELECT\nt1.`COMMENTS`,\nt1.`CREATE_MAN`,\nt1.`CREATE_TIME`,\nt1.`ID`,\nt1.`LOCKED__S`,\nt1.`NAME`,\nt1.`NO_OF_COMMENTS`,\nt1.`PUBLISHED`,\nt1.`SOLUTION_NUMBER`,\nt1.`SOLUTION_TITLE`,\nt1.`STATUS`,\nt1.`TAG`,\nt1.`UPDATE_MAN`,\nt1.`UPDATE_TIME`\nFROM `SOLUTION` t1 \n",
+  "id" : "PSMODULES/crm/PSDATAENTITIES/solution/PSDEDATAQUERIES/Default/PSDEDQCODES/MYSQL5.json"
+}

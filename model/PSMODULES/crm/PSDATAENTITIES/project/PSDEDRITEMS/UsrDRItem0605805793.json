@@ -1,0 +1,26 @@
+{
+  "codeName" : "UsrDRItem0605805793",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/project/PSDEDRITEMS/UsrDRItem0605805793.json",
+  "itemType" : "DER1N",
+  "name" : "订单详情收款计划和记录界面关系",
+  "getPSDER" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/project/PSDERS/DER1N_PROJECT_PROJECT_PID.json"
+  },
+  "parentDataJO" : {
+    "SRFPARENTTYPE" : "DER1N",
+    "srfparentdename" : "PROJECT",
+    "srfparentmode" : "DER1N_PROJECT_PROJECT_PID",
+    "srfparentdefname" : "PID",
+    "SRFDER1NID" : "DER1N_PROJECT_PROJECT_PID"
+  },
+  "viewCodeName" : "proPayAndPlanEditView",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/project.json"
+  },
+  "viewParamJO" : {
+    "SRFPARENTTYPE" : "DER1N",
+    "SRFDER1NID" : "DER1N_PROJECT_PROJECT_PID"
+  }
+}

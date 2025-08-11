@@ -1,0 +1,47 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "CUSTOM",
+  "actionType" : "DELOGIC",
+  "getAfterPSDEActionLogics" : [ {
+    "actionLogicType" : 1,
+    "attachMode" : "AFTER",
+    "name" : "附加逻辑",
+    "getPSDELogic" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic/PSDELOGICS/update_payee_allocate.json"
+    },
+    "internalLogic" : true
+  } ],
+  "getBeforePSDEActionLogics" : [ {
+    "actionLogicType" : 1,
+    "attachMode" : "BEFORE",
+    "name" : "附加逻辑",
+    "getPSDELogic" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic/PSDELOGICS/delete_statistic.json"
+    },
+    "internalLogic" : true
+  } ],
+  "codeName" : "all_statistic",
+  "dataAccessAction" : "NONE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic/PSDEACTIONS/all_statistic.json",
+  "logicName" : "将计划数据更新到统计表",
+  "name" : "all_statistic",
+  "getPSDEActionInput" : {
+    "name" : "All_statisticInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "payee_statistic_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "All_statisticResult",
+    "type" : "VOID"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic/PSDELOGICS/update_payee_staticstic.json"
+  },
+  "enableFront" : false
+}

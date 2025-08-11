@@ -1,0 +1,26 @@
+{
+  "codeName" : "UsrDRItem0626378444",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEDRITEMS/UsrDRItem0626378444.json",
+  "itemType" : "DER1N",
+  "name" : "商机阶段历史",
+  "getPSDER" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/deal_history/PSDERS/DER1N_DEAL_HISTORY_DEAL_DEAL_ID.json"
+  },
+  "parentDataJO" : {
+    "SRFPARENTTYPE" : "DER1N",
+    "srfparentdename" : "DEAL",
+    "srfparentmode" : "DER1N_DEAL_HISTORY_DEAL_DEAL_ID",
+    "srfparentdefname" : "DEAL_ID",
+    "SRFDER1NID" : "DER1N_DEAL_HISTORY_DEAL_DEAL_ID"
+  },
+  "viewCodeName" : "dealDealHisGridView",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/deal_history.json"
+  },
+  "viewParamJO" : {
+    "SRFPARENTTYPE" : "DER1N",
+    "SRFDER1NID" : "DER1N_DEAL_HISTORY_DEAL_DEAL_ID"
+  }
+}

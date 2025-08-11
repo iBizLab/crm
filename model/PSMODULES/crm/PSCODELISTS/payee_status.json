@@ -1,0 +1,37 @@
+{
+  "codeListTag" : "crm__payee_status",
+  "codeListType" : "STATIC",
+  "codeName" : "payee_status",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSCODELISTS/payee_status.json",
+  "emptyText" : "未定义",
+  "name" : "收款状态",
+  "getPSCodeItems" : [ {
+    "codeName" : "item_10",
+    "text" : "未开始",
+    "value" : "10"
+  }, {
+    "codeName" : "item_20",
+    "text" : "进行中",
+    "value" : "20"
+  }, {
+    "codeName" : "item_30",
+    "text" : "已完成",
+    "value" : "30"
+  }, {
+    "codeName" : "item_40",
+    "text" : "已取消",
+    "value" : "40"
+  } ],
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "refFlag" : true,
+  "systemTag" : "iBizCRM",
+  "codeItemValueNumber" : false,
+  "enableCache" : true,
+  "subSysAsCloud" : false,
+  "subSysCodeList" : false,
+  "userScope" : false
+}

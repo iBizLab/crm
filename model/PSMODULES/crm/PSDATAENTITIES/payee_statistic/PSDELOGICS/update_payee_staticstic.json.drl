@@ -1,0 +1,185 @@
+package cn.ibizlab.crm.crm.logic.payee_statisticlogic.update_payee_staticstic;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.payee_statistic payee_statisticupdate_payee_staticsticdefault;
+                global cn.ibizlab.crm.core.crm.domain.payee_plan payee_statisticupdate_payee_staticsticpayee_plan;
+                global cn.ibizlab.crm.core.crm.domain.payee_plan payee_statisticupdate_payee_staticsticpayee_plan_info;
+                global cn.ibizlab.crm.core.crm.domain.payee_statistic payee_statisticupdate_payee_staticsticpayee_statistic_info;
+                global cn.ibizlab.crm.core.crm.domain.payee_statistic payee_statisticupdate_payee_staticsticpayee_stistic;
+                global cn.ibizlab.crm.core.crm.domain.payee_plan payee_statisticupdate_payee_staticsticpayee_plan2;
+                global cn.ibizlab.crm.core.crm.domain.payee_statistic payee_statisticupdate_payee_staticsticstatistic;
+                global cn.ibizlab.crm.core.crm.domain.payee_plan payee_statisticupdate_payee_staticsticsub;
+                    global cn.ibizlab.crm.core.crm.service.Ipayee_statisticService payee_statisticservice;
+                    global cn.ibizlab.crm.core.crm.service.Ipayee_planService payee_planservice;
+        global cn.ibizlab.crm.core.crm.service.Ipayee_statisticService iBzSysPayee_statisticDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "payee_statisticupdate_payee_staticsticbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[循环子调用]
+            rule "loopsubcall1"
+            ruleflow-group "payee_statisticupdate_payee_staticsticloopsubcall1"
+            when
+            then
+                        update(payee_statisticupdate_payee_staticsticdefault);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_statistic_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_stistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan2);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticstatistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticsub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[执行脚本代码]
+            rule "rawsfcode1"
+            ruleflow-group "payee_statisticupdate_payee_staticsticrawsfcode1"
+            when
+            then
+                        update(payee_statisticupdate_payee_staticsticdefault);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_statistic_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_stistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan2);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticstatistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticsub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[拷贝参数]
+            rule "copyparam1"
+            ruleflow-group "payee_statisticupdate_payee_staticsticcopyparam1"
+            when
+            then
+                        update(payee_statisticupdate_payee_staticsticdefault);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_statistic_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_stistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan2);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticstatistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticsub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[调试逻辑参数]
+            rule "debugparam1"
+            ruleflow-group "payee_statisticupdate_payee_staticsticdebugparam1"
+            when
+            then
+                        update(payee_statisticupdate_payee_staticsticdefault);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_statistic_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_stistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan2);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticstatistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticsub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "payee_statisticupdate_payee_staticsticend1"
+            when
+            then
+                        update(payee_statisticupdate_payee_staticsticdefault);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_statistic_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_stistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan2);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticstatistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticsub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体行为]
+            rule "deaction1"
+            ruleflow-group "payee_statisticupdate_payee_staticsticdeaction1"
+            when
+            then
+                        payee_statisticservice.create(payee_statisticupdate_payee_staticsticpayee_stistic);
+                        update(payee_statisticupdate_payee_staticsticdefault);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_statistic_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_stistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan2);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticstatistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticsub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam1"
+            ruleflow-group "payee_statisticupdate_payee_staticsticprepareparam1"
+            when
+            then
+                            payee_statisticupdate_payee_staticsticpayee_stistic.set("name",payee_statisticupdate_payee_staticsticstatistic.get("name"));
+                            payee_statisticupdate_payee_staticsticpayee_stistic.set("statisticdate",payee_statisticupdate_payee_staticsticstatistic.get("statisticdate"));
+                                payee_statisticupdate_payee_staticsticpayee_stistic.set("id",null);
+                            payee_statisticupdate_payee_staticsticpayee_stistic.set("amount",payee_statisticupdate_payee_staticsticstatistic.get("amount"));
+                            payee_statisticupdate_payee_staticsticpayee_stistic.set("type",payee_statisticupdate_payee_staticsticstatistic.get("type"));
+                        update(payee_statisticupdate_payee_staticsticdefault);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_statistic_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_stistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan2);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticstatistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticsub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体数据集]
+            rule "dedataset1"
+            ruleflow-group "payee_statisticupdate_payee_staticsticdedataset1"
+            when
+            then
+                        update(payee_statisticupdate_payee_staticsticdefault);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_statistic_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_stistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan2);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticstatistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticsub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[循环获取计划数据]
+            rule "loopsubcall2"
+            ruleflow-group "payee_statisticupdate_payee_staticsticloopsubcall2"
+            when
+            then
+                        update(payee_statisticupdate_payee_staticsticdefault);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_statistic_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_stistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan2);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticstatistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticsub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[执行脚本代码]
+            rule "rawsfcode2"
+            ruleflow-group "payee_statisticupdate_payee_staticsticrawsfcode2"
+            when
+            then
+                        update(payee_statisticupdate_payee_staticsticdefault);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_statistic_info);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_stistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticpayee_plan2);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticstatistic);//更新fact中变量值
+                        update(payee_statisticupdate_payee_staticsticsub);//更新fact中变量值
+            end

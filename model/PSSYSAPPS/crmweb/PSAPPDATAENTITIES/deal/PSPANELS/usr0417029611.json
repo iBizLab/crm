@@ -1,0 +1,158 @@
+{
+  "getAllPSPanelFields" : [ {
+    "id" : "deal_name",
+    "viewFieldName" : "deal_name"
+  }, {
+    "id" : "amount",
+    "viewFieldName" : "amount"
+  }, {
+    "id" : "stage",
+    "viewFieldName" : "stage"
+  }, {
+    "id" : "closing_date",
+    "viewFieldName" : "closing_date"
+  } ],
+  "codeName" : "usr0417029611",
+  "controlType" : "PANEL",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal/PSPANELS/usr0417029611.json",
+  "layoutMode" : "TABLE_24COL",
+  "logicName" : "List2_列表项面板",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+  },
+  "getPSLayout" : {
+    "childColMD" : 24,
+    "columnCount" : 24,
+    "layout" : "TABLE_24COL"
+  },
+  "getRootPSPanelItems" : [ {
+    "itemStyle" : "DEFAULT",
+    "itemType" : "CONTAINER",
+    "name" : "page_container",
+    "getPSLayout" : {
+      "dir" : "column",
+      "layout" : "FLEX"
+    },
+    "getPSLayoutPos" : {
+      "colMD" : 24,
+      "layout" : "TABLE_24COL"
+    },
+    "getPSPanelItems" : [ {
+      "caption" : "容器",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "container",
+      "getPSLayout" : {
+        "dir" : "row",
+        "layout" : "FLEX"
+      },
+      "getPSLayoutPos" : {
+        "grow" : -1,
+        "layout" : "FLEX",
+        "spacingBottom" : "OUTERSMALL"
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "文本(动态)",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "FIELD",
+        "name" : "deal_name",
+        "getPSEditor" : {
+          "editorType" : "SPAN",
+          "name" : "deal_name",
+          "predefinedType" : "FIELD_TEXT_DYNAMIC",
+          "renderMode" : "TEXT_DYNAMIC",
+          "enableLinkView" : false
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "layout" : "FLEX",
+          "spacingRight" : "OUTERSMALL"
+        },
+        "viewFieldName" : "deal_name"
+      }, {
+        "caption" : "文本(动态)",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "FIELD",
+        "name" : "amount",
+        "getPSEditor" : {
+          "editorType" : "SPAN",
+          "name" : "amount",
+          "predefinedType" : "FIELD_TEXT_DYNAMIC",
+          "renderMode" : "TEXT_DYNAMIC",
+          "enableLinkView" : false
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "layout" : "FLEX",
+          "spacingLeft" : "OUTERSMALL",
+          "spacingRight" : "OUTERSMALL"
+        },
+        "getPSSysCss" : {
+          "cssName" : "reldetails_data"
+        },
+        "valueFormat" : "￥#,##0",
+        "viewFieldName" : "amount"
+      } ]
+    }, {
+      "caption" : "容器",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "container1",
+      "getPSLayout" : {
+        "dir" : "row",
+        "layout" : "FLEX"
+      },
+      "getPSLayoutPos" : {
+        "grow" : -1,
+        "layout" : "FLEX",
+        "spacingBottom" : "OUTERSMALL"
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "文本(动态)",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "FIELD",
+        "name" : "stage",
+        "getPSEditor" : {
+          "editorType" : "SPAN",
+          "name" : "stage",
+          "getPSAppCodeList" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__dealstage.json"
+          },
+          "predefinedType" : "FIELD_TEXT_DYNAMIC",
+          "renderMode" : "TEXT_DYNAMIC",
+          "enableLinkView" : false
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "layout" : "FLEX",
+          "spacingRight" : "OUTERSMALL"
+        },
+        "viewFieldName" : "stage",
+        "convertToCodeItemText" : true
+      }, {
+        "caption" : "文本(动态)",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "FIELD",
+        "name" : "closing_date",
+        "getPSEditor" : {
+          "editorType" : "SPAN",
+          "name" : "closing_date",
+          "predefinedType" : "FIELD_TEXT_DYNAMIC",
+          "renderMode" : "TEXT_DYNAMIC",
+          "enableLinkView" : false
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "layout" : "FLEX",
+          "spacingLeft" : "OUTERSMALL"
+        },
+        "valueFormat" : "YYYY-MM-DD",
+        "viewFieldName" : "closing_date"
+      } ]
+    } ]
+  } ],
+  "modelid" : "9ab996b74b4fbc7bd6f9e0d095d33ebe",
+  "modeltype" : "PSSYSVIEWPANEL"
+}

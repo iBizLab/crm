@@ -1,0 +1,15 @@
+{
+  "codeName" : "UsrDRItem0904455232",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDEDRITEMS/UsrDRItem0904455232.json",
+  "itemType" : "CUSTOM",
+  "name" : "已完成的任务&历史活动列表视图",
+  "parentDataJO" : {
+    "srfparentdename" : "LEAD",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "task_list_view",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/lead.json"
+  }
+}

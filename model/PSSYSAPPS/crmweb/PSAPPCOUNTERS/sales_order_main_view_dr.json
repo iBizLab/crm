@@ -1,0 +1,16 @@
+{
+  "codeName" : "sales_order_main_view_dr",
+  "counterType" : "DEDR",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPCOUNTERS/sales_order_main_view_dr.json",
+  "getGetPSAppDEAction" : {
+    "modelref" : true,
+    "id" : "main_view_dr_count"
+  },
+  "name" : "销售订单main_view关系",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/sales_order.json"
+  },
+  "timer" : 60000,
+  "uniqueTag" : "sales_order_main_view_dr"
+}

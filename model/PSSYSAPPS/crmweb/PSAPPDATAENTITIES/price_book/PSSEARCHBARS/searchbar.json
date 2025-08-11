@@ -1,0 +1,20 @@
+{
+  "codeName" : "searchbar",
+  "controlType" : "SEARCHBAR",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book/PSSEARCHBARS/searchbar.json",
+  "logicName" : "默认搜索栏",
+  "memo" : "自动生成",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+  },
+  "quickGroupCount" : -1,
+  "quickSearchMode" : 1,
+  "quickSearchWidth" : 0,
+  "enableFilter" : false,
+  "enableGroup" : false,
+  "enableQuickSearch" : true,
+  "mobileSearchBar" : false,
+  "modelid" : "f7b852ecd244a0bdfacae06ea80849d9",
+  "modeltype" : "PSSYSSEARCHBAR"
+}

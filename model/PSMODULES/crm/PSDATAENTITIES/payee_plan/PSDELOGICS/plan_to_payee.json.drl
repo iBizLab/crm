@@ -1,0 +1,52 @@
+package cn.ibizlab.crm.crm.logic.payee_planlogic.plan_to_payee;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.payee_plan payee_planplan_to_payeedefault;
+                global cn.ibizlab.crm.core.crm.domain.payee payee_planplan_to_payeepayee;
+                    global cn.ibizlab.crm.core.crm.service.Ipayee_planService payee_planservice;
+        global cn.ibizlab.crm.core.crm.service.Ipayee_planService iBzSysPayee_planDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "payee_planplan_to_payeebegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "payee_planplan_to_payeeend1"
+            when
+            then
+                        update(payee_planplan_to_payeedefault);//更新fact中变量值
+                        update(payee_planplan_to_payeepayee);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体行为]
+            rule "deaction1"
+            ruleflow-group "payee_planplan_to_payeedeaction1"
+            when
+            then
+                            cn.ibizlab.crm.util.helper.CachedBeanCopier.copy(payee_planservice.get(payee_planplan_to_payeedefault.getId()),payee_planplan_to_payeedefault);
+                        update(payee_planplan_to_payeedefault);//更新fact中变量值
+                        update(payee_planplan_to_payeepayee);//更新fact中变量值
+            end
+
+            //逻辑处理节点[将所需数据]
+            rule "prepareparam1"
+            ruleflow-group "payee_planplan_to_payeeprepareparam1"
+            when
+            then
+                            payee_planplan_to_payeepayee.set("plandescription",payee_planplan_to_payeedefault.get("description"));
+                            payee_planplan_to_payeepayee.set("planamount",payee_planplan_to_payeedefault.get("amount"));
+                        update(payee_planplan_to_payeedefault);//更新fact中变量值
+                        update(payee_planplan_to_payeepayee);//更新fact中变量值
+            end

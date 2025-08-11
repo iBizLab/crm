@@ -1,0 +1,15 @@
+{
+  "codeName" : "UsrDRItem0528293083",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEDRITEMS/UsrDRItem0528293083.json",
+  "itemType" : "CUSTOM",
+  "name" : "全部活动",
+  "parentDataJO" : {
+    "srfparentdename" : "TASK",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "all_maneuver_grid_view",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+  }
+}

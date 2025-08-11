@@ -1,0 +1,29 @@
+{
+  "codeListTag" : "crm__outgoing_call_status",
+  "codeListType" : "STATIC",
+  "codeName" : "outgoing_call_status",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSCODELISTS/outgoing_call_status.json",
+  "emptyText" : "未定义",
+  "name" : "去电通话状态",
+  "getPSCodeItems" : [ {
+    "codeName" : "scheduled",
+    "text" : "已安排",
+    "value" : "Scheduled"
+  }, {
+    "codeName" : "overdue",
+    "text" : "过期",
+    "value" : "Overdue"
+  } ],
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "refFlag" : true,
+  "systemTag" : "iBizCRM",
+  "codeItemValueNumber" : false,
+  "enableCache" : true,
+  "subSysAsCloud" : false,
+  "subSysCodeList" : false,
+  "userScope" : false
+}

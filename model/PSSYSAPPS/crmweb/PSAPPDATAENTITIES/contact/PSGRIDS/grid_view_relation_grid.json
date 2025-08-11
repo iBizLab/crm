@@ -1,0 +1,267 @@
+{
+  "aggMode" : "NONE",
+  "codeName" : "grid_view_relation_grid",
+  "columnEnableFilter" : 2,
+  "columnEnableLink" : 0,
+  "controlType" : "GRID",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/contact/PSGRIDS/grid_view_relation_grid.json",
+  "getFetchPSControlAction" : {
+    "modelref" : true,
+    "id" : "fetch",
+    "actionType" : "DEDATASET",
+    "name" : "fetch",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "fetch_all"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/contact.json"
+    }
+  },
+  "groupMode" : "NONE",
+  "logicName" : "联系人嵌入表格视图_表格",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/contact.json"
+  },
+  "getPSDEDataImport" : {
+    "modelref" : true,
+    "id" : "DataImport"
+  },
+  "getPSDEGridColumns" : [ {
+    "align" : "LEFT",
+    "cLConvertMode" : "NONE",
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.FULL_NAME"
+    },
+    "caption" : "联系人名称",
+    "codeName" : "full_name",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "full_name",
+    "excelCaption" : "联系人名称",
+    "name" : "full_name",
+    "noPrivDisplayMode" : 1,
+    "getPSAppDEField" : {
+      "name" : "FULL_NAME",
+      "codeName" : "full_name"
+    },
+    "getPSDEUIAction" : {
+      "actionTarget" : "SINGLEKEY",
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "TBB.TEXT.*.EDIT"
+      },
+      "caption" : "编辑",
+      "codeName" : "Edit",
+      "fullCodeName" : "Edit",
+      "name" : "表格界面_编辑操作",
+      "getPSSysImage" : {
+        "glyph" : "xf044@FontAwesome",
+        "cssClass" : "fa fa-edit"
+      },
+      "predefinedType" : "GRIDVIEW_EDITACTION",
+      "timeout" : 60000,
+      "getTooltipPSLanguageRes" : {
+        "lanResTag" : "TBB.TOOLTIP.*.EDIT"
+      },
+      "uIActionMode" : "SYS",
+      "uIActionTag" : "Edit",
+      "uIActionType" : "DEUIACTION"
+    },
+    "width" : 300,
+    "widthUnit" : "STAR",
+    "enableSort" : true
+  }, {
+    "align" : "LEFT",
+    "cLConvertMode" : "NONE",
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.EMAIL"
+    },
+    "caption" : "电子邮件",
+    "codeName" : "email",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "email",
+    "excelCaption" : "电子邮件",
+    "name" : "email",
+    "noPrivDisplayMode" : 1,
+    "getPSAppDEField" : {
+      "name" : "EMAIL",
+      "codeName" : "email"
+    },
+    "width" : 300,
+    "widthUnit" : "STAR",
+    "enableSort" : true
+  }, {
+    "align" : "LEFT",
+    "cLConvertMode" : "NONE",
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.PHONE"
+    },
+    "caption" : "电话",
+    "codeName" : "phone",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "phone",
+    "excelCaption" : "电话",
+    "name" : "phone",
+    "noPrivDisplayMode" : 1,
+    "getPSAppDEField" : {
+      "name" : "PHONE",
+      "codeName" : "phone"
+    },
+    "width" : 150,
+    "widthUnit" : "STAR",
+    "enableSort" : true
+  }, {
+    "align" : "LEFT",
+    "cLConvertMode" : "NONE",
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.MOBILE"
+    },
+    "caption" : "手机",
+    "codeName" : "mobile",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "mobile",
+    "excelCaption" : "手机",
+    "name" : "mobile",
+    "noPrivDisplayMode" : 1,
+    "getPSAppDEField" : {
+      "name" : "MOBILE",
+      "codeName" : "mobile"
+    },
+    "width" : 150,
+    "widthUnit" : "STAR",
+    "enableSort" : true
+  }, {
+    "align" : "LEFT",
+    "cLConvertMode" : "NONE",
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.FAX"
+    },
+    "caption" : "传真",
+    "codeName" : "fax",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "fax",
+    "excelCaption" : "传真",
+    "name" : "fax",
+    "noPrivDisplayMode" : 1,
+    "getPSAppDEField" : {
+      "name" : "FAX",
+      "codeName" : "fax"
+    },
+    "width" : 150,
+    "widthUnit" : "STAR",
+    "enableSort" : true
+  } ],
+  "getPSDEGridDataItems" : [ {
+    "dataType" : 25,
+    "name" : "full_name",
+    "getPSAppDEField" : {
+      "name" : "FULL_NAME",
+      "codeName" : "full_name"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "email",
+    "getPSAppDEField" : {
+      "name" : "EMAIL",
+      "codeName" : "email"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "phone",
+    "getPSAppDEField" : {
+      "name" : "PHONE",
+      "codeName" : "phone"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "mobile",
+    "getPSAppDEField" : {
+      "name" : "MOBILE",
+      "codeName" : "mobile"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "fax",
+    "getPSAppDEField" : {
+      "name" : "FAX",
+      "codeName" : "fax"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "srfkey",
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "srfdataaccaction",
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    },
+    "dataAccessAction" : true
+  }, {
+    "dataType" : 25,
+    "name" : "account_id",
+    "getPSAppDEField" : {
+      "name" : "ACCOUNT_ID",
+      "codeName" : "account_id"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "srfmajortext",
+    "getPSAppDEField" : {
+      "name" : "FULL_NAME",
+      "codeName" : "full_name"
+    }
+  } ],
+  "getPSDEGridEditItems" : [ {
+    "caption" : "标识",
+    "codeName" : "srfkey",
+    "enableCond" : 3,
+    "ignoreInput" : 0,
+    "name" : "srfkey",
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    },
+    "getPSEditor" : {
+      "editorType" : "HIDDEN",
+      "name" : "srfkey"
+    },
+    "allowEmpty" : true
+  } ],
+  "pagingMode" : 1,
+  "pagingSize" : 20,
+  "getRemovePSControlAction" : {
+    "actionName" : "Remove",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "DELETE",
+    "name" : "remove",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "remove"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/contact.json"
+    }
+  },
+  "sortMode" : "REMOTE",
+  "hasWFDataItems" : false,
+  "enableColFilter" : false,
+  "enableCustomized" : true,
+  "enableGroup" : false,
+  "enablePagingBar" : true,
+  "enableRowEdit" : false,
+  "enableRowEditOrder" : false,
+  "enableRowNew" : false,
+  "forceFit" : true,
+  "hideHeader" : false,
+  "noSort" : false,
+  "singleSelect" : true,
+  "modelid" : "7132affc9ed04336308d525be69b87d3",
+  "modeltype" : "PSDEGRID"
+}

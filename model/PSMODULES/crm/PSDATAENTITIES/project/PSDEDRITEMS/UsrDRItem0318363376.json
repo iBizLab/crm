@@ -1,0 +1,16 @@
+{
+  "codeName" : "UsrDRItem0318363376",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/project/PSDEDRITEMS/UsrDRItem0318363376.json",
+  "itemType" : "CUSTOM",
+  "memo" : "自动生成",
+  "name" : "在线项目多模式列表视图",
+  "parentDataJO" : {
+    "srfparentdename" : "PROJECT",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "list_view_multimode",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+  }
+}

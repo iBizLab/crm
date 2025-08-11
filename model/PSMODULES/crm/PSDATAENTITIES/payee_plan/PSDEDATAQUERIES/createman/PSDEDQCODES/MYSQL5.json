@@ -1,0 +1,81 @@
+{
+  "dBType" : "MYSQL5",
+  "name" : "MySQL5",
+  "getPSDEDataQueryCodeConds" : [ {
+    "condType" : "CUSTOM",
+    "customCond" : "( t1.`CREATE_MAN` = #{ctx.sessioncontext.srfpersonid} )",
+    "name" : "查询条件"
+  } ],
+  "getPSDEDataQueryCodeExps" : [ {
+    "expression" : "t21.`ACCOUNT_NAME`",
+    "name" : "ACCOUNT_NAME"
+  }, {
+    "expression" : "t1.`AMOUNT`",
+    "name" : "AMOUNT"
+  }, {
+    "expression" : "t11.`BUSINESS_LINE`",
+    "name" : "BUSINESS_LINE"
+  }, {
+    "expression" : "t1.`CREATE_MAN`",
+    "name" : "CREATE_MAN"
+  }, {
+    "expression" : "t1.`CREATE_TIME`",
+    "name" : "CREATE_TIME"
+  }, {
+    "expression" : "t1.`DESCRIPTION`",
+    "name" : "DESCRIPTION"
+  }, {
+    "expression" : "t1.`ID`",
+    "name" : "ID"
+  }, {
+    "expression" : "t1.`IS_NOT_IN_PLAN`",
+    "name" : "IS_NOT_IN_PLAN"
+  }, {
+    "expression" : "t1.`NAME`",
+    "name" : "NAME"
+  }, {
+    "expression" : "t11.`ORDER_DATE`",
+    "name" : "ORDER_DATE"
+  }, {
+    "expression" : "t11.`OWNER`",
+    "name" : "OWNER"
+  }, {
+    "expression" : "t11.`O_NUMBER`",
+    "name" : "O_NUMBER"
+  }, {
+    "expression" : "t1.`PLANNED_TIME`",
+    "name" : "PLANNED_TIME"
+  }, {
+    "expression" : "CONCAT(t11.`NAME`, IFNULL(CONCAT(YEAR(t1.`PLANNED_TIME`), '-', LPAD(MONTH(t1.`PLANNED_TIME`), 2, '0'), '-', LPAD(DAY(t1.`PLANNED_TIME`), 2, '0')), '未明确'), '收款计划')",
+    "name" : "PLAN_NAME"
+  }, {
+    "expression" : "t1.`PLAN_STATUS`",
+    "name" : "PLAN_STATUS"
+  }, {
+    "expression" : "t11.`PID`",
+    "name" : "PPROJECT_ID"
+  }, {
+    "expression" : "t11.`AMOUNT`",
+    "name" : "PROJECT_AMOUNT"
+  }, {
+    "expression" : "t1.`PROJECT_ID`",
+    "name" : "PROJECT_ID"
+  }, {
+    "expression" : "t11.`NAME`",
+    "name" : "PROJECT_NAME"
+  }, {
+    "expression" : "t1.`SEQUENCE`",
+    "name" : "SEQUENCE"
+  }, {
+    "expression" : "t11.`SETTLEMENT_AMOUNT`",
+    "name" : "SETTLEMENT_AMOUNT"
+  }, {
+    "expression" : "t1.`UPDATE_MAN`",
+    "name" : "UPDATE_MAN"
+  }, {
+    "expression" : "t1.`UPDATE_TIME`",
+    "name" : "UPDATE_TIME"
+  } ],
+  "queryCode" : "SELECT\nt21.`ACCOUNT_NAME`,\nt1.`AMOUNT`,\nt11.`BUSINESS_LINE`,\nt1.`CREATE_MAN`,\nt1.`CREATE_TIME`,\nt1.`DESCRIPTION`,\nt1.`ID`,\nt1.`IS_NOT_IN_PLAN`,\nt1.`NAME`,\nt11.`ORDER_DATE`,\nt11.`OWNER`,\nt11.`O_NUMBER`,\nt1.`PLANNED_TIME`,\nCONCAT(t11.`NAME`, IFNULL(CONCAT(YEAR(t1.`PLANNED_TIME`), '-', LPAD(MONTH(t1.`PLANNED_TIME`), 2, '0'), '-', LPAD(DAY(t1.`PLANNED_TIME`), 2, '0')), '未明确'), '收款计划') AS `PLAN_NAME`,\nt1.`PLAN_STATUS`,\nt11.`PID` AS `PPROJECT_ID`,\nt11.`AMOUNT` AS `PROJECT_AMOUNT`,\nt1.`PROJECT_ID`,\nt11.`NAME` AS `PROJECT_NAME`,\nt1.`SEQUENCE`,\nt11.`SETTLEMENT_AMOUNT`,\nt1.`UPDATE_MAN`,\nt1.`UPDATE_TIME`\nFROM `PAYEE_PLAN` t1 \nLEFT JOIN `PROJECT` t11 ON t1.`PROJECT_ID` = t11.`ID` \nLEFT JOIN `ACCOUNT` t21 ON t11.`ACCOUNT_ID` = t21.`ID` \n",
+  "id" : "PSMODULES/crm/PSDATAENTITIES/payee_plan/PSDEDATAQUERIES/createman/PSDEDQCODES/MYSQL5.json"
+}

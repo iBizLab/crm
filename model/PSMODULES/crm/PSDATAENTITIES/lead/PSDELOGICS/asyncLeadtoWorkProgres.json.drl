@@ -1,0 +1,38 @@
+package cn.ibizlab.crm.crm.logic.leadlogic.asyncleadtoworkprogres;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.lead leadasyncleadtoworkprogresdefault;
+                    global cn.ibizlab.crm.core.crm.service.IleadService leadservice;
+        global cn.ibizlab.crm.core.crm.service.IleadService iBzSysLeadDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "leadasyncleadtoworkprogresbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "leadasyncleadtoworkprogresend1"
+            when
+            then
+                        update(leadasyncleadtoworkprogresdefault);//更新fact中变量值
+            end
+
+            //逻辑处理节点[异步将线索更新到工作进展]
+            rule "deaction1"
+            ruleflow-group "leadasyncleadtoworkprogresdeaction1"
+            when
+            then
+                        leadservice.async_addLeadtoWorkProgress(leadasyncleadtoworkprogresdefault);
+                        update(leadasyncleadtoworkprogresdefault);//更新fact中变量值
+            end

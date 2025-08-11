@@ -1,0 +1,387 @@
+{
+  "codeName" : "UsrSysRole0516180322",
+  "dynaModelFilePath" : "PSSYSUSERROLES/UsrSysRole0516180322.json",
+  "name" : "销售人员",
+  "getPSSysUserRoleDatas" : [ {
+    "name" : "销售人员-DEAL[所有者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEUSERROLES/OWNER_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal.json"
+    }
+  }, {
+    "name" : "销售人员-CUSTOM_BUTTON[所有者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/custom_button/PSDEUSERROLES/OWNER_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/custom_button.json"
+    }
+  }, {
+    "name" : "销售人员-WORK_PROGRESS[创建者-读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/work_progress/PSDEUSERROLES/CREATEMAN_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/work_progress.json"
+    }
+  }, {
+    "name" : "销售人员-LEAD[所有者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDEUSERROLES/OWNER_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/lead.json"
+    }
+  }, {
+    "name" : "销售人员-USER[全部数据-只读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/user/PSDEUSERROLES/ALL_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/user.json"
+    }
+  }, {
+    "name" : "销售人员-ACCOUNT[分配的客户-只读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/account/PSDEUSERROLES/ASSIGNED_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+    }
+  }, {
+    "name" : "销售人员-USER[当前数据-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/user/PSDEUSERROLES/CUR_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/user.json"
+    }
+  }, {
+    "name" : "销售人员-PAYEE_STATISTIC[所有者-读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic/PSDEUSERROLES/OWNER_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic.json"
+    }
+  }, {
+    "name" : "销售人员-CONTACT[所有者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/contact/PSDEUSERROLES/OWNER_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/contact.json"
+    }
+  }, {
+    "name" : "销售人员-SCHEDULE[所有者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/schedule/PSDEUSERROLES/OWNER_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/schedule.json"
+    }
+  }, {
+    "name" : "销售人员-SYS_ROLE_UAA[全部数据-只读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role/PSDEUSERROLES/ALL_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role.json"
+    }
+  }, {
+    "name" : "销售人员-SCHEDULE[创建者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/schedule/PSDEUSERROLES/CREATEMAN_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/schedule.json"
+    }
+  }, {
+    "name" : "销售人员-NOTE_ATTACH[全部数据-只读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach/PSDEUSERROLES/ALL_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach.json"
+    }
+  }, {
+    "name" : "销售人员-TASK[执行人-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEUSERROLES/EXECUTOR_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+    }
+  }, {
+    "name" : "销售人员-PAYEE_PLAN[执行人-只读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan/PSDEUSERROLES/EXECUTOR_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan.json"
+    }
+  }, {
+    "name" : "销售人员-ACTIVITIY[全部数据-只读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/activitiy/PSDEUSERROLES/ALL_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/activitiy.json"
+    }
+  }, {
+    "name" : "销售人员-CUSTOM_BUTTON[创建者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/custom_button/PSDEUSERROLES/CREATEMAN_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/custom_button.json"
+    }
+  }, {
+    "name" : "销售人员-SYS_ROLE_MEMBER[全部数据-只读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role_member/PSDEUSERROLES/ALL_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role_member.json"
+    }
+  }, {
+    "name" : "销售人员-PRODUCT[全部数据-只读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/product/PSDEUSERROLES/ALL_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/product.json"
+    }
+  }, {
+    "name" : "销售人员-LEAD[创建者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDEUSERROLES/CREATEMAN_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/lead.json"
+    }
+  }, {
+    "name" : "销售人员-TASK[创建者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEUSERROLES/CREATEMAN_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+    }
+  }, {
+    "name" : "销售人员-ACCOUNT[创建者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/account/PSDEUSERROLES/CREATEMAN_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+    }
+  }, {
+    "name" : "销售人员-DEAL_STAGE[全部数据-只读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal_stage/PSDEUSERROLES/ALL_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal_stage.json"
+    }
+  }, {
+    "name" : "销售人员-DEAL[创建者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEUSERROLES/CREATEMAN_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal.json"
+    }
+  }, {
+    "name" : "销售人员-VENDOR[全部数据-只读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/vendor/PSDEUSERROLES/ALL_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/vendor.json"
+    }
+  }, {
+    "name" : "销售人员-PRODUCT_CERTIFICATE[全部数据-只读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/product_certificate/PSDEUSERROLES/ALL_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/product_certificate.json"
+    }
+  }, {
+    "name" : "销售人员-WEEKLIES[创建者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEUSERROLES/CREATEMAN_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies.json"
+    }
+  }, {
+    "name" : "销售人员-TASK[所有者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEUSERROLES/OWNER_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+    }
+  }, {
+    "name" : "销售人员-LEAD[执行人-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDEUSERROLES/EXECUTOR_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/lead.json"
+    }
+  }, {
+    "name" : "销售人员-EVENT[所有者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/event/PSDEUSERROLES/OWNER_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/event.json"
+    }
+  }, {
+    "name" : "销售人员-EVENT[创建者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/event/PSDEUSERROLES/CREATEMAN_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/event.json"
+    }
+  }, {
+    "name" : "销售人员-PROJECT[执行人-只读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/project/PSDEUSERROLES/EXECUTOR_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/project.json"
+    }
+  }, {
+    "name" : "销售人员-DEAL[执行人-读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEUSERROLES/EXECUTOR_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal.json"
+    }
+  }, {
+    "name" : "销售人员-PAYEE[执行人-只读]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee/PSDEUSERROLES/EXECUTOR_R.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee.json"
+    }
+  }, {
+    "name" : "销售人员-NOTE_ATTACH[创建者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach/PSDEUSERROLES/CREATEMAN_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach.json"
+    }
+  }, {
+    "name" : "销售人员-ACCOUNT[所有者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/account/PSDEUSERROLES/OWNER_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+    }
+  }, {
+    "name" : "销售人员-CONTACT[创建者-读写]",
+    "getPSDEUserRole" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/contact/PSDEUSERROLES/CREATEMAN_CRUD.json"
+    },
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/contact.json"
+    }
+  } ],
+  "getPSSysUserRoleReses" : [ {
+    "name" : "销售人员-（其他）销售员工",
+    "getPSSysUniRes" : {
+      "modelref" : true,
+      "id" : "SALESSTAFF"
+    },
+    "sysUniResCode" : "SALESSTAFF"
+  } ],
+  "roleTag" : "SalesStaff",
+  "roleType" : "CUSTOM",
+  "uniResTags" : [ "SALESSTAFF" ]
+}

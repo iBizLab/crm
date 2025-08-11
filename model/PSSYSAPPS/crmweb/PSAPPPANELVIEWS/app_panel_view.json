@@ -1,0 +1,61 @@
+{
+  "accUserMode" : 0,
+  "caption" : "应用面板视图",
+  "codeName" : "app_panel_view",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPPANELVIEWS/app_panel_view.json",
+  "name" : "AppPanelView",
+  "getPSAppModule" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/Ungroup.json"
+  },
+  "getPSControls" : [ {
+    "codeName" : "app_panel_view",
+    "controlType" : "PANEL",
+    "layoutMode" : "TABLE_24COL",
+    "logicName" : "应用面板视图使用面板",
+    "name" : "panel",
+    "getPSControlParam" : { },
+    "getPSLayout" : {
+      "childColMD" : 24,
+      "columnCount" : 24,
+      "layout" : "TABLE_24COL"
+    },
+    "getRootPSPanelItems" : [ {
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "page_container",
+      "getPSLayout" : {
+        "dir" : "column",
+        "layout" : "FLEX"
+      },
+      "getPSLayoutPos" : {
+        "colMD" : 24,
+        "layout" : "TABLE_24COL"
+      }
+    } ],
+    "modelid" : "02bc20aa78de9bf3f2269aa7909f50bf",
+    "modeltype" : "PSSYSVIEWPANEL"
+  }, {
+    "caption" : "应用面板视图",
+    "codeName" : "captionbar",
+    "controlType" : "CAPTIONBAR",
+    "name" : "captionbar",
+    "getPSControlParam" : { }
+  } ],
+  "getPSViewLayoutPanel" : {
+    "codeName" : "layoutpanel",
+    "controlStyle" : "APPPANELVIEW",
+    "controlType" : "VIEWLAYOUTPANEL",
+    "name" : "layoutpanel",
+    "getPSControlParam" : { },
+    "layoutBodyOnly" : true,
+    "layoutPanel" : true,
+    "useDefaultLayout" : true
+  },
+  "title" : "应用面板视图",
+  "viewStyle" : "DEFAULT",
+  "viewType" : "APPPANELVIEW",
+  "enableDP" : false,
+  "modelid" : "4af3c776e05b011fa610679561bee395",
+  "modeltype" : "PSAPPPANELVIEW"
+}

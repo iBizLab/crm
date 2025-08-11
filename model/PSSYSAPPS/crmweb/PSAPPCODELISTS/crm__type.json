@@ -1,0 +1,19 @@
+{
+  "codeListTag" : "crm__type",
+  "codeListType" : "STATIC",
+  "codeName" : "crm__type",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__type.json",
+  "emptyText" : "未定义",
+  "name" : "类型",
+  "getPSCodeItems" : [ {
+    "codeName" : "item_1",
+    "text" : "已有的业务",
+    "value" : "1"
+  }, {
+    "codeName" : "item_2",
+    "text" : "新建业务",
+    "value" : "2"
+  } ],
+  "enableCache" : true
+}

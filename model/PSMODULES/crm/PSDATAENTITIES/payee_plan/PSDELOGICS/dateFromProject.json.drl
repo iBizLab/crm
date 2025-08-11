@@ -1,0 +1,65 @@
+package cn.ibizlab.crm.crm.logic.payee_planlogic.datefromproject;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.payee_plan payee_plandatefromprojectdefault;
+                global cn.ibizlab.crm.core.crm.domain.project payee_plandatefromprojectproject;
+                    global cn.ibizlab.crm.core.crm.service.IprojectService projectservice;
+        global cn.ibizlab.crm.core.crm.service.Ipayee_planService iBzSysPayee_planDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "payee_plandatefromprojectbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam1"
+            ruleflow-group "payee_plandatefromprojectprepareparam1"
+            when
+            then
+                            payee_plandatefromprojectproject.set("id",payee_plandatefromprojectdefault.get("projectid"));
+                        update(payee_plandatefromprojectdefault);//更新fact中变量值
+                        update(payee_plandatefromprojectproject);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体行为]
+            rule "deaction1"
+            ruleflow-group "payee_plandatefromprojectdeaction1"
+            when
+            then
+                            cn.ibizlab.crm.util.helper.CachedBeanCopier.copy(projectservice.get(payee_plandatefromprojectproject.getId()),payee_plandatefromprojectproject);
+                        update(payee_plandatefromprojectdefault);//更新fact中变量值
+                        update(payee_plandatefromprojectproject);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam2"
+            ruleflow-group "payee_plandatefromprojectprepareparam2"
+            when
+            then
+                            payee_plandatefromprojectdefault.set("onumber",payee_plandatefromprojectproject.get("businessline"));
+                            payee_plandatefromprojectdefault.set("businessline",payee_plandatefromprojectproject.get("businessline"));
+                            payee_plandatefromprojectdefault.set("settlementamount",payee_plandatefromprojectproject.get("settlementamount"));
+                            payee_plandatefromprojectdefault.set("accountname",payee_plandatefromprojectproject.get("accountname"));
+                            payee_plandatefromprojectdefault.set("orderdate",payee_plandatefromprojectproject.get("orderdate"));
+                        update(payee_plandatefromprojectdefault);//更新fact中变量值
+                        update(payee_plandatefromprojectproject);//更新fact中变量值
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "payee_plandatefromprojectend1"
+            when
+            then
+                        update(payee_plandatefromprojectdefault);//更新fact中变量值
+                        update(payee_plandatefromprojectproject);//更新fact中变量值
+            end

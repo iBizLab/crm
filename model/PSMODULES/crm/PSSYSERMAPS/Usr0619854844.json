@@ -1,0 +1,58 @@
+{
+  "codeName" : "Usr0619854844",
+  "dynaModelFilePath" : "PSMODULES/crm/PSSYSERMAPS/Usr0619854844.json",
+  "name" : "订单",
+  "getPSSysERMapNodes" : [ {
+    "leftPos" : 100,
+    "name" : "ORDER_ALLOCATE",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/order_allocate.json"
+    },
+    "topPos" : 100
+  }, {
+    "leftPos" : 550,
+    "name" : "PAYEE",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee.json"
+    },
+    "topPos" : 100
+  }, {
+    "leftPos" : 1000,
+    "name" : "PAYEE_ALLOCATE",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_allocate.json"
+    },
+    "topPos" : 100
+  }, {
+    "leftPos" : 1450,
+    "name" : "PAYEE_PLAN",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan.json"
+    },
+    "topPos" : 100
+  }, {
+    "leftPos" : 100,
+    "name" : "PAYEE_STATISTIC",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic.json"
+    },
+    "topPos" : 650
+  }, {
+    "leftPos" : 550,
+    "name" : "PROJECT",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/project.json"
+    },
+    "topPos" : 650
+  } ],
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  }
+}

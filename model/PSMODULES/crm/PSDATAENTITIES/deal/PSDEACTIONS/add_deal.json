@@ -1,0 +1,29 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "CREATE",
+  "actionType" : "DELOGIC",
+  "codeName" : "add_deal",
+  "dataAccessAction" : "NONE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEACTIONS/add_deal.json",
+  "logicName" : "添加商机",
+  "name" : "add_deal",
+  "getPSDEActionInput" : {
+    "name" : "Add_dealInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "deal_dto"
+    },
+    "type" : "DTO",
+    "output" : true
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Add_dealResult",
+    "type" : "VOID"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDELOGICS/add_deal.json"
+  },
+  "enableAudit" : true,
+  "enableFront" : false
+}

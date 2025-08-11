@@ -1,0 +1,32 @@
+{
+  "codeName" : "RELATION",
+  "dERSubType" : "DER1N",
+  "dERType" : "DERCUSTOM",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/relation/PSDERS/DERCUSTOM_TAGET_RELATION_TASK.json",
+  "logicName" : "名称",
+  "getMajorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+  },
+  "masterRS" : 0,
+  "getMinorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/relation.json"
+  },
+  "name" : "DERCUSTOM_TAGET_RELATION_TASK",
+  "getOne2XDataPSDEField" : {
+    "name" : "RELATIONS",
+    "codeName" : "relations"
+  },
+  "orderValue" : 100,
+  "parentSubType" : "TASK",
+  "pickupDEFName" : "TARGET_ID",
+  "getPickupPSDEField" : {
+    "name" : "TARGET_ID",
+    "codeName" : "target_id"
+  },
+  "removeActionType" : 0,
+  "removeOrder" : -1,
+  "serviceCodeName" : "relation",
+  "typeValue" : "TASK"
+}

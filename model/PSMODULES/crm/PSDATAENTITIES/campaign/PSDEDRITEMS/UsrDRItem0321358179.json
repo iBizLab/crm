@@ -1,0 +1,16 @@
+{
+  "codeName" : "UsrDRItem0321358179",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/campaign/PSDEDRITEMS/UsrDRItem0321358179.json",
+  "itemType" : "CUSTOM",
+  "memo" : "自动生成",
+  "name" : "已邀请的会议",
+  "parentDataJO" : {
+    "srfparentdename" : "CAMPAIGN",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "invited_view",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/schedule.json"
+  }
+}

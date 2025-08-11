@@ -1,0 +1,1442 @@
+package cn.ibizlab.crm.crm.logic.accountlogic.merge_account;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.account accountmerge_accountdefault;
+                global cn.ibizlab.crm.core.crm.domain.attachment accountmerge_accountattachment_filter;
+                global cn.ibizlab.crm.core.crm.domain.attachment accountmerge_accountattachment_list;
+                global cn.ibizlab.crm.core.crm.domain.attachment accountmerge_accountattachment_sub;
+                global cn.ibizlab.crm.core.crm.domain.contact accountmerge_accountcontact_filter;
+                global cn.ibizlab.crm.core.crm.domain.contact accountmerge_accountcontact_list;
+                global cn.ibizlab.crm.core.crm.domain.contact accountmerge_accountcontact_sub;
+                global cn.ibizlab.crm.core.crm.domain.custom_button accountmerge_accountcustom_buttom_sub;
+                global cn.ibizlab.crm.core.crm.domain.custom_button accountmerge_accountcustom_button_filter;
+                global cn.ibizlab.crm.core.crm.domain.custom_button accountmerge_accountcustom_button_list;
+                global cn.ibizlab.crm.core.crm.domain.deal accountmerge_accountdeal_filter;
+                global cn.ibizlab.crm.core.crm.domain.deal accountmerge_accountdeal_list;
+                global cn.ibizlab.crm.core.crm.domain.deal accountmerge_accountdeal_sub;
+                global cn.ibizlab.crm.core.crm.domain.account accountmerge_accountdel_account;
+                global cn.ibizlab.crm.core.crm.domain.lead accountmerge_accountlead;
+                global cn.ibizlab.crm.core.crm.domain.lead accountmerge_accountlead_filter;
+                global cn.ibizlab.crm.core.crm.domain.lead accountmerge_accountlead_list;
+                global cn.ibizlab.crm.core.crm.domain.lead accountmerge_accountlead_sub;
+                global cn.ibizlab.crm.core.crm.domain.note_attach accountmerge_accountnote_attach_filter;
+                global cn.ibizlab.crm.core.crm.domain.note_attach accountmerge_accountnote_attach_list;
+                global cn.ibizlab.crm.core.crm.domain.note_attach accountmerge_accountnote_attach_sub;
+                global cn.ibizlab.crm.core.crm.domain.project accountmerge_accountproject_filter;
+                global cn.ibizlab.crm.core.crm.domain.project accountmerge_accountproject_list;
+                global cn.ibizlab.crm.core.crm.domain.project accountmerge_accountproject_sub;
+                global cn.ibizlab.crm.core.crm.domain.relation accountmerge_accountrelation_filter;
+                global cn.ibizlab.crm.core.crm.domain.relation accountmerge_accountrelation_list;
+                global cn.ibizlab.crm.core.crm.domain.relation accountmerge_accountrelation_sub;
+                    global cn.ibizlab.crm.core.crm.service.IdealService dealservice;
+                    global cn.ibizlab.crm.core.crm.service.IprojectService projectservice;
+                    global cn.ibizlab.crm.core.crm.service.IcontactService contactservice;
+                    global cn.ibizlab.crm.core.crm.service.IleadService leadservice;
+                    global cn.ibizlab.crm.core.crm.service.IrelationService relationservice;
+                    global cn.ibizlab.crm.core.crm.service.Icustom_buttonService custom_buttonservice;
+                    global cn.ibizlab.crm.core.crm.service.Inote_attachService note_attachservice;
+                    global cn.ibizlab.crm.core.crm.service.IattachmentService attachmentservice;
+        global cn.ibizlab.crm.core.crm.service.IaccountService iBzSysAccountDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "accountmerge_accountbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam1"
+            ruleflow-group "accountmerge_accountprepareparam1"
+            when
+            then
+                            accountmerge_accountdeal_filter.set("n_account_id_eq",accountmerge_accountdefault.get("id"));
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam3"
+            ruleflow-group "accountmerge_accountprepareparam3"
+            when
+            then
+                            accountmerge_accountproject_filter.set("n_account_id_eq",accountmerge_accountdefault.get("id"));
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam4"
+            ruleflow-group "accountmerge_accountprepareparam4"
+            when
+            then
+                            accountmerge_accountcontact_filter.set("n_account_id_eq",accountmerge_accountdefault.get("id"));
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam6"
+            ruleflow-group "accountmerge_accountprepareparam6"
+            when
+            then
+                            accountmerge_accountrelation_filter.set("n_principal_id_eq",accountmerge_accountdefault.get("id"));
+                            accountmerge_accountrelation_filter.set("n_principal_type_eq","ACCOUNT");
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体数据集]
+            rule "dedataset1"
+            ruleflow-group "accountmerge_accountdedataset1"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体数据集]
+            rule "dedataset3"
+            ruleflow-group "accountmerge_accountdedataset3"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体数据集]
+            rule "dedataset4"
+            ruleflow-group "accountmerge_accountdedataset4"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[循环子调用]
+            rule "loopsubcall3"
+            ruleflow-group "accountmerge_accountloopsubcall3"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam2"
+            ruleflow-group "accountmerge_accountprepareparam2"
+            when
+            then
+                            accountmerge_accountlead_filter.set("n_account_id_eq",accountmerge_accountdefault.get("id"));
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam5"
+            ruleflow-group "accountmerge_accountprepareparam5"
+            when
+            then
+                            accountmerge_accountcustom_button_filter.set("n_owner_id_eq",accountmerge_accountdefault.get("id"));
+                            accountmerge_accountcustom_button_filter.set("n_owner_type_eq","ACCOUNT");
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam7"
+            ruleflow-group "accountmerge_accountprepareparam7"
+            when
+            then
+                            accountmerge_accountnote_attach_filter.set("n_principal_id_eq",accountmerge_accountdefault.get("id"));
+                            accountmerge_accountnote_attach_filter.set("n_principal_type_eq","ACCOUNT");
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam8"
+            ruleflow-group "accountmerge_accountprepareparam8"
+            when
+            then
+                            accountmerge_accountattachment_filter.set("n_owner_id_eq",accountmerge_accountdefault.get("id"));
+                            accountmerge_accountattachment_filter.set("n_owner_type_eq","ACCOUNT");
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体数据集]
+            rule "dedataset2"
+            ruleflow-group "accountmerge_accountdedataset2"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体数据集]
+            rule "dedataset5"
+            ruleflow-group "accountmerge_accountdedataset5"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体数据集]
+            rule "dedataset6"
+            ruleflow-group "accountmerge_accountdedataset6"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体数据集]
+            rule "dedataset7"
+            ruleflow-group "accountmerge_accountdedataset7"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体数据集]
+            rule "dedataset8"
+            ruleflow-group "accountmerge_accountdedataset8"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[循环子调用]
+            rule "loopsubcall1"
+            ruleflow-group "accountmerge_accountloopsubcall1"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[循环子调用]
+            rule "loopsubcall2"
+            ruleflow-group "accountmerge_accountloopsubcall2"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[循环子调用]
+            rule "loopsubcall4"
+            ruleflow-group "accountmerge_accountloopsubcall4"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[循环子调用]
+            rule "loopsubcall5"
+            ruleflow-group "accountmerge_accountloopsubcall5"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[循环子调用]
+            rule "loopsubcall6"
+            ruleflow-group "accountmerge_accountloopsubcall6"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[循环子调用]
+            rule "loopsubcall7"
+            ruleflow-group "accountmerge_accountloopsubcall7"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[循环子调用]
+            rule "loopsubcall8"
+            ruleflow-group "accountmerge_accountloopsubcall8"
+            when
+            then
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam16"
+            ruleflow-group "accountmerge_accountprepareparam16"
+            when
+            then
+                            accountmerge_accountnote_attach_sub.set("principalid",accountmerge_accountdefault.get("last_id"));
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam10"
+            ruleflow-group "accountmerge_accountprepareparam10"
+            when
+            then
+                            accountmerge_accountlead_sub.set("accountid",accountmerge_accountdefault.get("last_id"));
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam11"
+            ruleflow-group "accountmerge_accountprepareparam11"
+            when
+            then
+                            accountmerge_accountdeal_sub.set("accountid",accountmerge_accountdefault.get("last_id"));
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam12"
+            ruleflow-group "accountmerge_accountprepareparam12"
+            when
+            then
+                            accountmerge_accountproject_sub.set("accountid",accountmerge_accountdefault.get("last_id"));
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam13"
+            ruleflow-group "accountmerge_accountprepareparam13"
+            when
+            then
+                            accountmerge_accountcontact_sub.set("accountid",accountmerge_accountdefault.get("last_id"));
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam14"
+            ruleflow-group "accountmerge_accountprepareparam14"
+            when
+            then
+                            accountmerge_accountrelation_sub.set("principalid",accountmerge_accountdefault.get("last_id"));
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam15"
+            ruleflow-group "accountmerge_accountprepareparam15"
+            when
+            then
+                            accountmerge_accountcustom_buttom_sub.set("ownerid",accountmerge_accountdefault.get("last_id"));
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam17"
+            ruleflow-group "accountmerge_accountprepareparam17"
+            when
+            then
+                            accountmerge_accountattachment_sub.set("ownerid",accountmerge_accountdefault.get("last_id"));
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体行为]
+            rule "deaction2"
+            ruleflow-group "accountmerge_accountdeaction2"
+            when
+            then
+                        leadservice.update(accountmerge_accountlead_sub);
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体行为]
+            rule "deaction3"
+            ruleflow-group "accountmerge_accountdeaction3"
+            when
+            then
+                        dealservice.update(accountmerge_accountdeal_sub);
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体行为]
+            rule "deaction4"
+            ruleflow-group "accountmerge_accountdeaction4"
+            when
+            then
+                        projectservice.update(accountmerge_accountproject_sub);
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体行为]
+            rule "deaction5"
+            ruleflow-group "accountmerge_accountdeaction5"
+            when
+            then
+                        contactservice.update(accountmerge_accountcontact_sub);
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体行为]
+            rule "deaction6"
+            ruleflow-group "accountmerge_accountdeaction6"
+            when
+            then
+                        relationservice.update(accountmerge_accountrelation_sub);
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体行为]
+            rule "deaction7"
+            ruleflow-group "accountmerge_accountdeaction7"
+            when
+            then
+                        custom_buttonservice.update(accountmerge_accountcustom_buttom_sub);
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体行为]
+            rule "deaction8"
+            ruleflow-group "accountmerge_accountdeaction8"
+            when
+            then
+                        note_attachservice.update(accountmerge_accountnote_attach_sub);
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体行为]
+            rule "deaction9"
+            ruleflow-group "accountmerge_accountdeaction9"
+            when
+            then
+                        attachmentservice.update(accountmerge_accountattachment_sub);
+                        update(accountmerge_accountdefault);//更新fact中变量值
+                        update(accountmerge_accountattachment_filter);//更新fact中变量值
+                        update(accountmerge_accountattachment_list);//更新fact中变量值
+                        update(accountmerge_accountattachment_sub);//更新fact中变量值
+                        update(accountmerge_accountcontact_filter);//更新fact中变量值
+                        update(accountmerge_accountcontact_list);//更新fact中变量值
+                        update(accountmerge_accountcontact_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_buttom_sub);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_filter);//更新fact中变量值
+                        update(accountmerge_accountcustom_button_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_filter);//更新fact中变量值
+                        update(accountmerge_accountdeal_list);//更新fact中变量值
+                        update(accountmerge_accountdeal_sub);//更新fact中变量值
+                        update(accountmerge_accountdel_account);//更新fact中变量值
+                        update(accountmerge_accountlead);//更新fact中变量值
+                        update(accountmerge_accountlead_filter);//更新fact中变量值
+                        update(accountmerge_accountlead_list);//更新fact中变量值
+                        update(accountmerge_accountlead_sub);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_filter);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_list);//更新fact中变量值
+                        update(accountmerge_accountnote_attach_sub);//更新fact中变量值
+                        update(accountmerge_accountproject_filter);//更新fact中变量值
+                        update(accountmerge_accountproject_list);//更新fact中变量值
+                        update(accountmerge_accountproject_sub);//更新fact中变量值
+                        update(accountmerge_accountrelation_filter);//更新fact中变量值
+                        update(accountmerge_accountrelation_list);//更新fact中变量值
+                        update(accountmerge_accountrelation_sub);//更新fact中变量值
+            end

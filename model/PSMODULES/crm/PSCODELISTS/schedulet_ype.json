@@ -1,0 +1,37 @@
+{
+  "codeListTag" : "crm__schedulet_ype",
+  "codeListType" : "STATIC",
+  "codeName" : "schedulet_ype",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSCODELISTS/schedulet_ype.json",
+  "emptyText" : "未定义",
+  "name" : "日程类型",
+  "getPSCodeItems" : [ {
+    "codeName" : "event",
+    "text" : "会议",
+    "value" : "EVENT"
+  }, {
+    "codeName" : "task",
+    "text" : "任务",
+    "value" : "TASK"
+  }, {
+    "codeName" : "call",
+    "text" : "通话",
+    "value" : "CALL"
+  }, {
+    "codeName" : "reservation",
+    "text" : "预留",
+    "value" : "RESERVATION"
+  } ],
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "refFlag" : true,
+  "systemTag" : "iBizCRM",
+  "codeItemValueNumber" : false,
+  "enableCache" : true,
+  "subSysAsCloud" : false,
+  "subSysCodeList" : false,
+  "userScope" : false
+}

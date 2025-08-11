@@ -1,0 +1,6 @@
+{
+  "codeName" : "Default",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/tag/PSDEDATARELATIONS/Default.json",
+  "formCaption" : "标签",
+  "name" : "标签默认关系界面组"
+}

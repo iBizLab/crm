@@ -1,0 +1,135 @@
+{
+  "dBType" : "MYSQL5",
+  "name" : "MySQL5",
+  "getPSDEDataQueryCodeConds" : [ {
+    "condType" : "CUSTOM",
+    "customCond" : "( t1.`OWNER` = #{ctx.sessioncontext.userid} )",
+    "name" : "查询条件"
+  } ],
+  "getPSDEDataQueryCodeExps" : [ {
+    "expression" : "t1.`DESCRIPTION`",
+    "name" : "DESCRIPTION"
+  }, {
+    "expression" : "t1.`ACCOUNT_NAME`",
+    "name" : "ACCOUNT_NAME"
+  }, {
+    "expression" : "t1.`ACCOUNT_NUMBER`",
+    "name" : "ACCOUNT_NUMBER"
+  }, {
+    "expression" : "t1.`ACCOUNT_SITE`",
+    "name" : "ACCOUNT_SITE"
+  }, {
+    "expression" : "t1.`ACCOUNT_TYPE`",
+    "name" : "ACCOUNT_TYPE"
+  }, {
+    "expression" : "t1.`ANNUAL_REVENUE`",
+    "name" : "ANNUAL_REVENUE"
+  }, {
+    "expression" : "t1.`BILLING_CITY`",
+    "name" : "BILLING_CITY"
+  }, {
+    "expression" : "t1.`BILLING_CODE`",
+    "name" : "BILLING_CODE"
+  }, {
+    "expression" : "t1.`BILLING_COUNTRY`",
+    "name" : "BILLING_COUNTRY"
+  }, {
+    "expression" : "t1.`BILLING_STATE`",
+    "name" : "BILLING_STATE"
+  }, {
+    "expression" : "t1.`BILLING_STREET`",
+    "name" : "BILLING_STREET"
+  }, {
+    "expression" : "t1.`CHANGE_LOG_TIME__S`",
+    "name" : "CHANGE_LOG_TIME__S"
+  }, {
+    "expression" : "t1.`CREATE_MAN`",
+    "name" : "CREATE_MAN"
+  }, {
+    "expression" : "t1.`CREATE_TIME`",
+    "name" : "CREATE_TIME"
+  }, {
+    "expression" : "t1.`EMPLOYEES`",
+    "name" : "EMPLOYEES"
+  }, {
+    "expression" : "t1.`ENRICH_STATUS__S`",
+    "name" : "ENRICH_STATUS__S"
+  }, {
+    "expression" : "t1.`FAX`",
+    "name" : "FAX"
+  }, {
+    "expression" : "t1.`ID`",
+    "name" : "ID"
+  }, {
+    "expression" : "t1.`INDUSTRY`",
+    "name" : "INDUSTRY"
+  }, {
+    "expression" : "t1.`LAST_ACTIVITY_TIME`",
+    "name" : "LAST_ACTIVITY_TIME"
+  }, {
+    "expression" : "t1.`LAST_ENRICHED_TIME__S`",
+    "name" : "LAST_ENRICHED_TIME__S"
+  }, {
+    "expression" : "t1.`LOCKED__S`",
+    "name" : "LOCKED__S"
+  }, {
+    "expression" : "t1.`NAME`",
+    "name" : "NAME"
+  }, {
+    "expression" : "t1.`OWNER`",
+    "name" : "OWNER"
+  }, {
+    "expression" : "t1.`OWNERSHIP`",
+    "name" : "OWNERSHIP"
+  }, {
+    "expression" : "t11.`ACCOUNT_NAME`",
+    "name" : "PACCOUNT_NAME"
+  }, {
+    "expression" : "t1.`PHONE`",
+    "name" : "PHONE"
+  }, {
+    "expression" : "t1.`PID`",
+    "name" : "PID"
+  }, {
+    "expression" : "t1.`RATING`",
+    "name" : "RATING"
+  }, {
+    "expression" : "t1.`RECORD_LMAGE`",
+    "name" : "RECORD_LMAGE"
+  }, {
+    "expression" : "t1.`SHIPPING_CITY`",
+    "name" : "SHIPPING_CITY"
+  }, {
+    "expression" : "t1.`SHIPPING_CODE`",
+    "name" : "SHIPPING_CODE"
+  }, {
+    "expression" : "t1.`SHIPPING_COUNTRY`",
+    "name" : "SHIPPING_COUNTRY"
+  }, {
+    "expression" : "t1.`SHIPPING_STATE`",
+    "name" : "SHIPPING_STATE"
+  }, {
+    "expression" : "t1.`SHIPPING_STREET`",
+    "name" : "SHIPPING_STREET"
+  }, {
+    "expression" : "t1.`SIC_CODE`",
+    "name" : "SIC_CODE"
+  }, {
+    "expression" : "t1.`TAG`",
+    "name" : "TAG"
+  }, {
+    "expression" : "t1.`TICKER_SYMBOL`",
+    "name" : "TICKER_SYMBOL"
+  }, {
+    "expression" : "t1.`UPDATE_MAN`",
+    "name" : "UPDATE_MAN"
+  }, {
+    "expression" : "t1.`UPDATE_TIME`",
+    "name" : "UPDATE_TIME"
+  }, {
+    "expression" : "t1.`WEBSITE`",
+    "name" : "WEBSITE"
+  } ],
+  "queryCode" : "SELECT\nt1.`ACCOUNT_NAME`,\nt1.`ACCOUNT_NUMBER`,\nt1.`ACCOUNT_SITE`,\nt1.`ACCOUNT_TYPE`,\nt1.`ANNUAL_REVENUE`,\nt1.`BILLING_CITY`,\nt1.`BILLING_CODE`,\nt1.`BILLING_COUNTRY`,\nt1.`BILLING_STATE`,\nt1.`BILLING_STREET`,\nt1.`CHANGE_LOG_TIME__S`,\nt1.`CREATE_MAN`,\nt1.`CREATE_TIME`,\nt1.`EMPLOYEES`,\nt1.`ENRICH_STATUS__S`,\nt1.`FAX`,\nt1.`ID`,\nt1.`INDUSTRY`,\nt1.`LAST_ACTIVITY_TIME`,\nt1.`LAST_ENRICHED_TIME__S`,\nt1.`LOCKED__S`,\nt1.`NAME`,\nt1.`OWNER`,\nt1.`OWNERSHIP`,\nt11.`ACCOUNT_NAME` AS `PACCOUNT_NAME`,\nt1.`PHONE`,\nt1.`PID`,\nt1.`RATING`,\nt1.`RECORD_LMAGE`,\nt1.`SHIPPING_CITY`,\nt1.`SHIPPING_CODE`,\nt1.`SHIPPING_COUNTRY`,\nt1.`SHIPPING_STATE`,\nt1.`SHIPPING_STREET`,\nt1.`SIC_CODE`,\nt1.`TAG`,\nt1.`TICKER_SYMBOL`,\nt1.`UPDATE_MAN`,\nt1.`UPDATE_TIME`,\nt1.`WEBSITE`\nFROM `ACCOUNT` t1 \nLEFT JOIN `ACCOUNT` t11 ON t1.`PID` = t11.`ID` \n",
+  "id" : "PSMODULES/crm/PSDATAENTITIES/account/PSDEDATAQUERIES/owner/PSDEDQCODES/MYSQL5.json"
+}

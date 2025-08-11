@@ -1,0 +1,28 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "CUSTOM",
+  "actionType" : "DELOGIC",
+  "codeName" : "leadToBeDeal",
+  "dataAccessAction" : "NONE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDEACTIONS/leadToBeDeal.json",
+  "logicName" : "派生商机",
+  "name" : "leadToBeDeal",
+  "getPSDEActionInput" : {
+    "name" : "LeadToBeDealInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "lead_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "LeadToBeDealResult",
+    "type" : "VOID"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDELOGICS/leadToBeDeal.json"
+  },
+  "enableAudit" : true,
+  "enableFront" : false
+}

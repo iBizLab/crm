@@ -1,0 +1,31 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "GETDRAFT",
+  "actionType" : "DELOGIC",
+  "codeName" : "plan_info_by_project",
+  "dataAccessAction" : "NONE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/payee/PSDEACTIONS/plan_info_by_project.json",
+  "logicName" : "通过project_id获取plan",
+  "name" : "PlanInfoByProject",
+  "getPSDEActionInput" : {
+    "name" : "Plan_info_by_projectInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "payee_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Plan_info_by_projectResult",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "payee_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/payee/PSDELOGICS/plan_get_project_id.json"
+  },
+  "enableFront" : false
+}

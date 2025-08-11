@@ -1,0 +1,29 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "CUSTOM",
+  "actionType" : "DELOGIC",
+  "codeName" : "plan_to_payee",
+  "dataAccessAction" : "NONE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/payee_plan/PSDEACTIONS/plan_to_payee.json",
+  "logicName" : "将数据传给记录",
+  "memo" : "将数据传给记录",
+  "name" : "plan_to_payee",
+  "getPSDEActionInput" : {
+    "name" : "Plan_to_payeeInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "payee_plan_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Plan_to_payeeResult",
+    "type" : "VOID"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan/PSDELOGICS/plan_to_payee.json"
+  },
+  "enableAudit" : true,
+  "enableFront" : false
+}

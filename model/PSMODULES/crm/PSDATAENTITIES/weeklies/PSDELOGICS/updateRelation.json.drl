@@ -1,0 +1,187 @@
+package cn.ibizlab.crm.crm.logic.weeklieslogic.updaterelation;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.weeklies weekliesupdaterelationdefault;
+                global cn.ibizlab.crm.core.crm.domain.task weekliesupdaterelationactivities;
+                global cn.ibizlab.crm.core.crm.domain.note_attach weekliesupdaterelationnotes;
+                global cn.ibizlab.crm.core.crm.domain.task weekliesupdaterelationtasks;
+                global cn.ibizlab.crm.core.crm.domain.task weekliesupdaterelationworks;
+        global cn.ibizlab.crm.core.crm.service.IweekliesService iBzSysWeekliesDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "weekliesupdaterelationbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam2"
+            ruleflow-group "weekliesupdaterelationprepareparam2"
+            when
+            then
+                            weekliesupdaterelationdefault.set("activities",weekliesupdaterelationactivities.get(""));
+                            weekliesupdaterelationdefault.set("works",weekliesupdaterelationworks.get(""));
+                            weekliesupdaterelationdefault.set("tasks",weekliesupdaterelationtasks.get(""));
+                            weekliesupdaterelationdefault.set("notes",weekliesupdaterelationnotes.get(""));
+                        update(weekliesupdaterelationdefault);//更新fact中变量值
+                        update(weekliesupdaterelationactivities);//更新fact中变量值
+                        update(weekliesupdaterelationnotes);//更新fact中变量值
+                        update(weekliesupdaterelationtasks);//更新fact中变量值
+                        update(weekliesupdaterelationworks);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam3"
+            ruleflow-group "weekliesupdaterelationprepareparam3"
+            when
+            then
+                                weekliesupdaterelationdefault.set("name",curuser.getSessionParams().get("srfusername"));
+                        update(weekliesupdaterelationdefault);//更新fact中变量值
+                        update(weekliesupdaterelationactivities);//更新fact中变量值
+                        update(weekliesupdaterelationnotes);//更新fact中变量值
+                        update(weekliesupdaterelationtasks);//更新fact中变量值
+                        update(weekliesupdaterelationworks);//更新fact中变量值
+            end
+
+            //逻辑处理节点[设置名称]
+            rule "rawsfcode1"
+            ruleflow-group "weekliesupdaterelationrawsfcode1"
+            when
+            then
+                        update(weekliesupdaterelationdefault);//更新fact中变量值
+                        update(weekliesupdaterelationactivities);//更新fact中变量值
+                        update(weekliesupdaterelationnotes);//更新fact中变量值
+                        update(weekliesupdaterelationtasks);//更新fact中变量值
+                        update(weekliesupdaterelationworks);//更新fact中变量值
+            end
+
+            //逻辑处理节点[本周活动和任务]
+            rule "rawsqlcall1"
+            ruleflow-group "weekliesupdaterelationrawsqlcall1"
+            when
+            then
+    Map param =new HashMap();
+        param.put("param0",curuser.getSessionParams().get("srfpersonid"));
+        param.put("param1",curuser.getSessionParams().get("userid"));
+        param.put("param2",weekliesupdaterelationdefault.get("startdate"));
+        param.put("param3",weekliesupdaterelationdefault.get("startdate"));
+    String strSql=" select 	ID as TARGET_ID, 	SUBJECT  as NAME, 	TYPE as TARGET_TYPE,     COALESCE(START_TIME, DUE_DATE) AS START_TIME,     PRIORITY,     STATUS,     COST,     DESCRIPTION from 	TASK where 	 (CREATE_MAN = #{et.param0} 		or OWNER = #{et.param1}) 		and  		(  			(YEARWEEK(START_TIME , 1) = YEARWEEK(#{et.param2}, 1)and TYPE = 'MANEUVER') 			or  			(YEARWEEK(DUE_DATE, 1) = YEARWEEK(#{et.param3}, 1) and TYPE = 'TASK' ) 		) order by START_TIME desc";
+                        java.util.List<JSONObject> entities=iBzSysWeekliesDefaultService.select(strSql,param);//SQL调用
+                            if(entities.size()>0){
+                            JSONObject entity=entities.get(0);
+                                    cn.ibizlab.crm.core.crm.domain.task targetEntity =new cn.ibizlab.crm.core.crm.domain.task();
+                                    for (Map.Entry entry : entity.entrySet()) {
+                                    targetEntity.set(String.valueOf(entry.getKey()),entry.getValue());
+                                    }
+                                    org.springframework.cglib.beans.BeanCopier copier= org.springframework.cglib.beans.BeanCopier.create(targetEntity.getClass(),weekliesupdaterelationactivities.getClass(), false);
+                                    copier.copy(targetEntity,weekliesupdaterelationactivities,null);
+                            }
+                        update(weekliesupdaterelationdefault);//更新fact中变量值
+                        update(weekliesupdaterelationactivities);//更新fact中变量值
+                        update(weekliesupdaterelationnotes);//更新fact中变量值
+                        update(weekliesupdaterelationtasks);//更新fact中变量值
+                        update(weekliesupdaterelationworks);//更新fact中变量值
+            end
+
+            //逻辑处理节点[本周进展评估]
+            rule "rawsqlcall2"
+            ruleflow-group "weekliesupdaterelationrawsqlcall2"
+            when
+            then
+    Map param =new HashMap();
+        param.put("param0",weekliesupdaterelationdefault.get("startdate"));
+        param.put("param1",weekliesupdaterelationdefault.get("enddate"));
+        param.put("param2",curuser.getSessionParams().get("srfpersonid"));
+        param.put("param3",curuser.getSessionParams().get("srfpersonid"));
+        param.put("param4",curuser.getSessionParams().get("srfpersonid"));
+    String strSql="select * from 	note_attach T1 where   T1.UPDATE_TIME >= #{et.param0}     AND T1.UPDATE_TIME <= #{et.param1}     	and (     (T1.UPDATE_MAN =#{et.param2}) 	or  	(EXISTS (SELECT 1 FROM task_executor T2 WHERE T2.TASK_ID = T1.PRINCIPAL_ID AND T2.USER_ID = #{et.param3})) 	or 	(EXISTS (SELECT 1 FROM executor T3 WHERE T3.PRINCIPAL_ID = T1.PRINCIPAL_ID AND T3.USER_ID = #{et.param4}))  	)";
+                        java.util.List<JSONObject> entities=iBzSysWeekliesDefaultService.select(strSql,param);//SQL调用
+                            if(entities.size()>0){
+                            JSONObject entity=entities.get(0);
+                                    cn.ibizlab.crm.core.crm.domain.note_attach targetEntity =new cn.ibizlab.crm.core.crm.domain.note_attach();
+                                    for (Map.Entry entry : entity.entrySet()) {
+                                    targetEntity.set(String.valueOf(entry.getKey()),entry.getValue());
+                                    }
+                                    org.springframework.cglib.beans.BeanCopier copier= org.springframework.cglib.beans.BeanCopier.create(targetEntity.getClass(),weekliesupdaterelationnotes.getClass(), false);
+                                    copier.copy(targetEntity,weekliesupdaterelationnotes,null);
+                            }
+                        update(weekliesupdaterelationdefault);//更新fact中变量值
+                        update(weekliesupdaterelationactivities);//更新fact中变量值
+                        update(weekliesupdaterelationnotes);//更新fact中变量值
+                        update(weekliesupdaterelationtasks);//更新fact中变量值
+                        update(weekliesupdaterelationworks);//更新fact中变量值
+            end
+
+            //逻辑处理节点[下周任务]
+            rule "rawsqlcall3"
+            ruleflow-group "weekliesupdaterelationrawsqlcall3"
+            when
+            then
+    Map param =new HashMap();
+        param.put("param0",curuser.getSessionParams().get("userid"));
+        param.put("param1",weekliesupdaterelationdefault.get("startdate"));
+        param.put("param2",weekliesupdaterelationdefault.get("startdate"));
+        param.put("param3",weekliesupdaterelationdefault.get("startdate"));
+        param.put("param4",weekliesupdaterelationdefault.get("startdate"));
+    String strSql="SELECT       ID as TARGET_ID,       SUBJECT as NAME,       'TASK' as TARGET_TYPE,     PRIORITY,     STATUS,     DUE_DATE,     DESCRIPTION FROM       TASK T1  WHERE       T1.`TYPE` = 'TASK'       AND EXISTS (SELECT 1 FROM task_executor T2 WHERE T2.TASK_ID = T1.ID AND T2.USER_ID = #{et.param0}) 		AND T1.DUE_DATE >=  DATE_ADD(#{et.param1} + INTERVAL (7-WEEKDAY(#{et.param2})) DAY, INTERVAL 0 DAY) 		AND T1.DUE_DATE <= DATE_ADD(#{et.param3}, INTERVAL (13-WEEKDAY(#{et.param4})) DAY)";
+                        java.util.List<JSONObject> entities=iBzSysWeekliesDefaultService.select(strSql,param);//SQL调用
+                            if(entities.size()>0){
+                            JSONObject entity=entities.get(0);
+                                    cn.ibizlab.crm.core.crm.domain.task targetEntity =new cn.ibizlab.crm.core.crm.domain.task();
+                                    for (Map.Entry entry : entity.entrySet()) {
+                                    targetEntity.set(String.valueOf(entry.getKey()),entry.getValue());
+                                    }
+                                    org.springframework.cglib.beans.BeanCopier copier= org.springframework.cglib.beans.BeanCopier.create(targetEntity.getClass(),weekliesupdaterelationtasks.getClass(), false);
+                                    copier.copy(targetEntity,weekliesupdaterelationtasks,null);
+                            }
+                        update(weekliesupdaterelationdefault);//更新fact中变量值
+                        update(weekliesupdaterelationactivities);//更新fact中变量值
+                        update(weekliesupdaterelationnotes);//更新fact中变量值
+                        update(weekliesupdaterelationtasks);//更新fact中变量值
+                        update(weekliesupdaterelationworks);//更新fact中变量值
+            end
+
+            //逻辑处理节点[本周工作(任务)]
+            rule "rawsqlcall4"
+            ruleflow-group "weekliesupdaterelationrawsqlcall4"
+            when
+            then
+    Map param =new HashMap();
+        param.put("param0",curuser.getSessionParams().get("srfuserid"));
+        param.put("param1",curuser.getSessionParams().get("userid"));
+        param.put("param2",weekliesupdaterelationdefault.get("startdate"));
+    String strSql="select 	ID as TARGET_ID, 	SUBJECT  as NAME, 	'TASK' as TARGET_TYPE,     START_TIME,     PRIORITY,     STATUS,     COST,     DESCRIPTION  from 	TASK where 	`TYPE` = 'TASK' 	and (CREATE_MAN = #{et.param0} 		or OWNER = #{et.param1})         and YEARWEEK(START_TIME , 1) = YEARWEEK(#{et.param2}, 1) order by START_TIME desc		";
+                        java.util.List<JSONObject> entities=iBzSysWeekliesDefaultService.select(strSql,param);//SQL调用
+                            if(entities.size()>0){
+                            JSONObject entity=entities.get(0);
+                                    for (Map.Entry entry : entity.entrySet()) {
+                                    weekliesupdaterelationworks.set(String.valueOf(entry.getKey()),entry.getValue());
+                                    }
+                            }
+                        update(weekliesupdaterelationdefault);//更新fact中变量值
+                        update(weekliesupdaterelationactivities);//更新fact中变量值
+                        update(weekliesupdaterelationnotes);//更新fact中变量值
+                        update(weekliesupdaterelationtasks);//更新fact中变量值
+                        update(weekliesupdaterelationworks);//更新fact中变量值
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "weekliesupdaterelationend1"
+            when
+            then
+                        update(weekliesupdaterelationdefault);//更新fact中变量值
+                        update(weekliesupdaterelationactivities);//更新fact中变量值
+                        update(weekliesupdaterelationnotes);//更新fact中变量值
+                        update(weekliesupdaterelationtasks);//更新fact中变量值
+                        update(weekliesupdaterelationworks);//更新fact中变量值
+            end

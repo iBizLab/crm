@@ -1,0 +1,81 @@
+{
+  "codeListTag" : "crm__stage",
+  "codeListType" : "STATIC",
+  "codeName" : "stage",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSCODELISTS/stage.json",
+  "emptyText" : "未定义",
+  "name" : "阶段",
+  "getPSCodeItems" : [ {
+    "codeName" : "item_1",
+    "data" : "20",
+    "memo" : "Qualification",
+    "text" : "资质审查",
+    "value" : "225024000000007523"
+  }, {
+    "codeName" : "item_2",
+    "data" : "25",
+    "memo" : "Needs Analysis",
+    "text" : "需求分析",
+    "value" : "225024000000007525"
+  }, {
+    "codeName" : "item_3",
+    "data" : "40",
+    "memo" : "Value Proposition",
+    "text" : "价值建议",
+    "value" : "225024000000007527"
+  }, {
+    "codeName" : "item_4",
+    "data" : "50",
+    "memo" : "Id.Decision Makers",
+    "text" : "确定决策者",
+    "value" : "225024000000007529"
+  }, {
+    "codeName" : "item_5",
+    "data" : "75",
+    "memo" : "Proposal / Price Quote",
+    "text" : "提案/报价",
+    "value" : "225024000000007533"
+  }, {
+    "codeName" : "item_6",
+    "data" : "90",
+    "memo" : "Negotiation / Review",
+    "text" : "谈判/复审",
+    "value" : "225024000000007535"
+  }, {
+    "codeName" : "item_7",
+    "data" : "100",
+    "memo" : "Closed Won",
+    "text" : "赢单关闭",
+    "value" : "225024000000007537"
+  }, {
+    "codeName" : "item_8",
+    "data" : "0",
+    "memo" : "Closed Lost",
+    "text" : "丢单关闭",
+    "value" : "225024000000007539"
+  }, {
+    "codeName" : "item_9",
+    "data" : "0",
+    "memo" : "Closed Lost to Competition",
+    "text" : "因竞争而丢单关闭",
+    "value" : "225024000000007541"
+  }, {
+    "codeName" : "item_10",
+    "data" : "0",
+    "memo" : "Identify Decision Makers",
+    "text" : "确定决策者",
+    "value" : "225024000000405263"
+  } ],
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "refFlag" : false,
+  "systemTag" : "iBizCRM",
+  "codeItemValueNumber" : false,
+  "enableCache" : true,
+  "subSysAsCloud" : false,
+  "subSysCodeList" : false,
+  "userScope" : false
+}

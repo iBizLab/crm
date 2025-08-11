@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:g="http://www.jboss.org/drools/flow/gpd" xmlns:tns="http://www.jboss.org/drools" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.mvel.org/2.0" id="Definition" name="" targetNamespace="http://www.jboss.org/drools" typeLanguage="http://www.java.com/javaTypes">
+        <process id="cn.ibizlab.crm.core.crm.service.logic.accountmerge_account" isClosed="false" isExecutable="true" name="crm_account_merge_account_ruleFlow" processType="Private" tns:packageName="cn.ibizlab.crm.core.crm.service.logic.accountmerge_account">
+            <extensionElements>
+                <tns:import name="java.util.Map" />
+                <tns:import name="org.springframework.util.StringUtils"/>
+                <tns:import name="cn.ibizlab.crm.util.helper.RuleUtils"/>
+                                <tns:metaData express="" name="accountmerge_accountdefault" type="entity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.attachment()" name="accountmerge_accountattachment_filter" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.attachment()" name="accountmerge_accountattachment_list" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.attachment()" name="accountmerge_accountattachment_sub" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.contact()" name="accountmerge_accountcontact_filter" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.contact()" name="accountmerge_accountcontact_list" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.contact()" name="accountmerge_accountcontact_sub" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.custom_button()" name="accountmerge_accountcustom_buttom_sub" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.custom_button()" name="accountmerge_accountcustom_button_filter" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.custom_button()" name="accountmerge_accountcustom_button_list" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.deal()" name="accountmerge_accountdeal_filter" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.deal()" name="accountmerge_accountdeal_list" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.deal()" name="accountmerge_accountdeal_sub" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.account()" name="accountmerge_accountdel_account" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.lead()" name="accountmerge_accountlead" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.lead()" name="accountmerge_accountlead_filter" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.lead()" name="accountmerge_accountlead_list" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.lead()" name="accountmerge_accountlead_sub" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.note_attach()" name="accountmerge_accountnote_attach_filter" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.note_attach()" name="accountmerge_accountnote_attach_list" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.note_attach()" name="accountmerge_accountnote_attach_sub" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.project()" name="accountmerge_accountproject_filter" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.project()" name="accountmerge_accountproject_list" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.project()" name="accountmerge_accountproject_sub" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.relation()" name="accountmerge_accountrelation_filter" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.relation()" name="accountmerge_accountrelation_list" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.relation()" name="accountmerge_accountrelation_sub" type="refentity"/>
+                                    <tns:metaData express="T(cn.ibizlab.crm.util.security.SpringContextHolder).getBean(T(cn.ibizlab.crm.core.crm.service.IdealService))" name="dealservice" type="service"/>
+                                    <tns:metaData express="T(cn.ibizlab.crm.util.security.SpringContextHolder).getBean(T(cn.ibizlab.crm.core.crm.service.IprojectService))" name="projectservice" type="service"/>
+                                    <tns:metaData express="T(cn.ibizlab.crm.util.security.SpringContextHolder).getBean(T(cn.ibizlab.crm.core.crm.service.IcontactService))" name="contactservice" type="service"/>
+                                    <tns:metaData express="T(cn.ibizlab.crm.util.security.SpringContextHolder).getBean(T(cn.ibizlab.crm.core.crm.service.IleadService))" name="leadservice" type="service"/>
+                                    <tns:metaData express="T(cn.ibizlab.crm.util.security.SpringContextHolder).getBean(T(cn.ibizlab.crm.core.crm.service.IrelationService))" name="relationservice" type="service"/>
+                                    <tns:metaData express="T(cn.ibizlab.crm.util.security.SpringContextHolder).getBean(T(cn.ibizlab.crm.core.crm.service.Icustom_buttonService))" name="custom_buttonservice" type="service"/>
+                                    <tns:metaData express="T(cn.ibizlab.crm.util.security.SpringContextHolder).getBean(T(cn.ibizlab.crm.core.crm.service.Inote_attachService))" name="note_attachservice" type="service"/>
+                                    <tns:metaData express="T(cn.ibizlab.crm.util.security.SpringContextHolder).getBean(T(cn.ibizlab.crm.core.crm.service.IattachmentService))" name="attachmentservice" type="service"/>
+                    <tns:metaData express="T(cn.ibizlab.crm.util.security.SpringContextHolder).getBean(T(cn.ibizlab.crm.core.crm.service.IaccountService))" name="iBzSysAccountDefaultService" type="service"/>
+                    <tns:metaData express="T(cn.ibizlab.crm.util.security.AuthenticationUser).getAuthenticationUser()" name="curuser" type="session"/>
+                            <tns:global identifier="accountmerge_accountdefault" type="cn.ibizlab.crm.core.crm.domain.account" />
+                            <tns:global identifier="accountmerge_accountattachment_filter" type="cn.ibizlab.crm.core.crm.domain.attachment" />
+                            <tns:global identifier="accountmerge_accountattachment_list" type="cn.ibizlab.crm.core.crm.domain.attachment" />
+                            <tns:global identifier="accountmerge_accountattachment_sub" type="cn.ibizlab.crm.core.crm.domain.attachment" />
+                            <tns:global identifier="accountmerge_accountcontact_filter" type="cn.ibizlab.crm.core.crm.domain.contact" />
+                            <tns:global identifier="accountmerge_accountcontact_list" type="cn.ibizlab.crm.core.crm.domain.contact" />
+                            <tns:global identifier="accountmerge_accountcontact_sub" type="cn.ibizlab.crm.core.crm.domain.contact" />
+                            <tns:global identifier="accountmerge_accountcustom_buttom_sub" type="cn.ibizlab.crm.core.crm.domain.custom_button" />
+                            <tns:global identifier="accountmerge_accountcustom_button_filter" type="cn.ibizlab.crm.core.crm.domain.custom_button" />
+                            <tns:global identifier="accountmerge_accountcustom_button_list" type="cn.ibizlab.crm.core.crm.domain.custom_button" />
+                            <tns:global identifier="accountmerge_accountdeal_filter" type="cn.ibizlab.crm.core.crm.domain.deal" />
+                            <tns:global identifier="accountmerge_accountdeal_list" type="cn.ibizlab.crm.core.crm.domain.deal" />
+                            <tns:global identifier="accountmerge_accountdeal_sub" type="cn.ibizlab.crm.core.crm.domain.deal" />
+                            <tns:global identifier="accountmerge_accountdel_account" type="cn.ibizlab.crm.core.crm.domain.account" />
+                            <tns:global identifier="accountmerge_accountlead" type="cn.ibizlab.crm.core.crm.domain.lead" />
+                            <tns:global identifier="accountmerge_accountlead_filter" type="cn.ibizlab.crm.core.crm.domain.lead" />
+                            <tns:global identifier="accountmerge_accountlead_list" type="cn.ibizlab.crm.core.crm.domain.lead" />
+                            <tns:global identifier="accountmerge_accountlead_sub" type="cn.ibizlab.crm.core.crm.domain.lead" />
+                            <tns:global identifier="accountmerge_accountnote_attach_filter" type="cn.ibizlab.crm.core.crm.domain.note_attach" />
+                            <tns:global identifier="accountmerge_accountnote_attach_list" type="cn.ibizlab.crm.core.crm.domain.note_attach" />
+                            <tns:global identifier="accountmerge_accountnote_attach_sub" type="cn.ibizlab.crm.core.crm.domain.note_attach" />
+                            <tns:global identifier="accountmerge_accountproject_filter" type="cn.ibizlab.crm.core.crm.domain.project" />
+                            <tns:global identifier="accountmerge_accountproject_list" type="cn.ibizlab.crm.core.crm.domain.project" />
+                            <tns:global identifier="accountmerge_accountproject_sub" type="cn.ibizlab.crm.core.crm.domain.project" />
+                            <tns:global identifier="accountmerge_accountrelation_filter" type="cn.ibizlab.crm.core.crm.domain.relation" />
+                            <tns:global identifier="accountmerge_accountrelation_list" type="cn.ibizlab.crm.core.crm.domain.relation" />
+                            <tns:global identifier="accountmerge_accountrelation_sub" type="cn.ibizlab.crm.core.crm.domain.relation" />
+            </extensionElements>
+                        <startEvent id="begin" isInterrupting="true"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam1" id="prepareparam1" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam3" id="prepareparam3" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam4" id="prepareparam4" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam6" id="prepareparam6" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdedataset1" id="dedataset1" implementation="http://www.jboss.org/drools/rule" name="实体数据集"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdedataset3" id="dedataset3" implementation="http://www.jboss.org/drools/rule" name="实体数据集"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdedataset4" id="dedataset4" implementation="http://www.jboss.org/drools/rule" name="实体数据集"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountloopsubcall3" id="loopsubcall3" implementation="http://www.jboss.org/drools/rule" name="循环子调用"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam2" id="prepareparam2" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam5" id="prepareparam5" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam7" id="prepareparam7" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam8" id="prepareparam8" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdedataset2" id="dedataset2" implementation="http://www.jboss.org/drools/rule" name="实体数据集"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdedataset5" id="dedataset5" implementation="http://www.jboss.org/drools/rule" name="实体数据集"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdedataset6" id="dedataset6" implementation="http://www.jboss.org/drools/rule" name="实体数据集"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdedataset7" id="dedataset7" implementation="http://www.jboss.org/drools/rule" name="实体数据集"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdedataset8" id="dedataset8" implementation="http://www.jboss.org/drools/rule" name="实体数据集"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountloopsubcall1" id="loopsubcall1" implementation="http://www.jboss.org/drools/rule" name="循环子调用"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountloopsubcall2" id="loopsubcall2" implementation="http://www.jboss.org/drools/rule" name="循环子调用"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountloopsubcall4" id="loopsubcall4" implementation="http://www.jboss.org/drools/rule" name="循环子调用"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountloopsubcall5" id="loopsubcall5" implementation="http://www.jboss.org/drools/rule" name="循环子调用"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountloopsubcall6" id="loopsubcall6" implementation="http://www.jboss.org/drools/rule" name="循环子调用"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountloopsubcall7" id="loopsubcall7" implementation="http://www.jboss.org/drools/rule" name="循环子调用"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountloopsubcall8" id="loopsubcall8" implementation="http://www.jboss.org/drools/rule" name="循环子调用"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam16" id="prepareparam16" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam10" id="prepareparam10" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam11" id="prepareparam11" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam12" id="prepareparam12" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam13" id="prepareparam13" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam14" id="prepareparam14" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam15" id="prepareparam15" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountprepareparam17" id="prepareparam17" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdeaction2" id="deaction2" implementation="http://www.jboss.org/drools/rule" name="实体行为"/>
+                        <endEvent id="deaction2_end" name="end"/>
+                        <sequenceFlow id="deaction2_end_line" sourceRef="deaction2" targetRef="deaction2_end"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdeaction3" id="deaction3" implementation="http://www.jboss.org/drools/rule" name="实体行为"/>
+                        <endEvent id="deaction3_end" name="end"/>
+                        <sequenceFlow id="deaction3_end_line" sourceRef="deaction3" targetRef="deaction3_end"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdeaction4" id="deaction4" implementation="http://www.jboss.org/drools/rule" name="实体行为"/>
+                        <endEvent id="deaction4_end" name="end"/>
+                        <sequenceFlow id="deaction4_end_line" sourceRef="deaction4" targetRef="deaction4_end"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdeaction5" id="deaction5" implementation="http://www.jboss.org/drools/rule" name="实体行为"/>
+                        <endEvent id="deaction5_end" name="end"/>
+                        <sequenceFlow id="deaction5_end_line" sourceRef="deaction5" targetRef="deaction5_end"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdeaction6" id="deaction6" implementation="http://www.jboss.org/drools/rule" name="实体行为"/>
+                        <endEvent id="deaction6_end" name="end"/>
+                        <sequenceFlow id="deaction6_end_line" sourceRef="deaction6" targetRef="deaction6_end"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdeaction7" id="deaction7" implementation="http://www.jboss.org/drools/rule" name="实体行为"/>
+                        <endEvent id="deaction7_end" name="end"/>
+                        <sequenceFlow id="deaction7_end_line" sourceRef="deaction7" targetRef="deaction7_end"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdeaction8" id="deaction8" implementation="http://www.jboss.org/drools/rule" name="实体行为"/>
+                        <endEvent id="deaction8_end" name="end"/>
+                        <sequenceFlow id="deaction8_end_line" sourceRef="deaction8" targetRef="deaction8_end"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="accountmerge_accountdeaction9" id="deaction9" implementation="http://www.jboss.org/drools/rule" name="实体行为"/>
+                        <endEvent id="deaction9_end" name="end"/>
+                        <sequenceFlow id="deaction9_end_line" sourceRef="deaction9" targetRef="deaction9_end"/>
+                    <sequenceFlow id="begin_prepareparam1" sourceRef="begin" targetRef="prepareparam1">
+                    </sequenceFlow>
+                    <sequenceFlow id="begin_prepareparam3" sourceRef="begin" targetRef="prepareparam3">
+                    </sequenceFlow>
+                    <sequenceFlow id="begin_prepareparam4" sourceRef="begin" targetRef="prepareparam4">
+                    </sequenceFlow>
+                    <sequenceFlow id="begin_prepareparam6" sourceRef="begin" targetRef="prepareparam6">
+                    </sequenceFlow>
+                    <sequenceFlow id="begin_prepareparam5" sourceRef="begin" targetRef="prepareparam5">
+                    </sequenceFlow>
+                    <sequenceFlow id="begin_prepareparam7" sourceRef="begin" targetRef="prepareparam7">
+                    </sequenceFlow>
+                    <sequenceFlow id="begin_prepareparam8" sourceRef="begin" targetRef="prepareparam8">
+                    </sequenceFlow>
+                    <sequenceFlow id="begin_prepareparam2" sourceRef="begin" targetRef="prepareparam2">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam1_dedataset1" sourceRef="prepareparam1" targetRef="dedataset1">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam3_dedataset3" sourceRef="prepareparam3" targetRef="dedataset3">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam4_dedataset4" sourceRef="prepareparam4" targetRef="dedataset4">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam6_dedataset5" sourceRef="prepareparam6" targetRef="dedataset5">
+                    </sequenceFlow>
+                    <sequenceFlow id="gateway-dedataset1_loopsubcall2" sourceRef="gateway-dedataset1" targetRef="loopsubcall2">
+                            <conditionExpression  language="http://www.jboss.org/drools/rule" ><![CDATA[
+                                            $accountmerge_accountdefault:account();
+                                            $accountmerge_accountattachment_filter:attachment();
+                                            $accountmerge_accountattachment_list:attachment();
+                                            $accountmerge_accountattachment_sub:attachment();
+                                            $accountmerge_accountcontact_filter:contact();
+                                            $accountmerge_accountcontact_list:contact();
+                                            $accountmerge_accountcontact_sub:contact();
+                                            $accountmerge_accountcustom_buttom_sub:custom_button();
+                                            $accountmerge_accountcustom_button_filter:custom_button();
+                                            $accountmerge_accountcustom_button_list:custom_button();
+                                            $accountmerge_accountdeal_filter:deal();
+                                            $accountmerge_accountdeal_list:deal();
+                                            $accountmerge_accountdeal_sub:deal();
+                                            $accountmerge_accountdel_account:account();
+                                            $accountmerge_accountlead:lead();
+                                            $accountmerge_accountlead_filter:lead();
+                                            $accountmerge_accountlead_list:lead();
+                                            $accountmerge_accountlead_sub:lead();
+                                            $accountmerge_accountnote_attach_filter:note_attach();
+                                            $accountmerge_accountnote_attach_list:note_attach();
+                                            $accountmerge_accountnote_attach_sub:note_attach();
+                                            $accountmerge_accountproject_filter:project();
+                                            $accountmerge_accountproject_list:project();
+                                            $accountmerge_accountproject_sub:project();
+                                            $accountmerge_accountrelation_filter:relation();
+                                            $accountmerge_accountrelation_list:relation();
+                                            $accountmerge_accountrelation_sub:relation();
+                                    eval($accountmerge_accountdefault==accountmerge_accountdefault && $accountmerge_accountattachment_filter==accountmerge_accountattachment_filter && $accountmerge_accountattachment_list==accountmerge_accountattachment_list && $accountmerge_accountattachment_sub==accountmerge_accountattachment_sub && $accountmerge_accountcontact_filter==accountmerge_accountcontact_filter && $accountmerge_accountcontact_list==accountmerge_accountcontact_list && $accountmerge_accountcontact_sub==accountmerge_accountcontact_sub && $accountmerge_accountcustom_buttom_sub==accountmerge_accountcustom_buttom_sub && $accountmerge_accountcustom_button_filter==accountmerge_accountcustom_button_filter && $accountmerge_accountcustom_button_list==accountmerge_accountcustom_button_list && $accountmerge_accountdeal_filter==accountmerge_accountdeal_filter && $accountmerge_accountdeal_list==accountmerge_accountdeal_list && $accountmerge_accountdeal_sub==accountmerge_accountdeal_sub && $accountmerge_accountdel_account==accountmerge_accountdel_account && $accountmerge_accountlead==accountmerge_accountlead && $accountmerge_accountlead_filter==accountmerge_accountlead_filter && $accountmerge_accountlead_list==accountmerge_accountlead_list && $accountmerge_accountlead_sub==accountmerge_accountlead_sub && $accountmerge_accountnote_attach_filter==accountmerge_accountnote_attach_filter && $accountmerge_accountnote_attach_list==accountmerge_accountnote_attach_list && $accountmerge_accountnote_attach_sub==accountmerge_accountnote_attach_sub && $accountmerge_accountproject_filter==accountmerge_accountproject_filter && $accountmerge_accountproject_list==accountmerge_accountproject_list && $accountmerge_accountproject_sub==accountmerge_accountproject_sub && $accountmerge_accountrelation_filter==accountmerge_accountrelation_filter && $accountmerge_accountrelation_list==accountmerge_accountrelation_list && $accountmerge_accountrelation_sub==accountmerge_accountrelation_sub);
+                                eval((RuleUtils.test($accountmerge_accountdeal_list.get("size"),"NOTEQ","0")))
+                                ]]>
+                            </conditionExpression>
+                    </sequenceFlow>
+                    <sequenceFlow id="gateway-dedataset3_loopsubcall3" sourceRef="gateway-dedataset3" targetRef="loopsubcall3">
+                            <conditionExpression  language="http://www.jboss.org/drools/rule" ><![CDATA[
+                                            $accountmerge_accountdefault:account();
+                                            $accountmerge_accountattachment_filter:attachment();
+                                            $accountmerge_accountattachment_list:attachment();
+                                            $accountmerge_accountattachment_sub:attachment();
+                                            $accountmerge_accountcontact_filter:contact();
+                                            $accountmerge_accountcontact_list:contact();
+                                            $accountmerge_accountcontact_sub:contact();
+                                            $accountmerge_accountcustom_buttom_sub:custom_button();
+                                            $accountmerge_accountcustom_button_filter:custom_button();
+                                            $accountmerge_accountcustom_button_list:custom_button();
+                                            $accountmerge_accountdeal_filter:deal();
+                                            $accountmerge_accountdeal_list:deal();
+                                            $accountmerge_accountdeal_sub:deal();
+                                            $accountmerge_accountdel_account:account();
+                                            $accountmerge_accountlead:lead();
+                                            $accountmerge_accountlead_filter:lead();
+                                            $accountmerge_accountlead_list:lead();
+                                            $accountmerge_accountlead_sub:lead();
+                                            $accountmerge_accountnote_attach_filter:note_attach();
+                                            $accountmerge_accountnote_attach_list:note_attach();
+                                            $accountmerge_accountnote_attach_sub:note_attach();
+                                            $accountmerge_accountproject_filter:project();
+                                            $accountmerge_accountproject_list:project();
+                                            $accountmerge_accountproject_sub:project();
+                                            $accountmerge_accountrelation_filter:relation();
+                                            $accountmerge_accountrelation_list:relation();
+                                            $accountmerge_accountrelation_sub:relation();
+                                    eval($accountmerge_accountdefault==accountmerge_accountdefault && $accountmerge_accountattachment_filter==accountmerge_accountattachment_filter && $accountmerge_accountattachment_list==accountmerge_accountattachment_list && $accountmerge_accountattachment_sub==accountmerge_accountattachment_sub && $accountmerge_accountcontact_filter==accountmerge_accountcontact_filter && $accountmerge_accountcontact_list==accountmerge_accountcontact_list && $accountmerge_accountcontact_sub==accountmerge_accountcontact_sub && $accountmerge_accountcustom_buttom_sub==accountmerge_accountcustom_buttom_sub && $accountmerge_accountcustom_button_filter==accountmerge_accountcustom_button_filter && $accountmerge_accountcustom_button_list==accountmerge_accountcustom_button_list && $accountmerge_accountdeal_filter==accountmerge_accountdeal_filter && $accountmerge_accountdeal_list==accountmerge_accountdeal_list && $accountmerge_accountdeal_sub==accountmerge_accountdeal_sub && $accountmerge_accountdel_account==accountmerge_accountdel_account && $accountmerge_accountlead==accountmerge_accountlead && $accountmerge_accountlead_filter==accountmerge_accountlead_filter && $accountmerge_accountlead_list==accountmerge_accountlead_list && $accountmerge_accountlead_sub==accountmerge_accountlead_sub && $accountmerge_accountnote_attach_filter==accountmerge_accountnote_attach_filter && $accountmerge_accountnote_attach_list==accountmerge_accountnote_attach_list && $accountmerge_accountnote_attach_sub==accountmerge_accountnote_attach_sub && $accountmerge_accountproject_filter==accountmerge_accountproject_filter && $accountmerge_accountproject_list==accountmerge_accountproject_list && $accountmerge_accountproject_sub==accountmerge_accountproject_sub && $accountmerge_accountrelation_filter==accountmerge_accountrelation_filter && $accountmerge_accountrelation_list==accountmerge_accountrelation_list && $accountmerge_accountrelation_sub==accountmerge_accountrelation_sub);
+                                eval((RuleUtils.test($accountmerge_accountproject_list.get("size"),"NOTEQ","0")))
+                                ]]>
+                            </conditionExpression>
+                    </sequenceFlow>
+                    <sequenceFlow id="gateway-dedataset4_loopsubcall4" sourceRef="gateway-dedataset4" targetRef="loopsubcall4">
+                            <conditionExpression  language="http://www.jboss.org/drools/rule" ><![CDATA[
+                                            $accountmerge_accountdefault:account();
+                                            $accountmerge_accountattachment_filter:attachment();
+                                            $accountmerge_accountattachment_list:attachment();
+                                            $accountmerge_accountattachment_sub:attachment();
+                                            $accountmerge_accountcontact_filter:contact();
+                                            $accountmerge_accountcontact_list:contact();
+                                            $accountmerge_accountcontact_sub:contact();
+                                            $accountmerge_accountcustom_buttom_sub:custom_button();
+                                            $accountmerge_accountcustom_button_filter:custom_button();
+                                            $accountmerge_accountcustom_button_list:custom_button();
+                                            $accountmerge_accountdeal_filter:deal();
+                                            $accountmerge_accountdeal_list:deal();
+                                            $accountmerge_accountdeal_sub:deal();
+                                            $accountmerge_accountdel_account:account();
+                                            $accountmerge_accountlead:lead();
+                                            $accountmerge_accountlead_filter:lead();
+                                            $accountmerge_accountlead_list:lead();
+                                            $accountmerge_accountlead_sub:lead();
+                                            $accountmerge_accountnote_attach_filter:note_attach();
+                                            $accountmerge_accountnote_attach_list:note_attach();
+                                            $accountmerge_accountnote_attach_sub:note_attach();
+                                            $accountmerge_accountproject_filter:project();
+                                            $accountmerge_accountproject_list:project();
+                                            $accountmerge_accountproject_sub:project();
+                                            $accountmerge_accountrelation_filter:relation();
+                                            $accountmerge_accountrelation_list:relation();
+                                            $accountmerge_accountrelation_sub:relation();
+                                    eval($accountmerge_accountdefault==accountmerge_accountdefault && $accountmerge_accountattachment_filter==accountmerge_accountattachment_filter && $accountmerge_accountattachment_list==accountmerge_accountattachment_list && $accountmerge_accountattachment_sub==accountmerge_accountattachment_sub && $accountmerge_accountcontact_filter==accountmerge_accountcontact_filter && $accountmerge_accountcontact_list==accountmerge_accountcontact_list && $accountmerge_accountcontact_sub==accountmerge_accountcontact_sub && $accountmerge_accountcustom_buttom_sub==accountmerge_accountcustom_buttom_sub && $accountmerge_accountcustom_button_filter==accountmerge_accountcustom_button_filter && $accountmerge_accountcustom_button_list==accountmerge_accountcustom_button_list && $accountmerge_accountdeal_filter==accountmerge_accountdeal_filter && $accountmerge_accountdeal_list==accountmerge_accountdeal_list && $accountmerge_accountdeal_sub==accountmerge_accountdeal_sub && $accountmerge_accountdel_account==accountmerge_accountdel_account && $accountmerge_accountlead==accountmerge_accountlead && $accountmerge_accountlead_filter==accountmerge_accountlead_filter && $accountmerge_accountlead_list==accountmerge_accountlead_list && $accountmerge_accountlead_sub==accountmerge_accountlead_sub && $accountmerge_accountnote_attach_filter==accountmerge_accountnote_attach_filter && $accountmerge_accountnote_attach_list==accountmerge_accountnote_attach_list && $accountmerge_accountnote_attach_sub==accountmerge_accountnote_attach_sub && $accountmerge_accountproject_filter==accountmerge_accountproject_filter && $accountmerge_accountproject_list==accountmerge_accountproject_list && $accountmerge_accountproject_sub==accountmerge_accountproject_sub && $accountmerge_accountrelation_filter==accountmerge_accountrelation_filter && $accountmerge_accountrelation_list==accountmerge_accountrelation_list && $accountmerge_accountrelation_sub==accountmerge_accountrelation_sub);
+                                eval((RuleUtils.test($accountmerge_accountcontact_list.get("size"),"NOTEQ","0")))
+                                ]]>
+                            </conditionExpression>
+                    </sequenceFlow>
+                    <sequenceFlow id="loopsubcall3_prepareparam12" sourceRef="loopsubcall3" targetRef="prepareparam12">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam2_dedataset2" sourceRef="prepareparam2" targetRef="dedataset2">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam5_dedataset6" sourceRef="prepareparam5" targetRef="dedataset6">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam7_dedataset7" sourceRef="prepareparam7" targetRef="dedataset7">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam8_dedataset8" sourceRef="prepareparam8" targetRef="dedataset8">
+                    </sequenceFlow>
+                    <sequenceFlow id="gateway-dedataset2_loopsubcall1" sourceRef="gateway-dedataset2" targetRef="loopsubcall1">
+                            <conditionExpression  language="http://www.jboss.org/drools/rule" ><![CDATA[
+                                            $accountmerge_accountdefault:account();
+                                            $accountmerge_accountattachment_filter:attachment();
+                                            $accountmerge_accountattachment_list:attachment();
+                                            $accountmerge_accountattachment_sub:attachment();
+                                            $accountmerge_accountcontact_filter:contact();
+                                            $accountmerge_accountcontact_list:contact();
+                                            $accountmerge_accountcontact_sub:contact();
+                                            $accountmerge_accountcustom_buttom_sub:custom_button();
+                                            $accountmerge_accountcustom_button_filter:custom_button();
+                                            $accountmerge_accountcustom_button_list:custom_button();
+                                            $accountmerge_accountdeal_filter:deal();
+                                            $accountmerge_accountdeal_list:deal();
+                                            $accountmerge_accountdeal_sub:deal();
+                                            $accountmerge_accountdel_account:account();
+                                            $accountmerge_accountlead:lead();
+                                            $accountmerge_accountlead_filter:lead();
+                                            $accountmerge_accountlead_list:lead();
+                                            $accountmerge_accountlead_sub:lead();
+                                            $accountmerge_accountnote_attach_filter:note_attach();
+                                            $accountmerge_accountnote_attach_list:note_attach();
+                                            $accountmerge_accountnote_attach_sub:note_attach();
+                                            $accountmerge_accountproject_filter:project();
+                                            $accountmerge_accountproject_list:project();
+                                            $accountmerge_accountproject_sub:project();
+                                            $accountmerge_accountrelation_filter:relation();
+                                            $accountmerge_accountrelation_list:relation();
+                                            $accountmerge_accountrelation_sub:relation();
+                                    eval($accountmerge_accountdefault==accountmerge_accountdefault && $accountmerge_accountattachment_filter==accountmerge_accountattachment_filter && $accountmerge_accountattachment_list==accountmerge_accountattachment_list && $accountmerge_accountattachment_sub==accountmerge_accountattachment_sub && $accountmerge_accountcontact_filter==accountmerge_accountcontact_filter && $accountmerge_accountcontact_list==accountmerge_accountcontact_list && $accountmerge_accountcontact_sub==accountmerge_accountcontact_sub && $accountmerge_accountcustom_buttom_sub==accountmerge_accountcustom_buttom_sub && $accountmerge_accountcustom_button_filter==accountmerge_accountcustom_button_filter && $accountmerge_accountcustom_button_list==accountmerge_accountcustom_button_list && $accountmerge_accountdeal_filter==accountmerge_accountdeal_filter && $accountmerge_accountdeal_list==accountmerge_accountdeal_list && $accountmerge_accountdeal_sub==accountmerge_accountdeal_sub && $accountmerge_accountdel_account==accountmerge_accountdel_account && $accountmerge_accountlead==accountmerge_accountlead && $accountmerge_accountlead_filter==accountmerge_accountlead_filter && $accountmerge_accountlead_list==accountmerge_accountlead_list && $accountmerge_accountlead_sub==accountmerge_accountlead_sub && $accountmerge_accountnote_attach_filter==accountmerge_accountnote_attach_filter && $accountmerge_accountnote_attach_list==accountmerge_accountnote_attach_list && $accountmerge_accountnote_attach_sub==accountmerge_accountnote_attach_sub && $accountmerge_accountproject_filter==accountmerge_accountproject_filter && $accountmerge_accountproject_list==accountmerge_accountproject_list && $accountmerge_accountproject_sub==accountmerge_accountproject_sub && $accountmerge_accountrelation_filter==accountmerge_accountrelation_filter && $accountmerge_accountrelation_list==accountmerge_accountrelation_list && $accountmerge_accountrelation_sub==accountmerge_accountrelation_sub);
+                                eval((RuleUtils.test($accountmerge_accountlead_list.get("size"),"NOTEQ","0")))
+                                ]]>
+                            </conditionExpression>
+                    </sequenceFlow>
+                    <sequenceFlow id="gateway-dedataset5_loopsubcall5" sourceRef="gateway-dedataset5" targetRef="loopsubcall5">
+                            <conditionExpression  language="http://www.jboss.org/drools/rule" ><![CDATA[
+                                            $accountmerge_accountdefault:account();
+                                            $accountmerge_accountattachment_filter:attachment();
+                                            $accountmerge_accountattachment_list:attachment();
+                                            $accountmerge_accountattachment_sub:attachment();
+                                            $accountmerge_accountcontact_filter:contact();
+                                            $accountmerge_accountcontact_list:contact();
+                                            $accountmerge_accountcontact_sub:contact();
+                                            $accountmerge_accountcustom_buttom_sub:custom_button();
+                                            $accountmerge_accountcustom_button_filter:custom_button();
+                                            $accountmerge_accountcustom_button_list:custom_button();
+                                            $accountmerge_accountdeal_filter:deal();
+                                            $accountmerge_accountdeal_list:deal();
+                                            $accountmerge_accountdeal_sub:deal();
+                                            $accountmerge_accountdel_account:account();
+                                            $accountmerge_accountlead:lead();
+                                            $accountmerge_accountlead_filter:lead();
+                                            $accountmerge_accountlead_list:lead();
+                                            $accountmerge_accountlead_sub:lead();
+                                            $accountmerge_accountnote_attach_filter:note_attach();
+                                            $accountmerge_accountnote_attach_list:note_attach();
+                                            $accountmerge_accountnote_attach_sub:note_attach();
+                                            $accountmerge_accountproject_filter:project();
+                                            $accountmerge_accountproject_list:project();
+                                            $accountmerge_accountproject_sub:project();
+                                            $accountmerge_accountrelation_filter:relation();
+                                            $accountmerge_accountrelation_list:relation();
+                                            $accountmerge_accountrelation_sub:relation();
+                                    eval($accountmerge_accountdefault==accountmerge_accountdefault && $accountmerge_accountattachment_filter==accountmerge_accountattachment_filter && $accountmerge_accountattachment_list==accountmerge_accountattachment_list && $accountmerge_accountattachment_sub==accountmerge_accountattachment_sub && $accountmerge_accountcontact_filter==accountmerge_accountcontact_filter && $accountmerge_accountcontact_list==accountmerge_accountcontact_list && $accountmerge_accountcontact_sub==accountmerge_accountcontact_sub && $accountmerge_accountcustom_buttom_sub==accountmerge_accountcustom_buttom_sub && $accountmerge_accountcustom_button_filter==accountmerge_accountcustom_button_filter && $accountmerge_accountcustom_button_list==accountmerge_accountcustom_button_list && $accountmerge_accountdeal_filter==accountmerge_accountdeal_filter && $accountmerge_accountdeal_list==accountmerge_accountdeal_list && $accountmerge_accountdeal_sub==accountmerge_accountdeal_sub && $accountmerge_accountdel_account==accountmerge_accountdel_account && $accountmerge_accountlead==accountmerge_accountlead && $accountmerge_accountlead_filter==accountmerge_accountlead_filter && $accountmerge_accountlead_list==accountmerge_accountlead_list && $accountmerge_accountlead_sub==accountmerge_accountlead_sub && $accountmerge_accountnote_attach_filter==accountmerge_accountnote_attach_filter && $accountmerge_accountnote_attach_list==accountmerge_accountnote_attach_list && $accountmerge_accountnote_attach_sub==accountmerge_accountnote_attach_sub && $accountmerge_accountproject_filter==accountmerge_accountproject_filter && $accountmerge_accountproject_list==accountmerge_accountproject_list && $accountmerge_accountproject_sub==accountmerge_accountproject_sub && $accountmerge_accountrelation_filter==accountmerge_accountrelation_filter && $accountmerge_accountrelation_list==accountmerge_accountrelation_list && $accountmerge_accountrelation_sub==accountmerge_accountrelation_sub);
+                                eval((RuleUtils.test($accountmerge_accountrelation_list.get("size"),"NOTEQ","0")))
+                                ]]>
+                            </conditionExpression>
+                    </sequenceFlow>
+                    <sequenceFlow id="gateway-dedataset6_loopsubcall6" sourceRef="gateway-dedataset6" targetRef="loopsubcall6">
+                            <conditionExpression  language="http://www.jboss.org/drools/rule" ><![CDATA[
+                                            $accountmerge_accountdefault:account();
+                                            $accountmerge_accountattachment_filter:attachment();
+                                            $accountmerge_accountattachment_list:attachment();
+                                            $accountmerge_accountattachment_sub:attachment();
+                                            $accountmerge_accountcontact_filter:contact();
+                                            $accountmerge_accountcontact_list:contact();
+                                            $accountmerge_accountcontact_sub:contact();
+                                            $accountmerge_accountcustom_buttom_sub:custom_button();
+                                            $accountmerge_accountcustom_button_filter:custom_button();
+                                            $accountmerge_accountcustom_button_list:custom_button();
+                                            $accountmerge_accountdeal_filter:deal();
+                                            $accountmerge_accountdeal_list:deal();
+                                            $accountmerge_accountdeal_sub:deal();
+                                            $accountmerge_accountdel_account:account();
+                                            $accountmerge_accountlead:lead();
+                                            $accountmerge_accountlead_filter:lead();
+                                            $accountmerge_accountlead_list:lead();
+                                            $accountmerge_accountlead_sub:lead();
+                                            $accountmerge_accountnote_attach_filter:note_attach();
+                                            $accountmerge_accountnote_attach_list:note_attach();
+                                            $accountmerge_accountnote_attach_sub:note_attach();
+                                            $accountmerge_accountproject_filter:project();
+                                            $accountmerge_accountproject_list:project();
+                                            $accountmerge_accountproject_sub:project();
+                                            $accountmerge_accountrelation_filter:relation();
+                                            $accountmerge_accountrelation_list:relation();
+                                            $accountmerge_accountrelation_sub:relation();
+                                    eval($accountmerge_accountdefault==accountmerge_accountdefault && $accountmerge_accountattachment_filter==accountmerge_accountattachment_filter && $accountmerge_accountattachment_list==accountmerge_accountattachment_list && $accountmerge_accountattachment_sub==accountmerge_accountattachment_sub && $accountmerge_accountcontact_filter==accountmerge_accountcontact_filter && $accountmerge_accountcontact_list==accountmerge_accountcontact_list && $accountmerge_accountcontact_sub==accountmerge_accountcontact_sub && $accountmerge_accountcustom_buttom_sub==accountmerge_accountcustom_buttom_sub && $accountmerge_accountcustom_button_filter==accountmerge_accountcustom_button_filter && $accountmerge_accountcustom_button_list==accountmerge_accountcustom_button_list && $accountmerge_accountdeal_filter==accountmerge_accountdeal_filter && $accountmerge_accountdeal_list==accountmerge_accountdeal_list && $accountmerge_accountdeal_sub==accountmerge_accountdeal_sub && $accountmerge_accountdel_account==accountmerge_accountdel_account && $accountmerge_accountlead==accountmerge_accountlead && $accountmerge_accountlead_filter==accountmerge_accountlead_filter && $accountmerge_accountlead_list==accountmerge_accountlead_list && $accountmerge_accountlead_sub==accountmerge_accountlead_sub && $accountmerge_accountnote_attach_filter==accountmerge_accountnote_attach_filter && $accountmerge_accountnote_attach_list==accountmerge_accountnote_attach_list && $accountmerge_accountnote_attach_sub==accountmerge_accountnote_attach_sub && $accountmerge_accountproject_filter==accountmerge_accountproject_filter && $accountmerge_accountproject_list==accountmerge_accountproject_list && $accountmerge_accountproject_sub==accountmerge_accountproject_sub && $accountmerge_accountrelation_filter==accountmerge_accountrelation_filter && $accountmerge_accountrelation_list==accountmerge_accountrelation_list && $accountmerge_accountrelation_sub==accountmerge_accountrelation_sub);
+                                eval((RuleUtils.test($accountmerge_accountcustom_button_list.get("size"),"NOTEQ","0")))
+                                ]]>
+                            </conditionExpression>
+                    </sequenceFlow>
+                    <sequenceFlow id="gateway-dedataset7_loopsubcall7" sourceRef="gateway-dedataset7" targetRef="loopsubcall7">
+                            <conditionExpression  language="http://www.jboss.org/drools/rule" ><![CDATA[
+                                            $accountmerge_accountdefault:account();
+                                            $accountmerge_accountattachment_filter:attachment();
+                                            $accountmerge_accountattachment_list:attachment();
+                                            $accountmerge_accountattachment_sub:attachment();
+                                            $accountmerge_accountcontact_filter:contact();
+                                            $accountmerge_accountcontact_list:contact();
+                                            $accountmerge_accountcontact_sub:contact();
+                                            $accountmerge_accountcustom_buttom_sub:custom_button();
+                                            $accountmerge_accountcustom_button_filter:custom_button();
+                                            $accountmerge_accountcustom_button_list:custom_button();
+                                            $accountmerge_accountdeal_filter:deal();
+                                            $accountmerge_accountdeal_list:deal();
+                                            $accountmerge_accountdeal_sub:deal();
+                                            $accountmerge_accountdel_account:account();
+                                            $accountmerge_accountlead:lead();
+                                            $accountmerge_accountlead_filter:lead();
+                                            $accountmerge_accountlead_list:lead();
+                                            $accountmerge_accountlead_sub:lead();
+                                            $accountmerge_accountnote_attach_filter:note_attach();
+                                            $accountmerge_accountnote_attach_list:note_attach();
+                                            $accountmerge_accountnote_attach_sub:note_attach();
+                                            $accountmerge_accountproject_filter:project();
+                                            $accountmerge_accountproject_list:project();
+                                            $accountmerge_accountproject_sub:project();
+                                            $accountmerge_accountrelation_filter:relation();
+                                            $accountmerge_accountrelation_list:relation();
+                                            $accountmerge_accountrelation_sub:relation();
+                                    eval($accountmerge_accountdefault==accountmerge_accountdefault && $accountmerge_accountattachment_filter==accountmerge_accountattachment_filter && $accountmerge_accountattachment_list==accountmerge_accountattachment_list && $accountmerge_accountattachment_sub==accountmerge_accountattachment_sub && $accountmerge_accountcontact_filter==accountmerge_accountcontact_filter && $accountmerge_accountcontact_list==accountmerge_accountcontact_list && $accountmerge_accountcontact_sub==accountmerge_accountcontact_sub && $accountmerge_accountcustom_buttom_sub==accountmerge_accountcustom_buttom_sub && $accountmerge_accountcustom_button_filter==accountmerge_accountcustom_button_filter && $accountmerge_accountcustom_button_list==accountmerge_accountcustom_button_list && $accountmerge_accountdeal_filter==accountmerge_accountdeal_filter && $accountmerge_accountdeal_list==accountmerge_accountdeal_list && $accountmerge_accountdeal_sub==accountmerge_accountdeal_sub && $accountmerge_accountdel_account==accountmerge_accountdel_account && $accountmerge_accountlead==accountmerge_accountlead && $accountmerge_accountlead_filter==accountmerge_accountlead_filter && $accountmerge_accountlead_list==accountmerge_accountlead_list && $accountmerge_accountlead_sub==accountmerge_accountlead_sub && $accountmerge_accountnote_attach_filter==accountmerge_accountnote_attach_filter && $accountmerge_accountnote_attach_list==accountmerge_accountnote_attach_list && $accountmerge_accountnote_attach_sub==accountmerge_accountnote_attach_sub && $accountmerge_accountproject_filter==accountmerge_accountproject_filter && $accountmerge_accountproject_list==accountmerge_accountproject_list && $accountmerge_accountproject_sub==accountmerge_accountproject_sub && $accountmerge_accountrelation_filter==accountmerge_accountrelation_filter && $accountmerge_accountrelation_list==accountmerge_accountrelation_list && $accountmerge_accountrelation_sub==accountmerge_accountrelation_sub);
+                                eval((RuleUtils.test($accountmerge_accountnote_attach_sub.get(""),"EQ","")))
+                                ]]>
+                            </conditionExpression>
+                    </sequenceFlow>
+                    <sequenceFlow id="gateway-dedataset8_loopsubcall8" sourceRef="gateway-dedataset8" targetRef="loopsubcall8">
+                            <conditionExpression  language="http://www.jboss.org/drools/rule" ><![CDATA[
+                                            $accountmerge_accountdefault:account();
+                                            $accountmerge_accountattachment_filter:attachment();
+                                            $accountmerge_accountattachment_list:attachment();
+                                            $accountmerge_accountattachment_sub:attachment();
+                                            $accountmerge_accountcontact_filter:contact();
+                                            $accountmerge_accountcontact_list:contact();
+                                            $accountmerge_accountcontact_sub:contact();
+                                            $accountmerge_accountcustom_buttom_sub:custom_button();
+                                            $accountmerge_accountcustom_button_filter:custom_button();
+                                            $accountmerge_accountcustom_button_list:custom_button();
+                                            $accountmerge_accountdeal_filter:deal();
+                                            $accountmerge_accountdeal_list:deal();
+                                            $accountmerge_accountdeal_sub:deal();
+                                            $accountmerge_accountdel_account:account();
+                                            $accountmerge_accountlead:lead();
+                                            $accountmerge_accountlead_filter:lead();
+                                            $accountmerge_accountlead_list:lead();
+                                            $accountmerge_accountlead_sub:lead();
+                                            $accountmerge_accountnote_attach_filter:note_attach();
+                                            $accountmerge_accountnote_attach_list:note_attach();
+                                            $accountmerge_accountnote_attach_sub:note_attach();
+                                            $accountmerge_accountproject_filter:project();
+                                            $accountmerge_accountproject_list:project();
+                                            $accountmerge_accountproject_sub:project();
+                                            $accountmerge_accountrelation_filter:relation();
+                                            $accountmerge_accountrelation_list:relation();
+                                            $accountmerge_accountrelation_sub:relation();
+                                    eval($accountmerge_accountdefault==accountmerge_accountdefault && $accountmerge_accountattachment_filter==accountmerge_accountattachment_filter && $accountmerge_accountattachment_list==accountmerge_accountattachment_list && $accountmerge_accountattachment_sub==accountmerge_accountattachment_sub && $accountmerge_accountcontact_filter==accountmerge_accountcontact_filter && $accountmerge_accountcontact_list==accountmerge_accountcontact_list && $accountmerge_accountcontact_sub==accountmerge_accountcontact_sub && $accountmerge_accountcustom_buttom_sub==accountmerge_accountcustom_buttom_sub && $accountmerge_accountcustom_button_filter==accountmerge_accountcustom_button_filter && $accountmerge_accountcustom_button_list==accountmerge_accountcustom_button_list && $accountmerge_accountdeal_filter==accountmerge_accountdeal_filter && $accountmerge_accountdeal_list==accountmerge_accountdeal_list && $accountmerge_accountdeal_sub==accountmerge_accountdeal_sub && $accountmerge_accountdel_account==accountmerge_accountdel_account && $accountmerge_accountlead==accountmerge_accountlead && $accountmerge_accountlead_filter==accountmerge_accountlead_filter && $accountmerge_accountlead_list==accountmerge_accountlead_list && $accountmerge_accountlead_sub==accountmerge_accountlead_sub && $accountmerge_accountnote_attach_filter==accountmerge_accountnote_attach_filter && $accountmerge_accountnote_attach_list==accountmerge_accountnote_attach_list && $accountmerge_accountnote_attach_sub==accountmerge_accountnote_attach_sub && $accountmerge_accountproject_filter==accountmerge_accountproject_filter && $accountmerge_accountproject_list==accountmerge_accountproject_list && $accountmerge_accountproject_sub==accountmerge_accountproject_sub && $accountmerge_accountrelation_filter==accountmerge_accountrelation_filter && $accountmerge_accountrelation_list==accountmerge_accountrelation_list && $accountmerge_accountrelation_sub==accountmerge_accountrelation_sub);
+                                eval((RuleUtils.test($accountmerge_accountattachment_list.get("size"),"NOTEQ","0")))
+                                ]]>
+                            </conditionExpression>
+                    </sequenceFlow>
+                    <sequenceFlow id="loopsubcall1_prepareparam10" sourceRef="loopsubcall1" targetRef="prepareparam10">
+                    </sequenceFlow>
+                    <sequenceFlow id="loopsubcall2_prepareparam11" sourceRef="loopsubcall2" targetRef="prepareparam11">
+                    </sequenceFlow>
+                    <sequenceFlow id="loopsubcall4_prepareparam13" sourceRef="loopsubcall4" targetRef="prepareparam13">
+                    </sequenceFlow>
+                    <sequenceFlow id="loopsubcall5_prepareparam14" sourceRef="loopsubcall5" targetRef="prepareparam14">
+                    </sequenceFlow>
+                    <sequenceFlow id="loopsubcall6_prepareparam15" sourceRef="loopsubcall6" targetRef="prepareparam15">
+                    </sequenceFlow>
+                    <sequenceFlow id="loopsubcall7_prepareparam16" sourceRef="loopsubcall7" targetRef="prepareparam16">
+                    </sequenceFlow>
+                    <sequenceFlow id="loopsubcall8_prepareparam17" sourceRef="loopsubcall8" targetRef="prepareparam17">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam16_deaction8" sourceRef="prepareparam16" targetRef="deaction8">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam10_deaction2" sourceRef="prepareparam10" targetRef="deaction2">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam11_deaction3" sourceRef="prepareparam11" targetRef="deaction3">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam12_deaction4" sourceRef="prepareparam12" targetRef="deaction4">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam13_deaction5" sourceRef="prepareparam13" targetRef="deaction5">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam14_deaction6" sourceRef="prepareparam14" targetRef="deaction6">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam15_deaction7" sourceRef="prepareparam15" targetRef="deaction7">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam17_deaction9" sourceRef="prepareparam17" targetRef="deaction9">
+                    </sequenceFlow>
+                            <exclusiveGateway id="gateway-dedataset1" name="Gateway" gatewayDirection="Diverging" default="gateway-dedataset1_end_line"></exclusiveGateway>
+                            <sequenceFlow id="dedataset1_gateway-dedataset1_gatewayline" sourceRef="dedataset1" targetRef="gateway-dedataset1"></sequenceFlow>
+                            <sequenceFlow id="gateway-dedataset1_end_line" sourceRef="gateway-dedataset1" targetRef="gateway-dedataset1_end"/>
+                            <endEvent id="gateway-dedataset1_end" name="end"/>
+                            <exclusiveGateway id="gateway-dedataset3" name="Gateway" gatewayDirection="Diverging" default="gateway-dedataset3_end_line"></exclusiveGateway>
+                            <sequenceFlow id="dedataset3_gateway-dedataset3_gatewayline" sourceRef="dedataset3" targetRef="gateway-dedataset3"></sequenceFlow>
+                            <sequenceFlow id="gateway-dedataset3_end_line" sourceRef="gateway-dedataset3" targetRef="gateway-dedataset3_end"/>
+                            <endEvent id="gateway-dedataset3_end" name="end"/>
+                            <exclusiveGateway id="gateway-dedataset4" name="Gateway" gatewayDirection="Diverging" default="gateway-dedataset4_end_line"></exclusiveGateway>
+                            <sequenceFlow id="dedataset4_gateway-dedataset4_gatewayline" sourceRef="dedataset4" targetRef="gateway-dedataset4"></sequenceFlow>
+                            <sequenceFlow id="gateway-dedataset4_end_line" sourceRef="gateway-dedataset4" targetRef="gateway-dedataset4_end"/>
+                            <endEvent id="gateway-dedataset4_end" name="end"/>
+                            <exclusiveGateway id="gateway-dedataset2" name="Gateway" gatewayDirection="Diverging" default="gateway-dedataset2_end_line"></exclusiveGateway>
+                            <sequenceFlow id="dedataset2_gateway-dedataset2_gatewayline" sourceRef="dedataset2" targetRef="gateway-dedataset2"></sequenceFlow>
+                            <sequenceFlow id="gateway-dedataset2_end_line" sourceRef="gateway-dedataset2" targetRef="gateway-dedataset2_end"/>
+                            <endEvent id="gateway-dedataset2_end" name="end"/>
+                            <exclusiveGateway id="gateway-dedataset5" name="Gateway" gatewayDirection="Diverging" default="gateway-dedataset5_end_line"></exclusiveGateway>
+                            <sequenceFlow id="dedataset5_gateway-dedataset5_gatewayline" sourceRef="dedataset5" targetRef="gateway-dedataset5"></sequenceFlow>
+                            <sequenceFlow id="gateway-dedataset5_end_line" sourceRef="gateway-dedataset5" targetRef="gateway-dedataset5_end"/>
+                            <endEvent id="gateway-dedataset5_end" name="end"/>
+                            <exclusiveGateway id="gateway-dedataset6" name="Gateway" gatewayDirection="Diverging" default="gateway-dedataset6_end_line"></exclusiveGateway>
+                            <sequenceFlow id="dedataset6_gateway-dedataset6_gatewayline" sourceRef="dedataset6" targetRef="gateway-dedataset6"></sequenceFlow>
+                            <sequenceFlow id="gateway-dedataset6_end_line" sourceRef="gateway-dedataset6" targetRef="gateway-dedataset6_end"/>
+                            <endEvent id="gateway-dedataset6_end" name="end"/>
+                            <exclusiveGateway id="gateway-dedataset7" name="Gateway" gatewayDirection="Diverging" default="gateway-dedataset7_end_line"></exclusiveGateway>
+                            <sequenceFlow id="dedataset7_gateway-dedataset7_gatewayline" sourceRef="dedataset7" targetRef="gateway-dedataset7"></sequenceFlow>
+                            <sequenceFlow id="gateway-dedataset7_end_line" sourceRef="gateway-dedataset7" targetRef="gateway-dedataset7_end"/>
+                            <endEvent id="gateway-dedataset7_end" name="end"/>
+                            <exclusiveGateway id="gateway-dedataset8" name="Gateway" gatewayDirection="Diverging" default="gateway-dedataset8_end_line"></exclusiveGateway>
+                            <sequenceFlow id="dedataset8_gateway-dedataset8_gatewayline" sourceRef="dedataset8" targetRef="gateway-dedataset8"></sequenceFlow>
+                            <sequenceFlow id="gateway-dedataset8_end_line" sourceRef="gateway-dedataset8" targetRef="gateway-dedataset8_end"/>
+                            <endEvent id="gateway-dedataset8_end" name="end"/>
+        </process>
+    </definitions>

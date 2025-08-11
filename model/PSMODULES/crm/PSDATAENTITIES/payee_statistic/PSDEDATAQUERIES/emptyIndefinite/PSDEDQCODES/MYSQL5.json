@@ -1,0 +1,6 @@
+{
+  "dBType" : "MYSQL5",
+  "name" : "MySQL5",
+  "queryCode" : "SELECT T1.* FROM (\nSELECT\n0 AS AMOUNT,\n#{ctx.datacontext.n_business_line_eq} AS BUSINESS_LINE,\nNULL AS CREATE_MAN,\nNULL AS CREATE_TIME,\nUUID() AS ID,\n'未明确' AS NAME,\n#{ctx.datacontext.n_owner_eq} AS OWNER,\nNULL AS SECTOR,\nNULL AS STATISTIC_DATE,\n'0' AS TYPE,\nNULL AS UPDATE_MAN,\nNULL AS UPDATE_TIME\nFROM DUAL  \n) T1",
+  "id" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic/PSDEDATAQUERIES/emptyIndefinite/PSDEDQCODES/MYSQL5.json"
+}

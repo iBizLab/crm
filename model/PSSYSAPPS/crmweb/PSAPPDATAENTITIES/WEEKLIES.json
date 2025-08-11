@@ -1,0 +1,3126 @@
+{
+  "getAllPSAppDEActions" : [ {
+    "actionMode" : "CHECKKEY",
+    "actionTag" : "CheckKey",
+    "codeName" : "check_key",
+    "methodType" : "DEACTION",
+    "name" : "CheckKey",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "stdDataType" : 9,
+      "type" : "SIMPLE"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/CheckKey.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "check_key"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/check_key",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "CREATE",
+    "actionTag" : "Create",
+    "codeName" : "create",
+    "methodType" : "DEACTION",
+    "name" : "Create",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/Create.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Create"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "builtinMethod" : false,
+    "noServiceCodeName" : true
+  }, {
+    "actionMode" : "READ",
+    "actionTag" : "Get",
+    "codeName" : "get",
+    "methodType" : "DEACTION",
+    "name" : "Get",
+    "getPSAppDEMethodInput" : {
+      "getKeyPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "name" : "输入对象",
+      "type" : "KEYFIELD"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/Get.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Get"
+    },
+    "requestField" : "ID",
+    "requestMethod" : "GET",
+    "requestParamType" : "FIELD",
+    "builtinMethod" : false,
+    "needResourceKey" : true,
+    "noServiceCodeName" : true
+  }, {
+    "actionMode" : "GETDRAFT",
+    "actionTag" : "GetDraft",
+    "codeName" : "get_draft",
+    "methodType" : "DEACTION",
+    "name" : "GetDraft",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/GetDraft.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "get_draft"
+    },
+    "requestMethod" : "GET",
+    "requestParamType" : "NONE",
+    "requestPath" : "/get_draft",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "GETDRAFT",
+    "codeName" : "get_link_type",
+    "methodType" : "DEACTION",
+    "name" : "get_link_type",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/get_link_type.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "NONE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "get_link_type"
+    },
+    "requestField" : "ID",
+    "requestMethod" : "POST",
+    "requestParamType" : "FIELD",
+    "requestPath" : "/get_link_type",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "CUSTOM",
+    "codeName" : "nothing",
+    "methodType" : "DEACTION",
+    "name" : "nothing",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "type" : "VOID"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/nothing.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "NONE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "nothing"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/nothing",
+    "builtinMethod" : false,
+    "needResourceKey" : true
+  }, {
+    "actionMode" : "DELETE",
+    "actionTag" : "Remove",
+    "batchActionMode" : 1,
+    "codeName" : "remove",
+    "methodType" : "DEACTION",
+    "name" : "Remove",
+    "getPSAppDEMethodInput" : {
+      "getKeyPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "name" : "输入对象",
+      "type" : "KEYFIELDS"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "type" : "VOID"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/Remove.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "DELETE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Remove"
+    },
+    "requestField" : "ID",
+    "requestMethod" : "DELETE",
+    "requestParamType" : "FIELD",
+    "builtinMethod" : false,
+    "enableBatchAction" : true,
+    "needResourceKey" : true,
+    "noServiceCodeName" : true
+  }, {
+    "actionMode" : "SAVE",
+    "actionTag" : "Save",
+    "codeName" : "save",
+    "methodType" : "DEACTION",
+    "name" : "Save",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/Save.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "save"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/save",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "UPDATE",
+    "actionTag" : "Update",
+    "codeName" : "update",
+    "methodType" : "DEACTION",
+    "name" : "Update",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/Update.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "UPDATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Update"
+    },
+    "requestMethod" : "PUT",
+    "requestParamType" : "ENTITY",
+    "builtinMethod" : false,
+    "needResourceKey" : true,
+    "noServiceCodeName" : true
+  }, {
+    "actionMode" : "GETDRAFT",
+    "actionTag" : "updateRelation",
+    "codeName" : "update_relation",
+    "methodType" : "DEACTION",
+    "name" : "updateRelation",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/updateRelation.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "update_relation"
+    },
+    "requestMethod" : "PUT",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/update_relation",
+    "builtinMethod" : false
+  } ],
+  "getAllPSAppDEDataSets" : [ {
+    "codeName" : "fetch_all",
+    "dataSetName" : "ALL",
+    "dataSetTag" : "ALL",
+    "methodType" : "FETCH",
+    "name" : "fetch_all",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_filter_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "PAGE"
+    },
+    "getPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "ALL"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "fetch_all"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/fetch_all",
+    "builtinMethod" : false
+  }, {
+    "codeName" : "fetch_createman",
+    "dataSetName" : "createman",
+    "dataSetTag" : "createman",
+    "methodType" : "FETCH",
+    "name" : "fetch_createman",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_filter_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "PAGE"
+    },
+    "getPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "createman"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "fetch_createman"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/fetch_createman",
+    "builtinMethod" : false
+  }, {
+    "codeName" : "fetch_default",
+    "dataSetName" : "DEFAULT",
+    "dataSetTag" : "Default",
+    "methodType" : "FETCH",
+    "name" : "fetch_default",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_filter_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "PAGE"
+    },
+    "getPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "Default"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "fetch_default"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/fetch_default",
+    "builtinMethod" : false
+  }, {
+    "codeName" : "fetch_period",
+    "dataSetName" : "period",
+    "dataSetTag" : "period",
+    "methodType" : "FETCH",
+    "name" : "fetch_period",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_filter_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "PAGE"
+    },
+    "getPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "period"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "NONE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "fetch_period"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/fetch_period",
+    "builtinMethod" : false
+  } ],
+  "getAllPSAppDEFields" : [ {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[ACTIVITIES][活动]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "HIDDEN",
+        "name" : "[ACTIVITIES][活动]移动端默认",
+        "stringLength" : 1048576,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[ACTIVITIES][活动]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "HIDDEN",
+        "name" : "[ACTIVITIES][活动]",
+        "stringLength" : 1048576,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "activities",
+    "logicName" : "活动",
+    "name" : "ACTIVITIES",
+    "stdDataType" : 21,
+    "stringLength" : 1048576
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[NOTES][进展评估]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "HIDDEN",
+        "name" : "[NOTES][进展评估]移动端默认",
+        "stringLength" : 1048576,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[NOTES][进展评估]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "HIDDEN",
+        "name" : "[NOTES][进展评估]",
+        "stringLength" : 1048576,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "notes",
+    "logicName" : "进展评估",
+    "name" : "NOTES",
+    "stdDataType" : 21,
+    "stringLength" : 1048576
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[START_DATE][开始时间]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "DATEPICKEREX_NOTIME",
+        "name" : "[START_DATE][开始时间]",
+        "uIMode" : "DEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[START_DATE][开始时间]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBDATE",
+        "name" : "[START_DATE][开始时间]移动端默认",
+        "uIMode" : "MOBILEDEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "codeName" : "start_date",
+    "logicName" : "开始时间",
+    "name" : "START_DATE",
+    "stdDataType" : 5,
+    "valueFormat" : "YYYY-MM-DD"
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[END_DATE][结束时间]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "DATEPICKEREX_NOTIME",
+        "name" : "[END_DATE][结束时间]",
+        "uIMode" : "DEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[END_DATE][结束时间]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBDATE",
+        "name" : "[END_DATE][结束时间]移动端默认",
+        "uIMode" : "MOBILEDEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "codeName" : "end_date",
+    "logicName" : "结束时间",
+    "name" : "END_DATE",
+    "stdDataType" : 5,
+    "valueFormat" : "YYYY-MM-DD"
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[TASKS][下周任务计划]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "HIDDEN",
+        "name" : "[TASKS][下周任务计划]",
+        "stringLength" : 1048576,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[TASKS][下周任务计划]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "HIDDEN",
+        "name" : "[TASKS][下周任务计划]移动端默认",
+        "stringLength" : 1048576,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "codeName" : "tasks",
+    "logicName" : "下周任务计划",
+    "name" : "TASKS",
+    "stdDataType" : 21,
+    "stringLength" : 1048576
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[ATTACHMENT][周报文件]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[ATTACHMENT][周报文件]",
+        "stringLength" : 1000,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[ATTACHMENT][周报文件]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[ATTACHMENT][周报文件]移动端默认",
+        "stringLength" : 1000,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "codeName" : "attachment",
+    "logicName" : "周报文件",
+    "name" : "ATTACHMENT",
+    "stdDataType" : 25,
+    "stringLength" : 1000
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[STATISTICAL_PERIOD][统计期间]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[STATISTICAL_PERIOD][统计期间]移动端默认",
+        "stringLength" : 200,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[STATISTICAL_PERIOD][统计期间]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[STATISTICAL_PERIOD][统计期间]",
+        "stringLength" : 200,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "statistical_period",
+    "logicName" : "统计期间",
+    "name" : "STATISTICAL_PERIOD",
+    "stdDataType" : 25,
+    "stringLength" : 200
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[NEWS][新建数据]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "HIDDEN",
+        "name" : "[NEWS][新建数据]",
+        "stringLength" : 1048576,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[NEWS][新建数据]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "HIDDEN",
+        "name" : "[NEWS][新建数据]移动端默认",
+        "stringLength" : 1048576,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "codeName" : "news",
+    "logicName" : "新建数据",
+    "name" : "NEWS",
+    "stdDataType" : 21,
+    "stringLength" : 1048576
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[LINK_TYPE][链接类型]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[LINK_TYPE][链接类型]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[LINK_TYPE][链接类型]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[LINK_TYPE][链接类型]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "link_type",
+    "logicName" : "链接类型",
+    "name" : "LINK_TYPE",
+    "stdDataType" : 25,
+    "stringLength" : 100
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[WORKS][本周工作]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "HIDDEN",
+        "name" : "[WORKS][本周工作]移动端默认",
+        "stringLength" : 1048576,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[WORKS][本周工作]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "HIDDEN",
+        "name" : "[WORKS][本周工作]",
+        "stringLength" : 1048576,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "works",
+    "logicName" : "本周工作",
+    "name" : "WORKS",
+    "stdDataType" : 21,
+    "stringLength" : 1048576
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[START_DATE_SORT][开始时间]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[START_DATE_SORT][开始时间]移动端默认",
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[START_DATE_SORT][开始时间]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[START_DATE_SORT][开始时间]",
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "start_date_sort",
+    "logicName" : "开始时间",
+    "name" : "START_DATE_SORT",
+    "stdDataType" : 9
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[ID][标识]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.ID"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[ID][标识]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[ID][标识]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.ID"
+        },
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[ID][标识]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "id",
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.ID"
+    },
+    "logicName" : "标识",
+    "name" : "ID",
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "keyField" : true
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[NAME][名称]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.NAME"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[NAME][名称]移动端默认",
+        "stringLength" : 200,
+        "uIMode" : "MOBILEDEFAULT",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[NAME][名称]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.NAME"
+        },
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[NAME][名称]",
+        "stringLength" : 200,
+        "uIMode" : "DEFAULT",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "name",
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.NAME"
+    },
+    "logicName" : "名称",
+    "name" : "NAME",
+    "stdDataType" : 25,
+    "stringLength" : 200,
+    "enableQuickSearch" : true,
+    "majorField" : true
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[CREATE_MAN][建立人]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.CREATE_MAN"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[CREATE_MAN][建立人]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[CREATE_MAN][建立人]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.CREATE_MAN"
+        },
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[CREATE_MAN][建立人]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "create_man",
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.CREATE_MAN"
+    },
+    "logicName" : "建立人",
+    "name" : "CREATE_MAN",
+    "predefinedType" : "CREATEMAN",
+    "stdDataType" : 25,
+    "stringLength" : 100
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[UPDATE_MAN][更新人]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.UPDATE_MAN"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[UPDATE_MAN][更新人]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[UPDATE_MAN][更新人]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.UPDATE_MAN"
+        },
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[UPDATE_MAN][更新人]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "update_man",
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.UPDATE_MAN"
+    },
+    "logicName" : "更新人",
+    "name" : "UPDATE_MAN",
+    "predefinedType" : "UPDATEMAN",
+    "stdDataType" : 25,
+    "stringLength" : 100
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[UPDATE_TIME][更新时间]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.UPDATE_TIME"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[UPDATE_TIME][更新时间]移动端默认",
+        "uIMode" : "MOBILEDEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[UPDATE_TIME][更新时间]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.UPDATE_TIME"
+        },
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[UPDATE_TIME][更新时间]",
+        "uIMode" : "DEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "update_time",
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.UPDATE_TIME"
+    },
+    "logicName" : "更新时间",
+    "name" : "UPDATE_TIME",
+    "predefinedType" : "UPDATEDATE",
+    "stdDataType" : 5,
+    "valueFormat" : "YYYY-MM-DD HH:mm:ss"
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[CREATE_TIME][建立时间]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.CREATE_TIME"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[CREATE_TIME][建立时间]移动端默认",
+        "uIMode" : "MOBILEDEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[CREATE_TIME][建立时间]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.CREATE_TIME"
+        },
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[CREATE_TIME][建立时间]",
+        "uIMode" : "DEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "create_time",
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.CREATE_TIME"
+    },
+    "logicName" : "建立时间",
+    "name" : "CREATE_TIME",
+    "predefinedType" : "CREATEDATE",
+    "stdDataType" : 5,
+    "valueFormat" : "YYYY-MM-DD HH:mm:ss"
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[DESCRIPTION][描述]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXTAREA",
+        "name" : "[DESCRIPTION][描述]移动端默认",
+        "stringLength" : 32000,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[DESCRIPTION][描述]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTAREA_10",
+        "name" : "[DESCRIPTION][描述]",
+        "stringLength" : 32000,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "description",
+    "logicName" : "描述",
+    "name" : "DESCRIPTION",
+    "stdDataType" : 21,
+    "stringLength" : 32000
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[OWNER][所有者]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.OWNER"
+        },
+        "codeName" : "Default",
+        "editorType" : "DROPDOWNLIST",
+        "name" : "[OWNER][所有者]",
+        "stringLength" : 60,
+        "uIMode" : "DEFAULT",
+        "needCodeListConfig" : true
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[OWNER][所有者]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.OWNER"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBDROPDOWNLIST",
+        "name" : "[OWNER][所有者]移动端默认",
+        "stringLength" : 60,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true,
+        "needCodeListConfig" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "codeName" : "owner",
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.OWNER"
+    },
+    "logicName" : "销售人员",
+    "name" : "OWNER",
+    "stdDataType" : 25,
+    "stringLength" : 60
+  } ],
+  "getAllPSAppDEMethodDTOs" : [ {
+    "codeName" : "weeklies_dto",
+    "name" : "weeklies_dto",
+    "getPSAppDEMethodDTOFields" : [ {
+      "codeName" : "activities",
+      "logicName" : "活动",
+      "name" : "activities",
+      "getPSAppDEField" : {
+        "name" : "ACTIVITIES",
+        "codeName" : "activities"
+      },
+      "sourceType" : "DEFIELD",
+      "type" : "DTOS"
+    }, {
+      "codeName" : "notes",
+      "logicName" : "进展评估",
+      "name" : "notes",
+      "getPSAppDEField" : {
+        "name" : "NOTES",
+        "codeName" : "notes"
+      },
+      "getRefPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "note_attach_dto"
+      },
+      "getRefPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+      },
+      "sourceType" : "DEFIELD",
+      "type" : "DTOS"
+    }, {
+      "codeName" : "start_date",
+      "jsonFormat" : "yyyy-MM-dd",
+      "logicName" : "开始时间",
+      "name" : "start_date",
+      "getPSAppDEField" : {
+        "name" : "START_DATE",
+        "codeName" : "start_date"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 5,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "end_date",
+      "jsonFormat" : "yyyy-MM-dd",
+      "logicName" : "结束时间",
+      "name" : "end_date",
+      "getPSAppDEField" : {
+        "name" : "END_DATE",
+        "codeName" : "end_date"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 5,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "tasks",
+      "logicName" : "下周任务计划",
+      "name" : "tasks",
+      "getPSAppDEField" : {
+        "name" : "TASKS",
+        "codeName" : "tasks"
+      },
+      "getRefPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "task_dto"
+      },
+      "getRefPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+      },
+      "sourceType" : "DEFIELD",
+      "type" : "DTOS"
+    }, {
+      "codeName" : "attachment",
+      "logicName" : "周报文件",
+      "name" : "attachment",
+      "getPSAppDEField" : {
+        "name" : "ATTACHMENT",
+        "codeName" : "attachment"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "statistical_period",
+      "logicName" : "统计期间",
+      "name" : "statistical_period",
+      "getPSAppDEField" : {
+        "name" : "STATISTICAL_PERIOD",
+        "codeName" : "statistical_period"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "news",
+      "logicName" : "新建数据",
+      "name" : "news",
+      "getPSAppDEField" : {
+        "name" : "NEWS",
+        "codeName" : "news"
+      },
+      "sourceType" : "DEFIELD",
+      "type" : "DTOS",
+      "listMap" : true
+    }, {
+      "codeName" : "link_type",
+      "logicName" : "链接类型",
+      "name" : "link_type",
+      "getPSAppDEField" : {
+        "name" : "LINK_TYPE",
+        "codeName" : "link_type"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "works",
+      "logicName" : "本周工作",
+      "name" : "works",
+      "getPSAppDEField" : {
+        "name" : "WORKS",
+        "codeName" : "works"
+      },
+      "sourceType" : "DEFIELD",
+      "type" : "DTOS"
+    }, {
+      "codeName" : "start_date_sort",
+      "logicName" : "开始时间",
+      "name" : "start_date_sort",
+      "getPSAppDEField" : {
+        "name" : "START_DATE_SORT",
+        "codeName" : "start_date_sort"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 9,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "create_man",
+      "logicName" : "建立人",
+      "name" : "create_man",
+      "getPSAppDEField" : {
+        "name" : "CREATE_MAN",
+        "codeName" : "create_man"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE",
+      "allowEmpty" : false
+    }, {
+      "codeName" : "create_time",
+      "jsonFormat" : "yyyy-MM-dd HH:mm:ss",
+      "logicName" : "建立时间",
+      "name" : "create_time",
+      "getPSAppDEField" : {
+        "name" : "CREATE_TIME",
+        "codeName" : "create_time"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 5,
+      "type" : "SIMPLE",
+      "allowEmpty" : false
+    }, {
+      "codeName" : "description",
+      "logicName" : "描述",
+      "name" : "description",
+      "getPSAppDEField" : {
+        "name" : "DESCRIPTION",
+        "codeName" : "description"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 21,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "id",
+      "logicName" : "标识",
+      "name" : "id",
+      "getPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE",
+      "allowEmpty" : false
+    }, {
+      "codeName" : "name",
+      "logicName" : "名称",
+      "name" : "name",
+      "getPSAppDEField" : {
+        "name" : "NAME",
+        "codeName" : "name"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE",
+      "allowEmpty" : false
+    }, {
+      "codeName" : "owner",
+      "logicName" : "销售人员",
+      "name" : "owner",
+      "getPSAppDEField" : {
+        "name" : "OWNER",
+        "codeName" : "owner"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "update_man",
+      "logicName" : "更新人",
+      "name" : "update_man",
+      "getPSAppDEField" : {
+        "name" : "UPDATE_MAN",
+        "codeName" : "update_man"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE",
+      "allowEmpty" : false
+    }, {
+      "codeName" : "update_time",
+      "jsonFormat" : "yyyy-MM-dd HH:mm:ss",
+      "logicName" : "更新时间",
+      "name" : "update_time",
+      "getPSAppDEField" : {
+        "name" : "UPDATE_TIME",
+        "codeName" : "update_time"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 5,
+      "type" : "SIMPLE",
+      "allowEmpty" : false
+    } ],
+    "sourceType" : "DE",
+    "type" : "DEFAULT"
+  }, {
+    "codeName" : "weeklies_filter_dto",
+    "name" : "weeklies_filter_dto",
+    "getPSAppDEMethodDTOFields" : [ {
+      "codeName" : "n_end_date_ltandeq",
+      "jsonFormat" : "yyyy-MM-dd",
+      "logicName" : "结束时间",
+      "name" : "n_end_date_ltandeq",
+      "getPSAppDEField" : {
+        "name" : "END_DATE",
+        "codeName" : "end_date"
+      },
+      "sourceType" : "DEFSEARCHMODE",
+      "stdDataType" : 5,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "n_id_eq",
+      "logicName" : "标识",
+      "name" : "n_id_eq",
+      "getPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "sourceType" : "DEFSEARCHMODE",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "n_name_like",
+      "logicName" : "名称",
+      "name" : "n_name_like",
+      "getPSAppDEField" : {
+        "name" : "NAME",
+        "codeName" : "name"
+      },
+      "sourceType" : "DEFSEARCHMODE",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "n_owner_eq",
+      "logicName" : "销售人员",
+      "name" : "n_owner_eq",
+      "getPSAppDEField" : {
+        "name" : "OWNER",
+        "codeName" : "owner"
+      },
+      "sourceType" : "DEFSEARCHMODE",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "n_start_date_gtandeq",
+      "jsonFormat" : "yyyy-MM-dd",
+      "logicName" : "开始时间",
+      "name" : "n_start_date_gtandeq",
+      "getPSAppDEField" : {
+        "name" : "START_DATE",
+        "codeName" : "start_date"
+      },
+      "sourceType" : "DEFSEARCHMODE",
+      "stdDataType" : 5,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "n_start_date_lt",
+      "jsonFormat" : "yyyy-MM-dd",
+      "logicName" : "开始时间",
+      "name" : "n_start_date_lt",
+      "getPSAppDEField" : {
+        "name" : "START_DATE",
+        "codeName" : "start_date"
+      },
+      "sourceType" : "DEFSEARCHMODE",
+      "stdDataType" : 5,
+      "type" : "SIMPLE"
+    } ],
+    "sourceType" : "DE",
+    "type" : "DEFILTER"
+  } ],
+  "getAllPSAppDEMethods" : [ {
+    "actionMode" : "CHECKKEY",
+    "actionTag" : "CheckKey",
+    "codeName" : "check_key",
+    "methodType" : "DEACTION",
+    "name" : "CheckKey",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "stdDataType" : 9,
+      "type" : "SIMPLE"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/CheckKey.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "check_key"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/check_key",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "CREATE",
+    "actionTag" : "Create",
+    "codeName" : "create",
+    "methodType" : "DEACTION",
+    "name" : "Create",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/Create.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Create"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "builtinMethod" : false,
+    "noServiceCodeName" : true
+  }, {
+    "actionMode" : "READ",
+    "actionTag" : "Get",
+    "codeName" : "get",
+    "methodType" : "DEACTION",
+    "name" : "Get",
+    "getPSAppDEMethodInput" : {
+      "getKeyPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "name" : "输入对象",
+      "type" : "KEYFIELD"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/Get.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Get"
+    },
+    "requestField" : "ID",
+    "requestMethod" : "GET",
+    "requestParamType" : "FIELD",
+    "builtinMethod" : false,
+    "needResourceKey" : true,
+    "noServiceCodeName" : true
+  }, {
+    "actionMode" : "GETDRAFT",
+    "actionTag" : "GetDraft",
+    "codeName" : "get_draft",
+    "methodType" : "DEACTION",
+    "name" : "GetDraft",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/GetDraft.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "get_draft"
+    },
+    "requestMethod" : "GET",
+    "requestParamType" : "NONE",
+    "requestPath" : "/get_draft",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "GETDRAFT",
+    "codeName" : "get_link_type",
+    "methodType" : "DEACTION",
+    "name" : "get_link_type",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/get_link_type.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "NONE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "get_link_type"
+    },
+    "requestField" : "ID",
+    "requestMethod" : "POST",
+    "requestParamType" : "FIELD",
+    "requestPath" : "/get_link_type",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "CUSTOM",
+    "codeName" : "nothing",
+    "methodType" : "DEACTION",
+    "name" : "nothing",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "type" : "VOID"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/nothing.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "NONE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "nothing"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/nothing",
+    "builtinMethod" : false,
+    "needResourceKey" : true
+  }, {
+    "actionMode" : "DELETE",
+    "actionTag" : "Remove",
+    "batchActionMode" : 1,
+    "codeName" : "remove",
+    "methodType" : "DEACTION",
+    "name" : "Remove",
+    "getPSAppDEMethodInput" : {
+      "getKeyPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "name" : "输入对象",
+      "type" : "KEYFIELDS"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "type" : "VOID"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/Remove.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "DELETE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Remove"
+    },
+    "requestField" : "ID",
+    "requestMethod" : "DELETE",
+    "requestParamType" : "FIELD",
+    "builtinMethod" : false,
+    "enableBatchAction" : true,
+    "needResourceKey" : true,
+    "noServiceCodeName" : true
+  }, {
+    "actionMode" : "SAVE",
+    "actionTag" : "Save",
+    "codeName" : "save",
+    "methodType" : "DEACTION",
+    "name" : "Save",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/Save.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "save"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/save",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "UPDATE",
+    "actionTag" : "Update",
+    "codeName" : "update",
+    "methodType" : "DEACTION",
+    "name" : "Update",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/Update.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "UPDATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Update"
+    },
+    "requestMethod" : "PUT",
+    "requestParamType" : "ENTITY",
+    "builtinMethod" : false,
+    "needResourceKey" : true,
+    "noServiceCodeName" : true
+  }, {
+    "actionMode" : "GETDRAFT",
+    "actionTag" : "updateRelation",
+    "codeName" : "update_relation",
+    "methodType" : "DEACTION",
+    "name" : "updateRelation",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/updateRelation.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "update_relation"
+    },
+    "requestMethod" : "PUT",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/update_relation",
+    "builtinMethod" : false
+  }, {
+    "codeName" : "fetch_all",
+    "dataSetName" : "ALL",
+    "dataSetTag" : "ALL",
+    "methodType" : "FETCH",
+    "name" : "fetch_all",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_filter_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "PAGE"
+    },
+    "getPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "ALL"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "fetch_all"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/fetch_all",
+    "builtinMethod" : false
+  }, {
+    "codeName" : "fetch_createman",
+    "dataSetName" : "createman",
+    "dataSetTag" : "createman",
+    "methodType" : "FETCH",
+    "name" : "fetch_createman",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_filter_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "PAGE"
+    },
+    "getPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "createman"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "fetch_createman"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/fetch_createman",
+    "builtinMethod" : false
+  }, {
+    "codeName" : "fetch_default",
+    "dataSetName" : "DEFAULT",
+    "dataSetTag" : "Default",
+    "methodType" : "FETCH",
+    "name" : "fetch_default",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_filter_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "PAGE"
+    },
+    "getPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "Default"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "fetch_default"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/fetch_default",
+    "builtinMethod" : false
+  }, {
+    "codeName" : "fetch_period",
+    "dataSetName" : "period",
+    "dataSetTag" : "period",
+    "methodType" : "FETCH",
+    "name" : "fetch_period",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_filter_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "weeklies_dto"
+      },
+      "type" : "PAGE"
+    },
+    "getPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "period"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "NONE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "fetch_period"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/fetch_period",
+    "builtinMethod" : false
+  }, {
+    "codeName" : "FilterCreate",
+    "methodType" : "FILTERACTION",
+    "name" : "FILTERCREATE",
+    "builtinMethod" : true
+  }, {
+    "codeName" : "FilterFetch",
+    "methodType" : "FILTERACTION",
+    "name" : "FILTERFETCH",
+    "builtinMethod" : true
+  }, {
+    "codeName" : "FilterGet",
+    "methodType" : "FILTERACTION",
+    "name" : "FILTERGET",
+    "builtinMethod" : true
+  }, {
+    "codeName" : "FilterGetDraft",
+    "methodType" : "FILTERACTION",
+    "name" : "FILTERGETDRAFT",
+    "builtinMethod" : true
+  }, {
+    "codeName" : "FilterRemove",
+    "methodType" : "FILTERACTION",
+    "name" : "FILTERREMOVE",
+    "builtinMethod" : true
+  }, {
+    "codeName" : "FilterSearch",
+    "methodType" : "FILTERACTION",
+    "name" : "FILTERSEARCH",
+    "builtinMethod" : true
+  }, {
+    "codeName" : "FilterUpdate",
+    "methodType" : "FILTERACTION",
+    "name" : "FILTERUPDATE",
+    "builtinMethod" : true
+  } ],
+  "getAllPSAppDEPrints" : [ {
+    "codeName" : "Print",
+    "dataAccessAction" : "NONE",
+    "getGetDataPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/Get.json"
+    },
+    "getGetDataPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "NONE"
+    },
+    "name" : "PRINT",
+    "reportFile" : "weekliesTemp.docx",
+    "reportModel" : "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",
+    "reportType" : "POI_TL",
+    "defaultMode" : true
+  } ],
+  "getAllPSAppDEUIActions" : [ {
+    "actionTarget" : "SINGLEDATA",
+    "caption" : "打印",
+    "codeName" : "Print",
+    "frontProcessType" : "PRINT",
+    "fullCodeName" : "WEEKLIES_Print",
+    "name" : "周报打印",
+    "getPSAppDEPrint" : {
+      "modelref" : true,
+      "id" : "Print"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "Print",
+    "uIActionType" : "DEUIACTION",
+    "id" : "Print@WEEKLIES"
+  }, {
+    "actionTarget" : "SINGLEDATA",
+    "caption" : "关闭当前视图",
+    "codeName" : "close_cur_view",
+    "dialogResult" : "OK",
+    "frontProcessType" : "OTHER",
+    "fullCodeName" : "WEEKLIES_close_cur_view",
+    "name" : "关闭当前视图",
+    "getPSAppDEUILogic" : {
+      "modelref" : true,
+      "id" : "open_new_edit"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "close_cur_view",
+    "uIActionType" : "DEUIACTION",
+    "uILogicAttachMode" : "REPLACE",
+    "closeEditView" : true,
+    "closePopupView" : true,
+    "id" : "close_cur_view@WEEKLIES"
+  }, {
+    "actionTarget" : "NONE",
+    "caption" : "新建线索",
+    "codeName" : "create_lead",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/lead_weeklies_edit_view.json",
+      "viewType" : "DEEDITVIEW"
+    },
+    "frontProcessType" : "WIZARD",
+    "fullCodeName" : "WEEKLIES_create_lead",
+    "name" : "新建线索",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSSysImage" : {
+      "glyph" : "xf067@FontAwesome",
+      "cssClass" : "fa fa-plus"
+    },
+    "refreshMode" : 1,
+    "tooltip" : "新建线索",
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "create_lead",
+    "uIActionType" : "DEUIACTION",
+    "reloadData" : true,
+    "id" : "create_lead@WEEKLIES"
+  }, {
+    "actionTarget" : "NONE",
+    "caption" : "新建商机",
+    "codeName" : "create_plus",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/deal_weeklies_edit_view.json",
+      "viewType" : "DEEDITVIEW"
+    },
+    "frontProcessType" : "WIZARD",
+    "fullCodeName" : "WEEKLIES_create_plus",
+    "name" : "新建商机",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSSysImage" : {
+      "glyph" : "xf067@FontAwesome",
+      "cssClass" : "fa fa-plus"
+    },
+    "refreshMode" : 1,
+    "tooltip" : "新建商机",
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "create_plus",
+    "uIActionType" : "DEUIACTION",
+    "reloadData" : true,
+    "id" : "create_plus@WEEKLIES"
+  }, {
+    "actionTarget" : "SINGLEDATA",
+    "caption" : "新建任务",
+    "codeName" : "create_tasj",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_weekly_task_edit_view.json",
+      "viewType" : "DEEDITVIEW"
+    },
+    "frontProcessType" : "WIZARD",
+    "fullCodeName" : "WEEKLIES_create_tasj",
+    "name" : "新建任务",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSSysImage" : {
+      "glyph" : "xf067@FontAwesome",
+      "cssClass" : "fa fa-plus"
+    },
+    "tooltip" : "新建任务",
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "create_tasj",
+    "uIActionType" : "DEUIACTION",
+    "id" : "create_tasj@WEEKLIES"
+  }, {
+    "actionTarget" : "SINGLEKEY",
+    "caption" : "生成周报",
+    "codeName" : "generate_attachment",
+    "frontProcessType" : "OTHER",
+    "fullCodeName" : "WEEKLIES_generate_attachment",
+    "name" : "生成周报附件",
+    "getNextPSUIAction" : {
+      "modelref" : true,
+      "id" : "Save"
+    },
+    "getPSAppDEUILogic" : {
+      "modelref" : true,
+      "id" : "generate_attachment"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "generate_attachment",
+    "uIActionType" : "DEUIACTION",
+    "uILogicAttachMode" : "REPLACE",
+    "id" : "generate_attachment@WEEKLIES"
+  }, {
+    "actionTarget" : "NONE",
+    "caption" : "新建周报",
+    "codeName" : "new",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_quick_create_view.json",
+      "viewType" : "DEOPTVIEW"
+    },
+    "frontProcessType" : "WIZARD",
+    "fullCodeName" : "WEEKLIES_new",
+    "name" : "新建周报",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSSysImage" : {
+      "glyph" : "xf0f6@FontAwesome",
+      "cssClass" : "fa fa-file-text-o"
+    },
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "new",
+    "uIActionType" : "DEUIACTION",
+    "id" : "new@WEEKLIES"
+  }, {
+    "actionTarget" : "NONE",
+    "caption" : "新建活动",
+    "codeName" : "newManeuver",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_maneuver_edit_view_for_weekly.json",
+      "viewType" : "DEEDITVIEW"
+    },
+    "frontProcessType" : "WIZARD",
+    "fullCodeName" : "WEEKLIES_newManeuver",
+    "name" : "新建活动",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSSysImage" : {
+      "glyph" : "xf067@FontAwesome",
+      "cssClass" : "fa fa-plus"
+    },
+    "refreshMode" : 1,
+    "tooltip" : "新建活动",
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "newManeuver",
+    "uIActionType" : "DEUIACTION",
+    "reloadData" : true,
+    "id" : "newManeuver@WEEKLIES"
+  }, {
+    "actionTarget" : "NONE",
+    "caption" : "新建进展评估",
+    "codeName" : "newNote",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/note_attach_weeklies_edit_view.json",
+      "viewType" : "DEEDITVIEW"
+    },
+    "frontProcessType" : "WIZARD",
+    "fullCodeName" : "WEEKLIES_newNote",
+    "name" : "新建进展评估",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSSysImage" : {
+      "glyph" : "xf067@FontAwesome",
+      "cssClass" : "fa fa-plus"
+    },
+    "refreshMode" : 1,
+    "tooltip" : "新建进展评估",
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "newNote",
+    "uIActionType" : "DEUIACTION",
+    "reloadData" : true,
+    "id" : "newNote@WEEKLIES"
+  }, {
+    "actionTarget" : "NONE",
+    "caption" : "新建下周任务",
+    "codeName" : "newTask",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_weeklies_edit_view.json",
+      "viewType" : "DEEDITVIEW"
+    },
+    "frontProcessType" : "WIZARD",
+    "fullCodeName" : "WEEKLIES_newTask",
+    "name" : "新建下周任务",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSNavigateContexts" : [ {
+      "key" : "TYPE",
+      "name" : "TYPE",
+      "value" : "TASK",
+      "rawValue" : true
+    } ],
+    "getPSNavigateParams" : [ {
+      "key" : "type",
+      "name" : "type",
+      "value" : "TASK",
+      "rawValue" : true
+    } ],
+    "getPSSysImage" : {
+      "glyph" : "xf067@FontAwesome",
+      "cssClass" : "fa fa-plus"
+    },
+    "refreshMode" : 1,
+    "tooltip" : "新建下周任务",
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "newTask",
+    "uIActionType" : "DEUIACTION",
+    "reloadData" : true,
+    "id" : "newTask@WEEKLIES"
+  }, {
+    "actionTarget" : "NONE",
+    "caption" : "新建下周工作",
+    "codeName" : "new_next_week_work",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_work_report_edit_view.json",
+      "viewType" : "DEEDITVIEW"
+    },
+    "frontProcessType" : "WIZARD",
+    "fullCodeName" : "WEEKLIES_new_next_week_work",
+    "name" : "新建下周工作",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSSysImage" : {
+      "glyph" : "xf067@FontAwesome",
+      "cssClass" : "fa fa-plus"
+    },
+    "refreshMode" : 1,
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "new_next_week_work",
+    "uIActionType" : "DEUIACTION",
+    "reloadData" : true,
+    "id" : "new_next_week_work@WEEKLIES"
+  }, {
+    "actionTarget" : "NONE",
+    "caption" : "新建进展情况",
+    "codeName" : "new_note",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/note_attach_work_edit_view.json",
+      "viewType" : "DEEDITVIEW"
+    },
+    "frontProcessType" : "WIZARD",
+    "fullCodeName" : "WEEKLIES_new_note",
+    "name" : "新建进展情况",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSSysImage" : {
+      "glyph" : "xf067@FontAwesome",
+      "cssClass" : "fa fa-plus"
+    },
+    "refreshMode" : 1,
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "new_note",
+    "uIActionType" : "DEUIACTION",
+    "reloadData" : true,
+    "id" : "new_note@WEEKLIES"
+  }, {
+    "actionTarget" : "NONE",
+    "caption" : "新建工作",
+    "codeName" : "new_work",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_work_report_edit_view.json",
+      "viewType" : "DEEDITVIEW"
+    },
+    "frontProcessType" : "WIZARD",
+    "fullCodeName" : "WEEKLIES_new_work",
+    "name" : "新建工作",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSSysImage" : {
+      "glyph" : "xf067@FontAwesome",
+      "cssClass" : "fa fa-plus"
+    },
+    "refreshMode" : 1,
+    "tooltip" : "新建工作",
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "new_work",
+    "uIActionType" : "DEUIACTION",
+    "reloadData" : true,
+    "id" : "new_work@WEEKLIES"
+  }, {
+    "actionTarget" : "SINGLEDATA",
+    "caption" : "打开新建周报编辑视图",
+    "codeName" : "open_create_view",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_edit_view.json",
+      "viewType" : "DEEDITVIEW"
+    },
+    "frontProcessType" : "WIZARD",
+    "fullCodeName" : "WEEKLIES_open_create_view",
+    "name" : "打开新建周报编辑视图",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSNavigateParams" : [ {
+      "key" : "name",
+      "name" : "name",
+      "value" : "name",
+      "rawValue" : false
+    }, {
+      "key" : "date_scope",
+      "name" : "date_scope",
+      "value" : "date_scope",
+      "rawValue" : false
+    }, {
+      "key" : "end_date",
+      "name" : "end_date",
+      "value" : "end_date",
+      "rawValue" : false
+    }, {
+      "key" : "owner",
+      "name" : "owner",
+      "value" : "owner",
+      "rawValue" : false
+    }, {
+      "key" : "start_date",
+      "name" : "start_date",
+      "value" : "start_date",
+      "rawValue" : false
+    } ],
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "open_create_view",
+    "uIActionType" : "DEUIACTION",
+    "id" : "open_create_view@WEEKLIES"
+  } ],
+  "getAllPSAppDEUILogics" : [ {
+    "codeName" : "generate_attachment",
+    "defaultParamName" : "Default",
+    "logicName" : "生成周报附件",
+    "name" : "生成周报附件",
+    "getPSDEUILogicNodes" : [ {
+      "codeName" : "Begin",
+      "leftPos" : 200,
+      "logicNodeType" : "BEGIN",
+      "name" : "开始",
+      "getPSDEUILogicLinks" : [ {
+        "getDstPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "MSGBOX1"
+        },
+        "linkMode" : 0,
+        "name" : "连接名称",
+        "getSrcPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "Begin"
+        }
+      } ],
+      "topPos" : 200,
+      "parallelOutput" : true
+    }, {
+      "codeName" : "END1",
+      "leftPos" : 1032,
+      "logicNodeType" : "END",
+      "name" : "结束",
+      "topPos" : 695
+    }, {
+      "codeName" : "DEUIACTION1",
+      "getDstPSAppDEUIAction" : {
+        "modelref" : true,
+        "id" : "Save"
+      },
+      "leftPos" : 992,
+      "logicNodeType" : "DEUIACTION",
+      "name" : "保存",
+      "getPSDEUILogicLinks" : [ {
+        "getDstPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "END1"
+        },
+        "linkMode" : 0,
+        "name" : "连接名称",
+        "getSrcPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "DEUIACTION1"
+        }
+      } ],
+      "topPos" : 541
+    }, {
+      "code" : "const appDataEntity = await ibiz.hub.getAppDataEntity(\r\n    view.model.appDataEntityId,\r\n    context.srfappid,\r\n);\r\nconst appDEPrint = appDataEntity.appDEPrints.find(print => {\r\n    return print.id === 'print';\r\n});\r\nif (appDEPrint) {\r\n    let requestUrl = '';\r\n    if (\r\n        context &&\r\n        context[appDataEntity.codeName.toLowerCase()]\r\n    ) {\r\n        requestUrl += `/${appDataEntity.deapicodeName2}/printdata/${\r\n            context[appDataEntity.codeName.toLowerCase()]\r\n        }`;\r\n    } else {\r\n        throw new Error(ibiz.i18n.t('runtime.uiAction.dataPrimaryKey'));\r\n    }\r\n    const res = await ibiz.net.request(requestUrl, {\r\n        method: 'get',\r\n        responseType: 'blob',\r\n        params: {\r\n            srfprinttag: appDEPrint.codeName,\r\n            ...params,\r\n        },\r\n    });\r\n    if (res.ok) {\r\n        uiLogic.file = res.data;\r\n    } else {\r\n        throw new Error(ibiz.i18n.t('runtime.uiAction.printFailure'));\r\n    }\r\n} else {\r\n    throw new Error(ibiz.i18n.t('runtime.uiAction.physicalPrint'));\r\n}",
+      "codeName" : "RAWJSCODE1",
+      "leftPos" : 751,
+      "logicNodeType" : "RAWJSCODE",
+      "name" : "下载周报附件",
+      "getPSDEUILogicLinks" : [ {
+        "getDstPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "RAWJSCODE2"
+        },
+        "linkMode" : 0,
+        "name" : "连接名称",
+        "getSrcPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "RAWJSCODE1"
+        }
+      } ],
+      "topPos" : 208
+    }, {
+      "code" : " const urls = ibiz.util.file.calcFileUpDownUrl(context, params);\r\nconst files = uiLogic.file;\r\nconst reg = new RegExp(`(^| )ibzuaa-token=([^;]*)(;|$)`);\r\nconst arr = document.cookie.match(reg);\r\nconst headers = { Authorization: `Bearer ${arr[2]}` };\r\nconst result = await ibiz.util.file.fileUpload(\r\n    urls.uploadUrl,\r\n    uiLogic.file,\r\n    headers,\r\n);\r\nuiLogic.attachment = result;",
+      "codeName" : "RAWJSCODE2",
+      "leftPos" : 992,
+      "logicNodeType" : "RAWJSCODE",
+      "name" : "上传周报附件",
+      "getPSDEUILogicLinks" : [ {
+        "getDstPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "RAWJSCODE3"
+        },
+        "linkMode" : 0,
+        "name" : "连接名称",
+        "getSrcPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "RAWJSCODE2"
+        }
+      } ],
+      "topPos" : 208
+    }, {
+      "buttonsType" : "YESNO",
+      "codeName" : "MSGBOX1",
+      "leftPos" : 430,
+      "logicNodeType" : "MSGBOX",
+      "getMsgBoxParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "msgBoxType" : "QUESTION",
+      "name" : "消息弹窗",
+      "getPSDEUILogicLinks" : [ {
+        "getDstPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "RAWJSCODE1"
+        },
+        "linkMode" : 0,
+        "name" : "连接名称",
+        "getPSDEUILogicLinkGroupCond" : {
+          "groupOP" : "AND",
+          "logicType" : "GROUP",
+          "getPSDEUILogicLinkConds" : [ {
+            "condOP" : "EQ",
+            "getDstLogicParam" : {
+              "modelref" : true,
+              "id" : "lastReturn"
+            },
+            "logicType" : "SINGLE",
+            "name" : "lastReturn 等于(=) yes",
+            "paramValue" : "yes",
+            "value" : "yes"
+          } ]
+        },
+        "getSrcPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "MSGBOX1"
+        }
+      }, {
+        "getDstPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "DEUIACTION1"
+        },
+        "linkMode" : 0,
+        "name" : "连接名称",
+        "getPSDEUILogicLinkGroupCond" : {
+          "groupOP" : "AND",
+          "logicType" : "GROUP",
+          "getPSDEUILogicLinkConds" : [ {
+            "condOP" : "EQ",
+            "getDstLogicParam" : {
+              "modelref" : true,
+              "id" : "lastReturn"
+            },
+            "logicType" : "SINGLE",
+            "name" : "lastReturn 等于(=) no",
+            "paramValue" : "no",
+            "value" : "no"
+          } ]
+        },
+        "getSrcPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "MSGBOX1"
+        }
+      } ],
+      "title" : "是否按照当前数据生成周报",
+      "topPos" : 208
+    }, {
+      "code" : "const form = uiLogic.form;\r\nif (form) {\r\n    const data = uiLogic.form.state.data;\r\n    const name = `${data.name || '周报'}.pdf`;\r\n    const id = uiLogic.attachment.id;\r\n    const value = [{name, id}];\r\n    form.setDataValue('attachment', JSON.stringify(value));\r\n}",
+      "codeName" : "RAWJSCODE3",
+      "leftPos" : 992,
+      "logicNodeType" : "RAWJSCODE",
+      "name" : "绑定表单数据",
+      "getPSDEUILogicLinks" : [ {
+        "getDstPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "DEUIACTION1"
+        },
+        "linkMode" : 0,
+        "name" : "连接名称",
+        "getSrcPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "RAWJSCODE3"
+        }
+      } ],
+      "topPos" : 360
+    } ],
+    "getPSDEUILogicParams" : [ {
+      "codeName" : "file",
+      "logicName" : "附件",
+      "name" : "附件",
+      "entityParam" : true
+    }, {
+      "codeName" : "attachment",
+      "logicName" : "附件",
+      "name" : "附件",
+      "entityParam" : true
+    }, {
+      "codeName" : "lastReturn",
+      "logicName" : "上一次返回",
+      "name" : "上一次返回",
+      "lastReturnParam" : true
+    }, {
+      "codeName" : "Default",
+      "logicName" : "传入变量",
+      "name" : "传入变量",
+      "default" : true,
+      "entityParam" : true
+    }, {
+      "codeName" : "form",
+      "logicName" : "表单",
+      "name" : "表单",
+      "ctrlParam" : true
+    } ],
+    "getStartPSDEUILogicNode" : {
+      "modelref" : true,
+      "id" : "Begin"
+    }
+  }, {
+    "codeName" : "open_new_edit",
+    "defaultParamName" : "Default",
+    "logicName" : "打开新建周报编辑视图",
+    "name" : "打开新建周报编辑视图",
+    "getPSDEUILogicNodes" : [ {
+      "codeName" : "Begin",
+      "leftPos" : 200,
+      "logicNodeType" : "BEGIN",
+      "name" : "开始",
+      "getPSDEUILogicLinks" : [ {
+        "getDstPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "RAWJSCODE1"
+        },
+        "linkMode" : 0,
+        "name" : "连接名称",
+        "getSrcPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "Begin"
+        }
+      } ],
+      "topPos" : 200,
+      "parallelOutput" : true
+    }, {
+      "code" : "var form_data = view.layoutPanel.panelItems.form.control.data;\r\nuiLogic.default.date_scope = form_data.date_scope;\r\nuiLogic.default.start_date = form_data.start_date;\r\nuiLogic.default.end_date = form_data.end_date;\r\nuiLogic.default.name = form_data.name;\r\nuiLogic.default.owner = form_data.owner;\r\n",
+      "codeName" : "RAWJSCODE1",
+      "leftPos" : 160,
+      "logicNodeType" : "RAWJSCODE",
+      "name" : "获取表单属性",
+      "getPSDEUILogicLinks" : [ {
+        "getDstPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "DEUIACTION1"
+        },
+        "linkMode" : 0,
+        "name" : "连接名称",
+        "getSrcPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "RAWJSCODE1"
+        }
+      } ],
+      "topPos" : 506
+    }, {
+      "codeName" : "DEUIACTION1",
+      "getDstPSAppDEUIAction" : {
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        },
+        "modelref" : true,
+        "id" : "open_create_view@WEEKLIES"
+      },
+      "getDstPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+      },
+      "getDstPSDEUILogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "leftPos" : 160,
+      "logicNodeType" : "DEUIACTION",
+      "name" : "打开新建周报编辑视图",
+      "topPos" : 727
+    } ],
+    "getPSDEUILogicParams" : [ {
+      "codeName" : "Default",
+      "logicName" : "传入变量",
+      "name" : "传入变量",
+      "default" : true,
+      "entityParam" : true
+    }, {
+      "codeName" : "view",
+      "logicName" : "当前视图对象",
+      "name" : "当前视图对象",
+      "activeViewParam" : true
+    } ],
+    "getStartPSDEUILogicNode" : {
+      "modelref" : true,
+      "id" : "Begin"
+    }
+  } ],
+  "getAllPSAppViews" : [ {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_quick_create_view.json",
+    "viewType" : "DEOPTVIEW"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_grid_view.json",
+    "viewType" : "DEGRIDVIEW"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_work_edit_view.json",
+    "viewType" : "DEEDITVIEW"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_weekly_edit_view.json",
+    "viewType" : "DEEDITVIEW"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_redirect_view.json",
+    "viewType" : "DEREDIRECTVIEW"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_kanban_view.json",
+    "viewType" : "DEKANBANVIEW"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_edit_view.json",
+    "viewType" : "DEEDITVIEW"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_grid_view_leader.json",
+    "viewType" : "DEGRIDVIEW"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_edit_view_leader.json",
+    "viewType" : "DEEDITVIEW"
+  } ],
+  "getAllPSDEOPPrivs" : [ {
+    "logicName" : "建立",
+    "name" : "CREATE"
+  }, {
+    "logicName" : "删除",
+    "name" : "DELETE"
+  }, {
+    "logicName" : "读取",
+    "name" : "READ"
+  }, {
+    "logicName" : "更新",
+    "name" : "UPDATE"
+  } ],
+  "codeName" : "WEEKLIES",
+  "dEAPICodeName" : "weeklies",
+  "dEAPICodeName2" : "weeklies",
+  "dEAPITag" : "WEEKLIES",
+  "dECodeName" : "weeklies",
+  "dataAccCtrlArch" : 1,
+  "dataAccCtrlMode" : 1,
+  "getDefaultPSAppDEPrint" : {
+    "modelref" : true,
+    "id" : "Print"
+  },
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json",
+  "enableUIActions" : 15,
+  "getKeyPSAppDEField" : {
+    "name" : "ID",
+    "codeName" : "id"
+  },
+  "getLNPSLanguageRes" : {
+    "lanResTag" : "DE.LNAME.WEEKLIES"
+  },
+  "logicName" : "周报",
+  "getMajorPSAppDEField" : {
+    "name" : "NAME",
+    "codeName" : "name"
+  },
+  "name" : "WEEKLIES",
+  "getPSDEName" : "WEEKLIES",
+  "getPSDEServiceAPI" : {
+    "modelref" : true,
+    "id" : "WEEKLIES"
+  },
+  "getPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies.json"
+  },
+  "getPSSysServiceAPI" : {
+    "modelref" : true,
+    "path" : "PSSYSSERVICEAPIS/ServiceAPI.json"
+  },
+  "getQuickSearchPSAppDEFields" : [ {
+    "name" : "NAME",
+    "codeName" : "name"
+  } ],
+  "storageMode" : 0,
+  "sysAPITag" : "ServiceAPI",
+  "defaultMode" : true,
+  "enableFilterActions" : true,
+  "enableUICreate" : true,
+  "enableUIModify" : true,
+  "enableUIRemove" : true,
+  "enableWFActions" : false,
+  "major" : true,
+  "getAllPSAppDEUIActionGroups" : [ {
+    "codeName" : "Usr0703365783",
+    "name" : "本周进展评估操作组",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "uniqueTag" : "WEEKLIES__Usr0703365783",
+    "getPSUIActionGroupDetails" : [ {
+      "caption" : "新建进展评估",
+      "detailType" : "DEUIACTION",
+      "name" : "u42a5287",
+      "getPSSysImage" : {
+        "glyph" : "xf067@FontAwesome",
+        "cssClass" : "fa fa-plus"
+      },
+      "tooltip" : "新建进展评估",
+      "addSeparator" : false,
+      "showCaption" : true,
+      "showIcon" : true,
+      "getPSUIAction" : {
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        },
+        "modelref" : true,
+        "id" : "newNote@WEEKLIES"
+      }
+    } ]
+  }, {
+    "codeName" : "Usr0703545302",
+    "name" : "本周活动操作组",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "uniqueTag" : "WEEKLIES__Usr0703545302",
+    "getPSUIActionGroupDetails" : [ {
+      "caption" : "新建任务",
+      "detailType" : "DEUIACTION",
+      "name" : "ub007a18",
+      "getPSSysImage" : {
+        "glyph" : "xf067@FontAwesome",
+        "cssClass" : "fa fa-plus"
+      },
+      "tooltip" : "新建任务",
+      "addSeparator" : false,
+      "showCaption" : true,
+      "showIcon" : true,
+      "getPSUIAction" : {
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        },
+        "modelref" : true,
+        "id" : "create_tasj@WEEKLIES"
+      }
+    }, {
+      "caption" : "新建活动",
+      "detailType" : "DEUIACTION",
+      "name" : "ub504aa4",
+      "getPSSysImage" : {
+        "glyph" : "xf067@FontAwesome",
+        "cssClass" : "fa fa-plus"
+      },
+      "tooltip" : "新建活动",
+      "addSeparator" : false,
+      "showCaption" : true,
+      "showIcon" : true,
+      "getPSUIAction" : {
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        },
+        "modelref" : true,
+        "id" : "newManeuver@WEEKLIES"
+      }
+    } ]
+  }, {
+    "codeName" : "Usr0703652592",
+    "name" : "下周任务计划操作组",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "uniqueTag" : "WEEKLIES__Usr0703652592",
+    "getPSUIActionGroupDetails" : [ {
+      "caption" : "新建下周任务",
+      "detailType" : "DEUIACTION",
+      "name" : "u808d9e7",
+      "getPSSysImage" : {
+        "glyph" : "xf067@FontAwesome",
+        "cssClass" : "fa fa-plus"
+      },
+      "tooltip" : "新建下周任务",
+      "addSeparator" : false,
+      "showCaption" : true,
+      "showIcon" : true,
+      "getPSUIAction" : {
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        },
+        "modelref" : true,
+        "id" : "newTask@WEEKLIES"
+      }
+    } ]
+  }, {
+    "codeName" : "Usr0718184800",
+    "name" : "新建商机或线索行为组",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "uniqueTag" : "WEEKLIES__Usr0718184800",
+    "getPSUIActionGroupDetails" : [ {
+      "caption" : "新建商机",
+      "detailType" : "DEUIACTION",
+      "name" : "udedb1ac",
+      "getPSSysImage" : {
+        "glyph" : "xf067@FontAwesome",
+        "cssClass" : "fa fa-plus"
+      },
+      "tooltip" : "新建商机",
+      "addSeparator" : false,
+      "showCaption" : true,
+      "showIcon" : true,
+      "getPSUIAction" : {
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        },
+        "modelref" : true,
+        "id" : "create_plus@WEEKLIES"
+      }
+    }, {
+      "caption" : "新建线索",
+      "detailType" : "DEUIACTION",
+      "name" : "u06d9e79",
+      "getPSSysImage" : {
+        "glyph" : "xf067@FontAwesome",
+        "cssClass" : "fa fa-plus"
+      },
+      "tooltip" : "新建线索",
+      "addSeparator" : false,
+      "showCaption" : true,
+      "showIcon" : true,
+      "getPSUIAction" : {
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        },
+        "modelref" : true,
+        "id" : "create_lead@WEEKLIES"
+      }
+    } ]
+  }, {
+    "codeName" : "Usr0722070442",
+    "name" : "新建下周工作行为组",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "uniqueTag" : "WEEKLIES__Usr0722070442",
+    "getPSUIActionGroupDetails" : [ {
+      "caption" : "新建下周工作",
+      "detailType" : "DEUIACTION",
+      "name" : "u98763a0",
+      "getPSSysImage" : {
+        "glyph" : "xf067@FontAwesome",
+        "cssClass" : "fa fa-plus"
+      },
+      "addSeparator" : false,
+      "showCaption" : true,
+      "showIcon" : true,
+      "getPSUIAction" : {
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        },
+        "modelref" : true,
+        "id" : "new_next_week_work@WEEKLIES"
+      }
+    } ]
+  }, {
+    "codeName" : "Usr0722659745",
+    "name" : "新建工作行为组",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "uniqueTag" : "WEEKLIES__Usr0722659745",
+    "getPSUIActionGroupDetails" : [ {
+      "caption" : "新建工作",
+      "detailType" : "DEUIACTION",
+      "name" : "ucddf473",
+      "getPSSysImage" : {
+        "glyph" : "xf067@FontAwesome",
+        "cssClass" : "fa fa-plus"
+      },
+      "tooltip" : "新建工作",
+      "addSeparator" : false,
+      "showCaption" : true,
+      "showIcon" : true,
+      "getPSUIAction" : {
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        },
+        "modelref" : true,
+        "id" : "new_work@WEEKLIES"
+      }
+    } ]
+  }, {
+    "codeName" : "Usr0722768040",
+    "memo" : "work",
+    "name" : "进展情况行为组",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "uniqueTag" : "WEEKLIES__Usr0722768040",
+    "getPSUIActionGroupDetails" : [ {
+      "caption" : "新建进展情况",
+      "detailType" : "DEUIACTION",
+      "name" : "u6c9c4d0",
+      "getPSSysImage" : {
+        "glyph" : "xf067@FontAwesome",
+        "cssClass" : "fa fa-plus"
+      },
+      "addSeparator" : false,
+      "showCaption" : true,
+      "showIcon" : true,
+      "getPSUIAction" : {
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        },
+        "modelref" : true,
+        "id" : "new_note@WEEKLIES"
+      }
+    } ]
+  } ]
+}

@@ -1,0 +1,28 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "CUSTOM",
+  "actionType" : "DELOGIC",
+  "codeName" : "cancel_relation",
+  "dataAccessAction" : "UPDATE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEACTIONS/cancel_relation.json",
+  "logicName" : "取消关联",
+  "name" : "cancel_relation",
+  "getPSDEActionInput" : {
+    "name" : "Cancel_relationInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "task_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Cancel_relationResult",
+    "type" : "VOID"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/task/PSDELOGICS/cancel_relation.json"
+  },
+  "enableAudit" : true,
+  "enableFront" : false
+}

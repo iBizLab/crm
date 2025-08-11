@@ -1,0 +1,429 @@
+{
+  "codeName" : "SalesLeader",
+  "defaultParamName" : "Default",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/user/PSDELOGICS/SalesLeader.json",
+  "logicName" : "查询销售领导",
+  "name" : "查询销售领导",
+  "getPSDELogicNodes" : [ {
+    "codeName" : "Begin",
+    "leftPos" : -110,
+    "logicNodeType" : "BEGIN",
+    "name" : "开始",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM2"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "Begin"
+      }
+    } ],
+    "topPos" : 332,
+    "parallelOutput" : true
+  }, {
+    "codeName" : "PREPAREPARAM3",
+    "leftPos" : 840,
+    "logicNodeType" : "PREPAREPARAM",
+    "name" : "准备参数",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RAWSFCODE1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM3"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "dstFieldName" : "N_SYSUSERID_NOTEQ",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "user_filter"
+      },
+      "name" : "用户全局对象[srfpersonid] ==> user_filter[N_SYSUSERID_NOTEQ]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "srfpersonid",
+      "srcValueType" : "SESSION"
+    } ],
+    "topPos" : 100
+  }, {
+    "codeName" : "END1",
+    "leftPos" : 1607,
+    "logicNodeType" : "END",
+    "name" : "结束",
+    "getReturnParam" : {
+      "modelref" : true,
+      "id" : "user_page"
+    },
+    "returnType" : "LOGICPARAM",
+    "topPos" : 200
+  }, {
+    "codeName" : "PREPAREPARAM1",
+    "leftPos" : 371,
+    "logicNodeType" : "PREPAREPARAM",
+    "name" : "准备参数",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "DEDATASET1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM1"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "dstFieldName" : "n_role_id_eq",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "member_filter"
+      },
+      "name" : "role[id] ==> member_filter[n_role_id_eq]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "id",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "role"
+      },
+      "srcValue" : "SalesLeader",
+      "srcValueType" : "SRCDLPARAM"
+    } ],
+    "topPos" : 208
+  }, {
+    "codeName" : "DEDATASET1",
+    "getDstPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "Default"
+    },
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "member_filter"
+    },
+    "getDstPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role_member.json"
+    },
+    "leftPos" : 597,
+    "logicNodeType" : "DEDATASET",
+    "name" : "查询角色成员",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM3"
+      },
+      "name" : "连接名称",
+      "getPSDELogicLinkGroupCond" : {
+        "groupOP" : "AND",
+        "logicType" : "GROUP",
+        "name" : "连接条件组",
+        "getPSDELogicLinkConds" : [ {
+          "condOP" : "GT",
+          "dstFieldName" : "size",
+          "getDstLogicParam" : {
+            "modelref" : true,
+            "id" : "member_page"
+          },
+          "logicType" : "SINGLE",
+          "name" : "member_page[size] 大于(>) 0",
+          "paramValue" : "0"
+        } ]
+      },
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "DEDATASET1"
+      }
+    }, {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "END2"
+      },
+      "name" : "连接名称",
+      "getPSDELogicLinkGroupCond" : {
+        "groupOP" : "AND",
+        "logicType" : "GROUP",
+        "name" : "连接条件组",
+        "getPSDELogicLinkConds" : [ {
+          "condOP" : "EQ",
+          "dstFieldName" : "size",
+          "getDstLogicParam" : {
+            "modelref" : true,
+            "id" : "member_page"
+          },
+          "logicType" : "SINGLE",
+          "name" : "member_page[size] 等于(=) 0",
+          "paramValue" : "0"
+        } ]
+      },
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "DEDATASET1"
+      }
+    } ],
+    "getRetPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "member_page"
+    },
+    "topPos" : 208
+  }, {
+    "codeName" : "END2",
+    "leftPos" : 637,
+    "logicNodeType" : "END",
+    "name" : "结束",
+    "topPos" : -50
+  }, {
+    "code" : "var member_page = logic.getParam(\"member_page\");\r\nvar user_filter = logic.getParam(\"user_filter\");\r\nvar user_ids = \"\";\r\nfor (var i = 0; i < member_page.length; i++) {\r\nif(i>0){\r\nuser_ids = user_ids+\",\";\r\n}\r\nvar id = member_page.get(i);\r\nuser_ids = user_ids + id.get(\"member_uid\");\r\n}\r\nif(user_ids != \"\"){\r\nuser_filter.in(\"sysuserId\",user_ids);\r\n}",
+    "codeName" : "RAWSFCODE1",
+    "leftPos" : 840,
+    "logicNodeType" : "RAWSFCODE",
+    "name" : "执行脚本代码",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "DEDATASET2"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RAWSFCODE1"
+      }
+    } ],
+    "topPos" : 208
+  }, {
+    "codeName" : "DEDATASET2",
+    "getDstPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "Default"
+    },
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "user_filter"
+    },
+    "getDstPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/user.json"
+    },
+    "leftPos" : 1043,
+    "logicNodeType" : "DEDATASET",
+    "name" : "查询用户",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "DEBUGPARAM1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "DEDATASET2"
+      }
+    } ],
+    "getRetPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "user_page"
+    },
+    "topPos" : 208
+  }, {
+    "codeName" : "DEBUGPARAM1",
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "user_page"
+    },
+    "leftPos" : 1271,
+    "logicNodeType" : "DEBUGPARAM",
+    "name" : "调试逻辑参数",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "END1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "DEBUGPARAM1"
+      }
+    } ],
+    "topPos" : 208
+  }, {
+    "codeName" : "PREPAREPARAM2",
+    "leftPos" : 70,
+    "logicNodeType" : "PREPAREPARAM",
+    "name" : "准备参数",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "DEDATASET3"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM2"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "dstFieldName" : "n_authority_eq",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "role_filter"
+      },
+      "name" : "直接值[SalesLeader] ==> role_filter[n_authority_eq]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcValue" : "SalesLeader",
+      "srcValueType" : "SRCVALUE"
+    }, {
+      "dstFieldName" : " n_deploy_system_id_eq",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "role_filter"
+      },
+      "name" : "用户全局对象[srfsystemid] ==> role_filter[ n_deploy_system_id_eq]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "srfsystemid",
+      "srcValue" : "ibizcrm",
+      "srcValueType" : "SESSION"
+    } ],
+    "topPos" : 340
+  }, {
+    "codeName" : "DEDATASET3",
+    "getDstPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "Default"
+    },
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "role_filter"
+    },
+    "getDstPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role.json"
+    },
+    "leftPos" : 410,
+    "logicNodeType" : "DEDATASET",
+    "name" : "查询销售领导角色",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "BINDPARAM1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "DEDATASET3"
+      }
+    } ],
+    "getRetPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "role_page"
+    },
+    "topPos" : 340
+  }, {
+    "codeName" : "BINDPARAM1",
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "role"
+    },
+    "leftPos" : 639,
+    "logicNodeType" : "BINDPARAM",
+    "name" : "绑定参数",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "BINDPARAM1"
+      }
+    } ],
+    "srcFieldName" : "0",
+    "getSrcPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "role_page"
+    },
+    "topPos" : 340
+  } ],
+  "getPSDELogicParams" : [ {
+    "codeName" : "Default",
+    "logicName" : "传入变量",
+    "name" : "传入变量",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/user.json"
+    },
+    "default" : true,
+    "filterParam" : true
+  }, {
+    "codeName" : "member_filter",
+    "logicName" : "角色成员过滤器",
+    "name" : "角色成员过滤器",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role_member.json"
+    },
+    "filterParam" : true
+  }, {
+    "codeName" : "member_page",
+    "logicName" : "销售领导分页结果",
+    "name" : "销售领导分页结果",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role_member.json"
+    },
+    "entityPageParam" : true
+  }, {
+    "codeName" : "role",
+    "logicName" : "权限信息",
+    "name" : "权限信息",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role.json"
+    },
+    "entityParam" : true
+  }, {
+    "codeName" : "role_filter",
+    "logicName" : "权限过滤",
+    "name" : "权限过滤",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role.json"
+    },
+    "filterParam" : true
+  }, {
+    "codeName" : "role_page",
+    "logicName" : "权限结果",
+    "name" : "权限结果",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/runtime/PSDATAENTITIES/sys_role.json"
+    },
+    "entityPageParam" : true
+  }, {
+    "codeName" : "user_filter",
+    "logicName" : "用户过滤器",
+    "name" : "用户过滤器",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/user.json"
+    },
+    "filterParam" : true
+  }, {
+    "codeName" : "user_page",
+    "logicName" : "用户结果",
+    "name" : "用户结果",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/user.json"
+    },
+    "entityPageParam" : true
+  } ],
+  "getStartPSDELogicNode" : {
+    "modelref" : true,
+    "id" : "Begin"
+  },
+  "enableBackend" : true,
+  "enableFront" : false
+}

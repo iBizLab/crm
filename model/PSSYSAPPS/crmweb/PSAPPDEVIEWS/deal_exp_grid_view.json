@@ -1,0 +1,1036 @@
+{
+  "accUserMode" : 2,
+  "caption" : "商机",
+  "codeName" : "deal_exp_grid_view",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/deal_exp_grid_view.json",
+  "gridRowActiveMode" : 2,
+  "name" : "dealexp_grid_view",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+  },
+  "getPSAppModule" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/crm.json"
+  },
+  "getPSDEViewCodeName" : "exp_grid_view",
+  "getPSDEViewId" : "75d94aea44e82491421407ba855fb10a",
+  "getPSViewLayoutPanel" : {
+    "getAllPSPanelFields" : [ {
+      "id" : "field_text_dynamic",
+      "viewFieldName" : "n_stage_eq"
+    } ],
+    "codeName" : "usr0613641488",
+    "controlType" : "VIEWLAYOUTPANEL",
+    "layoutMode" : "FLEX",
+    "logicName" : "exp_grid_view表格视图布局",
+    "name" : "layoutpanel",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+    },
+    "getPSControlParam" : { },
+    "getPSLayout" : {
+      "layout" : "FLEX"
+    },
+    "getRootPSPanelItems" : [ {
+      "caption" : "容器",
+      "cssStyle" : "margin-top:-12px;",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "view_header",
+      "getPSLayout" : {
+        "align" : "space-between",
+        "dir" : "row",
+        "layout" : "FLEX",
+        "vAlign" : "center"
+      },
+      "getPSLayoutPos" : {
+        "grow" : -1,
+        "layout" : "FLEX",
+        "shrink" : 0
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "view_header_left",
+        "getPSLayout" : {
+          "align" : "center",
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "heightMode" : "FULL",
+          "layout" : "FLEX"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "单项数据容器",
+          "dataName" : "context",
+          "dataRegionType" : "SINGLEDATA",
+          "dataSourceType" : "VIEWSESSIONPARAM",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CONTAINER",
+          "name" : "container_singledata",
+          "getPSLayout" : {
+            "layout" : "FLEX"
+          },
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "hAlignSelf" : "CENTER",
+            "layout" : "FLEX",
+            "vAlignSelf" : "MIDDLE"
+          },
+          "getPSPanelItems" : [ {
+            "caption" : "文本",
+            "contentType" : "RAW",
+            "itemStyle" : "DEFAULT",
+            "itemType" : "RAWITEM",
+            "name" : "static_text",
+            "getPSLayoutPos" : {
+              "grow" : -1,
+              "hAlignSelf" : "CENTER",
+              "layout" : "FLEX",
+              "spacingLeft" : "OUTERMEDIUM",
+              "vAlignSelf" : "MIDDLE"
+            },
+            "getPSPanelItemGroupLogics" : [ {
+              "groupOP" : "AND",
+              "logicCat" : "PANELVISIBLE",
+              "logicType" : "GROUP",
+              "getPSPanelItemLogics" : [ {
+                "condOp" : "ISNULL",
+                "dstModelField" : "FIELD_TEXT_DYNAMIC",
+                "logicType" : "SINGLE",
+                "name" : "逻辑项"
+              } ],
+              "relatedItemNames" : [ "field_text_dynamic" ],
+              "notMode" : false
+            } ],
+            "getPSRawItem" : {
+              "caption" : "全部商机",
+              "contentType" : "RAW",
+              "cssStyle" : "width:200px;\nmargin-left:25px;\nfont-weight:bold !important;",
+              "name" : "static_text",
+              "predefinedType" : "STATIC_TEXT",
+              "renderMode" : "TEXT"
+            },
+            "rawContent" : "全部商机",
+            "showCaption" : true
+          }, {
+            "caption" : "文本(动态)",
+            "cssStyle" : "font-weight: bold !important;",
+            "itemStyle" : "DEFAULT",
+            "itemType" : "FIELD",
+            "name" : "field_text_dynamic",
+            "getPSEditor" : {
+              "editorType" : "SPAN",
+              "name" : "field_text_dynamic",
+              "getPSAppCodeList" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__dealstage.json"
+              },
+              "predefinedType" : "FIELD_TEXT_DYNAMIC",
+              "renderMode" : "TEXT_DYNAMIC",
+              "enableLinkView" : false
+            },
+            "getPSLayoutPos" : {
+              "grow" : -1,
+              "hAlignSelf" : "CENTER",
+              "layout" : "FLEX",
+              "spacingLeft" : "OUTERMEDIUM",
+              "vAlignSelf" : "MIDDLE"
+            },
+            "getPSPanelItemGroupLogics" : [ {
+              "groupOP" : "AND",
+              "logicCat" : "PANELVISIBLE",
+              "logicType" : "GROUP",
+              "getPSPanelItemLogics" : [ {
+                "condOp" : "ISNOTNULL",
+                "dstModelField" : "FIELD_TEXT_DYNAMIC",
+                "logicType" : "SINGLE",
+                "name" : "逻辑项"
+              } ],
+              "relatedItemNames" : [ "field_text_dynamic" ],
+              "notMode" : false
+            } ],
+            "viewFieldName" : "n_stage_eq",
+            "convertToCodeItemText" : true
+          } ],
+          "predefinedType" : "CONTAINER_SINGLEDATA"
+        } ]
+      }, {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "view_header_right",
+        "getPSLayout" : {
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "heightMode" : "FULL",
+          "layout" : "FLEX"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "容器",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CONTAINER",
+          "name" : "view_toolbar",
+          "getPSLayout" : {
+            "align" : "center",
+            "layout" : "FLEX"
+          },
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "heightMode" : "FULL",
+            "layout" : "FLEX"
+          },
+          "getPSPanelItems" : [ {
+            "caption" : "工具栏",
+            "itemStyle" : "DEFAULT",
+            "itemType" : "CTRLPOS",
+            "name" : "toolbar",
+            "getPSLayoutPos" : {
+              "grow" : -1,
+              "layout" : "FLEX"
+            },
+            "showCaption" : true
+          } ]
+        } ]
+      } ],
+      "predefinedType" : "VIEWHEADER"
+    }, {
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "view_searchform",
+      "getPSLayout" : {
+        "dir" : "column",
+        "layout" : "FLEX"
+      },
+      "getPSLayoutPos" : {
+        "grow" : -1,
+        "layout" : "FLEX",
+        "shrink" : 0
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "搜索表单",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CTRLPOS",
+        "name" : "searchform",
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "layout" : "FLEX"
+        },
+        "showCaption" : true
+      } ]
+    }, {
+      "caption" : "容器",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "view_content",
+      "getPSLayout" : {
+        "layout" : "FLEX"
+      },
+      "getPSLayoutPos" : {
+        "grow" : 1,
+        "layout" : "FLEX"
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "表格",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CTRLPOS",
+        "name" : "grid",
+        "getPSLayoutPos" : {
+          "grow" : 1,
+          "layout" : "FLEX"
+        },
+        "showCaption" : true
+      } ],
+      "predefinedType" : "VIEWCONTENT"
+    } ],
+    "layoutBodyOnly" : false,
+    "layoutPanel" : true,
+    "useDefaultLayout" : false,
+    "viewProxyMode" : true,
+    "modelid" : "c87b019f8fd2f3cc5e383213d2b82aed",
+    "modeltype" : "PSSYSVIEWLAYOUTPANEL",
+    "getPSAppViewEngines" : [ {
+      "engineCat" : "VIEW",
+      "engineType" : "GridView",
+      "name" : "engine"
+    } ],
+    "getPSAppViewLogics" : [ {
+      "logicTrigger" : "CUSTOM",
+      "logicType" : "APPUILOGIC",
+      "name" : "newdata",
+      "getPSAppUILogic" : {
+        "actionAfterWizard" : "DEFAULT",
+        "logicType" : "PREDEFINED",
+        "name" : "新建数据",
+        "getNewDataPSAppView" : {
+          "getRefPSAppView" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/deal_edit_view_origin.json",
+            "viewType" : "DEEDITVIEW"
+          }
+        },
+        "getPSAppUILogicRefViews" : [ {
+          "getRefPSAppView" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/deal_edit_view_origin.json",
+            "viewType" : "DEEDITVIEW"
+          }
+        } ],
+        "viewLogicType" : "APP_NEWDATA",
+        "batchAddOnly" : false,
+        "enableBatchAdd" : false,
+        "enableWizardAdd" : false
+      }
+    }, {
+      "logicTrigger" : "CUSTOM",
+      "logicType" : "APPUILOGIC",
+      "name" : "opendata",
+      "getPSAppUILogic" : {
+        "logicType" : "PREDEFINED",
+        "name" : "打开数据",
+        "getOpenDataPSAppView" : {
+          "getRefPSAppView" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/deal_main_view.json",
+            "viewType" : "DEEDITVIEW2"
+          }
+        },
+        "getPSAppUILogicRefViews" : [ {
+          "getRefPSAppView" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/deal_main_view.json",
+            "viewType" : "DEEDITVIEW2"
+          }
+        } ],
+        "viewLogicType" : "APP_OPENDATA",
+        "editMode" : true
+      }
+    } ],
+    "getPSAppViewRefs" : [ {
+      "name" : "NEWDATA",
+      "realTitle" : "商机编辑视图",
+      "getRefPSAppView" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/deal_edit_view_origin.json",
+        "viewType" : "DEEDITVIEW"
+      }
+    }, {
+      "name" : "EDITDATA",
+      "realTitle" : "商机信息",
+      "getRefPSAppView" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/deal_main_view.json",
+        "viewType" : "DEEDITVIEW2"
+      }
+    } ],
+    "getPSControls" : [ {
+      "codeName" : "exp_grid_view_toolbar",
+      "controlType" : "TOOLBAR",
+      "logicName" : "导航用表格工具栏",
+      "name" : "toolbar",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+      },
+      "getPSControlParam" : {
+        "id" : "TOOLBAR"
+      },
+      "getPSDEToolbarItems" : [ {
+        "caption" : "创建商机",
+        "groupExtractMode" : "ITEM",
+        "itemType" : "DEUIACTION",
+        "name" : "deuiaction1",
+        "noPrivDisplayMode" : 2,
+        "getPSAppViewUIAction" : {
+          "modelref" : true,
+          "id" : "toolbar_deuiaction1"
+        },
+        "getPSUIAction" : {
+          "actionTarget" : "NONE",
+          "caption" : "创建商机",
+          "codeName" : "createDeal",
+          "getFrontPSAppView" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/deal_edit_view.json",
+            "viewType" : "DEEDITVIEW"
+          },
+          "frontProcessType" : "WIZARD",
+          "fullCodeName" : "deal_createDeal",
+          "name" : "创建商机",
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+          },
+          "uIActionMode" : "FRONT",
+          "uIActionTag" : "createDeal",
+          "uIActionType" : "DEUIACTION",
+          "id" : "createDeal@deal"
+        },
+        "tooltip" : "创建商机",
+        "uIActionTarget" : "NONE",
+        "showCaption" : true,
+        "showIcon" : true
+      } ],
+      "xDataControlName" : "grid",
+      "modelid" : "feeb032ebcca05d798906e16f890e824",
+      "modeltype" : "PSDETOOLBAR"
+    }, {
+      "aggMode" : "NONE",
+      "codeName" : "grid_view_relation_grid",
+      "columnEnableFilter" : 2,
+      "columnEnableLink" : 0,
+      "controlType" : "GRID",
+      "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal/PSGRIDS/grid_view_relation_grid.json",
+      "getFetchPSControlAction" : {
+        "modelref" : true,
+        "id" : "fetch",
+        "actionType" : "DEDATASET",
+        "name" : "fetch",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "fetch_all"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+        }
+      },
+      "groupMode" : "NONE",
+      "logicName" : "商机嵌入表格视图_表格",
+      "minorSortDir" : "DESC",
+      "getMinorSortPSAppDEField" : {
+        "name" : "CLOSING_DATE",
+        "codeName" : "closing_date"
+      },
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+      },
+      "getPSControlHandler" : {
+        "getPSHandlerActions" : [ {
+          "actionName" : "Get",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "READ",
+          "name" : "load",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "get"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+          }
+        }, {
+          "actionName" : "Create",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "CREATE",
+          "name" : "create",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "create"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+          }
+        }, {
+          "actionName" : "Update",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "UPDATE",
+          "name" : "update",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "update"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+          }
+        }, {
+          "actionName" : "Remove",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "DELETE",
+          "name" : "remove",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "remove"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+          }
+        }, {
+          "actionName" : "GetDraft",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "CREATE",
+          "name" : "loaddraft",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "get_draft"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+          }
+        }, {
+          "actionType" : "DEDATASET",
+          "name" : "fetch",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "fetch_all"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+          }
+        } ],
+        "userDRAction" : "READ",
+        "enableDEFieldPrivilege" : false,
+        "id" : "数据表格处理器"
+      },
+      "getPSControlParam" : {
+        "autoLoad" : true,
+        "showBusyIndicator" : true,
+        "id" : "GRID"
+      },
+      "getPSDEDataImport" : {
+        "modelref" : true,
+        "id" : "DataImport"
+      },
+      "getPSDEGridColumns" : [ {
+        "align" : "LEFT",
+        "cLConvertMode" : "NONE",
+        "caption" : "商机名称",
+        "codeName" : "deal_name",
+        "columnType" : "DEFGRIDCOLUMN",
+        "dataItemName" : "deal_name",
+        "excelCaption" : "商机名称",
+        "name" : "deal_name",
+        "noPrivDisplayMode" : 1,
+        "getPSAppDEField" : {
+          "name" : "DEAL_NAME",
+          "codeName" : "deal_name"
+        },
+        "width" : 250,
+        "widthUnit" : "STAR",
+        "enableSort" : true
+      }, {
+        "align" : "LEFT",
+        "cLConvertMode" : "NONE",
+        "caption" : "客户名称",
+        "codeName" : "account_name",
+        "columnType" : "DEFGRIDCOLUMN",
+        "dataItemName" : "account_name",
+        "excelCaption" : "客户名称",
+        "name" : "account_name",
+        "noPrivDisplayMode" : 1,
+        "getPSAppDEField" : {
+          "name" : "ACCOUNT_NAME",
+          "codeName" : "account_name"
+        },
+        "width" : 200,
+        "widthUnit" : "PX",
+        "enableSort" : true
+      }, {
+        "align" : "LEFT",
+        "cLConvertMode" : "FRONT",
+        "caption" : "业务条线",
+        "codeName" : "business_line",
+        "columnType" : "DEFGRIDCOLUMN",
+        "dataItemName" : "business_line",
+        "excelCaption" : "业务条线",
+        "name" : "business_line",
+        "noPrivDisplayMode" : 1,
+        "getPSAppCodeList" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__business_line.json"
+        },
+        "getPSAppDEField" : {
+          "name" : "BUSINESS_LINE",
+          "codeName" : "business_line"
+        },
+        "width" : 150,
+        "widthUnit" : "PX",
+        "enableSort" : true
+      }, {
+        "align" : "RIGHT",
+        "cLConvertMode" : "NONE",
+        "caption" : "预计成交金额",
+        "codeName" : "amount",
+        "columnType" : "DEFGRIDCOLUMN",
+        "dataItemName" : "amount",
+        "excelCaption" : "预计成交金额",
+        "name" : "amount",
+        "noPrivDisplayMode" : 1,
+        "getPSAppDEField" : {
+          "name" : "AMOUNT",
+          "codeName" : "amount"
+        },
+        "unitName" : "元",
+        "valueFormat" : "￥#,##0",
+        "width" : 150,
+        "widthUnit" : "STAR",
+        "enableSort" : true,
+        "enableUnitName" : true
+      }, {
+        "align" : "RIGHT",
+        "cLConvertMode" : "NONE",
+        "caption" : "成交概率金额",
+        "codeName" : "expected_revenue",
+        "columnType" : "DEFGRIDCOLUMN",
+        "dataItemName" : "expected_revenue",
+        "excelCaption" : "成交概率金额",
+        "name" : "expected_revenue",
+        "noPrivDisplayMode" : 1,
+        "getPSAppDEField" : {
+          "name" : "EXPECTED_REVENUE",
+          "codeName" : "expected_revenue"
+        },
+        "unitName" : "元",
+        "valueFormat" : "￥#,##0",
+        "width" : 150,
+        "widthUnit" : "STAR",
+        "enableSort" : true,
+        "enableUnitName" : true
+      }, {
+        "align" : "LEFT",
+        "cLConvertMode" : "NONE",
+        "caption" : "预计成交日期",
+        "codeName" : "closing_date",
+        "columnType" : "DEFGRIDCOLUMN",
+        "dataItemName" : "closing_date",
+        "excelCaption" : "预计成交日期",
+        "name" : "closing_date",
+        "noPrivDisplayMode" : 1,
+        "getPSAppDEField" : {
+          "name" : "CLOSING_DATE",
+          "codeName" : "closing_date"
+        },
+        "valueFormat" : "YYYY-MM-DD",
+        "width" : 200,
+        "widthUnit" : "STAR",
+        "enableSort" : true
+      }, {
+        "align" : "LEFT",
+        "cLConvertMode" : "FRONT",
+        "caption" : "所有者",
+        "codeName" : "owner",
+        "columnType" : "DEFGRIDCOLUMN",
+        "dataItemName" : "owner",
+        "excelCaption" : "所有者",
+        "name" : "owner",
+        "noPrivDisplayMode" : 1,
+        "getPSAppCodeList" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__owner.json"
+        },
+        "getPSAppDEField" : {
+          "name" : "OWNER",
+          "codeName" : "owner"
+        },
+        "width" : 150,
+        "widthUnit" : "STAR",
+        "enableSort" : true
+      }, {
+        "align" : "LEFT",
+        "cLConvertMode" : "FRONT",
+        "caption" : "阶段标识",
+        "codeName" : "stage",
+        "columnType" : "DEFGRIDCOLUMN",
+        "dataItemName" : "stage",
+        "excelCaption" : "阶段标识",
+        "name" : "stage",
+        "noPrivDisplayMode" : 1,
+        "getPSAppCodeList" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__dealstage.json"
+        },
+        "getPSAppDEField" : {
+          "name" : "STAGE",
+          "codeName" : "stage"
+        },
+        "width" : 200,
+        "widthUnit" : "STAR",
+        "enableSort" : true
+      } ],
+      "getPSDEGridDataItems" : [ {
+        "dataType" : 25,
+        "name" : "deal_name",
+        "getPSAppDEField" : {
+          "name" : "DEAL_NAME",
+          "codeName" : "deal_name"
+        }
+      }, {
+        "dataType" : 25,
+        "name" : "account_name",
+        "getPSAppDEField" : {
+          "name" : "ACCOUNT_NAME",
+          "codeName" : "account_name"
+        }
+      }, {
+        "dataType" : 25,
+        "name" : "business_line",
+        "getPSAppDEField" : {
+          "name" : "BUSINESS_LINE",
+          "codeName" : "business_line"
+        }
+      }, {
+        "format" : "￥#,##0",
+        "dataType" : 6,
+        "name" : "amount",
+        "getPSAppDEField" : {
+          "name" : "AMOUNT",
+          "codeName" : "amount"
+        }
+      }, {
+        "format" : "￥#,##0",
+        "dataType" : 6,
+        "name" : "expected_revenue",
+        "getPSAppDEField" : {
+          "name" : "EXPECTED_REVENUE",
+          "codeName" : "expected_revenue"
+        }
+      }, {
+        "format" : "YYYY-MM-DD",
+        "dataType" : 5,
+        "name" : "closing_date",
+        "getPSAppDEField" : {
+          "name" : "CLOSING_DATE",
+          "codeName" : "closing_date"
+        }
+      }, {
+        "dataType" : 25,
+        "name" : "owner",
+        "getPSAppDEField" : {
+          "name" : "OWNER",
+          "codeName" : "owner"
+        }
+      }, {
+        "dataType" : 25,
+        "name" : "stage",
+        "getPSAppDEField" : {
+          "name" : "STAGE",
+          "codeName" : "stage"
+        }
+      }, {
+        "dataType" : 25,
+        "name" : "srfkey",
+        "getPSAppDEField" : {
+          "name" : "ID",
+          "codeName" : "id"
+        }
+      }, {
+        "dataType" : 25,
+        "name" : "srfdataaccaction",
+        "getPSAppDEField" : {
+          "name" : "ID",
+          "codeName" : "id"
+        },
+        "dataAccessAction" : true
+      }, {
+        "dataType" : 25,
+        "name" : "account_id",
+        "getPSAppDEField" : {
+          "name" : "ACCOUNT_ID",
+          "codeName" : "account_id"
+        }
+      }, {
+        "dataType" : 25,
+        "name" : "contact_id",
+        "getPSAppDEField" : {
+          "name" : "CONTACT_ID",
+          "codeName" : "contact_id"
+        }
+      }, {
+        "dataType" : 25,
+        "name" : "srfmajortext",
+        "getPSAppDEField" : {
+          "name" : "DEAL_NAME",
+          "codeName" : "deal_name"
+        }
+      } ],
+      "getPSDEGridEditItems" : [ {
+        "caption" : "标识",
+        "codeName" : "srfkey",
+        "enableCond" : 3,
+        "ignoreInput" : 0,
+        "name" : "srfkey",
+        "getPSAppDEField" : {
+          "name" : "ID",
+          "codeName" : "id"
+        },
+        "getPSEditor" : {
+          "editorType" : "HIDDEN",
+          "name" : "srfkey"
+        },
+        "allowEmpty" : true
+      } ],
+      "pagingMode" : 1,
+      "pagingSize" : 20,
+      "getRemovePSControlAction" : {
+        "actionName" : "Remove",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "DELETE",
+        "name" : "remove",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "remove"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+        }
+      },
+      "sortMode" : "REMOTE",
+      "hasWFDataItems" : false,
+      "enableColFilter" : false,
+      "enableCustomized" : true,
+      "enableGroup" : false,
+      "enablePagingBar" : true,
+      "enableRowEdit" : false,
+      "enableRowEditOrder" : false,
+      "enableRowNew" : false,
+      "forceFit" : true,
+      "hideHeader" : false,
+      "noSort" : false,
+      "singleSelect" : false,
+      "name" : "grid",
+      "modelid" : "045d3d9bfd244c59f11a449e1869a801",
+      "modeltype" : "PSDEGRID"
+    }, {
+      "codeName" : "grid_view_relation_search_form",
+      "controlType" : "SEARCHFORM",
+      "defaultLabelWidth" : 130,
+      "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal/PSSEARCHFORMS/grid_view_relation_search_form.json",
+      "logicName" : "商机嵌入表格视图_搜索表单",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+      },
+      "getPSControlHandler" : {
+        "getPSHandlerActions" : [ {
+          "actionType" : "FILTERACTION",
+          "name" : "load",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "FilterGet"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+          }
+        }, {
+          "actionType" : "FILTERACTION",
+          "name" : "loaddraft",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "FilterGetDraft"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+          }
+        }, {
+          "actionType" : "FILTERACTION",
+          "name" : "search",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "FilterSearch"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+          }
+        } ],
+        "enableDEFieldPrivilege" : false,
+        "id" : "搜索表单处理器"
+      },
+      "getPSControlParam" : {
+        "autoLoad" : true,
+        "showBusyIndicator" : true,
+        "id" : "SEARCHFORM"
+      },
+      "getPSDEFormItems" : [ {
+        "id" : "n_business_line_eq",
+        "dataType" : 25,
+        "getPSAppDEField" : {
+          "name" : "BUSINESS_LINE",
+          "codeName" : "business_line"
+        }
+      }, {
+        "id" : "n_owner_eq",
+        "dataType" : 25,
+        "getPSAppDEField" : {
+          "name" : "OWNER",
+          "codeName" : "owner"
+        }
+      } ],
+      "getPSDEFormPages" : [ {
+        "caption" : "常规条件",
+        "codeName" : "formpage1",
+        "detailStyle" : "DEFAULT",
+        "detailType" : "FORMPAGE",
+        "name" : "formpage1",
+        "getPSDEFormDetails" : [ {
+          "caption" : "业务条线",
+          "codeName" : "n_business_line_eq",
+          "dataType" : 25,
+          "detailStyle" : "DEFAULT",
+          "detailType" : "FORMITEM",
+          "enableCond" : 3,
+          "ignoreInput" : 0,
+          "labelPos" : "LEFT",
+          "labelWidth" : 130,
+          "name" : "n_business_line_eq",
+          "noPrivDisplayMode" : 1,
+          "getPSAppDEField" : {
+            "name" : "BUSINESS_LINE",
+            "codeName" : "business_line"
+          },
+          "getPSEditor" : {
+            "editorType" : "DROPDOWNLIST",
+            "name" : "n_business_line_eq",
+            "getPSAppCodeList" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__industry.json"
+            },
+            "singleSelect" : true
+          },
+          "getPSLayoutPos" : {
+            "colMD" : 24,
+            "layout" : "TABLE_24COL"
+          },
+          "allowEmpty" : true,
+          "needCodeListConfig" : true,
+          "showCaption" : true
+        }, {
+          "caption" : "所有者",
+          "codeName" : "n_owner_eq",
+          "dataType" : 25,
+          "detailStyle" : "DEFAULT",
+          "detailType" : "FORMITEM",
+          "enableCond" : 3,
+          "ignoreInput" : 0,
+          "labelPos" : "LEFT",
+          "labelWidth" : 130,
+          "name" : "n_owner_eq",
+          "noPrivDisplayMode" : 1,
+          "getPSAppDEField" : {
+            "name" : "OWNER",
+            "codeName" : "owner"
+          },
+          "getPSEditor" : {
+            "editorType" : "DROPDOWNLIST",
+            "name" : "n_owner_eq",
+            "getPSAppCodeList" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__owner.json"
+            },
+            "singleSelect" : true
+          },
+          "getPSLayoutPos" : {
+            "colMD" : 24,
+            "layout" : "TABLE_24COL"
+          },
+          "allowEmpty" : true,
+          "needCodeListConfig" : true,
+          "showCaption" : true
+        } ],
+        "getPSLayout" : {
+          "childColMD" : 24,
+          "columnCount" : 24,
+          "layout" : "TABLE_24COL"
+        },
+        "infoGroupMode" : false
+      } ],
+      "getPSLayout" : {
+        "childColMD" : 24,
+        "columnCount" : 24,
+        "layout" : "TABLE_24COL"
+      },
+      "searchButtonStyle" : "DEFAULT",
+      "tabHeaderPos" : "TOP",
+      "enableAdvanceSearch" : false,
+      "enableAutoSearch" : false,
+      "enableFilterSave" : false,
+      "noTabHeader" : true,
+      "name" : "searchform",
+      "modelid" : "28d2c704a7203fb59341e052786299f0",
+      "modeltype" : "PSDEFORM_SEARCHFORM"
+    }, {
+      "controlType" : "SEARCHBAR",
+      "name" : "searchbar",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+      },
+      "getPSControlParam" : {
+        "id" : "searchbar"
+      },
+      "quickGroupCount" : -1,
+      "quickSearchMode" : 0,
+      "quickSearchWidth" : 0,
+      "enableFilter" : false,
+      "enableGroup" : false,
+      "enableQuickSearch" : false,
+      "mobileSearchBar" : false
+    }, {
+      "caption" : "商机",
+      "codeName" : "exp_grid_view_captionbar",
+      "controlType" : "CAPTIONBAR",
+      "name" : "captionbar",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+      },
+      "getPSControlParam" : { }
+    } ]
+  },
+  "title" : "商机",
+  "viewStyle" : "DEFAULT",
+  "viewType" : "DEGRIDVIEW",
+  "xDataControlName" : "grid",
+  "enableDP" : true,
+  "enableExport" : true,
+  "enableFilter" : true,
+  "enableImport" : true,
+  "enableRowEdit" : false,
+  "enableSearch" : true,
+  "rowEditDefault" : false,
+  "showCaptionBar" : false,
+  "modelid" : "207774a1d2834d295d41508360de314d",
+  "modeltype" : "PSAPPDEVIEW",
+  "getPSAppDERSPaths" : [ [ {
+    "actionRSMode" : 1,
+    "codeName" : "deals",
+    "dataRSMode" : 0,
+    "majorDECodeName" : "account",
+    "majorDEName" : "ACCOUNT",
+    "getMajorPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/account.json"
+    },
+    "minorDECodeName" : "deal",
+    "minorDEName" : "DEAL",
+    "getMinorPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+    },
+    "name" : "DER1N_DEAL_ACCOUNT_ACCOUNT_ID",
+    "getParentPSAppDEField" : {
+      "name" : "ACCOUNT_ID",
+      "codeName" : "account_id"
+    },
+    "getParentTextPSAppDEField" : {
+      "name" : "ACCOUNT_NAME",
+      "codeName" : "account_name"
+    },
+    "rSMode" : 2
+  } ] ]
+}
