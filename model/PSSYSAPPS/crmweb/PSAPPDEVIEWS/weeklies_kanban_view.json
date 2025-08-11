@@ -1,0 +1,768 @@
+{
+  "accUserMode" : 2,
+  "getCapPSLanguageRes" : {
+    "lanResTag" : "DE.LNAME.WEEKLIES"
+  },
+  "caption" : "销售工作报告",
+  "codeName" : "weeklies_kanban_view",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_kanban_view.json",
+  "mDCtrlActiveMode" : 1,
+  "name" : "weeklieskanban_view",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+  },
+  "getPSAppModule" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/crm.json"
+  },
+  "getPSAppViewEngines" : [ {
+    "engineCat" : "VIEW",
+    "engineType" : "KanBanView",
+    "name" : "engine"
+  } ],
+  "getPSAppViewLogics" : [ {
+    "eventNames" : "onCreated",
+    "logicTrigger" : "VIEWEVENT",
+    "logicType" : "SCRIPT",
+    "name" : "LOGIC",
+    "scriptCode" : "view.ctx.evt.on('onRegister', (name, c) => {\r\n    if(name==='searchform'){\r\n        const time = new Date();\r\n        const oneDayInMilliseconds = 1000 * 60 * 60 * 24;\r\n        const twentyOneDaysInMilliseconds = oneDayInMilliseconds * 21;\r\n        const preTime = new Date(time.getTime() - twentyOneDaysInMilliseconds);\r\n        const n_start_date_gtandeq = preTime.getFullYear() +'-' +(preTime.getMonth() + 1 < 10 ? '0' + (preTime.getMonth() + 1): preTime.getMonth() + 1) +'-' +(preTime.getDate() < 10 ? '0' + preTime.getDate() : preTime.getDate()) \r\n        const n_start_date_lt = time.getFullYear() +'-' +(time.getMonth() + 1 < 10 ? '0' + (time.getMonth() + 1): time.getMonth() + 1) +'-' +(time.getDate() < 10 ? '0' + time.getDate() : time.getDate())\r\n        const date_range = n_start_date_gtandeq + ',' + n_start_date_lt;\r\n        Object.assign(c.params, {n_start_date_gtandeq,n_start_date_lt,date_range})\r\n    }\r\n});"
+  }, {
+    "logicTrigger" : "CUSTOM",
+    "logicType" : "APPUILOGIC",
+    "name" : "newdata",
+    "getPSAppUILogic" : {
+      "actionAfterWizard" : "DEFAULT",
+      "logicType" : "PREDEFINED",
+      "name" : "新建数据",
+      "getNewDataPSAppView" : {
+        "getRefPSAppView" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_edit_view.json",
+          "viewType" : "DEEDITVIEW"
+        }
+      },
+      "getPSAppUILogicRefViews" : [ {
+        "getRefPSAppView" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_edit_view.json",
+          "viewType" : "DEEDITVIEW"
+        }
+      } ],
+      "viewLogicType" : "APP_NEWDATA",
+      "batchAddOnly" : false,
+      "enableBatchAdd" : false,
+      "enableWizardAdd" : false
+    }
+  }, {
+    "logicTrigger" : "CUSTOM",
+    "logicType" : "APPUILOGIC",
+    "name" : "opendata",
+    "getPSAppUILogic" : {
+      "logicType" : "PREDEFINED",
+      "name" : "打开数据",
+      "getOpenDataPSAppView" : {
+        "getRefPSAppView" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_edit_view_leader.json",
+          "viewType" : "DEEDITVIEW"
+        }
+      },
+      "getPSAppUILogicRefViews" : [ {
+        "getRefPSAppView" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_edit_view_leader.json",
+          "viewType" : "DEEDITVIEW"
+        }
+      } ],
+      "viewLogicType" : "APP_OPENDATA",
+      "editMode" : true
+    }
+  } ],
+  "getPSAppViewRefs" : [ {
+    "name" : "EDITDATA",
+    "realTitle" : "销售工作报告详情",
+    "getRefPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_edit_view_leader.json",
+      "viewType" : "DEEDITVIEW"
+    }
+  }, {
+    "name" : "NEWDATA",
+    "realTitle" : "周报编辑视图",
+    "getRealTitlePSLanguageRes" : {
+      "lanResTag" : "PAGE.TITLE.WEEKLIES.EDITVIEW"
+    },
+    "getRefPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/weeklies_edit_view.json",
+      "viewType" : "DEEDITVIEW"
+    }
+  } ],
+  "getPSControls" : [ {
+    "codeName" : "kanban_view_toolbar",
+    "controlType" : "TOOLBAR",
+    "logicName" : "销售工作报告（领导）_工具栏",
+    "name" : "toolbar",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSControlParam" : {
+      "id" : "TOOLBAR"
+    },
+    "xDataControlName" : "kanban",
+    "modelid" : "a6c7194b9d0b9c082656f296e147f622",
+    "modeltype" : "PSDETOOLBAR"
+  }, {
+    "codeName" : "kanban_view_search_form",
+    "controlType" : "SEARCHFORM",
+    "defaultLabelWidth" : 130,
+    "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES/PSSEARCHFORMS/kanban_view_search_form.json",
+    "logicName" : "销售工作报告（领导）_搜索表单",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSControlHandler" : {
+      "getPSHandlerActions" : [ {
+        "actionType" : "FILTERACTION",
+        "name" : "load",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "FilterGet"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        }
+      }, {
+        "actionType" : "FILTERACTION",
+        "name" : "loaddraft",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "FilterGetDraft"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        }
+      }, {
+        "actionType" : "FILTERACTION",
+        "name" : "search",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "FilterSearch"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        }
+      } ],
+      "enableDEFieldPrivilege" : false,
+      "id" : "搜索表单处理器"
+    },
+    "getPSControlParam" : {
+      "autoLoad" : true,
+      "showBusyIndicator" : true,
+      "id" : "SEARCHFORM"
+    },
+    "getPSDEFormItems" : [ {
+      "id" : "n_owner_eq",
+      "dataType" : 25,
+      "getPSAppDEField" : {
+        "name" : "OWNER",
+        "codeName" : "owner"
+      }
+    }, {
+      "id" : "date_range",
+      "dataType" : 25
+    }, {
+      "id" : "n_name_like",
+      "dataType" : 25,
+      "getPSAppDEField" : {
+        "name" : "NAME",
+        "codeName" : "name"
+      }
+    }, {
+      "id" : "n_start_date_gtandeq",
+      "hidden" : true,
+      "dataType" : 5,
+      "getPSAppDEField" : {
+        "name" : "START_DATE",
+        "codeName" : "start_date"
+      }
+    }, {
+      "id" : "n_start_date_lt",
+      "hidden" : true,
+      "dataType" : 5,
+      "getPSAppDEField" : {
+        "name" : "START_DATE",
+        "codeName" : "start_date"
+      }
+    } ],
+    "getPSDEFormPages" : [ {
+      "caption" : "常规条件",
+      "codeName" : "formpage1",
+      "detailStyle" : "DEFAULT",
+      "detailType" : "FORMPAGE",
+      "name" : "formpage1",
+      "getPSDEFormDetails" : [ {
+        "caption" : "销售人员",
+        "codeName" : "n_owner_eq",
+        "dataType" : 25,
+        "detailStyle" : "DEFAULT",
+        "detailType" : "FORMITEM",
+        "enableCond" : 3,
+        "ignoreInput" : 0,
+        "labelPos" : "LEFT",
+        "labelWidth" : 130,
+        "name" : "n_owner_eq",
+        "noPrivDisplayMode" : 1,
+        "getPSAppDEField" : {
+          "name" : "OWNER",
+          "codeName" : "owner"
+        },
+        "getPSEditor" : {
+          "editorParams" : {
+            "blankItemName" : "全部销售"
+          },
+          "editorType" : "DROPDOWNLIST",
+          "name" : "n_owner_eq",
+          "getPSAppCodeList" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__owner.json"
+          },
+          "singleSelect" : true
+        },
+        "getPSLayoutPos" : {
+          "colLG" : 8,
+          "colMD" : 8,
+          "layout" : "TABLE_24COL"
+        },
+        "allowEmpty" : true,
+        "needCodeListConfig" : true,
+        "showCaption" : true
+      }, {
+        "caption" : "周报时间",
+        "codeName" : "date_range",
+        "dataType" : 25,
+        "detailStyle" : "DEFAULT",
+        "detailType" : "FORMITEM",
+        "enableCond" : 3,
+        "ignoreInput" : 0,
+        "labelPos" : "LEFT",
+        "labelWidth" : 130,
+        "name" : "date_range",
+        "noPrivDisplayMode" : 1,
+        "getPSEditor" : {
+          "dateTimeFormat" : "YYYY-MM-DD",
+          "editorParams" : {
+            "TIMEFMT" : "YYYY-MM-DD"
+          },
+          "editorType" : "DATERANGE_NOTIME",
+          "name" : "date_range",
+          "getPSEditorItems" : [ {
+            "name" : "n_start_date_gtandeq"
+          }, {
+            "name" : "n_start_date_lt"
+          } ]
+        },
+        "getPSLayoutPos" : {
+          "colLG" : 8,
+          "colMD" : 8,
+          "layout" : "TABLE_24COL"
+        },
+        "valueItemName" : "n_start_date_gtandeq",
+        "allowEmpty" : true,
+        "showCaption" : true
+      }, {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "CONTROL.DEFSFITEM.WEEKLIES.N_NAME_LIKE"
+        },
+        "caption" : "名称",
+        "codeName" : "n_name_like",
+        "dataType" : 25,
+        "detailStyle" : "DEFAULT",
+        "detailType" : "FORMITEM",
+        "enableCond" : 3,
+        "ignoreInput" : 0,
+        "labelPos" : "LEFT",
+        "labelWidth" : 130,
+        "name" : "n_name_like",
+        "noPrivDisplayMode" : 1,
+        "getPSAppDEField" : {
+          "name" : "NAME",
+          "codeName" : "name"
+        },
+        "getPSEditor" : {
+          "editorType" : "TEXTBOX",
+          "name" : "n_name_like"
+        },
+        "getPSLayoutPos" : {
+          "colLG" : 8,
+          "colMD" : 8,
+          "layout" : "TABLE_24COL"
+        },
+        "allowEmpty" : true,
+        "showCaption" : true
+      }, {
+        "caption" : "开始时间",
+        "codeName" : "n_start_date_gtandeq",
+        "dataType" : 5,
+        "detailStyle" : "DEFAULT",
+        "detailType" : "FORMITEM",
+        "enableCond" : 3,
+        "ignoreInput" : 0,
+        "labelPos" : "LEFT",
+        "labelWidth" : 130,
+        "name" : "n_start_date_gtandeq",
+        "noPrivDisplayMode" : 1,
+        "getPSAppDEField" : {
+          "name" : "START_DATE",
+          "codeName" : "start_date"
+        },
+        "getPSEditor" : {
+          "editorType" : "HIDDEN",
+          "name" : "n_start_date_gtandeq"
+        },
+        "getPSLayoutPos" : {
+          "colMD" : 24,
+          "layout" : "TABLE_24COL"
+        },
+        "valueFormat" : "YYYY-MM-DD",
+        "allowEmpty" : true,
+        "hidden" : true
+      }, {
+        "caption" : "开始时间",
+        "codeName" : "n_start_date_lt",
+        "dataType" : 5,
+        "detailStyle" : "DEFAULT",
+        "detailType" : "FORMITEM",
+        "enableCond" : 3,
+        "ignoreInput" : 0,
+        "labelPos" : "LEFT",
+        "labelWidth" : 130,
+        "name" : "n_start_date_lt",
+        "noPrivDisplayMode" : 1,
+        "getPSAppDEField" : {
+          "name" : "START_DATE",
+          "codeName" : "start_date"
+        },
+        "getPSEditor" : {
+          "editorType" : "HIDDEN",
+          "name" : "n_start_date_lt"
+        },
+        "getPSLayoutPos" : {
+          "colMD" : 24,
+          "layout" : "TABLE_24COL"
+        },
+        "valueFormat" : "YYYY-MM-DD",
+        "allowEmpty" : true,
+        "hidden" : true
+      } ],
+      "getPSLayout" : {
+        "childColMD" : 24,
+        "columnCount" : 24,
+        "layout" : "TABLE_24COL"
+      },
+      "infoGroupMode" : false
+    } ],
+    "getPSLayout" : {
+      "childColMD" : 24,
+      "columnCount" : 24,
+      "layout" : "TABLE_24COL"
+    },
+    "searchButtonStyle" : "NONE",
+    "tabHeaderPos" : "TOP",
+    "enableAdvanceSearch" : false,
+    "enableAutoSearch" : true,
+    "enableFilterSave" : false,
+    "noTabHeader" : true,
+    "name" : "searchform",
+    "modelid" : "d9343094d8f8dc3f29790363fb2d59a9",
+    "modeltype" : "PSDEFORM_SEARCHFORM"
+  }, {
+    "codeName" : "kanban_view_kan_ban",
+    "controlType" : "KANBAN",
+    "getCreatePSControlAction" : {
+      "modelref" : true,
+      "id" : "create",
+      "actionName" : "Create",
+      "actionType" : "DEACTION",
+      "dataAccessAction" : "CREATE",
+      "name" : "create",
+      "getPSAppDEMethod" : {
+        "modelref" : true,
+        "id" : "create"
+      },
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+      }
+    },
+    "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES/PSKANBANS/kanban_view_kan_ban.json",
+    "getFetchPSControlAction" : {
+      "modelref" : true,
+      "id" : "fetch",
+      "actionType" : "DEDATASET",
+      "name" : "fetch",
+      "getPSAppDEMethod" : {
+        "modelref" : true,
+        "id" : "fetch_default"
+      },
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+      }
+    },
+    "getGetPSControlAction" : {
+      "modelref" : true,
+      "id" : "load",
+      "actionName" : "Get",
+      "actionType" : "DEACTION",
+      "dataAccessAction" : "READ",
+      "name" : "load",
+      "getPSAppDEMethod" : {
+        "modelref" : true,
+        "id" : "get"
+      },
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+      }
+    },
+    "groupLayout" : "ROW",
+    "groupMode" : "AUTO",
+    "getGroupPSAppDEField" : {
+      "name" : "STATISTICAL_PERIOD",
+      "codeName" : "statistical_period"
+    },
+    "getGroupPSCodeList" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__weeklies_period.json"
+    },
+    "getItemPSLayoutPanel" : {
+      "getAllPSPanelFields" : [ {
+        "id" : "owner",
+        "viewFieldName" : "OWNER"
+      } ],
+      "codeName" : "usr0709233906",
+      "controlType" : "PANEL",
+      "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES/PSPANELS/usr0709233906.json",
+      "layoutMode" : "TABLE_24COL",
+      "logicName" : "销售工作报告（领导）_看板_卡片面板",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+      },
+      "getPSControlParam" : { },
+      "getPSLayout" : {
+        "childColMD" : 24,
+        "columnCount" : 24,
+        "layout" : "TABLE_24COL"
+      },
+      "getRootPSPanelItems" : [ {
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "page_container",
+        "getPSLayout" : {
+          "dir" : "column",
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "colMD" : 24,
+          "layout" : "TABLE_24COL"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "文本(动态)",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "FIELD",
+          "name" : "owner",
+          "getPSEditor" : {
+            "editorType" : "SPAN",
+            "name" : "owner",
+            "getPSAppCodeList" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__owner.json"
+            },
+            "predefinedType" : "FIELD_TEXT_DYNAMIC",
+            "renderMode" : "TEXT_DYNAMIC",
+            "enableLinkView" : false
+          },
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX"
+          },
+          "viewFieldName" : "OWNER",
+          "convertToCodeItemText" : true
+        } ]
+      } ],
+      "name" : "itemlayoutpanel",
+      "modelid" : "97d8f3f7751a31dad12d0254161ccd81",
+      "modeltype" : "PSSYSVIEWPANEL"
+    },
+    "logicName" : "销售工作报告（领导）_看板",
+    "minorSortDir" : "ASC",
+    "getMinorSortPSAppDEField" : {
+      "name" : "START_DATE_SORT",
+      "codeName" : "start_date_sort"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSControlHandler" : {
+      "getPSHandlerActions" : [ {
+        "actionName" : "Update",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "UPDATE",
+        "name" : "updategroup",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "update"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        }
+      }, {
+        "actionName" : "Get",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "READ",
+        "name" : "load",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "get"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        }
+      }, {
+        "actionName" : "Create",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "CREATE",
+        "name" : "create",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "create"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        }
+      }, {
+        "actionName" : "Update",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "UPDATE",
+        "name" : "update",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "update"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        }
+      }, {
+        "actionName" : "Remove",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "DELETE",
+        "name" : "remove",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "remove"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        }
+      }, {
+        "actionType" : "DEDATASET",
+        "name" : "fetch",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "fetch_default"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+        }
+      } ],
+      "userDRAction" : "READ",
+      "enableDEFieldPrivilege" : false,
+      "id" : "数据视图处理器"
+    },
+    "getPSControlParam" : {
+      "autoLoad" : true,
+      "showBusyIndicator" : true,
+      "id" : "KANBAN"
+    },
+    "getPSDEDataViewDataItems" : [ {
+      "dataType" : 25,
+      "getFrontPSCodeList" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__owner.json"
+      },
+      "name" : "owner",
+      "getPSAppDEField" : {
+        "name" : "OWNER",
+        "codeName" : "owner"
+      }
+    }, {
+      "dataType" : 25,
+      "name" : "srfkey",
+      "getPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      }
+    }, {
+      "dataType" : 25,
+      "name" : "srfmajortext",
+      "getPSAppDEField" : {
+        "name" : "NAME",
+        "codeName" : "name"
+      }
+    } ],
+    "getPSDEDataViewItems" : [ {
+      "cLConvertMode" : "FRONT",
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DEF.LNAME.OWNER"
+      },
+      "caption" : "销售人员",
+      "dataItemName" : "owner",
+      "itemType" : "DATAITEM",
+      "name" : "OWNER",
+      "getPSAppDEField" : {
+        "name" : "OWNER",
+        "codeName" : "owner"
+      },
+      "getPSCodeList" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__owner.json"
+      },
+      "enableSort" : false
+    } ],
+    "pagingSize" : 1000,
+    "getRemovePSControlAction" : {
+      "modelref" : true,
+      "id" : "remove",
+      "actionName" : "Remove",
+      "actionType" : "DEACTION",
+      "dataAccessAction" : "DELETE",
+      "name" : "remove",
+      "getPSAppDEMethod" : {
+        "modelref" : true,
+        "id" : "remove"
+      },
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+      }
+    },
+    "getUpdateGroupPSControlAction" : {
+      "modelref" : true,
+      "id" : "updategroup",
+      "actionName" : "Update",
+      "actionType" : "DEACTION",
+      "dataAccessAction" : "UPDATE",
+      "name" : "updategroup",
+      "getPSAppDEMethod" : {
+        "modelref" : true,
+        "id" : "update"
+      },
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+      }
+    },
+    "getUpdatePSControlAction" : {
+      "modelref" : true,
+      "id" : "update",
+      "actionName" : "Update",
+      "actionType" : "DEACTION",
+      "dataAccessAction" : "UPDATE",
+      "name" : "update",
+      "getPSAppDEMethod" : {
+        "modelref" : true,
+        "id" : "update"
+      },
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+      }
+    },
+    "hasWFDataItems" : false,
+    "appendDEItems" : true,
+    "enableCardEdit" : false,
+    "enableCardEditGroup" : false,
+    "enableCardEditOrder" : false,
+    "enableCardNew" : false,
+    "enableGroup" : true,
+    "enablePagingBar" : false,
+    "noSort" : true,
+    "singleSelect" : true,
+    "name" : "kanban",
+    "modelid" : "6c16969b27db6be228ed1fb0d2010b53",
+    "modeltype" : "PSDEKANBAN"
+  }, {
+    "controlType" : "SEARCHBAR",
+    "name" : "searchbar",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSControlParam" : {
+      "id" : "searchbar"
+    },
+    "quickGroupCount" : -1,
+    "quickSearchMode" : 1,
+    "quickSearchWidth" : 0,
+    "enableFilter" : false,
+    "enableGroup" : false,
+    "enableQuickSearch" : true,
+    "mobileSearchBar" : false
+  }, {
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DE.LNAME.WEEKLIES"
+    },
+    "caption" : "销售工作报告",
+    "codeName" : "kanban_view_captionbar",
+    "controlType" : "CAPTIONBAR",
+    "name" : "captionbar",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSControlParam" : { }
+  } ],
+  "getPSDEViewCodeName" : "kanban_view",
+  "getPSDEViewId" : "8a11ad5742d381c479dc673992e46b1a",
+  "getPSViewLayoutPanel" : {
+    "codeName" : "layoutpanel",
+    "controlStyle" : "APPDEKANBANVIEW",
+    "controlType" : "VIEWLAYOUTPANEL",
+    "name" : "layoutpanel",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/WEEKLIES.json"
+    },
+    "getPSControlParam" : { },
+    "layoutBodyOnly" : true,
+    "layoutPanel" : true,
+    "useDefaultLayout" : true
+  },
+  "refFlag" : false,
+  "title" : "销售工作报告",
+  "viewStyle" : "DEFAULT",
+  "viewType" : "DEKANBANVIEW",
+  "xDataControlName" : "kanban",
+  "enableDP" : true,
+  "enableFilter" : true,
+  "enableQuickSearch" : true,
+  "enableSearch" : true,
+  "expandSearchForm" : true,
+  "modelid" : "d8d0b96d486f93f0147036c03fbd0c12",
+  "modeltype" : "PSAPPDEVIEW"
+}

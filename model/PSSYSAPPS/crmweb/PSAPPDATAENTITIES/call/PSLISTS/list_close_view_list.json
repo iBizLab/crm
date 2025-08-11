@@ -1,0 +1,153 @@
+{
+  "codeName" : "list_close_view_list",
+  "controlType" : "LIST",
+  "getCreatePSControlAction" : {
+    "modelref" : true,
+    "id" : "create",
+    "actionName" : "Create",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "CREATE",
+    "name" : "create",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "create"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/call.json"
+    }
+  },
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/call/PSLISTS/list_close_view_list.json",
+  "getFetchPSControlAction" : {
+    "modelref" : true,
+    "id" : "fetch",
+    "actionType" : "DEDATASET",
+    "name" : "fetch",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "fetch_close"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/call.json"
+    }
+  },
+  "getGetPSControlAction" : {
+    "modelref" : true,
+    "id" : "load",
+    "actionName" : "Get",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "READ",
+    "name" : "load",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "get"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/call.json"
+    }
+  },
+  "groupMode" : "NONE",
+  "getItemPSLayoutPanel" : {
+    "codeName" : "usr0428284216",
+    "controlType" : "PANEL",
+    "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/call/PSPANELS/usr0428284216.json",
+    "layoutMode" : "TABLE_24COL",
+    "logicName" : "List2_列表项面板",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/call.json"
+    },
+    "getPSControlParam" : { },
+    "getPSLayout" : {
+      "childColMD" : 24,
+      "columnCount" : 24,
+      "layout" : "TABLE_24COL"
+    },
+    "getRootPSPanelItems" : [ {
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "page_container",
+      "getPSLayout" : {
+        "dir" : "column",
+        "layout" : "FLEX"
+      },
+      "getPSLayoutPos" : {
+        "colMD" : 24,
+        "layout" : "TABLE_24COL"
+      }
+    } ],
+    "name" : "list_itempanel",
+    "modelid" : "84cb4f18cee34bfec994ba7c4e11e2c1",
+    "modeltype" : "PSSYSVIEWPANEL"
+  },
+  "logicName" : "close",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/call.json"
+  },
+  "getPSDEDataImport" : {
+    "modelref" : true,
+    "id" : "DataImport"
+  },
+  "getPSDEListDataItems" : [ {
+    "dataType" : 25,
+    "name" : "srfkey",
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "srfmajortext",
+    "getPSAppDEField" : {
+      "name" : "NAME",
+      "codeName" : "name"
+    }
+  } ],
+  "pagingSize" : 1000,
+  "getRemovePSControlAction" : {
+    "modelref" : true,
+    "id" : "remove",
+    "actionName" : "Remove",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "DELETE",
+    "name" : "remove",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "remove"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/call.json"
+    }
+  },
+  "getUpdatePSControlAction" : {
+    "modelref" : true,
+    "id" : "update",
+    "actionName" : "Update",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "UPDATE",
+    "name" : "update",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "update"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/call.json"
+    }
+  },
+  "hasWFDataItems" : false,
+  "enableGroup" : false,
+  "enableRowEdit" : false,
+  "enableRowEditGroup" : false,
+  "enableRowEditOrder" : false,
+  "enableRowNew" : false,
+  "noSort" : false,
+  "showHeader" : true,
+  "singleSelect" : false,
+  "modelid" : "0e1b3919ff91aa7e5a8cad557df8329e",
+  "modeltype" : "PSDELIST"
+}

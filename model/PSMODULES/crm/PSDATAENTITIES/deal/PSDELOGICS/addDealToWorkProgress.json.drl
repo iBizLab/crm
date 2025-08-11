@@ -1,0 +1,55 @@
+package cn.ibizlab.crm.crm.logic.deallogic.adddealtoworkprogress;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.deal dealadddealtoworkprogressdefault;
+                global cn.ibizlab.crm.core.crm.domain.work_progress dealadddealtoworkprogresswork_progress;
+                    global cn.ibizlab.crm.core.crm.service.Iwork_progressService work_progressservice;
+        global cn.ibizlab.crm.core.crm.service.IdealService iBzSysDealDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "dealadddealtoworkprogressbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "dealadddealtoworkprogressend1"
+            when
+            then
+                        update(dealadddealtoworkprogressdefault);//更新fact中变量值
+                        update(dealadddealtoworkprogresswork_progress);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备工作进展参数]
+            rule "prepareparam1"
+            ruleflow-group "dealadddealtoworkprogressprepareparam1"
+            when
+            then
+                            dealadddealtoworkprogresswork_progress.set("actiontype","create");
+                            dealadddealtoworkprogresswork_progress.set("targetid",dealadddealtoworkprogressdefault.get("id"));
+                            dealadddealtoworkprogresswork_progress.set("targettype","DEAL");
+                            dealadddealtoworkprogresswork_progress.set("targetname",dealadddealtoworkprogressdefault.get("dealname"));
+                            dealadddealtoworkprogresswork_progress.set("description",dealadddealtoworkprogressdefault.get("description"));
+                        update(dealadddealtoworkprogressdefault);//更新fact中变量值
+                        update(dealadddealtoworkprogresswork_progress);//更新fact中变量值
+            end
+
+            //逻辑处理节点[创建工作进展]
+            rule "deaction1"
+            ruleflow-group "dealadddealtoworkprogressdeaction1"
+            when
+            then
+                        work_progressservice.create(dealadddealtoworkprogresswork_progress);
+                        update(dealadddealtoworkprogressdefault);//更新fact中变量值
+                        update(dealadddealtoworkprogresswork_progress);//更新fact中变量值
+            end

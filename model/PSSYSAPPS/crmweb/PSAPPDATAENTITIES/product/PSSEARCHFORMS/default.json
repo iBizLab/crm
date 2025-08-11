@@ -1,0 +1,72 @@
+{
+  "codeName" : "default",
+  "controlType" : "SEARCHFORM",
+  "defaultLabelWidth" : 130,
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/product/PSSEARCHFORMS/default.json",
+  "logicName" : "默认搜索表单",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/product.json"
+  },
+  "getPSDEFormItems" : [ {
+    "id" : "n_product_name_like",
+    "dataType" : 25,
+    "getPSAppDEField" : {
+      "name" : "PRODUCT_NAME",
+      "codeName" : "product_name"
+    }
+  } ],
+  "getPSDEFormPages" : [ {
+    "caption" : "常规条件",
+    "codeName" : "formpage1",
+    "detailStyle" : "DEFAULT",
+    "detailType" : "FORMPAGE",
+    "name" : "formpage1",
+    "getPSDEFormDetails" : [ {
+      "caption" : "产品名称",
+      "codeName" : "n_product_name_like",
+      "dataType" : 25,
+      "detailStyle" : "DEFAULT",
+      "detailType" : "FORMITEM",
+      "enableCond" : 3,
+      "ignoreInput" : 0,
+      "labelPos" : "LEFT",
+      "labelWidth" : 130,
+      "name" : "n_product_name_like",
+      "noPrivDisplayMode" : 1,
+      "getPSAppDEField" : {
+        "name" : "PRODUCT_NAME",
+        "codeName" : "product_name"
+      },
+      "getPSEditor" : {
+        "editorType" : "TEXTBOX",
+        "name" : "n_product_name_like"
+      },
+      "getPSLayoutPos" : {
+        "colMD" : 24,
+        "layout" : "TABLE_24COL"
+      },
+      "allowEmpty" : true,
+      "showCaption" : true
+    } ],
+    "getPSLayout" : {
+      "childColMD" : 24,
+      "columnCount" : 24,
+      "layout" : "TABLE_24COL"
+    },
+    "infoGroupMode" : false
+  } ],
+  "getPSLayout" : {
+    "childColMD" : 24,
+    "columnCount" : 24,
+    "layout" : "TABLE_24COL"
+  },
+  "searchButtonStyle" : "DEFAULT",
+  "tabHeaderPos" : "TOP",
+  "enableAdvanceSearch" : false,
+  "enableAutoSearch" : false,
+  "enableFilterSave" : false,
+  "noTabHeader" : true,
+  "modelid" : "c7df1ca2f41aef3c80bcc901aee8956a",
+  "modeltype" : "PSDEFORM_SEARCHFORM"
+}

@@ -1,0 +1,324 @@
+{
+  "aggMode" : "NONE",
+  "codeName" : "deal_deal_his_grid_view_grid",
+  "columnEnableFilter" : 2,
+  "columnEnableLink" : 0,
+  "controlType" : "GRID",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal_history/PSGRIDS/deal_deal_his_grid_view_grid.json",
+  "getFetchPSControlAction" : {
+    "modelref" : true,
+    "id" : "fetch",
+    "actionType" : "DEDATASET",
+    "name" : "fetch",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "fetch_all"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal_history.json"
+    }
+  },
+  "groupMode" : "NONE",
+  "logicName" : "商机主信息阶段历史表格视图_表格",
+  "minorSortDir" : "DESC",
+  "getMinorSortPSAppDEField" : {
+    "name" : "CREATE_TIME",
+    "codeName" : "create_time"
+  },
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal_history.json"
+  },
+  "getPSDEGridColumns" : [ {
+    "align" : "LEFT",
+    "cLConvertMode" : "FRONT",
+    "caption" : "商机阶段",
+    "codeName" : "stage",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "stage",
+    "excelCaption" : "商机阶段",
+    "name" : "stage",
+    "noPrivDisplayMode" : 1,
+    "getPSAppCodeList" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__dealstage.json"
+    },
+    "getPSAppDEField" : {
+      "name" : "STAGE",
+      "codeName" : "stage"
+    },
+    "width" : 150,
+    "widthUnit" : "PX",
+    "enableSort" : true
+  }, {
+    "align" : "RIGHT",
+    "cLConvertMode" : "NONE",
+    "caption" : "金额",
+    "codeName" : "amount",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "amount",
+    "excelCaption" : "金额",
+    "name" : "amount",
+    "noPrivDisplayMode" : 1,
+    "getPSAppDEField" : {
+      "name" : "AMOUNT",
+      "codeName" : "amount"
+    },
+    "valueFormat" : "￥#,##0.00",
+    "width" : 150,
+    "widthUnit" : "PX",
+    "enableSort" : true
+  }, {
+    "align" : "CENTER",
+    "cLConvertMode" : "NONE",
+    "caption" : "可能性",
+    "codeName" : "probability",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "probability",
+    "excelCaption" : "可能性",
+    "name" : "probability",
+    "noPrivDisplayMode" : 1,
+    "getPSAppDEField" : {
+      "name" : "PROBABILITY",
+      "codeName" : "probability"
+    },
+    "width" : 100,
+    "widthUnit" : "PX",
+    "enableSort" : true
+  }, {
+    "align" : "RIGHT",
+    "cLConvertMode" : "NONE",
+    "caption" : "预期收益",
+    "codeName" : "expected_revenue",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "expected_revenue",
+    "excelCaption" : "预期收益",
+    "name" : "expected_revenue",
+    "noPrivDisplayMode" : 1,
+    "getPSAppDEField" : {
+      "name" : "EXPECTED_REVENUE",
+      "codeName" : "expected_revenue"
+    },
+    "valueFormat" : "￥#,##0.00",
+    "width" : 150,
+    "widthUnit" : "PX",
+    "enableSort" : true
+  }, {
+    "align" : "LEFT",
+    "cLConvertMode" : "NONE",
+    "caption" : "预计成交日期",
+    "codeName" : "closing_date",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "closing_date",
+    "excelCaption" : "预计成交日期",
+    "name" : "closing_date",
+    "noPrivDisplayMode" : 1,
+    "getPSAppDEField" : {
+      "name" : "CLOSING_DATE",
+      "codeName" : "closing_date"
+    },
+    "valueFormat" : "YYYY-MM-DD",
+    "width" : 150,
+    "widthUnit" : "PX",
+    "enableSort" : true
+  }, {
+    "align" : "LEFT",
+    "cLConvertMode" : "NONE",
+    "caption" : "阶段持续时间(日历天数)",
+    "codeName" : "stage_duration_calendar_days",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "stage_duration_calendar_days",
+    "excelCaption" : "阶段持续时间(日历天数)",
+    "name" : "stage_duration_calendar_days",
+    "noPrivDisplayMode" : 1,
+    "getPSAppDEField" : {
+      "name" : "STAGE_DURATION_CALENDAR_DAYS",
+      "codeName" : "stage_duration_calendar_days"
+    },
+    "width" : 200,
+    "widthUnit" : "PX",
+    "enableSort" : true
+  }, {
+    "align" : "LEFT",
+    "cLConvertMode" : "NONE",
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.UPDATE_TIME"
+    },
+    "caption" : "更新时间",
+    "codeName" : "update_time",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "update_time",
+    "excelCaption" : "更新时间",
+    "name" : "update_time",
+    "noPrivDisplayMode" : 1,
+    "getPSAppDEField" : {
+      "name" : "UPDATE_TIME",
+      "codeName" : "update_time"
+    },
+    "valueFormat" : "YYYY-MM-DD HH:mm:ss",
+    "width" : 200,
+    "widthUnit" : "PX",
+    "enableSort" : true
+  }, {
+    "align" : "LEFT",
+    "cLConvertMode" : "FRONT",
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.UPDATE_MAN"
+    },
+    "caption" : "更新人",
+    "codeName" : "update_man",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "update_man",
+    "excelCaption" : "更新人",
+    "name" : "update_man",
+    "noPrivDisplayMode" : 1,
+    "getPSAppCodeList" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__SysOperator.json"
+    },
+    "getPSAppDEField" : {
+      "name" : "UPDATE_MAN",
+      "codeName" : "update_man"
+    },
+    "width" : 150,
+    "widthUnit" : "PX",
+    "enableSort" : true
+  } ],
+  "getPSDEGridDataItems" : [ {
+    "dataType" : 25,
+    "name" : "stage",
+    "getPSAppDEField" : {
+      "name" : "STAGE",
+      "codeName" : "stage"
+    }
+  }, {
+    "format" : "￥#,##0.00",
+    "dataType" : 6,
+    "name" : "amount",
+    "getPSAppDEField" : {
+      "name" : "AMOUNT",
+      "codeName" : "amount"
+    }
+  }, {
+    "dataType" : 9,
+    "name" : "probability",
+    "getPSAppDEField" : {
+      "name" : "PROBABILITY",
+      "codeName" : "probability"
+    }
+  }, {
+    "format" : "￥#,##0.00",
+    "dataType" : 6,
+    "name" : "expected_revenue",
+    "getPSAppDEField" : {
+      "name" : "EXPECTED_REVENUE",
+      "codeName" : "expected_revenue"
+    }
+  }, {
+    "format" : "YYYY-MM-DD",
+    "dataType" : 5,
+    "name" : "closing_date",
+    "getPSAppDEField" : {
+      "name" : "CLOSING_DATE",
+      "codeName" : "closing_date"
+    }
+  }, {
+    "dataType" : 9,
+    "name" : "stage_duration_calendar_days",
+    "getPSAppDEField" : {
+      "name" : "STAGE_DURATION_CALENDAR_DAYS",
+      "codeName" : "stage_duration_calendar_days"
+    }
+  }, {
+    "format" : "YYYY-MM-DD HH:mm:ss",
+    "dataType" : 5,
+    "name" : "update_time",
+    "getPSAppDEField" : {
+      "name" : "UPDATE_TIME",
+      "codeName" : "update_time"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "update_man",
+    "getPSAppDEField" : {
+      "name" : "UPDATE_MAN",
+      "codeName" : "update_man"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "srfkey",
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "srfdataaccaction",
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    },
+    "dataAccessAction" : true
+  }, {
+    "dataType" : 25,
+    "name" : "deal_id",
+    "getPSAppDEField" : {
+      "name" : "DEAL_ID",
+      "codeName" : "deal_id"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "srfmajortext",
+    "getPSAppDEField" : {
+      "name" : "NAME",
+      "codeName" : "name"
+    }
+  } ],
+  "getPSDEGridEditItems" : [ {
+    "caption" : "标识",
+    "codeName" : "srfkey",
+    "enableCond" : 3,
+    "ignoreInput" : 0,
+    "name" : "srfkey",
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    },
+    "getPSEditor" : {
+      "editorType" : "HIDDEN",
+      "name" : "srfkey"
+    },
+    "allowEmpty" : true
+  } ],
+  "pagingSize" : 1000,
+  "getRemovePSControlAction" : {
+    "actionName" : "Remove",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "DELETE",
+    "name" : "remove",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "remove"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal_history.json"
+    }
+  },
+  "sortMode" : "REMOTE",
+  "hasWFDataItems" : false,
+  "enableColFilter" : false,
+  "enableCustomized" : true,
+  "enableGroup" : false,
+  "enablePagingBar" : false,
+  "enableRowEdit" : false,
+  "enableRowEditOrder" : false,
+  "enableRowNew" : false,
+  "forceFit" : false,
+  "hideHeader" : false,
+  "noSort" : false,
+  "singleSelect" : false,
+  "modelid" : "74b2fa79f596fe405f22527dc4014b5b",
+  "modeltype" : "PSDEGRID"
+}

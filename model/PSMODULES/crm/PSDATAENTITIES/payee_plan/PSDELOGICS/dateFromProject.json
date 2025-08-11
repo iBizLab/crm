@@ -1,0 +1,217 @@
+{
+  "codeName" : "dateFromProject",
+  "defaultParamName" : "Default",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/payee_plan/PSDELOGICS/dateFromProject.json",
+  "logicName" : "将订单数据传给计划",
+  "memo" : "获取订单的数据并赋给计划展示",
+  "name" : "将订单数据传给计划",
+  "getPSDELogicNodes" : [ {
+    "codeName" : "Begin",
+    "leftPos" : 200,
+    "logicNodeType" : "BEGIN",
+    "name" : "开始",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "Begin"
+      }
+    } ],
+    "topPos" : 200,
+    "parallelOutput" : true
+  }, {
+    "codeName" : "PREPAREPARAM1",
+    "leftPos" : 353,
+    "logicNodeType" : "PREPAREPARAM",
+    "name" : "准备参数",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "DEACTION1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM1"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "dstFieldName" : "ID",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "PROJECT"
+      },
+      "name" : "Default[PROJECT_ID] ==> PROJECT[ID]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "PROJECT_ID",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    } ],
+    "topPos" : 208
+  }, {
+    "codeName" : "DEACTION1",
+    "getDstPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/project/PSDEACTIONS/Get.json"
+    },
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "PROJECT"
+    },
+    "getDstPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/project.json"
+    },
+    "leftPos" : 550,
+    "logicNodeType" : "DEACTION",
+    "name" : "实体行为",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM2"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "DEACTION1"
+      }
+    } ],
+    "getRetPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "PROJECT"
+    },
+    "topPos" : 208
+  }, {
+    "codeName" : "PREPAREPARAM2",
+    "leftPos" : 830,
+    "logicNodeType" : "PREPAREPARAM",
+    "name" : "准备参数",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "END1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM2"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "dstFieldName" : "O_NUMBER",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "name" : "PROJECT[BUSINESS_LINE] ==> Default[O_NUMBER]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "BUSINESS_LINE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "PROJECT"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "dstFieldName" : "BUSINESS_LINE",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "name" : "PROJECT[BUSINESS_LINE] ==> Default[BUSINESS_LINE]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "BUSINESS_LINE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "PROJECT"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "dstFieldName" : "SETTLEMENT_AMOUNT",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "name" : "PROJECT[SETTLEMENT_AMOUNT] ==> Default[SETTLEMENT_AMOUNT]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "SETTLEMENT_AMOUNT",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "PROJECT"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "dstFieldName" : "ACCOUNT_NAME",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "name" : "PROJECT[ACCOUNT_NAME] ==> Default[ACCOUNT_NAME]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "ACCOUNT_NAME",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "PROJECT"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "dstFieldName" : "ORDER_DATE",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "name" : "PROJECT[ORDER_DATE] ==> Default[ORDER_DATE]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "ORDER_DATE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "PROJECT"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    } ],
+    "topPos" : 208
+  }, {
+    "codeName" : "END1",
+    "leftPos" : 1184,
+    "logicNodeType" : "END",
+    "name" : "结束",
+    "getReturnParam" : {
+      "modelref" : true,
+      "id" : "Default"
+    },
+    "returnType" : "LOGICPARAM",
+    "topPos" : 208
+  } ],
+  "getPSDELogicParams" : [ {
+    "codeName" : "Default",
+    "logicName" : "传入变量",
+    "name" : "传入变量",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan.json"
+    },
+    "default" : true,
+    "entityParam" : true
+  }, {
+    "codeName" : "PROJECT",
+    "logicName" : "订单数据",
+    "name" : "订单数据",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/project.json"
+    },
+    "entityParam" : true
+  } ],
+  "getStartPSDELogicNode" : {
+    "modelref" : true,
+    "id" : "Begin"
+  },
+  "enableBackend" : true,
+  "enableFront" : false
+}

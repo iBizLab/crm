@@ -1,0 +1,209 @@
+{
+  "codeName" : "data_view_multimode_data_view",
+  "controlType" : "DATAVIEW",
+  "getCreatePSControlAction" : {
+    "modelref" : true,
+    "id" : "create",
+    "actionName" : "Create",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "CREATE",
+    "name" : "create",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "create"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+    }
+  },
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task/PSDATAVIEWS/data_view_multimode_data_view.json",
+  "getFetchPSControlAction" : {
+    "modelref" : true,
+    "id" : "fetch",
+    "actionType" : "DEDATASET",
+    "name" : "fetch",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "fetch_default"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+    }
+  },
+  "getGetPSControlAction" : {
+    "modelref" : true,
+    "id" : "load",
+    "actionName" : "Get",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "READ",
+    "name" : "load",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "get"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+    }
+  },
+  "groupLayout" : "ROW",
+  "groupMode" : "AUTO",
+  "getGroupPSAppDEField" : {
+    "name" : "DUE_DATE",
+    "codeName" : "due_date"
+  },
+  "getItemPSLayoutPanel" : {
+    "getAllPSPanelFields" : [ {
+      "id" : "subject",
+      "viewFieldName" : "SUBJECT"
+    } ],
+    "codeName" : "usr0318649260",
+    "controlType" : "PANEL",
+    "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task/PSPANELS/usr0318649260.json",
+    "layoutMode" : "TABLE_24COL",
+    "logicName" : "客户多模式卡片视图_卡片视图_卡片面板",
+    "memo" : "自动生成",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+    },
+    "getPSControlParam" : { },
+    "getPSLayout" : {
+      "childColMD" : 24,
+      "columnCount" : 24,
+      "layout" : "TABLE_24COL"
+    },
+    "getRootPSPanelItems" : [ {
+      "caption" : "容器",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "container",
+      "getPSLayout" : {
+        "layout" : "FLEX"
+      },
+      "getPSLayoutPos" : {
+        "colMD" : 24,
+        "layout" : "TABLE_24COL"
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "文本(动态)",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "FIELD",
+        "name" : "subject",
+        "getPSEditor" : {
+          "editorType" : "SPAN",
+          "name" : "subject",
+          "predefinedType" : "FIELD_TEXT_DYNAMIC",
+          "renderMode" : "TEXT_DYNAMIC",
+          "enableLinkView" : false
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "layout" : "FLEX"
+        },
+        "viewFieldName" : "SUBJECT"
+      } ]
+    } ],
+    "name" : "itemlayoutpanel",
+    "modelid" : "4c5f1d909e5e2beef22ddaec309c9d4e",
+    "modeltype" : "PSSYSVIEWPANEL"
+  },
+  "logicName" : "任务多模式卡片视图_卡片视图",
+  "memo" : "自动生成",
+  "minorSortDir" : "ASC",
+  "getMinorSortPSAppDEField" : {
+    "name" : "DUE_DATE",
+    "codeName" : "due_date"
+  },
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+  },
+  "getPSDEDataImport" : {
+    "modelref" : true,
+    "id" : "DataImport"
+  },
+  "getPSDEDataViewDataItems" : [ {
+    "dataType" : 25,
+    "name" : "subject",
+    "getPSAppDEField" : {
+      "name" : "SUBJECT",
+      "codeName" : "subject"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "srfkey",
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "srfmajortext",
+    "getPSAppDEField" : {
+      "name" : "SUBJECT",
+      "codeName" : "subject"
+    }
+  } ],
+  "getPSDEDataViewItems" : [ {
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.SUBJECT"
+    },
+    "caption" : "主题",
+    "dataItemName" : "subject",
+    "itemType" : "DATAITEM",
+    "name" : "SUBJECT",
+    "getPSAppDEField" : {
+      "name" : "SUBJECT",
+      "codeName" : "subject"
+    },
+    "enableSort" : false
+  } ],
+  "pagingSize" : 1000,
+  "getRemovePSControlAction" : {
+    "modelref" : true,
+    "id" : "remove",
+    "actionName" : "Remove",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "DELETE",
+    "name" : "remove",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "remove"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+    }
+  },
+  "getUpdatePSControlAction" : {
+    "modelref" : true,
+    "id" : "update",
+    "actionName" : "Update",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "UPDATE",
+    "name" : "update",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "update"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+    }
+  },
+  "hasWFDataItems" : false,
+  "appendDEItems" : true,
+  "enableCardEdit" : false,
+  "enableCardEditGroup" : false,
+  "enableCardEditOrder" : false,
+  "enableCardNew" : false,
+  "enableGroup" : true,
+  "enablePagingBar" : false,
+  "noSort" : true,
+  "singleSelect" : false,
+  "modelid" : "a48f5f6cc53eb992c4e2080834a44ea4",
+  "modeltype" : "PSDEDATAVIEW"
+}

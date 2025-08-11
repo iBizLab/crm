@@ -1,0 +1,31 @@
+{
+  "codeListTag" : "crm__Rating",
+  "codeListType" : "STATIC",
+  "codeName" : "crm__Rating",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__Rating.json",
+  "emptyText" : "未定义",
+  "name" : "等级",
+  "getPSCodeItems" : [ {
+    "codeName" : "item_10",
+    "text" : "已获得",
+    "value" : "10"
+  }, {
+    "codeName" : "item_20",
+    "text" : "活动的",
+    "value" : "20"
+  }, {
+    "codeName" : "item_30",
+    "text" : "市场失败",
+    "value" : "30"
+  }, {
+    "codeName" : "item_40",
+    "text" : "项目取消",
+    "value" : "40"
+  }, {
+    "codeName" : "item_50",
+    "text" : "关闭",
+    "value" : "50"
+  } ],
+  "enableCache" : true
+}

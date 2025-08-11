@@ -1,0 +1,28 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "CUSTOM",
+  "actionType" : "DELOGIC",
+  "codeName" : "lead_cancel_relation",
+  "dataAccessAction" : "UPDATE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEACTIONS/lead_cancel_relation.json",
+  "logicName" : "线索取消关联任务和活动",
+  "name" : "lead_cancel_relation",
+  "getPSDEActionInput" : {
+    "name" : "Lead_cancel_relationInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "task_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Lead_cancel_relationResult",
+    "type" : "VOID"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/task/PSDELOGICS/lead_cancel_relation.json"
+  },
+  "enableAudit" : true,
+  "enableFront" : false
+}

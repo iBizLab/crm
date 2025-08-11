@@ -1,0 +1,27 @@
+{
+  "codeName" : "UsrDRItem0418626619",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/account/PSDEDRITEMS/UsrDRItem0418626619.json",
+  "itemType" : "CUSTOM",
+  "name" : "下一个活动嵌入视图",
+  "getPSNavigateContexts" : [ {
+    "key" : "N_OWNER_ID_EQ",
+    "name" : "N_OWNER_ID_EQ",
+    "value" : "id",
+    "rawValue" : false
+  } ],
+  "getPSNavigateParams" : [ {
+    "key" : "n_owner_id_eq",
+    "name" : "n_owner_id_eq",
+    "value" : "id",
+    "rawValue" : false
+  } ],
+  "parentDataJO" : {
+    "srfparentdename" : "ACCOUNT",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "list_view_relation",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "actionMode" : "CUSTOM",
+  "actionType" : "USERCUSTOM",
+  "codeName" : "Async_addLeadtoWorkProgress",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDEACTIONS/Async_addLeadtoWorkProgress.json",
+  "logicName" : "异步新建线索时添加到工作进展",
+  "name" : "Async_addLeadtoWorkProgress",
+  "getPSDEActionInput" : {
+    "name" : "Async_addLeadtoWorkProgressInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "lead_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Async_addLeadtoWorkProgressResult",
+    "type" : "ASYNCACTION"
+  },
+  "getRealPSDEAction" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDEACTIONS/addLeadtoWorkProgress.json"
+  },
+  "asyncAction" : true,
+  "enableAudit" : true
+}

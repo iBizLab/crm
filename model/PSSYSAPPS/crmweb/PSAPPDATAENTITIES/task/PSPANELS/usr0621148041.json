@@ -1,0 +1,31 @@
+{
+  "codeName" : "usr0621148041",
+  "controlType" : "PANEL",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task/PSPANELS/usr0621148041.json",
+  "layoutMode" : "TABLE_24COL",
+  "logicName" : "任务看板_看板_卡片面板",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+  },
+  "getPSLayout" : {
+    "childColMD" : 24,
+    "columnCount" : 24,
+    "layout" : "TABLE_24COL"
+  },
+  "getRootPSPanelItems" : [ {
+    "itemStyle" : "DEFAULT",
+    "itemType" : "CONTAINER",
+    "name" : "page_container",
+    "getPSLayout" : {
+      "dir" : "column",
+      "layout" : "FLEX"
+    },
+    "getPSLayoutPos" : {
+      "colMD" : 24,
+      "layout" : "TABLE_24COL"
+    }
+  } ],
+  "modelid" : "81949ff8f6dd7d6aeb85459aeaacb7af",
+  "modeltype" : "PSSYSVIEWPANEL"
+}

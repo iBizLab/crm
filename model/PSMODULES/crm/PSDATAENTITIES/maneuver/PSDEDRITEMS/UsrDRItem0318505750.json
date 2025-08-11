@@ -1,0 +1,16 @@
+{
+  "codeName" : "UsrDRItem0318505750",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/maneuver/PSDEDRITEMS/UsrDRItem0318505750.json",
+  "itemType" : "CUSTOM",
+  "memo" : "自动生成",
+  "name" : "活动多模式卡片视图",
+  "parentDataJO" : {
+    "srfparentdename" : "MANEUVER",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "data_view_multimode",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+  }
+}

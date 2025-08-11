@@ -1,0 +1,16 @@
+{
+  "codeName" : "UsrDRItem0318411314",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDRITEMS/UsrDRItem0318411314.json",
+  "itemType" : "CUSTOM",
+  "memo" : "自动生成",
+  "name" : "销售订单多模式表格视图",
+  "parentDataJO" : {
+    "srfparentdename" : "SALES_ORDER",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "grid_view_multimode",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+  }
+}

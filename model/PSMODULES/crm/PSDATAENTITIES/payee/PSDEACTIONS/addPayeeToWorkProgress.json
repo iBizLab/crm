@@ -1,0 +1,27 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "CUSTOM",
+  "actionType" : "DELOGIC",
+  "codeName" : "addPayeeToWorkProgress",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/payee/PSDEACTIONS/addPayeeToWorkProgress.json",
+  "logicName" : "新建收款记录添加到工作进展",
+  "name" : "addPayeeToWorkProgress",
+  "getPSDEActionInput" : {
+    "name" : "AddPayeeToWorkProgressInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "payee_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "AddPayeeToWorkProgressResult",
+    "type" : "VOID"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/payee/PSDELOGICS/addPayeeToWorkProgress.json"
+  },
+  "enableAudit" : true,
+  "enableFront" : false
+}

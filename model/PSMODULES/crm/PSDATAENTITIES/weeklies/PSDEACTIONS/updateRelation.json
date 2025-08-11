@@ -1,0 +1,31 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "GETDRAFT",
+  "actionType" : "DELOGIC",
+  "codeName" : "updateRelation",
+  "dataAccessAction" : "CREATE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/updateRelation.json",
+  "logicName" : "根据统计时间更新关联信息",
+  "name" : "updateRelation",
+  "getPSDEActionInput" : {
+    "name" : "UpdateRelationInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "weeklies_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "UpdateRelationResult",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "weeklies_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDELOGICS/updateRelation.json"
+  },
+  "enableFront" : false
+}

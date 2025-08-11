@@ -1,0 +1,34 @@
+{
+  "codeName" : "user",
+  "dERType" : "DER1N",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/payee_allocate/PSDERS/DER1N_PAYEE_ALLOCATE_USER_USER_ID.json",
+  "fKeyName" : "F07BC55FAB87EA21E0",
+  "logicName" : "名称",
+  "getMajorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/user.json"
+  },
+  "masterOrder" : -1,
+  "masterRS" : 0,
+  "minorCodeName" : "payee_allocates",
+  "getMinorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/payee_allocate.json"
+  },
+  "minorServiceCodeName" : "payee_allocates",
+  "name" : "DER1N_PAYEE_ALLOCATE_USER_USER_ID",
+  "orderValue" : 100,
+  "getPSPickupDEField" : {
+    "name" : "USER_ID",
+    "codeName" : "User_id"
+  },
+  "getPSPickupTextDEField" : {
+    "name" : "USER_NAME",
+    "codeName" : "user_name"
+  },
+  "pickupDEFName" : "USER_ID",
+  "removeActionType" : -1,
+  "removeOrder" : 0,
+  "serviceCodeName" : "user",
+  "enableFKey" : true
+}

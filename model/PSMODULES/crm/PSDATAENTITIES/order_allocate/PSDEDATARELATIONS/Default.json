@@ -1,0 +1,9 @@
+{
+  "codeName" : "Default",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/order_allocate/PSDEDATARELATIONS/Default.json",
+  "getFormCapPSLanguageRes" : {
+    "lanResTag" : "DE.LNAME.ORDER_ALLOCATE"
+  },
+  "formCaption" : "订单分配",
+  "name" : "订单分配默认关系界面组"
+}

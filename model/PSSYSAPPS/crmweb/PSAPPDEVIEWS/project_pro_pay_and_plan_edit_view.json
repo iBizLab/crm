@@ -1,0 +1,2723 @@
+{
+  "accUserMode" : 2,
+  "getCapPSLanguageRes" : {
+    "lanResTag" : "DE.LNAME.PROJECT"
+  },
+  "caption" : "订单详情收款计划和记录",
+  "codeName" : "project_pro_pay_and_plan_edit_view",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/project_pro_pay_and_plan_edit_view.json",
+  "name" : "projectproPayAndPlanEditView",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+  },
+  "getPSAppModule" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/crm.json"
+  },
+  "getPSDEViewCodeName" : "proPayAndPlanEditView",
+  "getPSDEViewId" : "fc0d39ca38e533e3c6d22eeac0ca43a5",
+  "getPSViewLayoutPanel" : {
+    "codeName" : "usr0605810592",
+    "controlType" : "VIEWLAYOUTPANEL",
+    "layoutMode" : "FLEX",
+    "logicName" : "proPayAndPlanEditView编辑视图布局面板",
+    "name" : "layoutpanel",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+    },
+    "getPSControlParam" : { },
+    "getPSLayout" : {
+      "layout" : "FLEX"
+    },
+    "getRootPSPanelItems" : [ {
+      "caption" : "容器",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "view_header",
+      "getPSLayout" : {
+        "align" : "space-between",
+        "dir" : "row",
+        "layout" : "FLEX",
+        "vAlign" : "center"
+      },
+      "getPSLayoutPos" : {
+        "grow" : -1,
+        "layout" : "FLEX",
+        "shrink" : 0
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "view_header_left",
+        "getPSLayout" : {
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "heightMode" : "FULL",
+          "layout" : "FLEX"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "容器",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CONTAINER",
+          "name" : "view_captionbar",
+          "getPSLayout" : {
+            "align" : "center",
+            "layout" : "FLEX"
+          },
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "heightMode" : "FULL",
+            "layout" : "FLEX"
+          },
+          "getPSPanelItems" : [ {
+            "caption" : "页面标题",
+            "itemStyle" : "DEFAULT",
+            "itemType" : "CTRLPOS",
+            "name" : "captionbar",
+            "getPSLayoutPos" : {
+              "grow" : -1,
+              "layout" : "FLEX"
+            },
+            "showCaption" : true
+          } ]
+        } ]
+      }, {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "view_header_right",
+        "getPSLayout" : {
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "heightMode" : "FULL",
+          "layout" : "FLEX"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "容器",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CONTAINER",
+          "name" : "view_toolbar",
+          "getPSLayout" : {
+            "align" : "center",
+            "layout" : "FLEX"
+          },
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "heightMode" : "FULL",
+            "layout" : "FLEX"
+          },
+          "getPSPanelItems" : [ {
+            "caption" : "工具栏",
+            "itemStyle" : "DEFAULT",
+            "itemType" : "CTRLPOS",
+            "name" : "toolbar",
+            "getPSLayoutPos" : {
+              "grow" : -1,
+              "layout" : "FLEX"
+            },
+            "showCaption" : true
+          } ]
+        } ]
+      } ],
+      "predefinedType" : "VIEWHEADER"
+    }, {
+      "caption" : "容器",
+      "contentHeight" : 500.0,
+      "height" : 500.0,
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "view_content",
+      "getPSLayout" : {
+        "layout" : "FLEX"
+      },
+      "getPSLayoutPos" : {
+        "grow" : 1,
+        "height" : 500,
+        "heightMode" : "PX",
+        "layout" : "FLEX"
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "表单",
+        "contentHeight" : 500.0,
+        "height" : 500.0,
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CTRLPOS",
+        "name" : "form",
+        "getPSLayoutPos" : {
+          "grow" : 1,
+          "height" : 500,
+          "heightMode" : "PX",
+          "layout" : "FLEX"
+        },
+        "showCaption" : true
+      } ],
+      "predefinedType" : "VIEWCONTENT"
+    } ],
+    "layoutBodyOnly" : false,
+    "layoutPanel" : true,
+    "useDefaultLayout" : false,
+    "viewProxyMode" : true,
+    "modelid" : "8f6ff1841ccbc94185ab68815237bec5",
+    "modeltype" : "PSSYSVIEWLAYOUTPANEL",
+    "getPSAppViewEngines" : [ {
+      "engineCat" : "VIEW",
+      "engineType" : "EditView",
+      "name" : "engine"
+    } ],
+    "getPSControls" : [ {
+      "codeName" : "pro_pay_and_plan_edit_view_toolbar",
+      "controlType" : "TOOLBAR",
+      "logicName" : "订单详情收款计划和记录视图_工具栏",
+      "name" : "toolbar",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+      },
+      "getPSControlParam" : {
+        "id" : "TOOLBAR"
+      },
+      "xDataControlName" : "form",
+      "modelid" : "22b7d3f4ef1ea69292074002e8068159",
+      "modeltype" : "PSDETOOLBAR"
+    }, {
+      "codeName" : "pro_pay_and_plan_edit_view_form",
+      "controlType" : "FORM",
+      "getCreatePSControlAction" : {
+        "modelref" : true,
+        "id" : "create",
+        "actionName" : "Create",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "CREATE",
+        "name" : "create",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "create"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+        }
+      },
+      "defaultLabelWidth" : 130,
+      "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project/PSFORMS/pro_pay_and_plan_edit_view_form.json",
+      "getGetDraftFromPSControlAction" : {
+        "modelref" : true,
+        "id" : "loaddraftfrom",
+        "actionName" : "GETDRAFTFROM",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "CREATE",
+        "name" : "loaddraftfrom",
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+        }
+      },
+      "getGetDraftPSControlAction" : {
+        "modelref" : true,
+        "id" : "loaddraft",
+        "actionName" : "GetDraft",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "CREATE",
+        "name" : "loaddraft",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "get_draft"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+        }
+      },
+      "getGetPSControlAction" : {
+        "modelref" : true,
+        "id" : "load",
+        "actionName" : "Get",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "READ",
+        "name" : "load",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "get"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+        }
+      },
+      "logicName" : "订单详情收款计划和记录视图_表单",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+      },
+      "getPSControlHandler" : {
+        "getPSHandlerActions" : [ {
+          "actionName" : "GetDraft",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "CREATE",
+          "name" : "loaddraft",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "get_draft"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+          }
+        }, {
+          "actionName" : "GETDRAFTFROM",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "CREATE",
+          "name" : "loaddraftfrom",
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+          }
+        }, {
+          "actionName" : "Get",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "READ",
+          "name" : "load",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "get"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+          }
+        }, {
+          "actionName" : "Create",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "CREATE",
+          "name" : "create",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "create"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+          }
+        }, {
+          "actionName" : "Update",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "UPDATE",
+          "name" : "update",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "update"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+          }
+        }, {
+          "actionName" : "Remove",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "DELETE",
+          "name" : "remove",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "remove"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+          }
+        } ],
+        "enableDEFieldPrivilege" : false,
+        "id" : "编辑表单处理器"
+      },
+      "getPSControlParam" : {
+        "autoLoad" : true,
+        "showBusyIndicator" : true,
+        "id" : "FORM"
+      },
+      "getPSDEFormItems" : [ {
+        "id" : "srfupdatedate",
+        "hidden" : true,
+        "dataType" : 5,
+        "getPSAppDEField" : {
+          "name" : "UPDATE_TIME",
+          "codeName" : "update_time"
+        }
+      }, {
+        "id" : "srforikey",
+        "hidden" : true,
+        "dataType" : 25
+      }, {
+        "id" : "srfkey",
+        "hidden" : true,
+        "dataType" : 25,
+        "getPSAppDEField" : {
+          "name" : "ID",
+          "codeName" : "id"
+        }
+      }, {
+        "id" : "srfmajortext",
+        "hidden" : true,
+        "dataType" : 25,
+        "getPSAppDEField" : {
+          "name" : "NAME",
+          "codeName" : "name"
+        }
+      }, {
+        "id" : "srftempmode",
+        "hidden" : true,
+        "dataType" : 25
+      }, {
+        "id" : "srfuf",
+        "hidden" : true,
+        "dataType" : 25
+      }, {
+        "id" : "srfdeid",
+        "hidden" : true,
+        "dataType" : 25
+      }, {
+        "id" : "srfsourcekey",
+        "hidden" : true,
+        "dataType" : 25
+      }, {
+        "id" : "id",
+        "hidden" : true,
+        "dataType" : 25,
+        "getPSAppDEField" : {
+          "name" : "ID",
+          "codeName" : "id"
+        }
+      } ],
+      "getPSDEFormPages" : [ {
+        "caption" : "基本信息",
+        "codeName" : "formpage1",
+        "detailStyle" : "DEFAULT",
+        "detailType" : "FORMPAGE",
+        "name" : "formpage1",
+        "getPSDEFormDetails" : [ {
+          "codeName" : "druipart1",
+          "contentHeight" : 480.0,
+          "dRItemTag" : "UsrDRItem0604106360",
+          "detailStyle" : "DEFAULT",
+          "detailType" : "DRUIPART",
+          "height" : 480.0,
+          "name" : "druipart1",
+          "getPSAppView" : {
+            "accUserMode" : 2,
+            "getCapPSLanguageRes" : {
+              "lanResTag" : "DE.LNAME.PAYEE_PLAN"
+            },
+            "caption" : "收款计划",
+            "codeName" : "payee_plan_grid_view",
+            "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_plan_grid_view.json",
+            "gridRowActiveMode" : 2,
+            "name" : "payee_plangrid_view",
+            "getPSAppDataEntity" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+            },
+            "getPSAppModule" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/crm.json"
+            },
+            "getPSAppViewEngines" : [ {
+              "engineCat" : "VIEW",
+              "engineType" : "GridView",
+              "name" : "engine"
+            } ],
+            "getPSAppViewLogics" : [ {
+              "logicTrigger" : "CUSTOM",
+              "logicType" : "APPUILOGIC",
+              "name" : "newdata",
+              "getPSAppUILogic" : {
+                "actionAfterWizard" : "DEFAULT",
+                "logicType" : "PREDEFINED",
+                "name" : "新建数据",
+                "getNewDataPSAppView" : {
+                  "openMode" : "POPUPMODAL",
+                  "getRefPSAppView" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_plan_edit_view.json",
+                    "viewType" : "DEEDITVIEW"
+                  }
+                },
+                "getPSAppUILogicRefViews" : [ {
+                  "openMode" : "POPUPMODAL",
+                  "getRefPSAppView" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_plan_edit_view.json",
+                    "viewType" : "DEEDITVIEW"
+                  }
+                } ],
+                "viewLogicType" : "APP_NEWDATA",
+                "batchAddOnly" : false,
+                "enableBatchAdd" : false,
+                "enableWizardAdd" : false
+              }
+            }, {
+              "logicTrigger" : "CUSTOM",
+              "logicType" : "APPUILOGIC",
+              "name" : "opendata",
+              "getPSAppUILogic" : {
+                "logicType" : "PREDEFINED",
+                "name" : "打开数据",
+                "getOpenDataPSAppView" : {
+                  "openMode" : "POPUPMODAL",
+                  "getRefPSAppView" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_plan_edit_view.json",
+                    "viewType" : "DEEDITVIEW"
+                  }
+                },
+                "getPSAppUILogicRefViews" : [ {
+                  "openMode" : "POPUPMODAL",
+                  "getRefPSAppView" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_plan_edit_view.json",
+                    "viewType" : "DEEDITVIEW"
+                  }
+                } ],
+                "viewLogicType" : "APP_OPENDATA",
+                "editMode" : true
+              }
+            } ],
+            "getPSAppViewRefs" : [ {
+              "name" : "EDITDATA",
+              "openMode" : "POPUPMODAL",
+              "realOpenMode" : "POPUPMODAL",
+              "realTitle" : "收款计划编辑视图",
+              "getRefPSAppView" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_plan_edit_view.json",
+                "viewType" : "DEEDITVIEW"
+              }
+            }, {
+              "name" : "NEWDATA",
+              "openMode" : "POPUPMODAL",
+              "realOpenMode" : "POPUPMODAL",
+              "realTitle" : "收款计划编辑视图",
+              "getRefPSAppView" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_plan_edit_view.json",
+                "viewType" : "DEEDITVIEW"
+              }
+            } ],
+            "getPSControls" : [ {
+              "codeName" : "grid_view_toolbar",
+              "controlType" : "TOOLBAR",
+              "logicName" : "收款计划_工具栏",
+              "name" : "toolbar",
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+              },
+              "getPSControlParam" : {
+                "id" : "TOOLBAR"
+              },
+              "getPSDEToolbarItems" : [ {
+                "getCapPSLanguageRes" : {
+                  "lanResTag" : "TBB.TEXT.*.NEW"
+                },
+                "caption" : "创建收款计划",
+                "groupExtractMode" : "ITEM",
+                "itemType" : "DEUIACTION",
+                "name" : "deuiaction1",
+                "noPrivDisplayMode" : 2,
+                "getPSAppViewUIAction" : {
+                  "modelref" : true,
+                  "id" : "toolbar_deuiaction1"
+                },
+                "getPSSysImage" : {
+                  "glyph" : "xf0f6@FontAwesome",
+                  "cssClass" : "fa fa-file-text-o"
+                },
+                "getPSUIAction" : {
+                  "getCapPSLanguageRes" : {
+                    "lanResTag" : "TBB.TEXT.*.NEW"
+                  },
+                  "caption" : "新建",
+                  "codeName" : "New",
+                  "fullCodeName" : "New",
+                  "name" : "表格界面_新建操作",
+                  "getPSSysImage" : {
+                    "glyph" : "xf0f6@FontAwesome",
+                    "cssClass" : "fa fa-file-text-o"
+                  },
+                  "predefinedType" : "GRIDVIEW_NEWACTION",
+                  "timeout" : 60000,
+                  "getTooltipPSLanguageRes" : {
+                    "lanResTag" : "TBB.TOOLTIP.*.NEW"
+                  },
+                  "uIActionMode" : "SYS",
+                  "uIActionTag" : "New",
+                  "uIActionType" : "DEUIACTION"
+                },
+                "tooltip" : "创建收款计划",
+                "getTooltipPSLanguageRes" : {
+                  "lanResTag" : "TBB.TOOLTIP.*.NEW"
+                },
+                "showCaption" : true,
+                "showIcon" : true
+              }, {
+                "caption" : "刷新",
+                "groupExtractMode" : "ITEM",
+                "itemType" : "DEUIACTION",
+                "name" : "deuiaction8",
+                "noPrivDisplayMode" : 2,
+                "getPSAppViewUIAction" : {
+                  "modelref" : true,
+                  "id" : "toolbar_deuiaction8"
+                },
+                "getPSSysImage" : {
+                  "glyph" : "xf021@FontAwesome",
+                  "cssClass" : "fa fa-refresh"
+                },
+                "getPSUIAction" : {
+                  "actionTarget" : "NONE",
+                  "caption" : "刷新",
+                  "codeName" : "Refresh",
+                  "fullCodeName" : "Refresh",
+                  "name" : "表格界面_刷新操作",
+                  "getPSSysImage" : {
+                    "glyph" : "xf021@FontAwesome",
+                    "cssClass" : "fa fa-refresh"
+                  },
+                  "predefinedType" : "GRIDVIEW_REFRESHACTION",
+                  "timeout" : 60000,
+                  "uIActionMode" : "SYS",
+                  "uIActionTag" : "Refresh",
+                  "uIActionType" : "DEUIACTION"
+                },
+                "tooltip" : "刷新",
+                "uIActionTarget" : "NONE",
+                "showCaption" : false,
+                "showIcon" : true
+              } ],
+              "xDataControlName" : "grid",
+              "modelid" : "752f46c0620889bac1576bde8a3cc57c",
+              "modeltype" : "PSDETOOLBAR"
+            }, {
+              "aggMode" : "NONE",
+              "codeName" : "grid_view_grid",
+              "columnEnableFilter" : 2,
+              "columnEnableLink" : 0,
+              "controlType" : "GRID",
+              "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan/PSGRIDS/grid_view_grid.json",
+              "getFetchPSControlAction" : {
+                "modelref" : true,
+                "id" : "fetch",
+                "actionType" : "DEDATASET",
+                "name" : "fetch",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "fetch_toward"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                }
+              },
+              "groupMode" : "NONE",
+              "logicName" : "收款计划_表格",
+              "minorSortDir" : "ASC",
+              "getMinorSortPSAppDEField" : {
+                "name" : "PLANNED_TIME",
+                "codeName" : "planned_time"
+              },
+              "getMovePSControlAction" : {
+                "actionName" : "move_order",
+                "actionType" : "DEACTION",
+                "name" : "move",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "move_order"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                }
+              },
+              "getOrderValuePSAppDEField" : {
+                "name" : "SEQUENCE",
+                "codeName" : "sequence"
+              },
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+              },
+              "getPSControlHandler" : {
+                "getPSHandlerActions" : [ {
+                  "actionName" : "Get",
+                  "actionType" : "DEACTION",
+                  "dataAccessAction" : "READ",
+                  "name" : "load",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "get"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                  }
+                }, {
+                  "actionName" : "Create",
+                  "actionType" : "DEACTION",
+                  "dataAccessAction" : "CREATE",
+                  "name" : "create",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "create"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                  }
+                }, {
+                  "actionName" : "Update",
+                  "actionType" : "DEACTION",
+                  "dataAccessAction" : "UPDATE",
+                  "name" : "update",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "update"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                  }
+                }, {
+                  "actionName" : "Remove",
+                  "actionType" : "DEACTION",
+                  "dataAccessAction" : "DELETE",
+                  "name" : "remove",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "remove"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                  }
+                }, {
+                  "actionName" : "move_order",
+                  "actionType" : "DEACTION",
+                  "name" : "move",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "move_order"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                  }
+                }, {
+                  "actionName" : "GetDraft",
+                  "actionType" : "DEACTION",
+                  "dataAccessAction" : "CREATE",
+                  "name" : "loaddraft",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "get_draft"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                  }
+                }, {
+                  "actionType" : "DEDATASET",
+                  "name" : "fetch",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "fetch_toward"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                  }
+                } ],
+                "userDRAction" : "READ",
+                "enableDEFieldPrivilege" : false,
+                "id" : "数据表格处理器"
+              },
+              "getPSControlParam" : {
+                "autoLoad" : true,
+                "showBusyIndicator" : true,
+                "ctrlParams" : {
+                  "SHOWMODE" : "MIXIN"
+                },
+                "id" : "GRID"
+              },
+              "getPSControls" : [ {
+                "codeName" : "grid_view_grid_batchtoolbar",
+                "controlType" : "TOOLBAR",
+                "logicName" : "批操作_工具栏",
+                "memo" : "自动生成",
+                "name" : "grid_batchtoolbar",
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                },
+                "getPSControlParam" : {
+                  "id" : "grid_batchtoolbar"
+                },
+                "getPSDEToolbarItems" : [ {
+                  "caption" : "创建任务",
+                  "groupExtractMode" : "ITEM",
+                  "itemType" : "DEUIACTION",
+                  "name" : "deuiaction1",
+                  "noPrivDisplayMode" : 2,
+                  "getPSAppViewUIAction" : {
+                    "modelref" : true,
+                    "id" : "grid_batchtoolbar_deuiaction1"
+                  },
+                  "getPSUIAction" : {
+                    "actionTarget" : "MULTIKEY",
+                    "caption" : "创建任务",
+                    "codeName" : "create_task",
+                    "getFrontPSAppView" : {
+                      "modelref" : true,
+                      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_batch_create_view.json",
+                      "viewType" : "DEOPTVIEW"
+                    },
+                    "fullCodeName" : "payee_plan_create_task",
+                    "memo" : "自动生成",
+                    "name" : "创建任务",
+                    "getPSAppDEMethod" : {
+                      "modelref" : true,
+                      "id" : "create_task"
+                    },
+                    "getPSAppDataEntity" : {
+                      "modelref" : true,
+                      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                    },
+                    "successMsg" : "创建完成",
+                    "timeout" : 60000,
+                    "uIActionMode" : "BACKEND",
+                    "uIActionTag" : "create_task",
+                    "uIActionType" : "DEUIACTION",
+                    "enableConfirm" : true,
+                    "id" : "create_task@payee_plan"
+                  },
+                  "tooltip" : "创建任务",
+                  "uIActionTarget" : "MULTIKEY",
+                  "hiddenItem" : true,
+                  "showCaption" : true,
+                  "showIcon" : true
+                }, {
+                  "caption" : "删除",
+                  "groupExtractMode" : "ITEM",
+                  "itemType" : "DEUIACTION",
+                  "name" : "deuiaction5",
+                  "noPrivDisplayMode" : 2,
+                  "getPSAppViewUIAction" : {
+                    "modelref" : true,
+                    "id" : "grid_batchtoolbar_deuiaction5"
+                  },
+                  "getPSUIAction" : {
+                    "actionTarget" : "MULTIKEY",
+                    "caption" : "删除",
+                    "codeName" : "remove",
+                    "confirmMsg" : "确定要删除所选的记录吗？",
+                    "fullCodeName" : "payee_plan_remove",
+                    "memo" : "自动生成",
+                    "name" : "删除",
+                    "getPSAppDEMethod" : {
+                      "modelref" : true,
+                      "id" : "remove"
+                    },
+                    "getPSAppDataEntity" : {
+                      "modelref" : true,
+                      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                    },
+                    "refreshMode" : 1,
+                    "successMsg" : "删除成功",
+                    "timeout" : 60000,
+                    "uIActionMode" : "BACKEND",
+                    "uIActionTag" : "remove",
+                    "uIActionType" : "DEUIACTION",
+                    "enableConfirm" : true,
+                    "reloadData" : true,
+                    "id" : "remove@payee_plan"
+                  },
+                  "tooltip" : "删除",
+                  "uIActionTarget" : "MULTIKEY",
+                  "showCaption" : true,
+                  "showIcon" : true
+                }, {
+                  "caption" : "标签",
+                  "itemType" : "ITEMS",
+                  "name" : "items1",
+                  "getPSDEToolbarItems" : [ {
+                    "caption" : "添加标签",
+                    "groupExtractMode" : "ITEM",
+                    "itemType" : "DEUIACTION",
+                    "name" : "deuiaction2",
+                    "noPrivDisplayMode" : 2,
+                    "getPSAppViewUIAction" : {
+                      "modelref" : true,
+                      "id" : "grid_batchtoolbar_deuiaction2"
+                    },
+                    "getPSUIAction" : {
+                      "actionTarget" : "MULTIKEY",
+                      "caption" : "添加标签",
+                      "codeName" : "add_tags",
+                      "getFrontPSAppView" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/tag_add_tag.json",
+                        "viewType" : "DEOPTVIEW"
+                      },
+                      "fullCodeName" : "payee_plan_add_tags",
+                      "memo" : "自动生成",
+                      "name" : "添加标签",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "add_tags"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                      },
+                      "refreshMode" : 1,
+                      "successMsg" : "已成功添加标签",
+                      "timeout" : 60000,
+                      "uIActionMode" : "BACKEND",
+                      "uIActionTag" : "add_tags",
+                      "uIActionType" : "DEUIACTION",
+                      "enableConfirm" : true,
+                      "reloadData" : true,
+                      "id" : "add_tags@payee_plan"
+                    },
+                    "tooltip" : "添加标签",
+                    "uIActionTarget" : "MULTIKEY",
+                    "hiddenItem" : true,
+                    "showCaption" : true,
+                    "showIcon" : true
+                  }, {
+                    "caption" : "移除标签",
+                    "groupExtractMode" : "ITEM",
+                    "itemType" : "DEUIACTION",
+                    "name" : "deuiaction3",
+                    "noPrivDisplayMode" : 2,
+                    "getPSAppViewUIAction" : {
+                      "modelref" : true,
+                      "id" : "grid_batchtoolbar_deuiaction3"
+                    },
+                    "getPSUIAction" : {
+                      "actionTarget" : "MULTIKEY",
+                      "caption" : "移除标签",
+                      "codeName" : "delete_tags",
+                      "getFrontPSAppView" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/tag_remove_tag.json",
+                        "viewType" : "DEOPTVIEW"
+                      },
+                      "fullCodeName" : "payee_plan_delete_tags",
+                      "memo" : "自动生成",
+                      "name" : "移除标签",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "delete_tags"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                      },
+                      "refreshMode" : 1,
+                      "successMsg" : "已成功移除标签",
+                      "timeout" : 60000,
+                      "uIActionMode" : "BACKEND",
+                      "uIActionTag" : "delete_tags",
+                      "uIActionType" : "DEUIACTION",
+                      "enableConfirm" : true,
+                      "reloadData" : true,
+                      "id" : "delete_tags@payee_plan"
+                    },
+                    "tooltip" : "移除标签",
+                    "uIActionTarget" : "MULTIKEY",
+                    "hiddenItem" : true,
+                    "showCaption" : true,
+                    "showIcon" : true
+                  } ],
+                  "getPSSysImage" : {
+                    "glyph" : "xf078@FontAwesome",
+                    "cssClass" : "fa fa-chevron-down"
+                  },
+                  "tooltip" : "标签",
+                  "showCaption" : true,
+                  "showIcon" : true
+                }, {
+                  "caption" : "操作",
+                  "itemType" : "ITEMS",
+                  "name" : "items2",
+                  "getPSDEToolbarItems" : [ {
+                    "caption" : "批量更新",
+                    "groupExtractMode" : "ITEM",
+                    "itemType" : "DEUIACTION",
+                    "name" : "deuiaction4",
+                    "noPrivDisplayMode" : 2,
+                    "getPSAppViewUIAction" : {
+                      "modelref" : true,
+                      "id" : "grid_batchtoolbar_deuiaction4"
+                    },
+                    "getPSUIAction" : {
+                      "actionTarget" : "MULTIKEY",
+                      "caption" : "批量更新",
+                      "codeName" : "batch_update",
+                      "fullCodeName" : "payee_plan_batch_update",
+                      "memo" : "自动生成",
+                      "name" : "批量更新",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "batch_update"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                      },
+                      "refreshMode" : 1,
+                      "successMsg" : "更新完成",
+                      "timeout" : 60000,
+                      "uIActionMode" : "BACKEND",
+                      "uIActionTag" : "batch_update",
+                      "uIActionType" : "DEUIACTION",
+                      "enableConfirm" : true,
+                      "reloadData" : true,
+                      "id" : "batch_update@payee_plan"
+                    },
+                    "tooltip" : "批量更新",
+                    "uIActionTarget" : "MULTIKEY",
+                    "hiddenItem" : true,
+                    "showCaption" : true,
+                    "showIcon" : true
+                  } ],
+                  "getPSSysImage" : {
+                    "glyph" : "xf078@FontAwesome",
+                    "cssClass" : "fa fa-chevron-down"
+                  },
+                  "tooltip" : "操作",
+                  "showCaption" : true,
+                  "showIcon" : true
+                } ],
+                "modelid" : "a1a0dfce290281ba2bcf70d9fdaf63ec",
+                "modeltype" : "PSDETOOLBAR"
+              } ],
+              "getPSDEDataImport" : {
+                "modelref" : true,
+                "id" : "DataImport"
+              },
+              "getPSDEGridColumns" : [ {
+                "align" : "CENTER",
+                "cLConvertMode" : "NONE",
+                "caption" : "计划收款时间",
+                "codeName" : "planned_time",
+                "columnType" : "DEFGRIDCOLUMN",
+                "dataItemName" : "planned_time",
+                "excelCaption" : "计划收款时间",
+                "memo" : "if(data.is_not_in_plan == 1){\n    return `未明确`\n}else{\n    return data.planned_time\n}",
+                "name" : "planned_time",
+                "noPrivDisplayMode" : 1,
+                "getPSAppDEField" : {
+                  "name" : "PLANNED_TIME",
+                  "codeName" : "planned_time"
+                },
+                "valueFormat" : "YYYY-MM-DD",
+                "width" : 135,
+                "widthUnit" : "PX",
+                "enableSort" : true
+              }, {
+                "align" : "RIGHT",
+                "cLConvertMode" : "NONE",
+                "caption" : "收款金额",
+                "codeName" : "amount",
+                "columnType" : "DEFGRIDCOLUMN",
+                "dataItemName" : "amount",
+                "excelCaption" : "收款金额",
+                "name" : "amount",
+                "noPrivDisplayMode" : 1,
+                "getPSAppDEField" : {
+                  "name" : "AMOUNT",
+                  "codeName" : "amount"
+                },
+                "unitName" : "元",
+                "valueFormat" : "#,##0.00",
+                "width" : 110,
+                "widthUnit" : "PX",
+                "enableSort" : true,
+                "enableUnitName" : true
+              }, {
+                "align" : "LEFT",
+                "cLConvertMode" : "NONE",
+                "caption" : "款项说明",
+                "codeName" : "description",
+                "columnType" : "DEFGRIDCOLUMN",
+                "dataItemName" : "description",
+                "excelCaption" : "款项说明",
+                "name" : "description",
+                "noPrivDisplayMode" : 1,
+                "getPSAppDEField" : {
+                  "name" : "DESCRIPTION",
+                  "codeName" : "description"
+                },
+                "getPSDEUIActionGroup" : {
+                  "codeName" : "Usr0606658416",
+                  "name" : "敏捷收款计划表格操作列",
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                  },
+                  "getPSUIActionGroupDetails" : [ {
+                    "actionLevel" : 200,
+                    "detailType" : "DEUIACTION",
+                    "name" : "u54591bd",
+                    "getPSSysImage" : {
+                      "glyph" : "xf045@FontAwesome",
+                      "cssClass" : "fa fa-share-square-o"
+                    },
+                    "getPSUIAction" : {
+                      "actionTarget" : "SINGLEDATA",
+                      "caption" : "生成收款记录",
+                      "codeName" : "create_payee",
+                      "getFrontPSAppView" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_payee_edit_view.json",
+                        "viewType" : "DEEDITVIEW"
+                      },
+                      "frontProcessType" : "WIZARD",
+                      "fullCodeName" : "payee_plan_create_payee",
+                      "name" : "生成收款记录",
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                      },
+                      "getPSNavigateParams" : [ {
+                        "key" : "planned_amount",
+                        "name" : "planned_amount",
+                        "value" : "amount",
+                        "rawValue" : false
+                      }, {
+                        "key" : "projectid",
+                        "name" : "projectid",
+                        "value" : "project",
+                        "rawValue" : false
+                      }, {
+                        "key" : "amount",
+                        "name" : "amount",
+                        "value" : "amount",
+                        "rawValue" : false
+                      }, {
+                        "key" : "planid",
+                        "name" : "planid",
+                        "value" : "id",
+                        "rawValue" : false
+                      }, {
+                        "key" : "plan_description",
+                        "name" : "plan_description",
+                        "value" : "description",
+                        "rawValue" : false
+                      }, {
+                        "key" : "description",
+                        "name" : "description",
+                        "value" : "description",
+                        "rawValue" : false
+                      } ],
+                      "getPSSysImage" : {
+                        "glyph" : "xf045@FontAwesome",
+                        "cssClass" : "fa fa-share-square-o"
+                      },
+                      "tooltip" : "生成收款记录",
+                      "uIActionMode" : "FRONT",
+                      "uIActionTag" : "create_payee",
+                      "uIActionType" : "DEUIACTION",
+                      "id" : "create_payee@payee_plan"
+                    },
+                    "tooltip" : "生成收款记录",
+                    "addSeparator" : false,
+                    "showCaption" : false,
+                    "showIcon" : true
+                  }, {
+                    "caption" : "拆分计划",
+                    "detailType" : "DEUIACTION",
+                    "name" : "uba9c3e9",
+                    "getPSSysImage" : {
+                      "glyph" : "xf0c4@FontAwesome",
+                      "cssClass" : "fa fa-cut"
+                    },
+                    "getPSUIAction" : {
+                      "actionTarget" : "NONE",
+                      "caption" : "拆分计划",
+                      "codeName" : "split_plan",
+                      "getFrontPSAppView" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_plan_edit_view.json",
+                        "viewType" : "DEEDITVIEW"
+                      },
+                      "frontProcessType" : "WIZARD",
+                      "fullCodeName" : "payee_plan_split_plan",
+                      "name" : "拆分计划",
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                      },
+                      "getPSNavigateContexts" : [ {
+                        "key" : "AMOUNT",
+                        "name" : "AMOUNT",
+                        "rawValue" : true
+                      }, {
+                        "key" : "PAYEE_PLAN",
+                        "name" : "PAYEE_PLAN",
+                        "rawValue" : true
+                      }, {
+                        "key" : "ID",
+                        "name" : "ID",
+                        "rawValue" : true
+                      } ],
+                      "getPSNavigateParams" : [ {
+                        "key" : "plan_status",
+                        "name" : "plan_status",
+                        "value" : "10",
+                        "rawValue" : true
+                      }, {
+                        "key" : "view_mode",
+                        "name" : "view_mode",
+                        "value" : "cut",
+                        "rawValue" : true
+                      }, {
+                        "key" : "last_id",
+                        "name" : "last_id",
+                        "value" : "id",
+                        "rawValue" : false
+                      }, {
+                        "key" : "last_amount",
+                        "name" : "last_amount",
+                        "value" : "amount",
+                        "rawValue" : false
+                      }, {
+                        "key" : "description",
+                        "name" : "description",
+                        "value" : "description",
+                        "rawValue" : false
+                      }, {
+                        "key" : "project_id",
+                        "name" : "project_id",
+                        "value" : "project_id",
+                        "rawValue" : false
+                      }, {
+                        "key" : "id",
+                        "name" : "id",
+                        "rawValue" : true
+                      } ],
+                      "getPSSysImage" : {
+                        "glyph" : "xf0c4@FontAwesome",
+                        "cssClass" : "fa fa-cut"
+                      },
+                      "tooltip" : "拆分计划",
+                      "uIActionMode" : "FRONT",
+                      "uIActionTag" : "split_plan",
+                      "uIActionType" : "DEUIACTION",
+                      "id" : "split_plan@payee_plan"
+                    },
+                    "tooltip" : "拆分计划",
+                    "addSeparator" : false,
+                    "showCaption" : true,
+                    "showIcon" : true
+                  }, {
+                    "caption" : "关闭计划",
+                    "detailType" : "DEUIACTION",
+                    "name" : "u0ef07c3",
+                    "getPSSysImage" : {
+                      "glyph" : "xf00d@FontAwesome",
+                      "cssClass" : "fa fa-close"
+                    },
+                    "getPSUIAction" : {
+                      "actionTarget" : "SINGLEKEY",
+                      "caption" : "关闭计划",
+                      "codeName" : "close_plan",
+                      "confirmMsg" : "是否确认关闭当前计划？",
+                      "fullCodeName" : "payee_plan_close_plan",
+                      "memo" : "计划状态改为50",
+                      "name" : "关闭计划",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "update"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                      },
+                      "getPSNavigateParams" : [ {
+                        "key" : "plan_status",
+                        "name" : "plan_status",
+                        "value" : "50",
+                        "rawValue" : true
+                      } ],
+                      "getPSSysImage" : {
+                        "glyph" : "xf00d@FontAwesome",
+                        "cssClass" : "fa fa-close"
+                      },
+                      "refreshMode" : 1,
+                      "successMsg" : "已关闭！",
+                      "timeout" : 60000,
+                      "uIActionMode" : "BACKEND",
+                      "uIActionTag" : "close_plan",
+                      "uIActionType" : "DEUIACTION",
+                      "enableConfirm" : true,
+                      "reloadData" : true,
+                      "id" : "close_plan@payee_plan"
+                    },
+                    "addSeparator" : false,
+                    "showCaption" : true,
+                    "showIcon" : true
+                  } ],
+                  "uniqueTag" : "payee_plan__Usr0606658416"
+                },
+                "width" : 200,
+                "widthUnit" : "PX",
+                "enableSort" : false
+              } ],
+              "getPSDEGridDataItems" : [ {
+                "format" : "YYYY-MM-DD",
+                "dataType" : 5,
+                "name" : "planned_time",
+                "getPSAppDEField" : {
+                  "name" : "PLANNED_TIME",
+                  "codeName" : "planned_time"
+                },
+                "scriptCode" : "(data.planned_time !== null && data.planned_time !== undefined && data.planned_time !== '') ? data.planned_time : \"未明确\"",
+                "customCode" : true
+              }, {
+                "format" : "#,##0.00",
+                "dataType" : 6,
+                "name" : "amount",
+                "getPSAppDEField" : {
+                  "name" : "AMOUNT",
+                  "codeName" : "amount"
+                }
+              }, {
+                "dataType" : 21,
+                "name" : "description",
+                "getPSAppDEField" : {
+                  "name" : "DESCRIPTION",
+                  "codeName" : "description"
+                }
+              }, {
+                "dataType" : 25,
+                "name" : "plan_status",
+                "getPSAppDEField" : {
+                  "name" : "PLAN_STATUS",
+                  "codeName" : "plan_status"
+                }
+              }, {
+                "dataType" : 25,
+                "name" : "srfkey",
+                "getPSAppDEField" : {
+                  "name" : "ID",
+                  "codeName" : "id"
+                }
+              }, {
+                "dataType" : 25,
+                "name" : "srfdataaccaction",
+                "getPSAppDEField" : {
+                  "name" : "ID",
+                  "codeName" : "id"
+                },
+                "dataAccessAction" : true
+              }, {
+                "dataType" : 25,
+                "name" : "project_id",
+                "getPSAppDEField" : {
+                  "name" : "PROJECT_ID",
+                  "codeName" : "project_id"
+                }
+              }, {
+                "dataType" : 25,
+                "name" : "srfmajortext",
+                "getPSAppDEField" : {
+                  "name" : "PLAN_NAME",
+                  "codeName" : "plan_name"
+                }
+              } ],
+              "getPSDEGridEditItems" : [ {
+                "caption" : "标识",
+                "codeName" : "srfkey",
+                "enableCond" : 3,
+                "ignoreInput" : 0,
+                "name" : "srfkey",
+                "getPSAppDEField" : {
+                  "name" : "ID",
+                  "codeName" : "id"
+                },
+                "getPSEditor" : {
+                  "editorType" : "HIDDEN",
+                  "name" : "srfkey"
+                },
+                "allowEmpty" : true
+              } ],
+              "pagingSize" : 100,
+              "getRemovePSControlAction" : {
+                "actionName" : "Remove",
+                "actionType" : "DEACTION",
+                "dataAccessAction" : "DELETE",
+                "name" : "remove",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "remove"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                }
+              },
+              "sortMode" : "REMOTE",
+              "hasWFDataItems" : false,
+              "enableColFilter" : false,
+              "enableCustomized" : false,
+              "enableGroup" : false,
+              "enablePagingBar" : false,
+              "enableRowEdit" : false,
+              "enableRowEditOrder" : true,
+              "enableRowNew" : false,
+              "forceFit" : false,
+              "hideHeader" : false,
+              "noSort" : false,
+              "singleSelect" : false,
+              "name" : "grid",
+              "modelid" : "12deea6bac41b8a23ea67bde2d7410d0",
+              "modeltype" : "PSDEGRID"
+            }, {
+              "codeName" : "grid_view_search_form",
+              "controlType" : "SEARCHFORM",
+              "defaultLabelWidth" : 130,
+              "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan/PSSEARCHFORMS/grid_view_search_form.json",
+              "logicName" : "收款计划_搜索表单",
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+              },
+              "getPSControlHandler" : {
+                "getPSHandlerActions" : [ {
+                  "actionType" : "FILTERACTION",
+                  "name" : "load",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "FilterGet"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                  }
+                }, {
+                  "actionType" : "FILTERACTION",
+                  "name" : "loaddraft",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "FilterGetDraft"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                  }
+                }, {
+                  "actionType" : "FILTERACTION",
+                  "name" : "search",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "FilterSearch"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+                  }
+                } ],
+                "enableDEFieldPrivilege" : false,
+                "id" : "搜索表单处理器"
+              },
+              "getPSControlParam" : {
+                "autoLoad" : true,
+                "showBusyIndicator" : true,
+                "id" : "SEARCHFORM"
+              },
+              "getPSDEFormPages" : [ {
+                "caption" : "常规条件",
+                "codeName" : "formpage1",
+                "detailStyle" : "DEFAULT",
+                "detailType" : "FORMPAGE",
+                "name" : "formpage1",
+                "getPSLayout" : {
+                  "childColMD" : 24,
+                  "columnCount" : 24,
+                  "layout" : "TABLE_24COL"
+                },
+                "infoGroupMode" : false
+              } ],
+              "getPSLayout" : {
+                "childColMD" : 24,
+                "columnCount" : 24,
+                "layout" : "TABLE_24COL"
+              },
+              "searchButtonStyle" : "DEFAULT",
+              "tabHeaderPos" : "TOP",
+              "enableAdvanceSearch" : false,
+              "enableAutoSearch" : false,
+              "enableFilterSave" : false,
+              "noTabHeader" : true,
+              "name" : "searchform",
+              "modelid" : "81537e3e978cc90391c2544b64b3cb9c",
+              "modeltype" : "PSDEFORM_SEARCHFORM"
+            }, {
+              "controlType" : "SEARCHBAR",
+              "name" : "searchbar",
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+              },
+              "getPSControlParam" : {
+                "id" : "searchbar"
+              },
+              "quickGroupCount" : -1,
+              "quickSearchMode" : 0,
+              "quickSearchWidth" : 0,
+              "enableFilter" : false,
+              "enableGroup" : false,
+              "enableQuickSearch" : false,
+              "mobileSearchBar" : false
+            }, {
+              "getCapPSLanguageRes" : {
+                "lanResTag" : "DE.LNAME.PAYEE_PLAN"
+              },
+              "caption" : "收款计划",
+              "codeName" : "grid_view_captionbar",
+              "controlType" : "CAPTIONBAR",
+              "name" : "captionbar",
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+              },
+              "getPSControlParam" : { }
+            } ],
+            "getPSDEViewCodeName" : "grid_view",
+            "getPSDEViewId" : "253d0b4f5b89d1d6031c362e0a2f022c",
+            "getPSViewLayoutPanel" : {
+              "codeName" : "layoutpanel",
+              "controlStyle" : "APPDEGRIDVIEW",
+              "controlType" : "VIEWLAYOUTPANEL",
+              "name" : "layoutpanel",
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+              },
+              "getPSControlParam" : { },
+              "layoutBodyOnly" : true,
+              "layoutPanel" : true,
+              "useDefaultLayout" : true
+            },
+            "title" : "收款计划",
+            "viewStyle" : "DEFAULT",
+            "viewType" : "DEGRIDVIEW",
+            "xDataControlName" : "grid",
+            "enableDP" : true,
+            "enableExport" : true,
+            "enableFilter" : true,
+            "enableImport" : true,
+            "enableRowEdit" : false,
+            "enableSearch" : true,
+            "rowEditDefault" : false,
+            "modelid" : "f193d0b64201e136ed9496eb23c59a28",
+            "modeltype" : "PSAPPDEVIEW",
+            "getPSAppDERSPaths" : [ [ {
+              "actionRSMode" : 1,
+              "codeName" : "payee_plans",
+              "dataRSMode" : 0,
+              "majorDECodeName" : "project",
+              "majorDEName" : "PROJECT",
+              "getMajorPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+              },
+              "minorDECodeName" : "payee_plan",
+              "minorDEName" : "PAYEE_PLAN",
+              "getMinorPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+              },
+              "name" : "DER1N_PAYEE_PLAN_PROJECT_PROJECT_ID",
+              "getParentPSAppDEField" : {
+                "name" : "PROJECT_ID",
+                "codeName" : "project_id"
+              },
+              "getParentTextPSAppDEField" : {
+                "name" : "PROJECT_NAME",
+                "codeName" : "project_name"
+              },
+              "rSMode" : 2
+            } ] ]
+          },
+          "getPSLayoutPos" : {
+            "colLG" : 12,
+            "colMD" : 24,
+            "height" : 480,
+            "heightMode" : "PX",
+            "layout" : "TABLE_24COL"
+          },
+          "parentDataJO" : {
+            "SRFPARENTTYPE" : "DER1N",
+            "srfparentdename" : "PROJECT",
+            "srfparentmode" : "DER1N_PAYEE_PLAN_PROJECT_PROJECT_ID",
+            "srfparentdefname" : "PROJECT_ID",
+            "SRFDER1NID" : "DER1N_PAYEE_PLAN_PROJECT_PROJECT_ID"
+          },
+          "needSave" : false,
+          "refreshItemsSetParamOnly" : false,
+          "showCaption" : true
+        }, {
+          "codeName" : "druipart2",
+          "contentHeight" : 480.0,
+          "dRItemTag" : "UsrDRItem0604272650",
+          "detailStyle" : "DEFAULT",
+          "detailType" : "DRUIPART",
+          "height" : 480.0,
+          "name" : "druipart2",
+          "getPSAppView" : {
+            "accUserMode" : 2,
+            "getCapPSLanguageRes" : {
+              "lanResTag" : "PAGE.CAPTION.PAYEE.GRID_VIEW"
+            },
+            "caption" : "收款记录",
+            "codeName" : "payee_grid_view",
+            "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_grid_view.json",
+            "gridRowActiveMode" : 2,
+            "name" : "payeegrid_view",
+            "getPSAppDataEntity" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+            },
+            "getPSAppModule" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/crm.json"
+            },
+            "getPSAppViewEngines" : [ {
+              "engineCat" : "VIEW",
+              "engineType" : "GridView",
+              "name" : "engine"
+            } ],
+            "getPSAppViewLogics" : [ {
+              "logicTrigger" : "CUSTOM",
+              "logicType" : "APPUILOGIC",
+              "name" : "newdata",
+              "getPSAppUILogic" : {
+                "actionAfterWizard" : "DEFAULT",
+                "logicType" : "PREDEFINED",
+                "name" : "新建数据",
+                "getNewDataPSAppView" : {
+                  "openMode" : "POPUPMODAL",
+                  "getRefPSAppView" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_payee_edit_view.json",
+                    "viewType" : "DEEDITVIEW"
+                  }
+                },
+                "getPSAppUILogicRefViews" : [ {
+                  "openMode" : "POPUPMODAL",
+                  "getRefPSAppView" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_payee_edit_view.json",
+                    "viewType" : "DEEDITVIEW"
+                  }
+                } ],
+                "viewLogicType" : "APP_NEWDATA",
+                "batchAddOnly" : false,
+                "enableBatchAdd" : false,
+                "enableWizardAdd" : false
+              }
+            }, {
+              "logicTrigger" : "CUSTOM",
+              "logicType" : "APPUILOGIC",
+              "name" : "opendata",
+              "getPSAppUILogic" : {
+                "logicType" : "PREDEFINED",
+                "name" : "打开数据",
+                "getOpenDataPSAppView" : {
+                  "openMode" : "POPUPMODAL",
+                  "getRefPSAppView" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_payee_edit_view.json",
+                    "viewType" : "DEEDITVIEW"
+                  }
+                },
+                "getPSAppUILogicRefViews" : [ {
+                  "openMode" : "POPUPMODAL",
+                  "getRefPSAppView" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_payee_edit_view.json",
+                    "viewType" : "DEEDITVIEW"
+                  }
+                } ],
+                "viewLogicType" : "APP_OPENDATA",
+                "editMode" : true
+              }
+            } ],
+            "getPSAppViewRefs" : [ {
+              "name" : "NEWDATA",
+              "realOpenMode" : "POPUPMODAL",
+              "realTitle" : "收付款编辑视图",
+              "getRealTitlePSLanguageRes" : {
+                "lanResTag" : "PAGE.TITLE.PAYEE.EDIT_VIEW"
+              },
+              "getRefPSAppView" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_payee_edit_view.json",
+                "viewType" : "DEEDITVIEW"
+              }
+            }, {
+              "name" : "EDITDATA",
+              "realOpenMode" : "POPUPMODAL",
+              "realTitle" : "收付款编辑视图",
+              "getRealTitlePSLanguageRes" : {
+                "lanResTag" : "PAGE.TITLE.PAYEE.EDIT_VIEW"
+              },
+              "getRefPSAppView" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_payee_edit_view.json",
+                "viewType" : "DEEDITVIEW"
+              }
+            } ],
+            "getPSControls" : [ {
+              "codeName" : "grid_view_toolbar",
+              "controlType" : "TOOLBAR",
+              "logicName" : "收款记录_工具栏",
+              "name" : "toolbar",
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+              },
+              "getPSControlParam" : {
+                "id" : "TOOLBAR"
+              },
+              "getPSDEToolbarItems" : [ {
+                "getCapPSLanguageRes" : {
+                  "lanResTag" : "TBB.TEXT.*.NEW"
+                },
+                "caption" : "创建收付款",
+                "groupExtractMode" : "ITEM",
+                "itemType" : "DEUIACTION",
+                "name" : "deuiaction1",
+                "noPrivDisplayMode" : 2,
+                "getPSAppViewUIAction" : {
+                  "modelref" : true,
+                  "id" : "toolbar_deuiaction1"
+                },
+                "getPSSysImage" : {
+                  "glyph" : "xf0f6@FontAwesome",
+                  "cssClass" : "fa fa-file-text-o"
+                },
+                "getPSUIAction" : {
+                  "getCapPSLanguageRes" : {
+                    "lanResTag" : "TBB.TEXT.*.NEW"
+                  },
+                  "caption" : "新建",
+                  "codeName" : "New",
+                  "fullCodeName" : "New",
+                  "name" : "表格界面_新建操作",
+                  "getPSSysImage" : {
+                    "glyph" : "xf0f6@FontAwesome",
+                    "cssClass" : "fa fa-file-text-o"
+                  },
+                  "predefinedType" : "GRIDVIEW_NEWACTION",
+                  "timeout" : 60000,
+                  "getTooltipPSLanguageRes" : {
+                    "lanResTag" : "TBB.TOOLTIP.*.NEW"
+                  },
+                  "uIActionMode" : "SYS",
+                  "uIActionTag" : "New",
+                  "uIActionType" : "DEUIACTION"
+                },
+                "tooltip" : "创建收付款",
+                "getTooltipPSLanguageRes" : {
+                  "lanResTag" : "TBB.TOOLTIP.*.NEW"
+                },
+                "showCaption" : true,
+                "showIcon" : true
+              }, {
+                "caption" : "刷新",
+                "groupExtractMode" : "ITEM",
+                "itemType" : "DEUIACTION",
+                "name" : "deuiaction7",
+                "noPrivDisplayMode" : 2,
+                "getPSAppViewUIAction" : {
+                  "modelref" : true,
+                  "id" : "toolbar_deuiaction7"
+                },
+                "getPSSysImage" : {
+                  "glyph" : "xf021@FontAwesome",
+                  "cssClass" : "fa fa-refresh"
+                },
+                "getPSUIAction" : {
+                  "actionTarget" : "NONE",
+                  "caption" : "刷新",
+                  "codeName" : "Refresh",
+                  "fullCodeName" : "Refresh",
+                  "name" : "表格界面_刷新操作",
+                  "getPSSysImage" : {
+                    "glyph" : "xf021@FontAwesome",
+                    "cssClass" : "fa fa-refresh"
+                  },
+                  "predefinedType" : "GRIDVIEW_REFRESHACTION",
+                  "timeout" : 60000,
+                  "uIActionMode" : "SYS",
+                  "uIActionTag" : "Refresh",
+                  "uIActionType" : "DEUIACTION"
+                },
+                "tooltip" : "刷新",
+                "uIActionTarget" : "NONE",
+                "showCaption" : false,
+                "showIcon" : true
+              }, {
+                "caption" : "向导",
+                "groupExtractMode" : "ITEM",
+                "itemType" : "DEUIACTION",
+                "name" : "deuiaction9",
+                "noPrivDisplayMode" : 2,
+                "getPSAppViewUIAction" : {
+                  "modelref" : true,
+                  "id" : "toolbar_deuiaction9"
+                },
+                "getPSUIAction" : {
+                  "actionTarget" : "NONE",
+                  "caption" : "向导",
+                  "codeName" : "open_wizard",
+                  "getFrontPSAppView" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_wizard_view.json",
+                    "viewType" : "DEWIZARDVIEW"
+                  },
+                  "frontProcessType" : "WIZARD",
+                  "fullCodeName" : "payee_open_wizard",
+                  "name" : "打开收款记录向导视图",
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                  },
+                  "uIActionMode" : "FRONT",
+                  "uIActionTag" : "open_wizard",
+                  "uIActionType" : "DEUIACTION",
+                  "id" : "open_wizard@payee"
+                },
+                "tooltip" : "向导",
+                "uIActionTarget" : "NONE",
+                "showCaption" : true,
+                "showIcon" : true
+              } ],
+              "xDataControlName" : "grid",
+              "modelid" : "b9569ba90d3c85243ccef2d9429cf202",
+              "modeltype" : "PSDETOOLBAR"
+            }, {
+              "aggMode" : "NONE",
+              "codeName" : "grid_view_grid",
+              "columnEnableFilter" : 2,
+              "columnEnableLink" : 0,
+              "controlType" : "GRID",
+              "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee/PSGRIDS/grid_view_grid.json",
+              "getFetchPSControlAction" : {
+                "modelref" : true,
+                "id" : "fetch",
+                "actionType" : "DEDATASET",
+                "name" : "fetch",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "fetch_all"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                }
+              },
+              "groupMode" : "NONE",
+              "logicName" : "收款记录_表格",
+              "minorSortDir" : "ASC",
+              "getMinorSortPSAppDEField" : {
+                "name" : "PAYEE_DATE",
+                "codeName" : "payee_date"
+              },
+              "getMovePSControlAction" : {
+                "actionName" : "move_order",
+                "actionType" : "DEACTION",
+                "name" : "move",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "move_order"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                }
+              },
+              "getOrderValuePSAppDEField" : {
+                "name" : "SEQUENCE",
+                "codeName" : "sequence"
+              },
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+              },
+              "getPSControlHandler" : {
+                "getPSHandlerActions" : [ {
+                  "actionName" : "Get",
+                  "actionType" : "DEACTION",
+                  "dataAccessAction" : "READ",
+                  "name" : "load",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "get"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                  }
+                }, {
+                  "actionName" : "Create",
+                  "actionType" : "DEACTION",
+                  "dataAccessAction" : "CREATE",
+                  "name" : "create",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "create"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                  }
+                }, {
+                  "actionName" : "Update",
+                  "actionType" : "DEACTION",
+                  "dataAccessAction" : "UPDATE",
+                  "name" : "update",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "update"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                  }
+                }, {
+                  "actionName" : "Remove",
+                  "actionType" : "DEACTION",
+                  "dataAccessAction" : "DELETE",
+                  "name" : "remove",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "remove"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                  }
+                }, {
+                  "actionName" : "move_order",
+                  "actionType" : "DEACTION",
+                  "name" : "move",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "move_order"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                  }
+                }, {
+                  "actionName" : "GetDraft",
+                  "actionType" : "DEACTION",
+                  "dataAccessAction" : "CREATE",
+                  "name" : "loaddraft",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "get_draft"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                  }
+                }, {
+                  "actionType" : "DEDATASET",
+                  "name" : "fetch",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "fetch_all"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                  }
+                } ],
+                "userDRAction" : "READ",
+                "enableDEFieldPrivilege" : false,
+                "id" : "数据表格处理器"
+              },
+              "getPSControlParam" : {
+                "autoLoad" : true,
+                "showBusyIndicator" : true,
+                "ctrlParams" : {
+                  "SHOWMODE" : "MIXIN"
+                },
+                "id" : "GRID"
+              },
+              "getPSControls" : [ {
+                "codeName" : "grid_view_grid_batchtoolbar",
+                "controlType" : "TOOLBAR",
+                "logicName" : "批操作_工具栏",
+                "memo" : "自动生成",
+                "name" : "grid_batchtoolbar",
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                },
+                "getPSControlParam" : {
+                  "id" : "grid_batchtoolbar"
+                },
+                "getPSDEToolbarItems" : [ {
+                  "caption" : "创建任务",
+                  "groupExtractMode" : "ITEM",
+                  "itemType" : "DEUIACTION",
+                  "name" : "deuiaction1",
+                  "noPrivDisplayMode" : 2,
+                  "getPSAppViewUIAction" : {
+                    "modelref" : true,
+                    "id" : "grid_batchtoolbar_deuiaction1"
+                  },
+                  "getPSUIAction" : {
+                    "actionTarget" : "MULTIKEY",
+                    "caption" : "创建任务",
+                    "codeName" : "create_task",
+                    "getFrontPSAppView" : {
+                      "modelref" : true,
+                      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_batch_create_view.json",
+                      "viewType" : "DEOPTVIEW"
+                    },
+                    "fullCodeName" : "payee_create_task",
+                    "memo" : "自动生成",
+                    "name" : "创建任务",
+                    "getPSAppDEMethod" : {
+                      "modelref" : true,
+                      "id" : "create_task"
+                    },
+                    "getPSAppDataEntity" : {
+                      "modelref" : true,
+                      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                    },
+                    "successMsg" : "创建完成",
+                    "timeout" : 60000,
+                    "uIActionMode" : "BACKEND",
+                    "uIActionTag" : "create_task",
+                    "uIActionType" : "DEUIACTION",
+                    "enableConfirm" : true,
+                    "id" : "create_task@payee"
+                  },
+                  "tooltip" : "创建任务",
+                  "uIActionTarget" : "MULTIKEY",
+                  "hiddenItem" : true,
+                  "showCaption" : true,
+                  "showIcon" : true
+                }, {
+                  "caption" : "删除",
+                  "groupExtractMode" : "ITEM",
+                  "itemType" : "DEUIACTION",
+                  "name" : "deuiaction5",
+                  "noPrivDisplayMode" : 2,
+                  "getPSAppViewUIAction" : {
+                    "modelref" : true,
+                    "id" : "grid_batchtoolbar_deuiaction5"
+                  },
+                  "getPSUIAction" : {
+                    "actionTarget" : "MULTIKEY",
+                    "caption" : "删除",
+                    "codeName" : "remove",
+                    "confirmMsg" : "确定要删除所选的记录吗？",
+                    "fullCodeName" : "payee_remove",
+                    "memo" : "自动生成",
+                    "name" : "删除",
+                    "getPSAppDEMethod" : {
+                      "modelref" : true,
+                      "id" : "remove"
+                    },
+                    "getPSAppDataEntity" : {
+                      "modelref" : true,
+                      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                    },
+                    "refreshMode" : 1,
+                    "successMsg" : "删除成功",
+                    "timeout" : 60000,
+                    "uIActionMode" : "BACKEND",
+                    "uIActionTag" : "remove",
+                    "uIActionType" : "DEUIACTION",
+                    "enableConfirm" : true,
+                    "reloadData" : true,
+                    "id" : "remove@payee"
+                  },
+                  "tooltip" : "删除",
+                  "uIActionTarget" : "MULTIKEY",
+                  "showCaption" : true,
+                  "showIcon" : true
+                }, {
+                  "caption" : "标签",
+                  "itemType" : "ITEMS",
+                  "name" : "items1",
+                  "getPSDEToolbarItems" : [ {
+                    "caption" : "添加标签",
+                    "groupExtractMode" : "ITEM",
+                    "itemType" : "DEUIACTION",
+                    "name" : "deuiaction2",
+                    "noPrivDisplayMode" : 2,
+                    "getPSAppViewUIAction" : {
+                      "modelref" : true,
+                      "id" : "grid_batchtoolbar_deuiaction2"
+                    },
+                    "getPSUIAction" : {
+                      "actionTarget" : "MULTIKEY",
+                      "caption" : "添加标签",
+                      "codeName" : "add_tags",
+                      "getFrontPSAppView" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/tag_add_tag.json",
+                        "viewType" : "DEOPTVIEW"
+                      },
+                      "fullCodeName" : "payee_add_tags",
+                      "memo" : "自动生成",
+                      "name" : "添加标签",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "add_tags"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                      },
+                      "refreshMode" : 1,
+                      "successMsg" : "已成功添加标签",
+                      "timeout" : 60000,
+                      "uIActionMode" : "BACKEND",
+                      "uIActionTag" : "add_tags",
+                      "uIActionType" : "DEUIACTION",
+                      "enableConfirm" : true,
+                      "reloadData" : true,
+                      "id" : "add_tags@payee"
+                    },
+                    "tooltip" : "添加标签",
+                    "uIActionTarget" : "MULTIKEY",
+                    "hiddenItem" : true,
+                    "showCaption" : true,
+                    "showIcon" : true
+                  }, {
+                    "caption" : "移除标签",
+                    "groupExtractMode" : "ITEM",
+                    "itemType" : "DEUIACTION",
+                    "name" : "deuiaction3",
+                    "noPrivDisplayMode" : 2,
+                    "getPSAppViewUIAction" : {
+                      "modelref" : true,
+                      "id" : "grid_batchtoolbar_deuiaction3"
+                    },
+                    "getPSUIAction" : {
+                      "actionTarget" : "MULTIKEY",
+                      "caption" : "移除标签",
+                      "codeName" : "delete_tags",
+                      "getFrontPSAppView" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/tag_remove_tag.json",
+                        "viewType" : "DEOPTVIEW"
+                      },
+                      "fullCodeName" : "payee_delete_tags",
+                      "memo" : "自动生成",
+                      "name" : "移除标签",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "delete_tags"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                      },
+                      "refreshMode" : 1,
+                      "successMsg" : "已成功移除标签",
+                      "timeout" : 60000,
+                      "uIActionMode" : "BACKEND",
+                      "uIActionTag" : "delete_tags",
+                      "uIActionType" : "DEUIACTION",
+                      "enableConfirm" : true,
+                      "reloadData" : true,
+                      "id" : "delete_tags@payee"
+                    },
+                    "tooltip" : "移除标签",
+                    "uIActionTarget" : "MULTIKEY",
+                    "hiddenItem" : true,
+                    "showCaption" : true,
+                    "showIcon" : true
+                  } ],
+                  "getPSSysImage" : {
+                    "glyph" : "xf078@FontAwesome",
+                    "cssClass" : "fa fa-chevron-down"
+                  },
+                  "tooltip" : "标签",
+                  "showCaption" : true,
+                  "showIcon" : true
+                }, {
+                  "caption" : "操作",
+                  "itemType" : "ITEMS",
+                  "name" : "items2",
+                  "getPSDEToolbarItems" : [ {
+                    "caption" : "批量更新",
+                    "groupExtractMode" : "ITEM",
+                    "itemType" : "DEUIACTION",
+                    "name" : "deuiaction4",
+                    "noPrivDisplayMode" : 2,
+                    "getPSAppViewUIAction" : {
+                      "modelref" : true,
+                      "id" : "grid_batchtoolbar_deuiaction4"
+                    },
+                    "getPSUIAction" : {
+                      "actionTarget" : "MULTIKEY",
+                      "caption" : "批量更新",
+                      "codeName" : "batch_update",
+                      "fullCodeName" : "payee_batch_update",
+                      "memo" : "自动生成",
+                      "name" : "批量更新",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "batch_update"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                      },
+                      "refreshMode" : 1,
+                      "successMsg" : "更新完成",
+                      "timeout" : 60000,
+                      "uIActionMode" : "BACKEND",
+                      "uIActionTag" : "batch_update",
+                      "uIActionType" : "DEUIACTION",
+                      "enableConfirm" : true,
+                      "reloadData" : true,
+                      "id" : "batch_update@payee"
+                    },
+                    "tooltip" : "批量更新",
+                    "uIActionTarget" : "MULTIKEY",
+                    "hiddenItem" : true,
+                    "showCaption" : true,
+                    "showIcon" : true
+                  } ],
+                  "getPSSysImage" : {
+                    "glyph" : "xf078@FontAwesome",
+                    "cssClass" : "fa fa-chevron-down"
+                  },
+                  "tooltip" : "操作",
+                  "showCaption" : true,
+                  "showIcon" : true
+                } ],
+                "modelid" : "2ebad0ef15501e82261737ac6a8e5e17",
+                "modeltype" : "PSDETOOLBAR"
+              } ],
+              "getPSDEDataImport" : {
+                "modelref" : true,
+                "id" : "DataImport"
+              },
+              "getPSDEGridColumns" : [ {
+                "align" : "LEFT",
+                "cLConvertMode" : "NONE",
+                "getCapPSLanguageRes" : {
+                  "lanResTag" : "DEF.LNAME.PAYEE_DATE"
+                },
+                "caption" : "收款日期",
+                "codeName" : "payee_date",
+                "columnType" : "DEFGRIDCOLUMN",
+                "dataItemName" : "payee_date",
+                "excelCaption" : "收款日期",
+                "name" : "payee_date",
+                "noPrivDisplayMode" : 1,
+                "getPSAppDEField" : {
+                  "name" : "PAYEE_DATE",
+                  "codeName" : "payee_date"
+                },
+                "valueFormat" : "YYYY-MM-DD",
+                "width" : 135,
+                "widthUnit" : "PX",
+                "enableSort" : true
+              }, {
+                "align" : "RIGHT",
+                "cLConvertMode" : "NONE",
+                "getCapPSLanguageRes" : {
+                  "lanResTag" : "CONTROL.DEGRID.PAYEE.GRID_VIEW_GRID.DEFGRIDCOLUMN.AMOUNT"
+                },
+                "caption" : "收款金额",
+                "codeName" : "amount",
+                "columnType" : "DEFGRIDCOLUMN",
+                "dataItemName" : "amount",
+                "excelCaption" : "收款金额",
+                "name" : "amount",
+                "noPrivDisplayMode" : 1,
+                "getPSAppDEField" : {
+                  "name" : "AMOUNT",
+                  "codeName" : "amount"
+                },
+                "unitName" : "元",
+                "valueFormat" : "#,##0.00",
+                "width" : 110,
+                "widthUnit" : "PX",
+                "enableSort" : true,
+                "enableUnitName" : true
+              }, {
+                "align" : "LEFT",
+                "cLConvertMode" : "NONE",
+                "getCapPSLanguageRes" : {
+                  "lanResTag" : "CONTROL.DEGRID.PAYEE.GRID_VIEW_GRID.DEFGRIDCOLUMN.DESCRIPTION"
+                },
+                "caption" : "收款说明",
+                "codeName" : "description",
+                "columnType" : "DEFGRIDCOLUMN",
+                "dataItemName" : "description",
+                "excelCaption" : "收款说明",
+                "name" : "description",
+                "noPrivDisplayMode" : 1,
+                "getPSAppDEField" : {
+                  "name" : "DESCRIPTION",
+                  "codeName" : "description"
+                },
+                "width" : 250,
+                "widthUnit" : "PX",
+                "enableSort" : false
+              } ],
+              "getPSDEGridDataItems" : [ {
+                "format" : "YYYY-MM-DD",
+                "dataType" : 5,
+                "name" : "payee_date",
+                "getPSAppDEField" : {
+                  "name" : "PAYEE_DATE",
+                  "codeName" : "payee_date"
+                }
+              }, {
+                "format" : "#,##0.00",
+                "dataType" : 6,
+                "name" : "amount",
+                "getPSAppDEField" : {
+                  "name" : "AMOUNT",
+                  "codeName" : "amount"
+                }
+              }, {
+                "dataType" : 21,
+                "name" : "description",
+                "getPSAppDEField" : {
+                  "name" : "DESCRIPTION",
+                  "codeName" : "description"
+                }
+              }, {
+                "dataType" : 25,
+                "name" : "payee_number",
+                "getPSAppDEField" : {
+                  "name" : "PAYEE_NUMBER",
+                  "codeName" : "payee_number"
+                }
+              }, {
+                "dataType" : 25,
+                "name" : "name",
+                "getPSAppDEField" : {
+                  "name" : "NAME",
+                  "codeName" : "name"
+                }
+              }, {
+                "dataType" : 25,
+                "name" : "srfkey",
+                "getPSAppDEField" : {
+                  "name" : "ID",
+                  "codeName" : "id"
+                }
+              }, {
+                "dataType" : 25,
+                "name" : "srfdataaccaction",
+                "getPSAppDEField" : {
+                  "name" : "ID",
+                  "codeName" : "id"
+                },
+                "dataAccessAction" : true
+              }, {
+                "dataType" : 25,
+                "name" : "project_id",
+                "getPSAppDEField" : {
+                  "name" : "PROJECT_ID",
+                  "codeName" : "project_id"
+                }
+              }, {
+                "dataType" : 25,
+                "name" : "payee_plan_id",
+                "getPSAppDEField" : {
+                  "name" : "PAYEE_PLAN_ID",
+                  "codeName" : "payee_plan_id"
+                }
+              }, {
+                "dataType" : 25,
+                "name" : "srfmajortext",
+                "getPSAppDEField" : {
+                  "name" : "NAME",
+                  "codeName" : "name"
+                }
+              } ],
+              "getPSDEGridEditItems" : [ {
+                "caption" : "标识",
+                "codeName" : "srfkey",
+                "enableCond" : 3,
+                "ignoreInput" : 0,
+                "name" : "srfkey",
+                "getPSAppDEField" : {
+                  "name" : "ID",
+                  "codeName" : "id"
+                },
+                "getPSEditor" : {
+                  "editorType" : "HIDDEN",
+                  "name" : "srfkey"
+                },
+                "allowEmpty" : true
+              } ],
+              "pagingSize" : 100,
+              "getRemovePSControlAction" : {
+                "actionName" : "Remove",
+                "actionType" : "DEACTION",
+                "dataAccessAction" : "DELETE",
+                "name" : "remove",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "remove"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                }
+              },
+              "sortMode" : "REMOTE",
+              "hasWFDataItems" : false,
+              "enableColFilter" : false,
+              "enableCustomized" : false,
+              "enableGroup" : false,
+              "enablePagingBar" : false,
+              "enableRowEdit" : false,
+              "enableRowEditOrder" : true,
+              "enableRowNew" : false,
+              "forceFit" : false,
+              "hideHeader" : false,
+              "noSort" : false,
+              "singleSelect" : false,
+              "name" : "grid",
+              "modelid" : "6909fe8564b5fc29f29c022e993ffe2b",
+              "modeltype" : "PSDEGRID"
+            }, {
+              "codeName" : "grid_view_search_form",
+              "controlType" : "SEARCHFORM",
+              "defaultLabelWidth" : 130,
+              "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee/PSSEARCHFORMS/grid_view_search_form.json",
+              "logicName" : "收款管理_搜索表单",
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+              },
+              "getPSControlHandler" : {
+                "getPSHandlerActions" : [ {
+                  "actionType" : "FILTERACTION",
+                  "name" : "load",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "FilterGet"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                  }
+                }, {
+                  "actionType" : "FILTERACTION",
+                  "name" : "loaddraft",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "FilterGetDraft"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                  }
+                }, {
+                  "actionType" : "FILTERACTION",
+                  "name" : "search",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "FilterSearch"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+                  }
+                } ],
+                "enableDEFieldPrivilege" : false,
+                "id" : "搜索表单处理器"
+              },
+              "getPSControlParam" : {
+                "autoLoad" : true,
+                "showBusyIndicator" : true,
+                "id" : "SEARCHFORM"
+              },
+              "getPSDEFormPages" : [ {
+                "getCapPSLanguageRes" : {
+                  "lanResTag" : "CONTROL.DEFORM.PAYEE.GRID_VIEW_SEARCHFORM.FORMPAGE.FORMPAGE1"
+                },
+                "caption" : "常规条件",
+                "codeName" : "formpage1",
+                "detailStyle" : "DEFAULT",
+                "detailType" : "FORMPAGE",
+                "name" : "formpage1",
+                "getPSLayout" : {
+                  "childColMD" : 24,
+                  "columnCount" : 24,
+                  "layout" : "TABLE_24COL"
+                },
+                "infoGroupMode" : false
+              } ],
+              "getPSLayout" : {
+                "childColMD" : 24,
+                "columnCount" : 24,
+                "layout" : "TABLE_24COL"
+              },
+              "searchButtonStyle" : "DEFAULT",
+              "tabHeaderPos" : "TOP",
+              "enableAdvanceSearch" : false,
+              "enableAutoSearch" : false,
+              "enableFilterSave" : false,
+              "noTabHeader" : true,
+              "name" : "searchform",
+              "modelid" : "73a81dae695b6807957164e9e1846036",
+              "modeltype" : "PSDEFORM_SEARCHFORM"
+            }, {
+              "controlType" : "SEARCHBAR",
+              "name" : "searchbar",
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+              },
+              "getPSControlParam" : {
+                "id" : "searchbar"
+              },
+              "quickGroupCount" : -1,
+              "quickSearchMode" : 0,
+              "quickSearchWidth" : 0,
+              "enableFilter" : false,
+              "enableGroup" : false,
+              "enableQuickSearch" : false,
+              "mobileSearchBar" : false
+            }, {
+              "getCapPSLanguageRes" : {
+                "lanResTag" : "PAGE.CAPTION.PAYEE.GRID_VIEW"
+              },
+              "caption" : "收款记录",
+              "codeName" : "grid_view_captionbar",
+              "controlType" : "CAPTIONBAR",
+              "name" : "captionbar",
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+              },
+              "getPSControlParam" : { }
+            } ],
+            "getPSDEViewCodeName" : "grid_view",
+            "getPSDEViewId" : "cfdeaf69e46068325aae10d5ed34f068",
+            "getPSViewLayoutPanel" : {
+              "codeName" : "layoutpanel",
+              "controlStyle" : "APPDEGRIDVIEW",
+              "controlType" : "VIEWLAYOUTPANEL",
+              "name" : "layoutpanel",
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+              },
+              "getPSControlParam" : { },
+              "layoutBodyOnly" : true,
+              "layoutPanel" : true,
+              "useDefaultLayout" : true
+            },
+            "title" : "收款记录",
+            "getTitlePSLanguageRes" : {
+              "lanResTag" : "PAGE.TITLE.PAYEE.GRID_VIEW"
+            },
+            "viewStyle" : "DEFAULT",
+            "viewType" : "DEGRIDVIEW",
+            "xDataControlName" : "grid",
+            "enableDP" : true,
+            "enableExport" : true,
+            "enableFilter" : true,
+            "enableImport" : true,
+            "enableRowEdit" : false,
+            "enableSearch" : true,
+            "rowEditDefault" : false,
+            "modelid" : "27ab9b87fb223f5a3d13bc70d30a56c6",
+            "modeltype" : "PSAPPDEVIEW",
+            "getPSAppDERSPaths" : [ [ {
+              "actionRSMode" : 1,
+              "codeName" : "payees",
+              "dataRSMode" : 0,
+              "majorDECodeName" : "project",
+              "majorDEName" : "PROJECT",
+              "getMajorPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+              },
+              "minorDECodeName" : "payee",
+              "minorDEName" : "PAYEE",
+              "getMinorPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee.json"
+              },
+              "name" : "DER1N_PAYEE_PROJECT_PROJECT_ID",
+              "getParentPSAppDEField" : {
+                "name" : "PROJECT_ID",
+                "codeName" : "project_id"
+              },
+              "getParentTextPSAppDEField" : {
+                "name" : "PROJECT_NAME",
+                "codeName" : "project_name"
+              },
+              "rSMode" : 2
+            } ] ]
+          },
+          "getPSLayoutPos" : {
+            "colLG" : 12,
+            "colMD" : 24,
+            "height" : 480,
+            "heightMode" : "PX",
+            "layout" : "TABLE_24COL"
+          },
+          "parentDataJO" : {
+            "SRFPARENTTYPE" : "DER1N",
+            "srfparentdename" : "PROJECT",
+            "srfparentmode" : "DER1N_PAYEE_PROJECT_PROJECT_ID",
+            "srfparentdefname" : "PROJECT_ID",
+            "SRFDER1NID" : "DER1N_PAYEE_PROJECT_PROJECT_ID"
+          },
+          "needSave" : false,
+          "refreshItemsSetParamOnly" : false,
+          "showCaption" : true
+        }, {
+          "getCapPSLanguageRes" : {
+            "lanResTag" : "DEF.LNAME.ID"
+          },
+          "caption" : "标识",
+          "codeName" : "id",
+          "dataType" : 25,
+          "detailStyle" : "DEFAULT",
+          "detailType" : "FORMITEM",
+          "enableCond" : 3,
+          "ignoreInput" : 0,
+          "labelPos" : "LEFT",
+          "labelWidth" : 130,
+          "name" : "id",
+          "noPrivDisplayMode" : 1,
+          "getPSAppDEField" : {
+            "name" : "ID",
+            "codeName" : "id"
+          },
+          "getPSEditor" : {
+            "editorType" : "HIDDEN",
+            "name" : "id"
+          },
+          "getPSLayoutPos" : {
+            "colMD" : 24,
+            "layout" : "TABLE_24COL"
+          },
+          "allowEmpty" : true,
+          "hidden" : true
+        } ],
+        "getPSLayout" : {
+          "childColMD" : 24,
+          "columnCount" : 24,
+          "layout" : "TABLE_24COL"
+        },
+        "getPSSysCss" : {
+          "cssName" : "overflow-hidden"
+        },
+        "infoGroupMode" : false
+      } ],
+      "getPSLayout" : {
+        "childColMD" : 24,
+        "columnCount" : 24,
+        "layout" : "TABLE_24COL"
+      },
+      "getPSSysCss" : {
+        "cssName" : "overflow-hidden"
+      },
+      "getRemovePSControlAction" : {
+        "modelref" : true,
+        "id" : "remove",
+        "actionName" : "Remove",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "DELETE",
+        "name" : "remove",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "remove"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+        }
+      },
+      "tabHeaderPos" : "TOP",
+      "getUpdatePSControlAction" : {
+        "modelref" : true,
+        "id" : "update",
+        "actionName" : "Update",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "UPDATE",
+        "name" : "update",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "update"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+        }
+      },
+      "noTabHeader" : true,
+      "name" : "form",
+      "modelid" : "3f5b36bb1871b6211d30d640fcbd5542",
+      "modeltype" : "PSDEFORM_EDITFORM"
+    }, {
+      "codeName" : "pro_pay_and_plan_edit_view_datainfobar",
+      "controlType" : "DATAINFOBAR",
+      "name" : "datainfobar",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+      },
+      "getPSControlParam" : {
+        "id" : "datainfobar"
+      }
+    }, {
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DE.LNAME.PROJECT"
+      },
+      "caption" : "订单详情收款计划和记录",
+      "codeName" : "pro_pay_and_plan_edit_view_captionbar",
+      "controlType" : "CAPTIONBAR",
+      "name" : "captionbar",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+      },
+      "getPSControlParam" : { }
+    } ]
+  },
+  "title" : "订单详情收款计划和记录",
+  "viewStyle" : "DEFAULT",
+  "viewType" : "DEEDITVIEW",
+  "xDataControlName" : "form",
+  "enableDP" : true,
+  "showCaptionBar" : false,
+  "showDataInfoBar" : true,
+  "modelid" : "0dc308bdd31bb360705946870b1d0f17",
+  "modeltype" : "PSAPPDEVIEW"
+}

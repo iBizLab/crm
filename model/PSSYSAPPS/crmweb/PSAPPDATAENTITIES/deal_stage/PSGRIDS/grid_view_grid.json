@@ -1,0 +1,246 @@
+{
+  "aggMode" : "NONE",
+  "codeName" : "grid_view_grid",
+  "columnEnableFilter" : 2,
+  "columnEnableLink" : 0,
+  "controlType" : "GRID",
+  "getCreatePSControlAction" : {
+    "actionName" : "Create",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "CREATE",
+    "name" : "create",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "create"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal_stage.json"
+    }
+  },
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal_stage/PSGRIDS/grid_view_grid.json",
+  "getFetchPSControlAction" : {
+    "modelref" : true,
+    "id" : "fetch",
+    "actionType" : "DEDATASET",
+    "name" : "fetch",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "fetch_default"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal_stage.json"
+    }
+  },
+  "getGetDraftPSControlAction" : {
+    "actionName" : "GetDraft",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "CREATE",
+    "name" : "loaddraft",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "get_draft"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal_stage.json"
+    }
+  },
+  "getGetPSControlAction" : {
+    "actionName" : "Get",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "READ",
+    "name" : "load",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "get"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal_stage.json"
+    }
+  },
+  "groupMode" : "NONE",
+  "logicName" : "阶段管理_表格",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal_stage.json"
+  },
+  "getPSDEGridColumns" : [ {
+    "align" : "LEFT",
+    "cLConvertMode" : "NONE",
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.NAME"
+    },
+    "caption" : "阶段名称",
+    "codeName" : "name",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "name",
+    "excelCaption" : "阶段名称",
+    "name" : "name",
+    "noPrivDisplayMode" : 1,
+    "getPSAppDEField" : {
+      "name" : "NAME",
+      "codeName" : "name"
+    },
+    "width" : 250,
+    "widthUnit" : "PX",
+    "enableRowEdit" : true,
+    "enableSort" : false
+  }, {
+    "align" : "LEFT",
+    "cLConvertMode" : "NONE",
+    "caption" : "默认阶段成交概率（%）",
+    "codeName" : "probability",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "probability",
+    "excelCaption" : "默认阶段成交概率（%）",
+    "name" : "probability",
+    "noPrivDisplayMode" : 1,
+    "getPSAppDEField" : {
+      "name" : "PROBABILITY",
+      "codeName" : "probability"
+    },
+    "unitName" : "%",
+    "width" : 250,
+    "widthUnit" : "PX",
+    "enableRowEdit" : true,
+    "enableSort" : false,
+    "enableUnitName" : true
+  } ],
+  "getPSDEGridDataItems" : [ {
+    "dataType" : 25,
+    "name" : "name",
+    "getPSAppDEField" : {
+      "name" : "NAME",
+      "codeName" : "name"
+    }
+  }, {
+    "dataType" : 6,
+    "name" : "probability",
+    "getPSAppDEField" : {
+      "name" : "PROBABILITY",
+      "codeName" : "probability"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "srfkey",
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "srfdataaccaction",
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    },
+    "dataAccessAction" : true
+  }, {
+    "dataType" : 25,
+    "name" : "srfmajortext",
+    "getPSAppDEField" : {
+      "name" : "NAME",
+      "codeName" : "name"
+    }
+  } ],
+  "getPSDEGridEditItems" : [ {
+    "caption" : "阶段名称",
+    "codeName" : "name",
+    "enableCond" : 3,
+    "ignoreInput" : 0,
+    "name" : "name",
+    "getPSAppDEField" : {
+      "name" : "NAME",
+      "codeName" : "name"
+    },
+    "getPSEditor" : {
+      "editorType" : "TEXTBOX",
+      "maxLength" : 200,
+      "name" : "name"
+    },
+    "allowEmpty" : true
+  }, {
+    "caption" : "默认阶段成交概率（%）",
+    "codeName" : "probability",
+    "createDV" : "0",
+    "enableCond" : 3,
+    "ignoreInput" : 0,
+    "name" : "probability",
+    "getPSAppDEField" : {
+      "name" : "PROBABILITY",
+      "codeName" : "probability"
+    },
+    "getPSEditor" : {
+      "editorType" : "NUMBER",
+      "name" : "probability",
+      "precision" : 2
+    },
+    "unitName" : "%",
+    "updateDV" : "0",
+    "allowEmpty" : true,
+    "enableUnitName" : true
+  }, {
+    "caption" : "标识",
+    "codeName" : "srfkey",
+    "enableCond" : 3,
+    "ignoreInput" : 0,
+    "name" : "srfkey",
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    },
+    "getPSEditor" : {
+      "editorType" : "HIDDEN",
+      "name" : "srfkey"
+    },
+    "allowEmpty" : true
+  } ],
+  "pagingMode" : 1,
+  "pagingSize" : 20,
+  "getRemovePSControlAction" : {
+    "actionName" : "Remove",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "DELETE",
+    "name" : "remove",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "remove"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal_stage.json"
+    }
+  },
+  "sortMode" : "REMOTE",
+  "getUpdatePSControlAction" : {
+    "actionName" : "Update",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "UPDATE",
+    "name" : "update",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "update"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal_stage.json"
+    }
+  },
+  "hasWFDataItems" : false,
+  "enableColFilter" : false,
+  "enableCustomized" : true,
+  "enableGroup" : false,
+  "enablePagingBar" : true,
+  "enableRowEdit" : true,
+  "enableRowEditOrder" : false,
+  "enableRowNew" : true,
+  "forceFit" : false,
+  "hideHeader" : false,
+  "noSort" : false,
+  "singleSelect" : false,
+  "modelid" : "4634a4187e1341da4528aff68f08fb53",
+  "modeltype" : "PSDEGRID"
+}

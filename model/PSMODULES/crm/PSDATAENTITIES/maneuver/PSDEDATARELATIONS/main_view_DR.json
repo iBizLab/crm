@@ -1,0 +1,14 @@
+{
+  "codeName" : "main_view_DR",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/maneuver/PSDEDATARELATIONS/main_view_DR.json",
+  "getFormCapPSLanguageRes" : {
+    "lanResTag" : "DE.LNAME.MANEUVER"
+  },
+  "formCaption" : "活动",
+  "memo" : "自动生成",
+  "name" : "活动主数据视图_关系界面组",
+  "getPSSysCounter" : {
+    "modelref" : true,
+    "path" : "PSSYSCOUNTERS/maneuver_main_view_dr.json"
+  }
+}

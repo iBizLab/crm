@@ -1,0 +1,4602 @@
+{
+  "getAllPSDEACModes" : [ {
+    "codeName" : "Default",
+    "logicName" : "DEFAULT",
+    "name" : "DEFAULT",
+    "getPSDEACModeDataItems" : [ {
+      "dataType" : 25,
+      "name" : "value",
+      "getPSDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      }
+    }, {
+      "dataType" : 25,
+      "name" : "text",
+      "getPSDEField" : {
+        "name" : "NAME",
+        "codeName" : "name"
+      }
+    } ],
+    "pagingSize" : 50,
+    "defaultMode" : true,
+    "enablePagingBar" : false,
+    "id" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACMODES/Default.json"
+  } ],
+  "getAllPSDEActions" : [ {
+    "actionMode" : "CREATE",
+    "actionType" : "BUILTIN",
+    "codeName" : "Create",
+    "dataAccessAction" : "CREATE",
+    "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACTIONS/Create.json",
+    "logicName" : "Create",
+    "name" : "Create",
+    "orderValue" : 1,
+    "getPSDEActionInput" : {
+      "name" : "CreateInput",
+      "getPSDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSDEActionReturn" : {
+      "name" : "CreateResult",
+      "type" : "VOID"
+    },
+    "builtinAction" : true,
+    "enableAudit" : true
+  }, {
+    "actionMode" : "UPDATE",
+    "actionType" : "BUILTIN",
+    "codeName" : "Update",
+    "dataAccessAction" : "UPDATE",
+    "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACTIONS/Update.json",
+    "logicName" : "Update",
+    "name" : "Update",
+    "orderValue" : 11,
+    "getPSDEActionInput" : {
+      "name" : "UpdateInput",
+      "getPSDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSDEActionReturn" : {
+      "name" : "UpdateResult",
+      "type" : "VOID"
+    },
+    "builtinAction" : true,
+    "enableAudit" : true
+  }, {
+    "actionMode" : "DELETE",
+    "actionType" : "BUILTIN",
+    "batchActionMode" : 1,
+    "codeName" : "Remove",
+    "dataAccessAction" : "DELETE",
+    "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACTIONS/Remove.json",
+    "logicName" : "Remove",
+    "name" : "Remove",
+    "orderValue" : 21,
+    "getPSDEActionInput" : {
+      "getKeyPSDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "name" : "RemoveInput",
+      "type" : "KEYFIELDS"
+    },
+    "getPSDEActionReturn" : {
+      "name" : "RemoveResult",
+      "type" : "VOID"
+    },
+    "batchAction" : true,
+    "builtinAction" : true,
+    "enableAudit" : true
+  }, {
+    "actionMode" : "READ",
+    "actionType" : "BUILTIN",
+    "codeName" : "Get",
+    "dataAccessAction" : "READ",
+    "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACTIONS/Get.json",
+    "logicName" : "Get",
+    "name" : "Get",
+    "orderValue" : 31,
+    "getPSDEActionInput" : {
+      "getKeyPSDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "name" : "GetInput",
+      "type" : "KEYFIELD"
+    },
+    "getPSDEActionReturn" : {
+      "name" : "GetResult",
+      "getPSDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_dto"
+      },
+      "type" : "DTO"
+    },
+    "builtinAction" : true
+  }, {
+    "actionMode" : "GETDRAFT",
+    "actionType" : "BUILTIN",
+    "codeName" : "GetDraft",
+    "dataAccessAction" : "CREATE",
+    "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACTIONS/GetDraft.json",
+    "logicName" : "GetDraft",
+    "name" : "GetDraft",
+    "orderValue" : 41,
+    "getPSDEActionInput" : {
+      "name" : "GetDraftInput",
+      "getPSDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEActionReturn" : {
+      "name" : "GetDraftResult",
+      "getPSDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_dto"
+      },
+      "type" : "DTO"
+    },
+    "builtinAction" : true
+  }, {
+    "actionMode" : "CHECKKEY",
+    "actionType" : "BUILTIN",
+    "codeName" : "CheckKey",
+    "dataAccessAction" : "CREATE",
+    "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACTIONS/CheckKey.json",
+    "logicName" : "CheckKey",
+    "name" : "CheckKey",
+    "getPSDEActionInput" : {
+      "name" : "CheckKeyInput",
+      "getPSDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEActionReturn" : {
+      "name" : "CheckKeyResult",
+      "stdDataType" : 9,
+      "type" : "SIMPLE"
+    },
+    "builtinAction" : true
+  }, {
+    "actionMode" : "SAVE",
+    "actionType" : "BUILTIN",
+    "codeName" : "Save",
+    "dataAccessAction" : "CREATE",
+    "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACTIONS/Save.json",
+    "logicName" : "Save",
+    "name" : "Save",
+    "getPSDEActionInput" : {
+      "name" : "SaveInput",
+      "getPSDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSDEActionReturn" : {
+      "name" : "SaveResult",
+      "type" : "VOID"
+    },
+    "builtinAction" : true
+  }, {
+    "actionMode" : "CUSTOM",
+    "actionType" : "USERCUSTOM",
+    "codeName" : "add_tags",
+    "dataAccessAction" : "UPDATE",
+    "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACTIONS/add_tags.json",
+    "logicName" : "批添加标签",
+    "memo" : "自动生成",
+    "name" : "add_tags",
+    "getPSDEActionInput" : {
+      "name" : "Add_tagsInput",
+      "getPSDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEActionReturn" : {
+      "name" : "Add_tagsResult",
+      "type" : "VOID"
+    },
+    "getPSSysSFPlugin" : {
+      "modelref" : true,
+      "path" : "PSSYSSFPLUGINS/AddTags.json"
+    },
+    "enableAudit" : true
+  }, {
+    "actionMode" : "CUSTOM",
+    "actionType" : "USERCUSTOM",
+    "codeName" : "batch_update",
+    "dataAccessAction" : "UPDATE",
+    "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACTIONS/batch_update.json",
+    "logicName" : "批更新",
+    "memo" : "自动生成",
+    "name" : "batch_update",
+    "getPSDEActionInput" : {
+      "name" : "Batch_updateInput",
+      "getPSDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEActionReturn" : {
+      "name" : "Batch_updateResult",
+      "type" : "VOID"
+    },
+    "getPSSysSFPlugin" : {
+      "modelref" : true,
+      "path" : "PSSYSSFPLUGINS/Update.json"
+    },
+    "enableAudit" : true
+  }, {
+    "actionMode" : "CREATE",
+    "actionType" : "USERCUSTOM",
+    "codeName" : "create_task",
+    "dataAccessAction" : "UPDATE",
+    "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACTIONS/create_task.json",
+    "logicName" : "批创建任务",
+    "memo" : "自动生成",
+    "name" : "create_task",
+    "getPSDEActionInput" : {
+      "name" : "Create_taskInput",
+      "getPSDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSDEActionReturn" : {
+      "name" : "Create_taskResult",
+      "type" : "VOID"
+    },
+    "getPSSysSFPlugin" : {
+      "modelref" : true,
+      "path" : "PSSYSSFPLUGINS/CreateTask.json"
+    },
+    "enableAudit" : true
+  }, {
+    "actionMode" : "CUSTOM",
+    "actionType" : "USERCUSTOM",
+    "codeName" : "delete_tags",
+    "dataAccessAction" : "UPDATE",
+    "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACTIONS/delete_tags.json",
+    "logicName" : "批移除标签",
+    "memo" : "自动生成",
+    "name" : "delete_tags",
+    "getPSDEActionInput" : {
+      "name" : "Delete_tagsInput",
+      "getPSDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEActionReturn" : {
+      "name" : "Delete_tagsResult",
+      "type" : "VOID"
+    },
+    "getPSSysSFPlugin" : {
+      "modelref" : true,
+      "path" : "PSSYSSFPLUGINS/RemoveTags.json"
+    },
+    "enableAudit" : true
+  }, {
+    "actionMode" : "CUSTOM",
+    "actionType" : "USERCUSTOM",
+    "codeName" : "main_view_dr_count",
+    "dataAccessAction" : "READ",
+    "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACTIONS/main_view_dr_count.json",
+    "logicName" : "main_view_dr计数器",
+    "memo" : "自动生成",
+    "name" : "main_view_dr_count",
+    "getPSDEActionInput" : {
+      "name" : "Main_view_dr_countInput",
+      "getPSDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEActionReturn" : {
+      "name" : "Main_view_dr_countResult",
+      "type" : "VOID"
+    },
+    "getPSSysSFPlugin" : {
+      "modelref" : true,
+      "path" : "PSSYSSFPLUGINS/UsrSFPlugin0321285737.json"
+    }
+  } ],
+  "getAllPSDEDBConfigs" : [ {
+    "dBType" : "MYSQL5",
+    "name" : "MYSQL5",
+    "objNameCase" : "DEFAULT",
+    "standardTableName" : "`SALES_ORDER`",
+    "tableName" : "SALES_ORDER",
+    "valid" : true
+  } ],
+  "getAllPSDEDBTables" : [ {
+    "getAllPSDEFields" : [ {
+      "name" : "ID",
+      "codeName" : "id"
+    }, {
+      "name" : "CREATE_TIME",
+      "codeName" : "create_time"
+    }, {
+      "name" : "NAME",
+      "codeName" : "name"
+    }, {
+      "name" : "UPDATE_TIME",
+      "codeName" : "update_time"
+    }, {
+      "name" : "CREATE_MAN",
+      "codeName" : "create_man"
+    }, {
+      "name" : "UPDATE_MAN",
+      "codeName" : "update_man"
+    }, {
+      "name" : "SHIPPING_STREET",
+      "codeName" : "Shipping_Street"
+    }, {
+      "name" : "SUB_TOTAL",
+      "codeName" : "Sub_Total"
+    }, {
+      "name" : "SUBJECT",
+      "codeName" : "Subject"
+    }, {
+      "name" : "BILLING_STREET",
+      "codeName" : "Billing_Street"
+    }, {
+      "name" : "SHIPPING_CITY",
+      "codeName" : "Shipping_City"
+    }, {
+      "name" : "BILLING_STATE",
+      "codeName" : "Billing_State"
+    }, {
+      "name" : "GRAND_TOTAL",
+      "codeName" : "Grand_Total"
+    }, {
+      "name" : "TAX",
+      "codeName" : "Tax"
+    }, {
+      "name" : "ADJUSTMENT",
+      "codeName" : "Adjustment"
+    }, {
+      "name" : "SHIPPING_STATE",
+      "codeName" : "Shipping_State"
+    }, {
+      "name" : "CUSTOMER_NO",
+      "codeName" : "Customer_No"
+    }, {
+      "name" : "BILLING_CITY",
+      "codeName" : "Billing_City"
+    }, {
+      "name" : "DISCOUNT",
+      "codeName" : "Discount"
+    }, {
+      "name" : "BILLING_CODE",
+      "codeName" : "Billing_Code"
+    }, {
+      "name" : "PURCHASE_ORDER",
+      "codeName" : "Purchase_Order"
+    }, {
+      "name" : "SHIPPING_CODE",
+      "codeName" : "Shipping_Code"
+    }, {
+      "name" : "DESCRIPTION",
+      "codeName" : "Description"
+    }, {
+      "name" : "QUOTE_NAME",
+      "codeName" : "Quote_Name"
+    }, {
+      "name" : "DUE_DATE",
+      "codeName" : "Due_Date"
+    }, {
+      "name" : "CARRIER",
+      "codeName" : "Carrier"
+    }, {
+      "name" : "PENDING",
+      "codeName" : "Pending"
+    }, {
+      "name" : "BILLING_COUNTRY",
+      "codeName" : "Billing_Country"
+    }, {
+      "name" : "SHIPPING_COUNTR",
+      "codeName" : "Shipping_Countr"
+    }, {
+      "name" : "EXCISE_DUTY",
+      "codeName" : "Excise_Duty"
+    }, {
+      "name" : "TAG",
+      "codeName" : "Tag"
+    }, {
+      "name" : "SALES_COMMISSION",
+      "codeName" : "Sales_Commission"
+    }, {
+      "name" : "LOCKED__S",
+      "codeName" : "Locked__s"
+    }, {
+      "name" : "STATUS",
+      "codeName" : "Status"
+    }, {
+      "name" : "SO_NUMBER",
+      "codeName" : "SO_Number"
+    } ],
+    "codeName" : "Table",
+    "name" : "SALES_ORDER",
+    "getPSSysDBTable" : {
+      "modelref" : true,
+      "id" : "SALES_ORDER"
+    },
+    "tableType" : "MAIN"
+  } ],
+  "getAllPSDEDRGroups" : [ {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDRGROUPS/DRGroup.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDRGROUPS/UsrDRGroup0320561772.json"
+  } ],
+  "getAllPSDEDRItems" : [ {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDRITEMS/UsrDRItem0318363376.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDRITEMS/UsrDRItem0318411314.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDRITEMS/UsrDRItem0318505750.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDRITEMS/UsrDRItem0320003115.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDRITEMS/UsrDRItem0321358179.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDRITEMS/UsrDRItem0321431770.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDRITEMS/UsrDRItem0321487477.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDRITEMS/UsrDRItem0321660343.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDRITEMS/UsrDRItem0321686653.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDRITEMS/UsrDRItem0321913294.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDRITEMS/UsrDRItem0321950943.json"
+  } ],
+  "getAllPSDEDataImports" : [ {
+    "batchSize" : 1000,
+    "codeName" : "DataImport",
+    "createDataAccessAction" : "CREATE",
+    "getCreatePSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACTIONS/Create.json"
+    },
+    "memo" : "自动生成",
+    "name" : "导入销售订单",
+    "getPSDEDataImportItems" : [ {
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DEF.LNAME.ID"
+      },
+      "caption" : "标识",
+      "name" : "ID",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      }
+    }, {
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DEF.LNAME.CREATE_TIME"
+      },
+      "caption" : "建立时间",
+      "name" : "CREATE_TIME",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "CREATE_TIME",
+        "codeName" : "create_time"
+      }
+    }, {
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DEF.LNAME.NAME"
+      },
+      "caption" : "名称",
+      "name" : "NAME",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "NAME",
+        "codeName" : "name"
+      }
+    }, {
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DEF.LNAME.UPDATE_TIME"
+      },
+      "caption" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "UPDATE_TIME",
+        "codeName" : "update_time"
+      }
+    }, {
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DEF.LNAME.CREATE_MAN"
+      },
+      "caption" : "建立人",
+      "name" : "CREATE_MAN",
+      "orderValue" : 1000,
+      "getPSCodeList" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSCODELISTS/SysOperator.json"
+      },
+      "getPSDEField" : {
+        "name" : "CREATE_MAN",
+        "codeName" : "create_man"
+      }
+    }, {
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DEF.LNAME.UPDATE_MAN"
+      },
+      "caption" : "更新人",
+      "name" : "UPDATE_MAN",
+      "orderValue" : 1000,
+      "getPSCodeList" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSCODELISTS/SysOperator.json"
+      },
+      "getPSDEField" : {
+        "name" : "UPDATE_MAN",
+        "codeName" : "update_man"
+      }
+    }, {
+      "caption" : "发货地址-街道",
+      "name" : "SHIPPING_STREET",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "SHIPPING_STREET",
+        "codeName" : "Shipping_Street"
+      }
+    }, {
+      "caption" : "小计",
+      "name" : "SUB_TOTAL",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "SUB_TOTAL",
+        "codeName" : "Sub_Total"
+      }
+    }, {
+      "caption" : "主题",
+      "name" : "SUBJECT",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "SUBJECT",
+        "codeName" : "Subject"
+      }
+    }, {
+      "caption" : "开单地址-街道",
+      "name" : "BILLING_STREET",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "BILLING_STREET",
+        "codeName" : "Billing_Street"
+      }
+    }, {
+      "caption" : "税",
+      "name" : "SHIPPING_CITY",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "SHIPPING_CITY",
+        "codeName" : "Shipping_City"
+      }
+    }, {
+      "caption" : "调整",
+      "name" : "BILLING_STATE",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "BILLING_STATE",
+        "codeName" : "Billing_State"
+      }
+    }, {
+      "caption" : "采购订单",
+      "name" : "GRAND_TOTAL",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "GRAND_TOTAL",
+        "codeName" : "Grand_Total"
+      }
+    }, {
+      "caption" : "开单地址-省/市",
+      "name" : "TAX",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "TAX",
+        "codeName" : "Tax"
+      }
+    }, {
+      "caption" : "客户编号",
+      "name" : "ADJUSTMENT",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "ADJUSTMENT",
+        "codeName" : "Adjustment"
+      }
+    }, {
+      "caption" : "累计",
+      "name" : "SHIPPING_STATE",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "SHIPPING_STATE",
+        "codeName" : "Shipping_State"
+      }
+    }, {
+      "caption" : "发货地址-省/市",
+      "name" : "CUSTOMER_NO",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "CUSTOMER_NO",
+        "codeName" : "Customer_No"
+      }
+    }, {
+      "caption" : "开单地址-城市",
+      "name" : "BILLING_CITY",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "BILLING_CITY",
+        "codeName" : "Billing_City"
+      }
+    }, {
+      "caption" : "折扣",
+      "name" : "DISCOUNT",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "DISCOUNT",
+        "codeName" : "Discount"
+      }
+    }, {
+      "caption" : "报价名称",
+      "name" : "BILLING_CODE",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "BILLING_CODE",
+        "codeName" : "Billing_Code"
+      }
+    }, {
+      "caption" : "开单地址-邮编",
+      "name" : "PURCHASE_ORDER",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "PURCHASE_ORDER",
+        "codeName" : "Purchase_Order"
+      }
+    }, {
+      "caption" : "发货地址-邮编",
+      "name" : "SHIPPING_CODE",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "SHIPPING_CODE",
+        "codeName" : "Shipping_Code"
+      }
+    }, {
+      "caption" : "条款及条件",
+      "name" : "DESCRIPTION",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "DESCRIPTION",
+        "codeName" : "Description"
+      }
+    }, {
+      "caption" : "描述",
+      "name" : "QUOTE_NAME",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "QUOTE_NAME",
+        "codeName" : "Quote_Name"
+      }
+    }, {
+      "caption" : "到期日期",
+      "name" : "DUE_DATE",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "DUE_DATE",
+        "codeName" : "Due_Date"
+      }
+    }, {
+      "caption" : "运输",
+      "name" : "CARRIER",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "CARRIER",
+        "codeName" : "Carrier"
+      }
+    }, {
+      "caption" : "待决",
+      "name" : "PENDING",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "PENDING",
+        "codeName" : "Pending"
+      }
+    }, {
+      "caption" : "开单地址-国家/地区",
+      "name" : "BILLING_COUNTRY",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "BILLING_COUNTRY",
+        "codeName" : "Billing_Country"
+      }
+    }, {
+      "caption" : "发货地址-国家/地区",
+      "name" : "SHIPPING_COUNTR",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "SHIPPING_COUNTR",
+        "codeName" : "Shipping_Countr"
+      }
+    }, {
+      "caption" : "消费税",
+      "name" : "EXCISE_DUTY",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "EXCISE_DUTY",
+        "codeName" : "Excise_Duty"
+      }
+    }, {
+      "caption" : "标签",
+      "name" : "TAG",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "TAG",
+        "codeName" : "Tag"
+      }
+    }, {
+      "caption" : "销售佣金",
+      "name" : "SALES_COMMISSION",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "SALES_COMMISSION",
+        "codeName" : "Sales_Commission"
+      }
+    }, {
+      "caption" : "Locked",
+      "name" : "LOCKED__S",
+      "orderValue" : 1000,
+      "getPSCodeList" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSCODELISTS/YesNo.json"
+      },
+      "getPSDEField" : {
+        "name" : "LOCKED__S",
+        "codeName" : "Locked__s"
+      }
+    }, {
+      "caption" : "状态",
+      "name" : "STATUS",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "STATUS",
+        "codeName" : "Status"
+      }
+    }, {
+      "caption" : "销售订单编号",
+      "name" : "SO_NUMBER",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "SO_NUMBER",
+        "codeName" : "SO_Number"
+      }
+    }, {
+      "caption" : "附件",
+      "name" : "ATTACHMENTS",
+      "orderValue" : 1000,
+      "getPSDEField" : {
+        "name" : "ATTACHMENTS",
+        "codeName" : "attachments"
+      }
+    } ],
+    "updateDataAccessAction" : "UPDATE",
+    "getUpdatePSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEACTIONS/Update.json"
+    },
+    "defaultMode" : true,
+    "enableBackend" : true,
+    "enableFront" : true,
+    "ignoreError" : false,
+    "id" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDATAIMPS/DataImport.json"
+  } ],
+  "getAllPSDEDataQueries" : [ {
+    "getAllPSDEDataQueryCodes" : [ {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDATAQUERIES/Default/PSDEDQCODES/MYSQL5.json"
+    } ],
+    "codeName" : "Default",
+    "logicName" : "数据查询",
+    "name" : "DEFAULT",
+    "getPSDEDQMain" : {
+      "getJoinPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order.json"
+      },
+      "joinType" : "MAIN",
+      "name" : "SALES_ORDER"
+    },
+    "getPSDEDataQueryInput" : {
+      "name" : "DefaultInput",
+      "getPSDEFilterDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_filter_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEDataQueryReturn" : {
+      "name" : "DefaultResult",
+      "getPSDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_dto"
+      },
+      "type" : "DTOS"
+    },
+    "defaultMode" : true
+  } ],
+  "getAllPSDEDataRelations" : [ {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDATARELATIONS/Default.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDATARELATIONS/main_view_DR.json"
+  }, {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order/PSDEDATARELATIONS/tab_search_view_DR.json"
+  } ],
+  "getAllPSDEDataSets" : [ {
+    "codeName" : "Default",
+    "logicName" : "数据集",
+    "name" : "DEFAULT",
+    "getPSDEDataQueries" : [ {
+      "modelref" : true,
+      "id" : "Default"
+    } ],
+    "getPSDEDataSetInput" : {
+      "name" : "DefaultInput",
+      "getPSDEFilterDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_filter_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEDataSetReturn" : {
+      "name" : "DefaultResult",
+      "getPSDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "sales_order_dto"
+      },
+      "type" : "PAGE"
+    },
+    "defaultMode" : true,
+    "enableBackend" : true,
+    "enableFront" : true
+  } ],
+  "getAllPSDEFields" : [ {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "ID",
+      "dBType" : "MYSQL5",
+      "name" : "ID",
+      "queryCodeExp" : "t1.`ID`",
+      "standardColumnName" : "`ID`"
+    } ],
+    "getAllPSDEFSearchModes" : [ {
+      "codeName" : "N_ID_EQ",
+      "name" : "N_ID_EQ",
+      "stdDataType" : 25,
+      "valueOP" : "EQ"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[ID][标识]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.ID"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[ID][标识]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[ID][标识]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.ID"
+        },
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[ID][标识]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "ID",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "id",
+    "dEFType" : 1,
+    "dataType" : "GUID",
+    "importOrder" : 1000,
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.ID"
+    },
+    "length" : 100,
+    "logicName" : "标识",
+    "name" : "ID",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "ID"
+    },
+    "serviceCodeName" : "id",
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "allowEmpty" : false,
+    "keyDEField" : true,
+    "pasteReset" : true
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "CREATE_TIME",
+      "dBType" : "MYSQL5",
+      "name" : "CREATE_TIME",
+      "queryCodeExp" : "t1.`CREATE_TIME`",
+      "standardColumnName" : "`CREATE_TIME`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[CREATE_TIME][建立时间]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.CREATE_TIME"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[CREATE_TIME][建立时间]移动端默认",
+        "uIMode" : "MOBILEDEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[CREATE_TIME][建立时间]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.CREATE_TIME"
+        },
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[CREATE_TIME][建立时间]",
+        "uIMode" : "DEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组"
+      },
+      "ruleInfo" : "默认规则",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "create_time",
+    "dEFType" : 1,
+    "dataType" : "DATETIME",
+    "importOrder" : 1000,
+    "jsonFormat" : "yyyy-MM-dd HH:mm:ss",
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.CREATE_TIME"
+    },
+    "logicName" : "建立时间",
+    "name" : "CREATE_TIME",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "CREATE_TIME"
+    },
+    "predefinedType" : "CREATEDATE",
+    "serviceCodeName" : "create_time",
+    "stdDataType" : 5,
+    "valueFormat" : "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS",
+    "allowEmpty" : false,
+    "systemReserver" : true
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "NAME",
+      "dBType" : "MYSQL5",
+      "name" : "NAME",
+      "queryCodeExp" : "t1.`NAME`",
+      "standardColumnName" : "`NAME`"
+    } ],
+    "getAllPSDEFSearchModes" : [ {
+      "codeName" : "N_NAME_LIKE",
+      "name" : "N_NAME_LIKE",
+      "stdDataType" : 25,
+      "valueOP" : "LIKE"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[NAME][名称]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.NAME"
+        },
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[NAME][名称]",
+        "stringLength" : 200,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[NAME][名称]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.NAME"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[NAME][名称]移动端默认",
+        "stringLength" : 200,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "NAME",
+          "maxValue" : 200,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[200]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[200]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[200]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "name",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.NAME"
+    },
+    "length" : 200,
+    "logicName" : "名称",
+    "name" : "NAME",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "NAME"
+    },
+    "serviceCodeName" : "name",
+    "stdDataType" : 25,
+    "stringLength" : 200,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "enableQuickSearch" : true,
+    "majorDEField" : true
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "UPDATE_TIME",
+      "dBType" : "MYSQL5",
+      "name" : "UPDATE_TIME",
+      "queryCodeExp" : "t1.`UPDATE_TIME`",
+      "standardColumnName" : "`UPDATE_TIME`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[UPDATE_TIME][更新时间]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.UPDATE_TIME"
+        },
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[UPDATE_TIME][更新时间]",
+        "uIMode" : "DEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[UPDATE_TIME][更新时间]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.UPDATE_TIME"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[UPDATE_TIME][更新时间]移动端默认",
+        "uIMode" : "MOBILEDEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组"
+      },
+      "ruleInfo" : "默认规则",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "update_time",
+    "dEFType" : 1,
+    "dataType" : "DATETIME",
+    "importOrder" : 1000,
+    "jsonFormat" : "yyyy-MM-dd HH:mm:ss",
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.UPDATE_TIME"
+    },
+    "logicName" : "更新时间",
+    "name" : "UPDATE_TIME",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "UPDATE_TIME"
+    },
+    "predefinedType" : "UPDATEDATE",
+    "serviceCodeName" : "update_time",
+    "stdDataType" : 5,
+    "valueFormat" : "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS",
+    "allowEmpty" : false,
+    "systemReserver" : true
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "CREATE_MAN",
+      "dBType" : "MYSQL5",
+      "name" : "CREATE_MAN",
+      "queryCodeExp" : "t1.`CREATE_MAN`",
+      "standardColumnName" : "`CREATE_MAN`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[CREATE_MAN][建立人]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.CREATE_MAN"
+        },
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[CREATE_MAN][建立人]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[CREATE_MAN][建立人]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.CREATE_MAN"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[CREATE_MAN][建立人]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "CREATE_MAN",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "create_man",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.CREATE_MAN"
+    },
+    "length" : 100,
+    "logicName" : "建立人",
+    "name" : "CREATE_MAN",
+    "orderValue" : 1000,
+    "getPSCodeList" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/SysOperator.json"
+    },
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "CREATE_MAN"
+    },
+    "predefinedType" : "CREATEMAN",
+    "serviceCodeName" : "create_man",
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "allowEmpty" : false,
+    "systemReserver" : true
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "UPDATE_MAN",
+      "dBType" : "MYSQL5",
+      "name" : "UPDATE_MAN",
+      "queryCodeExp" : "t1.`UPDATE_MAN`",
+      "standardColumnName" : "`UPDATE_MAN`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[UPDATE_MAN][更新人]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.UPDATE_MAN"
+        },
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[UPDATE_MAN][更新人]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[UPDATE_MAN][更新人]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.UPDATE_MAN"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[UPDATE_MAN][更新人]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "UPDATE_MAN",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "update_man",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.UPDATE_MAN"
+    },
+    "length" : 100,
+    "logicName" : "更新人",
+    "name" : "UPDATE_MAN",
+    "orderValue" : 1000,
+    "getPSCodeList" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/SysOperator.json"
+    },
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "UPDATE_MAN"
+    },
+    "predefinedType" : "UPDATEMAN",
+    "serviceCodeName" : "update_man",
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "allowEmpty" : false,
+    "systemReserver" : true
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "SHIPPING_STREET",
+      "dBType" : "MYSQL5",
+      "name" : "SHIPPING_STREET",
+      "queryCodeExp" : "t1.`SHIPPING_STREET`",
+      "standardColumnName" : "`SHIPPING_STREET`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[SHIPPING_STREET][发货地址-街道]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[SHIPPING_STREET][发货地址-街道]移动端默认",
+        "stringLength" : 250,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[SHIPPING_STREET][发货地址-街道]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[SHIPPING_STREET][发货地址-街道]",
+        "stringLength" : 250,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "SHIPPING_STREET",
+          "maxValue" : 250,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[250]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[250]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[250]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Shipping_Street",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 250,
+    "logicName" : "发货地址-街道",
+    "name" : "SHIPPING_STREET",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "SHIPPING_STREET"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 250,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "shipping_street"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "SUB_TOTAL",
+      "dBType" : "MYSQL5",
+      "name" : "SUB_TOTAL",
+      "queryCodeExp" : "t1.`SUB_TOTAL`",
+      "standardColumnName" : "`SUB_TOTAL`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[SUB_TOTAL][小计]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[SUB_TOTAL][小计]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[SUB_TOTAL][小计]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[SUB_TOTAL][小计]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "SUB_TOTAL",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Sub_Total",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 100,
+    "logicName" : "小计",
+    "name" : "SUB_TOTAL",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "SUB_TOTAL"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "sub_total"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "SUBJECT",
+      "dBType" : "MYSQL5",
+      "name" : "SUBJECT",
+      "queryCodeExp" : "t1.`SUBJECT`",
+      "standardColumnName" : "`SUBJECT`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[SUBJECT][主题]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[SUBJECT][主题]移动端默认",
+        "stringLength" : 120,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[SUBJECT][主题]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[SUBJECT][主题]",
+        "stringLength" : 120,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "SUBJECT",
+          "maxValue" : 120,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[120]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[120]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[120]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Subject",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 120,
+    "logicName" : "主题",
+    "name" : "SUBJECT",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "SUBJECT"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 120,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "subject"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "BILLING_STREET",
+      "dBType" : "MYSQL5",
+      "name" : "BILLING_STREET",
+      "queryCodeExp" : "t1.`BILLING_STREET`",
+      "standardColumnName" : "`BILLING_STREET`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[BILLING_STREET][开单地址-街道]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[BILLING_STREET][开单地址-街道]移动端默认",
+        "stringLength" : 250,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[BILLING_STREET][开单地址-街道]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[BILLING_STREET][开单地址-街道]",
+        "stringLength" : 250,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "BILLING_STREET",
+          "maxValue" : 250,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[250]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[250]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[250]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Billing_Street",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 250,
+    "logicName" : "开单地址-街道",
+    "name" : "BILLING_STREET",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "BILLING_STREET"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 250,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "billing_street"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "SHIPPING_CITY",
+      "dBType" : "MYSQL5",
+      "name" : "SHIPPING_CITY",
+      "queryCodeExp" : "t1.`SHIPPING_CITY`",
+      "standardColumnName" : "`SHIPPING_CITY`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[SHIPPING_CITY][税]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[SHIPPING_CITY][税]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[SHIPPING_CITY][税]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[SHIPPING_CITY][税]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "SHIPPING_CITY",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Shipping_City",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 100,
+    "logicName" : "税",
+    "name" : "SHIPPING_CITY",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "SHIPPING_CITY"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "shipping_city"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "BILLING_STATE",
+      "dBType" : "MYSQL5",
+      "name" : "BILLING_STATE",
+      "queryCodeExp" : "t1.`BILLING_STATE`",
+      "standardColumnName" : "`BILLING_STATE`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[BILLING_STATE][调整]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[BILLING_STATE][调整]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[BILLING_STATE][调整]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[BILLING_STATE][调整]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "BILLING_STATE",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Billing_State",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 100,
+    "logicName" : "调整",
+    "name" : "BILLING_STATE",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "BILLING_STATE"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "billing_state"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "GRAND_TOTAL",
+      "dBType" : "MYSQL5",
+      "name" : "GRAND_TOTAL",
+      "queryCodeExp" : "t1.`GRAND_TOTAL`",
+      "standardColumnName" : "`GRAND_TOTAL`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[GRAND_TOTAL][采购订单]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[GRAND_TOTAL][采购订单]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[GRAND_TOTAL][采购订单]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[GRAND_TOTAL][采购订单]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "GRAND_TOTAL",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Grand_Total",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 100,
+    "logicName" : "采购订单",
+    "name" : "GRAND_TOTAL",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "GRAND_TOTAL"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "grand_total"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "TAX",
+      "dBType" : "MYSQL5",
+      "name" : "TAX",
+      "queryCodeExp" : "t1.`TAX`",
+      "standardColumnName" : "`TAX`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[TAX][开单地址-省/市]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[TAX][开单地址-省/市]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[TAX][开单地址-省/市]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[TAX][开单地址-省/市]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "TAX",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Tax",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 100,
+    "logicName" : "开单地址-省/市",
+    "name" : "TAX",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "TAX"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "tax"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "ADJUSTMENT",
+      "dBType" : "MYSQL5",
+      "name" : "ADJUSTMENT",
+      "queryCodeExp" : "t1.`ADJUSTMENT`",
+      "standardColumnName" : "`ADJUSTMENT`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[ADJUSTMENT][客户编号]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[ADJUSTMENT][客户编号]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[ADJUSTMENT][客户编号]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[ADJUSTMENT][客户编号]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "ADJUSTMENT",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Adjustment",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 100,
+    "logicName" : "客户编号",
+    "name" : "ADJUSTMENT",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "ADJUSTMENT"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "adjustment"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "SHIPPING_STATE",
+      "dBType" : "MYSQL5",
+      "name" : "SHIPPING_STATE",
+      "queryCodeExp" : "t1.`SHIPPING_STATE`",
+      "standardColumnName" : "`SHIPPING_STATE`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[SHIPPING_STATE][累计]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[SHIPPING_STATE][累计]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[SHIPPING_STATE][累计]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[SHIPPING_STATE][累计]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "SHIPPING_STATE",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Shipping_State",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 100,
+    "logicName" : "累计",
+    "name" : "SHIPPING_STATE",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "SHIPPING_STATE"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "shipping_state"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "CUSTOMER_NO",
+      "dBType" : "MYSQL5",
+      "name" : "CUSTOMER_NO",
+      "queryCodeExp" : "t1.`CUSTOMER_NO`",
+      "standardColumnName" : "`CUSTOMER_NO`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[CUSTOMER_NO][发货地址-省/市]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[CUSTOMER_NO][发货地址-省/市]移动端默认",
+        "stringLength" : 120,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[CUSTOMER_NO][发货地址-省/市]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[CUSTOMER_NO][发货地址-省/市]",
+        "stringLength" : 120,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "CUSTOMER_NO",
+          "maxValue" : 120,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[120]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[120]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[120]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Customer_No",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 120,
+    "logicName" : "发货地址-省/市",
+    "name" : "CUSTOMER_NO",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "CUSTOMER_NO"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 120,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "customer_no"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "BILLING_CITY",
+      "dBType" : "MYSQL5",
+      "name" : "BILLING_CITY",
+      "queryCodeExp" : "t1.`BILLING_CITY`",
+      "standardColumnName" : "`BILLING_CITY`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[BILLING_CITY][开单地址-城市]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[BILLING_CITY][开单地址-城市]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[BILLING_CITY][开单地址-城市]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[BILLING_CITY][开单地址-城市]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "BILLING_CITY",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Billing_City",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 100,
+    "logicName" : "开单地址-城市",
+    "name" : "BILLING_CITY",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "BILLING_CITY"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "billing_city"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "DISCOUNT",
+      "dBType" : "MYSQL5",
+      "name" : "DISCOUNT",
+      "queryCodeExp" : "t1.`DISCOUNT`",
+      "standardColumnName" : "`DISCOUNT`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[DISCOUNT][折扣]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[DISCOUNT][折扣]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[DISCOUNT][折扣]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[DISCOUNT][折扣]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "DISCOUNT",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Discount",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 100,
+    "logicName" : "折扣",
+    "name" : "DISCOUNT",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "DISCOUNT"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "discount"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "BILLING_CODE",
+      "dBType" : "MYSQL5",
+      "name" : "BILLING_CODE",
+      "queryCodeExp" : "t1.`BILLING_CODE`",
+      "standardColumnName" : "`BILLING_CODE`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[BILLING_CODE][报价名称]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[BILLING_CODE][报价名称]",
+        "stringLength" : 30,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[BILLING_CODE][报价名称]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[BILLING_CODE][报价名称]移动端默认",
+        "stringLength" : 30,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "BILLING_CODE",
+          "maxValue" : 30,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[30]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[30]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[30]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Billing_Code",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 30,
+    "logicName" : "报价名称",
+    "name" : "BILLING_CODE",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "BILLING_CODE"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 30,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "billing_code"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "PURCHASE_ORDER",
+      "dBType" : "MYSQL5",
+      "name" : "PURCHASE_ORDER",
+      "queryCodeExp" : "t1.`PURCHASE_ORDER`",
+      "standardColumnName" : "`PURCHASE_ORDER`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[PURCHASE_ORDER][开单地址-邮编]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[PURCHASE_ORDER][开单地址-邮编]移动端默认",
+        "stringLength" : 120,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[PURCHASE_ORDER][开单地址-邮编]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[PURCHASE_ORDER][开单地址-邮编]",
+        "stringLength" : 120,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "PURCHASE_ORDER",
+          "maxValue" : 120,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[120]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[120]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[120]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Purchase_Order",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 120,
+    "logicName" : "开单地址-邮编",
+    "name" : "PURCHASE_ORDER",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "PURCHASE_ORDER"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 120,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "purchase_order"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "SHIPPING_CODE",
+      "dBType" : "MYSQL5",
+      "name" : "SHIPPING_CODE",
+      "queryCodeExp" : "t1.`SHIPPING_CODE`",
+      "standardColumnName" : "`SHIPPING_CODE`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[SHIPPING_CODE][发货地址-邮编]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[SHIPPING_CODE][发货地址-邮编]",
+        "stringLength" : 30,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[SHIPPING_CODE][发货地址-邮编]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[SHIPPING_CODE][发货地址-邮编]移动端默认",
+        "stringLength" : 30,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "SHIPPING_CODE",
+          "maxValue" : 30,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[30]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[30]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[30]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Shipping_Code",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 30,
+    "logicName" : "发货地址-邮编",
+    "name" : "SHIPPING_CODE",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "SHIPPING_CODE"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 30,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "shipping_code"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "DESCRIPTION",
+      "dBType" : "MYSQL5",
+      "name" : "DESCRIPTION",
+      "queryCodeExp" : "t1.`DESCRIPTION`",
+      "standardColumnName" : "`DESCRIPTION`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[DESCRIPTION][条款及条件]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTAREA_10",
+        "name" : "[DESCRIPTION][条款及条件]",
+        "stringLength" : 32000,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[DESCRIPTION][条款及条件]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXTAREA",
+        "name" : "[DESCRIPTION][条款及条件]移动端默认",
+        "stringLength" : 32000,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "DESCRIPTION",
+          "maxValue" : 32000,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[32000]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[32000]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[32000]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Description",
+    "dEFType" : 1,
+    "dataType" : "LONGTEXT",
+    "importOrder" : 1000,
+    "length" : 32000,
+    "logicName" : "条款及条件",
+    "name" : "DESCRIPTION",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "DESCRIPTION"
+    },
+    "stdDataType" : 21,
+    "stringLength" : 32000,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "queryColumn" : false,
+    "serviceCodeName" : "description"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "QUOTE_NAME",
+      "dBType" : "MYSQL5",
+      "name" : "QUOTE_NAME",
+      "queryCodeExp" : "t1.`QUOTE_NAME`",
+      "standardColumnName" : "`QUOTE_NAME`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[QUOTE_NAME][描述]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTAREA_10",
+        "name" : "[QUOTE_NAME][描述]",
+        "stringLength" : 1048576,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[QUOTE_NAME][描述]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXTAREA",
+        "name" : "[QUOTE_NAME][描述]移动端默认",
+        "stringLength" : 1048576,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "QUOTE_NAME",
+          "maxValue" : 1048576,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[1048576]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[1048576]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[1048576]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Quote_Name",
+    "dEFType" : 1,
+    "dataType" : "LONGTEXT",
+    "importOrder" : 1000,
+    "length" : 1048576,
+    "logicName" : "描述",
+    "name" : "QUOTE_NAME",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "QUOTE_NAME"
+    },
+    "stdDataType" : 21,
+    "stringLength" : 1048576,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "queryColumn" : false,
+    "serviceCodeName" : "quote_name"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "DUE_DATE",
+      "dBType" : "MYSQL5",
+      "name" : "DUE_DATE",
+      "queryCodeExp" : "t1.`DUE_DATE`",
+      "standardColumnName" : "`DUE_DATE`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[DUE_DATE][到期日期]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "DATEPICKEREX_NOTIME",
+        "name" : "[DUE_DATE][到期日期]",
+        "uIMode" : "DEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[DUE_DATE][到期日期]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBDATE",
+        "name" : "[DUE_DATE][到期日期]移动端默认",
+        "uIMode" : "MOBILEDEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组"
+      },
+      "ruleInfo" : "默认规则",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Due_Date",
+    "dEFType" : 1,
+    "dataType" : "DATE",
+    "importOrder" : 1000,
+    "jsonFormat" : "yyyy-MM-dd",
+    "logicName" : "到期日期",
+    "name" : "DUE_DATE",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "DUE_DATE"
+    },
+    "stdDataType" : 5,
+    "valueFormat" : "%1$tY-%1$tm-%1$td",
+    "enableAudit" : true,
+    "serviceCodeName" : "due_date"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "CARRIER",
+      "dBType" : "MYSQL5",
+      "name" : "CARRIER",
+      "queryCodeExp" : "t1.`CARRIER`",
+      "standardColumnName" : "`CARRIER`"
+    } ],
+    "getAllPSDEFSearchModes" : [ {
+      "codeName" : "N_CARRIER_EQ",
+      "name" : "N_CARRIER_EQ",
+      "stdDataType" : 25,
+      "valueOP" : "EQ"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[CARRIER][运输]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "DROPDOWNLIST",
+        "name" : "[CARRIER][运输]",
+        "stringLength" : 60,
+        "uIMode" : "DEFAULT",
+        "needCodeListConfig" : true
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[CARRIER][运输]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBDROPDOWNLIST",
+        "name" : "[CARRIER][运输]移动端默认",
+        "stringLength" : 60,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true,
+        "needCodeListConfig" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "CARRIER",
+          "maxValue" : 60,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[60]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[60]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[60]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Carrier",
+    "dEFType" : 1,
+    "dataType" : "SSCODELIST",
+    "importOrder" : 1000,
+    "length" : 60,
+    "logicName" : "运输",
+    "name" : "CARRIER",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "CARRIER"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 60,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "carrier"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "PENDING",
+      "dBType" : "MYSQL5",
+      "name" : "PENDING",
+      "queryCodeExp" : "t1.`PENDING`",
+      "standardColumnName" : "`PENDING`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[PENDING][待决]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[PENDING][待决]",
+        "stringLength" : 120,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[PENDING][待决]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[PENDING][待决]移动端默认",
+        "stringLength" : 120,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "PENDING",
+          "maxValue" : 120,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[120]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[120]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[120]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Pending",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 120,
+    "logicName" : "待决",
+    "name" : "PENDING",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "PENDING"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 120,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "pending"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "BILLING_COUNTRY",
+      "dBType" : "MYSQL5",
+      "name" : "BILLING_COUNTRY",
+      "queryCodeExp" : "t1.`BILLING_COUNTRY`",
+      "standardColumnName" : "`BILLING_COUNTRY`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[BILLING_COUNTRY][开单地址-国家/地区]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[BILLING_COUNTRY][开单地址-国家/地区]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[BILLING_COUNTRY][开单地址-国家/地区]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[BILLING_COUNTRY][开单地址-国家/地区]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "BILLING_COUNTRY",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Billing_Country",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 100,
+    "logicName" : "开单地址-国家/地区",
+    "name" : "BILLING_COUNTRY",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "BILLING_COUNTRY"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "billing_country"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "SHIPPING_COUNTR",
+      "dBType" : "MYSQL5",
+      "name" : "SHIPPING_COUNTR",
+      "queryCodeExp" : "t1.`SHIPPING_COUNTR`",
+      "standardColumnName" : "`SHIPPING_COUNTR`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[SHIPPING_COUNTR][发货地址-国家/地区]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[SHIPPING_COUNTR][发货地址-国家/地区]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[SHIPPING_COUNTR][发货地址-国家/地区]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[SHIPPING_COUNTR][发货地址-国家/地区]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "SHIPPING_COUNTR",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Shipping_Countr",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 100,
+    "logicName" : "发货地址-国家/地区",
+    "name" : "SHIPPING_COUNTR",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "SHIPPING_COUNTR"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "shipping_countr"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "EXCISE_DUTY",
+      "dBType" : "MYSQL5",
+      "name" : "EXCISE_DUTY",
+      "queryCodeExp" : "t1.`EXCISE_DUTY`",
+      "standardColumnName" : "`EXCISE_DUTY`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[EXCISE_DUTY][消费税]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[EXCISE_DUTY][消费税]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[EXCISE_DUTY][消费税]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[EXCISE_DUTY][消费税]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "EXCISE_DUTY",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Excise_Duty",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 100,
+    "logicName" : "消费税",
+    "name" : "EXCISE_DUTY",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "EXCISE_DUTY"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "excise_duty"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "TAG",
+      "dBType" : "MYSQL5",
+      "name" : "TAG",
+      "queryCodeExp" : "t1.`TAG`",
+      "standardColumnName" : "`TAG`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[TAG][标签]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[TAG][标签]移动端默认",
+        "stringLength" : 2000,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[TAG][标签]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[TAG][标签]",
+        "stringLength" : 2000,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "TAG",
+          "maxValue" : 2000,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[2000]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[2000]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[2000]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Tag",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 2000,
+    "logicName" : "标签",
+    "name" : "TAG",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "TAG"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 2000,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "tag"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "SALES_COMMISSION",
+      "dBType" : "MYSQL5",
+      "name" : "SALES_COMMISSION",
+      "queryCodeExp" : "t1.`SALES_COMMISSION`",
+      "standardColumnName" : "`SALES_COMMISSION`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[SALES_COMMISSION][销售佣金]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[SALES_COMMISSION][销售佣金]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[SALES_COMMISSION][销售佣金]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[SALES_COMMISSION][销售佣金]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "SALES_COMMISSION",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Sales_Commission",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 100,
+    "logicName" : "销售佣金",
+    "name" : "SALES_COMMISSION",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "SALES_COMMISSION"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "sales_commission"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "LOCKED__S",
+      "dBType" : "MYSQL5",
+      "name" : "LOCKED__S",
+      "queryCodeExp" : "t1.`LOCKED__S`",
+      "standardColumnName" : "`LOCKED__S`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[LOCKED__S][Locked]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBSWITCH",
+        "name" : "[LOCKED__S][Locked]移动端默认",
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true,
+        "needCodeListConfig" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[LOCKED__S][Locked]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "DROPDOWNLIST_100",
+        "name" : "[LOCKED__S][Locked]",
+        "uIMode" : "DEFAULT",
+        "needCodeListConfig" : true
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组"
+      },
+      "ruleInfo" : "默认规则",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Locked__s",
+    "dEFType" : 1,
+    "dataType" : "YESNO",
+    "importOrder" : 1000,
+    "logicName" : "Locked",
+    "name" : "LOCKED__S",
+    "orderValue" : 1000,
+    "getPSCodeList" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSCODELISTS/YesNo.json"
+    },
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "LOCKED__S"
+    },
+    "stdDataType" : 9,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "locked_s"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "STATUS",
+      "dBType" : "MYSQL5",
+      "name" : "STATUS",
+      "queryCodeExp" : "t1.`STATUS`",
+      "standardColumnName" : "`STATUS`"
+    } ],
+    "getAllPSDEFSearchModes" : [ {
+      "codeName" : "N_STATUS_EQ",
+      "name" : "N_STATUS_EQ",
+      "stdDataType" : 25,
+      "valueOP" : "EQ"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[STATUS][状态]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "DROPDOWNLIST",
+        "name" : "[STATUS][状态]",
+        "stringLength" : 60,
+        "uIMode" : "DEFAULT",
+        "needCodeListConfig" : true
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[STATUS][状态]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBDROPDOWNLIST",
+        "name" : "[STATUS][状态]移动端默认",
+        "stringLength" : 60,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true,
+        "needCodeListConfig" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "STATUS",
+          "maxValue" : 60,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[60]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[60]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[60]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "Status",
+    "dEFType" : 1,
+    "dataType" : "SSCODELIST",
+    "importOrder" : 1000,
+    "length" : 60,
+    "logicName" : "状态",
+    "name" : "STATUS",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "STATUS"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 60,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "status"
+  }, {
+    "getAllPSDEFDTColumns" : [ {
+      "columnName" : "SO_NUMBER",
+      "dBType" : "MYSQL5",
+      "name" : "SO_NUMBER",
+      "queryCodeExp" : "t1.`SO_NUMBER`",
+      "standardColumnName" : "`SO_NUMBER`"
+    } ],
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[SO_NUMBER][销售订单编号]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[SO_NUMBER][销售订单编号]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[SO_NUMBER][销售订单编号]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[SO_NUMBER][销售订单编号]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "SO_NUMBER",
+          "maxValue" : 100,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[100]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[100]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[100]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "SO_Number",
+    "dEFType" : 1,
+    "dataType" : "TEXT",
+    "importOrder" : 1000,
+    "length" : 100,
+    "logicName" : "销售订单编号",
+    "name" : "SO_NUMBER",
+    "orderValue" : 1000,
+    "getPSDEDBTable" : {
+      "modelref" : true,
+      "id" : "Table"
+    },
+    "getPSSysDBColumn" : {
+      "modelref" : true,
+      "id" : "SO_NUMBER"
+    },
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "valueFormat" : "%1$s",
+    "enableAudit" : true,
+    "serviceCodeName" : "so_number"
+  }, {
+    "getAllPSDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[ATTACHMENTS][附件]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "HIDDEN",
+        "name" : "[ATTACHMENTS][附件]移动端默认",
+        "stringLength" : 1048576,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[ATTACHMENTS][附件]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "HIDDEN",
+        "name" : "[ATTACHMENTS][附件]",
+        "stringLength" : 1048576,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "getAllPSDEFValueRules" : [ {
+      "codeName" : "Default",
+      "name" : "默认规则",
+      "getPSDEFVRGroupCondition" : {
+        "condOp" : "AND",
+        "condType" : "GROUP",
+        "name" : "默认组",
+        "getPSDEFVRConditions" : [ {
+          "condType" : "STRINGLENGTH",
+          "dEFName" : "ATTACHMENTS",
+          "maxValue" : 1048576,
+          "name" : "默认字符串长度",
+          "ruleInfo" : "内容长度必须小于等于[1048576]",
+          "includeMaxValue" : true,
+          "includeMinValue" : false,
+          "keyCond" : true
+        } ],
+        "ruleInfo" : "内容长度必须小于等于[1048576]"
+      },
+      "ruleInfo" : "内容长度必须小于等于[1048576]",
+      "checkDefault" : true,
+      "defaultMode" : true,
+      "enableBackend" : true,
+      "enableFront" : true
+    } ],
+    "codeName" : "attachments",
+    "dEFType" : 5,
+    "dataType" : "ONE2MANYDATA",
+    "importOrder" : 1000,
+    "length" : 1048576,
+    "logicName" : "附件",
+    "name" : "ATTACHMENTS",
+    "orderValue" : 1000,
+    "getPSDER" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/attachment/PSDERS/DERCUSTOM_ATTACHMENT_SALES_ORDER.json"
+    },
+    "serviceCodeName" : "attachments",
+    "stdDataType" : 21,
+    "stringLength" : 1048576,
+    "valueFormat" : "%1$s",
+    "viewLevel" : 0,
+    "phisicalDEField" : false,
+    "queryColumn" : false,
+    "uIAssistDEField" : true
+  } ],
+  "getAllPSDEMethodDTOs" : [ {
+    "name" : "sales_order_dto",
+    "getPSDEMethodDTOFields" : [ {
+      "logicName" : "客户编号",
+      "name" : "adjustment",
+      "getPSDEField" : {
+        "name" : "ADJUSTMENT",
+        "codeName" : "Adjustment"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "附件",
+      "name" : "attachments",
+      "getPSDEField" : {
+        "name" : "ATTACHMENTS",
+        "codeName" : "attachments"
+      },
+      "getPSDER" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/attachment/PSDERS/DERCUSTOM_ATTACHMENT_SALES_ORDER.json"
+      },
+      "getRefPSDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "attachment_dto"
+      },
+      "getRefPSDataEntity" : {
+        "modelref" : true,
+        "path" : "PSMODULES/crm/PSDATAENTITIES/attachment.json"
+      },
+      "sourceType" : "DEFIELD",
+      "stringLength" : 1048576,
+      "type" : "DTOS"
+    }, {
+      "logicName" : "开单地址-城市",
+      "name" : "billing_city",
+      "getPSDEField" : {
+        "name" : "BILLING_CITY",
+        "codeName" : "Billing_City"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "报价名称",
+      "name" : "billing_code",
+      "getPSDEField" : {
+        "name" : "BILLING_CODE",
+        "codeName" : "Billing_Code"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 30,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "开单地址-国家/地区",
+      "name" : "billing_country",
+      "getPSDEField" : {
+        "name" : "BILLING_COUNTRY",
+        "codeName" : "Billing_Country"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "调整",
+      "name" : "billing_state",
+      "getPSDEField" : {
+        "name" : "BILLING_STATE",
+        "codeName" : "Billing_State"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "开单地址-街道",
+      "name" : "billing_street",
+      "getPSDEField" : {
+        "name" : "BILLING_STREET",
+        "codeName" : "Billing_Street"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 250,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "运输",
+      "name" : "carrier",
+      "getPSDEField" : {
+        "name" : "CARRIER",
+        "codeName" : "Carrier"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 60,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "建立人",
+      "name" : "create_man",
+      "getPSDEField" : {
+        "name" : "CREATE_MAN",
+        "codeName" : "create_man"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE",
+      "allowEmpty" : false,
+      "readOnly" : true
+    }, {
+      "jsonFormat" : "yyyy-MM-dd HH:mm:ss",
+      "logicName" : "建立时间",
+      "name" : "create_time",
+      "getPSDEField" : {
+        "name" : "CREATE_TIME",
+        "codeName" : "create_time"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 5,
+      "type" : "SIMPLE",
+      "allowEmpty" : false,
+      "readOnly" : true
+    }, {
+      "logicName" : "发货地址-省/市",
+      "name" : "customer_no",
+      "getPSDEField" : {
+        "name" : "CUSTOMER_NO",
+        "codeName" : "Customer_No"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 120,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "条款及条件",
+      "name" : "description",
+      "getPSDEField" : {
+        "name" : "DESCRIPTION",
+        "codeName" : "Description"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 21,
+      "stringLength" : 32000,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "折扣",
+      "name" : "discount",
+      "getPSDEField" : {
+        "name" : "DISCOUNT",
+        "codeName" : "Discount"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE"
+    }, {
+      "jsonFormat" : "yyyy-MM-dd",
+      "logicName" : "到期日期",
+      "name" : "due_date",
+      "getPSDEField" : {
+        "name" : "DUE_DATE",
+        "codeName" : "Due_Date"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 5,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "消费税",
+      "name" : "excise_duty",
+      "getPSDEField" : {
+        "name" : "EXCISE_DUTY",
+        "codeName" : "Excise_Duty"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "采购订单",
+      "name" : "grand_total",
+      "getPSDEField" : {
+        "name" : "GRAND_TOTAL",
+        "codeName" : "Grand_Total"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "标识",
+      "name" : "id",
+      "getPSDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE",
+      "allowEmpty" : false
+    }, {
+      "logicName" : "Locked",
+      "name" : "locked_s",
+      "getPSDEField" : {
+        "name" : "LOCKED__S",
+        "codeName" : "Locked__s"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 9,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "名称",
+      "name" : "name",
+      "getPSDEField" : {
+        "name" : "NAME",
+        "codeName" : "name"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 200,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "待决",
+      "name" : "pending",
+      "getPSDEField" : {
+        "name" : "PENDING",
+        "codeName" : "Pending"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 120,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "开单地址-邮编",
+      "name" : "purchase_order",
+      "getPSDEField" : {
+        "name" : "PURCHASE_ORDER",
+        "codeName" : "Purchase_Order"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 120,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "描述",
+      "name" : "quote_name",
+      "getPSDEField" : {
+        "name" : "QUOTE_NAME",
+        "codeName" : "Quote_Name"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 21,
+      "stringLength" : 1048576,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "销售佣金",
+      "name" : "sales_commission",
+      "getPSDEField" : {
+        "name" : "SALES_COMMISSION",
+        "codeName" : "Sales_Commission"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "税",
+      "name" : "shipping_city",
+      "getPSDEField" : {
+        "name" : "SHIPPING_CITY",
+        "codeName" : "Shipping_City"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "发货地址-邮编",
+      "name" : "shipping_code",
+      "getPSDEField" : {
+        "name" : "SHIPPING_CODE",
+        "codeName" : "Shipping_Code"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 30,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "发货地址-国家/地区",
+      "name" : "shipping_countr",
+      "getPSDEField" : {
+        "name" : "SHIPPING_COUNTR",
+        "codeName" : "Shipping_Countr"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "累计",
+      "name" : "shipping_state",
+      "getPSDEField" : {
+        "name" : "SHIPPING_STATE",
+        "codeName" : "Shipping_State"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "发货地址-街道",
+      "name" : "shipping_street",
+      "getPSDEField" : {
+        "name" : "SHIPPING_STREET",
+        "codeName" : "Shipping_Street"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 250,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "销售订单编号",
+      "name" : "so_number",
+      "getPSDEField" : {
+        "name" : "SO_NUMBER",
+        "codeName" : "SO_Number"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "状态",
+      "name" : "status",
+      "getPSDEField" : {
+        "name" : "STATUS",
+        "codeName" : "Status"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 60,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "小计",
+      "name" : "sub_total",
+      "getPSDEField" : {
+        "name" : "SUB_TOTAL",
+        "codeName" : "Sub_Total"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "主题",
+      "name" : "subject",
+      "getPSDEField" : {
+        "name" : "SUBJECT",
+        "codeName" : "Subject"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 120,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "标签",
+      "name" : "tag",
+      "getPSDEField" : {
+        "name" : "TAG",
+        "codeName" : "Tag"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 2000,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "开单地址-省/市",
+      "name" : "tax",
+      "getPSDEField" : {
+        "name" : "TAX",
+        "codeName" : "Tax"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "更新人",
+      "name" : "update_man",
+      "getPSDEField" : {
+        "name" : "UPDATE_MAN",
+        "codeName" : "update_man"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "stringLength" : 100,
+      "type" : "SIMPLE",
+      "allowEmpty" : false,
+      "readOnly" : true
+    }, {
+      "jsonFormat" : "yyyy-MM-dd HH:mm:ss",
+      "logicName" : "更新时间",
+      "name" : "update_time",
+      "getPSDEField" : {
+        "name" : "UPDATE_TIME",
+        "codeName" : "update_time"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 5,
+      "type" : "SIMPLE",
+      "allowEmpty" : false,
+      "readOnly" : true
+    } ],
+    "sourceType" : "DE",
+    "type" : "DEFAULT",
+    "defaultMode" : true
+  }, {
+    "name" : "sales_order_filter_dto",
+    "getPSDEFilterDTOFields" : [ {
+      "logicName" : "运输",
+      "name" : "n_carrier_eq",
+      "getPSDEFSearchMode" : {
+        "modelref" : true,
+        "id" : "N_CARRIER_EQ"
+      },
+      "getPSDEField" : {
+        "name" : "CARRIER",
+        "codeName" : "Carrier"
+      },
+      "sourceType" : "DEFSEARCHMODE",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "标识",
+      "name" : "n_id_eq",
+      "getPSDEFSearchMode" : {
+        "modelref" : true,
+        "id" : "N_ID_EQ"
+      },
+      "getPSDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "sourceType" : "DEFSEARCHMODE",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "名称",
+      "name" : "n_name_like",
+      "getPSDEFSearchMode" : {
+        "modelref" : true,
+        "id" : "N_NAME_LIKE"
+      },
+      "getPSDEField" : {
+        "name" : "NAME",
+        "codeName" : "name"
+      },
+      "sourceType" : "DEFSEARCHMODE",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "logicName" : "状态",
+      "name" : "n_status_eq",
+      "getPSDEFSearchMode" : {
+        "modelref" : true,
+        "id" : "N_STATUS_EQ"
+      },
+      "getPSDEField" : {
+        "name" : "STATUS",
+        "codeName" : "Status"
+      },
+      "sourceType" : "DEFSEARCHMODE",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    } ],
+    "sourceType" : "DE",
+    "type" : "DEFILTER",
+    "defaultMode" : true
+  } ],
+  "getAllPSDEOPPrivs" : [ {
+    "logicName" : "建立",
+    "name" : "CREATE"
+  }, {
+    "logicName" : "删除",
+    "name" : "DELETE"
+  }, {
+    "logicName" : "读取",
+    "name" : "READ"
+  }, {
+    "logicName" : "更新",
+    "name" : "UPDATE"
+  } ],
+  "getAllPSModelDatas" : [ {
+    "codeName" : "EditView2",
+    "logicName" : "销售订单实体编辑视图（左右关系）",
+    "name" : "销售订单实体编辑视图（左右关系）",
+    "realModelSubType" : "DEEDITVIEW2",
+    "realModelType" : "PSDEVIEWBASE"
+  }, {
+    "codeName" : "list_view_multimode",
+    "logicName" : "销售订单多模式列表视图",
+    "name" : "销售订单多模式列表视图",
+    "realModelSubType" : "DELISTVIEW",
+    "realModelType" : "PSDEVIEWBASE"
+  }, {
+    "codeName" : "RedirectView",
+    "logicName" : "销售订单实体数据重定向视图",
+    "modelTag" : "REDIRECTVIEW",
+    "name" : "销售订单实体数据重定向视图",
+    "realModelSubType" : "DEREDIRECTVIEW",
+    "realModelType" : "PSDEVIEWBASE"
+  }, {
+    "codeName" : "data_view_multimode",
+    "logicName" : "销售订单多模式卡片视图",
+    "name" : "销售订单多模式卡片视图",
+    "realModelSubType" : "DEDATAVIEW",
+    "realModelType" : "PSDEVIEWBASE"
+  }, {
+    "codeName" : "MPickupView",
+    "logicName" : "销售订单实体数据多项选择视图",
+    "modelTag" : "MPICKUPVIEW",
+    "name" : "销售订单实体数据多项选择视图",
+    "realModelSubType" : "DEMPICKUPVIEW",
+    "realModelType" : "PSDEVIEWBASE"
+  }, {
+    "codeName" : "PickupGridView",
+    "logicName" : "销售订单实体选择表格视图（部件视图）",
+    "name" : "销售订单实体选择表格视图（部件视图）",
+    "realModelSubType" : "DEPICKUPGRIDVIEW",
+    "realModelType" : "PSDEVIEWBASE"
+  }, {
+    "codeName" : "main_view",
+    "logicName" : "销售订单主数据视图",
+    "name" : "销售订单主数据视图",
+    "realModelSubType" : "DEEDITVIEW2",
+    "realModelType" : "PSDEVIEWBASE"
+  }, {
+    "codeName" : "EditView",
+    "logicName" : "销售订单实体编辑视图",
+    "modelTag" : "EDITVIEW",
+    "name" : "销售订单实体编辑视图",
+    "realModelSubType" : "DEEDITVIEW",
+    "realModelType" : "PSDEVIEWBASE"
+  }, {
+    "codeName" : "edit_view",
+    "logicName" : "销售订单实体编辑视图",
+    "name" : "销售订单实体编辑视图",
+    "realModelSubType" : "DEEDITVIEW",
+    "realModelType" : "PSDEVIEWBASE"
+  }, {
+    "codeName" : "grid_view_multimode",
+    "logicName" : "销售订单多模式表格视图",
+    "name" : "销售订单多模式表格视图",
+    "realModelSubType" : "DEGRIDVIEW",
+    "realModelType" : "PSDEVIEWBASE"
+  }, {
+    "codeName" : "tab_search_view",
+    "logicName" : "销售订单分页导航搜索视图",
+    "name" : "销售订单分页导航搜索视图",
+    "realModelSubType" : "DETABSEARCHVIEW",
+    "realModelType" : "PSDEVIEWBASE"
+  }, {
+    "codeName" : "GridView",
+    "logicName" : "销售订单实体表格视图",
+    "modelTag" : "MDATAVIEW",
+    "name" : "销售订单实体表格视图",
+    "realModelSubType" : "DEGRIDVIEW",
+    "realModelType" : "PSDEVIEWBASE"
+  }, {
+    "codeName" : "note_attach_view",
+    "logicName" : "备注",
+    "name" : "备注",
+    "realModelSubType" : "DEEDITVIEW9",
+    "realModelType" : "PSDEVIEWBASE"
+  }, {
+    "codeName" : "PickupView",
+    "logicName" : "销售订单实体数据选择视图",
+    "modelTag" : "PICKUPVIEW",
+    "name" : "销售订单实体数据选择视图",
+    "realModelSubType" : "DEPICKUPVIEW",
+    "realModelType" : "PSDEVIEWBASE"
+  }, {
+    "codeName" : "attachment_view",
+    "logicName" : "附件",
+    "name" : "附件",
+    "realModelSubType" : "DEEDITVIEW9",
+    "realModelType" : "PSDEVIEWBASE"
+  }, {
+    "codeName" : "main_view_Form",
+    "logicName" : "销售订单主数据视图_表单",
+    "modelTag2" : "0",
+    "name" : "销售订单主数据视图_表单",
+    "realModelSubType" : "EDITFORM",
+    "realModelType" : "PSDEFORM"
+  }, {
+    "codeName" : "Main",
+    "logicName" : "主编辑表单",
+    "modelTag2" : "0",
+    "name" : "主编辑表单",
+    "realModelSubType" : "EDITFORM",
+    "realModelType" : "PSDEFORM"
+  }, {
+    "codeName" : "mini_form",
+    "logicName" : "主数据小表单",
+    "modelTag2" : "0",
+    "name" : "主数据小表单",
+    "realModelSubType" : "EDITFORM",
+    "realModelType" : "PSDEFORM"
+  }, {
+    "codeName" : "note_attach_view_Form",
+    "logicName" : "备注_表单",
+    "modelTag2" : "0",
+    "name" : "备注_表单",
+    "realModelSubType" : "EDITFORM",
+    "realModelType" : "PSDEFORM"
+  }, {
+    "codeName" : "edit_view_Form",
+    "logicName" : "编辑_表单",
+    "modelTag2" : "0",
+    "name" : "编辑_表单",
+    "realModelSubType" : "EDITFORM",
+    "realModelType" : "PSDEFORM"
+  }, {
+    "codeName" : "attachment_view_Form",
+    "logicName" : "附件_表单",
+    "modelTag2" : "0",
+    "name" : "附件_表单",
+    "realModelSubType" : "EDITFORM",
+    "realModelType" : "PSDEFORM"
+  } ],
+  "auditMode" : 2,
+  "codeName" : "sales_order",
+  "dEType" : 1,
+  "dSLink" : "DEFAULT",
+  "dataAccCtrlArch" : 1,
+  "dataAccCtrlMode" : 1,
+  "dataChangeLogMode" : 0,
+  "dataImpExpMode" : 3,
+  "getDefaultPSDEDataQuery" : {
+    "modelref" : true,
+    "id" : "Default"
+  },
+  "getDefaultPSDEDataSet" : {
+    "modelref" : true,
+    "id" : "Default"
+  },
+  "getDefaultPSDEFilterDTO" : {
+    "modelref" : true,
+    "id" : "sales_order_filter_dto"
+  },
+  "getDefaultPSDEMethodDTO" : {
+    "modelref" : true,
+    "id" : "sales_order_dto"
+  },
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/sales_order.json",
+  "enableActions" : 7,
+  "enableUIActions" : 15,
+  "enableViewLevel" : 0,
+  "extendMode" : 0,
+  "getKeyPSDEField" : {
+    "name" : "ID",
+    "codeName" : "id"
+  },
+  "logicName" : "销售订单",
+  "getMajorPSDEField" : {
+    "name" : "NAME",
+    "codeName" : "name"
+  },
+  "getMajorPSDERs" : [ {
+    "codeName" : "SALES_ORDER",
+    "dERSubType" : "DER1N",
+    "dERType" : "DERCUSTOM",
+    "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/attachment/PSDERS/DERCUSTOM_ATTACHMENT_SALES_ORDER.json",
+    "logicName" : "销售订单-附件",
+    "getMajorPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order.json"
+    },
+    "masterOrder" : 100,
+    "masterRS" : 9,
+    "memo" : "自动生成",
+    "getMinorPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/attachment.json"
+    },
+    "name" : "DERCUSTOM_ATTACHMENT_SALES_ORDER",
+    "getOne2XDataPSDEField" : {
+      "name" : "ATTACHMENTS",
+      "codeName" : "attachments"
+    },
+    "orderValue" : 100,
+    "pickupDEFName" : "OWNER_ID",
+    "getPickupPSDEField" : {
+      "name" : "OWNER_ID",
+      "codeName" : "owner_id"
+    },
+    "removeActionType" : 0,
+    "removeOrder" : -1,
+    "serviceCodeName" : "sales_order"
+  }, {
+    "codeName" : "SALES_ORDER",
+    "dERSubType" : "DER1N",
+    "dERType" : "DERCUSTOM",
+    "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/custom_button/PSDERS/DERCUSTOM_CUSTOM_BUTTON_SALES_ORDER.json",
+    "logicName" : "销售订单-链接",
+    "getMajorPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order.json"
+    },
+    "masterRS" : 0,
+    "memo" : "自动生成",
+    "getMinorPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/custom_button.json"
+    },
+    "name" : "DERCUSTOM_CUSTOM_BUTTON_SALES_ORDER",
+    "orderValue" : 100,
+    "parentSubType" : "SALES_ORDER",
+    "pickupDEFName" : "OWNER_ID",
+    "getPickupPSDEField" : {
+      "name" : "OWNER_ID",
+      "codeName" : "owner_id"
+    },
+    "removeActionType" : 0,
+    "removeOrder" : -1,
+    "serviceCodeName" : "sales_order",
+    "typeValue" : "SALES_ORDER"
+  }, {
+    "codeName" : "SALES_ORDER",
+    "dERSubType" : "DER1N",
+    "dERType" : "DERCUSTOM",
+    "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/note_attach/PSDERS/DERCUSTOM_NOTE_ATTACH_SALES_ORDER.json",
+    "logicName" : "销售订单-备注",
+    "getMajorPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/sales_order.json"
+    },
+    "masterRS" : 0,
+    "memo" : "自动生成",
+    "getMinorPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach.json"
+    },
+    "name" : "DERCUSTOM_NOTE_ATTACH_SALES_ORDER",
+    "orderValue" : 100,
+    "parentSubType" : "SALES_ORDER",
+    "pickupDEFName" : "PRINCIPAL_ID",
+    "getPickupPSDEField" : {
+      "name" : "PRINCIPAL_ID",
+      "codeName" : "principal_id"
+    },
+    "removeActionType" : 0,
+    "removeOrder" : -1,
+    "serviceCodeName" : "sales_order",
+    "typeValue" : "SALES_ORDER"
+  } ],
+  "name" : "SALES_ORDER",
+  "getPSSysDBScheme" : {
+    "modelref" : true,
+    "path" : "PSSYSDBSCHEMES/DEFAULT.json"
+  },
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "saaSMode" : 0,
+  "serviceAPIMode" : 1,
+  "serviceCodeName" : "sales_order",
+  "storageMode" : 1,
+  "systemTag" : "iBizCRM",
+  "tableName" : "SALES_ORDER",
+  "getViewPSDEDataQuery" : {
+    "modelref" : true,
+    "id" : "Default"
+  },
+  "enableAPIStorage" : false,
+  "enableCreate" : true,
+  "enableDataVer" : false,
+  "enableEntityCache" : false,
+  "enableModify" : true,
+  "enableMultiDS" : false,
+  "enableMultiForm" : false,
+  "enableMultiStorage" : false,
+  "enableNoSQLStorage" : false,
+  "enableRemove" : true,
+  "enableSQLStorage" : true,
+  "logicValid" : false,
+  "subSysAsCloud" : false
+}

@@ -1,0 +1,362 @@
+{
+  "accUserMode" : 2,
+  "caption" : "通话",
+  "codeName" : "call_tab_search_view",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/call_tab_search_view.json",
+  "memo" : "自动生成",
+  "name" : "calltab_search_view",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/call.json"
+  },
+  "getPSAppModule" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/Ungroup.json"
+  },
+  "getPSDEViewCodeName" : "tab_search_view",
+  "getPSDEViewId" : "013c38ded90b04a0dcb1cd01c4e5337e",
+  "getPSViewLayoutPanel" : {
+    "codeName" : "usr0318980456",
+    "controlType" : "VIEWLAYOUTPANEL",
+    "layoutMode" : "FLEX",
+    "logicName" : "分页搜索通用布局",
+    "memo" : "分页搜索通用布局",
+    "name" : "layoutpanel",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/call.json"
+    },
+    "getPSControlParam" : { },
+    "getPSLayout" : {
+      "layout" : "FLEX"
+    },
+    "getRootPSPanelItems" : [ {
+      "caption" : "容器",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "view_header",
+      "getPSLayout" : {
+        "align" : "space-between",
+        "dir" : "row",
+        "layout" : "FLEX",
+        "vAlign" : "center"
+      },
+      "getPSLayoutPos" : {
+        "grow" : -1,
+        "layout" : "FLEX",
+        "shrink" : 0
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "view_captionbar",
+        "getPSLayout" : {
+          "dir" : "row",
+          "layout" : "FLEX",
+          "vAlign" : "center"
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "layout" : "FLEX"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "标题栏",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CTRLPOS",
+          "name" : "captionbar",
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX"
+          },
+          "showCaption" : true
+        }, {
+          "actionType" : "UIACTION",
+          "buttonStyle" : "DEFAULT",
+          "caption" : "过滤",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "BUTTON",
+          "name" : "button_filter",
+          "getPSAppViewUIAction" : {
+            "modelref" : true,
+            "id" : "layoutpanel_button_filter"
+          },
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX"
+          },
+          "getPSSysImage" : {
+            "glyph" : "xf0b0@FontAwesome",
+            "cssClass" : "fa fa-filter"
+          },
+          "getPSUIAction" : {
+            "actionTarget" : "SINGLEDATA",
+            "caption" : "过滤",
+            "codeName" : "panel_usr0318980456_button_filter_click",
+            "frontProcessType" : "OTHER",
+            "fullCodeName" : "account_panel_usr0318980456_button_filter_click",
+            "name" : "过滤",
+            "getPSAppDEUILogic" : {
+              "modelref" : true,
+              "id" : "filter_trigger"
+            },
+            "getPSAppDataEntity" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/account.json"
+            },
+            "uIActionMode" : "FRONT",
+            "uIActionTag" : "panel_usr0318980456_button_filter_click",
+            "uIActionType" : "DEUIACTION",
+            "uILogicAttachMode" : "REPLACE",
+            "uILogicType" : "DELOGIC",
+            "id" : "panel_usr0318980456_button_filter_click@account"
+          },
+          "tooltip" : "过滤",
+          "uIActionTarget" : "SINGLEDATA"
+        }, {
+          "caption" : "文本",
+          "contentType" : "RAW",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "RAWITEM",
+          "name" : "static_text",
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX"
+          },
+          "getPSRawItem" : {
+            "caption" : "文本内容",
+            "contentType" : "RAW",
+            "name" : "static_text",
+            "predefinedType" : "STATIC_TEXT",
+            "renderMode" : "TEXT"
+          },
+          "getPSSysPFPlugin" : {
+            "pluginType" : "CUSTOM",
+            "pluginCode" : "GROUP_SEARCHBAR",
+            "runtimeObject" : true
+          },
+          "rawContent" : "文本内容",
+          "showCaption" : true
+        } ]
+      }, {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "container3",
+        "getPSLayout" : {
+          "dir" : "row",
+          "layout" : "FLEX",
+          "vAlign" : "center"
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "layout" : "FLEX",
+          "spacingRight" : "INNERMEDIUM"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "容器",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CONTAINER",
+          "name" : "view_tabexppanel",
+          "getPSLayout" : {
+            "layout" : "FLEX"
+          },
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX"
+          },
+          "getPSPanelItems" : [ {
+            "caption" : "关系分页部件",
+            "itemStyle" : "DEFAULT",
+            "itemType" : "CTRLPOS",
+            "name" : "tabexppanel",
+            "getPSLayoutPos" : {
+              "grow" : -1,
+              "layout" : "FLEX"
+            },
+            "showCaption" : true
+          } ]
+        }, {
+          "caption" : "工具栏占位",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "RAWITEM",
+          "name" : "tabtoolbar",
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX"
+          },
+          "getPSRawItem" : {
+            "name" : "tabtoolbar",
+            "predefinedType" : "TELEPORT_PLACEHOLDER"
+          },
+          "showCaption" : true
+        } ]
+      } ],
+      "predefinedType" : "VIEWHEADER"
+    }, {
+      "caption" : "容器",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "container",
+      "getPSLayout" : {
+        "dir" : "row",
+        "layout" : "FLEX"
+      },
+      "getPSLayoutPos" : {
+        "grow" : 1,
+        "layout" : "FLEX"
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "容器",
+        "contentWidth" : 300.0,
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "view_searchbar",
+        "getPSLayout" : {
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "layout" : "FLEX",
+          "shrink" : 0,
+          "spacingBottom" : "INNERSMALL",
+          "spacingLeft" : "INNERMEDIUM",
+          "spacingTop" : "INNERSMALL",
+          "width" : 300,
+          "widthMode" : "PX"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "搜索栏",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CTRLPOS",
+          "name" : "searchbar",
+          "getPSLayoutPos" : {
+            "grow" : 1,
+            "layout" : "FLEX"
+          },
+          "showCaption" : true
+        } ],
+        "width" : 300.0
+      }, {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "container1",
+        "getPSLayout" : {
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "grow" : 1,
+          "layout" : "FLEX"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "容器",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CONTAINER",
+          "name" : "view_content",
+          "getPSLayout" : {
+            "layout" : "FLEX"
+          },
+          "getPSLayoutPos" : {
+            "grow" : 1,
+            "layout" : "FLEX"
+          },
+          "getPSPanelItems" : [ {
+            "caption" : "导航区占位",
+            "itemStyle" : "DEFAULT",
+            "itemType" : "RAWITEM",
+            "name" : "nav_pos",
+            "getPSLayoutPos" : {
+              "grow" : 1,
+              "layout" : "FLEX"
+            },
+            "getPSRawItem" : {
+              "name" : "nav_pos",
+              "predefinedType" : "NAV_POS"
+            },
+            "showCaption" : true
+          } ],
+          "predefinedType" : "VIEWCONTENT"
+        }, {
+          "caption" : "容器",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CONTAINER",
+          "name" : "view_tabexppanel_bottom",
+          "getPSLayout" : {
+            "layout" : "FLEX"
+          },
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX",
+            "shrink" : 0
+          }
+        } ]
+      } ]
+    } ],
+    "layoutBodyOnly" : false,
+    "layoutPanel" : true,
+    "useDefaultLayout" : false,
+    "viewProxyMode" : true,
+    "modelid" : "f9a64be769ab83bfc4ff869c38a9192b",
+    "modeltype" : "PSSYSVIEWLAYOUTPANEL",
+    "getPSControls" : [ {
+      "codeName" : "searchbar",
+      "controlType" : "SEARCHBAR",
+      "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/call/PSSEARCHBARS/searchbar.json",
+      "logicName" : "默认搜索栏",
+      "memo" : "自动生成",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/call.json"
+      },
+      "getPSControlParam" : {
+        "id" : "SEARCHBAR"
+      },
+      "quickGroupCount" : -1,
+      "quickSearchMode" : 1,
+      "quickSearchWidth" : 0,
+      "enableFilter" : false,
+      "enableGroup" : false,
+      "enableQuickSearch" : true,
+      "mobileSearchBar" : false,
+      "name" : "searchbar",
+      "modelid" : "278508be77aad93120d693b85eabc48d",
+      "modeltype" : "PSSYSSEARCHBAR"
+    }, {
+      "codeName" : "tab_search_view_tabexppanel",
+      "controlType" : "TABEXPPANEL",
+      "name" : "tabexppanel",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/call.json"
+      },
+      "getPSControlParam" : { },
+      "tabLayout" : "TOP",
+      "uniqueTag" : "call_tab_search_view__tabexppanel",
+      "modelid" : "1d449db446ce6a181e25aa57ec527aac_tabexppanel",
+      "modeltype" : "PSTABEXPPANEL"
+    }, {
+      "caption" : "通话",
+      "codeName" : "tab_search_view_captionbar",
+      "controlType" : "CAPTIONBAR",
+      "name" : "captionbar",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/call.json"
+      },
+      "getPSControlParam" : { }
+    } ]
+  },
+  "tabLayout" : "TOP",
+  "title" : "通话",
+  "viewStyle" : "DEFAULT",
+  "viewType" : "DETABSEARCHVIEW",
+  "enableDP" : true,
+  "enableQuickSearch" : false,
+  "enableSearch" : false,
+  "expandSearchForm" : false,
+  "loadDefault" : true,
+  "showDataInfoBar" : true,
+  "modelid" : "1d449db446ce6a181e25aa57ec527aac",
+  "modeltype" : "PSAPPDEVIEW"
+}

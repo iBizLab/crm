@@ -1,0 +1,27 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "CUSTOM",
+  "actionType" : "DELOGIC",
+  "codeName" : "Async_maneuverToWorkProgress",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEACTIONS/Async_maneuverToWorkProgress.json",
+  "logicName" : "异步新建活动时添加到工作进展",
+  "name" : "Async_maneuverToWorkProgress",
+  "getPSDEActionInput" : {
+    "name" : "Async_maneuverToWorkProgressInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "task_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Async_maneuverToWorkProgressResult",
+    "type" : "VOID"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/task/PSDELOGICS/maneuverToWorkProgress.json"
+  },
+  "enableAudit" : true,
+  "enableFront" : false
+}

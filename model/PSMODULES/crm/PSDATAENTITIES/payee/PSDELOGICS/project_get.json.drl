@@ -1,0 +1,74 @@
+package cn.ibizlab.crm.crm.logic.payeelogic.project_get;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.payee payeeproject_getdefault;
+                global cn.ibizlab.crm.core.crm.domain.project payeeproject_getproject;
+                    global cn.ibizlab.crm.core.crm.service.IprojectService projectservice;
+        global cn.ibizlab.crm.core.crm.service.IpayeeService iBzSysPayeeDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "payeeproject_getbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "payeeproject_getend1"
+            when
+            then
+                        update(payeeproject_getdefault);//更新fact中变量值
+                        update(payeeproject_getproject);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam1"
+            ruleflow-group "payeeproject_getprepareparam1"
+            when
+            then
+                            payeeproject_getproject.set("id",payeeproject_getdefault.get("projectid"));
+                        update(payeeproject_getdefault);//更新fact中变量值
+                        update(payeeproject_getproject);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体行为]
+            rule "deaction1"
+            ruleflow-group "payeeproject_getdeaction1"
+            when
+            then
+                            cn.ibizlab.crm.util.helper.CachedBeanCopier.copy(projectservice.get(payeeproject_getproject.getId()),payeeproject_getproject);
+                        update(payeeproject_getdefault);//更新fact中变量值
+                        update(payeeproject_getproject);//更新fact中变量值
+            end
+
+            //逻辑处理节点[调试逻辑参数]
+            rule "debugparam1"
+            ruleflow-group "payeeproject_getdebugparam1"
+            when
+            then
+                        update(payeeproject_getdefault);//更新fact中变量值
+                        update(payeeproject_getproject);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam2"
+            ruleflow-group "payeeproject_getprepareparam2"
+            when
+            then
+                            payeeproject_getdefault.set("settlementamount",payeeproject_getproject.get("settlementamount"));
+                            payeeproject_getdefault.set("onumber",payeeproject_getproject.get("onumber"));
+                            payeeproject_getdefault.set("accountname",payeeproject_getproject.get("accountname"));
+                            payeeproject_getdefault.set("businessline",payeeproject_getproject.get("businessline"));
+                            payeeproject_getdefault.set("orderdate",payeeproject_getproject.get("orderdate"));
+                        update(payeeproject_getdefault);//更新fact中变量值
+                        update(payeeproject_getproject);//更新fact中变量值
+            end

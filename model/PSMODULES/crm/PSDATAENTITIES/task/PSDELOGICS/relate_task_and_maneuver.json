@@ -1,0 +1,250 @@
+{
+  "codeName" : "relate_task_and_maneuver",
+  "defaultParamName" : "Default",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/task/PSDELOGICS/relate_task_and_maneuver.json",
+  "logicName" : "关联任务和活动",
+  "name" : "关联任务和活动",
+  "getPSDELogicNodes" : [ {
+    "codeName" : "Begin",
+    "leftPos" : 420,
+    "logicNodeType" : "BEGIN",
+    "name" : "开始",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "BINDPARAM1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "Begin"
+      }
+    } ],
+    "topPos" : 220,
+    "parallelOutput" : true
+  }, {
+    "codeName" : "BINDPARAM1",
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "selectDate"
+    },
+    "leftPos" : 380,
+    "logicNodeType" : "BINDPARAM",
+    "name" : "绑定参数",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "LOOPSUBCALL1"
+      },
+      "name" : "存在选中数据",
+      "getPSDELogicLinkGroupCond" : {
+        "groupOP" : "AND",
+        "logicType" : "GROUP",
+        "name" : "连接条件组",
+        "getPSDELogicLinkConds" : [ {
+          "condOP" : "GT",
+          "dstFieldName" : "size",
+          "getDstLogicParam" : {
+            "modelref" : true,
+            "id" : "selectDate"
+          },
+          "logicType" : "SINGLE",
+          "name" : "selectDate[size] 大于(>) 0",
+          "paramValue" : "0"
+        } ]
+      },
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "BINDPARAM1"
+      }
+    } ],
+    "srcFieldName" : "srfactionparam",
+    "getSrcPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "Default"
+    },
+    "topPos" : 371
+  }, {
+    "codeName" : "LOOPSUBCALL1",
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "for_temp_obj"
+    },
+    "leftPos" : 622,
+    "logicNodeType" : "LOOPSUBCALL",
+    "name" : "循环子调用",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RESETPARAM1"
+      },
+      "name" : "进入循环",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "LOOPSUBCALL1"
+      },
+      "subCallLink" : true
+    }, {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "END1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "LOOPSUBCALL1"
+      }
+    } ],
+    "getSrcPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "selectDate"
+    },
+    "topPos" : 371
+  }, {
+    "codeName" : "RESETPARAM1",
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "relation_obj"
+    },
+    "leftPos" : 919,
+    "logicNodeType" : "RESETPARAM",
+    "name" : "重置关联对象",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RESETPARAM1"
+      }
+    } ],
+    "topPos" : 371
+  }, {
+    "codeName" : "PREPAREPARAM1",
+    "leftPos" : 1160,
+    "logicNodeType" : "PREPAREPARAM",
+    "name" : "活动填充关联对象属性",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "DEACTION1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM1"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "dstFieldName" : "TARGET_ID",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "relation_obj"
+      },
+      "name" : "for_temp_obj[ID] ==> relation_obj[TARGET_ID]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "ID",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "for_temp_obj"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "dstFieldName" : "PRINCIPAL_TYPE",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "relation_obj"
+      },
+      "name" : "直接值[TASK] ==> relation_obj[PRINCIPAL_TYPE]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "TYPE",
+      "srcValue" : "TASK",
+      "srcValueType" : "SRCVALUE"
+    }, {
+      "dstFieldName" : "PRINCIPAL_ID",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "relation_obj"
+      },
+      "name" : "Default[ID] ==> relation_obj[PRINCIPAL_ID]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "ID",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    } ],
+    "topPos" : 371
+  }, {
+    "codeName" : "DEACTION1",
+    "getDstPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/relation/PSDEACTIONS/Save.json"
+    },
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "relation_obj"
+    },
+    "getDstPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/relation.json"
+    },
+    "leftPos" : 1400,
+    "logicNodeType" : "DEACTION",
+    "name" : "建立关联关系",
+    "topPos" : 371
+  }, {
+    "codeName" : "END1",
+    "leftPos" : 662,
+    "logicNodeType" : "END",
+    "name" : "结束",
+    "topPos" : 627
+  } ],
+  "getPSDELogicParams" : [ {
+    "codeName" : "Default",
+    "logicName" : "传入变量",
+    "name" : "传入变量",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+    },
+    "default" : true,
+    "entityParam" : true
+  }, {
+    "codeName" : "for_temp_obj",
+    "logicName" : "循环临时变量",
+    "name" : "循环临时变量",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+    },
+    "entityParam" : true
+  }, {
+    "codeName" : "relation_obj",
+    "logicName" : "关系对象",
+    "name" : "关系对象",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/relation.json"
+    },
+    "entityParam" : true
+  }, {
+    "codeName" : "selectDate",
+    "logicName" : "关联列表",
+    "name" : "关联列表",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+    },
+    "entityListParam" : true
+  } ],
+  "getStartPSDELogicNode" : {
+    "modelref" : true,
+    "id" : "Begin"
+  },
+  "enableBackend" : true,
+  "enableFront" : false
+}

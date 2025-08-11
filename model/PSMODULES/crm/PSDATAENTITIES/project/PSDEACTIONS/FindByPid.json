@@ -1,0 +1,31 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "GETDRAFT",
+  "actionType" : "DELOGIC",
+  "codeName" : "FindByPid",
+  "dataAccessAction" : "NONE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/project/PSDEACTIONS/FindByPid.json",
+  "logicName" : "查询父订单信息",
+  "name" : "FindByPid",
+  "getPSDEActionInput" : {
+    "name" : "FindByPidInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "project_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "FindByPidResult",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "project_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/project/PSDELOGICS/GetAccount.json"
+  },
+  "enableFront" : false
+}

@@ -1,0 +1,15 @@
+{
+  "codeName" : "UsrDRItem0618445066",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEDRITEMS/UsrDRItem0618445066.json",
+  "itemType" : "CUSTOM",
+  "name" : "客户",
+  "parentDataJO" : {
+    "srfparentdename" : "TASK",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "grid_view_relation",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+  }
+}

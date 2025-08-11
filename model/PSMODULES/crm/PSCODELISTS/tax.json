@@ -1,0 +1,20 @@
+{
+  "codeListTag" : "crm__tax",
+  "codeListType" : "STATIC",
+  "codeName" : "tax",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSCODELISTS/tax.json",
+  "emptyText" : "未定义",
+  "name" : "税",
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "refFlag" : true,
+  "systemTag" : "iBizCRM",
+  "codeItemValueNumber" : false,
+  "enableCache" : true,
+  "subSysAsCloud" : false,
+  "subSysCodeList" : false,
+  "userScope" : false
+}

@@ -1,0 +1,79 @@
+{
+  "accUserMode" : 2,
+  "getCapPSLanguageRes" : {
+    "lanResTag" : "DE.LNAME.PROJECT"
+  },
+  "caption" : "订单",
+  "codeName" : "project_redirect_view",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/project_redirect_view.json",
+  "funcViewMode" : "REDIRECTVIEW",
+  "memo" : "系统自动添加",
+  "name" : "projectRedirectView",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+  },
+  "getPSAppModule" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/crm.json"
+  },
+  "getPSControls" : [ {
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DE.LNAME.PROJECT"
+    },
+    "caption" : "订单",
+    "codeName" : "redirect_view_captionbar",
+    "controlType" : "CAPTIONBAR",
+    "name" : "captionbar",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+    },
+    "getPSControlParam" : { }
+  } ],
+  "getPSDEViewCodeName" : "RedirectView",
+  "getPSDEViewId" : "3c35858cd1e33defad59c97094c64622",
+  "getPSViewLayoutPanel" : {
+    "codeName" : "layoutpanel",
+    "controlStyle" : "APPDEREDIRECTVIEW",
+    "controlType" : "VIEWLAYOUTPANEL",
+    "name" : "layoutpanel",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+    },
+    "getPSControlParam" : { },
+    "layoutBodyOnly" : true,
+    "layoutPanel" : true,
+    "useDefaultLayout" : true
+  },
+  "getRedirectPSAppViewRefs" : [ {
+    "name" : "PROJECT:EDITVIEW",
+    "realTitle" : "订单编辑视图",
+    "getRefPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/project_edit_view3.json",
+      "viewType" : "DEEDITVIEW"
+    }
+  }, {
+    "name" : "EDITVIEW",
+    "realTitle" : "订单编辑视图",
+    "getRefPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/project_edit_view3.json",
+      "viewType" : "DEEDITVIEW"
+    }
+  } ],
+  "title" : "订单数据重定向视图",
+  "getTitlePSLanguageRes" : {
+    "lanResTag" : "PAGE.TITLE.PROJECT.REDIRECTVIEW"
+  },
+  "viewStyle" : "DEFAULT",
+  "viewType" : "DEREDIRECTVIEW",
+  "enableCustomGetDataAction" : false,
+  "enableDP" : true,
+  "enableWorkflow" : true,
+  "redirectView" : true,
+  "modelid" : "42ce288e475a2357a31b75a4e77940a5",
+  "modeltype" : "PSAPPDEVIEW"
+}

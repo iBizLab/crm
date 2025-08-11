@@ -1,0 +1,35 @@
+{
+  "codeName" : "lead",
+  "dERType" : "DER1N",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDERS/DER1N_LEAD_LEAD_PID.json",
+  "fKeyName" : "FDC8BAC205168443C1",
+  "logicName" : "名称",
+  "getMajorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/lead.json"
+  },
+  "masterOrder" : -1,
+  "masterRS" : 16,
+  "minorCodeName" : "leads",
+  "getMinorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/lead.json"
+  },
+  "minorServiceCodeName" : "leads",
+  "name" : "DER1N_LEAD_LEAD_PID",
+  "orderValue" : 100,
+  "getPSPickupDEField" : {
+    "name" : "PID",
+    "codeName" : "Pid"
+  },
+  "getPSPickupTextDEField" : {
+    "name" : "PNAME",
+    "codeName" : "Pname"
+  },
+  "pickupDEFName" : "PID",
+  "removeActionType" : -1,
+  "removeOrder" : 0,
+  "serviceCodeName" : "lead",
+  "enableFKey" : true,
+  "recursiveRS" : true
+}

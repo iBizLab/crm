@@ -1,0 +1,73 @@
+{
+  "codeName" : "usr07184658_search_form",
+  "controlType" : "SEARCHFORM",
+  "defaultLabelWidth" : 130,
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task/PSSEARCHFORMS/usr07184658_search_form.json",
+  "logicName" : "任务活动多项数据选择视图_选择数据视图_搜索表单",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+  },
+  "getPSDEFormItems" : [ {
+    "id" : "n_subject_like",
+    "dataType" : 25,
+    "getPSAppDEField" : {
+      "name" : "SUBJECT",
+      "codeName" : "subject"
+    }
+  } ],
+  "getPSDEFormPages" : [ {
+    "caption" : "常规条件",
+    "codeName" : "formpage1",
+    "detailStyle" : "DEFAULT",
+    "detailType" : "FORMPAGE",
+    "name" : "formpage1",
+    "getPSDEFormDetails" : [ {
+      "caption" : "主题",
+      "codeName" : "n_subject_like",
+      "dataType" : 25,
+      "detailStyle" : "DEFAULT",
+      "detailType" : "FORMITEM",
+      "enableCond" : 3,
+      "ignoreInput" : 0,
+      "labelPos" : "NONE",
+      "labelWidth" : 0,
+      "name" : "n_subject_like",
+      "noPrivDisplayMode" : 1,
+      "getPSAppDEField" : {
+        "name" : "SUBJECT",
+        "codeName" : "subject"
+      },
+      "getPSEditor" : {
+        "editorType" : "TEXTBOX",
+        "name" : "n_subject_like",
+        "placeHolder" : "请输入主题"
+      },
+      "getPSLayoutPos" : {
+        "colLG" : 12,
+        "colMD" : 24,
+        "layout" : "TABLE_24COL"
+      },
+      "allowEmpty" : true
+    } ],
+    "getPSLayout" : {
+      "childColMD" : 24,
+      "columnCount" : 24,
+      "layout" : "TABLE_24COL"
+    },
+    "infoGroupMode" : false
+  } ],
+  "getPSLayout" : {
+    "childColMD" : 24,
+    "columnCount" : 24,
+    "layout" : "TABLE_24COL"
+  },
+  "searchButtonStyle" : "DEFAULT",
+  "tabHeaderPos" : "TOP",
+  "enableAdvanceSearch" : false,
+  "enableAutoSearch" : false,
+  "enableFilterSave" : false,
+  "noTabHeader" : true,
+  "modelid" : "7254ce1a23120c5840ef607a65831168",
+  "modeltype" : "PSDEFORM_SEARCHFORM"
+}

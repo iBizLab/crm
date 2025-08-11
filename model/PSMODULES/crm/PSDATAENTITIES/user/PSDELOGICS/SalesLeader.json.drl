@@ -1,0 +1,199 @@
+package cn.ibizlab.crm.crm.logic.userlogic.salesleader;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.user usersalesleaderdefault;
+                global cn.ibizlab.crm.core.runtime.domain.sys_role_member usersalesleadermember_filter;
+                global cn.ibizlab.crm.core.runtime.domain.sys_role_member usersalesleadermember_page;
+                global cn.ibizlab.crm.core.runtime.domain.sys_role usersalesleaderrole;
+                global cn.ibizlab.crm.core.runtime.domain.sys_role usersalesleaderrole_filter;
+                global cn.ibizlab.crm.core.runtime.domain.sys_role usersalesleaderrole_page;
+                global cn.ibizlab.crm.core.crm.domain.user usersalesleaderuser_filter;
+                global cn.ibizlab.crm.core.crm.domain.user usersalesleaderuser_page;
+                    global cn.ibizlab.crm.core.runtime.service.Isys_role_memberService sys_role_memberservice;
+                    global cn.ibizlab.crm.core.crm.service.IuserService userservice;
+                    global cn.ibizlab.crm.core.runtime.service.Isys_roleService sys_roleservice;
+        global cn.ibizlab.crm.core.crm.service.IuserService iBzSysUserDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "usersalesleaderbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam3"
+            ruleflow-group "usersalesleaderprepareparam3"
+            when
+            then
+                                usersalesleaderuser_filter.set("n_sysuserid_noteq",curuser.getSessionParams().get("srfpersonid"));
+                        update(usersalesleaderdefault);//更新fact中变量值
+                        update(usersalesleadermember_filter);//更新fact中变量值
+                        update(usersalesleadermember_page);//更新fact中变量值
+                        update(usersalesleaderrole);//更新fact中变量值
+                        update(usersalesleaderrole_filter);//更新fact中变量值
+                        update(usersalesleaderrole_page);//更新fact中变量值
+                        update(usersalesleaderuser_filter);//更新fact中变量值
+                        update(usersalesleaderuser_page);//更新fact中变量值
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "usersalesleaderend1"
+            when
+            then
+                        update(usersalesleaderdefault);//更新fact中变量值
+                        update(usersalesleadermember_filter);//更新fact中变量值
+                        update(usersalesleadermember_page);//更新fact中变量值
+                        update(usersalesleaderrole);//更新fact中变量值
+                        update(usersalesleaderrole_filter);//更新fact中变量值
+                        update(usersalesleaderrole_page);//更新fact中变量值
+                        update(usersalesleaderuser_filter);//更新fact中变量值
+                        update(usersalesleaderuser_page);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam1"
+            ruleflow-group "usersalesleaderprepareparam1"
+            when
+            then
+                            usersalesleadermember_filter.set("n_role_id_eq",usersalesleaderrole.get("id"));
+                        update(usersalesleaderdefault);//更新fact中变量值
+                        update(usersalesleadermember_filter);//更新fact中变量值
+                        update(usersalesleadermember_page);//更新fact中变量值
+                        update(usersalesleaderrole);//更新fact中变量值
+                        update(usersalesleaderrole_filter);//更新fact中变量值
+                        update(usersalesleaderrole_page);//更新fact中变量值
+                        update(usersalesleaderuser_filter);//更新fact中变量值
+                        update(usersalesleaderuser_page);//更新fact中变量值
+            end
+
+            //逻辑处理节点[查询角色成员]
+            rule "dedataset1"
+            ruleflow-group "usersalesleaderdedataset1"
+            when
+            then
+                        update(usersalesleaderdefault);//更新fact中变量值
+                        update(usersalesleadermember_filter);//更新fact中变量值
+                        update(usersalesleadermember_page);//更新fact中变量值
+                        update(usersalesleaderrole);//更新fact中变量值
+                        update(usersalesleaderrole_filter);//更新fact中变量值
+                        update(usersalesleaderrole_page);//更新fact中变量值
+                        update(usersalesleaderuser_filter);//更新fact中变量值
+                        update(usersalesleaderuser_page);//更新fact中变量值
+            end
+
+            //逻辑处理节点[结束]
+            rule "end2"
+            ruleflow-group "usersalesleaderend2"
+            when
+            then
+                        update(usersalesleaderdefault);//更新fact中变量值
+                        update(usersalesleadermember_filter);//更新fact中变量值
+                        update(usersalesleadermember_page);//更新fact中变量值
+                        update(usersalesleaderrole);//更新fact中变量值
+                        update(usersalesleaderrole_filter);//更新fact中变量值
+                        update(usersalesleaderrole_page);//更新fact中变量值
+                        update(usersalesleaderuser_filter);//更新fact中变量值
+                        update(usersalesleaderuser_page);//更新fact中变量值
+            end
+
+            //逻辑处理节点[执行脚本代码]
+            rule "rawsfcode1"
+            ruleflow-group "usersalesleaderrawsfcode1"
+            when
+            then
+                        update(usersalesleaderdefault);//更新fact中变量值
+                        update(usersalesleadermember_filter);//更新fact中变量值
+                        update(usersalesleadermember_page);//更新fact中变量值
+                        update(usersalesleaderrole);//更新fact中变量值
+                        update(usersalesleaderrole_filter);//更新fact中变量值
+                        update(usersalesleaderrole_page);//更新fact中变量值
+                        update(usersalesleaderuser_filter);//更新fact中变量值
+                        update(usersalesleaderuser_page);//更新fact中变量值
+            end
+
+            //逻辑处理节点[查询用户]
+            rule "dedataset2"
+            ruleflow-group "usersalesleaderdedataset2"
+            when
+            then
+                        update(usersalesleaderdefault);//更新fact中变量值
+                        update(usersalesleadermember_filter);//更新fact中变量值
+                        update(usersalesleadermember_page);//更新fact中变量值
+                        update(usersalesleaderrole);//更新fact中变量值
+                        update(usersalesleaderrole_filter);//更新fact中变量值
+                        update(usersalesleaderrole_page);//更新fact中变量值
+                        update(usersalesleaderuser_filter);//更新fact中变量值
+                        update(usersalesleaderuser_page);//更新fact中变量值
+            end
+
+            //逻辑处理节点[调试逻辑参数]
+            rule "debugparam1"
+            ruleflow-group "usersalesleaderdebugparam1"
+            when
+            then
+                        update(usersalesleaderdefault);//更新fact中变量值
+                        update(usersalesleadermember_filter);//更新fact中变量值
+                        update(usersalesleadermember_page);//更新fact中变量值
+                        update(usersalesleaderrole);//更新fact中变量值
+                        update(usersalesleaderrole_filter);//更新fact中变量值
+                        update(usersalesleaderrole_page);//更新fact中变量值
+                        update(usersalesleaderuser_filter);//更新fact中变量值
+                        update(usersalesleaderuser_page);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam2"
+            ruleflow-group "usersalesleaderprepareparam2"
+            when
+            then
+                            usersalesleaderrole_filter.set("n_authority_eq","SalesLeader");
+                                usersalesleaderrole_filter.set(" n_deploy_system_id_eq",curuser.getSessionParams().get("srfsystemid"));
+                        update(usersalesleaderdefault);//更新fact中变量值
+                        update(usersalesleadermember_filter);//更新fact中变量值
+                        update(usersalesleadermember_page);//更新fact中变量值
+                        update(usersalesleaderrole);//更新fact中变量值
+                        update(usersalesleaderrole_filter);//更新fact中变量值
+                        update(usersalesleaderrole_page);//更新fact中变量值
+                        update(usersalesleaderuser_filter);//更新fact中变量值
+                        update(usersalesleaderuser_page);//更新fact中变量值
+            end
+
+            //逻辑处理节点[查询销售领导角色]
+            rule "dedataset3"
+            ruleflow-group "usersalesleaderdedataset3"
+            when
+            then
+                        update(usersalesleaderdefault);//更新fact中变量值
+                        update(usersalesleadermember_filter);//更新fact中变量值
+                        update(usersalesleadermember_page);//更新fact中变量值
+                        update(usersalesleaderrole);//更新fact中变量值
+                        update(usersalesleaderrole_filter);//更新fact中变量值
+                        update(usersalesleaderrole_page);//更新fact中变量值
+                        update(usersalesleaderuser_filter);//更新fact中变量值
+                        update(usersalesleaderuser_page);//更新fact中变量值
+            end
+
+            //逻辑处理节点[绑定参数]
+            rule "bindparam1"
+            ruleflow-group "usersalesleaderbindparam1"
+            when
+            then
+                        update(usersalesleaderdefault);//更新fact中变量值
+                        update(usersalesleadermember_filter);//更新fact中变量值
+                        update(usersalesleadermember_page);//更新fact中变量值
+                        update(usersalesleaderrole);//更新fact中变量值
+                        update(usersalesleaderrole_filter);//更新fact中变量值
+                        update(usersalesleaderrole_page);//更新fact中变量值
+                        update(usersalesleaderuser_filter);//更新fact中变量值
+                        update(usersalesleaderuser_page);//更新fact中变量值
+            end

@@ -1,0 +1,26 @@
+{
+  "actionMode" : "CUSTOM",
+  "actionType" : "USERCUSTOM",
+  "codeName" : "Async_addPayeeToWorkProgress",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/payee/PSDEACTIONS/Async_addPayeeToWorkProgress.json",
+  "logicName" : "异步新建线索时添加到工作进展",
+  "name" : "Async_addPayeeToWorkProgress",
+  "getPSDEActionInput" : {
+    "name" : "Async_addPayeeToWorkProgressInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "payee_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Async_addPayeeToWorkProgressResult",
+    "type" : "ASYNCACTION"
+  },
+  "getRealPSDEAction" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/payee/PSDEACTIONS/addPayeeToWorkProgress.json"
+  },
+  "asyncAction" : true,
+  "enableAudit" : true
+}

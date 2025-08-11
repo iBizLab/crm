@@ -1,0 +1,55 @@
+package cn.ibizlab.crm.crm.logic.tasklogic.maneuvertoworkprogress;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.task taskmaneuvertoworkprogressdefault;
+                global cn.ibizlab.crm.core.crm.domain.work_progress taskmaneuvertoworkprogresswork_progress;
+                    global cn.ibizlab.crm.core.crm.service.Iwork_progressService work_progressservice;
+        global cn.ibizlab.crm.core.crm.service.ItaskService iBzSysTaskDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "taskmaneuvertoworkprogressbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "taskmaneuvertoworkprogressend1"
+            when
+            then
+                        update(taskmaneuvertoworkprogressdefault);//更新fact中变量值
+                        update(taskmaneuvertoworkprogresswork_progress);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备工作进展参数]
+            rule "prepareparam1"
+            ruleflow-group "taskmaneuvertoworkprogressprepareparam1"
+            when
+            then
+                            taskmaneuvertoworkprogresswork_progress.set("actiontype","create");
+                            taskmaneuvertoworkprogresswork_progress.set("targetid",taskmaneuvertoworkprogressdefault.get("id"));
+                            taskmaneuvertoworkprogresswork_progress.set("targettype","MANEUVER");
+                            taskmaneuvertoworkprogresswork_progress.set("targetname",taskmaneuvertoworkprogressdefault.get("subject"));
+                            taskmaneuvertoworkprogresswork_progress.set("description",taskmaneuvertoworkprogressdefault.get("description"));
+                        update(taskmaneuvertoworkprogressdefault);//更新fact中变量值
+                        update(taskmaneuvertoworkprogresswork_progress);//更新fact中变量值
+            end
+
+            //逻辑处理节点[创建工作进展]
+            rule "deaction1"
+            ruleflow-group "taskmaneuvertoworkprogressdeaction1"
+            when
+            then
+                        work_progressservice.create(taskmaneuvertoworkprogresswork_progress);
+                        update(taskmaneuvertoworkprogressdefault);//更新fact中变量值
+                        update(taskmaneuvertoworkprogresswork_progress);//更新fact中变量值
+            end

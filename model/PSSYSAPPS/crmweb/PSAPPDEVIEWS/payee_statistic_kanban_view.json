@@ -1,0 +1,505 @@
+{
+  "accUserMode" : 2,
+  "getCapPSLanguageRes" : {
+    "lanResTag" : "DE.LNAME.PAYEE_STATISTIC"
+  },
+  "caption" : "统计看板",
+  "codeName" : "payee_statistic_kanban_view",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_statistic_kanban_view.json",
+  "mDCtrlActiveMode" : 2,
+  "name" : "payee_statistickanban_view",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+  },
+  "getPSAppModule" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/Ungroup.json"
+  },
+  "getPSAppViewEngines" : [ {
+    "engineCat" : "VIEW",
+    "engineType" : "KanBanView",
+    "name" : "engine"
+  } ],
+  "getPSAppViewLogics" : [ {
+    "logicTrigger" : "CUSTOM",
+    "logicType" : "APPUILOGIC",
+    "name" : "newdata",
+    "getPSAppUILogic" : {
+      "actionAfterWizard" : "DEFAULT",
+      "logicType" : "PREDEFINED",
+      "name" : "新建数据",
+      "getNewDataPSAppView" : {
+        "getRefPSAppView" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_statistic_edit_view.json",
+          "viewType" : "DEEDITVIEW"
+        }
+      },
+      "getPSAppUILogicRefViews" : [ {
+        "getRefPSAppView" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_statistic_edit_view.json",
+          "viewType" : "DEEDITVIEW"
+        }
+      } ],
+      "viewLogicType" : "APP_NEWDATA",
+      "batchAddOnly" : false,
+      "enableBatchAdd" : false,
+      "enableWizardAdd" : false
+    }
+  }, {
+    "logicTrigger" : "CUSTOM",
+    "logicType" : "APPUILOGIC",
+    "name" : "opendata",
+    "getPSAppUILogic" : {
+      "logicType" : "PREDEFINED",
+      "name" : "打开数据",
+      "getOpenDataPSAppView" : {
+        "getRefPSAppView" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_statistic_edit_view.json",
+          "viewType" : "DEEDITVIEW"
+        }
+      },
+      "getPSAppUILogicRefViews" : [ {
+        "getRefPSAppView" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_statistic_edit_view.json",
+          "viewType" : "DEEDITVIEW"
+        }
+      } ],
+      "viewLogicType" : "APP_OPENDATA",
+      "editMode" : true
+    }
+  } ],
+  "getPSAppViewRefs" : [ {
+    "name" : "NEWDATA",
+    "realTitle" : "收款情况统计编辑视图",
+    "getRealTitlePSLanguageRes" : {
+      "lanResTag" : "PAGE.TITLE.PAYEE_STATISTIC.EDITVIEW"
+    },
+    "getRefPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_statistic_edit_view.json",
+      "viewType" : "DEEDITVIEW"
+    }
+  }, {
+    "name" : "EDITDATA",
+    "realTitle" : "收款情况统计编辑视图",
+    "getRealTitlePSLanguageRes" : {
+      "lanResTag" : "PAGE.TITLE.PAYEE_STATISTIC.EDITVIEW"
+    },
+    "getRefPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_statistic_edit_view.json",
+      "viewType" : "DEEDITVIEW"
+    }
+  } ],
+  "getPSControls" : [ {
+    "codeName" : "kanban_view_toolbar",
+    "controlType" : "TOOLBAR",
+    "logicName" : "统计看板_工具栏",
+    "name" : "toolbar",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+    },
+    "getPSControlParam" : {
+      "id" : "TOOLBAR"
+    },
+    "xDataControlName" : "kanban",
+    "modelid" : "99b9ec1d86d0a478170ea9fe06d28dbb",
+    "modeltype" : "PSDETOOLBAR"
+  }, {
+    "codeName" : "kanban_view_search_form",
+    "controlType" : "SEARCHFORM",
+    "defaultLabelWidth" : 130,
+    "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic/PSSEARCHFORMS/kanban_view_search_form.json",
+    "logicName" : "统计看板_搜索表单",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+    },
+    "getPSControlHandler" : {
+      "getPSHandlerActions" : [ {
+        "actionType" : "FILTERACTION",
+        "name" : "load",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "FilterGet"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+        }
+      }, {
+        "actionType" : "FILTERACTION",
+        "name" : "loaddraft",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "FilterGetDraft"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+        }
+      }, {
+        "actionType" : "FILTERACTION",
+        "name" : "search",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "FilterSearch"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+        }
+      } ],
+      "enableDEFieldPrivilege" : false,
+      "id" : "搜索表单处理器"
+    },
+    "getPSControlParam" : {
+      "autoLoad" : true,
+      "showBusyIndicator" : true,
+      "id" : "SEARCHFORM"
+    },
+    "getPSDEFormPages" : [ {
+      "caption" : "常规条件",
+      "codeName" : "formpage1",
+      "detailStyle" : "DEFAULT",
+      "detailType" : "FORMPAGE",
+      "name" : "formpage1",
+      "getPSLayout" : {
+        "childColMD" : 24,
+        "columnCount" : 24,
+        "layout" : "TABLE_24COL"
+      },
+      "infoGroupMode" : false
+    } ],
+    "getPSLayout" : {
+      "childColMD" : 24,
+      "columnCount" : 24,
+      "layout" : "TABLE_24COL"
+    },
+    "searchButtonStyle" : "DEFAULT",
+    "tabHeaderPos" : "TOP",
+    "enableAdvanceSearch" : false,
+    "enableAutoSearch" : false,
+    "enableFilterSave" : false,
+    "noTabHeader" : true,
+    "name" : "searchform",
+    "modelid" : "c8724406a5985c5666a92412558f7ed4",
+    "modeltype" : "PSDEFORM_SEARCHFORM"
+  }, {
+    "codeName" : "kanban_view_kan_ban",
+    "controlType" : "KANBAN",
+    "getCreatePSControlAction" : {
+      "modelref" : true,
+      "id" : "create",
+      "actionName" : "Create",
+      "actionType" : "DEACTION",
+      "dataAccessAction" : "CREATE",
+      "name" : "create",
+      "getPSAppDEMethod" : {
+        "modelref" : true,
+        "id" : "create"
+      },
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+      }
+    },
+    "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic/PSKANBANS/kanban_view_kan_ban.json",
+    "getFetchPSControlAction" : {
+      "modelref" : true,
+      "id" : "fetch",
+      "actionType" : "DEDATASET",
+      "name" : "fetch",
+      "getPSAppDEMethod" : {
+        "modelref" : true,
+        "id" : "fetch_default"
+      },
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+      }
+    },
+    "getGetPSControlAction" : {
+      "modelref" : true,
+      "id" : "load",
+      "actionName" : "Get",
+      "actionType" : "DEACTION",
+      "dataAccessAction" : "READ",
+      "name" : "load",
+      "getPSAppDEMethod" : {
+        "modelref" : true,
+        "id" : "get"
+      },
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+      }
+    },
+    "groupMode" : "NONE",
+    "getItemPSLayoutPanel" : {
+      "codeName" : "usr0616065753",
+      "controlType" : "PANEL",
+      "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic/PSPANELS/usr0616065753.json",
+      "layoutMode" : "TABLE_24COL",
+      "logicName" : "统计看板_看板_卡片面板",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+      },
+      "getPSControlParam" : { },
+      "getPSLayout" : {
+        "childColMD" : 24,
+        "columnCount" : 24,
+        "layout" : "TABLE_24COL"
+      },
+      "getRootPSPanelItems" : [ {
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "page_container",
+        "getPSLayout" : {
+          "dir" : "column",
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "colMD" : 24,
+          "layout" : "TABLE_24COL"
+        }
+      } ],
+      "name" : "itemlayoutpanel",
+      "modelid" : "4f71036de4fbba162691242fb80064ea",
+      "modeltype" : "PSSYSVIEWPANEL"
+    },
+    "logicName" : "统计看板_看板",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+    },
+    "getPSControlHandler" : {
+      "getPSHandlerActions" : [ {
+        "actionName" : "Update",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "UPDATE",
+        "name" : "updategroup",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "update"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+        }
+      }, {
+        "actionName" : "Get",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "READ",
+        "name" : "load",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "get"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+        }
+      }, {
+        "actionName" : "Create",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "CREATE",
+        "name" : "create",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "create"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+        }
+      }, {
+        "actionName" : "Update",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "UPDATE",
+        "name" : "update",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "update"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+        }
+      }, {
+        "actionName" : "Remove",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "DELETE",
+        "name" : "remove",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "remove"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+        }
+      }, {
+        "actionType" : "DEDATASET",
+        "name" : "fetch",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "fetch_default"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+        }
+      } ],
+      "userDRAction" : "READ",
+      "enableDEFieldPrivilege" : false,
+      "id" : "数据视图处理器"
+    },
+    "getPSControlParam" : {
+      "autoLoad" : true,
+      "showBusyIndicator" : true,
+      "id" : "KANBAN"
+    },
+    "getPSDEDataViewDataItems" : [ {
+      "dataType" : 25,
+      "name" : "srfkey",
+      "getPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      }
+    }, {
+      "dataType" : 25,
+      "name" : "srfmajortext",
+      "getPSAppDEField" : {
+        "name" : "NAME",
+        "codeName" : "name"
+      }
+    } ],
+    "pagingSize" : 1000,
+    "getRemovePSControlAction" : {
+      "modelref" : true,
+      "id" : "remove",
+      "actionName" : "Remove",
+      "actionType" : "DEACTION",
+      "dataAccessAction" : "DELETE",
+      "name" : "remove",
+      "getPSAppDEMethod" : {
+        "modelref" : true,
+        "id" : "remove"
+      },
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+      }
+    },
+    "getUpdateGroupPSControlAction" : {
+      "modelref" : true,
+      "id" : "updategroup",
+      "actionName" : "Update",
+      "actionType" : "DEACTION",
+      "dataAccessAction" : "UPDATE",
+      "name" : "updategroup",
+      "getPSAppDEMethod" : {
+        "modelref" : true,
+        "id" : "update"
+      },
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+      }
+    },
+    "getUpdatePSControlAction" : {
+      "modelref" : true,
+      "id" : "update",
+      "actionName" : "Update",
+      "actionType" : "DEACTION",
+      "dataAccessAction" : "UPDATE",
+      "name" : "update",
+      "getPSAppDEMethod" : {
+        "modelref" : true,
+        "id" : "update"
+      },
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+      }
+    },
+    "hasWFDataItems" : false,
+    "appendDEItems" : true,
+    "enableCardEdit" : false,
+    "enableCardEditGroup" : false,
+    "enableCardEditOrder" : false,
+    "enableCardNew" : false,
+    "enableGroup" : false,
+    "enablePagingBar" : false,
+    "noSort" : false,
+    "singleSelect" : false,
+    "name" : "kanban",
+    "modelid" : "07e8a06fac07f8ba3d1c3954ae916792",
+    "modeltype" : "PSDEKANBAN"
+  }, {
+    "controlType" : "SEARCHBAR",
+    "name" : "searchbar",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+    },
+    "getPSControlParam" : {
+      "id" : "searchbar"
+    },
+    "quickGroupCount" : -1,
+    "quickSearchMode" : 1,
+    "quickSearchWidth" : 0,
+    "enableFilter" : false,
+    "enableGroup" : false,
+    "enableQuickSearch" : true,
+    "mobileSearchBar" : false
+  }, {
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DE.LNAME.PAYEE_STATISTIC"
+    },
+    "caption" : "统计看板",
+    "codeName" : "kanban_view_captionbar",
+    "controlType" : "CAPTIONBAR",
+    "name" : "captionbar",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+    },
+    "getPSControlParam" : { }
+  } ],
+  "getPSDEViewCodeName" : "kanban_view",
+  "getPSDEViewId" : "470973581cf168833865cd78e984f35b",
+  "getPSViewLayoutPanel" : {
+    "codeName" : "layoutpanel",
+    "controlStyle" : "APPDEKANBANVIEW",
+    "controlType" : "VIEWLAYOUTPANEL",
+    "name" : "layoutpanel",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+    },
+    "getPSControlParam" : { },
+    "layoutBodyOnly" : true,
+    "layoutPanel" : true,
+    "useDefaultLayout" : true
+  },
+  "refFlag" : false,
+  "title" : "统计看板",
+  "viewStyle" : "DEFAULT",
+  "viewType" : "DEKANBANVIEW",
+  "xDataControlName" : "kanban",
+  "enableDP" : true,
+  "enableFilter" : true,
+  "enableQuickSearch" : true,
+  "enableSearch" : true,
+  "modelid" : "ed40c33d4fe551bdf0178f15d0a27bfa",
+  "modeltype" : "PSAPPDEVIEW"
+}

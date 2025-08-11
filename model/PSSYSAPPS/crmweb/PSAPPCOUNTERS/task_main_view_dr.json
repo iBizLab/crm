@@ -1,0 +1,16 @@
+{
+  "codeName" : "task_main_view_dr",
+  "counterType" : "DEDR",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPCOUNTERS/task_main_view_dr.json",
+  "getGetPSAppDEAction" : {
+    "modelref" : true,
+    "id" : "main_view_dr_count"
+  },
+  "name" : "任务main_view关系",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+  },
+  "timer" : 60000,
+  "uniqueTag" : "task_main_view_dr"
+}

@@ -1,0 +1,100 @@
+{
+  "dBType" : "MYSQL5",
+  "name" : "MySQL5",
+  "getPSDEDataQueryCodeExps" : [ {
+    "expression" : "t1.`DESCRIPTION`",
+    "name" : "DESCRIPTION"
+  }, {
+    "expression" : "t1.`TERMS_AND_CONDITIONS`",
+    "name" : "TERMS_AND_CONDITIONS"
+  }, {
+    "expression" : "t1.`ADJUSTMENT`",
+    "name" : "ADJUSTMENT"
+  }, {
+    "expression" : "t1.`BILLING_CITY`",
+    "name" : "BILLING_CITY"
+  }, {
+    "expression" : "t1.`BILLING_CODE`",
+    "name" : "BILLING_CODE"
+  }, {
+    "expression" : "t1.`BILLING_COUNTRY`",
+    "name" : "BILLING_COUNTRY"
+  }, {
+    "expression" : "t1.`BILLING_STATE`",
+    "name" : "BILLING_STATE"
+  }, {
+    "expression" : "t1.`BILLING_STREET`",
+    "name" : "BILLING_STREET"
+  }, {
+    "expression" : "t1.`CARRIER`",
+    "name" : "CARRIER"
+  }, {
+    "expression" : "t1.`CREATE_MAN`",
+    "name" : "CREATE_MAN"
+  }, {
+    "expression" : "t1.`CREATE_TIME`",
+    "name" : "CREATE_TIME"
+  }, {
+    "expression" : "t1.`DISCOUNT`",
+    "name" : "DISCOUNT"
+  }, {
+    "expression" : "t1.`GRAND_TOTAL`",
+    "name" : "GRAND_TOTAL"
+  }, {
+    "expression" : "t1.`ID`",
+    "name" : "ID"
+  }, {
+    "expression" : "t1.`LOCKED__S`",
+    "name" : "LOCKED__S"
+  }, {
+    "expression" : "t1.`NAME`",
+    "name" : "NAME"
+  }, {
+    "expression" : "t1.`QUOTE_NUMBER`",
+    "name" : "QUOTE_NUMBER"
+  }, {
+    "expression" : "t1.`QUOTE_STAGE`",
+    "name" : "QUOTE_STAGE"
+  }, {
+    "expression" : "t1.`SHIPPING_CITY`",
+    "name" : "SHIPPING_CITY"
+  }, {
+    "expression" : "t1.`SHIPPING_CODE`",
+    "name" : "SHIPPING_CODE"
+  }, {
+    "expression" : "t1.`SHIPPING_COUNTRY`",
+    "name" : "SHIPPING_COUNTRY"
+  }, {
+    "expression" : "t1.`SHIPPING_STATE`",
+    "name" : "SHIPPING_STATE"
+  }, {
+    "expression" : "t1.`SHIPPING_STREET`",
+    "name" : "SHIPPING_STREET"
+  }, {
+    "expression" : "t1.`SUBJECT`",
+    "name" : "SUBJECT"
+  }, {
+    "expression" : "t1.`SUB_TOTAL`",
+    "name" : "SUB_TOTAL"
+  }, {
+    "expression" : "t1.`TAG`",
+    "name" : "TAG"
+  }, {
+    "expression" : "t1.`TAX`",
+    "name" : "TAX"
+  }, {
+    "expression" : "t1.`TEAM`",
+    "name" : "TEAM"
+  }, {
+    "expression" : "t1.`UPDATE_MAN`",
+    "name" : "UPDATE_MAN"
+  }, {
+    "expression" : "t1.`UPDATE_TIME`",
+    "name" : "UPDATE_TIME"
+  }, {
+    "expression" : "t1.`VALID_TILL`",
+    "name" : "VALID_TILL"
+  } ],
+  "queryCode" : "SELECT\nt1.`ADJUSTMENT`,\nt1.`BILLING_CITY`,\nt1.`BILLING_CODE`,\nt1.`BILLING_COUNTRY`,\nt1.`BILLING_STATE`,\nt1.`BILLING_STREET`,\nt1.`CARRIER`,\nt1.`CREATE_MAN`,\nt1.`CREATE_TIME`,\nt1.`DISCOUNT`,\nt1.`GRAND_TOTAL`,\nt1.`ID`,\nt1.`LOCKED__S`,\nt1.`NAME`,\nt1.`QUOTE_NUMBER`,\nt1.`QUOTE_STAGE`,\nt1.`SHIPPING_CITY`,\nt1.`SHIPPING_CODE`,\nt1.`SHIPPING_COUNTRY`,\nt1.`SHIPPING_STATE`,\nt1.`SHIPPING_STREET`,\nt1.`SUBJECT`,\nt1.`SUB_TOTAL`,\nt1.`TAG`,\nt1.`TAX`,\nt1.`TEAM`,\nt1.`UPDATE_MAN`,\nt1.`UPDATE_TIME`,\nt1.`VALID_TILL`\nFROM `QUOTE` t1 \n",
+  "id" : "PSMODULES/crm/PSDATAENTITIES/quote/PSDEDATAQUERIES/Default/PSDEDQCODES/MYSQL5.json"
+}

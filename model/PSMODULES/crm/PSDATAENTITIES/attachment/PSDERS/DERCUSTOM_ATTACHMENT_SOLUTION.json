@@ -1,0 +1,32 @@
+{
+  "codeName" : "SOLUTION",
+  "dERSubType" : "DER1N",
+  "dERType" : "DERCUSTOM",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/attachment/PSDERS/DERCUSTOM_ATTACHMENT_SOLUTION.json",
+  "logicName" : "解决方案-附件",
+  "getMajorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/solution.json"
+  },
+  "masterOrder" : 100,
+  "masterRS" : 9,
+  "memo" : "自动生成",
+  "getMinorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/attachment.json"
+  },
+  "name" : "DERCUSTOM_ATTACHMENT_SOLUTION",
+  "getOne2XDataPSDEField" : {
+    "name" : "ATTACHMENTS",
+    "codeName" : "attachments"
+  },
+  "orderValue" : 100,
+  "pickupDEFName" : "OWNER_ID",
+  "getPickupPSDEField" : {
+    "name" : "OWNER_ID",
+    "codeName" : "owner_id"
+  },
+  "removeActionType" : 0,
+  "removeOrder" : -1,
+  "serviceCodeName" : "solution"
+}

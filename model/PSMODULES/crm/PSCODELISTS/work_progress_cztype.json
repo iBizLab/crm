@@ -1,0 +1,29 @@
+{
+  "codeListTag" : "crm__work_progress_cztype",
+  "codeListType" : "STATIC",
+  "codeName" : "work_progress_cztype",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSCODELISTS/work_progress_cztype.json",
+  "emptyText" : "未定义",
+  "name" : "工作进行操作类型",
+  "getPSCodeItems" : [ {
+    "codeName" : "create",
+    "text" : "新建",
+    "value" : "create"
+  }, {
+    "codeName" : "evaluate",
+    "text" : "评估",
+    "value" : "evaluate"
+  } ],
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "refFlag" : true,
+  "systemTag" : "iBizCRM",
+  "codeItemValueNumber" : false,
+  "enableCache" : true,
+  "subSysAsCloud" : false,
+  "subSysCodeList" : false,
+  "userScope" : false
+}

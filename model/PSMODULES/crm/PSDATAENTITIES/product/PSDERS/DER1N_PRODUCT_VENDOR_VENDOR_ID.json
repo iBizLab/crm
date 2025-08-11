@@ -1,0 +1,38 @@
+{
+  "codeName" : "vendor",
+  "dERType" : "DER1N",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/product/PSDERS/DER1N_PRODUCT_VENDOR_VENDOR_ID.json",
+  "fKeyName" : "F867D388182BCEB019",
+  "logicName" : "供应商",
+  "getMajorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/vendor.json"
+  },
+  "masterOrder" : -1,
+  "masterRS" : 0,
+  "minorCodeName" : "products",
+  "getMinorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/product.json"
+  },
+  "minorServiceCodeName" : "products",
+  "name" : "DER1N_PRODUCT_VENDOR_VENDOR_ID",
+  "orderValue" : 100,
+  "getPSPickupDEField" : {
+    "name" : "VENDOR_ID",
+    "codeName" : "Vendor_id"
+  },
+  "getPSPickupTextDEField" : {
+    "name" : "VENDOR_NAME",
+    "codeName" : "Vendor_Name"
+  },
+  "pickupDEFName" : "VENDOR_ID",
+  "getRefPSDEDataSet" : {
+    "modelref" : true,
+    "id" : "all"
+  },
+  "removeActionType" : -1,
+  "removeOrder" : 0,
+  "serviceCodeName" : "vendor",
+  "enableFKey" : true
+}

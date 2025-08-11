@@ -1,0 +1,37 @@
+{
+  "codeListTag" : "crm__order_status",
+  "codeListType" : "STATIC",
+  "codeName" : "order_status",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSCODELISTS/order_status.json",
+  "emptyText" : "未定义",
+  "name" : "订单状态",
+  "getPSCodeItems" : [ {
+    "codeName" : "item_10",
+    "getPSSysCss" : {
+      "cssName" : "green-span"
+    },
+    "text" : "在建",
+    "textCls" : "green-span",
+    "value" : "10"
+  }, {
+    "codeName" : "item_20",
+    "getPSSysCss" : {
+      "cssName" : "grey-span"
+    },
+    "text" : "已关闭",
+    "textCls" : "grey-span",
+    "value" : "20"
+  } ],
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "refFlag" : true,
+  "systemTag" : "iBizCRM",
+  "codeItemValueNumber" : false,
+  "enableCache" : true,
+  "subSysAsCloud" : false,
+  "subSysCodeList" : false,
+  "userScope" : false
+}

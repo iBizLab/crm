@@ -1,0 +1,20 @@
+{
+  "codeName" : "close_tab_exp_view9_DR",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/schedule/PSDEDATARELATIONS/close_tab_exp_view9_DR.json",
+  "getFormCapPSLanguageRes" : {
+    "lanResTag" : "DE.LNAME.SCHEDULE"
+  },
+  "formCaption" : "日程",
+  "name" : "已完成的任务&历史活动嵌入分页导航视图关系界面组",
+  "getPSDEDRDetails" : [ {
+    "caption" : "页签视图",
+    "detailType" : "DRITEM",
+    "name" : "tab",
+    "orderValue" : 100,
+    "originCaption" : "页签视图",
+    "getPSDEDRItem" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/schedule/PSDEDRITEMS/DRItem2.json"
+    }
+  } ]
+}

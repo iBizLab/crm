@@ -1,0 +1,37 @@
+{
+  "codeName" : "default",
+  "controlType" : "SEARCHFORM",
+  "defaultLabelWidth" : 130,
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/custom_button/PSSEARCHFORMS/default.json",
+  "logicName" : "默认搜索表单",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/custom_button.json"
+  },
+  "getPSDEFormPages" : [ {
+    "caption" : "常规条件",
+    "codeName" : "formpage1",
+    "detailStyle" : "DEFAULT",
+    "detailType" : "FORMPAGE",
+    "name" : "formpage1",
+    "getPSLayout" : {
+      "childColMD" : 24,
+      "columnCount" : 24,
+      "layout" : "TABLE_24COL"
+    },
+    "infoGroupMode" : false
+  } ],
+  "getPSLayout" : {
+    "childColMD" : 24,
+    "columnCount" : 24,
+    "layout" : "TABLE_24COL"
+  },
+  "searchButtonStyle" : "DEFAULT",
+  "tabHeaderPos" : "TOP",
+  "enableAdvanceSearch" : false,
+  "enableAutoSearch" : false,
+  "enableFilterSave" : false,
+  "noTabHeader" : true,
+  "modelid" : "ba1745b5597f78f6d4223f40393fcf05",
+  "modeltype" : "PSDEFORM_SEARCHFORM"
+}

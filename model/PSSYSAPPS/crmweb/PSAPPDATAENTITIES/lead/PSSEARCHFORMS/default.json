@@ -1,0 +1,164 @@
+{
+  "codeName" : "default",
+  "controlType" : "SEARCHFORM",
+  "defaultLabelWidth" : 130,
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/lead/PSSEARCHFORMS/default.json",
+  "logicName" : "默认搜索表单",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/lead.json"
+  },
+  "getPSDEFormItems" : [ {
+    "id" : "n_subject_like",
+    "dataType" : 25,
+    "getPSAppDEField" : {
+      "name" : "SUBJECT",
+      "codeName" : "subject"
+    }
+  }, {
+    "id" : "n_account_name_eq",
+    "dataType" : 25,
+    "getPSAppDEField" : {
+      "name" : "ACCOUNT_NAME",
+      "codeName" : "account_name"
+    }
+  }, {
+    "id" : "n_account_id_eq",
+    "hidden" : true,
+    "dataType" : 25
+  } ],
+  "getPSDEFormPages" : [ {
+    "caption" : "常规条件",
+    "codeName" : "formpage1",
+    "detailStyle" : "DEFAULT",
+    "detailType" : "FORMPAGE",
+    "name" : "formpage1",
+    "getPSDEFormDetails" : [ {
+      "caption" : "主题",
+      "codeName" : "n_subject_like",
+      "dataType" : 25,
+      "detailStyle" : "DEFAULT",
+      "detailType" : "FORMITEM",
+      "enableCond" : 3,
+      "ignoreInput" : 0,
+      "labelPos" : "LEFT",
+      "labelWidth" : 130,
+      "name" : "n_subject_like",
+      "noPrivDisplayMode" : 1,
+      "getPSAppDEField" : {
+        "name" : "SUBJECT",
+        "codeName" : "subject"
+      },
+      "getPSEditor" : {
+        "editorType" : "TEXTBOX",
+        "name" : "n_subject_like"
+      },
+      "getPSLayoutPos" : {
+        "colLG" : 12,
+        "colMD" : 12,
+        "layout" : "TABLE_24COL"
+      },
+      "allowEmpty" : true,
+      "showCaption" : true
+    }, {
+      "caption" : "客户名称",
+      "codeName" : "n_account_name_eq",
+      "dataType" : 25,
+      "detailStyle" : "DEFAULT",
+      "detailType" : "FORMITEM",
+      "enableCond" : 3,
+      "ignoreInput" : 0,
+      "labelPos" : "LEFT",
+      "labelWidth" : 130,
+      "name" : "n_account_name_eq",
+      "noPrivDisplayMode" : 1,
+      "getPSAppDEField" : {
+        "name" : "ACCOUNT_NAME",
+        "codeName" : "account_name"
+      },
+      "getPSEditor" : {
+        "editorParams" : {
+          "AC" : "TRUE",
+          "PICKUPVIEW" : "TRUE"
+        },
+        "editorType" : "PICKER",
+        "handlerType" : "PickupText",
+        "name" : "n_account_name_eq",
+        "getPSAppDEACMode" : {
+          "modelref" : true,
+          "id" : "Default"
+        },
+        "getPSAppDEDataSet" : {
+          "modelref" : true,
+          "id" : "fetch_all"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/account.json"
+        },
+        "getPSEditorItems" : [ {
+          "name" : "n_account_id_eq"
+        } ],
+        "getPickupPSAppView" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/account_pickup_view.json",
+          "viewType" : "DEPICKUPVIEW"
+        },
+        "valueItemName" : "n_account_id_eq",
+        "enableAC" : true,
+        "enablePickupView" : true,
+        "forceSelection" : true,
+        "showTrigger" : true,
+        "singleSelect" : true
+      },
+      "getPSLayoutPos" : {
+        "colLG" : 12,
+        "colMD" : 12,
+        "layout" : "TABLE_24COL"
+      },
+      "valueItemName" : "n_account_id_eq",
+      "allowEmpty" : true,
+      "showCaption" : true
+    }, {
+      "codeName" : "n_account_id_eq",
+      "dataType" : 25,
+      "detailStyle" : "DEFAULT",
+      "detailType" : "FORMITEM",
+      "enableCond" : 3,
+      "ignoreInput" : 0,
+      "labelPos" : "LEFT",
+      "labelWidth" : 130,
+      "name" : "n_account_id_eq",
+      "noPrivDisplayMode" : 1,
+      "getPSEditor" : {
+        "editorType" : "HIDDEN",
+        "name" : "n_account_id_eq"
+      },
+      "getPSLayoutPos" : {
+        "colMD" : 24,
+        "layout" : "TABLE_24COL"
+      },
+      "allowEmpty" : true,
+      "hidden" : true
+    } ],
+    "getPSLayout" : {
+      "childColMD" : 24,
+      "columnCount" : 24,
+      "layout" : "TABLE_24COL"
+    },
+    "infoGroupMode" : false
+  } ],
+  "getPSLayout" : {
+    "childColMD" : 24,
+    "columnCount" : 24,
+    "layout" : "TABLE_24COL"
+  },
+  "searchButtonStyle" : "DEFAULT",
+  "tabHeaderPos" : "TOP",
+  "enableAdvanceSearch" : false,
+  "enableAutoSearch" : false,
+  "enableFilterSave" : false,
+  "noTabHeader" : true,
+  "modelid" : "cfef35a445753231eb77d9989066b6a9",
+  "modeltype" : "PSDEFORM_SEARCHFORM"
+}

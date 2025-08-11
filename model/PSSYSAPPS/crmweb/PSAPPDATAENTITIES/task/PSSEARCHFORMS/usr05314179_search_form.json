@@ -1,0 +1,37 @@
+{
+  "codeName" : "usr05314179_search_form",
+  "controlType" : "SEARCHFORM",
+  "defaultLabelWidth" : 130,
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task/PSSEARCHFORMS/usr05314179_search_form.json",
+  "logicName" : "我的活动_搜索表单",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+  },
+  "getPSDEFormPages" : [ {
+    "caption" : "常规条件",
+    "codeName" : "formpage1",
+    "detailStyle" : "DEFAULT",
+    "detailType" : "FORMPAGE",
+    "name" : "formpage1",
+    "getPSLayout" : {
+      "childColMD" : 24,
+      "columnCount" : 24,
+      "layout" : "TABLE_24COL"
+    },
+    "infoGroupMode" : false
+  } ],
+  "getPSLayout" : {
+    "childColMD" : 24,
+    "columnCount" : 24,
+    "layout" : "TABLE_24COL"
+  },
+  "searchButtonStyle" : "DEFAULT",
+  "tabHeaderPos" : "TOP",
+  "enableAdvanceSearch" : false,
+  "enableAutoSearch" : false,
+  "enableFilterSave" : false,
+  "noTabHeader" : true,
+  "modelid" : "1cdf3cd6c52ad04972d7a908f802c8d3",
+  "modeltype" : "PSDEFORM_SEARCHFORM"
+}

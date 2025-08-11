@@ -1,0 +1,296 @@
+{
+  "codeName" : "chart_view_chart",
+  "controlType" : "CHART",
+  "coordinateSystem" : "XY",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic/PSCHARTS/chart_view_chart.json",
+  "getFetchPSControlAction" : {
+    "modelref" : true,
+    "id" : "fetch",
+    "actionType" : "DEDATASET",
+    "name" : "fetch",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "fetch_statistic"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+    }
+  },
+  "hookEventNames" : [ "ONACTIVE", "ONBEFOREUPDATE", "ONLOADSUCCESS", "SELECTIONCHANGE", "LOAD" ],
+  "logicName" : "Chart",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+  },
+  "getPSChartCoordinateSystems" : [ {
+    "eChartsType" : "cartesian2d",
+    "index" : 0,
+    "name" : "[bar_0]直角坐标系[0]",
+    "getPSChartGrid" : {
+      "index" : 0,
+      "name" : "[bar_0]直角坐标系[0]",
+      "getPSChartCoordinateSystem" : {
+        "modelref" : true,
+        "id" : "0"
+      },
+      "getPSChartGridXAxis0" : {
+        "modelref" : true,
+        "id" : "0"
+      },
+      "getPSChartGridYAxis0" : {
+        "modelref" : true,
+        "id" : "0"
+      },
+      "type" : "grid",
+      "id" : "0"
+    },
+    "type" : "XY",
+    "id" : "0"
+  } ],
+  "getPSChartDataSetGroups" : [ {
+    "index" : 0,
+    "name" : "statistic",
+    "getPSAppDEDataSet" : {
+      "modelref" : true,
+      "id" : "fetch_statistic"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+    },
+    "id" : "0"
+  } ],
+  "getPSChartDataSets" : [ {
+    "index" : 0,
+    "name" : "bar_0-statistic",
+    "getPSChartDataSetFields" : [ {
+      "index" : 0,
+      "name" : "NAME",
+      "groupField" : true,
+      "id" : "0"
+    }, {
+      "index" : 1,
+      "name" : "TYPE",
+      "getPSCodeList" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__collection_type.json"
+      },
+      "groupField" : true,
+      "id" : "1"
+    }, {
+      "index" : 2,
+      "name" : "AMOUNT",
+      "groupField" : false,
+      "id" : "2"
+    } ],
+    "id" : "0"
+  } ],
+  "getPSChartGrids" : [ {
+    "index" : 0,
+    "name" : "[bar_0]直角坐标系[0]",
+    "getPSChartCoordinateSystem" : {
+      "modelref" : true,
+      "id" : "0"
+    },
+    "getPSChartGridXAxis0" : {
+      "modelref" : true,
+      "id" : "0"
+    },
+    "getPSChartGridYAxis0" : {
+      "modelref" : true,
+      "id" : "0"
+    },
+    "type" : "grid",
+    "id" : "0"
+  } ],
+  "getPSChartXAxises" : [ {
+    "eChartsPos" : "xAxis",
+    "eChartsType" : "category",
+    "index" : 0,
+    "name" : "axis_xAxis_0",
+    "position" : "bottom",
+    "type" : "category",
+    "getUserParam" : {
+      "EC.interval" : "0",
+      "EC.nameLocation" : "\"BOTTOM\"",
+      "EC.nameRotate" : "45",
+      "EC.axisLabel" : "function (){ return { interval: 0 }}()"
+    },
+    "id" : "0"
+  } ],
+  "getPSChartYAxises" : [ {
+    "eChartsPos" : "yAxis",
+    "eChartsType" : "value",
+    "index" : 0,
+    "name" : "axis_yAxis_0",
+    "position" : "left",
+    "type" : "numeric",
+    "getUserParam" : {
+      "EC.axisTick" : "{\"show\":0}",
+      "EC.axisLabel" : "{\"show\":0}"
+    },
+    "id" : "0"
+  } ],
+  "getPSControlLogics" : [ {
+    "eventNames" : "onActive",
+    "logicTag" : "chartexpbar_chart",
+    "logicType" : "SCRIPT",
+    "name" : "onAtive",
+    "scriptCode" : "const { _groupName, _catalog } = data[0];\r\nconst { series } = ctrl.options;\r\nif (series && series.length > 0) {\r\n\t// 取消选中\r\n\tconst seriesName = series.map(x => x.name);\r\n    const maxLength = Math.max(...series.map(x => x.data.length))\r\n\tctrl.chart.dispatchAction({\r\n        type: 'unselect',\r\n        seriesName,\r\n        dataIndex: [...Array(maxLength).keys()],\r\n    });\r\n    // 设置选中\r\n    ctrl.chart.dispatchAction({\r\n        type: 'select',\r\n        seriesName: _groupName,\r\n        name: _catalog,\r\n    });\r\n}"
+  }, {
+    "eventNames" : "onBeforeUpdate",
+    "logicTag" : "chartexpbar_chart",
+    "logicType" : "SCRIPT",
+    "name" : "onBeforeUpdate",
+    "scriptCode" : "const { series } = ctrl.options;\r\nif (series && series.length > 0) {\r\n    series.forEach(item => {\r\n        if (item.label) {\r\n            item.label.formatter = function (params) {\r\n                if(params.value[1] === 0)\r\n                {\r\n                    return '';\r\n                }\r\n                else\r\n                {\r\n                    return ibiz.util.text.format(params.value[1], '#,##0.00');\r\n                }\r\n            };\r\n        }\r\n    });\r\n};"
+  }, {
+    "eventNames" : "onLoadSuccess",
+    "logicTag" : "chartexpbar_chart",
+    "logicType" : "APPDEUIACTION",
+    "name" : "nav",
+    "getPSAppDEUIAction" : {
+      "actionTarget" : "NONE",
+      "caption" : "导航收款统计表格视图",
+      "codeName" : "nav_statistic_grid",
+      "frontProcessType" : "OTHER",
+      "fullCodeName" : "payee_statistic_nav_statistic_grid",
+      "name" : "导航收款统计表格视图(只传搜索表单参数)",
+      "getPSAppDEUILogic" : {
+        "modelref" : true,
+        "id" : "exp_to_gridview3"
+      },
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+      },
+      "uIActionMode" : "FRONT",
+      "uIActionTag" : "nav_statistic_grid",
+      "uIActionType" : "DEUIACTION",
+      "uILogicAttachMode" : "REPLACE",
+      "id" : "nav_statistic_grid@payee_statistic"
+    }
+  }, {
+    "eventNames" : "SELECTIONCHANGE",
+    "logicTag" : "chartexpbar_chart",
+    "logicType" : "CUSTOM",
+    "name" : "chartexpbar_selectionchange"
+  }, {
+    "eventNames" : "LOAD",
+    "logicTag" : "chartexpbar_chart",
+    "logicType" : "CUSTOM",
+    "name" : "chartexpbar_load"
+  } ],
+  "getPSDEChartDataGrid" : {
+    "index" : 0,
+    "id" : "0"
+  },
+  "getPSDEChartLegend" : {
+    "index" : 0,
+    "showLegend" : false,
+    "id" : "0"
+  },
+  "getPSDEChartSerieses" : [ {
+    "catalogField" : "NAME",
+    "eChartsType" : "bar",
+    "index" : 0,
+    "name" : "bar_0",
+    "getNavPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/payee_statistic_chart_grid_view.json",
+      "viewType" : "DEGRIDVIEW"
+    },
+    "getPSChartCoordinateSystem" : {
+      "modelref" : true,
+      "id" : "0"
+    },
+    "getPSChartDataSet" : {
+      "modelref" : true,
+      "id" : "0"
+    },
+    "getPSChartSeriesEncode" : {
+      "index" : 0,
+      "itemId" : "TYPE",
+      "itemName" : "TYPE",
+      "name" : "坐标系编码",
+      "getPSChartXAxis" : {
+        "modelref" : true,
+        "id" : "0"
+      },
+      "getPSChartYAxis" : {
+        "modelref" : true,
+        "id" : "0"
+      },
+      "type" : "XY",
+      "x" : [ "NAME" ],
+      "y" : [ "AMOUNT" ],
+      "id" : "0"
+    },
+    "getPSNavigateContexts" : [ {
+      "key" : "NAME",
+      "name" : "NAME",
+      "value" : "name_value",
+      "rawValue" : false
+    }, {
+      "key" : "TYPE",
+      "name" : "TYPE",
+      "value" : "type_value",
+      "rawValue" : false
+    } ],
+    "getPSNavigateParams" : [ {
+      "key" : "n_owner_eq",
+      "name" : "n_owner_eq",
+      "value" : "n_owner_eq",
+      "rawValue" : false
+    }, {
+      "key" : "lt",
+      "name" : "lt",
+      "value" : "lt",
+      "rawValue" : false
+    }, {
+      "key" : "name",
+      "name" : "name",
+      "value" : "name_value",
+      "rawValue" : false
+    }, {
+      "key" : "type",
+      "name" : "type",
+      "value" : "type_value",
+      "rawValue" : false
+    }, {
+      "key" : "n_business_line_eq",
+      "name" : "n_business_line_eq",
+      "value" : "n_business_line_eq",
+      "rawValue" : false
+    } ],
+    "seriesField" : "TYPE",
+    "seriesLayoutBy" : "column",
+    "getSeriesPSCodeList" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__collection_type.json"
+    },
+    "seriesType" : "bar",
+    "valueField" : "AMOUNT",
+    "enableChartDataSet" : true,
+    "stack" : true,
+    "getUserParam" : {
+      "EC.label" : "{\"show\":1,\"fontSize\":15}",
+      "EC.select" : "function (){ return {label: {fontSize: 20},labelLine: {show: false},itemStyle: {borderWidth: 0,shadowBlur: 0,shadowColor: 'transparent',borderColor: 'transparent', borderMiterLimit: 0,borderColor:'orange',borderWidth:5}}}()",
+      "EC.barWidth" : "40",
+      "EC.selectedMode" : "single",
+      "EC.stack" : "'chart'"
+    }
+  } ],
+  "getPSDEChartTitle" : {
+    "index" : 0,
+    "title" : "收款情况统计_图表",
+    "showTitle" : false,
+    "id" : "0"
+  },
+  "readOnly" : true,
+  "modelid" : "dcc4ca67bb9315bd62081fad768db138",
+  "modeltype" : "PSDECHART",
+  "getUserParam" : {
+    "EC.color" : "[\"#585AFB\",\"#91cc75\",\"#585AFB\",\"#585AFB\",\"#73c0de\",\"#3ba272\",\"#fc8452\",\"#9a60b4\",\"#ea7ccc\",\"#585AFB\",\"#91cc75\"]"
+  }
+}

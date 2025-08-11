@@ -1,0 +1,15 @@
+{
+  "codeName" : "DRItem",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/schedule/PSDEDRITEMS/DRItem.json",
+  "itemType" : "CUSTOM",
+  "name" : "已完成的任务&历史活动（列模式）",
+  "parentDataJO" : {
+    "srfparentdename" : "SCHEDULE",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "close_tab_lists_exp_view_multimode",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/schedule.json"
+  }
+}

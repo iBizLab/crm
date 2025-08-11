@@ -1,0 +1,55 @@
+package cn.ibizlab.crm.crm.logic.note_attachlogic.evaluatetoworkprogress;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.note_attach note_attachevaluatetoworkprogressdefault;
+                global cn.ibizlab.crm.core.crm.domain.work_progress note_attachevaluatetoworkprogresswork_progress;
+                    global cn.ibizlab.crm.core.crm.service.Iwork_progressService work_progressservice;
+        global cn.ibizlab.crm.core.crm.service.Inote_attachService iBzSysNote_attachDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "note_attachevaluatetoworkprogressbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "note_attachevaluatetoworkprogressend1"
+            when
+            then
+                        update(note_attachevaluatetoworkprogressdefault);//更新fact中变量值
+                        update(note_attachevaluatetoworkprogresswork_progress);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备工作进展参数]
+            rule "prepareparam1"
+            ruleflow-group "note_attachevaluatetoworkprogressprepareparam1"
+            when
+            then
+                            note_attachevaluatetoworkprogresswork_progress.set("actiontype","evaluate");
+                            note_attachevaluatetoworkprogresswork_progress.set("targettype",note_attachevaluatetoworkprogressdefault.get("principaltype"));
+                            note_attachevaluatetoworkprogresswork_progress.set("targetid",note_attachevaluatetoworkprogressdefault.get("principalid"));
+                            note_attachevaluatetoworkprogresswork_progress.set("targetname",note_attachevaluatetoworkprogressdefault.get("principalname"));
+                            note_attachevaluatetoworkprogresswork_progress.set("description",note_attachevaluatetoworkprogressdefault.get("content"));
+                        update(note_attachevaluatetoworkprogressdefault);//更新fact中变量值
+                        update(note_attachevaluatetoworkprogresswork_progress);//更新fact中变量值
+            end
+
+            //逻辑处理节点[创建工作进展]
+            rule "deaction1"
+            ruleflow-group "note_attachevaluatetoworkprogressdeaction1"
+            when
+            then
+                        work_progressservice.create(note_attachevaluatetoworkprogresswork_progress);
+                        update(note_attachevaluatetoworkprogressdefault);//更新fact中变量值
+                        update(note_attachevaluatetoworkprogresswork_progress);//更新fact中变量值
+            end

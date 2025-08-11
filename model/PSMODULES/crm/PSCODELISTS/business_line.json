@@ -1,0 +1,37 @@
+{
+  "codeListTag" : "crm__business_line",
+  "codeListType" : "STATIC",
+  "codeName" : "business_line",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSCODELISTS/business_line.json",
+  "emptyText" : "未定义",
+  "name" : "业务条线",
+  "getPSCodeItems" : [ {
+    "codeName" : "hk",
+    "text" : "航空",
+    "value" : "HK"
+  }, {
+    "codeName" : "jcy",
+    "text" : "政务",
+    "value" : "JCY"
+  }, {
+    "codeName" : "ibiz",
+    "text" : "平台",
+    "value" : "iBiz"
+  }, {
+    "codeName" : "qt",
+    "text" : "其他",
+    "value" : "QT"
+  } ],
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "refFlag" : true,
+  "systemTag" : "iBizCRM",
+  "codeItemValueNumber" : false,
+  "enableCache" : true,
+  "subSysAsCloud" : false,
+  "subSysCodeList" : false,
+  "userScope" : false
+}

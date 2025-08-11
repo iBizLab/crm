@@ -1,0 +1,2609 @@
+{
+  "getAllPSAppDEActions" : [ {
+    "actionMode" : "CUSTOM",
+    "codeName" : "add_tags",
+    "methodType" : "DEACTION",
+    "name" : "add_tags",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "type" : "VOID"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/add_tags.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "UPDATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "add_tags"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/add_tags",
+    "builtinMethod" : false,
+    "needResourceKey" : true
+  }, {
+    "actionMode" : "CUSTOM",
+    "codeName" : "batch_update",
+    "methodType" : "DEACTION",
+    "name" : "batch_update",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "type" : "VOID"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/batch_update.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "UPDATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "batch_update"
+    },
+    "requestMethod" : "PUT",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/batch_update",
+    "builtinMethod" : false,
+    "needResourceKey" : true
+  }, {
+    "actionMode" : "CHECKKEY",
+    "actionTag" : "CheckKey",
+    "codeName" : "check_key",
+    "methodType" : "DEACTION",
+    "name" : "CheckKey",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "stdDataType" : 9,
+      "type" : "SIMPLE"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/CheckKey.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "check_key"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/check_key",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "CREATE",
+    "actionTag" : "Create",
+    "codeName" : "create",
+    "methodType" : "DEACTION",
+    "name" : "Create",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/Create.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Create"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "builtinMethod" : false,
+    "noServiceCodeName" : true
+  }, {
+    "actionMode" : "CREATE",
+    "codeName" : "create_task",
+    "methodType" : "DEACTION",
+    "name" : "create_task",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/create_task.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "UPDATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "create_task"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/create_task",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "CUSTOM",
+    "codeName" : "delete_tags",
+    "methodType" : "DEACTION",
+    "name" : "delete_tags",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "type" : "VOID"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/delete_tags.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "UPDATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "delete_tags"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/delete_tags",
+    "builtinMethod" : false,
+    "needResourceKey" : true
+  }, {
+    "actionMode" : "READ",
+    "actionTag" : "Get",
+    "codeName" : "get",
+    "methodType" : "DEACTION",
+    "name" : "Get",
+    "getPSAppDEMethodInput" : {
+      "getKeyPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "name" : "输入对象",
+      "type" : "KEYFIELD"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/Get.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Get"
+    },
+    "requestField" : "ID",
+    "requestMethod" : "GET",
+    "requestParamType" : "FIELD",
+    "builtinMethod" : false,
+    "needResourceKey" : true,
+    "noServiceCodeName" : true
+  }, {
+    "actionMode" : "GETDRAFT",
+    "actionTag" : "GetDraft",
+    "codeName" : "get_draft",
+    "methodType" : "DEACTION",
+    "name" : "GetDraft",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/GetDraft.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "get_draft"
+    },
+    "requestMethod" : "GET",
+    "requestParamType" : "NONE",
+    "requestPath" : "/get_draft",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "CUSTOM",
+    "codeName" : "main_view_dr_count",
+    "methodType" : "DEACTION",
+    "name" : "main_view_dr_count",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "type" : "VOID"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "main_view_dr_count"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/main_view_dr_count",
+    "builtinMethod" : false,
+    "needResourceKey" : true
+  }, {
+    "actionMode" : "DELETE",
+    "actionTag" : "Remove",
+    "batchActionMode" : 1,
+    "codeName" : "remove",
+    "methodType" : "DEACTION",
+    "name" : "Remove",
+    "getPSAppDEMethodInput" : {
+      "getKeyPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "name" : "输入对象",
+      "type" : "KEYFIELDS"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "type" : "VOID"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/Remove.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "DELETE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Remove"
+    },
+    "requestField" : "ID",
+    "requestMethod" : "DELETE",
+    "requestParamType" : "FIELD",
+    "builtinMethod" : false,
+    "enableBatchAction" : true,
+    "needResourceKey" : true,
+    "noServiceCodeName" : true
+  }, {
+    "actionMode" : "SAVE",
+    "actionTag" : "Save",
+    "codeName" : "save",
+    "methodType" : "DEACTION",
+    "name" : "Save",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/Save.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "save"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/save",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "UPDATE",
+    "actionTag" : "Update",
+    "codeName" : "update",
+    "methodType" : "DEACTION",
+    "name" : "Update",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/Update.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "UPDATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Update"
+    },
+    "requestMethod" : "PUT",
+    "requestParamType" : "ENTITY",
+    "builtinMethod" : false,
+    "needResourceKey" : true,
+    "noServiceCodeName" : true
+  } ],
+  "getAllPSAppDEDataImports" : [ {
+    "batchSize" : 1000,
+    "codeName" : "DataImport",
+    "createDataAccessAction" : "CREATE",
+    "getCreatePSAppDEAction" : {
+      "modelref" : true,
+      "id" : "create"
+    },
+    "getCreatePSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/Create.json"
+    },
+    "memo" : "自动生成",
+    "name" : "导入价格表",
+    "getPSDEDataImportItems" : [ {
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DEF.LNAME.CREATE_MAN"
+      },
+      "caption" : "建立人",
+      "name" : "CREATE_MAN",
+      "orderValue" : 1000,
+      "getPSAppDEField" : {
+        "name" : "CREATE_MAN",
+        "codeName" : "create_man"
+      },
+      "getPSCodeList" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__SysOperator.json"
+      },
+      "getPSDEField" : {
+        "name" : "CREATE_MAN",
+        "codeName" : "create_man"
+      }
+    }, {
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DEF.LNAME.UPDATE_MAN"
+      },
+      "caption" : "更新人",
+      "name" : "UPDATE_MAN",
+      "orderValue" : 1000,
+      "getPSAppDEField" : {
+        "name" : "UPDATE_MAN",
+        "codeName" : "update_man"
+      },
+      "getPSCodeList" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__SysOperator.json"
+      },
+      "getPSDEField" : {
+        "name" : "UPDATE_MAN",
+        "codeName" : "update_man"
+      }
+    }, {
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DEF.LNAME.NAME"
+      },
+      "caption" : "名称",
+      "name" : "NAME",
+      "orderValue" : 1000,
+      "getPSAppDEField" : {
+        "name" : "NAME",
+        "codeName" : "name"
+      },
+      "getPSDEField" : {
+        "name" : "NAME",
+        "codeName" : "name"
+      }
+    }, {
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DEF.LNAME.ID"
+      },
+      "caption" : "标识",
+      "name" : "ID",
+      "orderValue" : 1000,
+      "getPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "getPSDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      }
+    }, {
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DEF.LNAME.CREATE_TIME"
+      },
+      "caption" : "建立时间",
+      "name" : "CREATE_TIME",
+      "orderValue" : 1000,
+      "getPSAppDEField" : {
+        "name" : "CREATE_TIME",
+        "codeName" : "create_time"
+      },
+      "getPSDEField" : {
+        "name" : "CREATE_TIME",
+        "codeName" : "create_time"
+      }
+    }, {
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DEF.LNAME.UPDATE_TIME"
+      },
+      "caption" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "orderValue" : 1000,
+      "getPSAppDEField" : {
+        "name" : "UPDATE_TIME",
+        "codeName" : "update_time"
+      },
+      "getPSDEField" : {
+        "name" : "UPDATE_TIME",
+        "codeName" : "update_time"
+      }
+    }, {
+      "caption" : "价格明细",
+      "name" : "PRICING_DETAILS",
+      "orderValue" : 1000,
+      "getPSAppDEField" : {
+        "name" : "PRICING_DETAILS",
+        "codeName" : "pricing_details"
+      },
+      "getPSDEField" : {
+        "name" : "PRICING_DETAILS",
+        "codeName" : "Pricing_Details"
+      }
+    }, {
+      "caption" : "标签",
+      "name" : "TAG",
+      "orderValue" : 1000,
+      "getPSAppDEField" : {
+        "name" : "TAG",
+        "codeName" : "tag"
+      },
+      "getPSDEField" : {
+        "name" : "TAG",
+        "codeName" : "Tag"
+      }
+    }, {
+      "caption" : "描述",
+      "name" : "DESCRIPTION",
+      "orderValue" : 1000,
+      "getPSAppDEField" : {
+        "name" : "DESCRIPTION",
+        "codeName" : "description"
+      },
+      "getPSDEField" : {
+        "name" : "DESCRIPTION",
+        "codeName" : "Description"
+      }
+    }, {
+      "caption" : "Locked",
+      "name" : "LOCKED__S",
+      "orderValue" : 1000,
+      "getPSAppDEField" : {
+        "name" : "LOCKED__S",
+        "codeName" : "locked_s"
+      },
+      "getPSCodeList" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__YesNo.json"
+      },
+      "getPSDEField" : {
+        "name" : "LOCKED__S",
+        "codeName" : "Locked__s"
+      }
+    }, {
+      "caption" : "价格表名称",
+      "name" : "PRICE_BOOK_NAME",
+      "orderValue" : 1000,
+      "getPSAppDEField" : {
+        "name" : "PRICE_BOOK_NAME",
+        "codeName" : "price_book_name"
+      },
+      "getPSDEField" : {
+        "name" : "PRICE_BOOK_NAME",
+        "codeName" : "Price_Book_Name"
+      }
+    }, {
+      "caption" : "价格模型",
+      "name" : "PRICING_MODEL",
+      "orderValue" : 1000,
+      "getPSAppDEField" : {
+        "name" : "PRICING_MODEL",
+        "codeName" : "pricing_model"
+      },
+      "getPSDEField" : {
+        "name" : "PRICING_MODEL",
+        "codeName" : "Pricing_Model"
+      }
+    }, {
+      "caption" : "活跃",
+      "name" : "ACTIVE",
+      "orderValue" : 1000,
+      "getPSAppDEField" : {
+        "name" : "ACTIVE",
+        "codeName" : "active"
+      },
+      "getPSCodeList" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__YesNo.json"
+      },
+      "getPSDEField" : {
+        "name" : "ACTIVE",
+        "codeName" : "Active"
+      }
+    }, {
+      "caption" : "附件",
+      "name" : "ATTACHMENTS",
+      "orderValue" : 1000,
+      "getPSAppDEField" : {
+        "name" : "ATTACHMENTS",
+        "codeName" : "attachments"
+      },
+      "getPSDEField" : {
+        "name" : "ATTACHMENTS",
+        "codeName" : "attachments"
+      }
+    } ],
+    "updateDataAccessAction" : "UPDATE",
+    "getUpdatePSAppDEAction" : {
+      "modelref" : true,
+      "id" : "update"
+    },
+    "getUpdatePSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/Update.json"
+    },
+    "defaultMode" : true,
+    "enableBackend" : true,
+    "enableFront" : true,
+    "ignoreError" : false
+  } ],
+  "getAllPSAppDEDataSets" : [ {
+    "codeName" : "fetch_default",
+    "dataSetName" : "DEFAULT",
+    "dataSetTag" : "Default",
+    "methodType" : "FETCH",
+    "name" : "fetch_default",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_filter_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "PAGE"
+    },
+    "getPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "Default"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "fetch_default"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/fetch_default",
+    "builtinMethod" : false
+  } ],
+  "getAllPSAppDEFields" : [ {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[CREATE_MAN][建立人]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.CREATE_MAN"
+        },
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[CREATE_MAN][建立人]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[CREATE_MAN][建立人]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.CREATE_MAN"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[CREATE_MAN][建立人]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "codeName" : "create_man",
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.CREATE_MAN"
+    },
+    "logicName" : "建立人",
+    "name" : "CREATE_MAN",
+    "predefinedType" : "CREATEMAN",
+    "stdDataType" : 25,
+    "stringLength" : 100
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[UPDATE_MAN][更新人]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.UPDATE_MAN"
+        },
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[UPDATE_MAN][更新人]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[UPDATE_MAN][更新人]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.UPDATE_MAN"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[UPDATE_MAN][更新人]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "codeName" : "update_man",
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.UPDATE_MAN"
+    },
+    "logicName" : "更新人",
+    "name" : "UPDATE_MAN",
+    "predefinedType" : "UPDATEMAN",
+    "stdDataType" : 25,
+    "stringLength" : 100
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[NAME][名称]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.NAME"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[NAME][名称]移动端默认",
+        "stringLength" : 200,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[NAME][名称]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.NAME"
+        },
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[NAME][名称]",
+        "stringLength" : 200,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "name",
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.NAME"
+    },
+    "logicName" : "名称",
+    "name" : "NAME",
+    "stdDataType" : 25,
+    "stringLength" : 200,
+    "enableQuickSearch" : true,
+    "majorField" : true
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[ID][标识]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.ID"
+        },
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[ID][标识]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[ID][标识]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.ID"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[ID][标识]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "codeName" : "id",
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.ID"
+    },
+    "logicName" : "标识",
+    "name" : "ID",
+    "stdDataType" : 25,
+    "stringLength" : 100,
+    "keyField" : true
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[CREATE_TIME][建立时间]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.CREATE_TIME"
+        },
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[CREATE_TIME][建立时间]",
+        "uIMode" : "DEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[CREATE_TIME][建立时间]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.CREATE_TIME"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[CREATE_TIME][建立时间]移动端默认",
+        "uIMode" : "MOBILEDEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "codeName" : "create_time",
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.CREATE_TIME"
+    },
+    "logicName" : "建立时间",
+    "name" : "CREATE_TIME",
+    "predefinedType" : "CREATEDATE",
+    "stdDataType" : 5,
+    "valueFormat" : "YYYY-MM-DD HH:mm:ss"
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[UPDATE_TIME][更新时间]",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.UPDATE_TIME"
+        },
+        "codeName" : "Default",
+        "editorType" : "SPAN",
+        "name" : "[UPDATE_TIME][更新时间]",
+        "uIMode" : "DEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS",
+        "allowEmpty" : false
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[UPDATE_TIME][更新时间]移动端默认",
+      "getPSDEFFormItem" : {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "DEF.LNAME.UPDATE_TIME"
+        },
+        "codeName" : "MobileDefault",
+        "editorType" : "SPAN",
+        "name" : "[UPDATE_TIME][更新时间]移动端默认",
+        "uIMode" : "MOBILEDEFAULT",
+        "valueFormat" : "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS",
+        "allowEmpty" : false,
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "codeName" : "update_time",
+    "getLNPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.UPDATE_TIME"
+    },
+    "logicName" : "更新时间",
+    "name" : "UPDATE_TIME",
+    "predefinedType" : "UPDATEDATE",
+    "stdDataType" : 5,
+    "valueFormat" : "YYYY-MM-DD HH:mm:ss"
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[PRICING_DETAILS][价格明细]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[PRICING_DETAILS][价格明细]",
+        "stringLength" : 120,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[PRICING_DETAILS][价格明细]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[PRICING_DETAILS][价格明细]移动端默认",
+        "stringLength" : 120,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "codeName" : "pricing_details",
+    "logicName" : "价格明细",
+    "name" : "PRICING_DETAILS",
+    "stdDataType" : 25,
+    "stringLength" : 120
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[TAG][标签]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[TAG][标签]",
+        "stringLength" : 2000,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[TAG][标签]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[TAG][标签]移动端默认",
+        "stringLength" : 2000,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "codeName" : "tag",
+    "logicName" : "标签",
+    "name" : "TAG",
+    "stdDataType" : 25,
+    "stringLength" : 2000
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[DESCRIPTION][描述]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXTAREA",
+        "name" : "[DESCRIPTION][描述]移动端默认",
+        "stringLength" : 32000,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[DESCRIPTION][描述]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTAREA_10",
+        "name" : "[DESCRIPTION][描述]",
+        "stringLength" : 32000,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "description",
+    "logicName" : "描述",
+    "name" : "DESCRIPTION",
+    "stdDataType" : 21,
+    "stringLength" : 32000
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[LOCKED__S][Locked]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBSWITCH",
+        "name" : "[LOCKED__S][Locked]移动端默认",
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true,
+        "needCodeListConfig" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[LOCKED__S][Locked]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "DROPDOWNLIST_100",
+        "name" : "[LOCKED__S][Locked]",
+        "uIMode" : "DEFAULT",
+        "needCodeListConfig" : true
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "locked_s",
+    "logicName" : "Locked",
+    "name" : "LOCKED__S",
+    "stdDataType" : 9
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "Default",
+      "name" : "[PRICE_BOOK_NAME][价格表名称]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "TEXTBOX",
+        "name" : "[PRICE_BOOK_NAME][价格表名称]",
+        "stringLength" : 120,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    }, {
+      "codeName" : "MobileDefault",
+      "name" : "[PRICE_BOOK_NAME][价格表名称]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBTEXT",
+        "name" : "[PRICE_BOOK_NAME][价格表名称]移动端默认",
+        "stringLength" : 120,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    } ],
+    "codeName" : "price_book_name",
+    "logicName" : "价格表名称",
+    "name" : "PRICE_BOOK_NAME",
+    "stdDataType" : 25,
+    "stringLength" : 120
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[PRICING_MODEL][价格模型]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBDROPDOWNLIST",
+        "name" : "[PRICING_MODEL][价格模型]移动端默认",
+        "stringLength" : 100,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true,
+        "needCodeListConfig" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[PRICING_MODEL][价格模型]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "DROPDOWNLIST",
+        "name" : "[PRICING_MODEL][价格模型]",
+        "stringLength" : 100,
+        "uIMode" : "DEFAULT",
+        "needCodeListConfig" : true
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "pricing_model",
+    "logicName" : "价格模型",
+    "name" : "PRICING_MODEL",
+    "stdDataType" : 25,
+    "stringLength" : 100
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[ACTIVE][活跃]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "MOBSWITCH",
+        "name" : "[ACTIVE][活跃]移动端默认",
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true,
+        "needCodeListConfig" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[ACTIVE][活跃]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "DROPDOWNLIST_100",
+        "name" : "[ACTIVE][活跃]",
+        "uIMode" : "DEFAULT",
+        "needCodeListConfig" : true
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "active",
+    "logicName" : "活跃",
+    "name" : "ACTIVE",
+    "stdDataType" : 9
+  }, {
+    "getAllPSAppDEFUIModes" : [ {
+      "codeName" : "MobileDefault",
+      "name" : "[ATTACHMENTS][附件]移动端默认",
+      "getPSDEFFormItem" : {
+        "codeName" : "MobileDefault",
+        "editorType" : "HIDDEN",
+        "name" : "[ATTACHMENTS][附件]移动端默认",
+        "stringLength" : 1048576,
+        "uIMode" : "MOBILEDEFAULT",
+        "mobileMode" : true
+      },
+      "type" : "MOBILEDEFAULT",
+      "mobileMode" : true
+    }, {
+      "codeName" : "Default",
+      "name" : "[ATTACHMENTS][附件]",
+      "getPSDEFFormItem" : {
+        "codeName" : "Default",
+        "editorType" : "HIDDEN",
+        "name" : "[ATTACHMENTS][附件]",
+        "stringLength" : 1048576,
+        "uIMode" : "DEFAULT"
+      },
+      "type" : "DEFAULT"
+    } ],
+    "codeName" : "attachments",
+    "logicName" : "附件",
+    "name" : "ATTACHMENTS",
+    "stdDataType" : 21,
+    "stringLength" : 1048576
+  } ],
+  "getAllPSAppDEMethodDTOs" : [ {
+    "codeName" : "price_book_dto",
+    "name" : "price_book_dto",
+    "getPSAppDEMethodDTOFields" : [ {
+      "codeName" : "active",
+      "logicName" : "活跃",
+      "name" : "active",
+      "getPSAppDEField" : {
+        "name" : "ACTIVE",
+        "codeName" : "active"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 9,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "attachments",
+      "logicName" : "附件",
+      "name" : "attachments",
+      "getPSAppDEField" : {
+        "name" : "ATTACHMENTS",
+        "codeName" : "attachments"
+      },
+      "getRefPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "attachment_dto"
+      },
+      "getRefPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/attachment.json"
+      },
+      "getRefPickupPSAppDEField" : {
+        "name" : "OWNER_ID",
+        "codeName" : "owner_id"
+      },
+      "sourceType" : "DEFIELD",
+      "type" : "DTOS"
+    }, {
+      "codeName" : "create_man",
+      "logicName" : "建立人",
+      "name" : "create_man",
+      "getPSAppDEField" : {
+        "name" : "CREATE_MAN",
+        "codeName" : "create_man"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE",
+      "allowEmpty" : false
+    }, {
+      "codeName" : "create_time",
+      "jsonFormat" : "yyyy-MM-dd HH:mm:ss",
+      "logicName" : "建立时间",
+      "name" : "create_time",
+      "getPSAppDEField" : {
+        "name" : "CREATE_TIME",
+        "codeName" : "create_time"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 5,
+      "type" : "SIMPLE",
+      "allowEmpty" : false
+    }, {
+      "codeName" : "description",
+      "logicName" : "描述",
+      "name" : "description",
+      "getPSAppDEField" : {
+        "name" : "DESCRIPTION",
+        "codeName" : "description"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 21,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "id",
+      "logicName" : "标识",
+      "name" : "id",
+      "getPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE",
+      "allowEmpty" : false
+    }, {
+      "codeName" : "locked_s",
+      "logicName" : "Locked",
+      "name" : "locked_s",
+      "getPSAppDEField" : {
+        "name" : "LOCKED__S",
+        "codeName" : "locked_s"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 9,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "name",
+      "logicName" : "名称",
+      "name" : "name",
+      "getPSAppDEField" : {
+        "name" : "NAME",
+        "codeName" : "name"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "price_book_name",
+      "logicName" : "价格表名称",
+      "name" : "price_book_name",
+      "getPSAppDEField" : {
+        "name" : "PRICE_BOOK_NAME",
+        "codeName" : "price_book_name"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "pricing_details",
+      "logicName" : "价格明细",
+      "name" : "pricing_details",
+      "getPSAppDEField" : {
+        "name" : "PRICING_DETAILS",
+        "codeName" : "pricing_details"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "pricing_model",
+      "logicName" : "价格模型",
+      "name" : "pricing_model",
+      "getPSAppDEField" : {
+        "name" : "PRICING_MODEL",
+        "codeName" : "pricing_model"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "tag",
+      "logicName" : "标签",
+      "name" : "tag",
+      "getPSAppDEField" : {
+        "name" : "TAG",
+        "codeName" : "tag"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "update_man",
+      "logicName" : "更新人",
+      "name" : "update_man",
+      "getPSAppDEField" : {
+        "name" : "UPDATE_MAN",
+        "codeName" : "update_man"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 25,
+      "type" : "SIMPLE",
+      "allowEmpty" : false
+    }, {
+      "codeName" : "update_time",
+      "jsonFormat" : "yyyy-MM-dd HH:mm:ss",
+      "logicName" : "更新时间",
+      "name" : "update_time",
+      "getPSAppDEField" : {
+        "name" : "UPDATE_TIME",
+        "codeName" : "update_time"
+      },
+      "sourceType" : "DEFIELD",
+      "stdDataType" : 5,
+      "type" : "SIMPLE",
+      "allowEmpty" : false
+    } ],
+    "sourceType" : "DE",
+    "type" : "DEFAULT"
+  }, {
+    "codeName" : "price_book_filter_dto",
+    "name" : "price_book_filter_dto",
+    "getPSAppDEMethodDTOFields" : [ {
+      "codeName" : "n_id_eq",
+      "logicName" : "标识",
+      "name" : "n_id_eq",
+      "getPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "sourceType" : "DEFSEARCHMODE",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    }, {
+      "codeName" : "n_name_like",
+      "logicName" : "名称",
+      "name" : "n_name_like",
+      "getPSAppDEField" : {
+        "name" : "NAME",
+        "codeName" : "name"
+      },
+      "sourceType" : "DEFSEARCHMODE",
+      "stdDataType" : 25,
+      "type" : "SIMPLE"
+    } ],
+    "sourceType" : "DE",
+    "type" : "DEFILTER"
+  } ],
+  "getAllPSAppDEMethods" : [ {
+    "actionMode" : "CUSTOM",
+    "codeName" : "add_tags",
+    "methodType" : "DEACTION",
+    "name" : "add_tags",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "type" : "VOID"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/add_tags.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "UPDATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "add_tags"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/add_tags",
+    "builtinMethod" : false,
+    "needResourceKey" : true
+  }, {
+    "actionMode" : "CUSTOM",
+    "codeName" : "batch_update",
+    "methodType" : "DEACTION",
+    "name" : "batch_update",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "type" : "VOID"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/batch_update.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "UPDATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "batch_update"
+    },
+    "requestMethod" : "PUT",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/batch_update",
+    "builtinMethod" : false,
+    "needResourceKey" : true
+  }, {
+    "actionMode" : "CHECKKEY",
+    "actionTag" : "CheckKey",
+    "codeName" : "check_key",
+    "methodType" : "DEACTION",
+    "name" : "CheckKey",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "stdDataType" : 9,
+      "type" : "SIMPLE"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/CheckKey.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "check_key"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/check_key",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "CREATE",
+    "actionTag" : "Create",
+    "codeName" : "create",
+    "methodType" : "DEACTION",
+    "name" : "Create",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/Create.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Create"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "builtinMethod" : false,
+    "noServiceCodeName" : true
+  }, {
+    "actionMode" : "CREATE",
+    "codeName" : "create_task",
+    "methodType" : "DEACTION",
+    "name" : "create_task",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/create_task.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "UPDATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "create_task"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/create_task",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "CUSTOM",
+    "codeName" : "delete_tags",
+    "methodType" : "DEACTION",
+    "name" : "delete_tags",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "type" : "VOID"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/delete_tags.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "UPDATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "delete_tags"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/delete_tags",
+    "builtinMethod" : false,
+    "needResourceKey" : true
+  }, {
+    "actionMode" : "READ",
+    "actionTag" : "Get",
+    "codeName" : "get",
+    "methodType" : "DEACTION",
+    "name" : "Get",
+    "getPSAppDEMethodInput" : {
+      "getKeyPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "name" : "输入对象",
+      "type" : "KEYFIELD"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/Get.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Get"
+    },
+    "requestField" : "ID",
+    "requestMethod" : "GET",
+    "requestParamType" : "FIELD",
+    "builtinMethod" : false,
+    "needResourceKey" : true,
+    "noServiceCodeName" : true
+  }, {
+    "actionMode" : "GETDRAFT",
+    "actionTag" : "GetDraft",
+    "codeName" : "get_draft",
+    "methodType" : "DEACTION",
+    "name" : "GetDraft",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/GetDraft.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "get_draft"
+    },
+    "requestMethod" : "GET",
+    "requestParamType" : "NONE",
+    "requestPath" : "/get_draft",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "CUSTOM",
+    "codeName" : "main_view_dr_count",
+    "methodType" : "DEACTION",
+    "name" : "main_view_dr_count",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "type" : "VOID"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/main_view_dr_count.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "main_view_dr_count"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/main_view_dr_count",
+    "builtinMethod" : false,
+    "needResourceKey" : true
+  }, {
+    "actionMode" : "DELETE",
+    "actionTag" : "Remove",
+    "batchActionMode" : 1,
+    "codeName" : "remove",
+    "methodType" : "DEACTION",
+    "name" : "Remove",
+    "getPSAppDEMethodInput" : {
+      "getKeyPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "name" : "输入对象",
+      "type" : "KEYFIELDS"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "type" : "VOID"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/Remove.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "DELETE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Remove"
+    },
+    "requestField" : "ID",
+    "requestMethod" : "DELETE",
+    "requestParamType" : "FIELD",
+    "builtinMethod" : false,
+    "enableBatchAction" : true,
+    "needResourceKey" : true,
+    "noServiceCodeName" : true
+  }, {
+    "actionMode" : "SAVE",
+    "actionTag" : "Save",
+    "codeName" : "save",
+    "methodType" : "DEACTION",
+    "name" : "Save",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/Save.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "save"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/save",
+    "builtinMethod" : false
+  }, {
+    "actionMode" : "UPDATE",
+    "actionTag" : "Update",
+    "codeName" : "update",
+    "methodType" : "DEACTION",
+    "name" : "Update",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO",
+      "output" : true
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSDEAction" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/Update.json"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "UPDATE"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "Update"
+    },
+    "requestMethod" : "PUT",
+    "requestParamType" : "ENTITY",
+    "builtinMethod" : false,
+    "needResourceKey" : true,
+    "noServiceCodeName" : true
+  }, {
+    "codeName" : "fetch_default",
+    "dataSetName" : "DEFAULT",
+    "dataSetTag" : "Default",
+    "methodType" : "FETCH",
+    "name" : "fetch_default",
+    "getPSAppDEMethodInput" : {
+      "name" : "输入对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_filter_dto"
+      },
+      "type" : "DTO"
+    },
+    "getPSAppDEMethodReturn" : {
+      "name" : "返回对象",
+      "getPSAppDEMethodDTO" : {
+        "modelref" : true,
+        "id" : "price_book_dto"
+      },
+      "type" : "PAGE"
+    },
+    "getPSDEDataSet" : {
+      "modelref" : true,
+      "id" : "Default"
+    },
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    },
+    "getPSDEServiceAPIMethod" : {
+      "modelref" : true,
+      "id" : "fetch_default"
+    },
+    "requestMethod" : "POST",
+    "requestParamType" : "ENTITY",
+    "requestPath" : "/fetch_default",
+    "builtinMethod" : false
+  }, {
+    "codeName" : "FilterCreate",
+    "methodType" : "FILTERACTION",
+    "name" : "FILTERCREATE",
+    "builtinMethod" : true
+  }, {
+    "codeName" : "FilterFetch",
+    "methodType" : "FILTERACTION",
+    "name" : "FILTERFETCH",
+    "builtinMethod" : true
+  }, {
+    "codeName" : "FilterGet",
+    "methodType" : "FILTERACTION",
+    "name" : "FILTERGET",
+    "builtinMethod" : true
+  }, {
+    "codeName" : "FilterGetDraft",
+    "methodType" : "FILTERACTION",
+    "name" : "FILTERGETDRAFT",
+    "builtinMethod" : true
+  }, {
+    "codeName" : "FilterRemove",
+    "methodType" : "FILTERACTION",
+    "name" : "FILTERREMOVE",
+    "builtinMethod" : true
+  }, {
+    "codeName" : "FilterSearch",
+    "methodType" : "FILTERACTION",
+    "name" : "FILTERSEARCH",
+    "builtinMethod" : true
+  }, {
+    "codeName" : "FilterUpdate",
+    "methodType" : "FILTERACTION",
+    "name" : "FILTERUPDATE",
+    "builtinMethod" : true
+  } ],
+  "getAllPSAppDEUIActions" : [ {
+    "actionTarget" : "NONE",
+    "caption" : "导入价格表",
+    "codeName" : "ImportData",
+    "frontProcessType" : "DATAIMP",
+    "fullCodeName" : "price_book_ImportData",
+    "memo" : "自动生成",
+    "name" : "导入数据",
+    "getPSAppDEDataImport" : {
+      "modelref" : true,
+      "id" : "DataImport"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "refreshMode" : 1,
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "ImportData",
+    "uIActionType" : "DEUIACTION",
+    "reloadData" : true,
+    "id" : "ImportData@price_book"
+  }, {
+    "actionTarget" : "NONE",
+    "caption" : "添加附件",
+    "codeName" : "add_attachments",
+    "frontProcessType" : "OTHER",
+    "fullCodeName" : "price_book_add_attachments",
+    "memo" : "自动生成",
+    "name" : "添加附件",
+    "getPSAppDEUILogic" : {
+      "modelref" : true,
+      "id" : "add_attachment"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "getPSSysImage" : {
+      "glyph" : "xf067@FontAwesome",
+      "cssClass" : "fa fa-plus"
+    },
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "add_attachments",
+    "uIActionType" : "DEUIACTION",
+    "uILogicAttachMode" : "REPLACE",
+    "id" : "add_attachments@price_book"
+  }, {
+    "actionTarget" : "MULTIKEY",
+    "caption" : "添加标签",
+    "codeName" : "add_tags",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/tag_add_tag.json",
+      "viewType" : "DEOPTVIEW"
+    },
+    "fullCodeName" : "price_book_add_tags",
+    "memo" : "自动生成",
+    "name" : "添加标签",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "add_tags"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "refreshMode" : 1,
+    "successMsg" : "已成功添加标签",
+    "timeout" : 60000,
+    "uIActionMode" : "BACKEND",
+    "uIActionTag" : "add_tags",
+    "uIActionType" : "DEUIACTION",
+    "enableConfirm" : true,
+    "reloadData" : true,
+    "id" : "add_tags@price_book"
+  }, {
+    "actionTarget" : "MULTIKEY",
+    "caption" : "批量更新",
+    "codeName" : "batch_update",
+    "fullCodeName" : "price_book_batch_update",
+    "memo" : "自动生成",
+    "name" : "批量更新",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "batch_update"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "refreshMode" : 1,
+    "successMsg" : "更新完成",
+    "timeout" : 60000,
+    "uIActionMode" : "BACKEND",
+    "uIActionTag" : "batch_update",
+    "uIActionType" : "DEUIACTION",
+    "enableConfirm" : true,
+    "reloadData" : true,
+    "id" : "batch_update@price_book"
+  }, {
+    "actionTarget" : "MULTIKEY",
+    "caption" : "创建任务",
+    "codeName" : "create_task",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_batch_create_view.json",
+      "viewType" : "DEOPTVIEW"
+    },
+    "fullCodeName" : "price_book_create_task",
+    "memo" : "自动生成",
+    "name" : "创建任务",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "create_task"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "successMsg" : "创建完成",
+    "timeout" : 60000,
+    "uIActionMode" : "BACKEND",
+    "uIActionTag" : "create_task",
+    "uIActionType" : "DEUIACTION",
+    "enableConfirm" : true,
+    "id" : "create_task@price_book"
+  }, {
+    "actionTarget" : "MULTIKEY",
+    "caption" : "移除标签",
+    "codeName" : "delete_tags",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/tag_remove_tag.json",
+      "viewType" : "DEOPTVIEW"
+    },
+    "fullCodeName" : "price_book_delete_tags",
+    "memo" : "自动生成",
+    "name" : "移除标签",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "delete_tags"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "refreshMode" : 1,
+    "successMsg" : "已成功移除标签",
+    "timeout" : 60000,
+    "uIActionMode" : "BACKEND",
+    "uIActionTag" : "delete_tags",
+    "uIActionType" : "DEUIACTION",
+    "enableConfirm" : true,
+    "reloadData" : true,
+    "id" : "delete_tags@price_book"
+  }, {
+    "actionTarget" : "NONE",
+    "caption" : "管理标签",
+    "codeName" : "mgr_tags",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/tag_mgr_grid_view.json",
+      "viewType" : "DEGRIDVIEW"
+    },
+    "frontProcessType" : "TOP",
+    "fullCodeName" : "price_book_mgr_tags",
+    "memo" : "自动生成",
+    "name" : "管理标签",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "getPSNavigateContexts" : [ {
+      "key" : "OWNER_TYPE",
+      "name" : "OWNER_TYPE",
+      "value" : "PRICE_BOOK",
+      "rawValue" : true
+    } ],
+    "getPSNavigateParams" : [ {
+      "key" : "owner_type",
+      "name" : "owner_type",
+      "value" : "PRICE_BOOK",
+      "rawValue" : true
+    } ],
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "mgr_tags",
+    "uIActionType" : "DEUIACTION",
+    "id" : "mgr_tags@price_book"
+  }, {
+    "actionTarget" : "SINGLEKEY",
+    "caption" : "编辑",
+    "codeName" : "open_edit_view",
+    "getFrontPSAppView" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_edit_view.json",
+      "viewType" : "DEEDITVIEW"
+    },
+    "frontProcessType" : "WIZARD",
+    "fullCodeName" : "price_book_open_edit_view",
+    "memo" : "自动生成",
+    "name" : "编辑",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "refreshMode" : 1,
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "open_edit_view",
+    "uIActionType" : "DEUIACTION",
+    "reloadData" : true,
+    "id" : "open_edit_view@price_book"
+  }, {
+    "actionTarget" : "MULTIKEY",
+    "caption" : "删除",
+    "codeName" : "remove",
+    "confirmMsg" : "确定要删除所选的记录吗？",
+    "fullCodeName" : "price_book_remove",
+    "memo" : "自动生成",
+    "name" : "删除",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "remove"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "refreshMode" : 1,
+    "successMsg" : "删除成功",
+    "timeout" : 60000,
+    "uIActionMode" : "BACKEND",
+    "uIActionTag" : "remove",
+    "uIActionType" : "DEUIACTION",
+    "enableConfirm" : true,
+    "reloadData" : true,
+    "id" : "remove@price_book"
+  }, {
+    "actionTarget" : "NONE",
+    "caption" : "上传",
+    "codeName" : "upload_attachment",
+    "frontProcessType" : "OTHER",
+    "fullCodeName" : "price_book_upload_attachment",
+    "memo" : "自动生成",
+    "name" : "上传附件",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "getPSSysPFPlugin" : {
+      "pluginType" : "DEUIACTION",
+      "pluginCode" : "FILE_UPLOAD",
+      "runtimeObject" : true
+    },
+    "uIActionMode" : "FRONT",
+    "uIActionTag" : "upload_attachment",
+    "uIActionType" : "DEUIACTION",
+    "id" : "upload_attachment@price_book"
+  } ],
+  "getAllPSAppDEUILogics" : [ {
+    "codeName" : "add_attachment",
+    "defaultParamName" : "Default",
+    "logicName" : "添加附件",
+    "memo" : "自动生成",
+    "name" : "添加附件",
+    "getPSDEUILogicNodes" : [ {
+      "codeName" : "Begin",
+      "leftPos" : 200,
+      "logicNodeType" : "BEGIN",
+      "name" : "开始",
+      "getPSDEUILogicLinks" : [ {
+        "getDstPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "DEUIACTION1"
+        },
+        "linkMode" : 0,
+        "name" : "连接名称",
+        "getSrcPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "Begin"
+        }
+      } ],
+      "topPos" : 200,
+      "parallelOutput" : true
+    }, {
+      "codeName" : "DEUIACTION1",
+      "getDstPSAppDEUIAction" : {
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+        },
+        "modelref" : true,
+        "id" : "upload_attachment@price_book"
+      },
+      "getDstPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+      },
+      "getDstPSDEUILogicParam" : {
+        "modelref" : true,
+        "id" : "files"
+      },
+      "leftPos" : 309,
+      "logicNodeType" : "DEUIACTION",
+      "name" : "界面行为",
+      "getPSDEUILogicLinks" : [ {
+        "getDstPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "PREPAREJSPARAM1"
+        },
+        "linkMode" : 0,
+        "name" : "连接名称",
+        "getSrcPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "DEUIACTION1"
+        }
+      } ],
+      "topPos" : 208
+    }, {
+      "codeName" : "PREPAREJSPARAM1",
+      "leftPos" : 553,
+      "logicNodeType" : "PREPAREJSPARAM",
+      "name" : "绑定表格部件",
+      "getPSDEUILogicLinks" : [ {
+        "getDstPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "RAWJSCODE4"
+        },
+        "linkMode" : 0,
+        "name" : "连接名称",
+        "getSrcPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "PREPAREJSPARAM1"
+        }
+      } ],
+      "getPSDEUILogicNodeParams" : [ {
+        "getDstPSDEUILogicParam" : {
+          "modelref" : true,
+          "id" : "grid"
+        },
+        "name" : "form[details.attachments.mdController] ==> grid",
+        "paramAction" : "SETPARAMVALUE",
+        "srcFieldName" : "details.attachments.mdController",
+        "getSrcPSDEUILogicParam" : {
+          "modelref" : true,
+          "id" : "form"
+        },
+        "srcValueType" : "SRCDLPARAM"
+      } ],
+      "topPos" : 208
+    }, {
+      "codeName" : "END1",
+      "leftPos" : 1167,
+      "logicNodeType" : "END",
+      "name" : "结束",
+      "topPos" : 200
+    }, {
+      "codeName" : "VIEWCTRLINVOKE2",
+      "getInvokeCtrl" : {
+        "modelref" : true,
+        "id" : "grid"
+      },
+      "invokeMethod" : "addAttachMent",
+      "getInvokeParam" : {
+        "modelref" : true,
+        "id" : "attach"
+      },
+      "leftPos" : 989,
+      "logicNodeType" : "VIEWCTRLINVOKE",
+      "name" : "视图部件调用",
+      "getPSDEUILogicLinks" : [ {
+        "getDstPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "END1"
+        },
+        "linkMode" : 0,
+        "name" : "连接名称",
+        "getSrcPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "VIEWCTRLINVOKE2"
+        }
+      } ],
+      "topPos" : 208
+    }, {
+      "code" : "// 计算新建默认值\r\nconst defaultData = uiLogic.grid.calcDefaultValue({}, true);\r\nuiLogic.attach = uiLogic.files.map(item => \r\n    {\r\n        return {\r\n            name: item.name,\r\n            file_id: item.id,\r\n            id: item.uuid,\r\n            ...defaultData,\r\n        }\r\n    }\r\n)",
+      "codeName" : "RAWJSCODE4",
+      "leftPos" : 780,
+      "logicNodeType" : "RAWJSCODE",
+      "name" : "设置附件参数",
+      "getPSDEUILogicLinks" : [ {
+        "getDstPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "VIEWCTRLINVOKE2"
+        },
+        "linkMode" : 0,
+        "name" : "连接名称",
+        "getSrcPSDEUILogicNode" : {
+          "modelref" : true,
+          "id" : "RAWJSCODE4"
+        }
+      } ],
+      "topPos" : 208
+    } ],
+    "getPSDEUILogicParams" : [ {
+      "codeName" : "Default",
+      "logicName" : "传入变量",
+      "name" : "传入变量",
+      "default" : true,
+      "entityParam" : true
+    }, {
+      "codeName" : "grid",
+      "logicName" : "重复器表格",
+      "name" : "重复器表格",
+      "ctrlParam" : true
+    }, {
+      "codeName" : "form",
+      "logicName" : "表单",
+      "name" : "表单",
+      "ctrlParam" : true
+    }, {
+      "codeName" : "attach",
+      "logicName" : "附件",
+      "name" : "附件",
+      "entityListParam" : true
+    }, {
+      "codeName" : "files",
+      "logicName" : "上传文件",
+      "name" : "上传文件",
+      "entityListParam" : true
+    }, {
+      "codeName" : "view",
+      "logicName" : "当前视图对象",
+      "name" : "当前视图对象",
+      "activeViewParam" : true
+    } ],
+    "getStartPSDEUILogicNode" : {
+      "modelref" : true,
+      "id" : "Begin"
+    }
+  } ],
+  "getAllPSAppViews" : [ {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_data_view_multimode.json",
+    "viewType" : "DEDATAVIEW"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_grid_view_multimode.json",
+    "viewType" : "DEGRIDVIEW"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_attachment_view.json",
+    "viewType" : "DEEDITVIEW9"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_list_view_multimode.json",
+    "viewType" : "DELISTVIEW"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_edit_view.json",
+    "viewType" : "DEEDITVIEW"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_note_attach_view.json",
+    "viewType" : "DEEDITVIEW9"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_main_view.json",
+    "viewType" : "DEEDITVIEW2"
+  }, {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_tab_search_view.json",
+    "viewType" : "DETABSEARCHVIEW"
+  } ],
+  "getAllPSDEOPPrivs" : [ {
+    "logicName" : "建立",
+    "name" : "CREATE"
+  }, {
+    "logicName" : "删除",
+    "name" : "DELETE"
+  }, {
+    "logicName" : "读取",
+    "name" : "READ"
+  }, {
+    "logicName" : "更新",
+    "name" : "UPDATE"
+  } ],
+  "codeName" : "price_book",
+  "dEAPICodeName" : "price_book",
+  "dEAPICodeName2" : "price_books",
+  "dEAPITag" : "PRICE_BOOK",
+  "dataAccCtrlArch" : 1,
+  "dataAccCtrlMode" : 1,
+  "getDefaultPSAppDEDataImport" : {
+    "modelref" : true,
+    "id" : "DataImport"
+  },
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json",
+  "enableUIActions" : 15,
+  "getKeyPSAppDEField" : {
+    "name" : "ID",
+    "codeName" : "id"
+  },
+  "logicName" : "价格表",
+  "getMajorPSAppDEField" : {
+    "name" : "NAME",
+    "codeName" : "name"
+  },
+  "name" : "PRICE_BOOK",
+  "getPSDEName" : "PRICE_BOOK",
+  "getPSDEServiceAPI" : {
+    "modelref" : true,
+    "id" : "price_book"
+  },
+  "getPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/price_book.json"
+  },
+  "getPSSysServiceAPI" : {
+    "modelref" : true,
+    "path" : "PSSYSSERVICEAPIS/ServiceAPI.json"
+  },
+  "getQuickSearchPSAppDEFields" : [ {
+    "name" : "NAME",
+    "codeName" : "name"
+  } ],
+  "storageMode" : 0,
+  "sysAPITag" : "ServiceAPI",
+  "defaultMode" : true,
+  "enableFilterActions" : true,
+  "enableUICreate" : true,
+  "enableUIModify" : true,
+  "enableUIRemove" : true,
+  "enableWFActions" : false,
+  "major" : true,
+  "getAllPSAppDEUIActionGroups" : [ {
+    "codeName" : "add_attachments",
+    "memo" : "自动生成",
+    "name" : "添加附件",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "uniqueTag" : "price_book__add_attachments",
+    "getPSUIActionGroupDetails" : [ {
+      "caption" : "添加附件",
+      "detailType" : "DEUIACTION",
+      "name" : "u631e661",
+      "getPSSysImage" : {
+        "glyph" : "xf067@FontAwesome",
+        "cssClass" : "fa fa-plus"
+      },
+      "addSeparator" : false,
+      "showCaption" : true,
+      "showIcon" : true,
+      "getPSUIAction" : {
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+        },
+        "modelref" : true,
+        "id" : "add_attachments@price_book"
+      }
+    } ]
+  }, {
+    "codeName" : "main_view_group_1",
+    "memo" : "编辑之前",
+    "name" : "main_view行为组1",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "uniqueTag" : "price_book__main_view_group_1"
+  }, {
+    "codeName" : "main_view_group_2",
+    "memo" : "打印之前",
+    "name" : "main_view行为组2",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "uniqueTag" : "price_book__main_view_group_2"
+  }, {
+    "codeName" : "main_view_group_3",
+    "memo" : "打印之后",
+    "name" : "main_view行为组3",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "uniqueTag" : "price_book__main_view_group_3"
+  }, {
+    "codeName" : "tab_view_group_1",
+    "memo" : "创建之前",
+    "name" : "tab_view行为组1",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "uniqueTag" : "price_book__tab_view_group_1"
+  }, {
+    "codeName" : "tab_view_group_2",
+    "memo" : "导入相关",
+    "name" : "tab_view行为组2",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "uniqueTag" : "price_book__tab_view_group_2",
+    "getPSUIActionGroupDetails" : [ {
+      "caption" : "导入价格表",
+      "detailType" : "DEUIACTION",
+      "name" : "u96d8746",
+      "addSeparator" : false,
+      "showCaption" : true,
+      "showIcon" : true,
+      "getPSUIAction" : {
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+        },
+        "modelref" : true,
+        "id" : "ImportData@price_book"
+      }
+    }, {
+      "caption" : "导入备注",
+      "detailType" : "DEUIACTION",
+      "memo" : "导入备注",
+      "name" : "u4fb332c",
+      "uIActionParamJO" : {
+        "SRFNAVCTX.owner_type" : "PRICE_BOOK",
+        "SRFNAVPARAM.owner_type" : "PRICE_BOOK"
+      },
+      "addSeparator" : false,
+      "showCaption" : true,
+      "showIcon" : true,
+      "getPSUIAction" : {
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+        },
+        "modelref" : true,
+        "id" : "import@note_attach"
+      }
+    } ]
+  }, {
+    "codeName" : "tab_view_group_3",
+    "memo" : "其他操作-标签管理之前",
+    "name" : "tab_view行为组3",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "uniqueTag" : "price_book__tab_view_group_3"
+  }, {
+    "codeName" : "tab_view_group_4",
+    "memo" : "其他操作-标签管理之后",
+    "name" : "tab_view行为组4",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "uniqueTag" : "price_book__tab_view_group_4"
+  } ]
+}
