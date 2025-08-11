@@ -1,0 +1,28 @@
+{
+  "codeName" : "LEAD",
+  "dERSubType" : "DER1N",
+  "dERType" : "DERCUSTOM",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/relation/PSDERS/DERCUSTOM_RELATION_LEAD.json",
+  "logicName" : "名称",
+  "getMajorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/lead.json"
+  },
+  "masterRS" : 0,
+  "getMinorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/relation.json"
+  },
+  "name" : "DERCUSTOM_RELATION_LEAD",
+  "orderValue" : 100,
+  "parentSubType" : "LEAD",
+  "pickupDEFName" : "PRINCIPAL_ID",
+  "getPickupPSDEField" : {
+    "name" : "PRINCIPAL_ID",
+    "codeName" : "principal_id"
+  },
+  "removeActionType" : 0,
+  "removeOrder" : -1,
+  "serviceCodeName" : "lead",
+  "typeValue" : "LEAD"
+}

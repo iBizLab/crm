@@ -1,0 +1,143 @@
+package cn.ibizlab.crm.crm.logic.leadlogic.leadtodeal;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.lead leadleadtodealdefault;
+                global cn.ibizlab.crm.core.crm.domain.deal leadleadtodealdeal;
+                global cn.ibizlab.crm.core.crm.domain.lead leadleadtodealleadback;
+                    global cn.ibizlab.crm.core.crm.service.IdealService dealservice;
+                    global cn.ibizlab.crm.core.crm.service.IleadService leadservice;
+        global cn.ibizlab.crm.core.crm.service.IleadService iBzSysLeadDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "leadleadtodealbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[线索属性值转换为商机属性值]
+            rule "prepareparam1"
+            ruleflow-group "leadleadtodealprepareparam1"
+            when
+            then
+                            leadleadtodealdeal.set("dealname",leadleadtodealleadback.get("subject"));
+                            leadleadtodealdeal.set("stage","10");
+                            leadleadtodealdeal.set("id",leadleadtodealleadback.get("id"));
+                            leadleadtodealdeal.set("owner",leadleadtodealleadback.get("owner"));
+                            leadleadtodealdeal.set("accountid",leadleadtodealleadback.get("accountid"));
+                            leadleadtodealdeal.set("leadsource",leadleadtodealleadback.get("leadsource"));
+                            leadleadtodealdeal.set("description",leadleadtodealleadback.get("description"));
+                        update(leadleadtodealdefault);//更新fact中变量值
+                        update(leadleadtodealdeal);//更新fact中变量值
+                        update(leadleadtodealleadback);//更新fact中变量值
+            end
+
+            //逻辑处理节点[创建商机]
+            rule "deaction1"
+            ruleflow-group "leadleadtodealdeaction1"
+            when
+            then
+                        dealservice.create(leadleadtodealdeal);
+                        update(leadleadtodealdefault);//更新fact中变量值
+                        update(leadleadtodealdeal);//更新fact中变量值
+                        update(leadleadtodealleadback);//更新fact中变量值
+            end
+
+            //逻辑处理节点[根据线索id查询线索]
+            rule "deaction2"
+            ruleflow-group "leadleadtodealdeaction2"
+            when
+            then
+                            cn.ibizlab.crm.util.helper.CachedBeanCopier.copy(leadservice.get(leadleadtodealdefault.getId()),leadleadtodealdefault);
+                        update(leadleadtodealdefault);//更新fact中变量值
+                        update(leadleadtodealdeal);//更新fact中变量值
+                        update(leadleadtodealleadback);//更新fact中变量值
+            end
+
+            //逻辑处理节点[附件线索转商机]
+            rule "rawsqlcall3"
+            ruleflow-group "leadleadtodealrawsqlcall3"
+            when
+            then
+    Map param =new HashMap();
+        param.put("param0",leadleadtodealdeal.get("id"));
+        param.put("param1",leadleadtodealleadback.get("id"));
+    String strSql="update attachment t set t.OWNER_ID=#{et.param0},t.OWNER_TYPE='DEAL' where t.OWNER_ID= #{et.param1}";
+                        iBzSysLeadDefaultService.execute(strSql,param);//SQL调用
+                        update(leadleadtodealdefault);//更新fact中变量值
+                        update(leadleadtodealdeal);//更新fact中变量值
+                        update(leadleadtodealleadback);//更新fact中变量值
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "leadleadtodealend1"
+            when
+            then
+                        update(leadleadtodealdefault);//更新fact中变量值
+                        update(leadleadtodealdeal);//更新fact中变量值
+                        update(leadleadtodealleadback);//更新fact中变量值
+            end
+
+            //逻辑处理节点[relation中线索转为商机]
+            rule "rawsqlcall1"
+            ruleflow-group "leadleadtodealrawsqlcall1"
+            when
+            then
+    Map param =new HashMap();
+        param.put("param0",leadleadtodealdeal.get("id"));
+        param.put("param1",leadleadtodealleadback.get("id"));
+    String strSql="update relation t set t.PRINCIPAL_ID=#{et.param0} ,t.PRINCIPAL_TYPE='DEAL'   where t.PRINCIPAL_ID= #{et.param1}";
+                        iBzSysLeadDefaultService.execute(strSql,param);//SQL调用
+                        update(leadleadtodealdefault);//更新fact中变量值
+                        update(leadleadtodealdeal);//更新fact中变量值
+                        update(leadleadtodealleadback);//更新fact中变量值
+            end
+
+            //逻辑处理节点[进展评估线索转商机]
+            rule "rawsqlcall2"
+            ruleflow-group "leadleadtodealrawsqlcall2"
+            when
+            then
+    Map param =new HashMap();
+        param.put("param0",leadleadtodealdeal.get("id"));
+        param.put("param1",leadleadtodealleadback.get("id"));
+    String strSql="update note_attach t set t.PRINCIPAL_ID=#{et.param0} ,t.OWNER_TYPE='DEAL',t.PRINCIPAL_TYPE='DEAL'    where t.PRINCIPAL_ID= #{et.param1}";
+                        iBzSysLeadDefaultService.execute(strSql,param);//SQL调用
+                        update(leadleadtodealdefault);//更新fact中变量值
+                        update(leadleadtodealdeal);//更新fact中变量值
+                        update(leadleadtodealleadback);//更新fact中变量值
+            end
+
+            //逻辑处理节点[更新工作进展数据]
+            rule "rawsqlcall4"
+            ruleflow-group "leadleadtodealrawsqlcall4"
+            when
+            then
+    Map param =new HashMap();
+        param.put("param0",leadleadtodealdefault.get("id"));
+    String strSql="update work_progress set target_name = CONCAT(target_name,'(由线索转换)'),target_type='DEAL' where target_id = #{et.param0}";
+                        iBzSysLeadDefaultService.execute(strSql,param);//SQL调用
+                        update(leadleadtodealdefault);//更新fact中变量值
+                        update(leadleadtodealdeal);//更新fact中变量值
+                        update(leadleadtodealleadback);//更新fact中变量值
+            end
+
+            //逻辑处理节点[删除线索]
+            rule "deaction3"
+            ruleflow-group "leadleadtodealdeaction3"
+            when
+            then
+                        leadservice.remove(leadleadtodealleadback.getId());
+                        update(leadleadtodealdefault);//更新fact中变量值
+                        update(leadleadtodealdeal);//更新fact中变量值
+                        update(leadleadtodealleadback);//更新fact中变量值
+            end

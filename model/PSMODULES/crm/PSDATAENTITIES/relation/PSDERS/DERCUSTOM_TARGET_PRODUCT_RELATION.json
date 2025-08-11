@@ -1,0 +1,28 @@
+{
+  "codeName" : "TARGET_PRODUCT_RELATION",
+  "dERSubType" : "DER1N",
+  "dERType" : "DERCUSTOM",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/relation/PSDERS/DERCUSTOM_TARGET_PRODUCT_RELATION.json",
+  "logicName" : "产品",
+  "getMajorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/product.json"
+  },
+  "masterRS" : 0,
+  "getMinorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/relation.json"
+  },
+  "name" : "DERCUSTOM_TARGET_PRODUCT_RELATION",
+  "orderValue" : 100,
+  "parentSubType" : "PRODUCT",
+  "pickupDEFName" : "TARGET_ID",
+  "getPickupPSDEField" : {
+    "name" : "TARGET_ID",
+    "codeName" : "target_id"
+  },
+  "removeActionType" : 0,
+  "removeOrder" : -1,
+  "serviceCodeName" : "target_product_relation",
+  "typeValue" : "PRODUCT"
+}

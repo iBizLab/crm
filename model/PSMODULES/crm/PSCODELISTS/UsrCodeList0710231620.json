@@ -1,0 +1,36 @@
+{
+  "codeListTag" : "crm__UsrCodeList0710231620",
+  "codeListType" : "DYNAMIC",
+  "codeName" : "UsrCodeList0710231620",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSCODELISTS/UsrCodeList0710231620.json",
+  "emptyText" : "未定义",
+  "name" : "执行人",
+  "getPSDEDataSet" : {
+    "modelref" : true,
+    "id" : "Default"
+  },
+  "getPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/executor.json"
+  },
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "refFlag" : true,
+  "systemTag" : "iBizCRM",
+  "getTextPSDEField" : {
+    "name" : "NAME",
+    "codeName" : "name"
+  },
+  "getValuePSDEField" : {
+    "name" : "ID",
+    "codeName" : "id"
+  },
+  "codeItemValueNumber" : false,
+  "enableCache" : true,
+  "subSysAsCloud" : false,
+  "subSysCodeList" : false,
+  "userScope" : false
+}

@@ -1,0 +1,26 @@
+{
+  "codeName" : "UsrDRItem0531632067",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/product/PSDEDRITEMS/UsrDRItem0531632067.json",
+  "itemType" : "DER1N",
+  "name" : "产品证书表格视图",
+  "getPSDER" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/product_certificate/PSDERS/DER1N_PRODUCT_CERTIFICATE_PRODUCT_PRODUCT_ID.json"
+  },
+  "parentDataJO" : {
+    "SRFPARENTTYPE" : "DER1N",
+    "srfparentdename" : "PRODUCT",
+    "srfparentmode" : "DER1N_PRODUCT_CERTIFICATE_PRODUCT_PRODUCT_ID",
+    "srfparentdefname" : "PRODUCT_ID",
+    "SRFDER1NID" : "DER1N_PRODUCT_CERTIFICATE_PRODUCT_PRODUCT_ID"
+  },
+  "viewCodeName" : "GridView",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/product_certificate.json"
+  },
+  "viewParamJO" : {
+    "SRFPARENTTYPE" : "DER1N",
+    "SRFDER1NID" : "DER1N_PRODUCT_CERTIFICATE_PRODUCT_PRODUCT_ID"
+  }
+}

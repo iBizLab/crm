@@ -1,0 +1,28 @@
+{
+  "codeName" : "DEAL_RELATION",
+  "dERSubType" : "DER1N",
+  "dERType" : "DERCUSTOM",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/relation/PSDERS/DERCUSTOM_DEAL_RELATION.json",
+  "logicName" : "名称",
+  "getMajorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/deal.json"
+  },
+  "masterRS" : 0,
+  "getMinorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/relation.json"
+  },
+  "name" : "DERCUSTOM_DEAL_RELATION",
+  "orderValue" : 100,
+  "parentSubType" : "DEAL",
+  "pickupDEFName" : "PRINCIPAL_ID",
+  "getPickupPSDEField" : {
+    "name" : "PRINCIPAL_ID",
+    "codeName" : "principal_id"
+  },
+  "removeActionType" : 0,
+  "removeOrder" : -1,
+  "serviceCodeName" : "deal_relation",
+  "typeValue" : "DEAL"
+}

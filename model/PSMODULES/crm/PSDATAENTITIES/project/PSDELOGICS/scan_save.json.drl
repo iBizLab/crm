@@ -1,0 +1,81 @@
+package cn.ibizlab.crm.crm.logic.projectlogic.scan_save;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.project projectscan_savedefault;
+                global cn.ibizlab.crm.core.crm.domain.project projectscan_saveproject_copy;
+                    global cn.ibizlab.crm.core.crm.service.IprojectService projectservice;
+                    global cn.ibizlab.crm.core.crm.service.Ipayee_statisticService payee_statisticservice;
+        global cn.ibizlab.crm.core.crm.service.IprojectService iBzSysProjectDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "projectscan_savebegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[填充当前订单的副本]
+            rule "prepareparam1"
+            ruleflow-group "projectscan_saveprepareparam1"
+            when
+            then
+                            projectscan_saveproject_copy.set("id",projectscan_savedefault.get("id"));
+                            projectscan_saveproject_copy.set("status","20");
+                        update(projectscan_savedefault);//更新fact中变量值
+                        update(projectscan_saveproject_copy);//更新fact中变量值
+            end
+
+            //逻辑处理节点[循环子订单判断]
+            rule "delogic1"
+            ruleflow-group "projectscan_savedelogic1"
+            when
+            then
+                        update(projectscan_savedefault);//更新fact中变量值
+                        update(projectscan_saveproject_copy);//更新fact中变量值
+            end
+
+            //逻辑处理节点[设置关闭时间]
+            rule "rawsfcode1"
+            ruleflow-group "projectscan_saverawsfcode1"
+            when
+            then
+                        update(projectscan_savedefault);//更新fact中变量值
+                        update(projectscan_saveproject_copy);//更新fact中变量值
+            end
+
+            //逻辑处理节点[保存订单信息]
+            rule "deaction1"
+            ruleflow-group "projectscan_savedeaction1"
+            when
+            then
+                        projectservice.save(projectscan_savedefault);
+                        update(projectscan_savedefault);//更新fact中变量值
+                        update(projectscan_saveproject_copy);//更新fact中变量值
+            end
+
+            //逻辑处理节点[重新生成统计数据]
+            rule "deaction2"
+            ruleflow-group "projectscan_savedeaction2"
+            when
+            then
+                        payee_statisticservice.async_Calculation(projectscan_savedefault);
+                        update(projectscan_savedefault);//更新fact中变量值
+                        update(projectscan_saveproject_copy);//更新fact中变量值
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "projectscan_saveend1"
+            when
+            then
+                        update(projectscan_savedefault);//更新fact中变量值
+                        update(projectscan_saveproject_copy);//更新fact中变量值
+            end

@@ -1,0 +1,258 @@
+{
+  "codeName" : "myalltask",
+  "controlStyle" : "FILTER_SEARCHBAR",
+  "controlType" : "SEARCHBAR",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task/PSSEARCHBARS/myalltask.json",
+  "logicName" : "我的全部任务搜索栏",
+  "memo" : "自动生成",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+  },
+  "getPSSearchBarFilters" : [ {
+    "caption" : "主题",
+    "dataType" : 25,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "SUBJECT",
+    "getPSAppDEField" : {
+      "name" : "SUBJECT",
+      "codeName" : "subject"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_SUBJECT_LIKE",
+      "name" : "N_SUBJECT_LIKE",
+      "stdDataType" : 25,
+      "valueOP" : "LIKE"
+    },
+    "getPSEditor" : {
+      "editorType" : "TEXTBOX",
+      "name" : "SUBJECT"
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : false,
+    "showCaption" : false
+  }, {
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "CONTROL.DEFSFITEM.TASK.N_STATUS_EQ"
+    },
+    "caption" : "状态",
+    "dataType" : 25,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "STATUS",
+    "getPSAppDEField" : {
+      "name" : "STATUS",
+      "codeName" : "status"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_STATUS_EQ",
+      "name" : "N_STATUS_EQ",
+      "stdDataType" : 25,
+      "valueOP" : "EQ"
+    },
+    "getPSEditor" : {
+      "editorType" : "DROPDOWNLIST",
+      "name" : "STATUS",
+      "getPSAppCodeList" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__task_status.json"
+      },
+      "singleSelect" : true
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : false,
+    "needCodeListConfig" : true,
+    "showCaption" : false
+  }, {
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "CONTROL.DEFSFITEM.TASK.N_PRIORITY_EQ"
+    },
+    "caption" : "优先级",
+    "dataType" : 25,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "PRIORITY",
+    "getPSAppDEField" : {
+      "name" : "PRIORITY",
+      "codeName" : "priority"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_PRIORITY_EQ",
+      "name" : "N_PRIORITY_EQ",
+      "stdDataType" : 25,
+      "valueOP" : "EQ"
+    },
+    "getPSEditor" : {
+      "editorType" : "DROPDOWNLIST",
+      "name" : "PRIORITY",
+      "getPSAppCodeList" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__priority.json"
+      },
+      "singleSelect" : true
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : false,
+    "needCodeListConfig" : true,
+    "showCaption" : false
+  }, {
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "CONTROL.DEFSFITEM.TASK.N_OWNER_EQ"
+    },
+    "caption" : "所有者",
+    "dataType" : 25,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "OWNER",
+    "getPSAppDEField" : {
+      "name" : "OWNER",
+      "codeName" : "owner"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_OWNER_EQ",
+      "name" : "N_OWNER_EQ",
+      "stdDataType" : 25,
+      "valueOP" : "EQ"
+    },
+    "getPSEditor" : {
+      "editorType" : "DROPDOWNLIST",
+      "name" : "OWNER",
+      "getPSAppCodeList" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__owner.json"
+      },
+      "singleSelect" : true
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : false,
+    "needCodeListConfig" : true,
+    "showCaption" : false
+  }, {
+    "caption" : "到期日期(>=)",
+    "dataType" : 5,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "N_DUE_DATE_GTANDEQ",
+    "getPSAppDEField" : {
+      "name" : "DUE_DATE",
+      "codeName" : "due_date"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_DUE_DATE_GTANDEQ",
+      "name" : "N_DUE_DATE_GTANDEQ",
+      "stdDataType" : 5,
+      "valueOP" : "GTANDEQ"
+    },
+    "getPSEditor" : {
+      "editorType" : "HIDDEN",
+      "name" : "N_DUE_DATE_GTANDEQ"
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : true,
+    "showCaption" : false
+  }, {
+    "caption" : "到期日期(<=)",
+    "dataType" : 5,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "N_DUE_DATE_LTANDEQ",
+    "getPSAppDEField" : {
+      "name" : "DUE_DATE",
+      "codeName" : "due_date"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_DUE_DATE_LTANDEQ",
+      "name" : "N_DUE_DATE_LTANDEQ",
+      "stdDataType" : 5,
+      "valueOP" : "LTANDEQ"
+    },
+    "getPSEditor" : {
+      "editorType" : "HIDDEN",
+      "name" : "N_DUE_DATE_LTANDEQ"
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : true,
+    "showCaption" : false
+  }, {
+    "caption" : "到期日期",
+    "dataType" : 5,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "N_DUE_DATE_IN",
+    "getPSAppDEField" : {
+      "name" : "DUE_DATE",
+      "codeName" : "due_date"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_DUE_DATE_IN",
+      "name" : "N_DUE_DATE_IN",
+      "stdDataType" : 5,
+      "valueOP" : "IN",
+      "array" : true
+    },
+    "getPSEditor" : {
+      "dateTimeFormat" : "YYYY-MM-DD",
+      "editorParams" : {
+        "TIMEFMT" : "YYYY-MM-DD"
+      },
+      "editorType" : "DATERANGE_NOTIME",
+      "name" : "N_DUE_DATE_IN",
+      "getPSEditorItems" : [ {
+        "name" : "N_DUE_DATE_GTANDEQ"
+      }, {
+        "name" : "N_DUE_DATE_LTANDEQ"
+      } ]
+    },
+    "valueItemName" : "N_DUE_DATE_GTANDEQ;N_DUE_DATE_LTANDEQ",
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : false,
+    "showCaption" : false
+  } ],
+  "getPSSearchBarGroups" : [ {
+    "caption" : "正在执行的任务",
+    "data" : "{\"theme_model\":{\"searchconds\":[{\"condtype\":\"GROUP\",\"condop\":\"AND\",\"bnotmode\":false,\"searchconds\":[{\"condtype\":\"DEFIELD\",\"fieldname\":\"status\",\"condop\":\"EQ\",\"value\":\"30\"}]}]}}",
+    "itemType" : "GROUP",
+    "name" : "taskdoing",
+    "userTag" : "PUBLIC",
+    "width" : 0.0,
+    "addSeparator" : false,
+    "defaultGroup" : true
+  }, {
+    "caption" : "所有任务",
+    "data" : "{\"theme_model\":{\"searchconds\":[{\"condtype\":\"GROUP\",\"condop\":\"AND\",\"bnotmode\":false,\"searchconds\":[]}]}}",
+    "itemType" : "GROUP",
+    "name" : "all",
+    "userTag" : "PUBLIC",
+    "width" : 0.0,
+    "addSeparator" : false
+  } ],
+  "getPSSysPFPlugin" : {
+    "pluginType" : "CUSTOM",
+    "pluginCode" : "FILTER_SEARCHBAR",
+    "runtimeObject" : true
+  },
+  "quickGroupCount" : -1,
+  "quickSearchMode" : 1,
+  "quickSearchWidth" : 0,
+  "enableFilter" : true,
+  "enableGroup" : true,
+  "enableQuickSearch" : true,
+  "mobileSearchBar" : false,
+  "modelid" : "a94a7af91ecea9e85c05d405dd1a7ec6",
+  "modeltype" : "PSSYSSEARCHBAR"
+}

@@ -1,0 +1,32 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "GETDRAFT",
+  "actionType" : "DELOGIC",
+  "codeName" : "add_project",
+  "dataAccessAction" : "NONE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/payee_plan/PSDEACTIONS/add_project.json",
+  "logicName" : "获取订单数据",
+  "memo" : "获取订单数据",
+  "name" : "add_project",
+  "getPSDEActionInput" : {
+    "name" : "Add_projectInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "payee_plan_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Add_projectResult",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "payee_plan_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan/PSDELOGICS/dateFromProject.json"
+  },
+  "enableFront" : false
+}

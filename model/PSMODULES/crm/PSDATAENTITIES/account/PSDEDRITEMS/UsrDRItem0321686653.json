@@ -1,0 +1,16 @@
+{
+  "codeName" : "UsrDRItem0321686653",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/account/PSDEDRITEMS/UsrDRItem0321686653.json",
+  "itemType" : "CUSTOM",
+  "memo" : "自动生成",
+  "name" : "备注列表视图",
+  "parentDataJO" : {
+    "srfparentdename" : "ACCOUNT",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "list_view",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach.json"
+  }
+}

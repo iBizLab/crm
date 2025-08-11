@@ -1,0 +1,178 @@
+{
+  "codeName" : "searchbar",
+  "controlStyle" : "FILTER_SEARCHBAR",
+  "controlType" : "SEARCHBAR",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/contact/PSSEARCHBARS/searchbar.json",
+  "logicName" : "默认搜索栏",
+  "memo" : "自动生成",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/contact.json"
+  },
+  "getPSSearchBarFilters" : [ {
+    "caption" : "名字",
+    "dataType" : 25,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "FULL_NAME",
+    "getPSAppDEField" : {
+      "name" : "FULL_NAME",
+      "codeName" : "full_name"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_FULL_NAME_LIKE",
+      "name" : "N_FULL_NAME_LIKE",
+      "stdDataType" : 25,
+      "valueOP" : "LIKE"
+    },
+    "getPSEditor" : {
+      "editorType" : "TEXTBOX",
+      "name" : "FULL_NAME"
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : false,
+    "showCaption" : false
+  }, {
+    "caption" : "客户名称",
+    "dataType" : 25,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "ACCOUNT_NAME",
+    "getPSAppDEField" : {
+      "name" : "ACCOUNT_NAME",
+      "codeName" : "account_name"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_ACCOUNT_NAME_EQ",
+      "name" : "N_ACCOUNT_NAME_EQ",
+      "stdDataType" : 25,
+      "valueOP" : "EQ"
+    },
+    "getPSEditor" : {
+      "editorParams" : {
+        "AC" : "TRUE",
+        "PICKUPVIEW" : "TRUE"
+      },
+      "editorType" : "PICKER",
+      "name" : "ACCOUNT_NAME",
+      "getPSAppDEACMode" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "getPSAppDEDataSet" : {
+        "modelref" : true,
+        "id" : "fetch_all"
+      },
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/account.json"
+      },
+      "getPickupPSAppView" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/account_pickup_view.json",
+        "viewType" : "DEPICKUPVIEW"
+      },
+      "enableAC" : true,
+      "enablePickupView" : true,
+      "forceSelection" : true,
+      "showTrigger" : true,
+      "singleSelect" : true
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : false,
+    "showCaption" : false
+  }, {
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "CONTROL.DEFSFITEM.CONTACT.N_LEAD_SOURCE_EQ"
+    },
+    "caption" : "线索来源",
+    "dataType" : 25,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "LEAD_SOURCE",
+    "getPSAppDEField" : {
+      "name" : "LEAD_SOURCE",
+      "codeName" : "lead_source"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_LEAD_SOURCE_EQ",
+      "name" : "N_LEAD_SOURCE_EQ",
+      "stdDataType" : 25,
+      "valueOP" : "EQ"
+    },
+    "getPSEditor" : {
+      "editorType" : "DROPDOWNLIST",
+      "name" : "LEAD_SOURCE",
+      "getPSAppCodeList" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__lead_source.json"
+      },
+      "singleSelect" : true
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : false,
+    "needCodeListConfig" : true,
+    "showCaption" : false
+  }, {
+    "caption" : "所有者",
+    "dataType" : 25,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "OWNER",
+    "getPSAppDEField" : {
+      "name" : "OWNER",
+      "codeName" : "owner"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_OWNER_EQ",
+      "name" : "N_OWNER_EQ",
+      "stdDataType" : 25,
+      "valueOP" : "EQ"
+    },
+    "getPSEditor" : {
+      "editorType" : "DROPDOWNLIST",
+      "name" : "OWNER",
+      "getPSAppCodeList" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__owner.json"
+      },
+      "singleSelect" : true
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : false,
+    "needCodeListConfig" : true,
+    "showCaption" : false
+  } ],
+  "getPSSearchBarGroups" : [ {
+    "caption" : "所有线索",
+    "data" : "{\"theme_model\":{\"searchconds\":[{\"condtype\":\"GROUP\",\"condop\":\"AND\",\"bnotmode\":false,\"searchconds\":[]}]}}",
+    "itemType" : "GROUP",
+    "name" : "all",
+    "userTag" : "PUBLIC",
+    "width" : 0.0,
+    "addSeparator" : false,
+    "defaultGroup" : true
+  } ],
+  "getPSSysPFPlugin" : {
+    "pluginType" : "CUSTOM",
+    "pluginCode" : "FILTER_SEARCHBAR",
+    "runtimeObject" : true
+  },
+  "quickGroupCount" : -1,
+  "quickSearchMode" : 1,
+  "quickSearchWidth" : 0,
+  "enableFilter" : true,
+  "enableGroup" : true,
+  "enableQuickSearch" : true,
+  "mobileSearchBar" : false,
+  "modelid" : "15ec98f093757ca76e6f80d51373febd",
+  "modeltype" : "PSSYSSEARCHBAR"
+}

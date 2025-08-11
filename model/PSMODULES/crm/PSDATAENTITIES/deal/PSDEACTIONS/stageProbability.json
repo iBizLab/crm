@@ -1,0 +1,31 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "GETDRAFT",
+  "actionType" : "DELOGIC",
+  "codeName" : "stageProbability",
+  "dataAccessAction" : "NONE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEACTIONS/stageProbability.json",
+  "logicName" : "获取阶段概率",
+  "name" : "stageProbability",
+  "getPSDEActionInput" : {
+    "name" : "StageProbabilityInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "deal_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "StageProbabilityResult",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "deal_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDELOGICS/stageProbability.json"
+  },
+  "enableFront" : false
+}

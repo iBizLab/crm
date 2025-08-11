@@ -1,0 +1,29 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "CUSTOM",
+  "actionType" : "DELOGIC",
+  "codeName" : "find_account",
+  "dataAccessAction" : "NONE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/account/PSDEACTIONS/find_account.json",
+  "logicName" : "通过id查询客户信息",
+  "memo" : "反查客户信息",
+  "name" : "find_account",
+  "getPSDEActionInput" : {
+    "name" : "Find_accountInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "account_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Find_accountResult",
+    "type" : "VOID"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/account/PSDELOGICS/findAccount.json"
+  },
+  "enableAudit" : true,
+  "enableFront" : false
+}

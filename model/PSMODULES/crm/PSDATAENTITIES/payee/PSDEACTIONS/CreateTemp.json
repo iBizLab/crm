@@ -1,0 +1,44 @@
+{
+  "actionHolder" : 2,
+  "actionMode" : "CREATE",
+  "actionParams" : {
+    "SRFNAVCTX.project_id" : "%id%",
+    "SRFNAVPARAM.project_id" : "%id%"
+  },
+  "actionType" : "BUILTIN",
+  "getAfterPSDEActionLogics" : [ {
+    "actionLogicType" : 1,
+    "attachMode" : "AFTER",
+    "name" : "附加逻辑",
+    "getPSDELogic" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee/PSDELOGICS/get_project_id.json"
+    },
+    "enableBackend" : false,
+    "internalLogic" : true
+  } ],
+  "codeName" : "CreateTemp",
+  "dataAccessAction" : "CREATE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/payee/PSDEACTIONS/CreateTemp.json",
+  "logicName" : "CreateTemp",
+  "name" : "CreateTemp",
+  "orderValue" : 2,
+  "getPSDEActionInput" : {
+    "name" : "CreateTempInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "payee_dto"
+    },
+    "type" : "DTO",
+    "output" : true
+  },
+  "getPSDEActionReturn" : {
+    "name" : "CreateTempResult",
+    "type" : "VOID"
+  },
+  "tempDataMode" : 2,
+  "builtinAction" : true,
+  "enableAudit" : true,
+  "enableBackend" : false,
+  "enableTempData" : true
+}

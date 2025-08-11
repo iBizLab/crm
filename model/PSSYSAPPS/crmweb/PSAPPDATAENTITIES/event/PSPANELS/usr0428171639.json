@@ -1,0 +1,73 @@
+{
+  "getAllPSPanelFields" : [ {
+    "id" : "event_title",
+    "viewFieldName" : "event_title"
+  }, {
+    "id" : "start_datetime",
+    "viewFieldName" : "start_datetime"
+  } ],
+  "codeName" : "usr0428171639",
+  "controlType" : "PANEL",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/event/PSPANELS/usr0428171639.json",
+  "layoutMode" : "TABLE_24COL",
+  "logicName" : "List_列表项面板",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/event.json"
+  },
+  "getPSLayout" : {
+    "childColMD" : 24,
+    "columnCount" : 24,
+    "layout" : "TABLE_24COL"
+  },
+  "getRootPSPanelItems" : [ {
+    "itemStyle" : "DEFAULT",
+    "itemType" : "CONTAINER",
+    "name" : "page_container",
+    "getPSLayout" : {
+      "dir" : "column",
+      "layout" : "FLEX"
+    },
+    "getPSLayoutPos" : {
+      "colMD" : 24,
+      "layout" : "TABLE_24COL"
+    },
+    "getPSPanelItems" : [ {
+      "caption" : "文本(动态)",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "FIELD",
+      "name" : "event_title",
+      "getPSEditor" : {
+        "editorType" : "SPAN",
+        "name" : "event_title",
+        "predefinedType" : "FIELD_TEXT_DYNAMIC",
+        "renderMode" : "TEXT_DYNAMIC",
+        "enableLinkView" : false
+      },
+      "getPSLayoutPos" : {
+        "grow" : -1,
+        "layout" : "FLEX"
+      },
+      "viewFieldName" : "event_title"
+    }, {
+      "caption" : "文本(动态)",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "FIELD",
+      "name" : "start_datetime",
+      "getPSEditor" : {
+        "editorType" : "SPAN",
+        "name" : "start_datetime",
+        "predefinedType" : "FIELD_TEXT_DYNAMIC",
+        "renderMode" : "TEXT_DYNAMIC",
+        "enableLinkView" : false
+      },
+      "getPSLayoutPos" : {
+        "grow" : -1,
+        "layout" : "FLEX"
+      },
+      "viewFieldName" : "start_datetime"
+    } ]
+  } ],
+  "modelid" : "3340506e746cba5af05d9d08851656b6",
+  "modeltype" : "PSSYSVIEWPANEL"
+}

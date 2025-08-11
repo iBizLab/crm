@@ -1,0 +1,13 @@
+global cn.ibizlab.crm.core.crm.service.IdealService  dealService;
+global cn.ibizlab.crm.core.crm.domain.deal et;
+
+    no-loop
+
+    rule "dealasync_adddealtoworkprogress"
+    ruleflow-group "35852ae2da16100c4d8c11be2142e17d"
+    when
+    then
+    cn.ibizlab.crm.core.crm.domain.deal actionLogicDE =new cn.ibizlab.crm.core.crm.domain.deal();
+    et.copyTo(actionLogicDE,true);
+    dealService.async_addDealToWorkProgress(actionLogicDE);
+    end

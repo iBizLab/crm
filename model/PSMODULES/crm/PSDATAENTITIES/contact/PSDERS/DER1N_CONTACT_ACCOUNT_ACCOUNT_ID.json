@@ -1,0 +1,38 @@
+{
+  "codeName" : "account",
+  "dERType" : "DER1N",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/contact/PSDERS/DER1N_CONTACT_ACCOUNT_ACCOUNT_ID.json",
+  "fKeyName" : "F58100A1255C013670",
+  "logicName" : "名称",
+  "getMajorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+  },
+  "masterOrder" : -1,
+  "masterRS" : 0,
+  "minorCodeName" : "contacts",
+  "getMinorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/contact.json"
+  },
+  "minorServiceCodeName" : "contacts",
+  "name" : "DER1N_CONTACT_ACCOUNT_ACCOUNT_ID",
+  "orderValue" : 100,
+  "getPSPickupDEField" : {
+    "name" : "ACCOUNT_ID",
+    "codeName" : "Account_id"
+  },
+  "getPSPickupTextDEField" : {
+    "name" : "ACCOUNT_NAME",
+    "codeName" : "Account_Name"
+  },
+  "pickupDEFName" : "ACCOUNT_ID",
+  "getRefPSDEDataSet" : {
+    "modelref" : true,
+    "id" : "all"
+  },
+  "removeActionType" : -1,
+  "removeOrder" : 0,
+  "serviceCodeName" : "account",
+  "enableFKey" : true
+}

@@ -1,0 +1,136 @@
+package cn.ibizlab.crm.crm.logic.note_attachlogic.update_access_time;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.note_attach note_attachupdate_access_timedefault;
+                global cn.ibizlab.crm.core.crm.domain.deal note_attachupdate_access_timedeal;
+                global cn.ibizlab.crm.core.crm.domain.lead note_attachupdate_access_timelead;
+                global cn.ibizlab.crm.core.crm.domain.project note_attachupdate_access_timeproject;
+                global cn.ibizlab.crm.core.crm.domain.task note_attachupdate_access_timetask;
+                    global cn.ibizlab.crm.core.crm.service.IprojectService projectservice;
+                    global cn.ibizlab.crm.core.crm.service.IleadService leadservice;
+                    global cn.ibizlab.crm.core.crm.service.IdealService dealservice;
+                    global cn.ibizlab.crm.core.crm.service.ItaskService taskservice;
+        global cn.ibizlab.crm.core.crm.service.Inote_attachService iBzSysNote_attachDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "note_attachupdate_access_timebegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[获取最新时间]
+            rule "prepareparam1"
+            ruleflow-group "note_attachupdate_access_timeprepareparam1"
+            when
+            then
+                            note_attachupdate_access_timeproject.set("lastassesstime",note_attachupdate_access_timedefault.get("createtime"));
+                            note_attachupdate_access_timeproject.set("id",note_attachupdate_access_timedefault.get("principalid"));
+                        update(note_attachupdate_access_timedefault);//更新fact中变量值
+                        update(note_attachupdate_access_timedeal);//更新fact中变量值
+                        update(note_attachupdate_access_timelead);//更新fact中变量值
+                        update(note_attachupdate_access_timeproject);//更新fact中变量值
+                        update(note_attachupdate_access_timetask);//更新fact中变量值
+            end
+
+            //逻辑处理节点[获取最新时间]
+            rule "prepareparam2"
+            ruleflow-group "note_attachupdate_access_timeprepareparam2"
+            when
+            then
+                            note_attachupdate_access_timelead.set("id",note_attachupdate_access_timedefault.get("principalid"));
+                            note_attachupdate_access_timelead.set("lastassesstime",note_attachupdate_access_timedefault.get("createtime"));
+                        update(note_attachupdate_access_timedefault);//更新fact中变量值
+                        update(note_attachupdate_access_timedeal);//更新fact中变量值
+                        update(note_attachupdate_access_timelead);//更新fact中变量值
+                        update(note_attachupdate_access_timeproject);//更新fact中变量值
+                        update(note_attachupdate_access_timetask);//更新fact中变量值
+            end
+
+            //逻辑处理节点[获取最新时间]
+            rule "prepareparam3"
+            ruleflow-group "note_attachupdate_access_timeprepareparam3"
+            when
+            then
+                            note_attachupdate_access_timedeal.set("id",note_attachupdate_access_timedefault.get("principalid"));
+                            note_attachupdate_access_timedeal.set("lastassesstime",note_attachupdate_access_timedefault.get("createtime"));
+                        update(note_attachupdate_access_timedefault);//更新fact中变量值
+                        update(note_attachupdate_access_timedeal);//更新fact中变量值
+                        update(note_attachupdate_access_timelead);//更新fact中变量值
+                        update(note_attachupdate_access_timeproject);//更新fact中变量值
+                        update(note_attachupdate_access_timetask);//更新fact中变量值
+            end
+
+            //逻辑处理节点[获取最新时间]
+            rule "prepareparam4"
+            ruleflow-group "note_attachupdate_access_timeprepareparam4"
+            when
+            then
+                            note_attachupdate_access_timetask.set("lastassesstime",note_attachupdate_access_timedefault.get("createtime"));
+                            note_attachupdate_access_timetask.set("id",note_attachupdate_access_timedefault.get("principalid"));
+                        update(note_attachupdate_access_timedefault);//更新fact中变量值
+                        update(note_attachupdate_access_timedeal);//更新fact中变量值
+                        update(note_attachupdate_access_timelead);//更新fact中变量值
+                        update(note_attachupdate_access_timeproject);//更新fact中变量值
+                        update(note_attachupdate_access_timetask);//更新fact中变量值
+            end
+
+            //逻辑处理节点[更新订单最近评估时间]
+            rule "deaction1"
+            ruleflow-group "note_attachupdate_access_timedeaction1"
+            when
+            then
+                        projectservice.update(note_attachupdate_access_timeproject);
+                        update(note_attachupdate_access_timedefault);//更新fact中变量值
+                        update(note_attachupdate_access_timedeal);//更新fact中变量值
+                        update(note_attachupdate_access_timelead);//更新fact中变量值
+                        update(note_attachupdate_access_timeproject);//更新fact中变量值
+                        update(note_attachupdate_access_timetask);//更新fact中变量值
+            end
+
+            //逻辑处理节点[更新线索最近评估时间]
+            rule "deaction2"
+            ruleflow-group "note_attachupdate_access_timedeaction2"
+            when
+            then
+                        leadservice.update(note_attachupdate_access_timelead);
+                        update(note_attachupdate_access_timedefault);//更新fact中变量值
+                        update(note_attachupdate_access_timedeal);//更新fact中变量值
+                        update(note_attachupdate_access_timelead);//更新fact中变量值
+                        update(note_attachupdate_access_timeproject);//更新fact中变量值
+                        update(note_attachupdate_access_timetask);//更新fact中变量值
+            end
+
+            //逻辑处理节点[更新商机最近评估时间]
+            rule "deaction3"
+            ruleflow-group "note_attachupdate_access_timedeaction3"
+            when
+            then
+                        dealservice.update(note_attachupdate_access_timedeal);
+                        update(note_attachupdate_access_timedefault);//更新fact中变量值
+                        update(note_attachupdate_access_timedeal);//更新fact中变量值
+                        update(note_attachupdate_access_timelead);//更新fact中变量值
+                        update(note_attachupdate_access_timeproject);//更新fact中变量值
+                        update(note_attachupdate_access_timetask);//更新fact中变量值
+            end
+
+            //逻辑处理节点[实体行为]
+            rule "deaction4"
+            ruleflow-group "note_attachupdate_access_timedeaction4"
+            when
+            then
+                        taskservice.update(note_attachupdate_access_timetask);
+                        update(note_attachupdate_access_timedefault);//更新fact中变量值
+                        update(note_attachupdate_access_timedeal);//更新fact中变量值
+                        update(note_attachupdate_access_timelead);//更新fact中变量值
+                        update(note_attachupdate_access_timeproject);//更新fact中变量值
+                        update(note_attachupdate_access_timetask);//更新fact中变量值
+            end

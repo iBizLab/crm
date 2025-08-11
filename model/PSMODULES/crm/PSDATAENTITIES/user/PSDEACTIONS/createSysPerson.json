@@ -1,0 +1,28 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "CREATE",
+  "actionType" : "DELOGIC",
+  "codeName" : "createSysPerson",
+  "dataAccessAction" : "CREATE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/user/PSDEACTIONS/createSysPerson.json",
+  "logicName" : "创建账号",
+  "name" : "createSysPerson",
+  "getPSDEActionInput" : {
+    "name" : "CreateSysPersonInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "user_dto"
+    },
+    "type" : "DTO",
+    "output" : true
+  },
+  "getPSDEActionReturn" : {
+    "name" : "CreateSysPersonResult",
+    "type" : "VOID"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/user/PSDELOGICS/createSysPerson.json"
+  },
+  "enableFront" : false
+}

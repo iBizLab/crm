@@ -1,0 +1,1180 @@
+{
+  "codeName" : "note_attach_view_form",
+  "controlType" : "FORM",
+  "getCreatePSControlAction" : {
+    "modelref" : true,
+    "id" : "create",
+    "actionName" : "Create",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "CREATE",
+    "name" : "create",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "create"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/account.json"
+    }
+  },
+  "defaultLabelWidth" : 130,
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/account/PSFORMS/note_attach_view_form.json",
+  "getGetDraftFromPSControlAction" : {
+    "modelref" : true,
+    "id" : "loaddraftfrom",
+    "actionName" : "GETDRAFTFROM",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "CREATE",
+    "name" : "loaddraftfrom",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/account.json"
+    }
+  },
+  "getGetDraftPSControlAction" : {
+    "modelref" : true,
+    "id" : "loaddraft",
+    "actionName" : "GetDraft",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "CREATE",
+    "name" : "loaddraft",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "get_draft"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/account.json"
+    }
+  },
+  "getGetPSControlAction" : {
+    "modelref" : true,
+    "id" : "load",
+    "actionName" : "Get",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "READ",
+    "name" : "load",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "get"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/account.json"
+    }
+  },
+  "logicName" : "备注_表单",
+  "memo" : "自动生成",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/account.json"
+  },
+  "getPSDEFormItems" : [ {
+    "id" : "srfupdatedate",
+    "hidden" : true,
+    "dataType" : 5,
+    "getPSAppDEField" : {
+      "name" : "UPDATE_TIME",
+      "codeName" : "update_time"
+    }
+  }, {
+    "id" : "srforikey",
+    "hidden" : true,
+    "dataType" : 25
+  }, {
+    "id" : "srfkey",
+    "hidden" : true,
+    "dataType" : 25,
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    }
+  }, {
+    "id" : "srfmajortext",
+    "hidden" : true,
+    "dataType" : 25,
+    "getPSAppDEField" : {
+      "name" : "ACCOUNT_NAME",
+      "codeName" : "account_name"
+    }
+  }, {
+    "id" : "srftempmode",
+    "hidden" : true,
+    "dataType" : 25
+  }, {
+    "id" : "srfuf",
+    "hidden" : true,
+    "dataType" : 25
+  }, {
+    "id" : "srfdeid",
+    "hidden" : true,
+    "dataType" : 25
+  }, {
+    "id" : "srfsourcekey",
+    "hidden" : true,
+    "dataType" : 25
+  }, {
+    "id" : "id",
+    "hidden" : true,
+    "dataType" : 25,
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    }
+  } ],
+  "getPSDEFormPages" : [ {
+    "codeName" : "formpage1",
+    "detailStyle" : "DEFAULT",
+    "detailType" : "FORMPAGE",
+    "name" : "formpage1",
+    "getPSDEFormDetails" : [ {
+      "caption" : "备注",
+      "codeName" : "grouppanel1",
+      "detailStyle" : "DEFAULT",
+      "detailType" : "GROUPPANEL",
+      "name" : "grouppanel1",
+      "getPSDEFormDetails" : [ {
+        "codeName" : "druipart1",
+        "dRItemTag" : "UsrDRItem0321686653",
+        "detailStyle" : "DEFAULT",
+        "detailType" : "DRUIPART",
+        "name" : "druipart1",
+        "getPSAppView" : {
+          "accUserMode" : 2,
+          "caption" : "进展评估",
+          "codeName" : "note_attach_list_view",
+          "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/note_attach_list_view.json",
+          "mDCtrlActiveMode" : 0,
+          "memo" : "系统自动添加",
+          "name" : "note_attachlist_view",
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+          },
+          "getPSAppModule" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/crm.json"
+          },
+          "getPSAppViewNavParams" : [ {
+            "key" : "n_principal_id_eq",
+            "name" : "n_principal_id_eq",
+            "value" : "principal_id",
+            "rawValue" : false
+          } ],
+          "getPSDEViewCodeName" : "list_view",
+          "getPSDEViewId" : "fe1a34ca72344e710b3a0321cb2cd755",
+          "getPSViewLayoutPanel" : {
+            "codeName" : "usr0103274907",
+            "controlType" : "VIEWLAYOUTPANEL",
+            "layoutMode" : "FLEX",
+            "logicName" : "list_view列表视图布局面板",
+            "name" : "layoutpanel",
+            "getPSAppDataEntity" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+            },
+            "getPSControlParam" : { },
+            "getPSLayout" : {
+              "layout" : "FLEX"
+            },
+            "getRootPSPanelItems" : [ {
+              "caption" : "容器",
+              "itemStyle" : "DEFAULT",
+              "itemType" : "CONTAINER",
+              "name" : "view_header",
+              "getPSLayout" : {
+                "align" : "space-between",
+                "dir" : "row",
+                "layout" : "FLEX",
+                "vAlign" : "center"
+              },
+              "getPSLayoutPos" : {
+                "grow" : -1,
+                "layout" : "FLEX",
+                "shrink" : 0
+              },
+              "getPSPanelItems" : [ {
+                "caption" : "容器",
+                "itemStyle" : "DEFAULT",
+                "itemType" : "CONTAINER",
+                "name" : "view_header_left",
+                "getPSLayout" : {
+                  "layout" : "FLEX"
+                },
+                "getPSLayoutPos" : {
+                  "grow" : -1,
+                  "heightMode" : "FULL",
+                  "layout" : "FLEX"
+                },
+                "getPSPanelItems" : [ {
+                  "caption" : "容器",
+                  "itemStyle" : "DEFAULT",
+                  "itemType" : "CONTAINER",
+                  "name" : "view_captionbar",
+                  "getPSLayout" : {
+                    "align" : "center",
+                    "layout" : "FLEX"
+                  },
+                  "getPSLayoutPos" : {
+                    "grow" : -1,
+                    "heightMode" : "FULL",
+                    "layout" : "FLEX"
+                  },
+                  "getPSPanelItems" : [ {
+                    "caption" : "页面标题",
+                    "itemStyle" : "DEFAULT",
+                    "itemType" : "CTRLPOS",
+                    "name" : "captionbar",
+                    "getPSLayoutPos" : {
+                      "grow" : -1,
+                      "layout" : "FLEX"
+                    },
+                    "showCaption" : true
+                  } ]
+                } ]
+              }, {
+                "caption" : "容器",
+                "itemStyle" : "DEFAULT",
+                "itemType" : "CONTAINER",
+                "name" : "view_header_right",
+                "getPSLayout" : {
+                  "layout" : "FLEX"
+                },
+                "getPSLayoutPos" : {
+                  "grow" : -1,
+                  "heightMode" : "FULL",
+                  "layout" : "FLEX"
+                },
+                "getPSPanelItems" : [ {
+                  "caption" : "容器",
+                  "itemStyle" : "DEFAULT",
+                  "itemType" : "CONTAINER",
+                  "name" : "view_toolbar",
+                  "getPSLayout" : {
+                    "align" : "center",
+                    "layout" : "FLEX"
+                  },
+                  "getPSLayoutPos" : {
+                    "grow" : -1,
+                    "heightMode" : "FULL",
+                    "layout" : "FLEX"
+                  },
+                  "getPSPanelItems" : [ {
+                    "caption" : "工具栏",
+                    "itemStyle" : "DEFAULT",
+                    "itemType" : "CTRLPOS",
+                    "name" : "toolbar",
+                    "getPSLayoutPos" : {
+                      "grow" : -1,
+                      "layout" : "FLEX"
+                    },
+                    "showCaption" : true
+                  } ]
+                } ]
+              } ],
+              "predefinedType" : "VIEWHEADER"
+            }, {
+              "itemStyle" : "DEFAULT",
+              "itemType" : "CONTAINER",
+              "name" : "view_searchform",
+              "getPSLayout" : {
+                "dir" : "column",
+                "layout" : "FLEX"
+              },
+              "getPSLayoutPos" : {
+                "grow" : -1,
+                "layout" : "FLEX",
+                "shrink" : 0
+              }
+            }, {
+              "caption" : "容器",
+              "itemStyle" : "DEFAULT",
+              "itemType" : "CONTAINER",
+              "name" : "view_content",
+              "getPSLayout" : {
+                "layout" : "FLEX"
+              },
+              "getPSLayoutPos" : {
+                "grow" : 1,
+                "layout" : "FLEX"
+              },
+              "getPSPanelItems" : [ {
+                "caption" : "列表",
+                "itemStyle" : "DEFAULT",
+                "itemType" : "CTRLPOS",
+                "name" : "list",
+                "getPSLayoutPos" : {
+                  "grow" : 1,
+                  "layout" : "FLEX",
+                  "spacingBottom" : "OUTERLARGE"
+                },
+                "showCaption" : true
+              } ],
+              "predefinedType" : "VIEWCONTENT"
+            } ],
+            "layoutBodyOnly" : false,
+            "layoutPanel" : true,
+            "useDefaultLayout" : false,
+            "viewProxyMode" : true,
+            "modelid" : "ec74278f1f5a797ebc942e090298d91c",
+            "modeltype" : "PSSYSVIEWLAYOUTPANEL",
+            "getPSAppViewEngines" : [ {
+              "engineCat" : "VIEW",
+              "engineType" : "ListView",
+              "name" : "engine"
+            } ],
+            "getPSAppViewLogics" : [ {
+              "logicTrigger" : "CUSTOM",
+              "logicType" : "APPUILOGIC",
+              "name" : "newdata",
+              "getPSAppUILogic" : {
+                "actionAfterWizard" : "DEFAULT",
+                "logicType" : "PREDEFINED",
+                "name" : "新建数据",
+                "viewLogicType" : "APP_NEWDATA",
+                "batchAddOnly" : false,
+                "enableBatchAdd" : false,
+                "enableWizardAdd" : false
+              }
+            }, {
+              "logicTrigger" : "CUSTOM",
+              "logicType" : "APPUILOGIC",
+              "name" : "opendata",
+              "getPSAppUILogic" : {
+                "logicType" : "PREDEFINED",
+                "name" : "打开数据",
+                "viewLogicType" : "APP_OPENDATA",
+                "editMode" : true
+              }
+            } ],
+            "getPSAppViewRefs" : [ {
+              "name" : "NEWDATA"
+            }, {
+              "name" : "EDITDATA"
+            } ],
+            "getPSControls" : [ {
+              "codeName" : "list",
+              "controlType" : "LIST",
+              "getCreatePSControlAction" : {
+                "modelref" : true,
+                "id" : "create",
+                "actionName" : "Create",
+                "actionType" : "DEACTION",
+                "dataAccessAction" : "CREATE",
+                "name" : "create",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "create"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+                }
+              },
+              "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach/PSLISTS/list.json",
+              "emptyText" : "请对当前事项做进展评估",
+              "getFetchPSControlAction" : {
+                "modelref" : true,
+                "id" : "fetch",
+                "actionType" : "DEDATASET",
+                "name" : "fetch",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "fetch_by_owner"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+                }
+              },
+              "getGetPSControlAction" : {
+                "modelref" : true,
+                "id" : "load",
+                "actionName" : "Get",
+                "actionType" : "DEACTION",
+                "dataAccessAction" : "READ",
+                "name" : "load",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "get"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+                }
+              },
+              "groupMode" : "NONE",
+              "getItemPSLayoutPanel" : {
+                "getAllPSPanelFields" : [ {
+                  "id" : "user_name",
+                  "viewFieldName" : "CREATE_MAN"
+                }, {
+                  "id" : "time",
+                  "viewFieldName" : "CREATE_TIME"
+                }, {
+                  "id" : "field_text_dynamic3",
+                  "hidden" : true,
+                  "viewFieldName" : "ID"
+                }, {
+                  "id" : "pid",
+                  "hidden" : true,
+                  "viewFieldName" : "PID"
+                }, {
+                  "id" : "field_text_dynamic2",
+                  "viewFieldName" : "CONTENT"
+                }, {
+                  "id" : "pcreate_man",
+                  "viewFieldName" : "PCREATE_MAN"
+                }, {
+                  "id" : "pcontent",
+                  "viewFieldName" : "PCONTENT"
+                } ],
+                "codeName" : "note_attach_list",
+                "controlType" : "PANEL",
+                "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach/PSPANELS/note_attach_list.json",
+                "layoutMode" : "TABLE_24COL",
+                "logicName" : "备注列表面板",
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+                },
+                "getPSControlParam" : { },
+                "getPSLayout" : {
+                  "childColMD" : 24,
+                  "columnCount" : 24,
+                  "layout" : "TABLE_24COL"
+                },
+                "getRootPSPanelItems" : [ {
+                  "itemStyle" : "DEFAULT",
+                  "itemType" : "CONTAINER",
+                  "name" : "page_container",
+                  "getPSLayout" : {
+                    "dir" : "column",
+                    "layout" : "FLEX"
+                  },
+                  "getPSLayoutPos" : {
+                    "colMD" : 24,
+                    "layout" : "TABLE_24COL"
+                  },
+                  "getPSPanelItems" : [ {
+                    "caption" : "容器",
+                    "itemStyle" : "DEFAULT",
+                    "itemType" : "CONTAINER",
+                    "name" : "container",
+                    "getPSLayout" : {
+                      "align" : "space-between",
+                      "dir" : "row",
+                      "layout" : "FLEX"
+                    },
+                    "getPSLayoutPos" : {
+                      "grow" : -1,
+                      "layout" : "FLEX"
+                    },
+                    "getPSPanelItems" : [ {
+                      "caption" : "容器",
+                      "itemStyle" : "DEFAULT",
+                      "itemType" : "CONTAINER",
+                      "name" : "container1",
+                      "getPSLayout" : {
+                        "dir" : "row",
+                        "layout" : "FLEX"
+                      },
+                      "getPSLayoutPos" : {
+                        "grow" : -1,
+                        "layout" : "FLEX"
+                      },
+                      "getPSPanelItems" : [ {
+                        "caption" : "文本(动态)",
+                        "itemStyle" : "DEFAULT",
+                        "itemType" : "FIELD",
+                        "name" : "user_name",
+                        "getPSEditor" : {
+                          "editorStyle" : "PERSONNEL_INFO",
+                          "editorType" : "SPAN",
+                          "name" : "user_name",
+                          "getPSAppCodeList" : {
+                            "modelref" : true,
+                            "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__SysOperator.json"
+                          },
+                          "getPSSysPFPlugin" : {
+                            "pluginType" : "EDITOR_CUSTOMSTYLE",
+                            "pluginCode" : "PERSONNEL_INFO",
+                            "runtimeObject" : true
+                          },
+                          "predefinedType" : "FIELD_TEXT_DYNAMIC",
+                          "renderMode" : "TEXT_DYNAMIC",
+                          "enableLinkView" : false
+                        },
+                        "getPSLayoutPos" : {
+                          "grow" : -1,
+                          "layout" : "FLEX"
+                        },
+                        "viewFieldName" : "CREATE_MAN",
+                        "convertToCodeItemText" : true
+                      }, {
+                        "caption" : "文本(动态)",
+                        "cssStyle" : "line-height: var(--ibiz-height-control-default);",
+                        "itemStyle" : "DEFAULT",
+                        "itemType" : "FIELD",
+                        "name" : "time",
+                        "getPSEditor" : {
+                          "editorType" : "SPAN",
+                          "name" : "time",
+                          "predefinedType" : "FIELD_TEXT_DYNAMIC",
+                          "renderMode" : "TEXT_DYNAMIC",
+                          "enableLinkView" : false
+                        },
+                        "getPSLayoutPos" : {
+                          "grow" : -1,
+                          "layout" : "FLEX",
+                          "spacingLeft" : "OUTERSMALL"
+                        },
+                        "getPSSysCss" : {
+                          "cssName" : "transition-time"
+                        },
+                        "viewFieldName" : "CREATE_TIME"
+                      }, {
+                        "caption" : "文本(动态)",
+                        "itemType" : "FIELD",
+                        "name" : "field_text_dynamic3",
+                        "getPSEditor" : {
+                          "editorType" : "HIDDEN",
+                          "name" : "field_text_dynamic3",
+                          "predefinedType" : "FIELD_TEXT_DYNAMIC"
+                        },
+                        "getPSLayoutPos" : {
+                          "grow" : -1,
+                          "layout" : "FLEX"
+                        },
+                        "viewFieldName" : "ID",
+                        "hidden" : true
+                      }, {
+                        "caption" : "文本(动态)",
+                        "itemType" : "FIELD",
+                        "name" : "pid",
+                        "getPSEditor" : {
+                          "editorType" : "HIDDEN",
+                          "name" : "pid",
+                          "predefinedType" : "FIELD_TEXT_DYNAMIC"
+                        },
+                        "getPSLayoutPos" : {
+                          "grow" : -1,
+                          "layout" : "FLEX"
+                        },
+                        "viewFieldName" : "PID",
+                        "hidden" : true
+                      } ]
+                    }, {
+                      "caption" : "容器",
+                      "itemStyle" : "DEFAULT",
+                      "itemType" : "CONTAINER",
+                      "name" : "container2",
+                      "getPSLayout" : {
+                        "dir" : "row",
+                        "layout" : "FLEX"
+                      },
+                      "getPSLayoutPos" : {
+                        "grow" : -1,
+                        "layout" : "FLEX"
+                      },
+                      "getPSPanelItemGroupLogics" : [ {
+                        "groupOP" : "AND",
+                        "logicCat" : "PANELVISIBLE",
+                        "logicType" : "GROUP",
+                        "getPSPanelItemLogics" : [ {
+                          "condOp" : "NOTEQ",
+                          "dstModelField" : "FIELD_TEXT_DYNAMIC2",
+                          "logicType" : "SINGLE",
+                          "name" : "逻辑项",
+                          "value" : "<p><del>该评论已删除</del></p>"
+                        } ],
+                        "relatedItemNames" : [ "field_text_dynamic2" ],
+                        "notMode" : false
+                      } ],
+                      "getPSPanelItems" : [ {
+                        "actionType" : "UIACTION",
+                        "buttonStyle" : "STYLE2",
+                        "caption" : "编辑",
+                        "itemStyle" : "STYLE2",
+                        "itemType" : "BUTTON",
+                        "name" : "button_calluilogic1",
+                        "getPSAppViewUIAction" : {
+                          "modelref" : true,
+                          "id" : "list_itempanel_button_calluilogic1"
+                        },
+                        "getPSControlLogics" : [ {
+                          "itemName" : "BUTTON_CALLUILOGIC1",
+                          "logicTag" : "list_itempanel",
+                          "logicType" : "SCRIPT",
+                          "name" : "logic",
+                          "scriptCode" : "data.create_man === context.srfuserid",
+                          "triggerType" : "ITEMVISIBLE"
+                        } ],
+                        "getPSLayoutPos" : {
+                          "grow" : -1,
+                          "layout" : "FLEX"
+                        },
+                        "getPSSysImage" : {
+                          "glyph" : "xf044@FontAwesome",
+                          "cssClass" : "fa fa-edit"
+                        },
+                        "getPSUIAction" : {
+                          "actionTarget" : "SINGLEDATA",
+                          "caption" : "编辑",
+                          "codeName" : "panel_note_attach_list_button_calluilogic1_click",
+                          "frontProcessType" : "OTHER",
+                          "fullCodeName" : "note_attach_panel_note_attach_list_button_calluilogic1_click",
+                          "name" : "编辑",
+                          "getPSAppDEUILogic" : {
+                            "modelref" : true,
+                            "id" : "edit_note"
+                          },
+                          "getPSAppDataEntity" : {
+                            "modelref" : true,
+                            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+                          },
+                          "uIActionMode" : "FRONT",
+                          "uIActionTag" : "panel_note_attach_list_button_calluilogic1_click",
+                          "uIActionType" : "DEUIACTION",
+                          "uILogicAttachMode" : "REPLACE",
+                          "uILogicType" : "DELOGIC",
+                          "id" : "panel_note_attach_list_button_calluilogic1_click@note_attach"
+                        },
+                        "tooltip" : "编辑",
+                        "uIActionTarget" : "SINGLEDATA"
+                      }, {
+                        "actionType" : "UIACTION",
+                        "buttonStyle" : "STYLE2",
+                        "caption" : "删除",
+                        "itemStyle" : "STYLE2",
+                        "itemType" : "BUTTON",
+                        "name" : "button_calluilogic",
+                        "getPSAppViewUIAction" : {
+                          "modelref" : true,
+                          "id" : "list_itempanel_button_calluilogic"
+                        },
+                        "getPSControlLogics" : [ {
+                          "itemName" : "BUTTON_CALLUILOGIC",
+                          "logicTag" : "list_itempanel",
+                          "logicType" : "SCRIPT",
+                          "name" : "logic2",
+                          "scriptCode" : "data.create_man === context.srfuserid",
+                          "triggerType" : "ITEMVISIBLE"
+                        } ],
+                        "getPSLayoutPos" : {
+                          "grow" : -1,
+                          "layout" : "FLEX"
+                        },
+                        "getPSSysImage" : {
+                          "glyph" : "xf1f8@FontAwesome",
+                          "cssClass" : "fa fa-trash"
+                        },
+                        "getPSUIAction" : {
+                          "actionTarget" : "SINGLEKEY",
+                          "caption" : "删除评论",
+                          "codeName" : "del_comment",
+                          "confirmMsg" : "确认删除该评论？",
+                          "fullCodeName" : "note_attach_del_comment",
+                          "name" : "删除评论",
+                          "getPSAppDEMethod" : {
+                            "modelref" : true,
+                            "id" : "remove"
+                          },
+                          "getPSAppDataEntity" : {
+                            "modelref" : true,
+                            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+                          },
+                          "refreshMode" : 1,
+                          "successMsg" : "删除成功",
+                          "timeout" : 60000,
+                          "uIActionMode" : "BACKEND",
+                          "uIActionTag" : "del_comment",
+                          "uIActionType" : "DEUIACTION",
+                          "enableConfirm" : true,
+                          "reloadData" : true,
+                          "id" : "del_comment@note_attach"
+                        },
+                        "tooltip" : "删除",
+                        "uIActionTarget" : "SINGLEKEY"
+                      } ]
+                    } ]
+                  }, {
+                    "caption" : "容器",
+                    "cssStyle" : "padding-left: 36px;",
+                    "itemStyle" : "DEFAULT",
+                    "itemType" : "CONTAINER",
+                    "name" : "container4",
+                    "getPSLayout" : {
+                      "layout" : "FLEX"
+                    },
+                    "getPSLayoutPos" : {
+                      "grow" : -1,
+                      "layout" : "FLEX"
+                    },
+                    "getPSPanelItems" : [ {
+                      "caption" : "文本(动态)",
+                      "itemStyle" : "DEFAULT",
+                      "itemType" : "FIELD",
+                      "name" : "field_text_dynamic2",
+                      "getPSEditor" : {
+                        "contentType" : "HTML",
+                        "editorParams" : {
+                          "contenttype" : "HTML",
+                          "SCRIPTCODE" : "data.content?.replace(/@{[^,]*,\"name\":\"(.*?)\"}/g,\"<span class='comment-tag'>@$1</span>\").replace(/@{[^,]*,name=(.*?)}/g,\"<span class='comment-tag'>@$1</span>\").replace(/#{\"id\":\"(.+?)\",\"name\":\"(.+?)\",\"identifier\":\"(.+?)\",\"icon\":\"((.|[\\t\\r\\f\\n\\s])+?)\"}/g, \"<span class='comment-tag'>$4 $3 $2</span>\").replace(/#{id=(.+?),name=(.+?),identifier=(.+?),icon=((.|[\\t\\r\\f\\n\\s])+?)}/g, \"<span class='comment-tag'>$4 $3 $2</span>\")"
+                        },
+                        "editorStyle" : "COMMENT_ITEM",
+                        "editorType" : "RAW",
+                        "name" : "field_text_dynamic2",
+                        "getPSSysPFPlugin" : {
+                          "pluginType" : "EDITOR_CUSTOMSTYLE",
+                          "pluginCode" : "COMMENT_ITEM",
+                          "runtimeObject" : true
+                        },
+                        "predefinedType" : "FIELD_TEXT_DYNAMIC"
+                      },
+                      "getPSLayoutPos" : {
+                        "grow" : -1,
+                        "layout" : "FLEX"
+                      },
+                      "viewFieldName" : "CONTENT"
+                    }, {
+                      "caption" : "容器",
+                      "itemStyle" : "DEFAULT",
+                      "itemType" : "CONTAINER",
+                      "name" : "container3",
+                      "getPSLayout" : {
+                        "align" : "flex-start",
+                        "dir" : "row",
+                        "layout" : "FLEX",
+                        "vAlign" : "center"
+                      },
+                      "getPSLayoutPos" : {
+                        "grow" : -1,
+                        "layout" : "FLEX"
+                      },
+                      "getPSPanelItemGroupLogics" : [ {
+                        "groupOP" : "AND",
+                        "logicCat" : "PANELVISIBLE",
+                        "logicType" : "GROUP",
+                        "getPSPanelItemLogics" : [ {
+                          "condOp" : "ISNOTNULL",
+                          "dstModelField" : "PID",
+                          "logicType" : "SINGLE",
+                          "name" : "逻辑项"
+                        } ],
+                        "relatedItemNames" : [ "pid" ],
+                        "notMode" : false
+                      } ],
+                      "getPSPanelItems" : [ {
+                        "caption" : "文本(动态)",
+                        "itemStyle" : "DEFAULT",
+                        "itemType" : "FIELD",
+                        "name" : "pcreate_man",
+                        "getPSEditor" : {
+                          "editorType" : "SPAN",
+                          "name" : "pcreate_man",
+                          "getPSAppCodeList" : {
+                            "modelref" : true,
+                            "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__SysOperator.json"
+                          },
+                          "predefinedType" : "FIELD_TEXT_DYNAMIC",
+                          "renderMode" : "TEXT_DYNAMIC",
+                          "enableLinkView" : false
+                        },
+                        "getPSLayoutPos" : {
+                          "grow" : -1,
+                          "layout" : "FLEX",
+                          "shrink" : 0
+                        },
+                        "viewFieldName" : "PCREATE_MAN",
+                        "convertToCodeItemText" : true
+                      }, {
+                        "caption" : "标签",
+                        "contentType" : "RAW",
+                        "itemStyle" : "DEFAULT",
+                        "itemType" : "RAWITEM",
+                        "name" : "static_label",
+                        "getPSLayoutPos" : {
+                          "grow" : -1,
+                          "layout" : "FLEX",
+                          "shrink" : 0
+                        },
+                        "getPSRawItem" : {
+                          "caption" : "：",
+                          "contentType" : "RAW",
+                          "name" : "static_label",
+                          "predefinedType" : "STATIC_LABEL",
+                          "renderMode" : "PARAGRAPH"
+                        },
+                        "rawContent" : "：",
+                        "showCaption" : true
+                      }, {
+                        "caption" : "文本(动态)",
+                        "itemStyle" : "DEFAULT",
+                        "itemType" : "FIELD",
+                        "name" : "pcontent",
+                        "getPSControlRenders" : [ {
+                          "layoutPanelModel" : "data.pcontent?.replace(/@{[^,]*,\"name\":\"(.*?)\"}/g,\"<span class='comment-tag'>@$1</span>\").replace(/@{[^,]*,name=(.*?)}/g,\"<span class='comment-tag'>@$1</span>\").replace(/#{\"id\":\"(.+?)\",\"name\":\"(.+?)\",\"identifier\":\"(.+?)\",\"icon\":\"((.|[\\t\\r\\f\\n\\s])+?)\"}/g, \"<span class='comment-tag'>$4 $3 $2</span>\").replace(/#{id=(.+?),name=(.+?),identifier=(.+?),icon=((.|[\\t\\r\\f\\n\\s])+?)}/g, \"<span class='comment-tag'>$4 $3 $2</span>\")",
+                          "name" : "logic1",
+                          "renderType" : "LAYOUTPANEL_MODEL"
+                        } ],
+                        "getPSEditor" : {
+                          "contentType" : "HTML",
+                          "editorParams" : {
+                            "contenttype" : "HTML"
+                          },
+                          "editorType" : "RAW",
+                          "name" : "pcontent",
+                          "predefinedType" : "FIELD_TEXT_DYNAMIC"
+                        },
+                        "getPSLayoutPos" : {
+                          "grow" : 1,
+                          "layout" : "FLEX"
+                        },
+                        "viewFieldName" : "PCONTENT"
+                      } ],
+                      "getPSSysCss" : {
+                        "cssName" : "comment-replay"
+                      }
+                    } ]
+                  } ]
+                } ],
+                "name" : "list_itempanel",
+                "modelid" : "3da1a37ec95d32a12ece944e3e4af06c",
+                "modeltype" : "PSSYSVIEWPANEL"
+              },
+              "logicName" : "list",
+              "minorSortDir" : "DESC",
+              "getMinorSortPSAppDEField" : {
+                "name" : "CREATE_TIME",
+                "codeName" : "create_time"
+              },
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+              },
+              "getPSControlHandler" : {
+                "getPSHandlerActions" : [ {
+                  "actionName" : "Get",
+                  "actionType" : "DEACTION",
+                  "dataAccessAction" : "READ",
+                  "name" : "load",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "get"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+                  }
+                }, {
+                  "actionName" : "Create",
+                  "actionType" : "DEACTION",
+                  "dataAccessAction" : "CREATE",
+                  "name" : "create",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "create"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+                  }
+                }, {
+                  "actionName" : "Update",
+                  "actionType" : "DEACTION",
+                  "dataAccessAction" : "UPDATE",
+                  "name" : "update",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "update"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+                  }
+                }, {
+                  "actionName" : "Remove",
+                  "actionType" : "DEACTION",
+                  "dataAccessAction" : "DELETE",
+                  "name" : "remove",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "remove"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+                  }
+                }, {
+                  "actionType" : "DEDATASET",
+                  "name" : "fetch",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "fetch_by_owner"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+                  }
+                } ],
+                "userDRAction" : "READ",
+                "enableDEFieldPrivilege" : false,
+                "id" : "列表控件处理器"
+              },
+              "getPSControlParam" : {
+                "autoLoad" : true,
+                "showBusyIndicator" : true,
+                "ctrlParams" : {
+                  "SHOWMODE" : "MIXIN"
+                },
+                "id" : "LIST"
+              },
+              "getPSDEDataImport" : {
+                "modelref" : true,
+                "id" : "Default"
+              },
+              "getPSDEListDataItems" : [ {
+                "dataType" : 21,
+                "name" : "content",
+                "getPSAppDEField" : {
+                  "name" : "CONTENT",
+                  "codeName" : "content"
+                }
+              }, {
+                "dataType" : 25,
+                "name" : "pcontent"
+              }, {
+                "dataType" : 25,
+                "getFrontPSCodeList" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__SysOperator.json"
+                },
+                "name" : "create_man",
+                "getPSAppDEField" : {
+                  "name" : "CREATE_MAN",
+                  "codeName" : "create_man"
+                }
+              }, {
+                "dataType" : 25,
+                "name" : "pid"
+              }, {
+                "dataType" : 5,
+                "format" : "YYYY-MM-DD HH:mm:ss",
+                "name" : "create_time",
+                "getPSAppDEField" : {
+                  "name" : "CREATE_TIME",
+                  "codeName" : "create_time"
+                }
+              }, {
+                "dataType" : 25,
+                "name" : "id",
+                "getPSAppDEField" : {
+                  "name" : "ID",
+                  "codeName" : "id"
+                }
+              }, {
+                "dataType" : 25,
+                "name" : "pcreate_man"
+              }, {
+                "dataType" : 25,
+                "name" : "srfkey",
+                "getPSAppDEField" : {
+                  "name" : "ID",
+                  "codeName" : "id"
+                }
+              }, {
+                "dataType" : 25,
+                "name" : "srfmajortext",
+                "getPSAppDEField" : {
+                  "name" : "NAME",
+                  "codeName" : "name"
+                }
+              } ],
+              "pagingSize" : 1000,
+              "getRemovePSControlAction" : {
+                "modelref" : true,
+                "id" : "remove",
+                "actionName" : "Remove",
+                "actionType" : "DEACTION",
+                "dataAccessAction" : "DELETE",
+                "name" : "remove",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "remove"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+                }
+              },
+              "getUpdatePSControlAction" : {
+                "modelref" : true,
+                "id" : "update",
+                "actionName" : "Update",
+                "actionType" : "DEACTION",
+                "dataAccessAction" : "UPDATE",
+                "name" : "update",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "update"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+                }
+              },
+              "hasWFDataItems" : false,
+              "enableGroup" : false,
+              "enableRowEdit" : false,
+              "enableRowEditGroup" : false,
+              "enableRowEditOrder" : false,
+              "enableRowNew" : false,
+              "noSort" : false,
+              "showHeader" : true,
+              "singleSelect" : false,
+              "name" : "list",
+              "modelid" : "ed59200dff3ec161b2d05596a68e00c0",
+              "modeltype" : "PSDELIST"
+            }, {
+              "controlType" : "SEARCHBAR",
+              "name" : "searchbar",
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+              },
+              "getPSControlParam" : {
+                "id" : "searchbar"
+              },
+              "quickGroupCount" : -1,
+              "quickSearchMode" : 0,
+              "quickSearchWidth" : 0,
+              "enableFilter" : false,
+              "enableGroup" : false,
+              "enableQuickSearch" : false,
+              "mobileSearchBar" : false
+            }, {
+              "caption" : "进展评估",
+              "codeName" : "list_view_captionbar",
+              "controlType" : "CAPTIONBAR",
+              "name" : "captionbar",
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+              },
+              "getPSControlParam" : { }
+            } ]
+          },
+          "title" : "备注列表视图",
+          "viewStyle" : "DEFAULT",
+          "viewType" : "DELISTVIEW",
+          "xDataControlName" : "list",
+          "enableDP" : true,
+          "enableFilter" : true,
+          "enableSearch" : true,
+          "showCaptionBar" : false,
+          "modelid" : "9dc3546293e444ed089b1ea05d86a4b1",
+          "modeltype" : "PSAPPDEVIEW"
+        },
+        "getPSLayoutPos" : {
+          "colMD" : 24,
+          "layout" : "TABLE_24COL"
+        },
+        "parentDataJO" : {
+          "srfparentdename" : "ACCOUNT",
+          "SRFPARENTTYPE" : "CUSTOM"
+        },
+        "needSave" : false,
+        "refreshItemsSetParamOnly" : false,
+        "showCaption" : true
+      } ],
+      "getPSLayout" : {
+        "childColMD" : 24,
+        "columnCount" : 24,
+        "layout" : "TABLE_24COL"
+      },
+      "getPSLayoutPos" : {
+        "colMD" : 24,
+        "layout" : "TABLE_24COL"
+      },
+      "infoGroupMode" : false,
+      "showCaption" : true
+    }, {
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DEF.LNAME.ID"
+      },
+      "caption" : "标识",
+      "codeName" : "id",
+      "dataType" : 25,
+      "detailStyle" : "DEFAULT",
+      "detailType" : "FORMITEM",
+      "enableCond" : 3,
+      "ignoreInput" : 0,
+      "labelPos" : "LEFT",
+      "labelWidth" : 130,
+      "name" : "id",
+      "noPrivDisplayMode" : 1,
+      "getPSAppDEField" : {
+        "name" : "ID",
+        "codeName" : "id"
+      },
+      "getPSEditor" : {
+        "editorType" : "HIDDEN",
+        "name" : "id"
+      },
+      "getPSLayoutPos" : {
+        "colMD" : 24,
+        "layout" : "TABLE_24COL"
+      },
+      "allowEmpty" : true,
+      "hidden" : true
+    } ],
+    "getPSLayout" : {
+      "childColMD" : 24,
+      "columnCount" : 24,
+      "layout" : "TABLE_24COL"
+    },
+    "infoGroupMode" : false
+  } ],
+  "getPSLayout" : {
+    "childColMD" : 24,
+    "columnCount" : 24,
+    "layout" : "TABLE_24COL"
+  },
+  "getRemovePSControlAction" : {
+    "modelref" : true,
+    "id" : "remove",
+    "actionName" : "Remove",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "DELETE",
+    "name" : "remove",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "remove"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/account.json"
+    }
+  },
+  "tabHeaderPos" : "TOP",
+  "getUpdatePSControlAction" : {
+    "modelref" : true,
+    "id" : "update",
+    "actionName" : "Update",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "UPDATE",
+    "name" : "update",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "update"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/account.json"
+    }
+  },
+  "noTabHeader" : true,
+  "modelid" : "65bfa710f1aedf943bc32cbb913c421e",
+  "modeltype" : "PSDEFORM_EDITFORM"
+}

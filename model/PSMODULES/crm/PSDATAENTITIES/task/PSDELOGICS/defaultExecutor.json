@@ -1,0 +1,140 @@
+{
+  "codeName" : "defaultExecutor",
+  "defaultParamName" : "Default",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/task/PSDELOGICS/defaultExecutor.json",
+  "logicName" : "新建任务前加载执行人",
+  "name" : "新建任务前加载执行人",
+  "getPSDELogicNodes" : [ {
+    "codeName" : "Begin",
+    "leftPos" : 660,
+    "logicNodeType" : "BEGIN",
+    "name" : "开始",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "Begin"
+      }
+    } ],
+    "topPos" : 300,
+    "parallelOutput" : true
+  }, {
+    "codeName" : "END1",
+    "leftPos" : 1281,
+    "logicNodeType" : "END",
+    "name" : "结束",
+    "topPos" : 300
+  }, {
+    "codeName" : "PREPAREPARAM1",
+    "leftPos" : 815,
+    "logicNodeType" : "PREPAREPARAM",
+    "name" : "默认执行人",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM2"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM1"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "dstFieldName" : "USER_ID",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "item"
+      },
+      "name" : "用户全局对象[userid] ==> item[USER_ID]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "userid",
+      "srcValueType" : "SESSION"
+    }, {
+      "dstFieldName" : "0",
+      "dstIndex" : 0,
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "list"
+      },
+      "name" : "item ==> list[0]",
+      "paramAction" : "APPENDPARAM",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "item"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    } ],
+    "topPos" : 308
+  }, {
+    "codeName" : "PREPAREPARAM2",
+    "leftPos" : 1037,
+    "logicNodeType" : "PREPAREPARAM",
+    "name" : "准备参数",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "END1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM2"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "dstFieldName" : "EXECUTORS",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "name" : "list ==> Default[EXECUTORS]",
+      "paramAction" : "SETPARAMVALUE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "list"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    } ],
+    "topPos" : 308
+  } ],
+  "getPSDELogicParams" : [ {
+    "codeName" : "Default",
+    "logicName" : "传入变量",
+    "name" : "传入变量",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+    },
+    "default" : true,
+    "entityParam" : true
+  }, {
+    "codeName" : "item",
+    "logicName" : "item",
+    "name" : "item",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task_executor.json"
+    },
+    "entityParam" : true
+  }, {
+    "codeName" : "list",
+    "logicName" : "list",
+    "name" : "list",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task_executor.json"
+    },
+    "entityListParam" : true
+  } ],
+  "getStartPSDELogicNode" : {
+    "modelref" : true,
+    "id" : "Begin"
+  },
+  "enableBackend" : true,
+  "enableFront" : false
+}

@@ -1,0 +1,82 @@
+package cn.ibizlab.crm.crm.logic.productlogic.unlink;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.product productunlinkdefault;
+                global cn.ibizlab.crm.core.crm.domain.relation productunlinkrelation;
+                global cn.ibizlab.crm.core.crm.domain.relation productunlinkrelationfilter;
+                global cn.ibizlab.crm.core.crm.domain.relation productunlinkrelationlist;
+                    global cn.ibizlab.crm.core.crm.service.IrelationService relationservice;
+        global cn.ibizlab.crm.core.crm.service.IproductService iBzSysProductDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "productunlinkbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[设置查询条件]
+            rule "prepareparam2"
+            ruleflow-group "productunlinkprepareparam2"
+            when
+            then
+                            productunlinkrelationfilter.set("n_target_id_eq",productunlinkdefault.get("id"));
+                            productunlinkrelationfilter.set("n_principal_id_eq",productunlinkdefault.get("principal_id"));
+                        update(productunlinkdefault);//更新fact中变量值
+                        update(productunlinkrelation);//更新fact中变量值
+                        update(productunlinkrelationfilter);//更新fact中变量值
+                        update(productunlinkrelationlist);//更新fact中变量值
+            end
+
+            //逻辑处理节点[查询管理数据]
+            rule "dedataquery1"
+            ruleflow-group "productunlinkdedataquery1"
+            when
+            then
+                        update(productunlinkdefault);//更新fact中变量值
+                        update(productunlinkrelation);//更新fact中变量值
+                        update(productunlinkrelationfilter);//更新fact中变量值
+                        update(productunlinkrelationlist);//更新fact中变量值
+            end
+
+            //逻辑处理节点[获取关联数据]
+            rule "bindparam1"
+            ruleflow-group "productunlinkbindparam1"
+            when
+            then
+                        update(productunlinkdefault);//更新fact中变量值
+                        update(productunlinkrelation);//更新fact中变量值
+                        update(productunlinkrelationfilter);//更新fact中变量值
+                        update(productunlinkrelationlist);//更新fact中变量值
+            end
+
+            //逻辑处理节点[删除关联数据]
+            rule "deaction1"
+            ruleflow-group "productunlinkdeaction1"
+            when
+            then
+                        relationservice.remove(productunlinkrelation.getId());
+                        update(productunlinkdefault);//更新fact中变量值
+                        update(productunlinkrelation);//更新fact中变量值
+                        update(productunlinkrelationfilter);//更新fact中变量值
+                        update(productunlinkrelationlist);//更新fact中变量值
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "productunlinkend1"
+            when
+            then
+                        update(productunlinkdefault);//更新fact中变量值
+                        update(productunlinkrelation);//更新fact中变量值
+                        update(productunlinkrelationfilter);//更新fact中变量值
+                        update(productunlinkrelationlist);//更新fact中变量值
+            end

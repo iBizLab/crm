@@ -1,0 +1,31 @@
+{
+  "codeName" : "usr0616065753",
+  "controlType" : "PANEL",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic/PSPANELS/usr0616065753.json",
+  "layoutMode" : "TABLE_24COL",
+  "logicName" : "统计看板_看板_卡片面板",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_statistic.json"
+  },
+  "getPSLayout" : {
+    "childColMD" : 24,
+    "columnCount" : 24,
+    "layout" : "TABLE_24COL"
+  },
+  "getRootPSPanelItems" : [ {
+    "itemStyle" : "DEFAULT",
+    "itemType" : "CONTAINER",
+    "name" : "page_container",
+    "getPSLayout" : {
+      "dir" : "column",
+      "layout" : "FLEX"
+    },
+    "getPSLayoutPos" : {
+      "colMD" : 24,
+      "layout" : "TABLE_24COL"
+    }
+  } ],
+  "modelid" : "4f71036de4fbba162691242fb80064ea",
+  "modeltype" : "PSSYSVIEWPANEL"
+}

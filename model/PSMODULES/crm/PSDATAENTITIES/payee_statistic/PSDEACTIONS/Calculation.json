@@ -1,0 +1,27 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "CUSTOM",
+  "actionType" : "DELOGIC",
+  "codeName" : "Calculation",
+  "dataAccessAction" : "UPDATE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic/PSDEACTIONS/Calculation.json",
+  "logicName" : "计算统计数据",
+  "name" : "Calculation",
+  "getPSDEActionInput" : {
+    "name" : "CalculationInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "payee_statistic_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "CalculationResult",
+    "type" : "VOID"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic/PSDELOGICS/Calculation.json"
+  },
+  "enableFront" : false
+}

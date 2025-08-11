@@ -1,0 +1,28 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "CUSTOM",
+  "actionType" : "DELOGIC",
+  "codeName" : "scan_status",
+  "dataAccessAction" : "NONE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/project/PSDEACTIONS/scan_status.json",
+  "logicName" : "检测子订单是否有未关闭订单",
+  "name" : "CheckSubAndUpdate",
+  "getPSDEActionInput" : {
+    "name" : "Scan_statusInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "project_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Scan_statusResult",
+    "type" : "VOID"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/project/PSDELOGICS/scan_save.json"
+  },
+  "enableAudit" : true,
+  "enableFront" : false
+}

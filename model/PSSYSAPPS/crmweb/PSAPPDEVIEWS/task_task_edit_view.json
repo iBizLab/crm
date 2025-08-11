@@ -1,0 +1,2067 @@
+{
+  "accUserMode" : 2,
+  "caption" : "任务",
+  "codeName" : "task_task_edit_view",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_task_edit_view.json",
+  "funcViewMode" : "EDITVIEW",
+  "memo" : "自动生成",
+  "name" : "tasktask_edit_view",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+  },
+  "getPSAppModule" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/crm.json"
+  },
+  "getPSDEViewCodeName" : "task_edit_view",
+  "getPSDEViewId" : "deee5da82d663c7c06faa2b02435fa14",
+  "getPSViewLayoutPanel" : {
+    "codeName" : "usr0701945868",
+    "controlType" : "VIEWLAYOUTPANEL",
+    "layoutMode" : "FLEX",
+    "logicName" : "edit_view编辑视图布局面板",
+    "name" : "layoutpanel",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+    },
+    "getPSControlParam" : { },
+    "getPSLayout" : {
+      "layout" : "FLEX"
+    },
+    "getRootPSPanelItems" : [ {
+      "caption" : "容器",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "view_header",
+      "getPSLayout" : {
+        "align" : "space-between",
+        "dir" : "row",
+        "layout" : "FLEX",
+        "vAlign" : "center"
+      },
+      "getPSLayoutPos" : {
+        "grow" : -1,
+        "layout" : "FLEX",
+        "shrink" : 0
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "view_header_left",
+        "getPSLayout" : {
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "heightMode" : "FULL",
+          "layout" : "FLEX"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "容器",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CONTAINER",
+          "name" : "view_captionbar",
+          "getPSLayout" : {
+            "align" : "center",
+            "layout" : "FLEX"
+          },
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "heightMode" : "FULL",
+            "layout" : "FLEX"
+          },
+          "getPSPanelItems" : [ {
+            "caption" : "页面标题",
+            "itemStyle" : "DEFAULT",
+            "itemType" : "CTRLPOS",
+            "name" : "captionbar",
+            "getPSLayoutPos" : {
+              "grow" : -1,
+              "layout" : "FLEX"
+            },
+            "showCaption" : true
+          } ]
+        } ]
+      }, {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "view_header_right",
+        "getPSLayout" : {
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "heightMode" : "FULL",
+          "layout" : "FLEX"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "容器",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CONTAINER",
+          "name" : "view_toolbar",
+          "getPSLayout" : {
+            "align" : "center",
+            "layout" : "FLEX"
+          },
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "heightMode" : "FULL",
+            "layout" : "FLEX"
+          },
+          "getPSPanelItems" : [ {
+            "caption" : "工具栏",
+            "itemStyle" : "DEFAULT",
+            "itemType" : "CTRLPOS",
+            "name" : "toolbar",
+            "getPSLayoutPos" : {
+              "grow" : -1,
+              "layout" : "FLEX"
+            },
+            "showCaption" : true
+          } ]
+        } ]
+      } ],
+      "predefinedType" : "VIEWHEADER"
+    }, {
+      "caption" : "容器",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "scroll_container",
+      "getPSLayout" : {
+        "layout" : "FLEX"
+      },
+      "getPSLayoutPos" : {
+        "grow" : 1,
+        "layout" : "FLEX"
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "表单",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CTRLPOS",
+        "name" : "form",
+        "getPSLayoutPos" : {
+          "grow" : 1,
+          "layout" : "FLEX"
+        },
+        "showCaption" : true
+      } ],
+      "predefinedType" : "VIEWCONTENT"
+    } ],
+    "layoutBodyOnly" : false,
+    "layoutPanel" : true,
+    "useDefaultLayout" : false,
+    "viewProxyMode" : true,
+    "modelid" : "84f7c52d3f40d45a4a8bf3a2ea3a9b19",
+    "modeltype" : "PSSYSVIEWLAYOUTPANEL",
+    "getPSAppViewEngines" : [ {
+      "engineCat" : "VIEW",
+      "engineType" : "EditView",
+      "name" : "engine"
+    } ],
+    "getPSAppViewLogics" : [ {
+      "eventNames" : "onMDCtrlNew",
+      "logicTrigger" : "CTRLEVENT",
+      "logicType" : "SCRIPT",
+      "name" : "ONMDCTRLNEW",
+      "getPSViewCtrlName" : "form",
+      "scriptCode" : "setTimeout(() => {\r\n\tconst scroll = document.getElementsByClassName('ibiz-panel-view-content--scroll_container')[0];\r\n\tif (scroll) {\r\n\t\tscroll.scrollTop = scroll.scrollHeight;\r\n\t}\r\n\tconsole.log(\"任务的数据变化\" + scroll.scrollTop)\r\n}, 0);"
+    } ],
+    "getPSControls" : [ {
+      "codeName" : "task_edit_view_toolbar",
+      "controlType" : "TOOLBAR",
+      "logicName" : "任务编辑视图_工具栏",
+      "memo" : "用于进行不同保存行为的工具栏",
+      "name" : "toolbar",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+      },
+      "getPSControlParam" : {
+        "id" : "TOOLBAR"
+      },
+      "getPSDEToolbarItems" : [ {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "TBB.TEXT.EDITVIEW.CLOSE"
+        },
+        "caption" : "取消",
+        "groupExtractMode" : "ITEM",
+        "itemType" : "DEUIACTION",
+        "name" : "cancel",
+        "noPrivDisplayMode" : 2,
+        "getPSAppViewUIAction" : {
+          "modelref" : true,
+          "id" : "toolbar_cancel"
+        },
+        "getPSSysImage" : {
+          "glyph" : "xf08b@FontAwesome",
+          "cssClass" : "fa fa-sign-out"
+        },
+        "getPSUIAction" : {
+          "getCapPSLanguageRes" : {
+            "lanResTag" : "TBB.TEXT.EDITVIEW.CLOSE"
+          },
+          "caption" : "关闭",
+          "codeName" : "Exit",
+          "fullCodeName" : "Exit",
+          "name" : "编辑界面_退出操作",
+          "getPSSysImage" : {
+            "glyph" : "xf08b@FontAwesome",
+            "cssClass" : "fa fa-sign-out"
+          },
+          "predefinedType" : "EDITVIEW_EXITACTION",
+          "timeout" : 60000,
+          "getTooltipPSLanguageRes" : {
+            "lanResTag" : "TBB.TOOLTIP.EDITVIEW.CLOSE"
+          },
+          "uIActionMode" : "SYS",
+          "uIActionTag" : "Exit",
+          "uIActionType" : "DEUIACTION"
+        },
+        "tooltip" : "取消",
+        "getTooltipPSLanguageRes" : {
+          "lanResTag" : "TBB.TOOLTIP.EDITVIEW.CLOSE"
+        },
+        "showCaption" : true,
+        "showIcon" : false
+      }, {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "TBB.TEXT.EDITVIEW.SAVEANDNEW"
+        },
+        "caption" : "保存并新建",
+        "groupExtractMode" : "ITEM",
+        "itemType" : "DEUIACTION",
+        "name" : "saveAndNew",
+        "noPrivDisplayMode" : 2,
+        "getPSAppViewUIAction" : {
+          "modelref" : true,
+          "id" : "toolbar_saveAndNew"
+        },
+        "getPSControlLogics" : [ {
+          "itemName" : "saveAndNew",
+          "logicTag" : "toolbar",
+          "logicType" : "SCRIPT",
+          "name" : "saveAndNew",
+          "scriptCode" : "data.id == null",
+          "triggerType" : "ITEMVISIBLE"
+        } ],
+        "getPSSysImage" : {
+          "cssClass" : "sx-tb-saveandnew"
+        },
+        "getPSUIAction" : {
+          "getCapPSLanguageRes" : {
+            "lanResTag" : "TBB.TEXT.EDITVIEW.SAVEANDNEW"
+          },
+          "caption" : "保存并新建",
+          "codeName" : "SaveAndNew",
+          "fullCodeName" : "SaveAndNew",
+          "name" : "编辑界面_保存并新建操作",
+          "getPSSysImage" : {
+            "cssClass" : "sx-tb-saveandnew"
+          },
+          "predefinedType" : "EDITVIEW_SAVEANDNEWACTION",
+          "timeout" : 60000,
+          "getTooltipPSLanguageRes" : {
+            "lanResTag" : "TBB.TOOLTIP.EDITVIEW.SAVEANDNEW"
+          },
+          "uIActionMode" : "SYS",
+          "uIActionTag" : "SaveAndNew",
+          "uIActionType" : "DEUIACTION"
+        },
+        "tooltip" : "保存并新建",
+        "getTooltipPSLanguageRes" : {
+          "lanResTag" : "TBB.TOOLTIP.EDITVIEW.SAVEANDNEW"
+        },
+        "showCaption" : true,
+        "showIcon" : false
+      }, {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "TBB.TEXT.EDITVIEW.SAVEANDCLOSE"
+        },
+        "caption" : "保存",
+        "groupExtractMode" : "ITEM",
+        "itemType" : "DEUIACTION",
+        "name" : "saveAndQuit",
+        "noPrivDisplayMode" : 2,
+        "getPSAppViewUIAction" : {
+          "modelref" : true,
+          "id" : "toolbar_saveAndQuit"
+        },
+        "getPSControlLogics" : [ {
+          "itemName" : "saveAndQuit",
+          "logicTag" : "toolbar",
+          "logicType" : "SCRIPT",
+          "name" : "saveAndQuit",
+          "scriptCode" : "data.id",
+          "triggerType" : "ITEMVISIBLE"
+        } ],
+        "getPSSysImage" : {
+          "cssClass" : "sx-tb-saveandclose"
+        },
+        "getPSUIAction" : {
+          "getCapPSLanguageRes" : {
+            "lanResTag" : "TBB.TEXT.EDITVIEW.SAVEANDCLOSE"
+          },
+          "caption" : "保存并关闭",
+          "codeName" : "SaveAndExit",
+          "fullCodeName" : "SaveAndExit",
+          "name" : "编辑界面_保存并退出操作",
+          "getPSSysImage" : {
+            "cssClass" : "sx-tb-saveandclose"
+          },
+          "predefinedType" : "EDITVIEW_SAVEANDEXITACTION",
+          "timeout" : 60000,
+          "getTooltipPSLanguageRes" : {
+            "lanResTag" : "TBB.TOOLTIP.EDITVIEW.SAVEANDCLOSE"
+          },
+          "uIActionMode" : "SYS",
+          "uIActionTag" : "SaveAndExit",
+          "uIActionType" : "DEUIACTION"
+        },
+        "tooltip" : "保存",
+        "getTooltipPSLanguageRes" : {
+          "lanResTag" : "TBB.TOOLTIP.EDITVIEW.SAVEANDCLOSE"
+        },
+        "showCaption" : true,
+        "showIcon" : false
+      }, {
+        "caption" : "保存",
+        "groupExtractMode" : "ITEM",
+        "itemType" : "DEUIACTION",
+        "name" : "saveAndOpen",
+        "noPrivDisplayMode" : 2,
+        "getPSAppViewUIAction" : {
+          "modelref" : true,
+          "id" : "toolbar_saveAndOpen"
+        },
+        "getPSControlLogics" : [ {
+          "itemName" : "saveAndOpen",
+          "logicTag" : "toolbar",
+          "logicType" : "SCRIPT",
+          "name" : "saveAndOpen",
+          "scriptCode" : "data.id == null",
+          "triggerType" : "ITEMVISIBLE"
+        } ],
+        "getPSUIAction" : {
+          "actionTarget" : "SINGLEDATA",
+          "caption" : "新建并打开任务主数据视图",
+          "codeName" : "saveAndOpenTask",
+          "dialogResult" : "OK",
+          "fullCodeName" : "task_saveAndOpenTask",
+          "name" : "新建并打开任务主数据视图",
+          "getNextPSUIAction" : {
+            "getPSAppDataEntity" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+            },
+            "modelref" : true,
+            "id" : "openTaskZsjView@task"
+          },
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "create"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+          },
+          "refreshMode" : 1,
+          "timeout" : 60000,
+          "uIActionMode" : "BACKEND",
+          "uIActionTag" : "saveAndOpenTask",
+          "uIActionType" : "DEUIACTION",
+          "closeEditView" : true,
+          "closePopupView" : true,
+          "enableConfirm" : true,
+          "reloadData" : true,
+          "id" : "saveAndOpenTask@task"
+        },
+        "tooltip" : "保存",
+        "uIActionTarget" : "SINGLEDATA",
+        "showCaption" : true,
+        "showIcon" : false
+      } ],
+      "xDataControlName" : "form",
+      "modelid" : "f7c298d83fd29fbc5b4e287430376bf0",
+      "modeltype" : "PSDETOOLBAR"
+    }, {
+      "codeName" : "edit_view_form",
+      "controlType" : "FORM",
+      "getCreatePSControlAction" : {
+        "modelref" : true,
+        "id" : "create",
+        "actionName" : "Create",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "CREATE",
+        "name" : "create",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "create"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+        }
+      },
+      "defaultLabelWidth" : 190,
+      "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task/PSFORMS/edit_view_form.json",
+      "getGetDraftFromPSControlAction" : {
+        "modelref" : true,
+        "id" : "loaddraftfrom",
+        "actionName" : "GETDRAFTFROM",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "CREATE",
+        "name" : "loaddraftfrom",
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+        }
+      },
+      "getGetDraftPSControlAction" : {
+        "modelref" : true,
+        "id" : "loaddraft",
+        "actionName" : "GetDraft",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "CREATE",
+        "name" : "loaddraft",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "get_draft"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+        }
+      },
+      "getGetPSControlAction" : {
+        "modelref" : true,
+        "id" : "load",
+        "actionName" : "Get",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "READ",
+        "name" : "load",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "get"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+        }
+      },
+      "logicName" : "编辑_表单",
+      "memo" : "自动生成",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+      },
+      "getPSControlHandler" : {
+        "getPSHandlerActions" : [ {
+          "actionName" : "GetDraft",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "CREATE",
+          "name" : "loaddraft",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "get_draft"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+          }
+        }, {
+          "actionName" : "GETDRAFTFROM",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "CREATE",
+          "name" : "loaddraftfrom",
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+          }
+        }, {
+          "actionName" : "Get",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "READ",
+          "name" : "load",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "get"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+          }
+        }, {
+          "actionName" : "Create",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "CREATE",
+          "name" : "create",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "create"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+          }
+        }, {
+          "actionName" : "Update",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "UPDATE",
+          "name" : "update",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "update"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+          }
+        }, {
+          "actionName" : "Remove",
+          "actionType" : "DEACTION",
+          "dataAccessAction" : "DELETE",
+          "name" : "remove",
+          "getPSAppDEMethod" : {
+            "modelref" : true,
+            "id" : "remove"
+          },
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+          }
+        } ],
+        "enableDEFieldPrivilege" : false,
+        "id" : "编辑表单处理器"
+      },
+      "getPSControlParam" : {
+        "autoLoad" : true,
+        "showBusyIndicator" : true,
+        "id" : "FORM"
+      },
+      "getPSDEFormItems" : [ {
+        "id" : "srfupdatedate",
+        "hidden" : true,
+        "dataType" : 5,
+        "getPSAppDEField" : {
+          "name" : "UPDATE_TIME",
+          "codeName" : "update_time"
+        }
+      }, {
+        "id" : "srforikey",
+        "hidden" : true,
+        "dataType" : 25
+      }, {
+        "id" : "srfkey",
+        "hidden" : true,
+        "dataType" : 25,
+        "getPSAppDEField" : {
+          "name" : "ID",
+          "codeName" : "id"
+        }
+      }, {
+        "id" : "srfmajortext",
+        "hidden" : true,
+        "dataType" : 25,
+        "getPSAppDEField" : {
+          "name" : "SUBJECT",
+          "codeName" : "subject"
+        }
+      }, {
+        "id" : "srftempmode",
+        "hidden" : true,
+        "dataType" : 25
+      }, {
+        "id" : "srfuf",
+        "hidden" : true,
+        "dataType" : 25
+      }, {
+        "id" : "srfdeid",
+        "hidden" : true,
+        "dataType" : 25
+      }, {
+        "id" : "srfsourcekey",
+        "hidden" : true,
+        "dataType" : 25
+      }, {
+        "id" : "subject",
+        "dataType" : 25,
+        "getPSAppDEField" : {
+          "name" : "SUBJECT",
+          "codeName" : "subject"
+        }
+      }, {
+        "id" : "due_date",
+        "dataType" : 5,
+        "getPSAppDEField" : {
+          "name" : "DUE_DATE",
+          "codeName" : "due_date"
+        }
+      }, {
+        "id" : "owner",
+        "dataType" : 25,
+        "createDVT" : "SESSION",
+        "createDV" : "userid",
+        "getPSAppDEField" : {
+          "name" : "OWNER",
+          "codeName" : "owner"
+        }
+      }, {
+        "id" : "remind_at",
+        "dataType" : 5,
+        "getPSAppDEField" : {
+          "name" : "REMIND_AT",
+          "codeName" : "remind_at"
+        }
+      }, {
+        "id" : "executors",
+        "dataType" : 21,
+        "getPSAppDEField" : {
+          "name" : "EXECUTORS",
+          "codeName" : "executors"
+        }
+      }, {
+        "id" : "status",
+        "dataType" : 25,
+        "createDVT" : "CONTEXT",
+        "createDV" : "STATUS",
+        "getPSAppDEField" : {
+          "name" : "STATUS",
+          "codeName" : "status"
+        }
+      }, {
+        "id" : "priority",
+        "dataType" : 25,
+        "getPSAppDEField" : {
+          "name" : "PRIORITY",
+          "codeName" : "priority"
+        }
+      }, {
+        "id" : "start_time",
+        "dataType" : 5,
+        "getPSAppDEField" : {
+          "name" : "START_TIME",
+          "codeName" : "start_time"
+        }
+      }, {
+        "id" : "end_time",
+        "hidden" : true,
+        "dataType" : 5,
+        "getPSAppDEField" : {
+          "name" : "END_TIME",
+          "codeName" : "end_time"
+        }
+      }, {
+        "id" : "description",
+        "dataType" : 21,
+        "getPSAppDEField" : {
+          "name" : "DESCRIPTION",
+          "codeName" : "description"
+        }
+      }, {
+        "id" : "type",
+        "hidden" : true,
+        "dataType" : 25,
+        "createDVT" : "CONTEXT",
+        "createDV" : "TYPE",
+        "getPSAppDEField" : {
+          "name" : "TYPE",
+          "codeName" : "type"
+        }
+      }, {
+        "id" : "id",
+        "hidden" : true,
+        "dataType" : 25,
+        "getPSAppDEField" : {
+          "name" : "ID",
+          "codeName" : "id"
+        }
+      }, {
+        "id" : "owner_id",
+        "hidden" : true,
+        "dataType" : 25,
+        "getPSAppDEField" : {
+          "name" : "OWNER_ID",
+          "codeName" : "owner_id"
+        }
+      }, {
+        "id" : "owner_name",
+        "hidden" : true,
+        "dataType" : 25,
+        "getPSAppDEField" : {
+          "name" : "OWNER_NAME",
+          "codeName" : "owner_name"
+        }
+      } ],
+      "getPSDEFormPages" : [ {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "CONTROL.DEFORM.TASK.EDIT_VIEW_FORM.FORMPAGE.FORMPAGE1"
+        },
+        "caption" : "概览",
+        "codeName" : "formpage1",
+        "detailStyle" : "DEFAULT",
+        "detailType" : "FORMPAGE",
+        "name" : "formpage1",
+        "getPSDEFormDetails" : [ {
+          "getCapPSLanguageRes" : {
+            "lanResTag" : "CONTROL.DEFORM.TASK.EDIT_VIEW_FORM.GROUPPANEL.GROUPPANEL1"
+          },
+          "caption" : "详细信息",
+          "codeName" : "grouppanel1",
+          "detailStyle" : "DEFAULT",
+          "detailType" : "GROUPPANEL",
+          "name" : "grouppanel1",
+          "getPSDEFormDetails" : [ {
+            "getCapPSLanguageRes" : {
+              "lanResTag" : "DEF.LNAME.SUBJECT"
+            },
+            "caption" : "主题",
+            "codeName" : "subject",
+            "dataType" : 25,
+            "detailStyle" : "DEFAULT",
+            "detailType" : "FORMITEM",
+            "enableCond" : 3,
+            "ignoreInput" : 0,
+            "labelPos" : "LEFT",
+            "labelWidth" : 190,
+            "name" : "subject",
+            "noPrivDisplayMode" : 1,
+            "getPSAppDEField" : {
+              "name" : "SUBJECT",
+              "codeName" : "subject"
+            },
+            "getPSEditor" : {
+              "editorType" : "TEXTBOX",
+              "maxLength" : 255,
+              "name" : "subject"
+            },
+            "getPSLayoutPos" : {
+              "colMD" : 24,
+              "layout" : "TABLE_24COL"
+            },
+            "allowEmpty" : false,
+            "showCaption" : true
+          }, {
+            "getCapPSLanguageRes" : {
+              "lanResTag" : "CONTROL.DEFORM.TASK.EDIT_VIEW_FORM.FORMITEM.DUE_DATE"
+            },
+            "caption" : "到期日期",
+            "codeName" : "due_date",
+            "dataType" : 5,
+            "detailStyle" : "DEFAULT",
+            "detailType" : "FORMITEM",
+            "enableCond" : 3,
+            "ignoreInput" : 0,
+            "itemWidth" : 191.0,
+            "labelPos" : "LEFT",
+            "labelWidth" : 190,
+            "name" : "due_date",
+            "noPrivDisplayMode" : 1,
+            "getPSAppDEField" : {
+              "name" : "DUE_DATE",
+              "codeName" : "due_date"
+            },
+            "getPSDEFDGroupLogics" : [ {
+              "groupOP" : "AND",
+              "logicCat" : "PANELVISIBLE",
+              "logicType" : "GROUP",
+              "getPSDEFDLogics" : [ {
+                "condOP" : "EQ",
+                "dEFDName" : "type",
+                "logicType" : "SINGLE",
+                "value" : "TASK"
+              } ],
+              "relatedDetailNames" : [ "type" ],
+              "notMode" : false
+            }, {
+              "groupOP" : "AND",
+              "logicCat" : "ITEMBLANK",
+              "logicType" : "GROUP",
+              "getPSDEFDLogics" : [ {
+                "condOP" : "NOTEQ",
+                "dEFDName" : "type",
+                "logicType" : "SINGLE",
+                "value" : "TASK"
+              } ],
+              "relatedDetailNames" : [ "type" ],
+              "notMode" : false
+            } ],
+            "getPSEditor" : {
+              "dateTimeFormat" : "YYYY-MM-DD",
+              "editorParams" : {
+                "TIMEFMT" : "YYYY-MM-DD"
+              },
+              "editorType" : "DATEPICKEREX_NOTIME",
+              "editorWidth" : 1.0,
+              "name" : "due_date"
+            },
+            "getPSLayoutPos" : {
+              "colLG" : 12,
+              "colMD" : 12,
+              "layout" : "TABLE_24COL"
+            },
+            "valueFormat" : "YYYY-MM-DD",
+            "allowEmpty" : false,
+            "showCaption" : true
+          }, {
+            "getCapPSLanguageRes" : {
+              "lanResTag" : "DEF.LNAME.OWNER"
+            },
+            "caption" : "所有者",
+            "codeName" : "owner",
+            "createDV" : "userid",
+            "createDVT" : "SESSION",
+            "dataType" : 25,
+            "detailStyle" : "DEFAULT",
+            "detailType" : "FORMITEM",
+            "enableCond" : 3,
+            "ignoreInput" : 0,
+            "labelPos" : "LEFT",
+            "labelWidth" : 190,
+            "name" : "owner",
+            "noPrivDisplayMode" : 1,
+            "getPSAppDEField" : {
+              "name" : "OWNER",
+              "codeName" : "owner"
+            },
+            "getPSEditor" : {
+              "editorType" : "DROPDOWNLIST",
+              "name" : "owner",
+              "getPSAppCodeList" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__owner.json"
+              },
+              "singleSelect" : true
+            },
+            "getPSLayoutPos" : {
+              "colLG" : 12,
+              "colMD" : 24,
+              "layout" : "TABLE_24COL"
+            },
+            "allowEmpty" : true,
+            "needCodeListConfig" : true,
+            "showCaption" : true
+          }, {
+            "getCapPSLanguageRes" : {
+              "lanResTag" : "CONTROL.DEFORM.TASK.EDIT_VIEW_FORM.FORMITEM.REMIND_AT"
+            },
+            "caption" : "提醒时间",
+            "codeName" : "remind_at",
+            "dataType" : 5,
+            "detailStyle" : "DEFAULT",
+            "detailType" : "FORMITEM",
+            "enableCond" : 3,
+            "ignoreInput" : 0,
+            "itemWidth" : 191.0,
+            "labelPos" : "LEFT",
+            "labelWidth" : 190,
+            "name" : "remind_at",
+            "noPrivDisplayMode" : 1,
+            "getPSAppDEField" : {
+              "name" : "REMIND_AT",
+              "codeName" : "remind_at"
+            },
+            "getPSDEFDGroupLogics" : [ {
+              "groupOP" : "AND",
+              "logicCat" : "PANELVISIBLE",
+              "logicType" : "GROUP",
+              "getPSDEFDLogics" : [ {
+                "condOP" : "EQ",
+                "dEFDName" : "type",
+                "logicType" : "SINGLE",
+                "value" : "TASK"
+              } ],
+              "relatedDetailNames" : [ "type" ],
+              "notMode" : false
+            } ],
+            "getPSEditor" : {
+              "dateTimeFormat" : "YYYY-MM-DD HH:mm:ss",
+              "editorParams" : {
+                "TIMEFMT" : "YYYY-MM-DD HH:mm:ss"
+              },
+              "editorType" : "DATEPICKER",
+              "editorWidth" : 1.0,
+              "name" : "remind_at"
+            },
+            "getPSLayoutPos" : {
+              "colLG" : 12,
+              "colMD" : 12,
+              "layout" : "TABLE_24COL"
+            },
+            "valueFormat" : "YYYY-MM-DD HH:mm:ss",
+            "allowEmpty" : true,
+            "showCaption" : true
+          }, {
+            "caption" : "执行人",
+            "codeName" : "executors",
+            "dataType" : 21,
+            "detailStyle" : "DEFAULT",
+            "detailType" : "FORMITEM",
+            "enableCond" : 3,
+            "ignoreInput" : 0,
+            "labelPos" : "LEFT",
+            "labelWidth" : 190,
+            "name" : "executors",
+            "noPrivDisplayMode" : 1,
+            "getPSAppDEField" : {
+              "name" : "EXECUTORS",
+              "codeName" : "executors"
+            },
+            "getPSDEFDGroupLogics" : [ {
+              "groupOP" : "AND",
+              "logicCat" : "PANELVISIBLE",
+              "logicType" : "GROUP",
+              "getPSDEFDLogics" : [ {
+                "condOP" : "EQ",
+                "dEFDName" : "type",
+                "logicType" : "SINGLE",
+                "value" : "TASK"
+              } ],
+              "relatedDetailNames" : [ "type" ],
+              "notMode" : false
+            } ],
+            "getPSEditor" : {
+              "editorParams" : {
+                "SRFNAVPARAM.pickupname" : "选取的任务执行人",
+                "PICKUPVIEW" : "TRUE"
+              },
+              "editorType" : "ADDRESSPICKUP",
+              "name" : "executors",
+              "objectIdField" : "user_id",
+              "objectNameField" : "name",
+              "getPSAppDEACMode" : {
+                "modelref" : true,
+                "id" : "Default"
+              },
+              "getPSAppDEDataSet" : {
+                "modelref" : true,
+                "id" : "fetch_all"
+              },
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/user.json"
+              },
+              "getPSNavigateParams" : [ {
+                "key" : "pickupname",
+                "name" : "pickupname",
+                "value" : "选取的任务执行人",
+                "rawValue" : true
+              } ],
+              "getPickupPSAppView" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/user_m_pickup_view.json",
+                "viewType" : "DEMPICKUPVIEW"
+              },
+              "valueType" : "OBJECTS",
+              "enableAC" : false,
+              "enablePickupView" : true,
+              "forceSelection" : true,
+              "showTrigger" : true
+            },
+            "getPSLayoutPos" : {
+              "colLG" : 12,
+              "colMD" : 12,
+              "layout" : "TABLE_24COL"
+            },
+            "allowEmpty" : true,
+            "showCaption" : true
+          }, {
+            "getCapPSLanguageRes" : {
+              "lanResTag" : "CONTROL.DEFORM.TASK.EDIT_VIEW_FORM.FORMITEM.STATUS"
+            },
+            "caption" : "状态",
+            "codeName" : "status",
+            "createDV" : "STATUS",
+            "createDVT" : "CONTEXT",
+            "dataType" : 25,
+            "detailStyle" : "DEFAULT",
+            "detailType" : "FORMITEM",
+            "enableCond" : 3,
+            "ignoreInput" : 0,
+            "labelPos" : "LEFT",
+            "labelWidth" : 190,
+            "name" : "status",
+            "noPrivDisplayMode" : 1,
+            "getPSAppDEField" : {
+              "name" : "STATUS",
+              "codeName" : "status"
+            },
+            "getPSDEFDGroupLogics" : [ {
+              "groupOP" : "AND",
+              "logicCat" : "PANELVISIBLE",
+              "logicType" : "GROUP",
+              "getPSDEFDLogics" : [ {
+                "condOP" : "EQ",
+                "dEFDName" : "type",
+                "logicType" : "SINGLE",
+                "value" : "TASK"
+              } ],
+              "relatedDetailNames" : [ "type" ],
+              "notMode" : false
+            } ],
+            "getPSEditor" : {
+              "editorType" : "DROPDOWNLIST",
+              "name" : "status",
+              "getPSAppCodeList" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__task_status.json"
+              },
+              "singleSelect" : true
+            },
+            "getPSLayoutPos" : {
+              "colLG" : 12,
+              "colMD" : 24,
+              "layout" : "TABLE_24COL"
+            },
+            "allowEmpty" : true,
+            "needCodeListConfig" : true,
+            "showCaption" : true
+          }, {
+            "getCapPSLanguageRes" : {
+              "lanResTag" : "CONTROL.DEFORM.TASK.EDIT_VIEW_FORM.FORMITEM.PRIORITY"
+            },
+            "caption" : "优先级",
+            "codeName" : "priority",
+            "dataType" : 25,
+            "detailStyle" : "DEFAULT",
+            "detailType" : "FORMITEM",
+            "enableCond" : 3,
+            "ignoreInput" : 0,
+            "labelPos" : "LEFT",
+            "labelWidth" : 190,
+            "name" : "priority",
+            "noPrivDisplayMode" : 1,
+            "getPSAppDEField" : {
+              "name" : "PRIORITY",
+              "codeName" : "priority"
+            },
+            "getPSDEFDGroupLogics" : [ {
+              "groupOP" : "AND",
+              "logicCat" : "PANELVISIBLE",
+              "logicType" : "GROUP",
+              "getPSDEFDLogics" : [ {
+                "condOP" : "EQ",
+                "dEFDName" : "type",
+                "logicType" : "SINGLE",
+                "value" : "TASK"
+              } ],
+              "relatedDetailNames" : [ "type" ],
+              "notMode" : false
+            } ],
+            "getPSEditor" : {
+              "editorType" : "DROPDOWNLIST",
+              "name" : "priority",
+              "getPSAppCodeList" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__priority.json"
+              },
+              "singleSelect" : true
+            },
+            "getPSLayoutPos" : {
+              "colLG" : 12,
+              "colMD" : 12,
+              "layout" : "TABLE_24COL"
+            },
+            "allowEmpty" : true,
+            "needCodeListConfig" : true,
+            "showCaption" : true
+          }, {
+            "getCapPSLanguageRes" : {
+              "lanResTag" : "CONTROL.DEFORM.TASK.EDIT_VIEW_FORM.FORMITEM.START_TIME"
+            },
+            "caption" : "活动时间",
+            "codeName" : "start_time",
+            "dataType" : 5,
+            "detailStyle" : "DEFAULT",
+            "detailType" : "FORMITEM",
+            "enableCond" : 3,
+            "ignoreInput" : 0,
+            "itemWidth" : 290.0,
+            "labelPos" : "LEFT",
+            "labelWidth" : 190,
+            "name" : "start_time",
+            "noPrivDisplayMode" : 1,
+            "getPSAppDEField" : {
+              "name" : "START_TIME",
+              "codeName" : "start_time"
+            },
+            "getPSDEFDGroupLogics" : [ {
+              "groupOP" : "AND",
+              "logicCat" : "PANELVISIBLE",
+              "logicType" : "GROUP",
+              "getPSDEFDLogics" : [ {
+                "condOP" : "EQ",
+                "dEFDName" : "type",
+                "logicType" : "SINGLE",
+                "value" : "MANEUVER"
+              } ],
+              "relatedDetailNames" : [ "type" ],
+              "notMode" : false
+            }, {
+              "groupOP" : "AND",
+              "logicCat" : "ITEMBLANK",
+              "logicType" : "GROUP",
+              "getPSDEFDLogics" : [ {
+                "condOP" : "NOTEQ",
+                "dEFDName" : "type",
+                "logicType" : "SINGLE",
+                "value" : "MANEUVER"
+              } ],
+              "relatedDetailNames" : [ "type" ],
+              "notMode" : false
+            } ],
+            "getPSEditor" : {
+              "dateTimeFormat" : "YYYY-MM-DD",
+              "editorParams" : {
+                "TIMEFMT" : "YYYY-MM-DD"
+              },
+              "editorType" : "DATEPICKEREX_NOTIME",
+              "editorWidth" : 100.0,
+              "name" : "start_time"
+            },
+            "getPSLayoutPos" : {
+              "colLG" : 12,
+              "colMD" : 12,
+              "layout" : "TABLE_24COL"
+            },
+            "valueFormat" : "YYYY-MM-DD",
+            "allowEmpty" : false,
+            "showCaption" : true
+          }, {
+            "getCapPSLanguageRes" : {
+              "lanResTag" : "CONTROL.DEFORM.TASK.EDIT_VIEW_FORM.FORMITEM.END_TIME"
+            },
+            "caption" : "结束时间",
+            "codeName" : "end_time",
+            "dataType" : 5,
+            "detailStyle" : "DEFAULT",
+            "detailType" : "FORMITEM",
+            "enableCond" : 3,
+            "ignoreInput" : 0,
+            "labelPos" : "LEFT",
+            "labelWidth" : 190,
+            "name" : "end_time",
+            "noPrivDisplayMode" : 1,
+            "getPSAppDEField" : {
+              "name" : "END_TIME",
+              "codeName" : "end_time"
+            },
+            "getPSEditor" : {
+              "editorType" : "HIDDEN",
+              "name" : "end_time"
+            },
+            "getPSLayoutPos" : {
+              "colMD" : 24,
+              "layout" : "TABLE_24COL"
+            },
+            "valueFormat" : "YYYY-MM-DD HH:mm:ss",
+            "allowEmpty" : true,
+            "hidden" : true
+          } ],
+          "getPSLayout" : {
+            "childColMD" : 24,
+            "columnCount" : 24,
+            "layout" : "TABLE_24COL"
+          },
+          "getPSLayoutPos" : {
+            "colLG" : 16,
+            "colMD" : 24,
+            "layout" : "TABLE_24COL"
+          },
+          "infoGroupMode" : false,
+          "showCaption" : true
+        }, {
+          "getCapPSLanguageRes" : {
+            "lanResTag" : "CONTROL.DEFORM.TASK.EDIT_VIEW_FORM.FORMITEM.DESCRIPTION"
+          },
+          "caption" : "描述",
+          "codeName" : "description",
+          "dataType" : 21,
+          "detailStyle" : "DEFAULT",
+          "detailType" : "FORMITEM",
+          "enableCond" : 3,
+          "ignoreInput" : 0,
+          "itemHeight" : 200.0,
+          "labelPos" : "LEFT",
+          "labelWidth" : 190,
+          "name" : "description",
+          "noPrivDisplayMode" : 1,
+          "getPSAppDEField" : {
+            "name" : "DESCRIPTION",
+            "codeName" : "description"
+          },
+          "getPSEditor" : {
+            "editorHeight" : 200.0,
+            "editorParams" : {
+              "HEIGHT" : "200"
+            },
+            "editorType" : "TEXTAREA_10",
+            "maxLength" : 32000,
+            "name" : "description",
+            "showMaxLength" : true
+          },
+          "getPSLayoutPos" : {
+            "colLG" : 16,
+            "colMD" : 24,
+            "layout" : "TABLE_24COL"
+          },
+          "allowEmpty" : true,
+          "showCaption" : true
+        }, {
+          "getCapPSLanguageRes" : {
+            "lanResTag" : "CONTROL.DEFORM.TASK.EDIT_VIEW_FORM.FORMITEM.TYPE"
+          },
+          "caption" : "类型",
+          "codeName" : "type",
+          "createDV" : "TYPE",
+          "createDVT" : "CONTEXT",
+          "dataType" : 25,
+          "detailStyle" : "DEFAULT",
+          "detailType" : "FORMITEM",
+          "enableCond" : 3,
+          "ignoreInput" : 0,
+          "labelPos" : "LEFT",
+          "labelWidth" : 190,
+          "name" : "type",
+          "noPrivDisplayMode" : 1,
+          "getPSAppDEField" : {
+            "name" : "TYPE",
+            "codeName" : "type"
+          },
+          "getPSEditor" : {
+            "editorType" : "HIDDEN",
+            "name" : "type"
+          },
+          "getPSLayoutPos" : {
+            "colMD" : 24,
+            "layout" : "TABLE_24COL"
+          },
+          "allowEmpty" : true,
+          "hidden" : true
+        }, {
+          "getCapPSLanguageRes" : {
+            "lanResTag" : "DEF.LNAME.ID"
+          },
+          "caption" : "标识",
+          "codeName" : "id",
+          "dataType" : 25,
+          "detailStyle" : "DEFAULT",
+          "detailType" : "FORMITEM",
+          "enableCond" : 3,
+          "ignoreInput" : 0,
+          "labelPos" : "LEFT",
+          "labelWidth" : 190,
+          "name" : "id",
+          "noPrivDisplayMode" : 1,
+          "getPSAppDEField" : {
+            "name" : "ID",
+            "codeName" : "id"
+          },
+          "getPSEditor" : {
+            "editorType" : "HIDDEN",
+            "name" : "id"
+          },
+          "getPSLayoutPos" : {
+            "colMD" : 24,
+            "layout" : "TABLE_24COL"
+          },
+          "allowEmpty" : true,
+          "hidden" : true
+        }, {
+          "getCapPSLanguageRes" : {
+            "lanResTag" : "CONTROL.DEFORM.TASK.EDIT_VIEW_FORM.FORMITEM.OWNER_ID"
+          },
+          "caption" : "所属数据标识",
+          "codeName" : "owner_id",
+          "dataType" : 25,
+          "detailStyle" : "DEFAULT",
+          "detailType" : "FORMITEM",
+          "enableCond" : 3,
+          "ignoreInput" : 0,
+          "labelPos" : "LEFT",
+          "labelWidth" : 190,
+          "name" : "owner_id",
+          "noPrivDisplayMode" : 1,
+          "getPSAppDEField" : {
+            "name" : "OWNER_ID",
+            "codeName" : "owner_id"
+          },
+          "getPSEditor" : {
+            "editorType" : "HIDDEN",
+            "name" : "owner_id"
+          },
+          "getPSLayoutPos" : {
+            "colMD" : 24,
+            "layout" : "TABLE_24COL"
+          },
+          "allowEmpty" : true,
+          "hidden" : true
+        }, {
+          "getCapPSLanguageRes" : {
+            "lanResTag" : "CONTROL.DEFORM.TASK.EDIT_VIEW_FORM.FORMITEM.OWNER_NAME"
+          },
+          "caption" : "所属数据名称",
+          "codeName" : "owner_name",
+          "dataType" : 25,
+          "detailStyle" : "DEFAULT",
+          "detailType" : "FORMITEM",
+          "enableCond" : 3,
+          "ignoreInput" : 0,
+          "labelPos" : "LEFT",
+          "labelWidth" : 190,
+          "name" : "owner_name",
+          "noPrivDisplayMode" : 1,
+          "getPSAppDEField" : {
+            "name" : "OWNER_NAME",
+            "codeName" : "owner_name"
+          },
+          "getPSEditor" : {
+            "editorType" : "HIDDEN",
+            "name" : "owner_name"
+          },
+          "getPSLayoutPos" : {
+            "colMD" : 24,
+            "layout" : "TABLE_24COL"
+          },
+          "allowEmpty" : true,
+          "hidden" : true
+        }, {
+          "codeName" : "rawitem2",
+          "contentType" : "PLACEHOLDER",
+          "detailStyle" : "DEFAULT",
+          "detailType" : "RAWITEM",
+          "name" : "rawitem2",
+          "getPSLayoutPos" : {
+            "colMD" : 24,
+            "layout" : "TABLE_24COL"
+          },
+          "getPSRawItem" : {
+            "contentType" : "PLACEHOLDER",
+            "name" : "rawitem2",
+            "rawItemHeight" : -1.0,
+            "rawItemWidth" : -1.0
+          },
+          "rawItemHeight" : -1.0,
+          "rawItemWidth" : -1.0,
+          "showCaption" : true
+        }, {
+          "codeName" : "grouppanel3",
+          "detailStyle" : "DEFAULT",
+          "detailType" : "GROUPPANEL",
+          "name" : "grouppanel3",
+          "getPSDEFormDetails" : [ {
+            "buildInActions" : 7,
+            "caption" : "关联业务",
+            "codeName" : "mdctrl1",
+            "contentType" : "REPEATER",
+            "detailStyle" : "DEFAULT",
+            "detailType" : "MDCTRL",
+            "name" : "mdctrl1",
+            "getPSAppDEField" : {
+              "name" : "RELATIONS",
+              "codeName" : "relations"
+            },
+            "getPSDEFormDetails" : [ {
+              "codeName" : "principal_type",
+              "createDV" : "DEAL",
+              "dataType" : 25,
+              "detailStyle" : "DEFAULT",
+              "detailType" : "FORMITEM",
+              "enableCond" : 3,
+              "ignoreInput" : 0,
+              "labelPos" : "LEFT",
+              "labelWidth" : 190,
+              "name" : "principal_type",
+              "noPrivDisplayMode" : 1,
+              "getPSEditor" : {
+                "editorType" : "DROPDOWNLIST",
+                "name" : "principal_type",
+                "getPSAppCodeList" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__owner_type.json"
+                },
+                "singleSelect" : true
+              },
+              "getPSLayoutPos" : {
+                "grow" : -1,
+                "layout" : "FLEX"
+              },
+              "allowEmpty" : true,
+              "emptyCaption" : true,
+              "needCodeListConfig" : true,
+              "repeatContent" : true,
+              "showCaption" : true
+            }, {
+              "codeName" : "grouppanel6",
+              "detailStyle" : "DEFAULT",
+              "detailType" : "GROUPPANEL",
+              "name" : "grouppanel6",
+              "getPSDEFormDetails" : [ {
+                "caption" : "线索",
+                "codeName" : "leadname",
+                "dataType" : 25,
+                "detailStyle" : "DEFAULT",
+                "detailType" : "FORMITEM",
+                "enableCond" : 3,
+                "ignoreInput" : 0,
+                "labelPos" : "NONE",
+                "labelWidth" : 0,
+                "name" : "leadname",
+                "noPrivDisplayMode" : 1,
+                "getPSDEFDGroupLogics" : [ {
+                  "groupOP" : "AND",
+                  "logicCat" : "PANELVISIBLE",
+                  "logicType" : "GROUP",
+                  "getPSDEFDLogics" : [ {
+                    "condOP" : "EQ",
+                    "dEFDName" : "principal_type",
+                    "logicType" : "SINGLE",
+                    "value" : "LEAD"
+                  } ],
+                  "relatedDetailNames" : [ "principal_type" ],
+                  "notMode" : false
+                } ],
+                "getPSEditor" : {
+                  "editorParams" : {
+                    "AC" : "TRUE",
+                    "PICKUPVIEW" : "TRUE"
+                  },
+                  "editorType" : "PICKER",
+                  "name" : "leadname",
+                  "getPSAppDEACMode" : {
+                    "modelref" : true,
+                    "id" : "Default"
+                  },
+                  "getPSAppDEDataSet" : {
+                    "modelref" : true,
+                    "id" : "fetch_all"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/lead.json"
+                  },
+                  "valueItemName" : "principal_id",
+                  "enableAC" : true,
+                  "enablePickupView" : true,
+                  "forceSelection" : true,
+                  "showTrigger" : true,
+                  "singleSelect" : true
+                },
+                "getPSLayoutPos" : {
+                  "grow" : -1,
+                  "layout" : "FLEX",
+                  "width" : 250,
+                  "widthMode" : "PX"
+                },
+                "resetItemName" : "principal_type",
+                "resetItemNames" : [ "principal_type" ],
+                "valueItemName" : "principal_id",
+                "allowEmpty" : true,
+                "repeatContent" : true
+              }, {
+                "caption" : "商机",
+                "codeName" : "dealname",
+                "dataType" : 25,
+                "detailStyle" : "DEFAULT",
+                "detailType" : "FORMITEM",
+                "enableCond" : 3,
+                "ignoreInput" : 0,
+                "labelPos" : "NONE",
+                "labelWidth" : 0,
+                "name" : "dealname",
+                "noPrivDisplayMode" : 1,
+                "getPSDEFDGroupLogics" : [ {
+                  "groupOP" : "AND",
+                  "logicCat" : "PANELVISIBLE",
+                  "logicType" : "GROUP",
+                  "getPSDEFDLogics" : [ {
+                    "condOP" : "EQ",
+                    "dEFDName" : "principal_type",
+                    "logicType" : "SINGLE",
+                    "value" : "DEAL"
+                  } ],
+                  "relatedDetailNames" : [ "principal_type" ],
+                  "notMode" : false
+                } ],
+                "getPSEditor" : {
+                  "editorParams" : {
+                    "AC" : "TRUE",
+                    "PICKUPVIEW" : "TRUE"
+                  },
+                  "editorType" : "PICKER",
+                  "name" : "dealname",
+                  "getPSAppDEACMode" : {
+                    "modelref" : true,
+                    "id" : "Default"
+                  },
+                  "getPSAppDEDataSet" : {
+                    "modelref" : true,
+                    "id" : "fetch_all"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+                  },
+                  "valueItemName" : "principal_id",
+                  "enableAC" : true,
+                  "enablePickupView" : true,
+                  "forceSelection" : true,
+                  "showTrigger" : true,
+                  "singleSelect" : true
+                },
+                "getPSLayoutPos" : {
+                  "grow" : -1,
+                  "layout" : "FLEX",
+                  "width" : 250,
+                  "widthMode" : "PX"
+                },
+                "resetItemName" : "principal_type",
+                "resetItemNames" : [ "principal_type" ],
+                "valueItemName" : "principal_id",
+                "allowEmpty" : true,
+                "repeatContent" : true
+              }, {
+                "caption" : "客户",
+                "codeName" : "accountname",
+                "dataType" : 25,
+                "detailStyle" : "DEFAULT",
+                "detailType" : "FORMITEM",
+                "enableCond" : 3,
+                "ignoreInput" : 0,
+                "labelPos" : "NONE",
+                "labelWidth" : 0,
+                "name" : "accountname",
+                "noPrivDisplayMode" : 1,
+                "getPSDEFDGroupLogics" : [ {
+                  "groupOP" : "AND",
+                  "logicCat" : "PANELVISIBLE",
+                  "logicType" : "GROUP",
+                  "getPSDEFDLogics" : [ {
+                    "condOP" : "EQ",
+                    "dEFDName" : "principal_type",
+                    "logicType" : "SINGLE",
+                    "value" : "ACCOUNT"
+                  } ],
+                  "relatedDetailNames" : [ "principal_type" ],
+                  "notMode" : false
+                } ],
+                "getPSEditor" : {
+                  "editorParams" : {
+                    "AC" : "TRUE",
+                    "PICKUPVIEW" : "TRUE"
+                  },
+                  "editorType" : "PICKER",
+                  "name" : "accountname",
+                  "getPSAppDEACMode" : {
+                    "modelref" : true,
+                    "id" : "Default"
+                  },
+                  "getPSAppDEDataSet" : {
+                    "modelref" : true,
+                    "id" : "fetch_all"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/account.json"
+                  },
+                  "valueItemName" : "principal_id",
+                  "enableAC" : true,
+                  "enablePickupView" : true,
+                  "forceSelection" : true,
+                  "showTrigger" : true,
+                  "singleSelect" : true
+                },
+                "getPSLayoutPos" : {
+                  "grow" : -1,
+                  "layout" : "FLEX",
+                  "width" : 250,
+                  "widthMode" : "PX"
+                },
+                "resetItemName" : "principal_type",
+                "resetItemNames" : [ "principal_type" ],
+                "valueItemName" : "principal_id",
+                "allowEmpty" : true,
+                "repeatContent" : true
+              }, {
+                "caption" : "联系人",
+                "codeName" : "contactname",
+                "dataType" : 25,
+                "detailStyle" : "DEFAULT",
+                "detailType" : "FORMITEM",
+                "enableCond" : 3,
+                "ignoreInput" : 0,
+                "labelPos" : "NONE",
+                "labelWidth" : 0,
+                "name" : "contactname",
+                "noPrivDisplayMode" : 1,
+                "getPSDEFDGroupLogics" : [ {
+                  "groupOP" : "AND",
+                  "logicCat" : "PANELVISIBLE",
+                  "logicType" : "GROUP",
+                  "getPSDEFDLogics" : [ {
+                    "condOP" : "EQ",
+                    "dEFDName" : "principal_type",
+                    "logicType" : "SINGLE",
+                    "value" : "CONTACT"
+                  } ],
+                  "relatedDetailNames" : [ "principal_type" ],
+                  "notMode" : false
+                } ],
+                "getPSEditor" : {
+                  "editorParams" : {
+                    "AC" : "TRUE",
+                    "PICKUPVIEW" : "TRUE"
+                  },
+                  "editorType" : "PICKER",
+                  "name" : "contactname",
+                  "getPSAppDEACMode" : {
+                    "modelref" : true,
+                    "id" : "Default"
+                  },
+                  "getPSAppDEDataSet" : {
+                    "modelref" : true,
+                    "id" : "fetch_all"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/contact.json"
+                  },
+                  "valueItemName" : "principal_id",
+                  "enableAC" : true,
+                  "enablePickupView" : true,
+                  "forceSelection" : true,
+                  "showTrigger" : true,
+                  "singleSelect" : true
+                },
+                "getPSLayoutPos" : {
+                  "grow" : -1,
+                  "layout" : "FLEX",
+                  "width" : 250,
+                  "widthMode" : "PX"
+                },
+                "resetItemName" : "principal_type",
+                "resetItemNames" : [ "principal_type" ],
+                "valueItemName" : "principal_id",
+                "allowEmpty" : true,
+                "repeatContent" : true
+              }, {
+                "caption" : "任务",
+                "codeName" : "formitem3",
+                "dataType" : 25,
+                "detailStyle" : "DEFAULT",
+                "detailType" : "FORMITEM",
+                "enableCond" : 3,
+                "ignoreInput" : 0,
+                "labelPos" : "NONE",
+                "labelWidth" : 0,
+                "name" : "formitem3",
+                "noPrivDisplayMode" : 1,
+                "getPSDEFDGroupLogics" : [ {
+                  "groupOP" : "AND",
+                  "logicCat" : "PANELVISIBLE",
+                  "logicType" : "GROUP",
+                  "getPSDEFDLogics" : [ {
+                    "condOP" : "EQ",
+                    "dEFDName" : "principal_type",
+                    "logicType" : "SINGLE",
+                    "value" : "TASK"
+                  } ],
+                  "relatedDetailNames" : [ "principal_type" ],
+                  "notMode" : false
+                } ],
+                "getPSEditor" : {
+                  "editorParams" : {
+                    "AC" : "TRUE",
+                    "PICKUPVIEW" : "TRUE"
+                  },
+                  "editorType" : "PICKER",
+                  "name" : "formitem3",
+                  "getPSAppDEACMode" : {
+                    "modelref" : true,
+                    "id" : "Default"
+                  },
+                  "getPSAppDEDataSet" : {
+                    "modelref" : true,
+                    "id" : "fetch_all_task"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                  },
+                  "valueItemName" : "principal_id",
+                  "enableAC" : true,
+                  "enablePickupView" : true,
+                  "forceSelection" : true,
+                  "showTrigger" : true,
+                  "singleSelect" : true
+                },
+                "getPSLayoutPos" : {
+                  "grow" : -1,
+                  "layout" : "FLEX",
+                  "width" : 250,
+                  "widthMode" : "PX"
+                },
+                "resetItemName" : "principal_type",
+                "resetItemNames" : [ "principal_type" ],
+                "valueItemName" : "principal_id",
+                "allowEmpty" : true,
+                "repeatContent" : true
+              }, {
+                "caption" : "在建项目",
+                "codeName" : "projectname",
+                "dataType" : 25,
+                "detailStyle" : "DEFAULT",
+                "detailType" : "FORMITEM",
+                "enableCond" : 3,
+                "ignoreInput" : 0,
+                "labelPos" : "NONE",
+                "labelWidth" : 0,
+                "name" : "projectname",
+                "noPrivDisplayMode" : 1,
+                "getPSDEFDGroupLogics" : [ {
+                  "groupOP" : "AND",
+                  "logicCat" : "PANELVISIBLE",
+                  "logicType" : "GROUP",
+                  "getPSDEFDLogics" : [ {
+                    "condOP" : "EQ",
+                    "dEFDName" : "principal_type",
+                    "logicType" : "SINGLE",
+                    "value" : "PROJECT"
+                  } ],
+                  "relatedDetailNames" : [ "principal_type" ],
+                  "notMode" : false
+                } ],
+                "getPSEditor" : {
+                  "editorParams" : {
+                    "AC" : "TRUE",
+                    "PICKUPVIEW" : "TRUE"
+                  },
+                  "editorType" : "PICKER",
+                  "name" : "projectname",
+                  "getPSAppDEACMode" : {
+                    "modelref" : true,
+                    "id" : "Default"
+                  },
+                  "getPSAppDEDataSet" : {
+                    "modelref" : true,
+                    "id" : "fetch_all"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/project.json"
+                  },
+                  "valueItemName" : "principal_id",
+                  "enableAC" : true,
+                  "enablePickupView" : true,
+                  "forceSelection" : true,
+                  "showTrigger" : true,
+                  "singleSelect" : true
+                },
+                "getPSLayoutPos" : {
+                  "grow" : -1,
+                  "layout" : "FLEX",
+                  "width" : 250,
+                  "widthMode" : "PX"
+                },
+                "resetItemName" : "principal_type",
+                "resetItemNames" : [ "principal_type" ],
+                "valueItemName" : "principal_id",
+                "allowEmpty" : true,
+                "repeatContent" : true
+              }, {
+                "caption" : "产品",
+                "codeName" : "product",
+                "dataType" : 25,
+                "detailStyle" : "DEFAULT",
+                "detailType" : "FORMITEM",
+                "enableCond" : 3,
+                "ignoreInput" : 0,
+                "labelPos" : "NONE",
+                "labelWidth" : 0,
+                "name" : "product",
+                "noPrivDisplayMode" : 1,
+                "getPSDEFDGroupLogics" : [ {
+                  "groupOP" : "AND",
+                  "logicCat" : "PANELVISIBLE",
+                  "logicType" : "GROUP",
+                  "getPSDEFDLogics" : [ {
+                    "condOP" : "EQ",
+                    "dEFDName" : "principal_type",
+                    "logicType" : "SINGLE",
+                    "value" : "PRODUCT"
+                  } ],
+                  "relatedDetailNames" : [ "principal_type" ],
+                  "notMode" : false
+                } ],
+                "getPSEditor" : {
+                  "editorParams" : {
+                    "AC" : "TRUE",
+                    "PICKUPVIEW" : "TRUE"
+                  },
+                  "editorType" : "PICKER",
+                  "name" : "product",
+                  "getPSAppDEACMode" : {
+                    "modelref" : true,
+                    "id" : "Default"
+                  },
+                  "getPSAppDEDataSet" : {
+                    "modelref" : true,
+                    "id" : "fetch_all"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/product.json"
+                  },
+                  "valueItemName" : "principal_id",
+                  "enableAC" : true,
+                  "enablePickupView" : true,
+                  "forceSelection" : true,
+                  "showTrigger" : true,
+                  "singleSelect" : true
+                },
+                "getPSLayoutPos" : {
+                  "grow" : -1,
+                  "layout" : "FLEX",
+                  "width" : 250,
+                  "widthMode" : "PX"
+                },
+                "resetItemName" : "principal_type",
+                "resetItemNames" : [ "principal_type" ],
+                "valueItemName" : "principal_id",
+                "allowEmpty" : true,
+                "repeatContent" : true
+              } ],
+              "getPSLayout" : {
+                "layout" : "FLEX"
+              },
+              "getPSLayoutPos" : {
+                "grow" : -1,
+                "layout" : "FLEX"
+              },
+              "infoGroupMode" : false,
+              "repeatContent" : true,
+              "showCaption" : false
+            }, {
+              "codeName" : "grouppanel7",
+              "detailStyle" : "DEFAULT",
+              "detailType" : "GROUPPANEL",
+              "name" : "grouppanel7",
+              "getPSDEFormDetails" : [ {
+                "codeName" : "target_id",
+                "dataType" : 25,
+                "detailStyle" : "DEFAULT",
+                "detailType" : "FORMITEM",
+                "enableCond" : 3,
+                "ignoreInput" : 0,
+                "labelPos" : "LEFT",
+                "labelWidth" : 190,
+                "name" : "target_id",
+                "noPrivDisplayMode" : 1,
+                "getPSEditor" : {
+                  "editorType" : "HIDDEN",
+                  "name" : "target_id"
+                },
+                "getPSLayoutPos" : {
+                  "grow" : -1,
+                  "layout" : "FLEX"
+                },
+                "allowEmpty" : true,
+                "hidden" : true,
+                "repeatContent" : true
+              }, {
+                "codeName" : "target_type",
+                "createDV" : "TYPE",
+                "createDVT" : "CONTEXT",
+                "dataType" : 25,
+                "detailStyle" : "DEFAULT",
+                "detailType" : "FORMITEM",
+                "enableCond" : 3,
+                "ignoreInput" : 0,
+                "labelPos" : "LEFT",
+                "labelWidth" : 190,
+                "name" : "target_type",
+                "noPrivDisplayMode" : 1,
+                "getPSEditor" : {
+                  "editorType" : "HIDDEN",
+                  "name" : "target_type"
+                },
+                "getPSLayoutPos" : {
+                  "grow" : -1,
+                  "layout" : "FLEX"
+                },
+                "allowEmpty" : true,
+                "hidden" : true,
+                "repeatContent" : true
+              }, {
+                "codeName" : "principal_id",
+                "dataType" : 25,
+                "detailStyle" : "DEFAULT",
+                "detailType" : "FORMITEM",
+                "enableCond" : 3,
+                "ignoreInput" : 0,
+                "labelPos" : "LEFT",
+                "labelWidth" : 190,
+                "name" : "principal_id",
+                "noPrivDisplayMode" : 1,
+                "getPSEditor" : {
+                  "editorType" : "HIDDEN",
+                  "name" : "principal_id"
+                },
+                "getPSLayoutPos" : {
+                  "grow" : -1,
+                  "layout" : "FLEX"
+                },
+                "allowEmpty" : true,
+                "hidden" : true,
+                "repeatContent" : true
+              } ],
+              "getPSLayout" : {
+                "layout" : "FLEX"
+              },
+              "getPSLayoutPos" : {
+                "grow" : -1,
+                "layout" : "FLEX"
+              },
+              "infoGroupMode" : false,
+              "repeatContent" : true,
+              "showCaption" : false
+            } ],
+            "getPSLayout" : {
+              "dir" : "row",
+              "layout" : "FLEX"
+            },
+            "getPSLayoutPos" : {
+              "colLG" : 18,
+              "colMD" : 18,
+              "layout" : "TABLE_24COL"
+            },
+            "infoGroupMode" : false,
+            "showCaption" : true
+          }, {
+            "codeName" : "rawitem4",
+            "contentType" : "RAW",
+            "detailStyle" : "DEFAULT",
+            "detailType" : "RAWITEM",
+            "name" : "rawitem4",
+            "getPSLayoutPos" : {
+              "colLG" : 6,
+              "colMD" : 6,
+              "layout" : "TABLE_24COL"
+            },
+            "getPSRawItem" : {
+              "caption" : "将本任务记录与‘线索’、‘商机’、‘任务’、‘订单’做关联",
+              "contentType" : "RAW",
+              "name" : "rawitem4",
+              "getPSSysCss" : {
+                "cssName" : "font-left"
+              },
+              "rawItemHeight" : -1.0,
+              "rawItemWidth" : -1.0
+            },
+            "getPSSysCss" : {
+              "cssName" : "font-left"
+            },
+            "rawContent" : "将本任务记录与‘线索’、‘商机’、‘任务’、‘订单’做关联",
+            "rawItemHeight" : -1.0,
+            "rawItemWidth" : -1.0,
+            "showCaption" : true
+          } ],
+          "getPSLayout" : {
+            "childColMD" : 24,
+            "columnCount" : 24,
+            "layout" : "TABLE_24COL"
+          },
+          "getPSLayoutPos" : {
+            "colMD" : 24,
+            "layout" : "TABLE_24COL"
+          },
+          "infoGroupMode" : false,
+          "showCaption" : false
+        } ],
+        "getPSLayout" : {
+          "childColMD" : 24,
+          "columnCount" : 24,
+          "layout" : "TABLE_24COL"
+        },
+        "infoGroupMode" : false
+      } ],
+      "getPSLayout" : {
+        "childColMD" : 24,
+        "columnCount" : 24,
+        "layout" : "TABLE_24COL"
+      },
+      "getRemovePSControlAction" : {
+        "modelref" : true,
+        "id" : "remove",
+        "actionName" : "Remove",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "DELETE",
+        "name" : "remove",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "remove"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+        }
+      },
+      "tabHeaderPos" : "TOP",
+      "getUpdatePSControlAction" : {
+        "modelref" : true,
+        "id" : "update",
+        "actionName" : "Update",
+        "actionType" : "DEACTION",
+        "dataAccessAction" : "UPDATE",
+        "name" : "update",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "update"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+        }
+      },
+      "noTabHeader" : true,
+      "name" : "form",
+      "modelid" : "f98b4e7a8c9fb65606493557f74ed32a",
+      "modeltype" : "PSDEFORM_EDITFORM"
+    }, {
+      "codeName" : "task_edit_view_datainfobar",
+      "controlType" : "DATAINFOBAR",
+      "name" : "datainfobar",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+      },
+      "getPSControlParam" : {
+        "id" : "datainfobar"
+      }
+    }, {
+      "caption" : "任务",
+      "codeName" : "task_edit_view_captionbar",
+      "controlType" : "CAPTIONBAR",
+      "name" : "captionbar",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+      },
+      "getPSControlParam" : { }
+    } ]
+  },
+  "title" : "任务编辑视图",
+  "getTitlePSLanguageRes" : {
+    "lanResTag" : "PAGE.TITLE.TASK.EDIT_VIEW"
+  },
+  "viewStyle" : "DEFAULT",
+  "viewType" : "DEEDITVIEW",
+  "xDataControlName" : "form",
+  "enableDP" : true,
+  "showDataInfoBar" : true,
+  "modelid" : "f98048a633c15e3705c23138b91e85f7",
+  "modeltype" : "PSAPPDEVIEW"
+}

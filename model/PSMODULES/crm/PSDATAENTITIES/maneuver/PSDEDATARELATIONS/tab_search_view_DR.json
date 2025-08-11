@@ -1,0 +1,11 @@
+{
+  "codeName" : "tab_search_view_DR",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/maneuver/PSDEDATARELATIONS/tab_search_view_DR.json",
+  "getFormCapPSLanguageRes" : {
+    "lanResTag" : "DE.LNAME.MANEUVER"
+  },
+  "formCaption" : "活动",
+  "memo" : "自动生成",
+  "name" : "活动分页导航搜索视图_关系界面组",
+  "hideEditItem" : true
+}

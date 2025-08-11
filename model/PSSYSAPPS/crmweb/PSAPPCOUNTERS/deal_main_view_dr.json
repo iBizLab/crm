@@ -1,0 +1,16 @@
+{
+  "codeName" : "deal_main_view_dr",
+  "counterType" : "DEDR",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPCOUNTERS/deal_main_view_dr.json",
+  "getGetPSAppDEAction" : {
+    "modelref" : true,
+    "id" : "main_view_dr_count"
+  },
+  "name" : "商机main_view关系",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/deal.json"
+  },
+  "timer" : 60000,
+  "uniqueTag" : "deal_main_view_dr"
+}

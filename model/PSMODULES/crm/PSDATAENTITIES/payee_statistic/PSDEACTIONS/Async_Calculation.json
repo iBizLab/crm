@@ -1,0 +1,26 @@
+{
+  "actionMode" : "CUSTOM",
+  "actionType" : "USERCUSTOM",
+  "codeName" : "Async_Calculation",
+  "dataAccessAction" : "NONE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic/PSDEACTIONS/Async_Calculation.json",
+  "logicName" : "异步计算统计数据",
+  "name" : "Async_Calculation",
+  "getPSDEActionInput" : {
+    "name" : "Async_CalculationInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "payee_statistic_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Async_CalculationResult",
+    "type" : "ASYNCACTION"
+  },
+  "getRealPSDEAction" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic/PSDEACTIONS/Calculation.json"
+  },
+  "asyncAction" : true
+}

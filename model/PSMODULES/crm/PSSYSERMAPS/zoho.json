@@ -1,0 +1,9 @@
+{
+  "codeName" : "zoho",
+  "dynaModelFilePath" : "PSMODULES/crm/PSSYSERMAPS/zoho.json",
+  "name" : "zoho",
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  }
+}

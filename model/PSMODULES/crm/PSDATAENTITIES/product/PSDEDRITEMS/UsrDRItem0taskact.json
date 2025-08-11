@@ -1,0 +1,16 @@
+{
+  "codeName" : "UsrDRItem0taskact",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/product/PSDEDRITEMS/UsrDRItem0taskact.json",
+  "itemType" : "CUSTOM",
+  "memo" : "自动生成",
+  "name" : "已完成的任务&历史活动(列表)",
+  "parentDataJO" : {
+    "srfparentdename" : "PRODUCT",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "taskActListView",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/schedule.json"
+  }
+}

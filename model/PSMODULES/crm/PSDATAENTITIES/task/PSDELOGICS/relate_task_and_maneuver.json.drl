@@ -1,0 +1,94 @@
+package cn.ibizlab.crm.crm.logic.tasklogic.relate_task_and_maneuver;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.task taskrelate_task_and_maneuverdefault;
+                global cn.ibizlab.crm.core.crm.domain.task taskrelate_task_and_maneuverfor_temp_obj;
+                global cn.ibizlab.crm.core.crm.domain.relation taskrelate_task_and_maneuverrelation_obj;
+                global cn.ibizlab.crm.core.crm.domain.task taskrelate_task_and_maneuverselectdate;
+                    global cn.ibizlab.crm.core.crm.service.IrelationService relationservice;
+        global cn.ibizlab.crm.core.crm.service.ItaskService iBzSysTaskDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "taskrelate_task_and_maneuverbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[绑定参数]
+            rule "bindparam1"
+            ruleflow-group "taskrelate_task_and_maneuverbindparam1"
+            when
+            then
+                        update(taskrelate_task_and_maneuverdefault);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverfor_temp_obj);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverrelation_obj);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverselectdate);//更新fact中变量值
+            end
+
+            //逻辑处理节点[循环子调用]
+            rule "loopsubcall1"
+            ruleflow-group "taskrelate_task_and_maneuverloopsubcall1"
+            when
+            then
+                        update(taskrelate_task_and_maneuverdefault);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverfor_temp_obj);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverrelation_obj);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverselectdate);//更新fact中变量值
+            end
+
+            //逻辑处理节点[重置关联对象]
+            rule "resetparam1"
+            ruleflow-group "taskrelate_task_and_maneuverresetparam1"
+            when
+            then
+                        update(taskrelate_task_and_maneuverdefault);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverfor_temp_obj);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverrelation_obj);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverselectdate);//更新fact中变量值
+            end
+
+            //逻辑处理节点[活动填充关联对象属性]
+            rule "prepareparam1"
+            ruleflow-group "taskrelate_task_and_maneuverprepareparam1"
+            when
+            then
+                            taskrelate_task_and_maneuverrelation_obj.set("targetid",taskrelate_task_and_maneuverfor_temp_obj.get("id"));
+                            taskrelate_task_and_maneuverrelation_obj.set("principaltype","TASK");
+                            taskrelate_task_and_maneuverrelation_obj.set("principalid",taskrelate_task_and_maneuverdefault.get("id"));
+                        update(taskrelate_task_and_maneuverdefault);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverfor_temp_obj);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverrelation_obj);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverselectdate);//更新fact中变量值
+            end
+
+            //逻辑处理节点[建立关联关系]
+            rule "deaction1"
+            ruleflow-group "taskrelate_task_and_maneuverdeaction1"
+            when
+            then
+                        relationservice.save(taskrelate_task_and_maneuverrelation_obj);
+                        update(taskrelate_task_and_maneuverdefault);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverfor_temp_obj);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverrelation_obj);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverselectdate);//更新fact中变量值
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "taskrelate_task_and_maneuverend1"
+            when
+            then
+                        update(taskrelate_task_and_maneuverdefault);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverfor_temp_obj);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverrelation_obj);//更新fact中变量值
+                        update(taskrelate_task_and_maneuverselectdate);//更新fact中变量值
+            end

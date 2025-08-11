@@ -1,0 +1,53 @@
+{
+  "calendarStyle" : "WEEK",
+  "codeName" : "portal_calendar_view_calendar",
+  "controlType" : "CALENDAR",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task/PSCALENDARS/portal_calendar_view_calendar.json",
+  "emptyText" : "本周暂无活动",
+  "groupMode" : "NONE",
+  "legendPos" : "NONE",
+  "logicName" : "门户_我的本周活动（日历）_日历部件",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+  },
+  "getPSSysCalendarItems" : [ {
+    "getBeginTimePSAppDEField" : {
+      "name" : "START_TIME",
+      "codeName" : "start_time"
+    },
+    "getContentPSAppDEField" : {
+      "name" : "DESCRIPTION",
+      "codeName" : "description"
+    },
+    "getEndTimePSAppDEField" : {
+      "name" : "START_TIME",
+      "codeName" : "start_time"
+    },
+    "getIdPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    },
+    "itemStyle" : "DEFAULT",
+    "itemType" : "maneuver",
+    "maxSize" : -1,
+    "name" : "活动",
+    "getPSAppDEDataSet" : {
+      "modelref" : true,
+      "id" : "fetch_my_maneuver"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+    },
+    "getTextPSAppDEField" : {
+      "name" : "SUBJECT",
+      "codeName" : "subject"
+    },
+    "enableQuickCreate" : false,
+    "id" : "maneuver"
+  } ],
+  "enableGroup" : false,
+  "modelid" : "69fb7a1c4f57f67c16ea2e7ff6d5fa11",
+  "modeltype" : "PSSYSCALENDAR"
+}

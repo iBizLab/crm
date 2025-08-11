@@ -1,0 +1,6 @@
+{
+  "codeName" : "Default",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/attachment/PSDEDATARELATIONS/Default.json",
+  "formCaption" : "附件",
+  "name" : "附件默认关系界面组"
+}

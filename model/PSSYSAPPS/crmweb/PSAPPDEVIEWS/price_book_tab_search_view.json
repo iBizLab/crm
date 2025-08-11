@@ -1,0 +1,1355 @@
+{
+  "accUserMode" : 2,
+  "caption" : "价格表",
+  "codeName" : "price_book_tab_search_view",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_tab_search_view.json",
+  "memo" : "自动生成",
+  "name" : "price_booktab_search_view",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+  },
+  "getPSAppModule" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/Ungroup.json"
+  },
+  "getPSDEViewCodeName" : "tab_search_view",
+  "getPSDEViewId" : "9e50e9791f19833a7395c11cd4f87ace",
+  "getPSViewLayoutPanel" : {
+    "codeName" : "usr0318980456",
+    "controlType" : "VIEWLAYOUTPANEL",
+    "layoutMode" : "FLEX",
+    "logicName" : "分页搜索通用布局",
+    "memo" : "分页搜索通用布局",
+    "name" : "layoutpanel",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+    },
+    "getPSControlParam" : { },
+    "getPSLayout" : {
+      "layout" : "FLEX"
+    },
+    "getRootPSPanelItems" : [ {
+      "caption" : "容器",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "view_header",
+      "getPSLayout" : {
+        "align" : "space-between",
+        "dir" : "row",
+        "layout" : "FLEX",
+        "vAlign" : "center"
+      },
+      "getPSLayoutPos" : {
+        "grow" : -1,
+        "layout" : "FLEX",
+        "shrink" : 0
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "view_captionbar",
+        "getPSLayout" : {
+          "dir" : "row",
+          "layout" : "FLEX",
+          "vAlign" : "center"
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "layout" : "FLEX"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "标题栏",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CTRLPOS",
+          "name" : "captionbar",
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX"
+          },
+          "showCaption" : true
+        }, {
+          "actionType" : "UIACTION",
+          "buttonStyle" : "DEFAULT",
+          "caption" : "过滤",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "BUTTON",
+          "name" : "button_filter",
+          "getPSAppViewUIAction" : {
+            "modelref" : true,
+            "id" : "layoutpanel_button_filter"
+          },
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX"
+          },
+          "getPSSysImage" : {
+            "glyph" : "xf0b0@FontAwesome",
+            "cssClass" : "fa fa-filter"
+          },
+          "getPSUIAction" : {
+            "actionTarget" : "SINGLEDATA",
+            "caption" : "过滤",
+            "codeName" : "panel_usr0318980456_button_filter_click",
+            "frontProcessType" : "OTHER",
+            "fullCodeName" : "account_panel_usr0318980456_button_filter_click",
+            "name" : "过滤",
+            "getPSAppDEUILogic" : {
+              "modelref" : true,
+              "id" : "filter_trigger"
+            },
+            "getPSAppDataEntity" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/account.json"
+            },
+            "uIActionMode" : "FRONT",
+            "uIActionTag" : "panel_usr0318980456_button_filter_click",
+            "uIActionType" : "DEUIACTION",
+            "uILogicAttachMode" : "REPLACE",
+            "uILogicType" : "DELOGIC",
+            "id" : "panel_usr0318980456_button_filter_click@account"
+          },
+          "tooltip" : "过滤",
+          "uIActionTarget" : "SINGLEDATA"
+        }, {
+          "caption" : "文本",
+          "contentType" : "RAW",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "RAWITEM",
+          "name" : "static_text",
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX"
+          },
+          "getPSRawItem" : {
+            "caption" : "文本内容",
+            "contentType" : "RAW",
+            "name" : "static_text",
+            "predefinedType" : "STATIC_TEXT",
+            "renderMode" : "TEXT"
+          },
+          "getPSSysPFPlugin" : {
+            "pluginType" : "CUSTOM",
+            "pluginCode" : "GROUP_SEARCHBAR",
+            "runtimeObject" : true
+          },
+          "rawContent" : "文本内容",
+          "showCaption" : true
+        } ]
+      }, {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "container3",
+        "getPSLayout" : {
+          "dir" : "row",
+          "layout" : "FLEX",
+          "vAlign" : "center"
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "layout" : "FLEX",
+          "spacingRight" : "INNERMEDIUM"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "容器",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CONTAINER",
+          "name" : "view_tabexppanel",
+          "getPSLayout" : {
+            "layout" : "FLEX"
+          },
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX"
+          },
+          "getPSPanelItems" : [ {
+            "caption" : "关系分页部件",
+            "itemStyle" : "DEFAULT",
+            "itemType" : "CTRLPOS",
+            "name" : "tabexppanel",
+            "getPSLayoutPos" : {
+              "grow" : -1,
+              "layout" : "FLEX"
+            },
+            "showCaption" : true
+          } ]
+        }, {
+          "caption" : "工具栏占位",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "RAWITEM",
+          "name" : "tabtoolbar",
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX"
+          },
+          "getPSRawItem" : {
+            "name" : "tabtoolbar",
+            "predefinedType" : "TELEPORT_PLACEHOLDER"
+          },
+          "showCaption" : true
+        } ]
+      } ],
+      "predefinedType" : "VIEWHEADER"
+    }, {
+      "caption" : "容器",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "container",
+      "getPSLayout" : {
+        "dir" : "row",
+        "layout" : "FLEX"
+      },
+      "getPSLayoutPos" : {
+        "grow" : 1,
+        "layout" : "FLEX"
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "容器",
+        "contentWidth" : 300.0,
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "view_searchbar",
+        "getPSLayout" : {
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "layout" : "FLEX",
+          "shrink" : 0,
+          "spacingBottom" : "INNERSMALL",
+          "spacingLeft" : "INNERMEDIUM",
+          "spacingTop" : "INNERSMALL",
+          "width" : 300,
+          "widthMode" : "PX"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "搜索栏",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CTRLPOS",
+          "name" : "searchbar",
+          "getPSLayoutPos" : {
+            "grow" : 1,
+            "layout" : "FLEX"
+          },
+          "showCaption" : true
+        } ],
+        "width" : 300.0
+      }, {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "container1",
+        "getPSLayout" : {
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "grow" : 1,
+          "layout" : "FLEX"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "容器",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CONTAINER",
+          "name" : "view_content",
+          "getPSLayout" : {
+            "layout" : "FLEX"
+          },
+          "getPSLayoutPos" : {
+            "grow" : 1,
+            "layout" : "FLEX"
+          },
+          "getPSPanelItems" : [ {
+            "caption" : "导航区占位",
+            "itemStyle" : "DEFAULT",
+            "itemType" : "RAWITEM",
+            "name" : "nav_pos",
+            "getPSLayoutPos" : {
+              "grow" : 1,
+              "layout" : "FLEX"
+            },
+            "getPSRawItem" : {
+              "name" : "nav_pos",
+              "predefinedType" : "NAV_POS"
+            },
+            "showCaption" : true
+          } ],
+          "predefinedType" : "VIEWCONTENT"
+        }, {
+          "caption" : "容器",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CONTAINER",
+          "name" : "view_tabexppanel_bottom",
+          "getPSLayout" : {
+            "layout" : "FLEX"
+          },
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX",
+            "shrink" : 0
+          }
+        } ]
+      } ]
+    } ],
+    "layoutBodyOnly" : false,
+    "layoutPanel" : true,
+    "useDefaultLayout" : false,
+    "viewProxyMode" : true,
+    "modelid" : "f9a64be769ab83bfc4ff869c38a9192b",
+    "modeltype" : "PSSYSVIEWLAYOUTPANEL",
+    "getPSControls" : [ {
+      "codeName" : "searchbar",
+      "controlType" : "SEARCHBAR",
+      "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book/PSSEARCHBARS/searchbar.json",
+      "logicName" : "默认搜索栏",
+      "memo" : "自动生成",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+      },
+      "getPSControlParam" : {
+        "id" : "SEARCHBAR"
+      },
+      "quickGroupCount" : -1,
+      "quickSearchMode" : 1,
+      "quickSearchWidth" : 0,
+      "enableFilter" : false,
+      "enableGroup" : false,
+      "enableQuickSearch" : true,
+      "mobileSearchBar" : false,
+      "name" : "searchbar",
+      "modelid" : "f7b852ecd244a0bdfacae06ea80849d9",
+      "modeltype" : "PSSYSSEARCHBAR"
+    }, {
+      "codeName" : "tab_search_view_tabexppanel",
+      "controlStyle" : "TABEXPPANEL_DROPDOWN",
+      "controlType" : "TABEXPPANEL",
+      "name" : "tabexppanel",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+      },
+      "getPSAppViewRefs" : [ {
+        "name" : "EXPITEM:grid",
+        "realTitle" : "价格表",
+        "getRefPSAppView" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_grid_view_multimode.json",
+          "viewType" : "DEGRIDVIEW"
+        }
+      }, {
+        "name" : "EXPITEM:data_view",
+        "realTitle" : "价格表",
+        "getRefPSAppView" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_data_view_multimode.json",
+          "viewType" : "DEDATAVIEW"
+        }
+      }, {
+        "name" : "EXPITEM:list",
+        "realTitle" : "价格表",
+        "getRefPSAppView" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_list_view_multimode.json",
+          "viewType" : "DELISTVIEW"
+        }
+      } ],
+      "getPSControlParam" : { },
+      "getPSControls" : [ {
+        "caption" : "表格视图",
+        "codeName" : "tab_search_view_grid",
+        "controlType" : "TABVIEWPANEL",
+        "name" : "grid",
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+        },
+        "getPSControlParam" : {
+          "id" : "grid"
+        },
+        "modelid" : "db09a0696fb9cf84c1a764f226e0ff01_grid",
+        "modeltype" : "PSVIEWPANEL",
+        "getEmbeddedPSAppDEView" : {
+          "accUserMode" : 2,
+          "caption" : "价格表",
+          "codeName" : "price_book_grid_view_multimode",
+          "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_grid_view_multimode.json",
+          "gridRowActiveMode" : 2,
+          "memo" : "系统自动添加",
+          "name" : "price_bookgrid_view_multimode",
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+          },
+          "getPSAppModule" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/crm.json"
+          },
+          "getPSAppViewEngines" : [ {
+            "engineCat" : "VIEW",
+            "engineType" : "GridView",
+            "name" : "engine"
+          } ],
+          "getPSAppViewLogics" : [ {
+            "logicTrigger" : "CUSTOM",
+            "logicType" : "APPUILOGIC",
+            "name" : "newdata",
+            "getPSAppUILogic" : {
+              "actionAfterWizard" : "DEFAULT",
+              "logicType" : "PREDEFINED",
+              "name" : "新建数据",
+              "getNewDataPSAppView" : {
+                "getRefPSAppView" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_edit_view.json",
+                  "viewType" : "DEEDITVIEW"
+                }
+              },
+              "getPSAppUILogicRefViews" : [ {
+                "getRefPSAppView" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_edit_view.json",
+                  "viewType" : "DEEDITVIEW"
+                }
+              } ],
+              "viewLogicType" : "APP_NEWDATA",
+              "batchAddOnly" : false,
+              "enableBatchAdd" : false,
+              "enableWizardAdd" : false
+            }
+          }, {
+            "logicTrigger" : "CUSTOM",
+            "logicType" : "APPUILOGIC",
+            "name" : "opendata",
+            "getPSAppUILogic" : {
+              "logicType" : "PREDEFINED",
+              "name" : "打开数据",
+              "getOpenDataPSAppView" : {
+                "getRefPSAppView" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_main_view.json",
+                  "viewType" : "DEEDITVIEW2"
+                }
+              },
+              "getPSAppUILogicRefViews" : [ {
+                "getRefPSAppView" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_main_view.json",
+                  "viewType" : "DEEDITVIEW2"
+                }
+              } ],
+              "viewLogicType" : "APP_OPENDATA",
+              "editMode" : true
+            }
+          } ],
+          "getPSAppViewRefs" : [ {
+            "name" : "EDITDATA",
+            "realTitle" : "价格表信息",
+            "getRefPSAppView" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_main_view.json",
+              "viewType" : "DEEDITVIEW2"
+            }
+          }, {
+            "name" : "OPENDATA",
+            "realTitle" : "价格表信息",
+            "getRefPSAppView" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_main_view.json",
+              "viewType" : "DEEDITVIEW2"
+            }
+          }, {
+            "name" : "NEWDATA",
+            "realTitle" : "价格表编辑视图",
+            "getRefPSAppView" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_edit_view.json",
+              "viewType" : "DEEDITVIEW"
+            }
+          } ],
+          "getPSControls" : [ {
+            "codeName" : "grid_view_multimode_toolbar",
+            "controlType" : "TOOLBAR",
+            "logicName" : "价格表多模式表格视图_工具栏",
+            "memo" : "自动生成",
+            "name" : "toolbar",
+            "getPSAppDataEntity" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+            },
+            "getPSControlParam" : {
+              "id" : "TOOLBAR"
+            },
+            "getPSDEToolbarItems" : [ {
+              "getCapPSLanguageRes" : {
+                "lanResTag" : "TBB.TEXT.*.NEW"
+              },
+              "caption" : "创建价格表",
+              "groupExtractMode" : "ITEM",
+              "itemType" : "DEUIACTION",
+              "name" : "deuiaction1",
+              "noPrivDisplayMode" : 2,
+              "getPSAppViewUIAction" : {
+                "modelref" : true,
+                "id" : "toolbar_deuiaction1"
+              },
+              "getPSSysImage" : {
+                "glyph" : "xf0f6@FontAwesome",
+                "cssClass" : "fa fa-file-text-o"
+              },
+              "getPSUIAction" : {
+                "getCapPSLanguageRes" : {
+                  "lanResTag" : "TBB.TEXT.*.NEW"
+                },
+                "caption" : "新建",
+                "codeName" : "New",
+                "fullCodeName" : "New",
+                "name" : "表格界面_新建操作",
+                "getPSSysImage" : {
+                  "glyph" : "xf0f6@FontAwesome",
+                  "cssClass" : "fa fa-file-text-o"
+                },
+                "predefinedType" : "GRIDVIEW_NEWACTION",
+                "timeout" : 60000,
+                "getTooltipPSLanguageRes" : {
+                  "lanResTag" : "TBB.TOOLTIP.*.NEW"
+                },
+                "uIActionMode" : "SYS",
+                "uIActionTag" : "New",
+                "uIActionType" : "DEUIACTION"
+              },
+              "tooltip" : "创建价格表",
+              "getTooltipPSLanguageRes" : {
+                "lanResTag" : "TBB.TOOLTIP.*.NEW"
+              },
+              "showCaption" : true,
+              "showIcon" : true
+            }, {
+              "itemType" : "ITEMS",
+              "name" : "items2",
+              "getPSDEToolbarItems" : [ {
+                "caption" : "导入价格表",
+                "groupExtractMode" : "ITEM",
+                "itemType" : "DEUIACTION",
+                "name" : "deuiaction5_importdata",
+                "noPrivDisplayMode" : 2,
+                "getPSAppViewUIAction" : {
+                  "modelref" : true,
+                  "id" : "toolbar_deuiaction5_importdata"
+                },
+                "getPSUIAction" : {
+                  "actionTarget" : "NONE",
+                  "caption" : "导入价格表",
+                  "codeName" : "ImportData",
+                  "frontProcessType" : "DATAIMP",
+                  "fullCodeName" : "price_book_ImportData",
+                  "memo" : "自动生成",
+                  "name" : "导入数据",
+                  "getPSAppDEDataImport" : {
+                    "modelref" : true,
+                    "id" : "DataImport"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                  },
+                  "refreshMode" : 1,
+                  "uIActionMode" : "FRONT",
+                  "uIActionTag" : "ImportData",
+                  "uIActionType" : "DEUIACTION",
+                  "reloadData" : true,
+                  "id" : "ImportData@price_book"
+                },
+                "tooltip" : "导入价格表",
+                "uIActionTarget" : "NONE",
+                "showCaption" : true,
+                "showIcon" : true
+              }, {
+                "caption" : "导入备注",
+                "groupExtractMode" : "ITEM",
+                "itemType" : "DEUIACTION",
+                "name" : "deuiaction5_import",
+                "noPrivDisplayMode" : 2,
+                "getPSAppViewUIAction" : {
+                  "modelref" : true,
+                  "id" : "toolbar_deuiaction5_import"
+                },
+                "getPSUIAction" : {
+                  "actionTarget" : "NONE",
+                  "caption" : "导入备注",
+                  "codeName" : "import",
+                  "frontProcessType" : "DATAIMP",
+                  "fullCodeName" : "note_attach_import",
+                  "name" : "导入备注",
+                  "getPSAppDEDataImport" : {
+                    "modelref" : true,
+                    "id" : "Default"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/note_attach.json"
+                  },
+                  "refreshMode" : 1,
+                  "uIActionMode" : "FRONT",
+                  "uIActionTag" : "import",
+                  "uIActionType" : "DEUIACTION",
+                  "globalUIAction" : true,
+                  "reloadData" : true,
+                  "id" : "import@note_attach"
+                },
+                "tooltip" : "导入备注",
+                "uIActionTarget" : "NONE",
+                "showCaption" : true,
+                "showIcon" : true
+              } ],
+              "getPSSysCss" : {
+                "cssName" : "toolbar_group"
+              },
+              "getPSSysImage" : {
+                "glyph" : "xf078@FontAwesome",
+                "cssClass" : "fa fa-chevron-down"
+              },
+              "showCaption" : false,
+              "showIcon" : true
+            }, {
+              "caption" : "操作",
+              "itemType" : "ITEMS",
+              "name" : "items1",
+              "getPSDEToolbarItems" : [ {
+                "caption" : "管理标签",
+                "groupExtractMode" : "ITEM",
+                "itemType" : "DEUIACTION",
+                "name" : "deuiaction2",
+                "noPrivDisplayMode" : 2,
+                "getPSAppViewUIAction" : {
+                  "modelref" : true,
+                  "id" : "toolbar_deuiaction2"
+                },
+                "getPSUIAction" : {
+                  "actionTarget" : "NONE",
+                  "caption" : "管理标签",
+                  "codeName" : "mgr_tags",
+                  "getFrontPSAppView" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/tag_mgr_grid_view.json",
+                    "viewType" : "DEGRIDVIEW"
+                  },
+                  "frontProcessType" : "TOP",
+                  "fullCodeName" : "price_book_mgr_tags",
+                  "memo" : "自动生成",
+                  "name" : "管理标签",
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                  },
+                  "getPSNavigateContexts" : [ {
+                    "key" : "OWNER_TYPE",
+                    "name" : "OWNER_TYPE",
+                    "value" : "PRICE_BOOK",
+                    "rawValue" : true
+                  } ],
+                  "getPSNavigateParams" : [ {
+                    "key" : "owner_type",
+                    "name" : "owner_type",
+                    "value" : "PRICE_BOOK",
+                    "rawValue" : true
+                  } ],
+                  "uIActionMode" : "FRONT",
+                  "uIActionTag" : "mgr_tags",
+                  "uIActionType" : "DEUIACTION",
+                  "id" : "mgr_tags@price_book"
+                },
+                "tooltip" : "管理标签",
+                "uIActionTarget" : "NONE",
+                "showCaption" : true,
+                "showIcon" : true
+              } ],
+              "tooltip" : "操作",
+              "showCaption" : true,
+              "showIcon" : true
+            } ],
+            "xDataControlName" : "grid",
+            "modelid" : "c3dce330be0ead19e91f18633f203492",
+            "modeltype" : "PSDETOOLBAR"
+          }, {
+            "aggMode" : "NONE",
+            "codeName" : "grid_view_multimode_grid",
+            "columnEnableFilter" : 2,
+            "columnEnableLink" : 0,
+            "controlType" : "GRID",
+            "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book/PSGRIDS/grid_view_multimode_grid.json",
+            "getFetchPSControlAction" : {
+              "modelref" : true,
+              "id" : "fetch",
+              "actionType" : "DEDATASET",
+              "name" : "fetch",
+              "getPSAppDEMethod" : {
+                "modelref" : true,
+                "id" : "fetch_default"
+              },
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+              }
+            },
+            "groupMode" : "NONE",
+            "logicName" : "价格表多模式表格视图_表格",
+            "memo" : "自动生成",
+            "getPSAppDataEntity" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+            },
+            "getPSControlHandler" : {
+              "getPSHandlerActions" : [ {
+                "actionName" : "Get",
+                "actionType" : "DEACTION",
+                "dataAccessAction" : "READ",
+                "name" : "load",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "get"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                }
+              }, {
+                "actionName" : "Create",
+                "actionType" : "DEACTION",
+                "dataAccessAction" : "CREATE",
+                "name" : "create",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "create"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                }
+              }, {
+                "actionName" : "Update",
+                "actionType" : "DEACTION",
+                "dataAccessAction" : "UPDATE",
+                "name" : "update",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "update"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                }
+              }, {
+                "actionName" : "Remove",
+                "actionType" : "DEACTION",
+                "dataAccessAction" : "DELETE",
+                "name" : "remove",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "remove"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                }
+              }, {
+                "actionName" : "GetDraft",
+                "actionType" : "DEACTION",
+                "dataAccessAction" : "CREATE",
+                "name" : "loaddraft",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "get_draft"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                }
+              }, {
+                "actionType" : "DEDATASET",
+                "name" : "fetch",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "fetch_default"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                }
+              } ],
+              "userDRAction" : "READ",
+              "enableDEFieldPrivilege" : false,
+              "id" : "数据表格处理器"
+            },
+            "getPSControlParam" : {
+              "autoLoad" : true,
+              "showBusyIndicator" : true,
+              "id" : "GRID"
+            },
+            "getPSControls" : [ {
+              "codeName" : "grid_view_multimode_grid_batchtoolbar",
+              "controlType" : "TOOLBAR",
+              "logicName" : "批操作_工具栏",
+              "memo" : "自动生成",
+              "name" : "grid_batchtoolbar",
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+              },
+              "getPSControlParam" : {
+                "id" : "grid_batchtoolbar"
+              },
+              "getPSDEToolbarItems" : [ {
+                "caption" : "创建任务",
+                "groupExtractMode" : "ITEM",
+                "itemType" : "DEUIACTION",
+                "name" : "deuiaction1",
+                "noPrivDisplayMode" : 2,
+                "getPSAppViewUIAction" : {
+                  "modelref" : true,
+                  "id" : "grid_batchtoolbar_deuiaction1"
+                },
+                "getPSUIAction" : {
+                  "actionTarget" : "MULTIKEY",
+                  "caption" : "创建任务",
+                  "codeName" : "create_task",
+                  "getFrontPSAppView" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_batch_create_view.json",
+                    "viewType" : "DEOPTVIEW"
+                  },
+                  "fullCodeName" : "price_book_create_task",
+                  "memo" : "自动生成",
+                  "name" : "创建任务",
+                  "getPSAppDEMethod" : {
+                    "modelref" : true,
+                    "id" : "create_task"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                  },
+                  "successMsg" : "创建完成",
+                  "timeout" : 60000,
+                  "uIActionMode" : "BACKEND",
+                  "uIActionTag" : "create_task",
+                  "uIActionType" : "DEUIACTION",
+                  "enableConfirm" : true,
+                  "id" : "create_task@price_book"
+                },
+                "tooltip" : "创建任务",
+                "uIActionTarget" : "MULTIKEY",
+                "showCaption" : true,
+                "showIcon" : true
+              }, {
+                "caption" : "标签",
+                "itemType" : "ITEMS",
+                "name" : "items1",
+                "getPSDEToolbarItems" : [ {
+                  "caption" : "添加标签",
+                  "groupExtractMode" : "ITEM",
+                  "itemType" : "DEUIACTION",
+                  "name" : "deuiaction2",
+                  "noPrivDisplayMode" : 2,
+                  "getPSAppViewUIAction" : {
+                    "modelref" : true,
+                    "id" : "grid_batchtoolbar_deuiaction2"
+                  },
+                  "getPSUIAction" : {
+                    "actionTarget" : "MULTIKEY",
+                    "caption" : "添加标签",
+                    "codeName" : "add_tags",
+                    "getFrontPSAppView" : {
+                      "modelref" : true,
+                      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/tag_add_tag.json",
+                      "viewType" : "DEOPTVIEW"
+                    },
+                    "fullCodeName" : "price_book_add_tags",
+                    "memo" : "自动生成",
+                    "name" : "添加标签",
+                    "getPSAppDEMethod" : {
+                      "modelref" : true,
+                      "id" : "add_tags"
+                    },
+                    "getPSAppDataEntity" : {
+                      "modelref" : true,
+                      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                    },
+                    "refreshMode" : 1,
+                    "successMsg" : "已成功添加标签",
+                    "timeout" : 60000,
+                    "uIActionMode" : "BACKEND",
+                    "uIActionTag" : "add_tags",
+                    "uIActionType" : "DEUIACTION",
+                    "enableConfirm" : true,
+                    "reloadData" : true,
+                    "id" : "add_tags@price_book"
+                  },
+                  "tooltip" : "添加标签",
+                  "uIActionTarget" : "MULTIKEY",
+                  "showCaption" : true,
+                  "showIcon" : true
+                }, {
+                  "caption" : "移除标签",
+                  "groupExtractMode" : "ITEM",
+                  "itemType" : "DEUIACTION",
+                  "name" : "deuiaction3",
+                  "noPrivDisplayMode" : 2,
+                  "getPSAppViewUIAction" : {
+                    "modelref" : true,
+                    "id" : "grid_batchtoolbar_deuiaction3"
+                  },
+                  "getPSUIAction" : {
+                    "actionTarget" : "MULTIKEY",
+                    "caption" : "移除标签",
+                    "codeName" : "delete_tags",
+                    "getFrontPSAppView" : {
+                      "modelref" : true,
+                      "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/tag_remove_tag.json",
+                      "viewType" : "DEOPTVIEW"
+                    },
+                    "fullCodeName" : "price_book_delete_tags",
+                    "memo" : "自动生成",
+                    "name" : "移除标签",
+                    "getPSAppDEMethod" : {
+                      "modelref" : true,
+                      "id" : "delete_tags"
+                    },
+                    "getPSAppDataEntity" : {
+                      "modelref" : true,
+                      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                    },
+                    "refreshMode" : 1,
+                    "successMsg" : "已成功移除标签",
+                    "timeout" : 60000,
+                    "uIActionMode" : "BACKEND",
+                    "uIActionTag" : "delete_tags",
+                    "uIActionType" : "DEUIACTION",
+                    "enableConfirm" : true,
+                    "reloadData" : true,
+                    "id" : "delete_tags@price_book"
+                  },
+                  "tooltip" : "移除标签",
+                  "uIActionTarget" : "MULTIKEY",
+                  "showCaption" : true,
+                  "showIcon" : true
+                } ],
+                "tooltip" : "标签",
+                "showCaption" : true,
+                "showIcon" : true
+              }, {
+                "caption" : "操作",
+                "itemType" : "ITEMS",
+                "name" : "items2",
+                "getPSDEToolbarItems" : [ {
+                  "caption" : "批量更新",
+                  "groupExtractMode" : "ITEM",
+                  "itemType" : "DEUIACTION",
+                  "name" : "deuiaction4",
+                  "noPrivDisplayMode" : 2,
+                  "getPSAppViewUIAction" : {
+                    "modelref" : true,
+                    "id" : "grid_batchtoolbar_deuiaction4"
+                  },
+                  "getPSUIAction" : {
+                    "actionTarget" : "MULTIKEY",
+                    "caption" : "批量更新",
+                    "codeName" : "batch_update",
+                    "fullCodeName" : "price_book_batch_update",
+                    "memo" : "自动生成",
+                    "name" : "批量更新",
+                    "getPSAppDEMethod" : {
+                      "modelref" : true,
+                      "id" : "batch_update"
+                    },
+                    "getPSAppDataEntity" : {
+                      "modelref" : true,
+                      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                    },
+                    "refreshMode" : 1,
+                    "successMsg" : "更新完成",
+                    "timeout" : 60000,
+                    "uIActionMode" : "BACKEND",
+                    "uIActionTag" : "batch_update",
+                    "uIActionType" : "DEUIACTION",
+                    "enableConfirm" : true,
+                    "reloadData" : true,
+                    "id" : "batch_update@price_book"
+                  },
+                  "tooltip" : "批量更新",
+                  "uIActionTarget" : "MULTIKEY",
+                  "showCaption" : true,
+                  "showIcon" : true
+                }, {
+                  "caption" : "删除",
+                  "groupExtractMode" : "ITEM",
+                  "itemType" : "DEUIACTION",
+                  "name" : "deuiaction5",
+                  "noPrivDisplayMode" : 2,
+                  "getPSAppViewUIAction" : {
+                    "modelref" : true,
+                    "id" : "grid_batchtoolbar_deuiaction5"
+                  },
+                  "getPSUIAction" : {
+                    "actionTarget" : "MULTIKEY",
+                    "caption" : "删除",
+                    "codeName" : "remove",
+                    "confirmMsg" : "确定要删除所选的记录吗？",
+                    "fullCodeName" : "price_book_remove",
+                    "memo" : "自动生成",
+                    "name" : "删除",
+                    "getPSAppDEMethod" : {
+                      "modelref" : true,
+                      "id" : "remove"
+                    },
+                    "getPSAppDataEntity" : {
+                      "modelref" : true,
+                      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                    },
+                    "refreshMode" : 1,
+                    "successMsg" : "删除成功",
+                    "timeout" : 60000,
+                    "uIActionMode" : "BACKEND",
+                    "uIActionTag" : "remove",
+                    "uIActionType" : "DEUIACTION",
+                    "enableConfirm" : true,
+                    "reloadData" : true,
+                    "id" : "remove@price_book"
+                  },
+                  "tooltip" : "删除",
+                  "uIActionTarget" : "MULTIKEY",
+                  "showCaption" : true,
+                  "showIcon" : true
+                } ],
+                "tooltip" : "操作",
+                "showCaption" : true,
+                "showIcon" : true
+              } ],
+              "modelid" : "616b2c0539688ef92bee0570a8493a45",
+              "modeltype" : "PSDETOOLBAR"
+            } ],
+            "getPSDEDataImport" : {
+              "modelref" : true,
+              "id" : "DataImport"
+            },
+            "getPSDEGridColumns" : [ {
+              "align" : "LEFT",
+              "cLConvertMode" : "NONE",
+              "getCapPSLanguageRes" : {
+                "lanResTag" : "DEF.LNAME.NAME"
+              },
+              "caption" : "名称",
+              "codeName" : "name",
+              "columnType" : "DEFGRIDCOLUMN",
+              "dataItemName" : "name",
+              "excelCaption" : "名称",
+              "name" : "name",
+              "noPrivDisplayMode" : 1,
+              "getPSAppDEField" : {
+                "name" : "NAME",
+                "codeName" : "name"
+              },
+              "width" : 150,
+              "widthUnit" : "PX",
+              "enableSort" : true
+            } ],
+            "getPSDEGridDataItems" : [ {
+              "dataType" : 25,
+              "name" : "name",
+              "getPSAppDEField" : {
+                "name" : "NAME",
+                "codeName" : "name"
+              }
+            }, {
+              "dataType" : 25,
+              "name" : "srfkey",
+              "getPSAppDEField" : {
+                "name" : "ID",
+                "codeName" : "id"
+              }
+            }, {
+              "dataType" : 25,
+              "name" : "srfdataaccaction",
+              "getPSAppDEField" : {
+                "name" : "ID",
+                "codeName" : "id"
+              },
+              "dataAccessAction" : true
+            }, {
+              "dataType" : 25,
+              "name" : "srfmajortext",
+              "getPSAppDEField" : {
+                "name" : "NAME",
+                "codeName" : "name"
+              }
+            } ],
+            "getPSDEGridEditItems" : [ {
+              "caption" : "标识",
+              "codeName" : "srfkey",
+              "enableCond" : 3,
+              "ignoreInput" : 0,
+              "name" : "srfkey",
+              "getPSAppDEField" : {
+                "name" : "ID",
+                "codeName" : "id"
+              },
+              "getPSEditor" : {
+                "editorType" : "HIDDEN",
+                "name" : "srfkey"
+              },
+              "allowEmpty" : true
+            } ],
+            "pagingMode" : 1,
+            "pagingSize" : 20,
+            "getRemovePSControlAction" : {
+              "actionName" : "Remove",
+              "actionType" : "DEACTION",
+              "dataAccessAction" : "DELETE",
+              "name" : "remove",
+              "getPSAppDEMethod" : {
+                "modelref" : true,
+                "id" : "remove"
+              },
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+              }
+            },
+            "sortMode" : "REMOTE",
+            "hasWFDataItems" : false,
+            "enableColFilter" : false,
+            "enableCustomized" : true,
+            "enableGroup" : false,
+            "enablePagingBar" : true,
+            "enableRowEdit" : false,
+            "enableRowEditOrder" : false,
+            "enableRowNew" : false,
+            "forceFit" : false,
+            "hideHeader" : false,
+            "noSort" : false,
+            "singleSelect" : false,
+            "name" : "grid",
+            "modelid" : "734e2873b2cf1768127ce75c51f59ac7",
+            "modeltype" : "PSDEGRID"
+          }, {
+            "codeName" : "grid_view_multimode_search_form",
+            "controlType" : "SEARCHFORM",
+            "defaultLabelWidth" : 130,
+            "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book/PSSEARCHFORMS/grid_view_multimode_search_form.json",
+            "logicName" : "价格表多模式表格视图_搜索表单",
+            "memo" : "自动生成",
+            "getPSAppDataEntity" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+            },
+            "getPSControlHandler" : {
+              "getPSHandlerActions" : [ {
+                "actionType" : "FILTERACTION",
+                "name" : "load",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "FilterGet"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                }
+              }, {
+                "actionType" : "FILTERACTION",
+                "name" : "loaddraft",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "FilterGetDraft"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                }
+              }, {
+                "actionType" : "FILTERACTION",
+                "name" : "search",
+                "getPSAppDEMethod" : {
+                  "modelref" : true,
+                  "id" : "FilterSearch"
+                },
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+                }
+              } ],
+              "enableDEFieldPrivilege" : false,
+              "id" : "搜索表单处理器"
+            },
+            "getPSControlParam" : {
+              "autoLoad" : true,
+              "showBusyIndicator" : true,
+              "id" : "SEARCHFORM"
+            },
+            "getPSDEFormPages" : [ {
+              "caption" : "常规条件",
+              "codeName" : "formpage1",
+              "detailStyle" : "DEFAULT",
+              "detailType" : "FORMPAGE",
+              "name" : "formpage1",
+              "getPSLayout" : {
+                "childColMD" : 24,
+                "columnCount" : 24,
+                "layout" : "TABLE_24COL"
+              },
+              "infoGroupMode" : false
+            } ],
+            "getPSLayout" : {
+              "childColMD" : 24,
+              "columnCount" : 24,
+              "layout" : "TABLE_24COL"
+            },
+            "searchButtonStyle" : "DEFAULT",
+            "tabHeaderPos" : "TOP",
+            "enableAdvanceSearch" : false,
+            "enableAutoSearch" : false,
+            "enableFilterSave" : false,
+            "noTabHeader" : true,
+            "name" : "searchform",
+            "modelid" : "d9beffd1c452791595fd8a2eb4551b83",
+            "modeltype" : "PSDEFORM_SEARCHFORM"
+          }, {
+            "controlType" : "SEARCHBAR",
+            "name" : "searchbar",
+            "getPSAppDataEntity" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+            },
+            "getPSControlParam" : {
+              "id" : "searchbar"
+            },
+            "quickGroupCount" : -1,
+            "quickSearchMode" : 1,
+            "quickSearchWidth" : 0,
+            "enableFilter" : false,
+            "enableGroup" : false,
+            "enableQuickSearch" : true,
+            "mobileSearchBar" : false
+          }, {
+            "caption" : "价格表",
+            "codeName" : "grid_view_multimode_captionbar",
+            "controlType" : "CAPTIONBAR",
+            "name" : "captionbar",
+            "getPSAppDataEntity" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+            },
+            "getPSControlParam" : { }
+          } ],
+          "getPSDEViewCodeName" : "grid_view_multimode",
+          "getPSDEViewId" : "8481075f84c3fb4a42a240810bb67d77",
+          "getPSViewLayoutPanel" : {
+            "codeName" : "layoutpanel",
+            "controlStyle" : "APPDEGRIDVIEW",
+            "controlType" : "VIEWLAYOUTPANEL",
+            "name" : "layoutpanel",
+            "getPSAppDataEntity" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+            },
+            "getPSControlParam" : { },
+            "layoutBodyOnly" : true,
+            "layoutPanel" : true,
+            "useDefaultLayout" : true
+          },
+          "title" : "价格表",
+          "viewStyle" : "DEFAULT",
+          "viewType" : "DEGRIDVIEW",
+          "xDataControlName" : "grid",
+          "enableDP" : true,
+          "enableExport" : true,
+          "enableFilter" : true,
+          "enableImport" : true,
+          "enableQuickSearch" : true,
+          "enableRowEdit" : false,
+          "enableSearch" : true,
+          "rowEditDefault" : false,
+          "modelid" : "8a4438fbdd785e42e90cb7006b54e3f4",
+          "modeltype" : "PSAPPDEVIEW"
+        }
+      }, {
+        "caption" : "平铺视图",
+        "codeName" : "tab_search_view_data_view",
+        "controlType" : "TABVIEWPANEL",
+        "getEmbeddedPSAppDEView" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_data_view_multimode.json",
+          "viewType" : "DEDATAVIEW"
+        },
+        "name" : "data_view",
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+        },
+        "getPSControlParam" : {
+          "id" : "data_view"
+        },
+        "modelid" : "db09a0696fb9cf84c1a764f226e0ff01_data_view",
+        "modeltype" : "PSVIEWPANEL"
+      }, {
+        "caption" : "列表视图",
+        "codeName" : "tab_search_view_list",
+        "controlType" : "TABVIEWPANEL",
+        "getEmbeddedPSAppDEView" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/price_book_list_view_multimode.json",
+          "viewType" : "DELISTVIEW"
+        },
+        "name" : "list",
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+        },
+        "getPSControlParam" : {
+          "id" : "list"
+        },
+        "modelid" : "db09a0696fb9cf84c1a764f226e0ff01_list",
+        "modeltype" : "PSVIEWPANEL"
+      } ],
+      "getPSSysPFPlugin" : {
+        "pluginType" : "CUSTOM",
+        "pluginCode" : "TABEXPPANEL_DROPDOWN",
+        "runtimeObject" : true
+      },
+      "getPSTabExpPages" : [ {
+        "name" : "grid"
+      }, {
+        "name" : "data_view"
+      }, {
+        "name" : "list"
+      } ],
+      "tabLayout" : "TOP",
+      "uniqueTag" : "price_book_tab_search_view__tabexppanel",
+      "modelid" : "db09a0696fb9cf84c1a764f226e0ff01_tabexppanel",
+      "modeltype" : "PSTABEXPPANEL"
+    }, {
+      "caption" : "价格表",
+      "codeName" : "tab_search_view_captionbar",
+      "controlType" : "CAPTIONBAR",
+      "name" : "captionbar",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/price_book.json"
+      },
+      "getPSControlParam" : { }
+    } ]
+  },
+  "tabLayout" : "TOP",
+  "title" : "价格表",
+  "viewStyle" : "DEFAULT",
+  "viewType" : "DETABSEARCHVIEW",
+  "enableDP" : true,
+  "enableQuickSearch" : false,
+  "enableSearch" : false,
+  "expandSearchForm" : false,
+  "loadDefault" : true,
+  "showDataInfoBar" : true,
+  "modelid" : "db09a0696fb9cf84c1a764f226e0ff01",
+  "modeltype" : "PSAPPDEVIEW"
+}

@@ -1,0 +1,1059 @@
+{
+  "accUserMode" : 2,
+  "getCapPSLanguageRes" : {
+    "lanResTag" : "DE.LNAME.SCHEDULE"
+  },
+  "caption" : "待办任务",
+  "codeName" : "schedule_not_close_tab_exp_view9",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/schedule_not_close_tab_exp_view9.json",
+  "name" : "schedulenot_close_tab_exp_view9",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/schedule.json"
+  },
+  "getPSAppModule" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/crm.json"
+  },
+  "getPSAppViewNavContexts" : [ {
+    "key" : "PRINCIPAL_ID",
+    "name" : "PRINCIPAL_ID",
+    "value" : "principal_id",
+    "rawValue" : false
+  } ],
+  "getPSAppViewNavParams" : [ {
+    "key" : "principal_id",
+    "name" : "principal_id",
+    "value" : "principal_id",
+    "rawValue" : false
+  } ],
+  "getPSDEViewCodeName" : "not_close_tab_exp_view9",
+  "getPSDEViewId" : "932893b86cfd323a5517d22137b4955d",
+  "getPSViewLayoutPanel" : {
+    "codeName" : "usr0407652381",
+    "controlType" : "VIEWLAYOUTPANEL",
+    "layoutMode" : "FLEX",
+    "logicName" : "嵌入分页导航通用布局",
+    "name" : "layoutpanel",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/schedule.json"
+    },
+    "getPSControlParam" : { },
+    "getPSLayout" : {
+      "layout" : "FLEX"
+    },
+    "getRootPSPanelItems" : [ {
+      "caption" : "容器",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "view_header",
+      "getPSLayout" : {
+        "dir" : "row",
+        "layout" : "FLEX",
+        "vAlign" : "center"
+      },
+      "getPSLayoutPos" : {
+        "grow" : -1,
+        "layout" : "FLEX",
+        "shrink" : 0
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "view_captionbar",
+        "getPSLayout" : {
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "layout" : "FLEX"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "标题栏",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CTRLPOS",
+          "name" : "captionbar",
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX"
+          },
+          "showCaption" : true
+        } ]
+      }, {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "view_tabexppanel",
+        "getPSLayout" : {
+          "dir" : "row-reverse",
+          "layout" : "FLEX",
+          "vAlign" : "center"
+        },
+        "getPSLayoutPos" : {
+          "grow" : 1,
+          "layout" : "FLEX"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "分页导航",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CTRLPOS",
+          "name" : "tabexppanel",
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX",
+            "spacingRight" : "OUTERMEDIUM"
+          },
+          "showCaption" : true
+        }, {
+          "caption" : "工具栏",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CTRLPOS",
+          "name" : "tabtoolbar",
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX"
+          },
+          "showCaption" : true
+        } ]
+      } ],
+      "predefinedType" : "VIEWHEADER"
+    }, {
+      "caption" : "容器",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "CONTAINER",
+      "name" : "container",
+      "getPSLayout" : {
+        "dir" : "row",
+        "layout" : "FLEX"
+      },
+      "getPSLayoutPos" : {
+        "grow" : 1,
+        "layout" : "FLEX"
+      },
+      "getPSPanelItems" : [ {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "view_tabexppanel_left",
+        "getPSLayout" : {
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "layout" : "FLEX",
+          "shrink" : 0
+        }
+      }, {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "container1",
+        "getPSLayout" : {
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "grow" : 1,
+          "layout" : "FLEX"
+        },
+        "getPSPanelItems" : [ {
+          "caption" : "容器",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CONTAINER",
+          "name" : "view_content",
+          "getPSLayout" : {
+            "layout" : "FLEX"
+          },
+          "getPSLayoutPos" : {
+            "grow" : 1,
+            "layout" : "FLEX"
+          },
+          "getPSPanelItems" : [ {
+            "caption" : "导航区占位",
+            "itemStyle" : "DEFAULT",
+            "itemType" : "RAWITEM",
+            "name" : "nav_pos",
+            "getPSLayoutPos" : {
+              "grow" : 1,
+              "layout" : "FLEX"
+            },
+            "getPSRawItem" : {
+              "name" : "nav_pos",
+              "predefinedType" : "NAV_POS"
+            },
+            "showCaption" : true
+          } ],
+          "predefinedType" : "VIEWCONTENT"
+        }, {
+          "caption" : "容器",
+          "itemStyle" : "DEFAULT",
+          "itemType" : "CONTAINER",
+          "name" : "view_tabexppanel_bottom",
+          "getPSLayout" : {
+            "layout" : "FLEX"
+          },
+          "getPSLayoutPos" : {
+            "grow" : -1,
+            "layout" : "FLEX",
+            "shrink" : 0
+          }
+        } ]
+      }, {
+        "caption" : "容器",
+        "itemStyle" : "DEFAULT",
+        "itemType" : "CONTAINER",
+        "name" : "view_tabexppanel_right",
+        "getPSLayout" : {
+          "layout" : "FLEX"
+        },
+        "getPSLayoutPos" : {
+          "grow" : -1,
+          "layout" : "FLEX",
+          "shrink" : 0
+        }
+      } ]
+    } ],
+    "layoutBodyOnly" : false,
+    "layoutPanel" : true,
+    "useDefaultLayout" : false,
+    "viewProxyMode" : true,
+    "modelid" : "ff7c43c88890c50b9322f5eb9a1e34fe",
+    "modeltype" : "PSSYSVIEWLAYOUTPANEL",
+    "getPSControls" : [ {
+      "codeName" : "not_close_tab_exp_view9_tabtoolbar",
+      "controlType" : "TOOLBAR",
+      "logicName" : " 待办任务嵌入分页导航视图工具栏",
+      "name" : "tabtoolbar",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/schedule.json"
+      },
+      "getPSControlParam" : {
+        "id" : "TABTOOLBAR"
+      },
+      "getPSDEToolbarItems" : [ {
+        "caption" : "添加新的",
+        "itemType" : "ITEMS",
+        "name" : "items1",
+        "getPSDEToolbarItems" : [ {
+          "getCapPSLanguageRes" : {
+            "lanResTag" : "TBB.TEXT.*.NEW"
+          },
+          "caption" : "新建",
+          "groupExtractMode" : "ITEM",
+          "itemType" : "DEUIACTION",
+          "name" : "deuiaction1",
+          "noPrivDisplayMode" : 2,
+          "getPSAppViewUIAction" : {
+            "modelref" : true,
+            "id" : "tabtoolbar_deuiaction1"
+          },
+          "getPSSysImage" : {
+            "glyph" : "xf0f6@FontAwesome",
+            "cssClass" : "fa fa-file-text-o"
+          },
+          "getPSUIAction" : {
+            "getCapPSLanguageRes" : {
+              "lanResTag" : "TBB.TEXT.*.NEW"
+            },
+            "caption" : "新建",
+            "codeName" : "New",
+            "fullCodeName" : "New",
+            "name" : "表格界面_新建操作",
+            "getPSSysImage" : {
+              "glyph" : "xf0f6@FontAwesome",
+              "cssClass" : "fa fa-file-text-o"
+            },
+            "predefinedType" : "GRIDVIEW_NEWACTION",
+            "timeout" : 60000,
+            "getTooltipPSLanguageRes" : {
+              "lanResTag" : "TBB.TOOLTIP.*.NEW"
+            },
+            "uIActionMode" : "SYS",
+            "uIActionTag" : "New",
+            "uIActionType" : "DEUIACTION"
+          },
+          "tooltip" : "新建",
+          "getTooltipPSLanguageRes" : {
+            "lanResTag" : "TBB.TOOLTIP.*.NEW"
+          },
+          "showCaption" : true,
+          "showIcon" : true
+        } ],
+        "tooltip" : "添加新的",
+        "showCaption" : true,
+        "showIcon" : true
+      }, {
+        "getCapPSLanguageRes" : {
+          "lanResTag" : "TBB.TEXT.*.VIEW"
+        },
+        "caption" : "查看",
+        "groupExtractMode" : "ITEM",
+        "itemType" : "DEUIACTION",
+        "name" : "deuiaction2",
+        "noPrivDisplayMode" : 2,
+        "getPSAppViewUIAction" : {
+          "modelref" : true,
+          "id" : "tabtoolbar_deuiaction2"
+        },
+        "getPSSysImage" : {
+          "glyph" : "xf044@FontAwesome",
+          "cssClass" : "fa fa-edit"
+        },
+        "getPSUIAction" : {
+          "actionTarget" : "SINGLEKEY",
+          "getCapPSLanguageRes" : {
+            "lanResTag" : "TBB.TEXT.*.VIEW"
+          },
+          "caption" : "查看",
+          "codeName" : "View",
+          "fullCodeName" : "View",
+          "name" : "表格界面_查看操作",
+          "getPSSysImage" : {
+            "glyph" : "xf044@FontAwesome",
+            "cssClass" : "fa fa-edit"
+          },
+          "predefinedType" : "GRIDVIEW_VIEWACTION",
+          "timeout" : 60000,
+          "getTooltipPSLanguageRes" : {
+            "lanResTag" : "TBB.TOOLTIP.*.VIEW"
+          },
+          "uIActionMode" : "SYS",
+          "uIActionTag" : "View",
+          "uIActionType" : "DEUIACTION"
+        },
+        "tooltip" : "查看",
+        "getTooltipPSLanguageRes" : {
+          "lanResTag" : "TBB.TOOLTIP.*.VIEW"
+        },
+        "uIActionTarget" : "SINGLEKEY",
+        "showCaption" : true,
+        "showIcon" : true
+      } ],
+      "modelid" : "7ffb16b7aace127ce583e6ed0055accf",
+      "modeltype" : "PSDETOOLBAR"
+    }, {
+      "codeName" : "not_close_tab_exp_view9_tabexppanel",
+      "controlStyle" : "TABEXPPANEL_DROPDOWN",
+      "controlType" : "TABEXPPANEL",
+      "name" : "tabexppanel",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/schedule.json"
+      },
+      "getPSAppViewRefs" : [ {
+        "name" : "EXPITEM:tab",
+        "realTitle" : "待办任务",
+        "getRefPSAppView" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/schedule_not_close_tab_tabs_exp_view_multimode.json",
+          "viewType" : "DETABEXPVIEW9"
+        }
+      } ],
+      "getPSControlParam" : { },
+      "getPSControls" : [ {
+        "caption" : "页签视图",
+        "codeName" : "not_close_tab_exp_view9_tab",
+        "controlType" : "TABVIEWPANEL",
+        "name" : "tab",
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/schedule.json"
+        },
+        "getPSControlParam" : {
+          "getPSSysImageId" : "1825c0fbc240e56ff3a5758faf49716d",
+          "id" : "tab"
+        },
+        "getPSSysImage" : {
+          "glyph" : "xf181@FontAwesome",
+          "cssClass" : "fa fa-trello"
+        },
+        "modelid" : "8bc4613b174a6325d4789fd2a4466d27_tab",
+        "modeltype" : "PSVIEWPANEL",
+        "getEmbeddedPSAppDEView" : {
+          "accUserMode" : 2,
+          "getCapPSLanguageRes" : {
+            "lanResTag" : "DE.LNAME.SCHEDULE"
+          },
+          "caption" : "待办任务",
+          "codeName" : "schedule_not_close_tab_tabs_exp_view_multimode",
+          "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/schedule_not_close_tab_tabs_exp_view_multimode.json",
+          "name" : "schedulenot_close_tab_tabs_exp_view_multimode",
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/schedule.json"
+          },
+          "getPSAppModule" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/crm.json"
+          },
+          "getPSControls" : [ {
+            "codeName" : "not_close_tab_tabs_exp_view_multimode_tabexppanel",
+            "controlType" : "TABEXPPANEL",
+            "name" : "tabexppanel",
+            "getPSAppDataEntity" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/schedule.json"
+            },
+            "getPSAppViewRefs" : [ {
+              "name" : "EXPITEM:task",
+              "realTitle" : "待办任务（任务）",
+              "getRealTitlePSLanguageRes" : {
+                "lanResTag" : "PAGE.TITLE.TASK.GRID_NOT_CLOSE_VIEW"
+              },
+              "getRefPSAppView" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_grid_not_close_view.json",
+                "viewType" : "DEGRIDVIEW"
+              }
+            } ],
+            "getPSControlParam" : { },
+            "getPSControls" : [ {
+              "caption" : "任务",
+              "codeName" : "not_close_tab_tabs_exp_view_multimode_task",
+              "controlType" : "TABVIEWPANEL",
+              "name" : "task",
+              "getPSAppDataEntity" : {
+                "modelref" : true,
+                "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/schedule.json"
+              },
+              "getPSControlParam" : {
+                "id" : "task"
+              },
+              "modelid" : "750d58d6ff6dc9843b4e45213b46946f_task",
+              "modeltype" : "PSVIEWPANEL",
+              "getEmbeddedPSAppDEView" : {
+                "accUserMode" : 2,
+                "getCapPSLanguageRes" : {
+                  "lanResTag" : "PAGE.CAPTION.TASK.GRID_NOT_CLOSE_VIEW"
+                },
+                "caption" : "待办任务（任务）",
+                "codeName" : "task_grid_not_close_view",
+                "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_grid_not_close_view.json",
+                "gridRowActiveMode" : 2,
+                "name" : "taskgrid_not_close_view",
+                "getPSAppDataEntity" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                },
+                "getPSAppModule" : {
+                  "modelref" : true,
+                  "path" : "PSSYSAPPS/crmweb/PSAPPMODULES/crm.json"
+                },
+                "getPSAppViewEngines" : [ {
+                  "engineCat" : "VIEW",
+                  "engineType" : "GridView",
+                  "name" : "engine"
+                } ],
+                "getPSAppViewLogics" : [ {
+                  "logicTrigger" : "CUSTOM",
+                  "logicType" : "APPUILOGIC",
+                  "name" : "newdata",
+                  "getPSAppUILogic" : {
+                    "actionAfterWizard" : "DEFAULT",
+                    "logicType" : "PREDEFINED",
+                    "name" : "新建数据",
+                    "getNewDataPSAppView" : {
+                      "getRefPSAppView" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_task_edit_view.json",
+                        "viewType" : "DEEDITVIEW"
+                      }
+                    },
+                    "getPSAppUILogicRefViews" : [ {
+                      "getRefPSAppView" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_task_edit_view.json",
+                        "viewType" : "DEEDITVIEW"
+                      }
+                    } ],
+                    "viewLogicType" : "APP_NEWDATA",
+                    "batchAddOnly" : false,
+                    "enableBatchAdd" : false,
+                    "enableWizardAdd" : false
+                  }
+                }, {
+                  "logicTrigger" : "CUSTOM",
+                  "logicType" : "APPUILOGIC",
+                  "name" : "opendata",
+                  "getPSAppUILogic" : {
+                    "logicType" : "PREDEFINED",
+                    "name" : "打开数据",
+                    "getOpenDataPSAppView" : {
+                      "getRefPSAppView" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_main_view.json",
+                        "viewType" : "DEEDITVIEW2"
+                      }
+                    },
+                    "getPSAppUILogicRefViews" : [ {
+                      "getRefPSAppView" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_main_view.json",
+                        "viewType" : "DEEDITVIEW2"
+                      }
+                    } ],
+                    "viewLogicType" : "APP_OPENDATA",
+                    "editMode" : true
+                  }
+                } ],
+                "getPSAppViewNavContexts" : [ {
+                  "key" : "PRINCIPAL_ID",
+                  "name" : "PRINCIPAL_ID",
+                  "value" : "principal_id",
+                  "rawValue" : false
+                } ],
+                "getPSAppViewNavParams" : [ {
+                  "key" : "principal_id",
+                  "name" : "principal_id",
+                  "value" : "principal_id",
+                  "rawValue" : false
+                } ],
+                "getPSAppViewRefs" : [ {
+                  "name" : "NEWDATA",
+                  "realTitle" : "任务编辑视图",
+                  "getRealTitlePSLanguageRes" : {
+                    "lanResTag" : "PAGE.TITLE.TASK.EDIT_VIEW"
+                  },
+                  "getRefPSAppView" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_task_edit_view.json",
+                    "viewType" : "DEEDITVIEW"
+                  }
+                }, {
+                  "name" : "EDITDATA",
+                  "realTitle" : "任务信息",
+                  "getRealTitlePSLanguageRes" : {
+                    "lanResTag" : "PAGE.TITLE.TASK.MAIN_VIEW"
+                  },
+                  "getRefPSAppView" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_main_view.json",
+                    "viewType" : "DEEDITVIEW2"
+                  }
+                } ],
+                "getPSControls" : [ {
+                  "aggMode" : "NONE",
+                  "codeName" : "grid_not_close_view_grid",
+                  "columnEnableFilter" : 2,
+                  "columnEnableLink" : 0,
+                  "controlType" : "GRID",
+                  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task/PSGRIDS/grid_not_close_view_grid.json",
+                  "getFetchPSControlAction" : {
+                    "modelref" : true,
+                    "id" : "fetch",
+                    "actionType" : "DEDATASET",
+                    "name" : "fetch",
+                    "getPSAppDEMethod" : {
+                      "modelref" : true,
+                      "id" : "fetch_not_close_task_related"
+                    },
+                    "getPSAppDataEntity" : {
+                      "modelref" : true,
+                      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                    }
+                  },
+                  "groupMode" : "NONE",
+                  "logicName" : "待办任务（任务）（表格）_表格",
+                  "minorSortDir" : "DESC",
+                  "getMinorSortPSAppDEField" : {
+                    "name" : "DUE_DATE",
+                    "codeName" : "due_date"
+                  },
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                  },
+                  "getPSControlHandler" : {
+                    "getPSHandlerActions" : [ {
+                      "actionName" : "Get",
+                      "actionType" : "DEACTION",
+                      "dataAccessAction" : "READ",
+                      "name" : "load",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "get"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                      }
+                    }, {
+                      "actionName" : "Create",
+                      "actionType" : "DEACTION",
+                      "dataAccessAction" : "CREATE",
+                      "name" : "create",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "create"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                      }
+                    }, {
+                      "actionName" : "Update",
+                      "actionType" : "DEACTION",
+                      "dataAccessAction" : "UPDATE",
+                      "name" : "update",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "update"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                      }
+                    }, {
+                      "actionName" : "Remove",
+                      "actionType" : "DEACTION",
+                      "dataAccessAction" : "DELETE",
+                      "name" : "remove",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "remove"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                      }
+                    }, {
+                      "actionName" : "GetDraft",
+                      "actionType" : "DEACTION",
+                      "dataAccessAction" : "CREATE",
+                      "name" : "loaddraft",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "get_draft"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                      }
+                    }, {
+                      "actionType" : "DEDATASET",
+                      "name" : "fetch",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "fetch_not_close_task_related"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                      }
+                    } ],
+                    "userDRAction" : "READ",
+                    "enableDEFieldPrivilege" : false,
+                    "id" : "数据表格处理器"
+                  },
+                  "getPSControlParam" : {
+                    "autoLoad" : true,
+                    "showBusyIndicator" : true,
+                    "ctrlParams" : {
+                      "SHOWMODE" : "MIXIN"
+                    },
+                    "id" : "GRID"
+                  },
+                  "getPSDEDataImport" : {
+                    "modelref" : true,
+                    "id" : "DataImport"
+                  },
+                  "getPSDEGridColumns" : [ {
+                    "align" : "LEFT",
+                    "cLConvertMode" : "NONE",
+                    "getCapPSLanguageRes" : {
+                      "lanResTag" : "DEF.LNAME.SUBJECT"
+                    },
+                    "caption" : "主题",
+                    "codeName" : "subject",
+                    "columnType" : "DEFGRIDCOLUMN",
+                    "dataItemName" : "subject",
+                    "excelCaption" : "主题",
+                    "name" : "subject",
+                    "noPrivDisplayMode" : 1,
+                    "getPSAppDEField" : {
+                      "name" : "SUBJECT",
+                      "codeName" : "subject"
+                    },
+                    "width" : 400,
+                    "widthUnit" : "PX",
+                    "enableSort" : true
+                  }, {
+                    "align" : "LEFT",
+                    "cLConvertMode" : "NONE",
+                    "getCapPSLanguageRes" : {
+                      "lanResTag" : "DEF.LNAME.DUE_DATE"
+                    },
+                    "caption" : "到期日期",
+                    "codeName" : "due_date",
+                    "columnType" : "DEFGRIDCOLUMN",
+                    "dataItemName" : "due_date",
+                    "excelCaption" : "到期日期",
+                    "name" : "due_date",
+                    "noPrivDisplayMode" : 1,
+                    "getPSAppDEField" : {
+                      "name" : "DUE_DATE",
+                      "codeName" : "due_date"
+                    },
+                    "valueFormat" : "YYYY-MM-DD",
+                    "width" : 150,
+                    "widthUnit" : "PX",
+                    "enableSort" : true
+                  }, {
+                    "align" : "LEFT",
+                    "cLConvertMode" : "NONE",
+                    "getCapPSLanguageRes" : {
+                      "lanResTag" : "DEF.LNAME.CLOSED_TIME"
+                    },
+                    "caption" : "关闭时间",
+                    "codeName" : "closed_time",
+                    "columnType" : "DEFGRIDCOLUMN",
+                    "dataItemName" : "closed_time",
+                    "excelCaption" : "关闭时间",
+                    "name" : "closed_time",
+                    "noPrivDisplayMode" : 1,
+                    "getPSAppDEField" : {
+                      "name" : "CLOSED_TIME",
+                      "codeName" : "closed_time"
+                    },
+                    "valueFormat" : "YYYY-MM-DD HH:mm:ss",
+                    "width" : 100,
+                    "widthUnit" : "PX",
+                    "enableSort" : true
+                  } ],
+                  "getPSDEGridDataItems" : [ {
+                    "dataType" : 25,
+                    "name" : "subject",
+                    "getPSAppDEField" : {
+                      "name" : "SUBJECT",
+                      "codeName" : "subject"
+                    }
+                  }, {
+                    "format" : "YYYY-MM-DD",
+                    "dataType" : 5,
+                    "name" : "due_date",
+                    "getPSAppDEField" : {
+                      "name" : "DUE_DATE",
+                      "codeName" : "due_date"
+                    }
+                  }, {
+                    "format" : "YYYY-MM-DD HH:mm:ss",
+                    "dataType" : 5,
+                    "name" : "closed_time",
+                    "getPSAppDEField" : {
+                      "name" : "CLOSED_TIME",
+                      "codeName" : "closed_time"
+                    }
+                  }, {
+                    "dataType" : 25,
+                    "name" : "srfkey",
+                    "getPSAppDEField" : {
+                      "name" : "ID",
+                      "codeName" : "id"
+                    }
+                  }, {
+                    "dataType" : 25,
+                    "name" : "srfdataaccaction",
+                    "getPSAppDEField" : {
+                      "name" : "ID",
+                      "codeName" : "id"
+                    },
+                    "dataAccessAction" : true
+                  }, {
+                    "dataType" : 25,
+                    "name" : "srfmajortext",
+                    "getPSAppDEField" : {
+                      "name" : "SUBJECT",
+                      "codeName" : "subject"
+                    }
+                  } ],
+                  "getPSDEGridEditItems" : [ {
+                    "caption" : "标识",
+                    "codeName" : "srfkey",
+                    "enableCond" : 3,
+                    "ignoreInput" : 0,
+                    "name" : "srfkey",
+                    "getPSAppDEField" : {
+                      "name" : "ID",
+                      "codeName" : "id"
+                    },
+                    "getPSEditor" : {
+                      "editorType" : "HIDDEN",
+                      "name" : "srfkey"
+                    },
+                    "allowEmpty" : true
+                  } ],
+                  "pagingMode" : 1,
+                  "pagingSize" : 20,
+                  "getRemovePSControlAction" : {
+                    "actionName" : "Remove",
+                    "actionType" : "DEACTION",
+                    "dataAccessAction" : "DELETE",
+                    "name" : "remove",
+                    "getPSAppDEMethod" : {
+                      "modelref" : true,
+                      "id" : "remove"
+                    },
+                    "getPSAppDataEntity" : {
+                      "modelref" : true,
+                      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                    }
+                  },
+                  "sortMode" : "REMOTE",
+                  "hasWFDataItems" : false,
+                  "enableColFilter" : false,
+                  "enableCustomized" : true,
+                  "enableGroup" : false,
+                  "enablePagingBar" : true,
+                  "enableRowEdit" : false,
+                  "enableRowEditOrder" : false,
+                  "enableRowNew" : false,
+                  "forceFit" : true,
+                  "hideHeader" : false,
+                  "noSort" : false,
+                  "singleSelect" : true,
+                  "name" : "grid",
+                  "modelid" : "9ff30aec4d3f326e250244ea53789bd9",
+                  "modeltype" : "PSDEGRID"
+                }, {
+                  "codeName" : "grid_not_close_view_search_form",
+                  "controlType" : "SEARCHFORM",
+                  "defaultLabelWidth" : 130,
+                  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task/PSSEARCHFORMS/grid_not_close_view_search_form.json",
+                  "logicName" : "待办任务（任务）（表格）_搜索表单",
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                  },
+                  "getPSControlHandler" : {
+                    "getPSHandlerActions" : [ {
+                      "actionType" : "FILTERACTION",
+                      "name" : "load",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "FilterGet"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                      }
+                    }, {
+                      "actionType" : "FILTERACTION",
+                      "name" : "loaddraft",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "FilterGetDraft"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                      }
+                    }, {
+                      "actionType" : "FILTERACTION",
+                      "name" : "search",
+                      "getPSAppDEMethod" : {
+                        "modelref" : true,
+                        "id" : "FilterSearch"
+                      },
+                      "getPSAppDataEntity" : {
+                        "modelref" : true,
+                        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                      }
+                    } ],
+                    "enableDEFieldPrivilege" : false,
+                    "id" : "搜索表单处理器"
+                  },
+                  "getPSControlParam" : {
+                    "autoLoad" : true,
+                    "showBusyIndicator" : true,
+                    "id" : "SEARCHFORM"
+                  },
+                  "getPSDEFormPages" : [ {
+                    "getCapPSLanguageRes" : {
+                      "lanResTag" : "CONTROL.DEFORM.TASK.GRID_NOT_CLOSE_VIEW_SEARCHFORM.FORMPAGE.FORMPAGE1"
+                    },
+                    "caption" : "常规条件",
+                    "codeName" : "formpage1",
+                    "detailStyle" : "DEFAULT",
+                    "detailType" : "FORMPAGE",
+                    "name" : "formpage1",
+                    "getPSLayout" : {
+                      "childColMD" : 24,
+                      "columnCount" : 24,
+                      "layout" : "TABLE_24COL"
+                    },
+                    "infoGroupMode" : false
+                  } ],
+                  "getPSLayout" : {
+                    "childColMD" : 24,
+                    "columnCount" : 24,
+                    "layout" : "TABLE_24COL"
+                  },
+                  "searchButtonStyle" : "DEFAULT",
+                  "tabHeaderPos" : "TOP",
+                  "enableAdvanceSearch" : false,
+                  "enableAutoSearch" : false,
+                  "enableFilterSave" : false,
+                  "noTabHeader" : true,
+                  "name" : "searchform",
+                  "modelid" : "1a9cacf62ef5a673244424bbba48ab79",
+                  "modeltype" : "PSDEFORM_SEARCHFORM"
+                }, {
+                  "controlType" : "SEARCHBAR",
+                  "name" : "searchbar",
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                  },
+                  "getPSControlParam" : {
+                    "id" : "searchbar"
+                  },
+                  "quickGroupCount" : -1,
+                  "quickSearchMode" : 0,
+                  "quickSearchWidth" : 0,
+                  "enableFilter" : false,
+                  "enableGroup" : false,
+                  "enableQuickSearch" : false,
+                  "mobileSearchBar" : false
+                }, {
+                  "getCapPSLanguageRes" : {
+                    "lanResTag" : "PAGE.CAPTION.TASK.GRID_NOT_CLOSE_VIEW"
+                  },
+                  "caption" : "待办任务（任务）",
+                  "codeName" : "grid_not_close_view_captionbar",
+                  "controlType" : "CAPTIONBAR",
+                  "name" : "captionbar",
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                  },
+                  "getPSControlParam" : { }
+                } ],
+                "getPSDEViewCodeName" : "grid_not_close_view",
+                "getPSDEViewId" : "f89a3525859577082ca8aa7b1f1c023d",
+                "getPSViewLayoutPanel" : {
+                  "codeName" : "layoutpanel",
+                  "controlStyle" : "APPDEGRIDVIEW",
+                  "controlType" : "VIEWLAYOUTPANEL",
+                  "name" : "layoutpanel",
+                  "getPSAppDataEntity" : {
+                    "modelref" : true,
+                    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+                  },
+                  "getPSControlParam" : { },
+                  "layoutBodyOnly" : true,
+                  "layoutPanel" : true,
+                  "useDefaultLayout" : true
+                },
+                "title" : "待办任务（任务）",
+                "getTitlePSLanguageRes" : {
+                  "lanResTag" : "PAGE.TITLE.TASK.GRID_NOT_CLOSE_VIEW"
+                },
+                "viewStyle" : "DEFAULT",
+                "viewType" : "DEGRIDVIEW",
+                "xDataControlName" : "grid",
+                "enableDP" : true,
+                "enableExport" : true,
+                "enableFilter" : true,
+                "enableImport" : true,
+                "enableRowEdit" : false,
+                "enableSearch" : true,
+                "rowEditDefault" : false,
+                "showCaptionBar" : false,
+                "modelid" : "a6ec1cf1862bfc66cf4b5f32db593c2b",
+                "modeltype" : "PSAPPDEVIEW"
+              }
+            } ],
+            "getPSTabExpPages" : [ {
+              "name" : "task"
+            } ],
+            "tabLayout" : "TOP",
+            "uniqueTag" : "schedule_not_close_tab_tabs_exp_view_multimode__tabexppanel",
+            "modelid" : "750d58d6ff6dc9843b4e45213b46946f_tabexppanel",
+            "modeltype" : "PSTABEXPPANEL"
+          }, {
+            "getCapPSLanguageRes" : {
+              "lanResTag" : "DE.LNAME.SCHEDULE"
+            },
+            "caption" : "待办任务",
+            "codeName" : "not_close_tab_tabs_exp_view_multimode_captionbar",
+            "controlType" : "CAPTIONBAR",
+            "name" : "captionbar",
+            "getPSAppDataEntity" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/schedule.json"
+            },
+            "getPSControlParam" : { }
+          } ],
+          "getPSDEViewCodeName" : "not_close_tab_tabs_exp_view_multimode",
+          "getPSDEViewId" : "57703224f2e488697db7ff6d3f6d21e9",
+          "getPSViewLayoutPanel" : {
+            "codeName" : "layoutpanel",
+            "controlStyle" : "APPDETABEXPVIEW9",
+            "controlType" : "VIEWLAYOUTPANEL",
+            "name" : "layoutpanel",
+            "getPSAppDataEntity" : {
+              "modelref" : true,
+              "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/schedule.json"
+            },
+            "getPSControlParam" : { },
+            "layoutBodyOnly" : true,
+            "layoutPanel" : true,
+            "useDefaultLayout" : true
+          },
+          "tabLayout" : "TOP",
+          "title" : "待办任务",
+          "viewStyle" : "DEFAULT",
+          "viewType" : "DETABEXPVIEW9",
+          "enableDP" : true,
+          "enableQuickSearch" : false,
+          "enableSearch" : false,
+          "expandSearchForm" : false,
+          "loadDefault" : true,
+          "showCaptionBar" : false,
+          "showDataInfoBar" : true,
+          "modelid" : "750d58d6ff6dc9843b4e45213b46946f",
+          "modeltype" : "PSAPPDEVIEW"
+        }
+      } ],
+      "getPSSysPFPlugin" : {
+        "pluginType" : "CUSTOM",
+        "pluginCode" : "TABEXPPANEL_DROPDOWN",
+        "runtimeObject" : true
+      },
+      "getPSTabExpPages" : [ {
+        "name" : "tab"
+      } ],
+      "tabLayout" : "TOP",
+      "uniqueTag" : "schedule_not_close_tab_exp_view9__tabexppanel",
+      "modelid" : "8bc4613b174a6325d4789fd2a4466d27_tabexppanel",
+      "modeltype" : "PSTABEXPPANEL"
+    }, {
+      "getCapPSLanguageRes" : {
+        "lanResTag" : "DE.LNAME.SCHEDULE"
+      },
+      "caption" : "待办任务",
+      "codeName" : "not_close_tab_exp_view9_captionbar",
+      "controlType" : "CAPTIONBAR",
+      "name" : "captionbar",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/schedule.json"
+      },
+      "getPSControlParam" : { }
+    } ]
+  },
+  "tabLayout" : "TOP",
+  "title" : "待办任务",
+  "viewStyle" : "DEFAULT",
+  "viewType" : "DETABEXPVIEW9",
+  "enableDP" : true,
+  "enableQuickSearch" : false,
+  "enableSearch" : false,
+  "expandSearchForm" : false,
+  "loadDefault" : true,
+  "showDataInfoBar" : true,
+  "modelid" : "8bc4613b174a6325d4789fd2a4466d27",
+  "modeltype" : "PSAPPDEVIEW"
+}

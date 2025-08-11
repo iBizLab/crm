@@ -1,0 +1,37 @@
+{
+  "codeListTag" : "crm__ownership",
+  "codeListType" : "STATIC",
+  "codeName" : "ownership",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSCODELISTS/ownership.json",
+  "emptyText" : "未定义",
+  "name" : "公司所有权",
+  "getPSCodeItems" : [ {
+    "codeName" : "item_1",
+    "text" : "其它",
+    "value" : "225024000000002899"
+  }, {
+    "codeName" : "item_2",
+    "text" : "私有",
+    "value" : "225024000000002901"
+  }, {
+    "codeName" : "item_3",
+    "text" : "公共",
+    "value" : "225024000000002903"
+  }, {
+    "codeName" : "item_4",
+    "text" : "附属",
+    "value" : "225024000000002905"
+  } ],
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "refFlag" : true,
+  "systemTag" : "iBizCRM",
+  "codeItemValueNumber" : false,
+  "enableCache" : true,
+  "subSysAsCloud" : false,
+  "subSysCodeList" : false,
+  "userScope" : false
+}

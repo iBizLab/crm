@@ -1,0 +1,19 @@
+{
+  "codeName" : "usr0318595478",
+  "controlType" : "PANEL",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/product/PSPANELS/usr0318595478.json",
+  "layoutMode" : "TABLE_24COL",
+  "logicName" : "List_列表项面板",
+  "memo" : "自动生成",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/product.json"
+  },
+  "getPSLayout" : {
+    "childColMD" : 24,
+    "columnCount" : 24,
+    "layout" : "TABLE_24COL"
+  },
+  "modelid" : "ca907ca4d618e33aed4fad653c6fae41",
+  "modeltype" : "PSSYSVIEWPANEL"
+}
