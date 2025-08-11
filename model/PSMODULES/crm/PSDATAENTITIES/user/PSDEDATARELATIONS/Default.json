@@ -1,9 +1,0 @@
-{
-  "codeName" : "Default",
-  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/user/PSDEDATARELATIONS/Default.json",
-  "getFormCapPSLanguageRes" : {
-    "lanResTag" : "DE.LNAME.USER"
-  },
-  "formCaption" : "用户",
-  "name" : "用户默认关系界面组"
-}

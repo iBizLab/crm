@@ -1,6 +1,0 @@
-{
-  "codeName" : "ReportView_DR",
-  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEDATARELATIONS/ReportView_DR.json",
-  "formCaption" : "任务&活动",
-  "name" : "销售报告_关系界面组"
-}

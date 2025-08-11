@@ -1,9 +1,0 @@
-{
-  "codeName" : "Default",
-  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/weekly_detail/PSDEDATARELATIONS/Default.json",
-  "getFormCapPSLanguageRes" : {
-    "lanResTag" : "DE.LNAME.WEEKLY_DETAIL"
-  },
-  "formCaption" : "周报明细",
-  "name" : "周报明细默认关系界面组"
-}

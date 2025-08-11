@@ -1,9 +1,0 @@
-{
-  "codeName" : "Default",
-  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/payee_statistic/PSDEDATARELATIONS/Default.json",
-  "getFormCapPSLanguageRes" : {
-    "lanResTag" : "DE.LNAME.PAYEE_STATISTIC"
-  },
-  "formCaption" : "收款情况统计",
-  "name" : "收款情况统计默认关系界面组"
-}

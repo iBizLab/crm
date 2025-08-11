@@ -1,9 +1,0 @@
-{
-  "codeName" : "Default",
-  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/payee_plan/PSDEDATARELATIONS/Default.json",
-  "getFormCapPSLanguageRes" : {
-    "lanResTag" : "DE.LNAME.PAYEE_PLAN"
-  },
-  "formCaption" : "收款计划",
-  "name" : "收款计划默认关系界面组"
-}

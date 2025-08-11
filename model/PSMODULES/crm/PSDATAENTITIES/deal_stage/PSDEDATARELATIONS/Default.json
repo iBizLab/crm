@@ -1,9 +1,0 @@
-{
-  "codeName" : "Default",
-  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/deal_stage/PSDEDATARELATIONS/Default.json",
-  "getFormCapPSLanguageRes" : {
-    "lanResTag" : "DE.LNAME.DEAL_STAGE"
-  },
-  "formCaption" : "商机阶段",
-  "name" : "商机阶段默认关系界面组"
-}
