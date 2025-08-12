@@ -1440,10 +1440,10 @@
       "nullable" : true
     }, {
       "codeName" : "AMOUNT",
-      "length" : 200,
       "logicName" : "金额",
       "name" : "AMOUNT",
-      "stdDataType" : 25,
+      "precision" : 2,
+      "stdDataType" : 6,
       "nullable" : true
     }, {
       "codeName" : "BUSINESS_LINE",
@@ -1500,10 +1500,9 @@
       "nullable" : true
     }, {
       "codeName" : "EXPECTED_REVENUE",
-      "length" : 200,
       "logicName" : "预期收益",
       "name" : "EXPECTED_REVENUE",
-      "stdDataType" : 25,
+      "stdDataType" : 6,
       "nullable" : true
     }, {
       "codeName" : "ID",
@@ -1574,7 +1573,7 @@
       "codeName" : "PROBABILITY",
       "logicName" : "可能性",
       "name" : "PROBABILITY",
-      "stdDataType" : 9,
+      "stdDataType" : 6,
       "nullable" : true
     }, {
       "codeName" : "REASON_FOR_LOSS__S",
@@ -2883,7 +2882,7 @@
       "nullable" : true
     }, {
       "codeName" : "PRINCIPAL_NAME",
-      "length" : 100,
+      "length" : 200,
       "logicName" : "备注主体名称",
       "name" : "PRINCIPAL_NAME",
       "stdDataType" : 25,
@@ -3021,6 +3020,7 @@
       "codeName" : "AMOUNT",
       "logicName" : "金额",
       "name" : "AMOUNT",
+      "precision" : 2,
       "stdDataType" : 6,
       "nullable" : true
     }, {
@@ -3990,6 +3990,7 @@
       "codeName" : "AMOUNT",
       "logicName" : "订单金额",
       "name" : "AMOUNT",
+      "precision" : 2,
       "stdDataType" : 6,
       "nullable" : true
     }, {
@@ -4094,12 +4095,14 @@
       "codeName" : "SETTLEMENT_AMOUNT",
       "logicName" : "业绩结算金额",
       "name" : "SETTLEMENT_AMOUNT",
+      "precision" : 2,
       "stdDataType" : 6,
       "nullable" : true
     }, {
       "codeName" : "SETTLEMENT_COST",
       "logicName" : "结算成本",
       "name" : "SETTLEMENT_COST",
+      "precision" : 2,
       "stdDataType" : 6,
       "nullable" : true
     }, {
@@ -4111,10 +4114,9 @@
       "nullable" : true
     }, {
       "codeName" : "TAX",
-      "length" : 2000,
       "logicName" : "税率",
       "name" : "TAX",
-      "stdDataType" : 25,
+      "stdDataType" : 6,
       "nullable" : true
     }, {
       "codeName" : "UPDATE_MAN",
@@ -5407,6 +5409,7 @@
       "codeName" : "COST",
       "logicName" : "费用",
       "name" : "COST",
+      "precision" : 2,
       "stdDataType" : 6,
       "nullable" : true
     }, {
