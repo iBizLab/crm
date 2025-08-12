@@ -1,0 +1,432 @@
+{
+  "codeName" : "updateRelation",
+  "defaultParamName" : "Default",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDELOGICS/updateRelation.json",
+  "logicName" : "根据统计时间更新关联信息",
+  "memo" : "根据统计时间更新关联信息",
+  "name" : "根据统计时间更新关联信息",
+  "getPSDELogicNodes" : [ {
+    "codeName" : "Begin",
+    "leftPos" : -900,
+    "logicNodeType" : "BEGIN",
+    "name" : "开始",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM3"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "Begin"
+      }
+    } ],
+    "topPos" : 112,
+    "parallelOutput" : true
+  }, {
+    "codeName" : "PREPAREPARAM2",
+    "leftPos" : 620,
+    "logicNodeType" : "PREPAREPARAM",
+    "name" : "准备参数",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "END1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM2"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "dstFieldName" : "ACTIVITIES",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "name" : "activities ==> Default[ACTIVITIES]",
+      "paramAction" : "SETPARAMVALUE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "activities"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "dstFieldName" : "WORKS",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "name" : "works ==> Default[WORKS]",
+      "paramAction" : "SETPARAMVALUE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "works"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "dstFieldName" : "TASKS",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "name" : "tasks ==> Default[TASKS]",
+      "paramAction" : "SETPARAMVALUE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "tasks"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "dstFieldName" : "NOTES",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "name" : "notes ==> Default[NOTES]",
+      "paramAction" : "SETPARAMVALUE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "notes"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    } ],
+    "topPos" : 120
+  }, {
+    "codeName" : "PREPAREPARAM3",
+    "leftPos" : -770,
+    "logicNodeType" : "PREPAREPARAM",
+    "name" : "准备参数",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RAWSFCODE1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM3"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "dstFieldName" : "name",
+      "getDstPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "name" : "用户全局对象[srfusername] ==> Default[name]",
+      "paramAction" : "SETPARAMVALUE",
+      "srcFieldName" : "srfusername",
+      "srcValueType" : "SESSION"
+    } ],
+    "topPos" : 120
+  }, {
+    "code" : "var defaultInfo = logic.getParam(\"Default\");\r\nname = defaultInfo.get('name');\r\nvar startDate = new Date(defaultInfo.get('start_date')); \r\nvar endDate = new Date(defaultInfo.get('end_date')); \r\n\r\nvar formattedStartDate = startDate.getFullYear() + '-' +  \r\n    ('0' + (startDate.getMonth() + 1)).slice(-2) + '-' +  \r\n    ('0' + startDate.getDate()).slice(-2);  \r\nvar formattedEndDate = endDate.getFullYear() + '-' +  \r\n    ('0' + (endDate.getMonth() + 1)).slice(-2) + '-' +  \r\n    ('0' + endDate.getDate()).slice(-2); \r\nname = name + formattedStartDate + '至' + formattedEndDate + '周报';  \r\ndefaultInfo.set('name', name);\r\ndefaultInfo.set('start_date', formattedStartDate+' 00:00:00');\r\ndefaultInfo.set('end_date', formattedEndDate+' 23:59:59');",
+    "codeName" : "RAWSFCODE1",
+    "codeType" : "JavaScript",
+    "leftPos" : -530,
+    "logicNodeType" : "RAWSFCODE",
+    "name" : "设置名称",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RAWSQLCALL4"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RAWSFCODE1"
+      }
+    } ],
+    "topPos" : 120
+  }, {
+    "codeName" : "RAWSQLCALL1",
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "activities"
+    },
+    "leftPos" : -110,
+    "logicNodeType" : "RAWSQLCALL",
+    "name" : "本周活动和任务",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RAWSQLCALL2"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RAWSQLCALL1"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "name" : "用户全局对象[srfpersonid]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "srfpersonid",
+      "srcValueType" : "SESSION"
+    }, {
+      "name" : "用户全局对象[userid]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "userid",
+      "srcValueType" : "SESSION"
+    }, {
+      "name" : "Default[START_DATE]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "START_DATE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "name" : "Default[START_DATE]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "START_DATE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    } ],
+    "sql" : "\r\nselect\r\n\tID as TARGET_ID,\r\n\tSUBJECT  as NAME,\r\n\tTYPE as TARGET_TYPE,\r\n    COALESCE(START_TIME, DUE_DATE) AS START_TIME,\r\n    PRIORITY,\r\n    STATUS,\r\n    COST,\r\n    DESCRIPTION\r\nfrom\r\n\tTASK\r\nwhere\r\n\t (CREATE_MAN = ?\r\n\t\tor OWNER = ?)\r\n\t\tand \r\n\t\t( \r\n\t\t\t(YEARWEEK(START_TIME , 1) = YEARWEEK(?, 1)and TYPE = 'MANEUVER')\r\n\t\t\tor \r\n\t\t\t(YEARWEEK(DUE_DATE, 1) = YEARWEEK(?, 1) and TYPE = 'TASK' )\r\n\t\t)\r\norder by START_TIME desc",
+    "topPos" : 120,
+    "fillDstLogicParam" : true,
+    "ignoreResetDstLogicParam" : false
+  }, {
+    "codeName" : "RAWSQLCALL2",
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "notes"
+    },
+    "leftPos" : 104,
+    "logicNodeType" : "RAWSQLCALL",
+    "name" : "本周进展评估",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RAWSQLCALL3"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RAWSQLCALL2"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "name" : "Default[START_DATE]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "START_DATE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "name" : "Default[END_DATE]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "END_DATE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "name" : "用户全局对象[srfpersonid]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "srfpersonid",
+      "srcValueType" : "SESSION"
+    }, {
+      "name" : "用户全局对象[srfpersonid]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "srfpersonid",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SESSION"
+    }, {
+      "name" : "用户全局对象[srfpersonid]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "srfpersonid",
+      "srcValueType" : "SESSION"
+    } ],
+    "sql" : "select\r\n*\r\nfrom\r\n\tnote_attach T1\r\nwhere\r\n  T1.UPDATE_TIME >= ?\r\n    AND T1.UPDATE_TIME <= ?\r\n    \tand (\r\n    (T1.UPDATE_MAN =?)\r\n\tor \r\n\t(EXISTS (SELECT 1 FROM task_executor T2 WHERE T2.TASK_ID = T1.PRINCIPAL_ID AND T2.USER_ID = ?))\r\n\tor\r\n\t(EXISTS (SELECT 1 FROM executor T3 WHERE T3.PRINCIPAL_ID = T1.PRINCIPAL_ID AND T3.USER_ID = ?))\r\n\r\n\t)",
+    "topPos" : 120,
+    "fillDstLogicParam" : true,
+    "ignoreResetDstLogicParam" : false
+  }, {
+    "codeName" : "RAWSQLCALL3",
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "tasks"
+    },
+    "leftPos" : 376,
+    "logicNodeType" : "RAWSQLCALL",
+    "name" : "下周任务",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "PREPAREPARAM2"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RAWSQLCALL3"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "name" : "用户全局对象[userid]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "userid",
+      "srcValueType" : "SESSION"
+    }, {
+      "name" : "Default[START_DATE]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "START_DATE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "name" : "Default[START_DATE]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "START_DATE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "name" : "Default[START_DATE]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "START_DATE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    }, {
+      "name" : "Default[START_DATE]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "START_DATE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    } ],
+    "sql" : "SELECT  \r\n    ID as TARGET_ID,  \r\n    SUBJECT as NAME,  \r\n    'TASK' as TARGET_TYPE,\r\n    PRIORITY,\r\n    STATUS,\r\n    DUE_DATE,\r\n    DESCRIPTION\r\nFROM  \r\n    TASK T1 \r\nWHERE  \r\n    T1.`TYPE` = 'TASK'  \r\n    AND EXISTS (SELECT 1 FROM task_executor T2 WHERE T2.TASK_ID = T1.ID AND T2.USER_ID = ?)\r\n\t\tAND T1.DUE_DATE >=  DATE_ADD(? + INTERVAL (7-WEEKDAY(?)) DAY, INTERVAL 0 DAY)\r\n\t\tAND T1.DUE_DATE <= DATE_ADD(?, INTERVAL (13-WEEKDAY(?)) DAY)",
+    "topPos" : 120,
+    "fillDstLogicParam" : true,
+    "ignoreResetDstLogicParam" : false
+  }, {
+    "codeName" : "RAWSQLCALL4",
+    "getDstPSDELogicParam" : {
+      "modelref" : true,
+      "id" : "works"
+    },
+    "leftPos" : -324,
+    "logicNodeType" : "RAWSQLCALL",
+    "name" : "本周工作(任务)",
+    "getPSDELogicLinks" : [ {
+      "getDstPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RAWSQLCALL1"
+      },
+      "name" : "连接名称",
+      "getSrcPSDELogicNode" : {
+        "modelref" : true,
+        "id" : "RAWSQLCALL4"
+      }
+    } ],
+    "getPSDELogicNodeParams" : [ {
+      "name" : "用户全局对象[srfuserid]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "srfuserid",
+      "srcValueType" : "SESSION"
+    }, {
+      "name" : "用户全局对象[userid]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "userid",
+      "srcValueType" : "SESSION"
+    }, {
+      "name" : "Default[START_DATE]",
+      "paramAction" : "SQLPARAM",
+      "srcFieldName" : "START_DATE",
+      "getSrcPSDELogicParam" : {
+        "modelref" : true,
+        "id" : "Default"
+      },
+      "srcValueType" : "SRCDLPARAM"
+    } ],
+    "sql" : "select\r\n\tID as TARGET_ID,\r\n\tSUBJECT  as NAME,\r\n\t'TASK' as TARGET_TYPE,\r\n    START_TIME,\r\n    PRIORITY,\r\n    STATUS,\r\n    COST,\r\n    DESCRIPTION \r\nfrom\r\n\tTASK\r\nwhere\r\n\t`TYPE` = 'TASK'\r\n\tand (CREATE_MAN = ?\r\n\t\tor OWNER = ?)\r\n        and YEARWEEK(START_TIME , 1) = YEARWEEK(?, 1)\r\norder by START_TIME desc\t\t",
+    "topPos" : 120,
+    "fillDstLogicParam" : true
+  }, {
+    "codeName" : "END1",
+    "leftPos" : 785,
+    "logicNodeType" : "END",
+    "name" : "结束",
+    "getReturnParam" : {
+      "modelref" : true,
+      "id" : "Default"
+    },
+    "returnType" : "LOGICPARAM",
+    "topPos" : 280
+  } ],
+  "getPSDELogicParams" : [ {
+    "codeName" : "Default",
+    "logicName" : "传入变量",
+    "name" : "传入变量",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies.json"
+    },
+    "default" : true,
+    "entityParam" : true
+  }, {
+    "codeName" : "activities",
+    "logicName" : "本周活动",
+    "name" : "本周活动",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+    },
+    "entityListParam" : true
+  }, {
+    "codeName" : "notes",
+    "logicName" : "本周进展评估",
+    "name" : "本周进展评估",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach.json"
+    },
+    "entityListParam" : true
+  }, {
+    "codeName" : "tasks",
+    "logicName" : "下周任务计划",
+    "name" : "下周任务计划",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+    },
+    "entityListParam" : true
+  }, {
+    "codeName" : "works",
+    "logicName" : "本周工作",
+    "name" : "本周工作",
+    "getParamPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+    },
+    "entityListParam" : true
+  } ],
+  "getStartPSDELogicNode" : {
+    "modelref" : true,
+    "id" : "Begin"
+  },
+  "enableBackend" : true,
+  "enableFront" : false
+}

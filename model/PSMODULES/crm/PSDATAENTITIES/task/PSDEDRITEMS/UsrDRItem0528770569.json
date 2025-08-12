@@ -1,0 +1,15 @@
+{
+  "codeName" : "UsrDRItem0528770569",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEDRITEMS/UsrDRItem0528770569.json",
+  "itemType" : "CUSTOM",
+  "name" : "我的待办任务表格视图",
+  "parentDataJO" : {
+    "srfparentdename" : "TASK",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "my_todo_grid_view",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "getAllPSPanelFields" : [ {
+    "id" : "product_name",
+    "viewFieldName" : "PRODUCT_NAME"
+  } ],
+  "codeName" : "usr0524197352",
+  "controlType" : "PANEL",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/product/PSPANELS/usr0524197352.json",
+  "layoutMode" : "TABLE_24COL",
+  "logicName" : "simplelist_列表项面板",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/product.json"
+  },
+  "getPSLayout" : {
+    "childColMD" : 24,
+    "columnCount" : 24,
+    "layout" : "TABLE_24COL"
+  },
+  "getRootPSPanelItems" : [ {
+    "itemStyle" : "DEFAULT",
+    "itemType" : "CONTAINER",
+    "name" : "page_container",
+    "getPSLayout" : {
+      "dir" : "column",
+      "layout" : "FLEX"
+    },
+    "getPSLayoutPos" : {
+      "colMD" : 24,
+      "layout" : "TABLE_24COL"
+    },
+    "getPSPanelItems" : [ {
+      "caption" : "文本(动态)",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "FIELD",
+      "name" : "product_name",
+      "getPSEditor" : {
+        "editorType" : "SPAN",
+        "name" : "product_name",
+        "predefinedType" : "FIELD_TEXT_DYNAMIC",
+        "renderMode" : "TEXT_DYNAMIC",
+        "enableLinkView" : false
+      },
+      "getPSLayoutPos" : {
+        "grow" : -1,
+        "layout" : "FLEX"
+      },
+      "viewFieldName" : "PRODUCT_NAME"
+    } ]
+  } ],
+  "modelid" : "9f5d261de2040e04b5c3b01e4a4d796d",
+  "modeltype" : "PSSYSVIEWPANEL"
+}

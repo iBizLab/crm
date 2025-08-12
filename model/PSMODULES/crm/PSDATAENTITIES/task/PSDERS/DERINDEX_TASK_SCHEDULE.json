@@ -1,0 +1,59 @@
+{
+  "codeName" : "schedule",
+  "dERType" : "DERINDEX",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/task/PSDERS/DERINDEX_TASK_SCHEDULE.json",
+  "logicName" : "日程-任务",
+  "getMajorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/schedule.json"
+  },
+  "getMinorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+  },
+  "name" : "DERINDEX_TASK_SCHEDULE",
+  "orderValue" : 100,
+  "getPSDERIndexDEFieldMaps" : [ {
+    "getMajorPSDEField" : {
+      "name" : "STATUS",
+      "codeName" : "Status"
+    },
+    "getMinorPSDEField" : {
+      "name" : "STATUS",
+      "codeName" : "Status"
+    },
+    "name" : "STATUS=STATUS"
+  }, {
+    "getMajorPSDEField" : {
+      "name" : "OWNER_ID",
+      "codeName" : "owner_id"
+    },
+    "getMinorPSDEField" : {
+      "name" : "OWNER_ID",
+      "codeName" : "owner_id"
+    },
+    "name" : "OWNER_ID=OWNER_ID"
+  }, {
+    "getMajorPSDEField" : {
+      "name" : "OWNER_SUBTYPE",
+      "codeName" : "owner_subtype"
+    },
+    "getMinorPSDEField" : {
+      "name" : "OWNER_SUBTYPE",
+      "codeName" : "owner_subtype"
+    },
+    "name" : "OWNER_SUBTYPE=OWNER_SUBTYPE"
+  }, {
+    "getMajorPSDEField" : {
+      "name" : "OWNER_TYPE",
+      "codeName" : "owner_type"
+    },
+    "getMinorPSDEField" : {
+      "name" : "OWNER_TYPE",
+      "codeName" : "owner_type"
+    },
+    "name" : "OWNER_TYPE=OWNER_TYPE"
+  } ],
+  "serviceCodeName" : "schedule",
+  "typeValue" : "TASK"
+}

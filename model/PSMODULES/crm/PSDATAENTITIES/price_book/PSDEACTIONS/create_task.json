@@ -1,0 +1,28 @@
+{
+  "actionMode" : "CREATE",
+  "actionType" : "USERCUSTOM",
+  "codeName" : "create_task",
+  "dataAccessAction" : "UPDATE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/price_book/PSDEACTIONS/create_task.json",
+  "logicName" : "批创建任务",
+  "memo" : "自动生成",
+  "name" : "create_task",
+  "getPSDEActionInput" : {
+    "name" : "Create_taskInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "price_book_dto"
+    },
+    "type" : "DTO",
+    "output" : true
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Create_taskResult",
+    "type" : "VOID"
+  },
+  "getPSSysSFPlugin" : {
+    "modelref" : true,
+    "path" : "PSSYSSFPLUGINS/CreateTask.json"
+  },
+  "enableAudit" : true
+}

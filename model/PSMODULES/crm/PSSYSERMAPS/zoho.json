@@ -1,0 +1,178 @@
+{
+  "codeName" : "zoho",
+  "dynaModelFilePath" : "PSMODULES/crm/PSSYSERMAPS/zoho.json",
+  "name" : "主模型",
+  "getPSSysERMapNodes" : [ {
+    "leftPos" : 100,
+    "name" : "ACCOUNT",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+    },
+    "topPos" : 100
+  }, {
+    "leftPos" : 550,
+    "name" : "CALL",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/call.json"
+    },
+    "topPos" : 100
+  }, {
+    "leftPos" : 1000,
+    "name" : "CONTACT",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/contact.json"
+    },
+    "topPos" : 100
+  }, {
+    "leftPos" : 1450,
+    "name" : "DEAL",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal.json"
+    },
+    "topPos" : 100
+  }, {
+    "leftPos" : 100,
+    "name" : "DEAL_HISTORY",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal_history.json"
+    },
+    "topPos" : 650
+  }, {
+    "leftPos" : 550,
+    "name" : "DEAL_STAGE",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal_stage.json"
+    },
+    "topPos" : 650
+  }, {
+    "leftPos" : 1000,
+    "name" : "EVENT",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/event.json"
+    },
+    "topPos" : 650
+  }, {
+    "leftPos" : 1450,
+    "name" : "EXECUTOR",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/executor.json"
+    },
+    "topPos" : 650
+  }, {
+    "leftPos" : 100,
+    "name" : "LEAD",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/lead.json"
+    },
+    "topPos" : 1200
+  }, {
+    "leftPos" : 550,
+    "name" : "ORDER_ALLOCATE",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/order_allocate.json"
+    },
+    "topPos" : 1200
+  }, {
+    "leftPos" : 1000,
+    "name" : "PAYEE",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee.json"
+    },
+    "topPos" : 1200
+  }, {
+    "leftPos" : 1450,
+    "name" : "PAYEE_ALLOCATE",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_allocate.json"
+    },
+    "topPos" : 1200
+  }, {
+    "leftPos" : 100,
+    "name" : "PAYEE_PLAN",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan.json"
+    },
+    "topPos" : 1750
+  }, {
+    "leftPos" : 550,
+    "name" : "PRODUCT",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/product.json"
+    },
+    "topPos" : 1750
+  }, {
+    "leftPos" : 1000,
+    "name" : "PRODUCT_CERTIFICATE",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/product_certificate.json"
+    },
+    "topPos" : 1750
+  }, {
+    "leftPos" : 1450,
+    "name" : "PROJECT",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/project.json"
+    },
+    "topPos" : 1750
+  }, {
+    "leftPos" : 100,
+    "name" : "SCHEDULE",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/schedule.json"
+    },
+    "topPos" : 2300
+  }, {
+    "leftPos" : 550,
+    "name" : "TASK",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+    },
+    "topPos" : 2300
+  }, {
+    "leftPos" : 1000,
+    "name" : "TASK_EXECUTOR",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/task_executor.json"
+    },
+    "topPos" : 2300
+  }, {
+    "leftPos" : 1450,
+    "name" : "VENDOR",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/vendor.json"
+    },
+    "topPos" : 2300
+  }, {
+    "leftPos" : 100,
+    "name" : "WEEKLIES",
+    "getPSDataEntity" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies.json"
+    },
+    "topPos" : 2850
+  } ],
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  }
+}

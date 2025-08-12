@@ -1,0 +1,15 @@
+{
+  "codeName" : "UsrDRItem0624558803",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/task/PSDEDRITEMS/UsrDRItem0624558803.json",
+  "itemType" : "CUSTOM",
+  "name" : "我的活动看板视图",
+  "parentDataJO" : {
+    "srfparentdename" : "TASK",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "myActivityKanbanView",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+  }
+}

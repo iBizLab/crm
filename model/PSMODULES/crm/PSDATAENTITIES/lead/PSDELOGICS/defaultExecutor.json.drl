@@ -1,0 +1,56 @@
+package cn.ibizlab.crm.crm.logic.leadlogic.defaultexecutor;
+        import java.util.Map;
+        import java.util.HashMap;
+        import com.alibaba.fastjson.JSONObject;
+        import org.springframework.util.StringUtils;
+        import org.springframework.util.ObjectUtils;
+        import cn.ibizlab.crm.util.errors.BadRequestAlertException;
+                global cn.ibizlab.crm.core.crm.domain.lead leaddefaultexecutordefault;
+                global cn.ibizlab.crm.core.crm.domain.executor leaddefaultexecutoritem;
+                global cn.ibizlab.crm.core.crm.domain.executor leaddefaultexecutorlist;
+        global cn.ibizlab.crm.core.crm.service.IleadService iBzSysLeadDefaultService;
+        global cn.ibizlab.crm.util.security.AuthenticationUser curuser;
+
+
+    no-loop
+
+            //逻辑处理节点[开始]
+            rule "begin"
+            ruleflow-group "leaddefaultexecutorbegin"
+            when
+            then
+            end
+
+            //逻辑处理节点[结束]
+            rule "end1"
+            ruleflow-group "leaddefaultexecutorend1"
+            when
+            then
+                        update(leaddefaultexecutordefault);//更新fact中变量值
+                        update(leaddefaultexecutoritem);//更新fact中变量值
+                        update(leaddefaultexecutorlist);//更新fact中变量值
+            end
+
+            //逻辑处理节点[默认执行人]
+            rule "prepareparam1"
+            ruleflow-group "leaddefaultexecutorprepareparam1"
+            when
+            then
+                                leaddefaultexecutoritem.set("userid",curuser.getSessionParams().get("userid"));
+                                leaddefaultexecutoritem.set("name",curuser.getSessionParams().get("srfpersonname"));
+                            leaddefaultexecutorlist.set("0",leaddefaultexecutoritem.get(""));
+                        update(leaddefaultexecutordefault);//更新fact中变量值
+                        update(leaddefaultexecutoritem);//更新fact中变量值
+                        update(leaddefaultexecutorlist);//更新fact中变量值
+            end
+
+            //逻辑处理节点[准备参数]
+            rule "prepareparam2"
+            ruleflow-group "leaddefaultexecutorprepareparam2"
+            when
+            then
+                            leaddefaultexecutordefault.set("executors",leaddefaultexecutorlist.get(""));
+                        update(leaddefaultexecutordefault);//更新fact中变量值
+                        update(leaddefaultexecutoritem);//更新fact中变量值
+                        update(leaddefaultexecutorlist);//更新fact中变量值
+            end

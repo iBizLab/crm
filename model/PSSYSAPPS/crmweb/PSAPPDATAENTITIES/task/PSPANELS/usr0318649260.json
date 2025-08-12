@@ -1,0 +1,54 @@
+{
+  "getAllPSPanelFields" : [ {
+    "id" : "subject",
+    "viewFieldName" : "SUBJECT"
+  } ],
+  "codeName" : "usr0318649260",
+  "controlType" : "PANEL",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task/PSPANELS/usr0318649260.json",
+  "layoutMode" : "TABLE_24COL",
+  "logicName" : "客户多模式卡片视图_卡片视图_卡片面板",
+  "memo" : "自动生成",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+  },
+  "getPSLayout" : {
+    "childColMD" : 24,
+    "columnCount" : 24,
+    "layout" : "TABLE_24COL"
+  },
+  "getRootPSPanelItems" : [ {
+    "caption" : "容器",
+    "itemStyle" : "DEFAULT",
+    "itemType" : "CONTAINER",
+    "name" : "container",
+    "getPSLayout" : {
+      "layout" : "FLEX"
+    },
+    "getPSLayoutPos" : {
+      "colMD" : 24,
+      "layout" : "TABLE_24COL"
+    },
+    "getPSPanelItems" : [ {
+      "caption" : "文本(动态)",
+      "itemStyle" : "DEFAULT",
+      "itemType" : "FIELD",
+      "name" : "subject",
+      "getPSEditor" : {
+        "editorType" : "SPAN",
+        "name" : "subject",
+        "predefinedType" : "FIELD_TEXT_DYNAMIC",
+        "renderMode" : "TEXT_DYNAMIC",
+        "enableLinkView" : false
+      },
+      "getPSLayoutPos" : {
+        "grow" : -1,
+        "layout" : "FLEX"
+      },
+      "viewFieldName" : "SUBJECT"
+    } ]
+  } ],
+  "modelid" : "4c5f1d909e5e2beef22ddaec309c9d4e",
+  "modeltype" : "PSSYSVIEWPANEL"
+}

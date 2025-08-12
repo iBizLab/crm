@@ -1,0 +1,37 @@
+{
+  "codeName" : "UsrDRItem0422262266",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/schedule/PSDEDRITEMS/UsrDRItem0422262266.json",
+  "itemType" : "CUSTOM",
+  "name" : "待办任务（列模式）",
+  "getPSNavigateContexts" : [ {
+    "key" : "OWNER_ID",
+    "name" : "OWNER_ID",
+    "value" : "account",
+    "rawValue" : false
+  }, {
+    "key" : "OWNER_TYPE",
+    "name" : "OWNER_TYPE",
+    "value" : "account",
+    "rawValue" : true
+  } ],
+  "getPSNavigateParams" : [ {
+    "key" : "owner_id",
+    "name" : "owner_id",
+    "value" : "account",
+    "rawValue" : false
+  }, {
+    "key" : "owner_type",
+    "name" : "owner_type",
+    "value" : "account",
+    "rawValue" : true
+  } ],
+  "parentDataJO" : {
+    "srfparentdename" : "SCHEDULE",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "not_close_tab_lists_exp_view_multimode",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/schedule.json"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "GETDRAFT",
+  "actionType" : "DELOGIC",
+  "codeName" : "get_link_type",
+  "dataAccessAction" : "NONE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDEACTIONS/get_link_type.json",
+  "logicName" : "获取链接视图类型",
+  "name" : "get_link_type",
+  "getPSDEActionInput" : {
+    "name" : "Get_link_typeInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "weeklies_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Get_link_typeResult",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "weeklies_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/weeklies/PSDELOGICS/get_link_type.json"
+  },
+  "enableFront" : false
+}

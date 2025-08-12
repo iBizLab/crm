@@ -1,0 +1,26 @@
+{
+  "codeListTag" : "crm__owner",
+  "codeListType" : "DYNAMIC",
+  "codeName" : "crm__owner",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__owner.json",
+  "emptyText" : "未定义",
+  "name" : "所有者",
+  "getPSAppDEDataSet" : {
+    "modelref" : true,
+    "id" : "fetch_all"
+  },
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/user.json"
+  },
+  "getTextPSAppDEField" : {
+    "name" : "FIRST_NAME",
+    "codeName" : "first_name"
+  },
+  "getValuePSAppDEField" : {
+    "name" : "ID",
+    "codeName" : "id"
+  },
+  "enableCache" : true
+}

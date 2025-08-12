@@ -1,0 +1,48 @@
+{
+  "codeName" : "TabExpView_DR",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEDATARELATIONS/TabExpView_DR.json",
+  "formCaption" : "商机",
+  "name" : "工作台商机分页导航视图_关系界面组",
+  "getPSDEDRDetails" : [ {
+    "caption" : "商机",
+    "detailType" : "DRITEM",
+    "name" : "deal",
+    "orderValue" : 100,
+    "originCaption" : "商机",
+    "getPSDEDRItem" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEDRITEMS/UsrDRItem0613154768.json"
+    }
+  }, {
+    "caption" : "业绩-收款（待提供）",
+    "detailType" : "DRITEM",
+    "name" : "collection",
+    "orderValue" : 110,
+    "originCaption" : "业绩-收款（待提供）",
+    "getPSDEDRItem" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEDRITEMS/UsrDRItem0613653305.json"
+    }
+  }, {
+    "caption" : "业绩-新签合同（待提供）",
+    "detailType" : "DRITEM",
+    "name" : "newcontract",
+    "orderValue" : 120,
+    "originCaption" : "业绩-新签合同（待提供）",
+    "getPSDEDRItem" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEDRITEMS/UsrDRItem0613653305.json"
+    }
+  }, {
+    "caption" : "业绩-费用（待提供）",
+    "detailType" : "DRITEM",
+    "name" : "cost",
+    "orderValue" : 130,
+    "originCaption" : "业绩-费用（待提供）",
+    "getPSDEDRItem" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEDRITEMS/UsrDRItem0613653305.json"
+    }
+  } ],
+  "hideEditItem" : true
+}

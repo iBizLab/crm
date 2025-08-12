@@ -1,0 +1,26 @@
+{
+  "codeName" : "UsrDRItem0604106360",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/project/PSDEDRITEMS/UsrDRItem0604106360.json",
+  "itemType" : "DER1N",
+  "name" : "收款计划",
+  "getPSDER" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan/PSDERS/DER1N_PAYEE_PLAN_PROJECT_PROJECT_ID.json"
+  },
+  "parentDataJO" : {
+    "SRFPARENTTYPE" : "DER1N",
+    "srfparentdename" : "PROJECT",
+    "srfparentmode" : "DER1N_PAYEE_PLAN_PROJECT_PROJECT_ID",
+    "srfparentdefname" : "PROJECT_ID",
+    "SRFDER1NID" : "DER1N_PAYEE_PLAN_PROJECT_PROJECT_ID"
+  },
+  "viewCodeName" : "grid_view",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/payee_plan.json"
+  },
+  "viewParamJO" : {
+    "SRFPARENTTYPE" : "DER1N",
+    "SRFDER1NID" : "DER1N_PAYEE_PLAN_PROJECT_PROJECT_ID"
+  }
+}

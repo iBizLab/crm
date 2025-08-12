@@ -1,0 +1,35 @@
+{
+  "codeName" : "task",
+  "dERType" : "DER1N",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/task_executor/PSDERS/DER1N_TASK_EXECUTOR_TASK_TASK_ID.json",
+  "fKeyName" : "F19F47A32568C9E0B9",
+  "logicName" : "名称",
+  "getMajorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/task.json"
+  },
+  "masterOrder" : 100,
+  "masterRS" : 13,
+  "minorCodeName" : "task_executors",
+  "getMinorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/task_executor.json"
+  },
+  "minorServiceCodeName" : "task_executors",
+  "name" : "DER1N_TASK_EXECUTOR_TASK_TASK_ID",
+  "orderValue" : 100,
+  "getPSOne2ManyDataDEField" : {
+    "name" : "EXECUTORS",
+    "codeName" : "executors"
+  },
+  "getPSPickupDEField" : {
+    "name" : "TASK_ID",
+    "codeName" : "Task_id"
+  },
+  "pickupDEFName" : "TASK_ID",
+  "removeActionType" : -1,
+  "removeOrder" : 0,
+  "serviceCodeName" : "task",
+  "enableFKey" : true,
+  "nestedRS" : true
+}

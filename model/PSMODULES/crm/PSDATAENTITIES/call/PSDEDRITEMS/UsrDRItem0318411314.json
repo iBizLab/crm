@@ -1,0 +1,16 @@
+{
+  "codeName" : "UsrDRItem0318411314",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/call/PSDEDRITEMS/UsrDRItem0318411314.json",
+  "itemType" : "CUSTOM",
+  "memo" : "自动生成",
+  "name" : "通话多模式表格视图",
+  "parentDataJO" : {
+    "srfparentdename" : "CALL",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "grid_view_multimode",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+  }
+}

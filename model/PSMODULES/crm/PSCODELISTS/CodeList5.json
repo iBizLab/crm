@@ -1,0 +1,30 @@
+{
+  "codeListTag" : "crm__CodeList5",
+  "codeListType" : "STATIC",
+  "codeName" : "CodeList5",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSCODELISTS/CodeList5.json",
+  "emptyText" : "未定义",
+  "name" : "用户对象类型",
+  "getPSCodeItems" : [ {
+    "codeName" : "user",
+    "text" : "用户",
+    "value" : "USER"
+  }, {
+    "codeName" : "usergroup",
+    "text" : "用户组",
+    "value" : "USERGROUP"
+  } ],
+  "getPSCodeListTemplId" : "CODELIST_00005",
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "refFlag" : false,
+  "systemTag" : "iBizCRM",
+  "codeItemValueNumber" : false,
+  "enableCache" : true,
+  "subSysAsCloud" : false,
+  "subSysCodeList" : false,
+  "userScope" : false
+}

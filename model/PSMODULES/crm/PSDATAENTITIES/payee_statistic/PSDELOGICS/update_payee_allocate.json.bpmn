@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:g="http://www.jboss.org/drools/flow/gpd" xmlns:tns="http://www.jboss.org/drools" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.mvel.org/2.0" id="Definition" name="" targetNamespace="http://www.jboss.org/drools" typeLanguage="http://www.java.com/javaTypes">
+        <process id="cn.ibizlab.crm.core.crm.service.logic.payee_statisticupdate_payee_allocate" isClosed="false" isExecutable="true" name="crm_payee_statistic_update_payee_allocate_ruleFlow" processType="Private" tns:packageName="cn.ibizlab.crm.core.crm.service.logic.payee_statisticupdate_payee_allocate">
+            <extensionElements>
+                <tns:import name="java.util.Map" />
+                <tns:import name="org.springframework.util.StringUtils"/>
+                <tns:import name="cn.ibizlab.crm.util.helper.RuleUtils"/>
+                                <tns:metaData express="" name="payee_statisticupdate_payee_allocatedefault" type="entity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.payee()" name="payee_statisticupdate_payee_allocatepayee" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.payee()" name="payee_statisticupdate_payee_allocatepayee_info" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.payee_statistic()" name="payee_statisticupdate_payee_allocatepayee_statistic_info" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.payee_statistic()" name="payee_statisticupdate_payee_allocatepayee_stistic" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.payee_plan()" name="payee_statisticupdate_payee_allocatepayee2" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.payee_statistic()" name="payee_statisticupdate_payee_allocatestatistic" type="refentity"/>
+                                <tns:metaData express="new cn.ibizlab.crm.core.crm.domain.payee()" name="payee_statisticupdate_payee_allocatesub" type="refentity"/>
+                                    <tns:metaData express="T(cn.ibizlab.crm.util.security.SpringContextHolder).getBean(T(cn.ibizlab.crm.core.crm.service.Ipayee_statisticService))" name="payee_statisticservice" type="service"/>
+                    <tns:metaData express="T(cn.ibizlab.crm.util.security.SpringContextHolder).getBean(T(cn.ibizlab.crm.core.crm.service.Ipayee_statisticService))" name="iBzSysPayee_statisticDefaultService" type="service"/>
+                    <tns:metaData express="T(cn.ibizlab.crm.util.security.AuthenticationUser).getAuthenticationUser()" name="curuser" type="session"/>
+                            <tns:global identifier="payee_statisticupdate_payee_allocatedefault" type="cn.ibizlab.crm.core.crm.domain.payee_statistic" />
+                            <tns:global identifier="payee_statisticupdate_payee_allocatepayee" type="cn.ibizlab.crm.core.crm.domain.payee" />
+                            <tns:global identifier="payee_statisticupdate_payee_allocatepayee_info" type="cn.ibizlab.crm.core.crm.domain.payee" />
+                            <tns:global identifier="payee_statisticupdate_payee_allocatepayee_statistic_info" type="cn.ibizlab.crm.core.crm.domain.payee_statistic" />
+                            <tns:global identifier="payee_statisticupdate_payee_allocatepayee_stistic" type="cn.ibizlab.crm.core.crm.domain.payee_statistic" />
+                            <tns:global identifier="payee_statisticupdate_payee_allocatepayee2" type="cn.ibizlab.crm.core.crm.domain.payee_plan" />
+                            <tns:global identifier="payee_statisticupdate_payee_allocatestatistic" type="cn.ibizlab.crm.core.crm.domain.payee_statistic" />
+                            <tns:global identifier="payee_statisticupdate_payee_allocatesub" type="cn.ibizlab.crm.core.crm.domain.payee" />
+            </extensionElements>
+                        <startEvent id="begin" isInterrupting="true"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="payee_statisticupdate_payee_allocateloopsubcall1" id="loopsubcall1" implementation="http://www.jboss.org/drools/rule" name="循环子调用"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="payee_statisticupdate_payee_allocaterawsfcode1" id="rawsfcode1" implementation="http://www.jboss.org/drools/rule" name="执行脚本代码"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="payee_statisticupdate_payee_allocatecopyparam1" id="copyparam1" implementation="http://www.jboss.org/drools/rule" name="拷贝参数"/>
+                        <endEvent id="copyparam1_end" name="end"/>
+                        <sequenceFlow id="copyparam1_end_line" sourceRef="copyparam1" targetRef="copyparam1_end"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="payee_statisticupdate_payee_allocatedebugparam1" id="debugparam1" implementation="http://www.jboss.org/drools/rule" name="调试逻辑参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="payee_statisticupdate_payee_allocateend1" id="end1" implementation="http://www.jboss.org/drools/rule" name="结束"/>
+                        <endEvent id="end1_end" name="end"/>
+                        <sequenceFlow id="end1_end_line" sourceRef="end1" targetRef="end1_end"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="payee_statisticupdate_payee_allocatedeaction1" id="deaction1" implementation="http://www.jboss.org/drools/rule" name="实体行为"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="payee_statisticupdate_payee_allocateprepareparam1" id="prepareparam1" implementation="http://www.jboss.org/drools/rule" name="准备参数"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="payee_statisticupdate_payee_allocaterawsqlcall1" id="rawsqlcall1" implementation="http://www.jboss.org/drools/rule" name="直接SQL调用"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="payee_statisticupdate_payee_allocateloopsubcall2" id="loopsubcall2" implementation="http://www.jboss.org/drools/rule" name="循环获取计划数据"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="payee_statisticupdate_payee_allocaterawsfcode2" id="rawsfcode2" implementation="http://www.jboss.org/drools/rule" name="执行脚本代码"/>
+                        <businessRuleTask activiti:exclusive="true" g:ruleFlowGroup="payee_statisticupdate_payee_allocatedebugparam2" id="debugparam2" implementation="http://www.jboss.org/drools/rule" name="调试逻辑参数"/>
+                    <sequenceFlow id="begin_rawsqlcall1" sourceRef="begin" targetRef="rawsqlcall1">
+                    </sequenceFlow>
+                    <sequenceFlow id="loopsubcall1_copyparam1" sourceRef="loopsubcall1" targetRef="copyparam1">
+                    </sequenceFlow>
+                    <sequenceFlow id="rawsfcode1_debugparam1" sourceRef="rawsfcode1" targetRef="debugparam1">
+                    </sequenceFlow>
+                    <sequenceFlow id="debugparam1_loopsubcall1" sourceRef="debugparam1" targetRef="loopsubcall1">
+                    </sequenceFlow>
+                    <sequenceFlow id="deaction1_end1" sourceRef="deaction1" targetRef="end1">
+                    </sequenceFlow>
+                    <sequenceFlow id="prepareparam1_deaction1" sourceRef="prepareparam1" targetRef="deaction1">
+                    </sequenceFlow>
+                    <sequenceFlow id="rawsqlcall1_debugparam2" sourceRef="rawsqlcall1" targetRef="debugparam2">
+                    </sequenceFlow>
+                    <sequenceFlow id="loopsubcall2_rawsfcode2" sourceRef="loopsubcall2" targetRef="rawsfcode2">
+                    </sequenceFlow>
+                    <sequenceFlow id="rawsfcode2_prepareparam1" sourceRef="rawsfcode2" targetRef="prepareparam1">
+                    </sequenceFlow>
+                    <sequenceFlow id="debugparam2_loopsubcall2" sourceRef="debugparam2" targetRef="loopsubcall2">
+                    </sequenceFlow>
+        </process>
+    </definitions>

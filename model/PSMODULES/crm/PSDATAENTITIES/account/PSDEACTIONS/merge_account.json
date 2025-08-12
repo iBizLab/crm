@@ -1,0 +1,38 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "CUSTOM",
+  "actionType" : "DELOGIC",
+  "getAfterPSDEActionLogics" : [ {
+    "actionLogicType" : 1,
+    "attachMode" : "AFTER",
+    "name" : "附加逻辑",
+    "getPSDELogic" : {
+      "modelref" : true,
+      "path" : "PSMODULES/crm/PSDATAENTITIES/account/PSDELOGICS/delete_marge.json"
+    },
+    "internalLogic" : true
+  } ],
+  "codeName" : "merge_account",
+  "dataAccessAction" : "NONE",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/account/PSDEACTIONS/merge_account.json",
+  "logicName" : "合并客户",
+  "name" : "merge_account",
+  "getPSDEActionInput" : {
+    "name" : "Merge_accountInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "account_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Merge_accountResult",
+    "type" : "VOID"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/account/PSDELOGICS/merge_account.json"
+  },
+  "enableAudit" : true,
+  "enableFront" : false
+}

@@ -1,0 +1,413 @@
+{
+  "aggMode" : "NONE",
+  "codeName" : "work_taks_my_all_grid_view_grid",
+  "columnEnableFilter" : 2,
+  "columnEnableLink" : 0,
+  "controlStyle" : "NUMBER_GRID",
+  "controlType" : "GRID",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task/PSGRIDS/work_taks_my_all_grid_view_grid.json",
+  "getFetchPSControlAction" : {
+    "modelref" : true,
+    "id" : "fetch",
+    "actionType" : "DEDATASET",
+    "name" : "fetch",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "fetch_my_all_task"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+    }
+  },
+  "groupMode" : "NONE",
+  "logicName" : "我的全部任务_表格(工作)",
+  "minorSortDir" : "ASC",
+  "getMinorSortPSAppDEField" : {
+    "name" : "DUE_DATE",
+    "codeName" : "due_date"
+  },
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+  },
+  "getPSControls" : [ {
+    "codeName" : "my_all_grid_view_grid_batchtoolbar",
+    "controlType" : "TOOLBAR",
+    "logicName" : "批操作_工具栏",
+    "memo" : "自动生成",
+    "name" : "grid_batchtoolbar",
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+    },
+    "getPSControlParam" : {
+      "id" : "grid_batchtoolbar"
+    },
+    "getPSDEToolbarItems" : [ {
+      "caption" : "删除",
+      "groupExtractMode" : "ITEM",
+      "itemType" : "DEUIACTION",
+      "name" : "deuiaction5",
+      "noPrivDisplayMode" : 2,
+      "getPSAppViewUIAction" : {
+        "modelref" : true,
+        "id" : "grid_batchtoolbar_deuiaction5"
+      },
+      "getPSUIAction" : {
+        "actionTarget" : "MULTIKEY",
+        "caption" : "删除",
+        "codeName" : "remove",
+        "confirmMsg" : "确定要删除所选的记录吗？",
+        "fullCodeName" : "task_remove",
+        "memo" : "自动生成",
+        "name" : "删除",
+        "getPSAppDEMethod" : {
+          "modelref" : true,
+          "id" : "remove"
+        },
+        "getPSAppDataEntity" : {
+          "modelref" : true,
+          "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+        },
+        "refreshMode" : 1,
+        "successMsg" : "删除成功",
+        "timeout" : 60000,
+        "uIActionMode" : "BACKEND",
+        "uIActionTag" : "remove",
+        "uIActionType" : "DEUIACTION",
+        "enableConfirm" : true,
+        "reloadData" : true,
+        "id" : "remove@task"
+      },
+      "tooltip" : "删除",
+      "uIActionTarget" : "MULTIKEY",
+      "showCaption" : true,
+      "showIcon" : true
+    } ],
+    "modelid" : "7f60d400c60441a72abfaca9b2495ba7",
+    "modeltype" : "PSDETOOLBAR"
+  } ],
+  "getPSDEDataImport" : {
+    "modelref" : true,
+    "id" : "DataImport"
+  },
+  "getPSDEGridColumns" : [ {
+    "align" : "LEFT",
+    "cLConvertMode" : "NONE",
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.SUBJECT"
+    },
+    "caption" : "任务名称",
+    "codeName" : "subject",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "subject",
+    "excelCaption" : "任务名称",
+    "name" : "subject",
+    "noPrivDisplayMode" : 1,
+    "getPSAppDEField" : {
+      "name" : "SUBJECT",
+      "codeName" : "subject"
+    },
+    "getPSDEUIActionGroup" : {
+      "codeName" : "Usr0722100827",
+      "name" : "任务操作列（工作）",
+      "getPSAppDataEntity" : {
+        "modelref" : true,
+        "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+      },
+      "getPSUIActionGroupDetails" : [ {
+        "actionLevel" : 200,
+        "detailType" : "DEUIACTION",
+        "name" : "ucf64e6e",
+        "getPSSysImage" : {
+          "glyph" : "xf044@FontAwesome",
+          "cssClass" : "fa fa-edit"
+        },
+        "getPSUIAction" : {
+          "actionTarget" : "SINGLEKEY",
+          "caption" : "编辑",
+          "codeName" : "work_task_open_edit_view",
+          "getFrontPSAppView" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDEVIEWS/task_work_task_edit_view.json",
+            "viewType" : "DEEDITVIEW"
+          },
+          "frontProcessType" : "WIZARD",
+          "fullCodeName" : "task_work_task_open_edit_view",
+          "memo" : "自动生成",
+          "name" : "任务编辑（工作任务）",
+          "getPSAppDataEntity" : {
+            "modelref" : true,
+            "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+          },
+          "refreshMode" : 1,
+          "tooltip" : "编辑",
+          "uIActionMode" : "FRONT",
+          "uIActionTag" : "work_task_open_edit_view",
+          "uIActionType" : "DEUIACTION",
+          "reloadData" : true,
+          "id" : "work_task_open_edit_view@task"
+        },
+        "tooltip" : "编辑",
+        "addSeparator" : false,
+        "showCaption" : false,
+        "showIcon" : true
+      } ],
+      "uniqueTag" : "task__Usr0722100827"
+    },
+    "width" : 400,
+    "widthUnit" : "STAR",
+    "enableSort" : true
+  }, {
+    "align" : "LEFT",
+    "cLConvertMode" : "NONE",
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.DUE_DATE"
+    },
+    "caption" : "到期日期",
+    "codeName" : "due_date",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "due_date",
+    "excelCaption" : "到期日期",
+    "name" : "due_date",
+    "noPrivDisplayMode" : 1,
+    "getPSAppDEField" : {
+      "name" : "DUE_DATE",
+      "codeName" : "due_date"
+    },
+    "valueFormat" : "YYYY-MM-DD",
+    "width" : 180,
+    "widthUnit" : "PX",
+    "enableSort" : true
+  }, {
+    "align" : "LEFT",
+    "cLConvertMode" : "FRONT",
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.STATUS"
+    },
+    "caption" : "状态",
+    "codeName" : "status",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "status",
+    "excelCaption" : "状态",
+    "name" : "status",
+    "noPrivDisplayMode" : 1,
+    "getPSAppCodeList" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__task_status.json"
+    },
+    "getPSAppDEField" : {
+      "name" : "STATUS",
+      "codeName" : "status"
+    },
+    "width" : 100,
+    "widthUnit" : "PX",
+    "enableSort" : true
+  }, {
+    "align" : "LEFT",
+    "cLConvertMode" : "FRONT",
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.PRIORITY"
+    },
+    "caption" : "优先级",
+    "codeName" : "priority",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "priority",
+    "excelCaption" : "优先级",
+    "name" : "priority",
+    "noPrivDisplayMode" : 1,
+    "getPSAppCodeList" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__priority.json"
+    },
+    "getPSAppDEField" : {
+      "name" : "PRIORITY",
+      "codeName" : "priority"
+    },
+    "width" : 100,
+    "widthUnit" : "PX",
+    "enableSort" : true
+  }, {
+    "align" : "LEFT",
+    "cLConvertMode" : "NONE",
+    "caption" : "执行人",
+    "codeName" : "executors",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "executors",
+    "excelCaption" : "执行人",
+    "name" : "executors",
+    "noPrivDisplayMode" : 1,
+    "objectIdField" : "id",
+    "objectNameField" : "name",
+    "getPSAppDEField" : {
+      "name" : "EXECUTORS",
+      "codeName" : "executors"
+    },
+    "valueType" : "OBJECTS",
+    "width" : 150,
+    "widthUnit" : "PX",
+    "enableSort" : false
+  }, {
+    "align" : "LEFT",
+    "cLConvertMode" : "FRONT",
+    "getCapPSLanguageRes" : {
+      "lanResTag" : "DEF.LNAME.OWNER"
+    },
+    "caption" : "所有者",
+    "codeName" : "owner",
+    "columnType" : "DEFGRIDCOLUMN",
+    "dataItemName" : "owner",
+    "excelCaption" : "所有者",
+    "name" : "owner",
+    "noPrivDisplayMode" : 1,
+    "getPSAppCodeList" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPCODELISTS/crm__owner.json"
+    },
+    "getPSAppDEField" : {
+      "name" : "OWNER",
+      "codeName" : "owner"
+    },
+    "width" : 170,
+    "widthUnit" : "PX",
+    "enableSort" : true
+  } ],
+  "getPSDEGridDataItems" : [ {
+    "dataType" : 25,
+    "name" : "subject",
+    "getPSAppDEField" : {
+      "name" : "SUBJECT",
+      "codeName" : "subject"
+    },
+    "scriptCode" : "var newname = data.subject ? data.subject : ''; // 如果 data.subject 为空，则 newname 为 ''\r\nvar svgIcon = '';\r\n\r\nif (data.last_assess_time) {\r\n    var nowDate = Date.parse(new Date().toISOString().slice(0, 10));\r\n    var accessDate = Date.parse(data.last_assess_time.slice(0, 10));\r\n    var days = (nowDate - accessDate) / (1 * 24 * 60 * 60 * 1000);\r\n    var fireColor = \"\";\r\n\r\n    if (days <= 7) {\r\n        fireColor = \"red\";\r\n    } else if (days <= 14) {\r\n        fireColor = \"orange\";\r\n    } else if (days <= 30) {\r\n        fireColor = \"gray\";\r\n    }\r\n\r\n    if (fireColor) {\r\n        svgIcon = `<span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"${fireColor}\" class=\"bi bi-fire\" viewBox=\"0 0 16 16\"><path d=\"M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z\"/></svg></span>`;\r\n    }\r\n}\r\n\r\nif (!svgIcon) {\r\n    newname = `<span style=\"margin-left: 16px;\"></span>${newname}`;\r\n}\r\n\r\nreturn svgIcon + newname;",
+    "customCode" : true
+  }, {
+    "format" : "YYYY-MM-DD",
+    "dataType" : 5,
+    "name" : "due_date",
+    "getPSAppDEField" : {
+      "name" : "DUE_DATE",
+      "codeName" : "due_date"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "status",
+    "getPSAppDEField" : {
+      "name" : "STATUS",
+      "codeName" : "status"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "priority",
+    "getPSAppDEField" : {
+      "name" : "PRIORITY",
+      "codeName" : "priority"
+    }
+  }, {
+    "dataType" : 21,
+    "name" : "executors",
+    "getPSAppDEField" : {
+      "name" : "EXECUTORS",
+      "codeName" : "executors"
+    },
+    "valueType" : "OBJECTS"
+  }, {
+    "dataType" : 25,
+    "name" : "owner",
+    "getPSAppDEField" : {
+      "name" : "OWNER",
+      "codeName" : "owner"
+    }
+  }, {
+    "format" : "YYYY-MM-DD",
+    "dataType" : 5,
+    "name" : "task_date",
+    "getPSAppDEField" : {
+      "name" : "TASK_DATE",
+      "codeName" : "task_date"
+    }
+  }, {
+    "format" : "YYYY-MM-DD HH:mm:ss",
+    "dataType" : 5,
+    "name" : "last_assess_time",
+    "getPSAppDEField" : {
+      "name" : "LAST_ASSESS_TIME",
+      "codeName" : "last_assess_time"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "srfkey",
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    }
+  }, {
+    "dataType" : 25,
+    "name" : "srfdataaccaction",
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    },
+    "dataAccessAction" : true
+  }, {
+    "dataType" : 25,
+    "name" : "srfmajortext",
+    "getPSAppDEField" : {
+      "name" : "SUBJECT",
+      "codeName" : "subject"
+    }
+  } ],
+  "getPSDEGridEditItems" : [ {
+    "caption" : "标识",
+    "codeName" : "srfkey",
+    "enableCond" : 3,
+    "ignoreInput" : 0,
+    "name" : "srfkey",
+    "getPSAppDEField" : {
+      "name" : "ID",
+      "codeName" : "id"
+    },
+    "getPSEditor" : {
+      "editorType" : "HIDDEN",
+      "name" : "srfkey"
+    },
+    "allowEmpty" : true
+  } ],
+  "getPSSysPFPlugin" : {
+    "pluginType" : "GRID_RENDER",
+    "pluginCode" : "NUMBER_GRID",
+    "runtimeObject" : true
+  },
+  "pagingMode" : 1,
+  "pagingSize" : 20,
+  "getRemovePSControlAction" : {
+    "actionName" : "Remove",
+    "actionType" : "DEACTION",
+    "dataAccessAction" : "DELETE",
+    "name" : "remove",
+    "getPSAppDEMethod" : {
+      "modelref" : true,
+      "id" : "remove"
+    },
+    "getPSAppDataEntity" : {
+      "modelref" : true,
+      "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/task.json"
+    }
+  },
+  "sortMode" : "REMOTE",
+  "hasWFDataItems" : false,
+  "enableColFilter" : false,
+  "enableCustomized" : true,
+  "enableGroup" : false,
+  "enablePagingBar" : true,
+  "enableRowEdit" : false,
+  "enableRowEditOrder" : false,
+  "enableRowNew" : false,
+  "forceFit" : false,
+  "hideHeader" : false,
+  "noSort" : false,
+  "singleSelect" : false,
+  "modelid" : "9e55bbd3164a3673f6a8a50b8c8ca40e",
+  "modeltype" : "PSDEGRID"
+}

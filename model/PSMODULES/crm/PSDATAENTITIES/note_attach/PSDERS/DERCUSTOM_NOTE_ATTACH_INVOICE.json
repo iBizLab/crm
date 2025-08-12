@@ -1,0 +1,29 @@
+{
+  "codeName" : "INVOICE",
+  "dERSubType" : "DER1N",
+  "dERType" : "DERCUSTOM",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/note_attach/PSDERS/DERCUSTOM_NOTE_ATTACH_INVOICE.json",
+  "logicName" : "发货单-备注",
+  "getMajorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/invoice.json"
+  },
+  "masterRS" : 0,
+  "memo" : "自动生成",
+  "getMinorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/note_attach.json"
+  },
+  "name" : "DERCUSTOM_NOTE_ATTACH_INVOICE",
+  "orderValue" : 100,
+  "parentSubType" : "INVOICE",
+  "pickupDEFName" : "PRINCIPAL_ID",
+  "getPickupPSDEField" : {
+    "name" : "PRINCIPAL_ID",
+    "codeName" : "principal_id"
+  },
+  "removeActionType" : 0,
+  "removeOrder" : -1,
+  "serviceCodeName" : "invoice",
+  "typeValue" : "INVOICE"
+}

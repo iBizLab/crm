@@ -1,0 +1,6 @@
+{
+  "codeName" : "Default",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEDATARELATIONS/Default.json",
+  "formCaption" : "商机",
+  "name" : "商机默认关系界面组"
+}

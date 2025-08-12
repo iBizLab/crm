@@ -1,0 +1,41 @@
+{
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/event/PSDEUSERROLES/OWNER_CRUD.json",
+  "name" : "所有者-读写",
+  "getPSDEDataSet" : {
+    "modelref" : true,
+    "id" : "owner"
+  },
+  "getPSDEUserRoleOPPrivs" : [ {
+    "dataAccessAction" : "UPDATE",
+    "name" : "UPDATE",
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "UPDATE"
+    }
+  }, {
+    "dataAccessAction" : "CREATE",
+    "name" : "CREATE",
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    }
+  }, {
+    "dataAccessAction" : "READ",
+    "name" : "READ",
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    }
+  }, {
+    "dataAccessAction" : "DELETE",
+    "name" : "DELETE",
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "DELETE"
+    }
+  } ],
+  "roleTag" : "OWNER_CRUD",
+  "userDRAction" : "READ",
+  "enableUserDR" : true,
+  "systemReserved" : true
+}

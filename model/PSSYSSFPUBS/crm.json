@@ -1,0 +1,14 @@
+{
+  "codeName" : "crm",
+  "contentType" : "CODE",
+  "defaultFlag" : true,
+  "dynaModelFilePath" : "PSSYSSFPUBS/crm.json",
+  "modelFolder" : "model",
+  "name" : "crm",
+  "pKGCodeName" : "cn.ibizlab.crm",
+  "versionString" : "1.0.0.0",
+  "codeMode" : true,
+  "enableModelRT" : true,
+  "mainPSSysSFPub" : true,
+  "pubModel" : true
+}

@@ -1,0 +1,267 @@
+{
+  "codeName" : "searchbar",
+  "controlStyle" : "FILTER_SEARCHBAR",
+  "controlType" : "SEARCHBAR",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan/PSSEARCHBARS/searchbar.json",
+  "logicName" : "默认搜索栏",
+  "memo" : "自动生成",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/payee_plan.json"
+  },
+  "getPSSearchBarFilters" : [ {
+    "caption" : "收款日期",
+    "dataType" : 5,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "N_PAYEE_DATE_IN",
+    "getPSAppDEField" : {
+      "name" : "PLANNED_TIME",
+      "codeName" : "planned_time"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_PLANNED_TIME_IN",
+      "name" : "N_PLANNED_TIME_IN",
+      "stdDataType" : 5,
+      "valueOP" : "IN",
+      "array" : true
+    },
+    "getPSEditor" : {
+      "dateTimeFormat" : "YYYY-MM-DD",
+      "editorParams" : {
+        "TIMEFMT" : "YYYY-MM-DD"
+      },
+      "editorType" : "DATERANGE_NOTIME",
+      "name" : "N_PAYEE_DATE_IN",
+      "getPSEditorItems" : [ {
+        "name" : "N_PLANNED_TIME_GT"
+      }, {
+        "name" : "N_PLANNED_TIME_LT"
+      } ]
+    },
+    "valueItemName" : "N_PLANNED_TIME_GT;N_PLANNED_TIME_LT",
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : false,
+    "showCaption" : false
+  }, {
+    "caption" : "计划收款时间(>=)",
+    "dataType" : 5,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "N_PLANNED_TIME_GT",
+    "getPSAppDEField" : {
+      "name" : "PLANNED_TIME",
+      "codeName" : "planned_time"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_PLANNED_TIME_GTANDEQ",
+      "name" : "N_PLANNED_TIME_GTANDEQ",
+      "stdDataType" : 5,
+      "valueOP" : "GTANDEQ"
+    },
+    "getPSEditor" : {
+      "editorType" : "HIDDEN",
+      "name" : "N_PLANNED_TIME_GT"
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : true,
+    "showCaption" : false
+  }, {
+    "caption" : "计划收款时间(<=)",
+    "dataType" : 5,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "N_PLANNED_TIME_LT",
+    "getPSAppDEField" : {
+      "name" : "PLANNED_TIME",
+      "codeName" : "planned_time"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_PLANNED_TIME_LTANDEQ",
+      "name" : "N_PLANNED_TIME_LTANDEQ",
+      "stdDataType" : 5,
+      "valueOP" : "LTANDEQ"
+    },
+    "getPSEditor" : {
+      "editorType" : "HIDDEN",
+      "name" : "N_PLANNED_TIME_LT"
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : true,
+    "showCaption" : false
+  }, {
+    "caption" : "订单编号",
+    "dataType" : 25,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "N_O_NUMBER_LIKE",
+    "getPSAppDEField" : {
+      "name" : "O_NUMBER",
+      "codeName" : "o_number"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_O_NUMBER_LIKE",
+      "name" : "N_O_NUMBER_LIKE",
+      "stdDataType" : 25,
+      "valueOP" : "LIKE"
+    },
+    "getPSEditor" : {
+      "editorType" : "TEXTBOX",
+      "name" : "N_O_NUMBER_LIKE"
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : false,
+    "showCaption" : false
+  }, {
+    "caption" : "订单名称",
+    "dataType" : 25,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "N_PROJECT_NAME_LIKE",
+    "getPSAppDEField" : {
+      "name" : "PROJECT_NAME",
+      "codeName" : "project_name"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_PROJECT_NAME_LIKE",
+      "name" : "N_PROJECT_NAME_LIKE",
+      "stdDataType" : 25,
+      "valueOP" : "LIKE"
+    },
+    "getPSEditor" : {
+      "editorType" : "TEXTBOX",
+      "name" : "N_PROJECT_NAME_LIKE"
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : false,
+    "showCaption" : false
+  }, {
+    "caption" : "金额(>=)",
+    "dataType" : 6,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "N_AMOUNT_GTANDEQ",
+    "getPSAppDEField" : {
+      "name" : "AMOUNT",
+      "codeName" : "amount"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_AMOUNT_GTANDEQ",
+      "name" : "N_AMOUNT_GTANDEQ",
+      "stdDataType" : 6,
+      "valueOP" : "GTANDEQ"
+    },
+    "getPSEditor" : {
+      "editorType" : "HIDDEN",
+      "name" : "N_AMOUNT_GTANDEQ"
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : true,
+    "showCaption" : false
+  }, {
+    "caption" : "金额(<=)",
+    "dataType" : 6,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "N_AMOUNT_LTANDEQ",
+    "getPSAppDEField" : {
+      "name" : "AMOUNT",
+      "codeName" : "amount"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_AMOUNT_LTANDEQ",
+      "name" : "N_AMOUNT_LTANDEQ",
+      "stdDataType" : 6,
+      "valueOP" : "LTANDEQ"
+    },
+    "getPSEditor" : {
+      "editorType" : "HIDDEN",
+      "name" : "N_AMOUNT_LTANDEQ"
+    },
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : true,
+    "showCaption" : false
+  }, {
+    "caption" : "收款金额",
+    "dataType" : 6,
+    "itemType" : "FILTER",
+    "labelPos" : "NONE",
+    "labelWidth" : 0,
+    "name" : "N_AMOUNT_IN",
+    "getPSAppDEField" : {
+      "name" : "AMOUNT",
+      "codeName" : "amount"
+    },
+    "getPSDEFSearchMode" : {
+      "codeName" : "N_AMOUNT_IN",
+      "name" : "N_AMOUNT_IN",
+      "stdDataType" : 6,
+      "valueOP" : "IN",
+      "array" : true
+    },
+    "getPSEditor" : {
+      "editorType" : "NUMBERRANGE",
+      "name" : "N_AMOUNT_IN",
+      "getPSEditorItems" : [ {
+        "name" : "N_AMOUNT_GTANDEQ"
+      }, {
+        "name" : "N_AMOUNT_LTANDEQ"
+      } ]
+    },
+    "valueItemName" : "N_AMOUNT_GTANDEQ;N_AMOUNT_LTANDEQ",
+    "allowEmpty" : true,
+    "emptyCaption" : false,
+    "hidden" : false,
+    "showCaption" : false
+  } ],
+  "getPSSearchBarGroups" : [ {
+    "caption" : "所有计划",
+    "data" : "{\"theme_model\":{\"searchconds\":[{\"condtype\":\"GROUP\",\"condop\":\"AND\",\"bnotmode\":false,\"searchconds\":[]}]}}",
+    "itemType" : "GROUP",
+    "name" : "all",
+    "userTag" : "PUBLIC",
+    "width" : 0.0,
+    "addSeparator" : false
+  }, {
+    "caption" : "未关闭计划",
+    "data" : "{\"theme_model\":{\"searchconds\":[{\"condtype\":\"GROUP\",\"condop\":\"AND\",\"bnotmode\":false,\"searchconds\":[{\"condtype\":\"DEFIELD\",\"fieldname\":\"plan_status\",\"condop\":\"NOTEQ\",\"value\":\"50\"}]}]}}",
+    "itemType" : "GROUP",
+    "name" : "not_close",
+    "getPSAppDEField" : {
+      "name" : "PLAN_STATUS",
+      "codeName" : "plan_status"
+    },
+    "userTag" : "PUBLIC",
+    "width" : 0.0,
+    "addSeparator" : false,
+    "defaultGroup" : true
+  } ],
+  "getPSSysPFPlugin" : {
+    "pluginType" : "CUSTOM",
+    "pluginCode" : "FILTER_SEARCHBAR",
+    "runtimeObject" : true
+  },
+  "quickGroupCount" : -1,
+  "quickSearchMode" : 1,
+  "quickSearchWidth" : 0,
+  "enableFilter" : true,
+  "enableGroup" : true,
+  "enableQuickSearch" : true,
+  "mobileSearchBar" : false,
+  "modelid" : "b0ef1a46d437dc65749911d329964c25",
+  "modeltype" : "PSSYSSEARCHBAR"
+}

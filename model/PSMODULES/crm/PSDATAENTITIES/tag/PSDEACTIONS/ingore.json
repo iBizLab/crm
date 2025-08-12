@@ -1,0 +1,26 @@
+{
+  "actionHolder" : 2,
+  "actionMode" : "CUSTOM",
+  "actionType" : "DELOGIC",
+  "codeName" : "ingore",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/tag/PSDEACTIONS/ingore.json",
+  "logicName" : "无操作",
+  "name" : "ingore",
+  "getPSDEActionInput" : {
+    "name" : "IngoreInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "tag_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "IngoreResult",
+    "type" : "VOID"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/tag/PSDELOGICS/ignore.json"
+  },
+  "enableBackend" : false
+}

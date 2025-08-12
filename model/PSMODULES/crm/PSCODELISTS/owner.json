@@ -1,0 +1,36 @@
+{
+  "codeListTag" : "crm__owner",
+  "codeListType" : "DYNAMIC",
+  "codeName" : "owner",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSCODELISTS/owner.json",
+  "emptyText" : "未定义",
+  "name" : "所有者",
+  "getPSDEDataSet" : {
+    "modelref" : true,
+    "id" : "all"
+  },
+  "getPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/user.json"
+  },
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "refFlag" : true,
+  "systemTag" : "iBizCRM",
+  "getTextPSDEField" : {
+    "name" : "FIRST_NAME",
+    "codeName" : "first_name"
+  },
+  "getValuePSDEField" : {
+    "name" : "ID",
+    "codeName" : "id"
+  },
+  "codeItemValueNumber" : false,
+  "enableCache" : true,
+  "subSysAsCloud" : false,
+  "subSysCodeList" : false,
+  "userScope" : false
+}

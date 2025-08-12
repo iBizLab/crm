@@ -1,0 +1,36 @@
+{
+  "codeListTag" : "crm__sysuser",
+  "codeListType" : "DYNAMIC",
+  "codeName" : "sysuser",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSCODELISTS/sysuser.json",
+  "emptyText" : "未定义",
+  "name" : "系统用户",
+  "getPSDEDataSet" : {
+    "modelref" : true,
+    "id" : "all"
+  },
+  "getPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/user.json"
+  },
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "refFlag" : true,
+  "systemTag" : "iBizCRM",
+  "getTextPSDEField" : {
+    "name" : "FIRST_NAME",
+    "codeName" : "first_name"
+  },
+  "getValuePSDEField" : {
+    "name" : "SYSUSERID",
+    "codeName" : "sysuserId"
+  },
+  "codeItemValueNumber" : false,
+  "enableCache" : true,
+  "subSysAsCloud" : false,
+  "subSysCodeList" : false,
+  "userScope" : false
+}

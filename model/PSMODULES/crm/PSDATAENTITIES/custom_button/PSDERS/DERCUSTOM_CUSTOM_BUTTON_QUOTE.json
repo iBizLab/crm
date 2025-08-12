@@ -1,0 +1,29 @@
+{
+  "codeName" : "QUOTE",
+  "dERSubType" : "DER1N",
+  "dERType" : "DERCUSTOM",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/custom_button/PSDERS/DERCUSTOM_CUSTOM_BUTTON_QUOTE.json",
+  "logicName" : "报价-链接",
+  "getMajorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/quote.json"
+  },
+  "masterRS" : 0,
+  "memo" : "自动生成",
+  "getMinorPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/custom_button.json"
+  },
+  "name" : "DERCUSTOM_CUSTOM_BUTTON_QUOTE",
+  "orderValue" : 100,
+  "parentSubType" : "QUOTE",
+  "pickupDEFName" : "OWNER_ID",
+  "getPickupPSDEField" : {
+    "name" : "OWNER_ID",
+    "codeName" : "owner_id"
+  },
+  "removeActionType" : 0,
+  "removeOrder" : -1,
+  "serviceCodeName" : "quote",
+  "typeValue" : "QUOTE"
+}

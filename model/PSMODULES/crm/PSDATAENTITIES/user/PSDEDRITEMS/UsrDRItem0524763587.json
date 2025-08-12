@@ -1,0 +1,15 @@
+{
+  "codeName" : "UsrDRItem0524763587",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/user/PSDEDRITEMS/UsrDRItem0524763587.json",
+  "itemType" : "CUSTOM",
+  "name" : "个人信息编辑",
+  "parentDataJO" : {
+    "srfparentdename" : "USER",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "info_edit_view",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/user.json"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "codeName" : "usr0528444165_menu",
+  "controlType" : "APPMENU",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPMENUS/usr0528444165_menu.json",
+  "logicName" : "应用首页视图菜单",
+  "getPSAppMenuItems" : [ {
+    "accUserMode" : 0,
+    "caption" : "我的任务",
+    "itemType" : "MENUITEM",
+    "name" : "menuitem1",
+    "getPSAppMenuItems" : [ {
+      "accUserMode" : 2,
+      "caption" : "待办任务",
+      "itemType" : "MENUITEM",
+      "name" : "menuitem5",
+      "getPSAppFunc" : {
+        "modelref" : true,
+        "id" : "UsrAppFunc0528093606"
+      },
+      "tooltip" : "待办任务",
+      "expanded" : true
+    }, {
+      "accUserMode" : 2,
+      "caption" : "追踪中的任务",
+      "itemType" : "MENUITEM",
+      "name" : "menuitem6",
+      "getPSAppFunc" : {
+        "modelref" : true,
+        "id" : "UsrAppFunc0528918425"
+      },
+      "tooltip" : "追踪中的任务"
+    }, {
+      "accUserMode" : 2,
+      "caption" : "已完成任务",
+      "itemType" : "MENUITEM",
+      "name" : "menuitem7",
+      "getPSAppFunc" : {
+        "modelref" : true,
+        "id" : "UsrAppFunc0528941694"
+      },
+      "tooltip" : "已完成任务"
+    }, {
+      "accUserMode" : 2,
+      "caption" : "已取消任务",
+      "itemType" : "MENUITEM",
+      "name" : "menuitem8",
+      "getPSAppFunc" : {
+        "modelref" : true,
+        "id" : "UsrAppFunc0528092584"
+      },
+      "tooltip" : "已取消任务"
+    } ],
+    "tooltip" : "我的任务",
+    "expanded" : true
+  }, {
+    "accUserMode" : 0,
+    "caption" : "全部任务",
+    "itemType" : "MENUITEM",
+    "name" : "menuitem2",
+    "getPSAppMenuItems" : [ {
+      "accUserMode" : 0,
+      "caption" : "进行中的任务",
+      "itemType" : "MENUITEM",
+      "name" : "menuitem9",
+      "tooltip" : "进行中的任务",
+      "expanded" : true
+    }, {
+      "accUserMode" : 0,
+      "caption" : "已完成任务",
+      "itemType" : "MENUITEM",
+      "name" : "menuitem10",
+      "tooltip" : "已完成任务"
+    }, {
+      "accUserMode" : 0,
+      "caption" : "已取消任务",
+      "itemType" : "MENUITEM",
+      "name" : "menuitem11",
+      "tooltip" : "已取消任务"
+    } ],
+    "tooltip" : "全部任务",
+    "expanded" : true
+  }, {
+    "accUserMode" : 0,
+    "caption" : "我的活动",
+    "itemType" : "MENUITEM",
+    "name" : "menuitem3",
+    "tooltip" : "我的活动"
+  }, {
+    "accUserMode" : 0,
+    "caption" : "全部活动",
+    "itemType" : "MENUITEM",
+    "name" : "menuitem4",
+    "tooltip" : "全部活动"
+  } ],
+  "name" : "taskindexview",
+  "modelid" : "1cae71b258d6032b9444757a953a2749",
+  "modeltype" : "PSAPPMENU"
+}

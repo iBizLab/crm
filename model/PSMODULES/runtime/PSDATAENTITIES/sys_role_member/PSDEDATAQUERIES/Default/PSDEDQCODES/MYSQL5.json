@@ -1,0 +1,19 @@
+{
+  "dBType" : "MYSQL5",
+  "name" : "MySQL5",
+  "getPSDEDataQueryCodeExps" : [ {
+    "expression" : "t1.`DC`",
+    "name" : "DC"
+  }, {
+    "expression" : "t1.`ID`",
+    "name" : "ID"
+  }, {
+    "expression" : "t1.`MEMBER_UID`",
+    "name" : "MEMBER_UID"
+  }, {
+    "expression" : "t1.`ROLE_ID`",
+    "name" : "ROLE_ID"
+  } ],
+  "queryCode" : "SELECT\nt1.`DC`,\nt1.`ID`,\nt1.`MEMBER_UID`,\nt1.`ROLE_ID`\nFROM `` t1 \n",
+  "id" : "PSMODULES/runtime/PSDATAENTITIES/sys_role_member/PSDEDATAQUERIES/Default/PSDEDQCODES/MYSQL5.json"
+}

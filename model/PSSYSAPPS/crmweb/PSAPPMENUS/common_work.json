@@ -1,0 +1,62 @@
+{
+  "codeName" : "common_work",
+  "controlType" : "APPMENU",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPMENUS/common_work.json",
+  "logicName" : "常用工作",
+  "getPSAppMenuItems" : [ {
+    "accUserMode" : 2,
+    "caption" : "进展评估",
+    "itemType" : "MENUITEM",
+    "name" : "menuitem1",
+    "getPSAppFunc" : {
+      "modelref" : true,
+      "id" : "UsrAppFunc0531732306"
+    },
+    "getPSSysImage" : {
+      "glyph" : "xf00b@FontAwesome",
+      "cssClass" : "fa fa-th-list"
+    },
+    "tooltip" : "定期对线索、商机、在建项目、任务进行进展评估"
+  }, {
+    "accUserMode" : 2,
+    "caption" : "制定任务",
+    "itemType" : "MENUITEM",
+    "name" : "menuitem2",
+    "getPSAppFunc" : {
+      "modelref" : true,
+      "id" : "UsrAppFunc0528287391"
+    },
+    "getPSSysImage" : {
+      "glyph" : "xf212@FontAwesome",
+      "cssClass" : "fa fa-leanpub"
+    },
+    "tooltip" : "制定任务"
+  }, {
+    "accUserMode" : 2,
+    "caption" : "填报活动",
+    "itemType" : "MENUITEM",
+    "name" : "menuitem3",
+    "getPSAppFunc" : {
+      "modelref" : true,
+      "id" : "UsrAppFunc0528893181"
+    },
+    "getPSSysImage" : {
+      "glyph" : "xf0e6@FontAwesome",
+      "cssClass" : "fa fa-comments-o"
+    },
+    "tooltip" : "填报活动"
+  }, {
+    "accUserMode" : 0,
+    "caption" : "报销（待提供）",
+    "itemType" : "MENUITEM",
+    "name" : "menuitem4",
+    "getPSSysImage" : {
+      "glyph" : "xf157@FontAwesome",
+      "cssClass" : "fa fa-rmb"
+    },
+    "tooltip" : "报销（待提供）"
+  } ],
+  "name" : "common_work",
+  "modelid" : "adaa93291af94f82b0d21e3431c3a982",
+  "modeltype" : "PSAPPMENU"
+}

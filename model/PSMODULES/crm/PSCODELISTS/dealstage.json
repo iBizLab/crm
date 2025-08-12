@@ -1,0 +1,65 @@
+{
+  "codeListTag" : "crm__dealstage",
+  "codeListType" : "DYNAMIC",
+  "codeName" : "dealstage",
+  "dynaInstMode" : 0,
+  "dynaModelFilePath" : "PSMODULES/crm/PSCODELISTS/dealstage.json",
+  "emptyText" : "未定义",
+  "name" : "商机阶段",
+  "getPSCodeItems" : [ {
+    "codeName" : "item_10",
+    "text" : "确认商机",
+    "value" : "10"
+  }, {
+    "codeName" : "item_20",
+    "text" : "进程控制",
+    "value" : "20"
+  }, {
+    "codeName" : "item_30",
+    "text" : "方案论证",
+    "value" : "30"
+  }, {
+    "codeName" : "item_40",
+    "text" : "商务谈判",
+    "value" : "40"
+  }, {
+    "codeName" : "item_50",
+    "text" : "成交关闭",
+    "value" : "50"
+  }, {
+    "codeName" : "item_60",
+    "text" : "失败关闭",
+    "value" : "60"
+  }, {
+    "codeName" : "item_70",
+    "text" : "挂起",
+    "value" : "70"
+  } ],
+  "getPSDEDataSet" : {
+    "modelref" : true,
+    "id" : "all"
+  },
+  "getPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/deal_stage.json"
+  },
+  "getPSSystemModule" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm.json"
+  },
+  "refFlag" : true,
+  "systemTag" : "iBizCRM",
+  "getTextPSDEField" : {
+    "name" : "NAME",
+    "codeName" : "name"
+  },
+  "getValuePSDEField" : {
+    "name" : "ID",
+    "codeName" : "id"
+  },
+  "codeItemValueNumber" : false,
+  "enableCache" : true,
+  "subSysAsCloud" : false,
+  "subSysCodeList" : false,
+  "userScope" : false
+}

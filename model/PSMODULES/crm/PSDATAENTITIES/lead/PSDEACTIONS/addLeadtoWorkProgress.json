@@ -1,0 +1,27 @@
+{
+  "actionHolder" : 1,
+  "actionMode" : "CUSTOM",
+  "actionType" : "DELOGIC",
+  "codeName" : "addLeadtoWorkProgress",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDEACTIONS/addLeadtoWorkProgress.json",
+  "logicName" : "新建线索时添加到工作进展",
+  "name" : "addLeadtoWorkProgress",
+  "getPSDEActionInput" : {
+    "name" : "AddLeadtoWorkProgressInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "lead_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "AddLeadtoWorkProgressResult",
+    "type" : "VOID"
+  },
+  "getPSDELogic" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDELOGICS/addLeadtoWorkProgress.json"
+  },
+  "enableAudit" : true,
+  "enableFront" : false
+}

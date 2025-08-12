@@ -1,0 +1,34 @@
+{
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDEUSERROLES/EXECUTOR_CRUD.json",
+  "name" : "执行人-读写",
+  "getPSDEDataSet" : {
+    "modelref" : true,
+    "id" : "executor"
+  },
+  "getPSDEUserRoleOPPrivs" : [ {
+    "dataAccessAction" : "UPDATE",
+    "name" : "UPDATE",
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "UPDATE"
+    }
+  }, {
+    "dataAccessAction" : "CREATE",
+    "name" : "CREATE",
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "CREATE"
+    }
+  }, {
+    "dataAccessAction" : "READ",
+    "name" : "READ",
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    }
+  } ],
+  "roleTag" : "EXECUTOR_CRUD",
+  "userDRAction" : "READ",
+  "enableUserDR" : true,
+  "systemReserved" : true
+}

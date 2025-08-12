@@ -1,0 +1,26 @@
+{
+  "actionMode" : "CUSTOM",
+  "actionType" : "USERCUSTOM",
+  "codeName" : "Async_addDealToWorkProgress",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEACTIONS/Async_addDealToWorkProgress.json",
+  "logicName" : "异步新建商机时添加到工作进展",
+  "name" : "Async_addDealToWorkProgress",
+  "getPSDEActionInput" : {
+    "name" : "Async_addDealToWorkProgressInput",
+    "getPSDEMethodDTO" : {
+      "modelref" : true,
+      "id" : "deal_dto"
+    },
+    "type" : "DTO"
+  },
+  "getPSDEActionReturn" : {
+    "name" : "Async_addDealToWorkProgressResult",
+    "type" : "ASYNCACTION"
+  },
+  "getRealPSDEAction" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/deal/PSDEACTIONS/addDealToWorkProgress.json"
+  },
+  "asyncAction" : true,
+  "enableAudit" : true
+}

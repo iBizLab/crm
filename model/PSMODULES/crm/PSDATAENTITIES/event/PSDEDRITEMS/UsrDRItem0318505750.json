@@ -1,0 +1,16 @@
+{
+  "codeName" : "UsrDRItem0318505750",
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/event/PSDEDRITEMS/UsrDRItem0318505750.json",
+  "itemType" : "CUSTOM",
+  "memo" : "自动生成",
+  "name" : "会议多模式卡片视图",
+  "parentDataJO" : {
+    "srfparentdename" : "EVENT",
+    "SRFPARENTTYPE" : "CUSTOM"
+  },
+  "viewCodeName" : "data_view_multimode",
+  "getViewPSDataEntity" : {
+    "modelref" : true,
+    "path" : "PSMODULES/crm/PSDATAENTITIES/account.json"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "codeName" : "usr0318649260",
+  "controlType" : "PANEL",
+  "dynaModelFilePath" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/campaign/PSPANELS/usr0318649260.json",
+  "layoutMode" : "TABLE_24COL",
+  "logicName" : "客户多模式卡片视图_卡片视图_卡片面板",
+  "memo" : "自动生成",
+  "getPSAppDataEntity" : {
+    "modelref" : true,
+    "path" : "PSSYSAPPS/crmweb/PSAPPDATAENTITIES/campaign.json"
+  },
+  "getPSLayout" : {
+    "childColMD" : 24,
+    "columnCount" : 24,
+    "layout" : "TABLE_24COL"
+  },
+  "modelid" : "dcb0f880a55f69f272a909b0f0d31340",
+  "modeltype" : "PSSYSVIEWPANEL"
+}

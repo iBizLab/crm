@@ -1,0 +1,6312 @@
+{
+  "getAllPSSysDBTables" : [ {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ACCOUNT_NAME",
+      "length" : 200,
+      "logicName" : "客户名称",
+      "name" : "ACCOUNT_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ACCOUNT_NUMBER",
+      "length" : 100,
+      "logicName" : "客户编号",
+      "name" : "ACCOUNT_NUMBER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ACCOUNT_SITE",
+      "length" : 100,
+      "logicName" : "客户所在地",
+      "name" : "ACCOUNT_SITE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ACCOUNT_TYPE",
+      "length" : 60,
+      "logicName" : "客户类型",
+      "name" : "ACCOUNT_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ANNUAL_REVENUE",
+      "length" : 200,
+      "logicName" : "年收入",
+      "name" : "ANNUAL_REVENUE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_CITY",
+      "length" : 100,
+      "logicName" : "开单地址-城市",
+      "name" : "BILLING_CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_CODE",
+      "length" : 30,
+      "logicName" : "开单地址-邮编",
+      "name" : "BILLING_CODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_COUNTRY",
+      "length" : 100,
+      "logicName" : "开单地址-国家/地区",
+      "name" : "BILLING_COUNTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_STATE",
+      "length" : 100,
+      "logicName" : "开单地址-省/市",
+      "name" : "BILLING_STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_STREET",
+      "length" : 250,
+      "logicName" : "开单地址-街道",
+      "name" : "BILLING_STREET",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CHANGE_LOG_TIME__S",
+      "logicName" : "Change_Log_Time",
+      "name" : "CHANGE_LOG_TIME__S",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 1048576,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "EMPLOYEES",
+      "logicName" : "员工数",
+      "name" : "EMPLOYEES",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "ENRICH_STATUS__S",
+      "length" : 60,
+      "logicName" : "充实状态",
+      "name" : "ENRICH_STATUS__S",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "FAX",
+      "length" : 30,
+      "logicName" : "传真",
+      "name" : "FAX",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "INDUSTRY",
+      "length" : 60,
+      "logicName" : "行业",
+      "name" : "INDUSTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "LAST_ACTIVITY_TIME",
+      "logicName" : "最近操作时间",
+      "name" : "LAST_ACTIVITY_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "LAST_ENRICHED_TIME__S",
+      "logicName" : "最后充实时间",
+      "name" : "LAST_ENRICHED_TIME__S",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "LOCKED__S",
+      "logicName" : "Locked",
+      "name" : "LOCKED__S",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER",
+      "length" : 60,
+      "logicName" : "客户所有者",
+      "name" : "OWNER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNERSHIP",
+      "length" : 60,
+      "logicName" : "公司所有权",
+      "name" : "OWNERSHIP",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PHONE",
+      "length" : 100,
+      "logicName" : "电话",
+      "name" : "PHONE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PID",
+      "length" : 100,
+      "logicName" : "父标识",
+      "name" : "PID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "RATING",
+      "length" : 100,
+      "logicName" : "等级",
+      "name" : "RATING",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "RECORD_LMAGE",
+      "length" : 200,
+      "logicName" : "客户图片",
+      "name" : "RECORD_LMAGE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_CITY",
+      "length" : 100,
+      "logicName" : "发货地址-城市",
+      "name" : "SHIPPING_CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_CODE",
+      "length" : 30,
+      "logicName" : "发货地址-邮编",
+      "name" : "SHIPPING_CODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_COUNTRY",
+      "length" : 100,
+      "logicName" : "发货地址-国家/地区",
+      "name" : "SHIPPING_COUNTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_STATE",
+      "length" : 100,
+      "logicName" : "发货地址-省/市",
+      "name" : "SHIPPING_STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_STREET",
+      "length" : 250,
+      "logicName" : "发货地址-街道",
+      "name" : "SHIPPING_STREET",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SIC_CODE",
+      "logicName" : "SIC代码",
+      "name" : "SIC_CODE",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TICKER_SYMBOL",
+      "length" : 30,
+      "logicName" : "股票代码",
+      "name" : "TICKER_SYMBOL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "WEBSITE",
+      "length" : 100,
+      "logicName" : "网站",
+      "name" : "WEBSITE",
+      "stdDataType" : 25,
+      "nullable" : true
+    } ],
+    "getAllPSSysDBIndices" : [ {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "PID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "PID"
+        }
+      } ],
+      "codeName" : "IF_FD6086EF02630FF",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_ACCOUNT_ACCOUNT_PID",
+      "sourceType" : "DER"
+    } ],
+    "codeName" : "ACCOUNT",
+    "logicName" : "客户",
+    "name" : "ACCOUNT",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "AUDITINFO",
+      "length" : 1048576,
+      "logicName" : "审计信息",
+      "name" : "AUDITINFO",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "AUDITTYPE",
+      "length" : 100,
+      "logicName" : "审计类型",
+      "name" : "AUDITTYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "IPADDRESS",
+      "length" : 500,
+      "logicName" : "访问地址",
+      "name" : "IPADDRESS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OBJECTID",
+      "length" : 100,
+      "logicName" : "对象标识",
+      "name" : "OBJECTID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OBJECTTYPE",
+      "length" : 100,
+      "logicName" : "对象类型",
+      "name" : "OBJECTTYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OPPERSONID",
+      "length" : 100,
+      "logicName" : "操作人",
+      "name" : "OPPERSONID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OPPERSONNAME",
+      "length" : 100,
+      "logicName" : "操作人",
+      "name" : "OPPERSONNAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "ACTIVITIY",
+    "logicName" : "活动",
+    "name" : "ACTIVITIY",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "FILE_ID",
+      "length" : 500,
+      "logicName" : "文件标识",
+      "name" : "FILE_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_ID",
+      "length" : 100,
+      "logicName" : "所属数据标识",
+      "name" : "OWNER_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_SUBTYPE",
+      "length" : 100,
+      "logicName" : "所属对象子类型",
+      "name" : "OWNER_SUBTYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_TYPE",
+      "length" : 100,
+      "logicName" : "所属数据对象",
+      "name" : "OWNER_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TITLE",
+      "length" : 100,
+      "logicName" : "标题",
+      "name" : "TITLE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "ATTACHMENT",
+    "logicName" : "附件",
+    "name" : "ATTACHMENT",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CALLER_ID",
+      "length" : 30,
+      "logicName" : "呼叫者ID",
+      "name" : "CALLER_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CALL_AGENDA",
+      "length" : 255,
+      "logicName" : "通话议程",
+      "name" : "CALL_AGENDA",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CALL_DURATION",
+      "length" : 50,
+      "logicName" : "通话持续时间",
+      "name" : "CALL_DURATION",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CALL_DURATION_IN_SECONDS",
+      "logicName" : "通话持续时间(秒)",
+      "name" : "CALL_DURATION_IN_SECONDS",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "CALL_PURPOSE",
+      "length" : 60,
+      "logicName" : "通话目的",
+      "name" : "CALL_PURPOSE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CALL_RESULT",
+      "length" : 60,
+      "logicName" : "通话结果",
+      "name" : "CALL_RESULT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CALL_START_TIME",
+      "logicName" : "通话开始时间",
+      "name" : "CALL_START_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "CALL_TYPE",
+      "length" : 60,
+      "logicName" : "通话类型",
+      "name" : "CALL_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "CTI_ENTRY",
+      "logicName" : "CTI条目",
+      "name" : "CTI_ENTRY",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "DIALLED_NUMBER",
+      "length" : 30,
+      "logicName" : "拨打的号码",
+      "name" : "DIALLED_NUMBER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OUTGOING_CALL_STATUS",
+      "length" : 60,
+      "logicName" : "去电通话状态",
+      "name" : "OUTGOING_CALL_STATUS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_ID",
+      "length" : 100,
+      "logicName" : "所属数据标识",
+      "name" : "OWNER_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_SUBTYPE",
+      "length" : 100,
+      "logicName" : "所属对象子类型",
+      "name" : "OWNER_SUBTYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_TYPE",
+      "length" : 100,
+      "logicName" : "所属数据对象",
+      "name" : "OWNER_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "REMINDER",
+      "length" : 60,
+      "logicName" : "提醒",
+      "name" : "REMINDER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SCHEDULED_IN_CRM",
+      "length" : 60,
+      "logicName" : "在CRM中已预定",
+      "name" : "SCHEDULED_IN_CRM",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SUBJECT",
+      "length" : 255,
+      "logicName" : "主题",
+      "name" : "SUBJECT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "VOICE_RECORDING__S",
+      "length" : 100,
+      "logicName" : "语音录音",
+      "name" : "VOICE_RECORDING__S",
+      "stdDataType" : 25,
+      "nullable" : true
+    } ],
+    "codeName" : "CALL",
+    "logicName" : "通话",
+    "name" : "CALL",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ACTUAL_COST",
+      "length" : 200,
+      "logicName" : "实际成本",
+      "name" : "ACTUAL_COST",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BUDGETED_COST",
+      "length" : 200,
+      "logicName" : "预算成本",
+      "name" : "BUDGETED_COST",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CAMPAIGN_NAME",
+      "length" : 255,
+      "logicName" : "市场活动名称",
+      "name" : "CAMPAIGN_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "END_DATE",
+      "logicName" : "结束日期",
+      "name" : "END_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "EXPECTED_RESPONSE",
+      "length" : 20,
+      "logicName" : "期望成功率(%)",
+      "name" : "EXPECTED_RESPONSE",
+      "stdDataType" : 1,
+      "nullable" : true
+    }, {
+      "codeName" : "EXPECTED_REVENUE",
+      "length" : 200,
+      "logicName" : "预期收益",
+      "name" : "EXPECTED_REVENUE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NATIVE_SURVEY__EXTN__DEPARTMENT_ID",
+      "length" : 255,
+      "logicName" : "部门ID",
+      "name" : "NATIVE_SURVEY__EXTN__DEPARTMENT_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NATIVE__SURVEY__EXTN__SURVEY",
+      "length" : 255,
+      "logicName" : "调查",
+      "name" : "NATIVE__SURVEY__EXTN__SURVEY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NATIVE__SURVEY__EXTN__SURVEY_TYPE",
+      "length" : 60,
+      "logicName" : "调查类型",
+      "name" : "NATIVE__SURVEY__EXTN__SURVEY_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NATIVE__SURVEY__EXTN__SURVEY_URL",
+      "length" : 100,
+      "logicName" : "调查URL",
+      "name" : "NATIVE__SURVEY__EXTN__SURVEY_URL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NATIVE__SURVEY__EXTN__SURVEY__DEPARTMENT",
+      "length" : 255,
+      "logicName" : "调查部门",
+      "name" : "NATIVE__SURVEY__EXTN__SURVEY__DEPARTMENT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NATIVE__WEBINAR__EXTN__WEBINAR_LAUNCH_URL",
+      "length" : 100,
+      "logicName" : "网络研讨会启动URL",
+      "name" : "NATIVE__WEBINAR__EXTN__WEBINAR_LAUNCH_URL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NATIVE__WEBINAR__EXTN__WEBINAR_REGISTRATION_URL",
+      "length" : 100,
+      "logicName" : "网络研讨会注册URL",
+      "name" : "NATIVE__WEBINAR__EXTN__WEBINAR_REGISTRATION_URL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NATIVE__WEBINAR__EXTN__WEBINAR__DURATION",
+      "length" : 60,
+      "logicName" : "网络研讨会持续时间",
+      "name" : "NATIVE__WEBINAR__EXTN__WEBINAR__DURATION",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NATIVE__WEBINAR__EXTN__WEBINAR__SCHEDULE",
+      "logicName" : "网络研讨会时间表",
+      "name" : "NATIVE__WEBINAR__EXTN__WEBINAR__SCHEDULE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "NUM_SENT",
+      "length" : 20,
+      "logicName" : "发出数量",
+      "name" : "NUM_SENT",
+      "stdDataType" : 1,
+      "nullable" : true
+    }, {
+      "codeName" : "START_DATE",
+      "logicName" : "开始日期",
+      "name" : "START_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "STATUS",
+      "length" : 60,
+      "logicName" : "状态",
+      "name" : "STATUS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TYPE",
+      "length" : 60,
+      "logicName" : "类型",
+      "name" : "TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "CAMPAIGN",
+    "logicName" : "市场活动",
+    "name" : "CAMPAIGN",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ADD_COMMENT",
+      "length" : 32000,
+      "logicName" : "添加评论",
+      "name" : "ADD_COMMENT",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "CASE_ORIGIN",
+      "length" : 60,
+      "logicName" : "服务支持来源",
+      "name" : "CASE_ORIGIN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CASE_REASON",
+      "length" : 60,
+      "logicName" : "服务支持原因",
+      "name" : "CASE_REASON",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "COMMENTS",
+      "length" : 1000,
+      "logicName" : "评论",
+      "name" : "COMMENTS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "EMAIL",
+      "length" : 100,
+      "logicName" : "电子邮件",
+      "name" : "EMAIL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "INTERNAL_COMMENTS",
+      "length" : 32000,
+      "logicName" : "内部评论",
+      "name" : "INTERNAL_COMMENTS",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "LOCKED__S",
+      "logicName" : "Locked",
+      "name" : "LOCKED__S",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NO_OF_COMMENTS",
+      "logicName" : "评论数量",
+      "name" : "NO_OF_COMMENTS",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "PHONE",
+      "length" : 100,
+      "logicName" : "电话",
+      "name" : "PHONE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRIORITY",
+      "length" : 60,
+      "logicName" : "优先级",
+      "name" : "PRIORITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "REPORTED_BY",
+      "length" : 255,
+      "logicName" : "报告人",
+      "name" : "REPORTED_BY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SOLUTION",
+      "length" : 32000,
+      "logicName" : "解决方案",
+      "name" : "SOLUTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "STATUS",
+      "length" : 60,
+      "logicName" : "状态",
+      "name" : "STATUS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SUBJECT",
+      "length" : 300,
+      "logicName" : "主题",
+      "name" : "SUBJECT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TYPE",
+      "length" : 60,
+      "logicName" : "类型",
+      "name" : "TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "CASE",
+    "logicName" : "服务支持",
+    "name" : "CASE",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ACCOUNT_ID",
+      "length" : 100,
+      "logicName" : "客户ID",
+      "name" : "ACCOUNT_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ASSISTANT",
+      "length" : 50,
+      "logicName" : "助理",
+      "name" : "ASSISTANT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ASST_PHONE",
+      "length" : 100,
+      "logicName" : "助理电话",
+      "name" : "ASST_PHONE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CHANGE_LOG_TIME__S",
+      "logicName" : "Change_Log_Time",
+      "name" : "CHANGE_LOG_TIME__S",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DATE_OF_BIRTH",
+      "logicName" : "生日",
+      "name" : "DATE_OF_BIRTH",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DEPARTMENT",
+      "length" : 50,
+      "logicName" : "部门",
+      "name" : "DEPARTMENT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "EMAIL",
+      "length" : 100,
+      "logicName" : "电子邮件",
+      "name" : "EMAIL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "EMAIL_OPT_OUT",
+      "logicName" : "不发营销邮件",
+      "name" : "EMAIL_OPT_OUT",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "ENRICH_STATUS__S",
+      "length" : 60,
+      "logicName" : "充实状态",
+      "name" : "ENRICH_STATUS__S",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "FAX",
+      "length" : 30,
+      "logicName" : "传真",
+      "name" : "FAX",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "FIRST_NAME",
+      "length" : 40,
+      "logicName" : "名字",
+      "name" : "FIRST_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "FULL_NAME",
+      "length" : 120,
+      "logicName" : "全名",
+      "name" : "FULL_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "HOME_PHONE",
+      "length" : 100,
+      "logicName" : "住宅电话",
+      "name" : "HOME_PHONE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "LAST_ACTIVITY_TIME",
+      "logicName" : "最近操作时间",
+      "name" : "LAST_ACTIVITY_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "LAST_ENRICHED_TIME__S",
+      "logicName" : "最后充实时间",
+      "name" : "LAST_ENRICHED_TIME__S",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "LAST_NAME",
+      "length" : 80,
+      "logicName" : "姓氏",
+      "name" : "LAST_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "LEAD_SOURCE",
+      "length" : 60,
+      "logicName" : "线索来源",
+      "name" : "LEAD_SOURCE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "LOCKED__S",
+      "logicName" : "Locked",
+      "name" : "LOCKED__S",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "MAILING_CITY",
+      "length" : 100,
+      "logicName" : "邮寄地址-城市",
+      "name" : "MAILING_CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "MAILING_COUNTRY",
+      "length" : 100,
+      "logicName" : "邮寄地址-国家/地",
+      "name" : "MAILING_COUNTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "MAILING_STATE",
+      "length" : 100,
+      "logicName" : "邮寄地址-省/市",
+      "name" : "MAILING_STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "MAILING_STREET",
+      "length" : 250,
+      "logicName" : "邮寄地址-街道",
+      "name" : "MAILING_STREET",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "MAILING_ZIP",
+      "length" : 30,
+      "logicName" : "邮寄地址-邮编",
+      "name" : "MAILING_ZIP",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "MOBILE",
+      "length" : 100,
+      "logicName" : "手机",
+      "name" : "MOBILE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OTHER_CITY",
+      "length" : 100,
+      "logicName" : "其它城市",
+      "name" : "OTHER_CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OTHER_COUNTRY",
+      "length" : 100,
+      "logicName" : "其它国家/地区",
+      "name" : "OTHER_COUNTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OTHER_STATE",
+      "length" : 100,
+      "logicName" : "其它省/市",
+      "name" : "OTHER_STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OTHER_STREET",
+      "length" : 250,
+      "logicName" : "其它街道",
+      "name" : "OTHER_STREET",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OTHER_ZIP",
+      "length" : 30,
+      "logicName" : "其他邮编",
+      "name" : "OTHER_ZIP",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER",
+      "length" : 60,
+      "logicName" : "客户所有者",
+      "name" : "OWNER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PHONE",
+      "length" : 100,
+      "logicName" : "电话",
+      "name" : "PHONE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "RECORD_IMAGE",
+      "length" : 100,
+      "logicName" : "联系人图片",
+      "name" : "RECORD_IMAGE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SALUTATION",
+      "length" : 60,
+      "logicName" : "称呼",
+      "name" : "SALUTATION",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SECONDARY_EMAIL",
+      "length" : 100,
+      "logicName" : "备用邮箱",
+      "name" : "SECONDARY_EMAIL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SKYPE_ID",
+      "length" : 50,
+      "logicName" : "Skype_ID",
+      "name" : "SKYPE_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TITLE",
+      "length" : 100,
+      "logicName" : "职位/职称",
+      "name" : "TITLE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UNSUBSCRIBED_MODE",
+      "length" : 60,
+      "logicName" : "退订的方式",
+      "name" : "UNSUBSCRIBED_MODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UNSUBSCRIBED_TIME",
+      "logicName" : "退订的时间",
+      "name" : "UNSUBSCRIBED_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "getAllPSSysDBIndices" : [ {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "ACCOUNT_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "ACCOUNT_ID"
+        }
+      } ],
+      "codeName" : "IF_F58100A1255C013",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_CONTACT_ACCOUNT_ACCOUNT_ID",
+      "sourceType" : "DER"
+    } ],
+    "codeName" : "CONTACT",
+    "logicName" : "联系人",
+    "name" : "CONTACT",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER",
+      "length" : 60,
+      "logicName" : "客户所有者",
+      "name" : "OWNER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_ID",
+      "length" : 100,
+      "logicName" : "所属数据标识",
+      "name" : "OWNER_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_SUBTYPE",
+      "length" : 100,
+      "logicName" : "所属对象子类型",
+      "name" : "OWNER_SUBTYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_TYPE",
+      "length" : 100,
+      "logicName" : "所属数据对象",
+      "name" : "OWNER_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "URL",
+      "length" : 2000,
+      "logicName" : "URL",
+      "name" : "URL",
+      "stdDataType" : 25,
+      "nullable" : true
+    } ],
+    "codeName" : "CUSTOM_BUTTON",
+    "logicName" : "链接",
+    "name" : "CUSTOM_BUTTON",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ACCOUNT_ID",
+      "length" : 100,
+      "logicName" : "客户ID",
+      "name" : "ACCOUNT_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "AMOUNT",
+      "length" : 200,
+      "logicName" : "金额",
+      "name" : "AMOUNT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BUSINESS_LINE",
+      "length" : 60,
+      "logicName" : "业务条线",
+      "name" : "BUSINESS_LINE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CHANGE_LOG_TIME__S",
+      "logicName" : "Change Log Time",
+      "name" : "CHANGE_LOG_TIME__S",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "CLOSING_DATE",
+      "logicName" : "预计成交日期",
+      "name" : "CLOSING_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "CONTACT_ID",
+      "length" : 100,
+      "logicName" : "联系人标识",
+      "name" : "CONTACT_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DEAL_NAME",
+      "length" : 120,
+      "logicName" : "商机名称",
+      "name" : "DEAL_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "EXPECTED_REVENUE",
+      "length" : 200,
+      "logicName" : "预期收益",
+      "name" : "EXPECTED_REVENUE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "LAST_ACTIVITY_TIME",
+      "logicName" : "最近操作时间",
+      "name" : "LAST_ACTIVITY_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "LAST_ASSESS_TIME",
+      "logicName" : "最近评估时间",
+      "name" : "LAST_ASSESS_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "LEAD_CONVERSIONTIME",
+      "logicName" : "线索转换用时",
+      "name" : "LEAD_CONVERSIONTIME",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "LEAD_SOURCE",
+      "length" : 60,
+      "logicName" : "线索来源",
+      "name" : "LEAD_SOURCE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "LOCKED__S",
+      "logicName" : "Locked",
+      "name" : "LOCKED__S",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NEXT_STEP",
+      "length" : 100,
+      "logicName" : "下一步",
+      "name" : "NEXT_STEP",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OVERALL_SALES_DURATION",
+      "logicName" : "总销售时间",
+      "name" : "OVERALL_SALES_DURATION",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER",
+      "length" : 60,
+      "logicName" : "所有者",
+      "name" : "OWNER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PROBABILITY",
+      "logicName" : "可能性",
+      "name" : "PROBABILITY",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "REASON_FOR_LOSS__S",
+      "length" : 60,
+      "logicName" : "丢单原因",
+      "name" : "REASON_FOR_LOSS__S",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SALES_CYCLE_DURATION",
+      "logicName" : "销售周期的持续时间",
+      "name" : "SALES_CYCLE_DURATION",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "STAGE",
+      "length" : 60,
+      "logicName" : "阶段",
+      "name" : "STAGE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TYPE",
+      "length" : 60,
+      "logicName" : "类型",
+      "name" : "TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "getAllPSSysDBIndices" : [ {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "ACCOUNT_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "ACCOUNT_ID"
+        }
+      } ],
+      "codeName" : "IF_F45C8411489C3CC",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_DEAL_ACCOUNT_ACCOUNT_ID",
+      "sourceType" : "DER"
+    }, {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "CONTACT_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "CONTACT_ID"
+        }
+      } ],
+      "codeName" : "IF_F8A32608BC4FAB7",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_DEAL_CONTACT_CONTACT_ID",
+      "sourceType" : "DER"
+    }, {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "STAGE",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "STAGE"
+        }
+      } ],
+      "codeName" : "IF_FC1F48A59841C24",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_DEAL_DEAL_STAGE_STAGE",
+      "sourceType" : "DER"
+    } ],
+    "codeName" : "DEAL",
+    "logicName" : "商机",
+    "name" : "DEAL",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "AMOUNT",
+      "logicName" : "金额",
+      "name" : "AMOUNT",
+      "precision" : 2,
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "CLOSING_DATE",
+      "logicName" : "预计成交日期",
+      "name" : "CLOSING_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DEAL_ID",
+      "length" : 100,
+      "logicName" : "商机标识",
+      "name" : "DEAL_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "EXPECTED_REVENUE",
+      "logicName" : "预期收益",
+      "name" : "EXPECTED_REVENUE",
+      "precision" : 2,
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "LAST_ACTIVITY_TIME",
+      "logicName" : "最近操作时间",
+      "name" : "LAST_ACTIVITY_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "MOVED_TO__S",
+      "length" : 60,
+      "logicName" : "移动到",
+      "name" : "MOVED_TO__S",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PROBABILITY",
+      "logicName" : "可能性",
+      "name" : "PROBABILITY",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "STAGE",
+      "length" : 60,
+      "logicName" : "阶段",
+      "name" : "STAGE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "STAGE_DURATION_CALENDAR_DAYS",
+      "logicName" : "阶段持续时间(日历天数)",
+      "name" : "STAGE_DURATION_CALENDAR_DAYS",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "getAllPSSysDBIndices" : [ {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "DEAL_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "DEAL_ID"
+        }
+      } ],
+      "codeName" : "IF_FC255BC340A4721",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_DEAL_HISTORY_DEAL_DEAL_ID",
+      "sourceType" : "DER"
+    } ],
+    "codeName" : "DEAL_HISTORY",
+    "logicName" : "阶段历史",
+    "name" : "DEAL_HISTORY",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "codeName" : "DEAL_PRODUCT",
+    "logicName" : "商机商品",
+    "name" : "DEAL_PRODUCT",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "阶段标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "阶段名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PROBABILITY",
+      "logicName" : "默认阶段成交概率",
+      "name" : "PROBABILITY",
+      "precision" : 2,
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "DEAL_STAGE",
+    "logicName" : "商机阶段",
+    "name" : "DEAL_STAGE",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ALL_DAY",
+      "logicName" : "全天",
+      "name" : "ALL_DAY",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "CHECK_IN_ADDRES",
+      "length" : 2000,
+      "logicName" : "签到地址",
+      "name" : "CHECK_IN_ADDRES",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "CHECK_IN_CITY",
+      "length" : 100,
+      "logicName" : "签到城市",
+      "name" : "CHECK_IN_CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CHECK_IN_COMMENT",
+      "length" : 3000,
+      "logicName" : "签到评注",
+      "name" : "CHECK_IN_COMMENT",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "CHECK_IN_COUNTRY",
+      "length" : 100,
+      "logicName" : "签到国家",
+      "name" : "CHECK_IN_COUNTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CHECK_IN_STATE",
+      "length" : 100,
+      "logicName" : "签到省份",
+      "name" : "CHECK_IN_STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CHECK_IN_STATUS",
+      "length" : 30,
+      "logicName" : "签到状态",
+      "name" : "CHECK_IN_STATUS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CHECK_IN_SUB_LOCALITY",
+      "length" : 250,
+      "logicName" : "签到地区",
+      "name" : "CHECK_IN_SUB_LOCALITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CHECK_IN_TIME",
+      "logicName" : "签到时间",
+      "name" : "CHECK_IN_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "END_DATETIME",
+      "logicName" : "结束日期时间",
+      "name" : "END_DATETIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "EVENT_TITLE",
+      "length" : 255,
+      "logicName" : "标题",
+      "name" : "EVENT_TITLE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "LATITUDE",
+      "logicName" : "纬度",
+      "name" : "LATITUDE",
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "LONGITUDE",
+      "logicName" : "经度",
+      "name" : "LONGITUDE",
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER",
+      "length" : 60,
+      "logicName" : "客户所有者",
+      "name" : "OWNER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_ID",
+      "length" : 100,
+      "logicName" : "所属数据标识",
+      "name" : "OWNER_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_SUBTYPE",
+      "length" : 100,
+      "logicName" : "所属对象子类型",
+      "name" : "OWNER_SUBTYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_TYPE",
+      "length" : 100,
+      "logicName" : "所属数据对象",
+      "name" : "OWNER_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PARTICIPANTS",
+      "length" : 20,
+      "logicName" : "参与者",
+      "name" : "PARTICIPANTS",
+      "stdDataType" : 1,
+      "nullable" : true
+    }, {
+      "codeName" : "START_DATETIME",
+      "logicName" : "起始日期时间",
+      "name" : "START_DATETIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "VENUE",
+      "length" : 255,
+      "logicName" : "地点",
+      "name" : "VENUE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ZIP_CODE",
+      "length" : 30,
+      "logicName" : "邮政编码",
+      "name" : "ZIP_CODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    } ],
+    "codeName" : "EVENT",
+    "logicName" : "会议",
+    "name" : "EVENT",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRINCIPAL_ID",
+      "length" : 100,
+      "logicName" : "关联主体标识",
+      "name" : "PRINCIPAL_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRINCIPAL_TYPE",
+      "length" : 100,
+      "logicName" : "关联主体类型",
+      "name" : "PRINCIPAL_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "USER_ID",
+      "length" : 100,
+      "logicName" : "用户标识",
+      "name" : "USER_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    } ],
+    "getAllPSSysDBIndices" : [ {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "USER_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "USER_ID"
+        }
+      } ],
+      "codeName" : "IF_FEE142458116B7D",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_EXECUTOR_USER_USER_ID",
+      "sourceType" : "DER"
+    } ],
+    "codeName" : "EXECUTOR",
+    "logicName" : "执行人",
+    "name" : "EXECUTOR",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ADJUSTMENT",
+      "length" : 100,
+      "logicName" : "调整",
+      "name" : "ADJUSTMENT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_CITY",
+      "length" : 100,
+      "logicName" : "开单地址-城市",
+      "name" : "BILLING_CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_CODE",
+      "length" : 30,
+      "logicName" : "开单地址-邮编",
+      "name" : "BILLING_CODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_COUNTRY",
+      "length" : 100,
+      "logicName" : "开单地址-国家/地区",
+      "name" : "BILLING_COUNTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_STATE",
+      "length" : 100,
+      "logicName" : "开单地址-省/市",
+      "name" : "BILLING_STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_STREET",
+      "length" : 250,
+      "logicName" : "开单地址-街道",
+      "name" : "BILLING_STREET",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "DISCOUNT",
+      "length" : 100,
+      "logicName" : "折扣",
+      "name" : "DISCOUNT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "DUE_DATE",
+      "length" : 100,
+      "logicName" : "到期日期",
+      "name" : "DUE_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "EXCISE_DUTY",
+      "length" : 100,
+      "logicName" : "消费税",
+      "name" : "EXCISE_DUTY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "GRAND_TOTAL",
+      "length" : 100,
+      "logicName" : "累计",
+      "name" : "GRAND_TOTAL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "INVOICE_DATE",
+      "length" : 100,
+      "logicName" : "发货单日期",
+      "name" : "INVOICE_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "INVOICE_NUMBER",
+      "length" : 100,
+      "logicName" : "发货单编号",
+      "name" : "INVOICE_NUMBER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "LOCKED__S",
+      "logicName" : "Locked",
+      "name" : "LOCKED__S",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PURCHASE_ORDER",
+      "length" : 120,
+      "logicName" : "采购订单",
+      "name" : "PURCHASE_ORDER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SALES_COMMISSIO",
+      "length" : 100,
+      "logicName" : "销售佣金",
+      "name" : "SALES_COMMISSIO",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_CITY",
+      "length" : 100,
+      "logicName" : "发货地址-城市",
+      "name" : "SHIPPING_CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_CODE",
+      "length" : 30,
+      "logicName" : "发货地址-邮编",
+      "name" : "SHIPPING_CODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_COUNTRY",
+      "length" : 100,
+      "logicName" : "发货地址-国家/地区",
+      "name" : "SHIPPING_COUNTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_STATE",
+      "length" : 100,
+      "logicName" : "发货地址-省/市",
+      "name" : "SHIPPING_STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_STREET",
+      "length" : 250,
+      "logicName" : "发货地址-街道",
+      "name" : "SHIPPING_STREET",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "STATUS",
+      "length" : 60,
+      "logicName" : "状态",
+      "name" : "STATUS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SUBJECT",
+      "length" : 120,
+      "logicName" : "主题",
+      "name" : "SUBJECT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SUB_TOTAL",
+      "length" : 100,
+      "logicName" : "小计",
+      "name" : "SUB_TOTAL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAX",
+      "length" : 100,
+      "logicName" : "税",
+      "name" : "TAX",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TERMS_AND_CONDITIONS",
+      "length" : 32000,
+      "logicName" : "条款及条件",
+      "name" : "TERMS_AND_CONDITIONS",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "INVOICE",
+    "logicName" : "发货单",
+    "name" : "INVOICE",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "ITEM",
+    "logicName" : "货品",
+    "name" : "ITEM",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ACCOUNT_ID",
+      "length" : 100,
+      "logicName" : "客户标识",
+      "name" : "ACCOUNT_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ANNUALREVENUE",
+      "length" : 200,
+      "logicName" : "年收入",
+      "name" : "ANNUALREVENUE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CHANGE_LOG_TIME__S",
+      "logicName" : "Change Log Time",
+      "name" : "CHANGE_LOG_TIME__S",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "CITY",
+      "length" : 100,
+      "logicName" : "城市",
+      "name" : "CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "COMPANY",
+      "length" : 200,
+      "logicName" : "公司",
+      "name" : "COMPANY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CONVERTED_DATE_TIME",
+      "logicName" : "转换的日期时间",
+      "name" : "CONVERTED_DATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "CONVERTED__S",
+      "logicName" : "为“已转换”",
+      "name" : "CONVERTED__S",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "COUNTRY",
+      "length" : 100,
+      "logicName" : "国家/地区",
+      "name" : "COUNTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "DESIGNATION",
+      "length" : 100,
+      "logicName" : "职位/职称",
+      "name" : "DESIGNATION",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "EMAIL",
+      "length" : 100,
+      "logicName" : "电子邮件",
+      "name" : "EMAIL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "EMAIL_OPT_OUT",
+      "logicName" : "不发营销邮件",
+      "name" : "EMAIL_OPT_OUT",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "ENRICH_STATUS_S",
+      "length" : 60,
+      "logicName" : "充实状态",
+      "name" : "ENRICH_STATUS_S",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "FAX",
+      "length" : 30,
+      "logicName" : "传真",
+      "name" : "FAX",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "FIRST_NAME",
+      "length" : 40,
+      "logicName" : "名字",
+      "name" : "FIRST_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "FULL_NAME",
+      "length" : 120,
+      "logicName" : "全名",
+      "name" : "FULL_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "INDUSTRY",
+      "length" : 60,
+      "logicName" : "行业",
+      "name" : "INDUSTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "IS_DELETED",
+      "logicName" : "是否已删除",
+      "name" : "IS_DELETED",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "LAST_ACTIVITY_TIME",
+      "logicName" : "最近操作时间",
+      "name" : "LAST_ACTIVITY_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "LAST_ASSESS_TIME",
+      "logicName" : "最近评估时间",
+      "name" : "LAST_ASSESS_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "LAST_ENRICHED_TIME__S",
+      "logicName" : "最后充实时间",
+      "name" : "LAST_ENRICHED_TIME__S",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "LAST_NAME",
+      "length" : 80,
+      "logicName" : "姓氏",
+      "name" : "LAST_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "LEAD_CONVERSION_TIME",
+      "logicName" : "线索转换用时",
+      "name" : "LEAD_CONVERSION_TIME",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "LEAD_SOURCE",
+      "length" : 60,
+      "logicName" : "线索来源",
+      "name" : "LEAD_SOURCE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "LEAD_STATUS",
+      "length" : 60,
+      "logicName" : "线索状态",
+      "name" : "LEAD_STATUS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "LOCKED__S",
+      "logicName" : "Locked",
+      "name" : "LOCKED__S",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "MOBILE",
+      "length" : 100,
+      "logicName" : "手机",
+      "name" : "MOBILE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NO_OF_EMPLOYEES",
+      "logicName" : "员工数",
+      "name" : "NO_OF_EMPLOYEES",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER",
+      "length" : 60,
+      "logicName" : "客户所有者",
+      "name" : "OWNER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PHONE",
+      "length" : 100,
+      "logicName" : "电话",
+      "name" : "PHONE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PID",
+      "length" : 100,
+      "logicName" : "父线索标识",
+      "name" : "PID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "RATING",
+      "length" : 60,
+      "logicName" : "等级",
+      "name" : "RATING",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "RECORD_LMAGE",
+      "length" : 100,
+      "logicName" : "线索图片",
+      "name" : "RECORD_LMAGE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SALUTATION",
+      "length" : 60,
+      "logicName" : "称呼",
+      "name" : "SALUTATION",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SECONDARY_EMAIL",
+      "length" : 100,
+      "logicName" : "备用邮箱",
+      "name" : "SECONDARY_EMAIL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SKYPE_ID",
+      "length" : 50,
+      "logicName" : "Skype lD",
+      "name" : "SKYPE_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "STATE",
+      "length" : 100,
+      "logicName" : "省/市",
+      "name" : "STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "STREET",
+      "length" : 250,
+      "logicName" : "街道",
+      "name" : "STREET",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SUBJECT",
+      "length" : 255,
+      "logicName" : "主题",
+      "name" : "SUBJECT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UNSUBSCRIBED_MODE",
+      "length" : 60,
+      "logicName" : "退订的方式",
+      "name" : "UNSUBSCRIBED_MODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UNSUBSCRIBED_TIME",
+      "logicName" : "退订的时间",
+      "name" : "UNSUBSCRIBED_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "WEBSITE",
+      "length" : 100,
+      "logicName" : "网站",
+      "name" : "WEBSITE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ZIP_CODE",
+      "length" : 30,
+      "logicName" : "邮编",
+      "name" : "ZIP_CODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    } ],
+    "getAllPSSysDBIndices" : [ {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "ACCOUNT_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "ACCOUNT_ID"
+        }
+      } ],
+      "codeName" : "IF_F8C35FC0D42E7E8",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_LEAD_ACCOUNT_ACCOUNT_ID",
+      "sourceType" : "DER"
+    }, {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "PID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "PID"
+        }
+      } ],
+      "codeName" : "IF_FDC8BAC20516844",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_LEAD_LEAD_PID",
+      "sourceType" : "DER"
+    } ],
+    "codeName" : "LEAD",
+    "logicName" : "线索",
+    "name" : "LEAD",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER",
+      "length" : 60,
+      "logicName" : "所有者",
+      "name" : "OWNER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "MANEUVER",
+    "logicName" : "活动",
+    "name" : "MANEUVER",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CONTENT",
+      "length" : 1048576,
+      "logicName" : "内容",
+      "name" : "CONTENT",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_TYPE",
+      "length" : 100,
+      "logicName" : "所属数据对象",
+      "name" : "OWNER_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRINCIPAL_ID",
+      "length" : 100,
+      "logicName" : "备注主体标识",
+      "name" : "PRINCIPAL_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRINCIPAL_NAME",
+      "length" : 100,
+      "logicName" : "备注主体名称",
+      "name" : "PRINCIPAL_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRINCIPAL_TYPE",
+      "length" : 100,
+      "logicName" : "备注主体类型",
+      "name" : "PRINCIPAL_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "NOTE_ATTACH",
+    "logicName" : "备注",
+    "name" : "NOTE_ATTACH",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "AMOUNT",
+      "logicName" : "金额",
+      "name" : "AMOUNT",
+      "precision" : 2,
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_ID",
+      "length" : 100,
+      "logicName" : "所属数据标识",
+      "name" : "OWNER_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_TYPE",
+      "length" : 100,
+      "logicName" : "所属数据对象",
+      "name" : "OWNER_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "RATIO",
+      "logicName" : "分配比率",
+      "name" : "RATIO",
+      "precision" : 2,
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "USER_ID",
+      "length" : 100,
+      "logicName" : "用户标识",
+      "name" : "USER_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    } ],
+    "getAllPSSysDBIndices" : [ {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "USER_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "USER_ID"
+        }
+      } ],
+      "codeName" : "IF_F549CC05BFD9ECE",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_ORDER_ALLOCATE_USER_USER_ID",
+      "sourceType" : "DER"
+    } ],
+    "codeName" : "ORDER_ALLOCATE",
+    "logicName" : "订单分配",
+    "name" : "ORDER_ALLOCATE",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ALLOCATE_MODEL",
+      "length" : 100,
+      "logicName" : "分配模式",
+      "name" : "ALLOCATE_MODEL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "AMOUNT",
+      "logicName" : "金额",
+      "name" : "AMOUNT",
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "BUSINESS_LINE",
+      "length" : 100,
+      "logicName" : "业务条线",
+      "name" : "BUSINESS_LINE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "METHOD",
+      "length" : 100,
+      "logicName" : "收款方式",
+      "name" : "METHOD",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER",
+      "length" : 100,
+      "logicName" : "所有者",
+      "name" : "OWNER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "O_NUMBER",
+      "length" : 100,
+      "logicName" : "订单编号",
+      "name" : "O_NUMBER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PAYEE_DATE",
+      "logicName" : "收款日期",
+      "name" : "PAYEE_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "PAYEE_NUMBER",
+      "length" : 120,
+      "logicName" : "编号",
+      "name" : "PAYEE_NUMBER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PAYEE_PLAN_ID",
+      "length" : 100,
+      "logicName" : "收款计划标识",
+      "name" : "PAYEE_PLAN_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PROJECT_ID",
+      "length" : 100,
+      "logicName" : "订单标识",
+      "name" : "PROJECT_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SEQUENCE",
+      "logicName" : "序号",
+      "name" : "SEQUENCE",
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "STATUS",
+      "length" : 60,
+      "logicName" : "状态",
+      "name" : "STATUS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TYPE",
+      "length" : 100,
+      "logicName" : "类型",
+      "name" : "TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "YEAR",
+      "length" : 100,
+      "logicName" : "所属年度",
+      "name" : "YEAR",
+      "stdDataType" : 25,
+      "nullable" : true
+    } ],
+    "getAllPSSysDBIndices" : [ {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "PAYEE_PLAN_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "PAYEE_PLAN_ID"
+        }
+      } ],
+      "codeName" : "IF_F755AA3888D390C",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_PAYEE_PAYEE_PLAN_PAYEE_PLAN_ID",
+      "sourceType" : "DER"
+    }, {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "PROJECT_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "PROJECT_ID"
+        }
+      } ],
+      "codeName" : "IF_FF9B1E023E97A84",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_PAYEE_PROJECT_PROJECT_ID",
+      "sourceType" : "DER"
+    } ],
+    "codeName" : "PAYEE",
+    "logicName" : "收付款",
+    "name" : "PAYEE",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "AMOUNT",
+      "logicName" : "金额",
+      "name" : "AMOUNT",
+      "precision" : 2,
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_ID",
+      "length" : 100,
+      "logicName" : "所属数据标识",
+      "name" : "OWNER_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_TYPE",
+      "length" : 100,
+      "logicName" : "所属数据对象",
+      "name" : "OWNER_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PAYEE_ID",
+      "length" : 100,
+      "logicName" : "回款标识",
+      "name" : "PAYEE_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "RATIO",
+      "logicName" : "分配比率",
+      "name" : "RATIO",
+      "precision" : 2,
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "USER_ID",
+      "length" : 100,
+      "logicName" : "用户标识",
+      "name" : "USER_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    } ],
+    "getAllPSSysDBIndices" : [ {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "PAYEE_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "PAYEE_ID"
+        }
+      } ],
+      "codeName" : "IF_FDB61AD0EA55C9B",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_PAYEE_ALLOCATE_PAYEE_PAYEE_ID",
+      "sourceType" : "DER"
+    }, {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "USER_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "USER_ID"
+        }
+      } ],
+      "codeName" : "IF_F07BC55FAB87EA2",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_PAYEE_ALLOCATE_USER_USER_ID",
+      "sourceType" : "DER"
+    } ],
+    "codeName" : "PAYEE_ALLOCATE",
+    "logicName" : "回款分配",
+    "name" : "PAYEE_ALLOCATE",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "AMOUNT",
+      "logicName" : "金额",
+      "name" : "AMOUNT",
+      "precision" : 2,
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "IS_NOT_IN_PLAN",
+      "logicName" : "未纳入结算计划款",
+      "name" : "IS_NOT_IN_PLAN",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWBER",
+      "length" : 100,
+      "logicName" : "所有者",
+      "name" : "OWBER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "O_NUMBER",
+      "length" : 100,
+      "logicName" : "订单编号",
+      "name" : "O_NUMBER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PLANNED_TIME",
+      "logicName" : "计划收款时间",
+      "name" : "PLANNED_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "PLAN_STATUS",
+      "length" : 100,
+      "logicName" : "计划状态",
+      "name" : "PLAN_STATUS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PROJECT_ID",
+      "length" : 100,
+      "logicName" : "订单标识",
+      "name" : "PROJECT_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SEQUENCE",
+      "logicName" : "序号",
+      "name" : "SEQUENCE",
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "getAllPSSysDBIndices" : [ {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "PROJECT_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "PROJECT_ID"
+        }
+      } ],
+      "codeName" : "IF_F181A500E97ED8A",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_PAYEE_PLAN_PROJECT_PROJECT_ID",
+      "sourceType" : "DER"
+    } ],
+    "codeName" : "PAYEE_PLAN",
+    "logicName" : "收款计划",
+    "name" : "PAYEE_PLAN",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "AMOUNT",
+      "logicName" : "金额",
+      "name" : "AMOUNT",
+      "precision" : 2,
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "BUSINESS_LINE",
+      "length" : 60,
+      "logicName" : "业务条线",
+      "name" : "BUSINESS_LINE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "款项说明",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OD_ID",
+      "length" : 100,
+      "logicName" : "原数据ID",
+      "name" : "OD_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER",
+      "length" : 100,
+      "logicName" : "销售人员",
+      "name" : "OWNER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PROJECT_ID",
+      "length" : 100,
+      "logicName" : "订单标识",
+      "name" : "PROJECT_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SECTOR",
+      "length" : 100,
+      "logicName" : "行业",
+      "name" : "SECTOR",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "STATISTIC_DATE",
+      "logicName" : "统计时间",
+      "name" : "STATISTIC_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "TYPE",
+      "length" : 100,
+      "logicName" : "收款类型",
+      "name" : "TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "PAYEE_STATISTIC",
+    "logicName" : "收款情况统计",
+    "name" : "PAYEE_STATISTIC",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ACTIVE",
+      "logicName" : "活跃",
+      "name" : "ACTIVE",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "LOCKED__S",
+      "logicName" : "Locked",
+      "name" : "LOCKED__S",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRICE_BOOK_NAME",
+      "length" : 120,
+      "logicName" : "价格表名称",
+      "name" : "PRICE_BOOK_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRICING_DETAILS",
+      "length" : 120,
+      "logicName" : "价格明细",
+      "name" : "PRICING_DETAILS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRICING_MODEL",
+      "length" : 100,
+      "logicName" : "价格模型",
+      "name" : "PRICING_MODEL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "PRICE_BOOK",
+    "logicName" : "价格表",
+    "name" : "PRICE_BOOK",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "COMMISSION_RATE",
+      "length" : 100,
+      "logicName" : "佣金比例",
+      "name" : "COMMISSION_RATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "LOCKED__S",
+      "logicName" : "Locked",
+      "name" : "LOCKED__S",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "MANUFACTURER",
+      "length" : 60,
+      "logicName" : "制造商",
+      "name" : "MANUFACTURER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER",
+      "length" : 60,
+      "logicName" : "客户所有者",
+      "name" : "OWNER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRODUCT_ACTIVE",
+      "logicName" : "产品有效",
+      "name" : "PRODUCT_ACTIVE",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "PRODUCT_CATEGORY",
+      "length" : 60,
+      "logicName" : "产品分类",
+      "name" : "PRODUCT_CATEGORY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRODUCT_CODE",
+      "length" : 255,
+      "logicName" : "产品编码",
+      "name" : "PRODUCT_CODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRODUCT_NAME",
+      "length" : 255,
+      "logicName" : "产品名称",
+      "name" : "PRODUCT_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "QTY_IN_DEMAND",
+      "logicName" : "需求数量",
+      "name" : "QTY_IN_DEMAND",
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "QTY_IN_STOCK",
+      "logicName" : "库存数量",
+      "name" : "QTY_IN_STOCK",
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "QTY_ORDERED",
+      "logicName" : "订购数量",
+      "name" : "QTY_ORDERED",
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "RECORD_IMAGE",
+      "length" : 100,
+      "logicName" : "产品图片",
+      "name" : "RECORD_IMAGE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "REORDER_LEVEL",
+      "logicName" : "库存警戒线",
+      "name" : "REORDER_LEVEL",
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "SALES_END_DATE",
+      "logicName" : "销售结束日期",
+      "name" : "SALES_END_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "SALES_START_DATE",
+      "logicName" : "错售开始日期",
+      "name" : "SALES_START_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "SUPPORT_EXPIRY_DATE",
+      "logicName" : "支持过期日期",
+      "name" : "SUPPORT_EXPIRY_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "SUPPORT_START_DATE",
+      "logicName" : "支持开始日期",
+      "name" : "SUPPORT_START_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAX",
+      "length" : 2000,
+      "logicName" : "税",
+      "name" : "TAX",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAXABLE",
+      "logicName" : "应纳税",
+      "name" : "TAXABLE",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "UNIT_PRICE",
+      "length" : 100,
+      "logicName" : "定价",
+      "name" : "UNIT_PRICE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "USAGE_UNIT",
+      "length" : 60,
+      "logicName" : "使用单位",
+      "name" : "USAGE_UNIT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "VENDOR_ID",
+      "length" : 100,
+      "logicName" : "供应商标识",
+      "name" : "VENDOR_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    } ],
+    "getAllPSSysDBIndices" : [ {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "VENDOR_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "VENDOR_ID"
+        }
+      } ],
+      "codeName" : "IF_F867D388182BCEB",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_PRODUCT_VENDOR_VENDOR_ID",
+      "sourceType" : "DER"
+    } ],
+    "codeName" : "PRODUCT",
+    "logicName" : "产品",
+    "name" : "PRODUCT",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ACCREDITED_ORGANIZATION",
+      "length" : 100,
+      "logicName" : "受证单位",
+      "name" : "ACCREDITED_ORGANIZATION",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "AWARDING_ORGANIZATION",
+      "length" : 100,
+      "logicName" : "颁证机构",
+      "name" : "AWARDING_ORGANIZATION",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "END_DATE",
+      "logicName" : "有效期止",
+      "name" : "END_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "ISSUE_DATE",
+      "logicName" : "签发日期",
+      "name" : "ISSUE_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ISSUE_MAN",
+      "length" : 100,
+      "logicName" : "签发人",
+      "name" : "ISSUE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "证书名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PC_NUMBER",
+      "length" : 100,
+      "logicName" : "证书编号",
+      "name" : "PC_NUMBER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRODUCT_ID",
+      "length" : 100,
+      "logicName" : "产品标识",
+      "name" : "PRODUCT_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SCOPE",
+      "length" : 200,
+      "logicName" : "认证范围",
+      "name" : "SCOPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SERVICE_NAME",
+      "length" : 200,
+      "logicName" : "产品/服务名称及型号",
+      "name" : "SERVICE_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "START_DATE",
+      "logicName" : "有效期起",
+      "name" : "START_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "getAllPSSysDBIndices" : [ {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "PRODUCT_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "PRODUCT_ID"
+        }
+      } ],
+      "codeName" : "IF_F98E8108A6B526C",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_PRODUCT_CERTIFICATE_PRODUCT_PRODUCT_ID",
+      "sourceType" : "DER"
+    } ],
+    "codeName" : "PRODUCT_CERTIFICATE",
+    "logicName" : "产品证书",
+    "name" : "PRODUCT_CERTIFICATE",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ACCOUNT_ID",
+      "length" : 100,
+      "logicName" : "客户标识",
+      "name" : "ACCOUNT_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ALLOCATE_MODEL",
+      "length" : 100,
+      "logicName" : "分配模式",
+      "name" : "ALLOCATE_MODEL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "AMOUNT",
+      "logicName" : "订单金额",
+      "name" : "AMOUNT",
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "BUSINESS_LINE",
+      "length" : 60,
+      "logicName" : "业务条线",
+      "name" : "BUSINESS_LINE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CLOSED_DATE",
+      "logicName" : "关闭日期",
+      "name" : "CLOSED_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "IS_IN_SALES_CAL",
+      "logicName" : "是否纳入销售业绩计算",
+      "name" : "IS_IN_SALES_CAL",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "IS_PHYSICAL_ORDER",
+      "logicName" : "是否对应实体订单",
+      "name" : "IS_PHYSICAL_ORDER",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "LAST_ASSESS_TIME",
+      "logicName" : "最近评估时间",
+      "name" : "LAST_ASSESS_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "LAST_NOTE_TIME",
+      "logicName" : "最近评估时间",
+      "name" : "LAST_NOTE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ORDER_DATE",
+      "logicName" : "订单日期",
+      "name" : "ORDER_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER",
+      "length" : 60,
+      "logicName" : "所有者",
+      "name" : "OWNER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "O_NUMBER",
+      "length" : 120,
+      "logicName" : "订单编号",
+      "name" : "O_NUMBER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PID",
+      "length" : 100,
+      "logicName" : "父标识",
+      "name" : "PID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SETTLEMENT_AMOUNT",
+      "logicName" : "业绩结算金额",
+      "name" : "SETTLEMENT_AMOUNT",
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "SETTLEMENT_COST",
+      "logicName" : "结算成本",
+      "name" : "SETTLEMENT_COST",
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "STATUS",
+      "length" : 60,
+      "logicName" : "状态",
+      "name" : "STATUS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAX",
+      "length" : 2000,
+      "logicName" : "税率",
+      "name" : "TAX",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "YEAR",
+      "length" : 100,
+      "logicName" : "所属年度",
+      "name" : "YEAR",
+      "stdDataType" : 25,
+      "nullable" : true
+    } ],
+    "getAllPSSysDBIndices" : [ {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "ACCOUNT_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "ACCOUNT_ID"
+        }
+      } ],
+      "codeName" : "IF_FDD707676B9C1D3",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_PROJECT_ACCOUNT_ACCOUNT_ID",
+      "sourceType" : "DER"
+    }, {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "PID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "PID"
+        }
+      } ],
+      "codeName" : "IF_FFE3B4C0E2C00B8",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_PROJECT_PROJECT_PID",
+      "sourceType" : "DER"
+    } ],
+    "codeName" : "PROJECT",
+    "logicName" : "在线项目",
+    "name" : "PROJECT",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ADJUSTMENT",
+      "length" : 100,
+      "logicName" : "调整",
+      "name" : "ADJUSTMENT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILING_STREET",
+      "length" : 250,
+      "logicName" : "开单地址-街道",
+      "name" : "BILING_STREET",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_CITY",
+      "length" : 100,
+      "logicName" : "开单地址-城市",
+      "name" : "BILLING_CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_CODE",
+      "length" : 50,
+      "logicName" : "开单地址-邮编",
+      "name" : "BILLING_CODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_COUNTRY",
+      "length" : 100,
+      "logicName" : "开单地址-国家/地区",
+      "name" : "BILLING_COUNTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_STATE",
+      "length" : 100,
+      "logicName" : "开单地址-省/市",
+      "name" : "BILLING_STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CARRIER",
+      "length" : 60,
+      "logicName" : "运输",
+      "name" : "CARRIER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "DISCOUNT",
+      "length" : 100,
+      "logicName" : "折扣",
+      "name" : "DISCOUNT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "DUE_DATE",
+      "logicName" : "到期日期",
+      "name" : "DUE_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "EXCISE_DUTY",
+      "length" : 100,
+      "logicName" : "消费税",
+      "name" : "EXCISE_DUTY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "GRAND_TOTAL",
+      "length" : 100,
+      "logicName" : "累计",
+      "name" : "GRAND_TOTAL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "LOCKED__S",
+      "logicName" : "Locked",
+      "name" : "LOCKED__S",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PO_DATE",
+      "logicName" : "订单日期",
+      "name" : "PO_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "PO_NUMBER",
+      "length" : 120,
+      "logicName" : "订单编号",
+      "name" : "PO_NUMBER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "REQUISITION_NO",
+      "length" : 120,
+      "logicName" : "申请号",
+      "name" : "REQUISITION_NO",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SALES_COMMISSION",
+      "length" : 100,
+      "logicName" : "销售佣金",
+      "name" : "SALES_COMMISSION",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_CITY",
+      "length" : 100,
+      "logicName" : "发货地址-城市",
+      "name" : "SHIPPING_CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_CODE",
+      "length" : 50,
+      "logicName" : "发货地址-邮编",
+      "name" : "SHIPPING_CODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_COUNTRY",
+      "length" : 100,
+      "logicName" : "发货地址-国家/地区",
+      "name" : "SHIPPING_COUNTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_STATE",
+      "length" : 100,
+      "logicName" : "发货地址-省/市",
+      "name" : "SHIPPING_STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_STREET",
+      "length" : 250,
+      "logicName" : "发货地址-街道",
+      "name" : "SHIPPING_STREET",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "STATUS",
+      "length" : 60,
+      "logicName" : "状态",
+      "name" : "STATUS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SUBJECT",
+      "length" : 120,
+      "logicName" : "主题",
+      "name" : "SUBJECT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SUB_TOTAL",
+      "length" : 100,
+      "logicName" : "小计",
+      "name" : "SUB_TOTAL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAX",
+      "length" : 100,
+      "logicName" : "税",
+      "name" : "TAX",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TERMS_AND_CONDITIONS",
+      "length" : 32000,
+      "logicName" : "条款及条件",
+      "name" : "TERMS_AND_CONDITIONS",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "TRACKING_NUMBER",
+      "length" : 120,
+      "logicName" : "追踪号",
+      "name" : "TRACKING_NUMBER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "PURCHASE_ORDER",
+    "logicName" : "采购订单",
+    "name" : "PURCHASE_ORDER",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ADJUSTMENT",
+      "length" : 100,
+      "logicName" : "调整",
+      "name" : "ADJUSTMENT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_CITY",
+      "length" : 100,
+      "logicName" : "开单地址-城市",
+      "name" : "BILLING_CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_CODE",
+      "length" : 30,
+      "logicName" : "开单地址-邮编",
+      "name" : "BILLING_CODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_COUNTRY",
+      "length" : 100,
+      "logicName" : "开单地址-国家/地区",
+      "name" : "BILLING_COUNTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_STATE",
+      "length" : 100,
+      "logicName" : "开单地址-省/市",
+      "name" : "BILLING_STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_STREET",
+      "length" : 250,
+      "logicName" : "记录ID",
+      "name" : "BILLING_STREET",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CARRIER",
+      "length" : 60,
+      "logicName" : "运输",
+      "name" : "CARRIER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "DISCOUNT",
+      "length" : 100,
+      "logicName" : "折扣",
+      "name" : "DISCOUNT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "GRAND_TOTAL",
+      "length" : 100,
+      "logicName" : "累计",
+      "name" : "GRAND_TOTAL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "LOCKED__S",
+      "logicName" : "Locked",
+      "name" : "LOCKED__S",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "QUOTE_NUMBER",
+      "length" : 100,
+      "logicName" : "报价编号",
+      "name" : "QUOTE_NUMBER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "QUOTE_STAGE",
+      "length" : 60,
+      "logicName" : "报价阶段",
+      "name" : "QUOTE_STAGE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_CITY",
+      "length" : 100,
+      "logicName" : "发货地址-城市",
+      "name" : "SHIPPING_CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_CODE",
+      "length" : 30,
+      "logicName" : "发货地址-邮编",
+      "name" : "SHIPPING_CODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_COUNTRY",
+      "length" : 100,
+      "logicName" : "发货地址-国家/地区",
+      "name" : "SHIPPING_COUNTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_STATE",
+      "length" : 100,
+      "logicName" : "发货地址-省/市",
+      "name" : "SHIPPING_STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_STREET",
+      "length" : 250,
+      "logicName" : "发货地址-街道",
+      "name" : "SHIPPING_STREET",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SUBJECT",
+      "length" : 120,
+      "logicName" : "主题",
+      "name" : "SUBJECT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SUB_TOTAL",
+      "length" : 100,
+      "logicName" : "小计",
+      "name" : "SUB_TOTAL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAX",
+      "length" : 100,
+      "logicName" : "税",
+      "name" : "TAX",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TEAM",
+      "length" : 120,
+      "logicName" : "团队",
+      "name" : "TEAM",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TERMS_AND_CONDITIONS",
+      "length" : 32000,
+      "logicName" : "条款及条件",
+      "name" : "TERMS_AND_CONDITIONS",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "VALID_TILL",
+      "logicName" : "有效期至",
+      "name" : "VALID_TILL",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "QUOTE",
+    "logicName" : "报价",
+    "name" : "QUOTE",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "IDENTIFIER",
+      "length" : 100,
+      "logicName" : "编号",
+      "name" : "IDENTIFIER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "IS_DELETED",
+      "logicName" : "是否已删除",
+      "name" : "IS_DELETED",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 500,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_ID",
+      "length" : 100,
+      "logicName" : "所属数据标识",
+      "name" : "OWNER_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_SUBTYPE",
+      "length" : 100,
+      "logicName" : "所属对象子类型",
+      "name" : "OWNER_SUBTYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_TYPE",
+      "length" : 100,
+      "logicName" : "所属数据对象",
+      "name" : "OWNER_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "RECENT_PARENT",
+      "length" : 100,
+      "logicName" : "访问父类",
+      "name" : "RECENT_PARENT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "RECENT_PARENT_IDENTIFIER",
+      "length" : 100,
+      "logicName" : "访问父类编号",
+      "name" : "RECENT_PARENT_IDENTIFIER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "RECENT_PARENT_NAME",
+      "length" : 100,
+      "logicName" : "访问父类名称",
+      "name" : "RECENT_PARENT_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TYPE",
+      "length" : 100,
+      "logicName" : "访问类型",
+      "name" : "TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "RECENT",
+    "logicName" : "recent",
+    "name" : "RECENT",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRINCIPAL_ID",
+      "length" : 100,
+      "logicName" : "关联主体标识",
+      "name" : "PRINCIPAL_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRINCIPAL_TYPE",
+      "length" : 100,
+      "logicName" : "关联主体类型",
+      "name" : "PRINCIPAL_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TARGET_ID",
+      "length" : 100,
+      "logicName" : "关联目标标识",
+      "name" : "TARGET_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TARGET_TYPE",
+      "length" : 100,
+      "logicName" : "关联目标类型",
+      "name" : "TARGET_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "RELATION",
+    "logicName" : "关联",
+    "name" : "RELATION",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "RESERVATION",
+    "logicName" : "预留",
+    "name" : "RESERVATION",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ADJUSTMENT",
+      "length" : 100,
+      "logicName" : "客户编号",
+      "name" : "ADJUSTMENT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_CITY",
+      "length" : 100,
+      "logicName" : "开单地址-城市",
+      "name" : "BILLING_CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_CODE",
+      "length" : 30,
+      "logicName" : "报价名称",
+      "name" : "BILLING_CODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_COUNTRY",
+      "length" : 100,
+      "logicName" : "开单地址-国家/地区",
+      "name" : "BILLING_COUNTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_STATE",
+      "length" : 100,
+      "logicName" : "调整",
+      "name" : "BILLING_STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "BILLING_STREET",
+      "length" : 250,
+      "logicName" : "开单地址-街道",
+      "name" : "BILLING_STREET",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CARRIER",
+      "length" : 60,
+      "logicName" : "运输",
+      "name" : "CARRIER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "CUSTOMER_NO",
+      "length" : 120,
+      "logicName" : "发货地址-省/市",
+      "name" : "CUSTOMER_NO",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "条款及条件",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "DISCOUNT",
+      "length" : 100,
+      "logicName" : "折扣",
+      "name" : "DISCOUNT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "DUE_DATE",
+      "logicName" : "到期日期",
+      "name" : "DUE_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "EXCISE_DUTY",
+      "length" : 100,
+      "logicName" : "消费税",
+      "name" : "EXCISE_DUTY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "GRAND_TOTAL",
+      "length" : 100,
+      "logicName" : "采购订单",
+      "name" : "GRAND_TOTAL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "LOCKED__S",
+      "logicName" : "Locked",
+      "name" : "LOCKED__S",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PENDING",
+      "length" : 120,
+      "logicName" : "待决",
+      "name" : "PENDING",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PURCHASE_ORDER",
+      "length" : 120,
+      "logicName" : "开单地址-邮编",
+      "name" : "PURCHASE_ORDER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "QUOTE_NAME",
+      "length" : 1048576,
+      "logicName" : "描述",
+      "name" : "QUOTE_NAME",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "SALES_COMMISSION",
+      "length" : 100,
+      "logicName" : "销售佣金",
+      "name" : "SALES_COMMISSION",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_CITY",
+      "length" : 100,
+      "logicName" : "税",
+      "name" : "SHIPPING_CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_CODE",
+      "length" : 30,
+      "logicName" : "发货地址-邮编",
+      "name" : "SHIPPING_CODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_COUNTR",
+      "length" : 100,
+      "logicName" : "发货地址-国家/地区",
+      "name" : "SHIPPING_COUNTR",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_STATE",
+      "length" : 100,
+      "logicName" : "累计",
+      "name" : "SHIPPING_STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SHIPPING_STREET",
+      "length" : 250,
+      "logicName" : "发货地址-街道",
+      "name" : "SHIPPING_STREET",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SO_NUMBER",
+      "length" : 100,
+      "logicName" : "销售订单编号",
+      "name" : "SO_NUMBER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "STATUS",
+      "length" : 60,
+      "logicName" : "状态",
+      "name" : "STATUS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SUBJECT",
+      "length" : 120,
+      "logicName" : "主题",
+      "name" : "SUBJECT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SUB_TOTAL",
+      "length" : 100,
+      "logicName" : "小计",
+      "name" : "SUB_TOTAL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAX",
+      "length" : 100,
+      "logicName" : "开单地址-省/市",
+      "name" : "TAX",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "SALES_ORDER",
+    "logicName" : "销售订单",
+    "name" : "SALES_ORDER",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "END_DATETIME",
+      "logicName" : "结束日期时间",
+      "name" : "END_DATETIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER",
+      "length" : 60,
+      "logicName" : "客户所有者",
+      "name" : "OWNER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_ID",
+      "length" : 100,
+      "logicName" : "所属数据标识",
+      "name" : "OWNER_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_SUBTYPE",
+      "length" : 100,
+      "logicName" : "所属对象子类型",
+      "name" : "OWNER_SUBTYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_TYPE",
+      "length" : 100,
+      "logicName" : "所属数据对象",
+      "name" : "OWNER_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "START_DATETIME",
+      "logicName" : "起始日期时间",
+      "name" : "START_DATETIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "STATUS",
+      "length" : 60,
+      "logicName" : "状态",
+      "name" : "STATUS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TYPE",
+      "length" : 100,
+      "logicName" : "类型",
+      "name" : "TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "SCHEDULE",
+    "logicName" : "日程",
+    "name" : "SCHEDULE",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ADD_COMMENT",
+      "length" : 32000,
+      "logicName" : "添加评论",
+      "name" : "ADD_COMMENT",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "ANSWER",
+      "length" : 32000,
+      "logicName" : "答案",
+      "name" : "ANSWER",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "COMMENTS",
+      "length" : 1000,
+      "logicName" : "评论",
+      "name" : "COMMENTS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "LOCKED__S",
+      "logicName" : "Locked",
+      "name" : "LOCKED__S",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NO_OF_COMMENTS",
+      "logicName" : "评论数量",
+      "name" : "NO_OF_COMMENTS",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "PUBLISHED",
+      "logicName" : "已发布",
+      "name" : "PUBLISHED",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "QUESTION",
+      "length" : 32000,
+      "logicName" : "问题",
+      "name" : "QUESTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "SOLUTION_NUMBER",
+      "length" : 100,
+      "logicName" : "解决方案编号",
+      "name" : "SOLUTION_NUMBER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SOLUTION_TITLE",
+      "length" : 100,
+      "logicName" : "解决方案标题",
+      "name" : "SOLUTION_TITLE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "STATUS",
+      "length" : 60,
+      "logicName" : "状态",
+      "name" : "STATUS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "SOLUTION",
+    "logicName" : "解决方案",
+    "name" : "SOLUTION",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "COLOR",
+      "length" : 100,
+      "logicName" : "颜色",
+      "name" : "COLOR",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_TYPE",
+      "length" : 100,
+      "logicName" : "所属数据对象",
+      "name" : "OWNER_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "TAG",
+    "logicName" : "标签",
+    "name" : "TAG",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CLOSED_TIME",
+      "logicName" : "关闭时间",
+      "name" : "CLOSED_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "COST",
+      "logicName" : "费用",
+      "name" : "COST",
+      "stdDataType" : 6,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "DUE_DATE",
+      "logicName" : "到期日期",
+      "name" : "DUE_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "END_TIME",
+      "logicName" : "结束时间",
+      "name" : "END_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "LAST_ASSESS_TIME",
+      "logicName" : "最近评估时间",
+      "name" : "LAST_ASSESS_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "LOCKED__S",
+      "logicName" : "Locked",
+      "name" : "LOCKED__S",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER",
+      "length" : 60,
+      "logicName" : "所有者",
+      "name" : "OWNER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_ID",
+      "length" : 100,
+      "logicName" : "所属数据标识",
+      "name" : "OWNER_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_NAME",
+      "length" : 100,
+      "logicName" : "所属数据名称",
+      "name" : "OWNER_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_SUBTYPE",
+      "length" : 100,
+      "logicName" : "所属对象子类型",
+      "name" : "OWNER_SUBTYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER_TYPE",
+      "length" : 100,
+      "logicName" : "所属数据对象",
+      "name" : "OWNER_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PID",
+      "length" : 100,
+      "logicName" : "父任务标识",
+      "name" : "PID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRIORITY",
+      "length" : 60,
+      "logicName" : "优先级",
+      "name" : "PRIORITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "REMIND_AT",
+      "logicName" : "提醒时间",
+      "name" : "REMIND_AT",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "SEND_NOTIFICATION_EMAIL",
+      "logicName" : "发送通知邮件",
+      "name" : "SEND_NOTIFICATION_EMAIL",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "START_TIME",
+      "logicName" : "开始时间",
+      "name" : "START_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "STATUS",
+      "length" : 60,
+      "logicName" : "状态",
+      "name" : "STATUS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SUBJECT",
+      "length" : 255,
+      "logicName" : "主题",
+      "name" : "SUBJECT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 2000,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TYPE",
+      "length" : 60,
+      "logicName" : "类型",
+      "name" : "TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "TASK",
+    "logicName" : "任务",
+    "name" : "TASK",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TASK_ID",
+      "length" : 100,
+      "logicName" : "任务标识",
+      "name" : "TASK_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "USER_ID",
+      "length" : 100,
+      "logicName" : "人员标识",
+      "name" : "USER_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    } ],
+    "getAllPSSysDBIndices" : [ {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "TASK_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "TASK_ID"
+        }
+      } ],
+      "codeName" : "IF_F19F47A32568C9E",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_TASK_EXECUTOR_TASK_TASK_ID",
+      "sourceType" : "DER"
+    }, {
+      "getAllPSSysDBIndexColumns" : [ {
+        "name" : "USER_ID",
+        "getPSSysDBColumn" : {
+          "modelref" : true,
+          "id" : "USER_ID"
+        }
+      } ],
+      "codeName" : "IF_FFA560E1093F34E",
+      "indexType" : "NORMAL",
+      "name" : "DER1N_TASK_EXECUTOR_USER_USER_ID",
+      "sourceType" : "DER"
+    } ],
+    "codeName" : "TASK_EXECUTOR",
+    "logicName" : "任务执行人",
+    "name" : "TASK_EXECUTOR",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ALIAS",
+      "length" : 50,
+      "logicName" : "别名",
+      "name" : "ALIAS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CITY",
+      "length" : 100,
+      "logicName" : "城市",
+      "name" : "CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "COUNTRY",
+      "length" : 100,
+      "logicName" : "国家/地区",
+      "name" : "COUNTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "COUNTRY_LOCALE",
+      "length" : 100,
+      "logicName" : "国家/地区设置",
+      "name" : "COUNTRY_LOCALE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DOB",
+      "logicName" : "生日",
+      "name" : "DOB",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "EMAIL",
+      "length" : 100,
+      "logicName" : "电子邮件",
+      "name" : "EMAIL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ENABLE",
+      "length" : 8,
+      "logicName" : "逻辑有效标志",
+      "name" : "ENABLE",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "FAX",
+      "length" : 30,
+      "logicName" : "传真",
+      "name" : "FAX",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "FIRST_NAME",
+      "length" : 50,
+      "logicName" : "名字",
+      "name" : "FIRST_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "FULL_NAME",
+      "length" : 120,
+      "logicName" : "全名",
+      "name" : "FULL_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "IMAGE_LINK",
+      "length" : 200,
+      "logicName" : "头像",
+      "name" : "IMAGE_LINK",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "LAST_NAME",
+      "length" : 50,
+      "logicName" : "姓氏",
+      "name" : "LAST_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "LOCALE",
+      "length" : 100,
+      "logicName" : "语言",
+      "name" : "LOCALE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "MOBILE",
+      "length" : 100,
+      "logicName" : "手机",
+      "name" : "MOBILE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PHONE",
+      "length" : 100,
+      "logicName" : "电话",
+      "name" : "PHONE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ROLE",
+      "length" : 100,
+      "logicName" : "职位",
+      "name" : "ROLE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "STATE",
+      "length" : 100,
+      "logicName" : "省/市",
+      "name" : "STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "STATUS",
+      "length" : 60,
+      "logicName" : "状态",
+      "name" : "STATUS",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "STREET",
+      "length" : 250,
+      "logicName" : "街道",
+      "name" : "STREET",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "SYSUSERID",
+      "length" : 100,
+      "logicName" : "rt用户标识",
+      "name" : "SYSUSERID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "USER_NAME",
+      "length" : 100,
+      "logicName" : "账号",
+      "name" : "USER_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "WEBSITE",
+      "length" : 200,
+      "logicName" : "网站",
+      "name" : "WEBSITE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ZIP",
+      "length" : 30,
+      "logicName" : "邮编",
+      "name" : "ZIP",
+      "stdDataType" : 25,
+      "nullable" : true
+    } ],
+    "codeName" : "USER",
+    "logicName" : "用户",
+    "name" : "USER",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CATEGORY",
+      "length" : 120,
+      "logicName" : "分类",
+      "name" : "CATEGORY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CITY",
+      "length" : 100,
+      "logicName" : "城市",
+      "name" : "CITY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "COUNTRY",
+      "length" : 100,
+      "logicName" : "国家/地区",
+      "name" : "COUNTRY",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "EMAIL",
+      "length" : 100,
+      "logicName" : "电子邮件",
+      "name" : "EMAIL",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "EMAIL_OPT_OUT",
+      "logicName" : "不发营销邮件",
+      "name" : "EMAIL_OPT_OUT",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "GL_ACCOUNT",
+      "length" : 100,
+      "logicName" : "总分类账户",
+      "name" : "GL_ACCOUNT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "LOCKED__S",
+      "logicName" : "Locked",
+      "name" : "LOCKED__S",
+      "stdDataType" : 9,
+      "nullable" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER",
+      "length" : 60,
+      "logicName" : "所有者",
+      "name" : "OWNER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PHONE",
+      "length" : 100,
+      "logicName" : "电话",
+      "name" : "PHONE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "RECORD_LMAGE",
+      "length" : 100,
+      "logicName" : "供应商图片",
+      "name" : "RECORD_LMAGE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "STATE",
+      "length" : 100,
+      "logicName" : "省/市",
+      "name" : "STATE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "STREET",
+      "length" : 250,
+      "logicName" : "街道",
+      "name" : "STREET",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TAG",
+      "length" : 100,
+      "logicName" : "标签",
+      "name" : "TAG",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UNSUBSCRIBED_MODE",
+      "length" : 60,
+      "logicName" : "退订的方式",
+      "name" : "UNSUBSCRIBED_MODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UNSUBSCRIBED_TIME",
+      "logicName" : "退订的时间",
+      "name" : "UNSUBSCRIBED_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "VENDOR_NAME",
+      "length" : 120,
+      "logicName" : "供应商名称",
+      "name" : "VENDOR_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "WEBSITE",
+      "length" : 100,
+      "logicName" : "网站",
+      "name" : "WEBSITE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "ZIP_CODE",
+      "length" : 30,
+      "logicName" : "邮编",
+      "name" : "ZIP_CODE",
+      "stdDataType" : 25,
+      "nullable" : true
+    } ],
+    "codeName" : "VENDOR",
+    "logicName" : "供应商",
+    "name" : "VENDOR",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ATTACHMENT",
+      "length" : 1000,
+      "logicName" : "周报文件",
+      "name" : "ATTACHMENT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "END_DATE",
+      "logicName" : "结束时间",
+      "name" : "END_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "OWNER",
+      "length" : 60,
+      "logicName" : "所有者",
+      "name" : "OWNER",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "START_DATE",
+      "logicName" : "开始时间",
+      "name" : "START_DATE",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "WEEKLIES",
+    "logicName" : "周报",
+    "name" : "WEEKLIES",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "CONTENT",
+      "length" : 100,
+      "logicName" : "内容",
+      "name" : "CONTENT",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRINCIPAL_ID",
+      "length" : 100,
+      "logicName" : "关联主体标识",
+      "name" : "PRINCIPAL_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "PRINCIPAL_TYPE",
+      "length" : 100,
+      "logicName" : "关联主体类型",
+      "name" : "PRINCIPAL_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TARGET_ID",
+      "length" : 100,
+      "logicName" : "关联目标标识",
+      "name" : "TARGET_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TARGET_TYPE",
+      "length" : 100,
+      "logicName" : "关联目标类型",
+      "name" : "TARGET_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "WEEKLIES_ID",
+      "length" : 100,
+      "logicName" : "周报标识",
+      "name" : "WEEKLIES_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    } ],
+    "codeName" : "WEEKLY_DETAIL",
+    "logicName" : "周报明细",
+    "name" : "WEEKLY_DETAIL",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  }, {
+    "getAllPSSysDBColumns" : [ {
+      "codeName" : "ACTIONTYPE",
+      "length" : 100,
+      "logicName" : "操作类型",
+      "name" : "ACTIONTYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_MAN",
+      "length" : 100,
+      "logicName" : "建立人",
+      "name" : "CREATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "CREATE_TIME",
+      "logicName" : "建立时间",
+      "name" : "CREATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    }, {
+      "codeName" : "DESCRIPTION",
+      "length" : 32000,
+      "logicName" : "描述",
+      "name" : "DESCRIPTION",
+      "stdDataType" : 21,
+      "nullable" : true
+    }, {
+      "codeName" : "ID",
+      "length" : 100,
+      "logicName" : "标识",
+      "name" : "ID",
+      "stdDataType" : 25,
+      "pKey" : true
+    }, {
+      "codeName" : "NAME",
+      "length" : 200,
+      "logicName" : "名称",
+      "name" : "NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TARGET_ID",
+      "length" : 100,
+      "logicName" : "关联目标标识",
+      "name" : "TARGET_ID",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TARGET_NAME",
+      "length" : 100,
+      "logicName" : "关联目标名称",
+      "name" : "TARGET_NAME",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "TARGET_TYPE",
+      "length" : 100,
+      "logicName" : "关联目标类型",
+      "name" : "TARGET_TYPE",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_MAN",
+      "length" : 100,
+      "logicName" : "更新人",
+      "name" : "UPDATE_MAN",
+      "stdDataType" : 25,
+      "nullable" : true
+    }, {
+      "codeName" : "UPDATE_TIME",
+      "logicName" : "更新时间",
+      "name" : "UPDATE_TIME",
+      "stdDataType" : 5,
+      "nullable" : true
+    } ],
+    "codeName" : "WORK_PROGRESS",
+    "logicName" : "工作进展",
+    "name" : "WORK_PROGRESS",
+    "autoExtendModel" : true,
+    "existingModel" : false
+  } ],
+  "codeName" : "Default",
+  "dSLink" : "DEFAULT",
+  "dynaModelFilePath" : "PSSYSDBSCHEMES/DEFAULT.json",
+  "name" : "DEFAULT",
+  "autoExtendModel" : true,
+  "pubIndex" : true
+}

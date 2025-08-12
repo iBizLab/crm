@@ -1,0 +1,20 @@
+{
+  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/payee_plan/PSDEUSERROLES/EXECUTOR_R.json",
+  "name" : "执行人-只读",
+  "getPSDEDataSet" : {
+    "modelref" : true,
+    "id" : "executor"
+  },
+  "getPSDEUserRoleOPPrivs" : [ {
+    "dataAccessAction" : "READ",
+    "name" : "READ",
+    "getPSDEOPPriv" : {
+      "modelref" : true,
+      "id" : "READ"
+    }
+  } ],
+  "roleTag" : "EXECUTOR_R",
+  "userDRAction" : "READ",
+  "enableUserDR" : true,
+  "systemReserved" : true
+}
