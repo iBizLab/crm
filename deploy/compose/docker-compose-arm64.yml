@@ -4,7 +4,7 @@ services:
   #crmservice
   crmservice:
     env_file: .env
-    image: ${IMAGE_URL}ibiz-service-runner:v8.1.0.570.22
+    image: ${IMAGE_URL}ibiz-service-runner:v8.1.0.570.32.4.crm.250812
     container_name: crmservice
     ports:
       - "${SYSTEM_APIPORT}:${SYSTEM_APIPORT}"
@@ -29,7 +29,7 @@ services:
   #crmweb
   crmweb:
     env_file: .env
-    image: ${IMAGE_URL}ibiz-cloud-web-runner:9.0.7.41-alpha.17
+    image: ${IMAGE_URL}ibiz-cloud-web-runner:9.0.7.41-alpha.17.crm.250812
     container_name: crmweb
     ports:
       - ${SYSTEM_WEBPORT}:80
@@ -42,6 +42,6 @@ services:
       - APPCODE=ibizcrm-crmweb
       - APICODE=ibizcrm__crmweb
       - BASEURL=ibizcrm__crmweb
-      - PLUGINBASEURL=https://npmjs.ibizlab.cn
+      - PLUGINBASEURL=./plugins
       - UPLOADFILEURL=/ibizutil/upload/ibizcrm
       - DOWNLOADFILEURL=/ibizutil/download/ibizcrm

@@ -10,6 +10,9 @@ services:
     environment:
     - TZ=Asia/Shanghai
     - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    - MYSQL_DATABASE=crm
+    - MYSQL_USER=crm
+    - MYSQL_PASSWORD=crm@2024
     volumes:
     - mysql_data:/var/lib/mysql
     networks:
