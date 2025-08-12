@@ -18,15 +18,15 @@
 
 
 ### 关联界面行为
-  * [市场活动(CAMPAIGN)](module/crm/campaign) : [管理标签](module/crm/campaign#界面行为)
-  * [市场活动(CAMPAIGN)](module/crm/campaign) : [创建任务](module/crm/campaign#界面行为)
   * [市场活动(CAMPAIGN)](module/crm/campaign) : [移除标签](module/crm/campaign#界面行为)
-  * [市场活动(CAMPAIGN)](module/crm/campaign) : [表格界面_新建操作](module/crm/campaign#界面行为)
-  * [市场活动(CAMPAIGN)](module/crm/campaign) : [导入备注](module/crm/campaign#界面行为)
-  * [市场活动(CAMPAIGN)](module/crm/campaign) : [批量更新](module/crm/campaign#界面行为)
-  * [市场活动(CAMPAIGN)](module/crm/campaign) : [添加标签](module/crm/campaign#界面行为)
-  * [市场活动(CAMPAIGN)](module/crm/campaign) : [删除](module/crm/campaign#界面行为)
   * [市场活动(CAMPAIGN)](module/crm/campaign) : [导入数据](module/crm/campaign#界面行为)
+  * [市场活动(CAMPAIGN)](module/crm/campaign) : [导入备注](module/crm/campaign#界面行为)
+  * [市场活动(CAMPAIGN)](module/crm/campaign) : [删除](module/crm/campaign#界面行为)
+  * [市场活动(CAMPAIGN)](module/crm/campaign) : [管理标签](module/crm/campaign#界面行为)
+  * [市场活动(CAMPAIGN)](module/crm/campaign) : [批量更新](module/crm/campaign#界面行为)
+  * [市场活动(CAMPAIGN)](module/crm/campaign) : [表格界面_新建操作](module/crm/campaign#界面行为)
+  * [市场活动(CAMPAIGN)](module/crm/campaign) : [创建任务](module/crm/campaign#界面行为)
+  * [市场活动(CAMPAIGN)](module/crm/campaign) : [添加标签](module/crm/campaign#界面行为)
 
 ### 关联视图
   * [市场活动(campaign_edit_view)](app/view/campaign_edit_view)

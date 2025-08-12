@@ -14,8 +14,8 @@
 
 
 ### 关联界面行为
-  * [商机(DEAL)](module/crm/deal) : [取消关联（商机）](module/crm/deal#界面行为)
   * [商机(DEAL)](module/crm/deal) : [打开关联活动任务视图](module/crm/deal#界面行为)
+  * [商机(DEAL)](module/crm/deal) : [取消关联（商机）](module/crm/deal#界面行为)
 
 ### 关联视图
   * [商机(deal_edit_view_origin)](app/view/deal_edit_view_origin)

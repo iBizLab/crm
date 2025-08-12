@@ -18,14 +18,14 @@
 
 
 ### 关联界面行为
-  * [服务支持(CASE)](module/crm/service_case) : [表格界面_新建操作](module/crm/service_case#界面行为)
-  * [服务支持(CASE)](module/crm/service_case) : [移除标签](module/crm/service_case#界面行为)
-  * [服务支持(CASE)](module/crm/service_case) : [批量更新](module/crm/service_case#界面行为)
   * [服务支持(CASE)](module/crm/service_case) : [创建任务](module/crm/service_case#界面行为)
+  * [服务支持(CASE)](module/crm/service_case) : [移除标签](module/crm/service_case#界面行为)
   * [服务支持(CASE)](module/crm/service_case) : [删除](module/crm/service_case#界面行为)
-  * [服务支持(CASE)](module/crm/service_case) : [添加标签](module/crm/service_case#界面行为)
   * [服务支持(CASE)](module/crm/service_case) : [导入数据](module/crm/service_case#界面行为)
   * [服务支持(CASE)](module/crm/service_case) : [导入备注](module/crm/service_case#界面行为)
+  * [服务支持(CASE)](module/crm/service_case) : [批量更新](module/crm/service_case#界面行为)
+  * [服务支持(CASE)](module/crm/service_case) : [表格界面_新建操作](module/crm/service_case#界面行为)
+  * [服务支持(CASE)](module/crm/service_case) : [添加标签](module/crm/service_case#界面行为)
 
 ### 关联视图
   * [服务支持(service_case_edit_view)](app/view/service_case_edit_view)

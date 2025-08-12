@@ -18,9 +18,9 @@
 
 
 ### 关联界面行为
-  * [客户(ACCOUNT)](module/crm/account) : [导入数据](module/crm/account#界面行为)
-  * [客户(ACCOUNT)](module/crm/account) : [表格界面_新建操作](module/crm/account#界面行为)
   * [客户(ACCOUNT)](module/crm/account) : [导入备注](module/crm/account#界面行为)
+  * [客户(ACCOUNT)](module/crm/account) : [表格界面_新建操作](module/crm/account#界面行为)
+  * [客户(ACCOUNT)](module/crm/account) : [导入数据](module/crm/account#界面行为)
   * [客户(ACCOUNT)](module/crm/account) : [管理标签](module/crm/account#界面行为)
 
 ### 关联视图

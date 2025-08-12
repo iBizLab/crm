@@ -18,15 +18,15 @@
 
 
 ### 关联界面行为
-  * [销售订单(SALES_ORDER)](module/crm/sales_order) : [导入数据](module/crm/sales_order#界面行为)
-  * [销售订单(SALES_ORDER)](module/crm/sales_order) : [管理标签](module/crm/sales_order#界面行为)
-  * [销售订单(SALES_ORDER)](module/crm/sales_order) : [批量更新](module/crm/sales_order#界面行为)
-  * [销售订单(SALES_ORDER)](module/crm/sales_order) : [表格界面_新建操作](module/crm/sales_order#界面行为)
+  * [销售订单(SALES_ORDER)](module/crm/sales_order) : [移除标签](module/crm/sales_order#界面行为)
   * [销售订单(SALES_ORDER)](module/crm/sales_order) : [创建任务](module/crm/sales_order#界面行为)
   * [销售订单(SALES_ORDER)](module/crm/sales_order) : [添加标签](module/crm/sales_order#界面行为)
-  * [销售订单(SALES_ORDER)](module/crm/sales_order) : [导入备注](module/crm/sales_order#界面行为)
+  * [销售订单(SALES_ORDER)](module/crm/sales_order) : [批量更新](module/crm/sales_order#界面行为)
   * [销售订单(SALES_ORDER)](module/crm/sales_order) : [删除](module/crm/sales_order#界面行为)
-  * [销售订单(SALES_ORDER)](module/crm/sales_order) : [移除标签](module/crm/sales_order#界面行为)
+  * [销售订单(SALES_ORDER)](module/crm/sales_order) : [导入备注](module/crm/sales_order#界面行为)
+  * [销售订单(SALES_ORDER)](module/crm/sales_order) : [管理标签](module/crm/sales_order#界面行为)
+  * [销售订单(SALES_ORDER)](module/crm/sales_order) : [表格界面_新建操作](module/crm/sales_order#界面行为)
+  * [销售订单(SALES_ORDER)](module/crm/sales_order) : [导入数据](module/crm/sales_order#界面行为)
 
 ### 关联视图
   * [销售订单(sales_order_edit_view)](app/view/sales_order_edit_view)

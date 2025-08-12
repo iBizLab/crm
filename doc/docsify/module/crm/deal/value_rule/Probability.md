@@ -15,11 +15,11 @@ root {
 
 state "start" as start  <<start>>
 state "end" as end <<end>>
-state "(PROBABILITY) PROBABILITY" as dd3a602d07f99119331c2340570664de [[$./Probability#add3a602d07f99119331c2340570664de {"[数值范围] PROBABILITY"}]]
+state "(PROBABILITY) PROBABILITY" as cf25e405e9f61be44f027cdad96d0e7c [[$./Probability#acf25e405e9f61be44f027cdad96d0e7c {"[数值范围] PROBABILITY"}]]
 
 
-start --> dd3a602d07f99119331c2340570664de 
-dd3a602d07f99119331c2340570664de --> end 
+start --> cf25e405e9f61be44f027cdad96d0e7c 
+cf25e405e9f61be44f027cdad96d0e7c --> end 
 
 
 @enduml
@@ -27,7 +27,7 @@ dd3a602d07f99119331c2340570664de --> end
 
 #### 条件说明
 
-##### (PROBABILITY) PROBABILITY :id=add3a602d07f99119331c2340570664de
+##### (PROBABILITY) PROBABILITY :id=acf25e405e9f61be44f027cdad96d0e7c
 
 
 

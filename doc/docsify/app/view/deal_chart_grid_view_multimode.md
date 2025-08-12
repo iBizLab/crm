@@ -32,8 +32,8 @@ if (searchForm && xdataControl) {
 
 
 ### 关联界面逻辑
-  * [商机(DEAL)](module/crm/deal) : [导航到表格视图（图表导航）](module/crm/deal/uilogic/exp_to_gridview)
   * [商机(DEAL)](module/crm/deal) : [导航（全部商机含查询条件）](module/crm/deal/uilogic/all_deal_with_query)
+  * [商机(DEAL)](module/crm/deal) : [导航到表格视图（图表导航）](module/crm/deal/uilogic/exp_to_gridview)
 
 ### 关联视图
   * [商机(deal_exp_grid_view)](app/view/deal_exp_grid_view)

@@ -17,15 +17,15 @@
 
 
 ### 关联界面行为
-  * [收款记录(PAYEE)](module/crm/payee) : [删除](module/crm/payee#界面行为)
-  * [收款记录(PAYEE)](module/crm/payee) : [表格界面_新建操作](module/crm/payee#界面行为)
   * [收款记录(PAYEE)](module/crm/payee) : [添加标签](module/crm/payee#界面行为)
-  * [收款记录(PAYEE)](module/crm/payee) : [导入数据](module/crm/payee#界面行为)
-  * [收款记录(PAYEE)](module/crm/payee) : [移除标签](module/crm/payee#界面行为)
-  * [收款记录(PAYEE)](module/crm/payee) : [创建任务](module/crm/payee#界面行为)
-  * [收款记录(PAYEE)](module/crm/payee) : [表格界面_刷新操作](module/crm/payee#界面行为)
   * [收款记录(PAYEE)](module/crm/payee) : [批量更新](module/crm/payee#界面行为)
+  * [收款记录(PAYEE)](module/crm/payee) : [表格界面_新建操作](module/crm/payee#界面行为)
+  * [收款记录(PAYEE)](module/crm/payee) : [创建任务](module/crm/payee#界面行为)
+  * [收款记录(PAYEE)](module/crm/payee) : [删除](module/crm/payee#界面行为)
+  * [收款记录(PAYEE)](module/crm/payee) : [表格界面_刷新操作](module/crm/payee#界面行为)
+  * [收款记录(PAYEE)](module/crm/payee) : [移除标签](module/crm/payee#界面行为)
   * [收款记录(PAYEE)](module/crm/payee) : [导入备注](module/crm/payee#界面行为)
+  * [收款记录(PAYEE)](module/crm/payee) : [导入数据](module/crm/payee#界面行为)
 
 ### 关联视图
   * [收款记录表格编辑视图(payee_multimode_edit_view)](app/view/payee_multimode_edit_view)

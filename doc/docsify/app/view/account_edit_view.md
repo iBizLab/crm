@@ -13,11 +13,11 @@
 
 
 ### 关联界面行为
-  * [客户(ACCOUNT)](module/crm/account) : [编辑界面_保存并新建操作](module/crm/account#界面行为)
-  * [客户(ACCOUNT)](module/crm/account) : [打开客户主数据视图](module/crm/account#界面行为)
   * [客户(ACCOUNT)](module/crm/account) : [编辑界面_退出操作](module/crm/account#界面行为)
   * [客户(ACCOUNT)](module/crm/account) : [编辑界面_保存并退出操作](module/crm/account#界面行为)
+  * [客户(ACCOUNT)](module/crm/account) : [打开客户主数据视图](module/crm/account#界面行为)
   * [客户(ACCOUNT)](module/crm/account) : [保存并打开线索主信息界面](module/crm/account#界面行为)
+  * [客户(ACCOUNT)](module/crm/account) : [编辑界面_保存并新建操作](module/crm/account#界面行为)
 
 ### 关联视图
   * [客户(account_pickup_view)](app/view/account_pickup_view)

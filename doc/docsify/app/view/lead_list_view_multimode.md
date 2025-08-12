@@ -18,10 +18,10 @@
 
 
 ### 关联界面行为
-  * [线索(LEAD)](module/crm/lead) : [表格界面_新建操作](module/crm/lead#界面行为)
-  * [线索(LEAD)](module/crm/lead) : [管理标签](module/crm/lead#界面行为)
   * [线索(LEAD)](module/crm/lead) : [导入备注](module/crm/lead#界面行为)
+  * [线索(LEAD)](module/crm/lead) : [管理标签](module/crm/lead#界面行为)
   * [线索(LEAD)](module/crm/lead) : [导入数据](module/crm/lead#界面行为)
+  * [线索(LEAD)](module/crm/lead) : [表格界面_新建操作](module/crm/lead#界面行为)
 
 ### 关联视图
   * [线索(lead_edit_view)](app/view/lead_edit_view)

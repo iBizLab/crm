@@ -13,9 +13,9 @@
 
 
 ### 关联界面行为
-  * [价格表(PRICE_BOOK)](module/crm/price_book) : [编辑界面_保存并新建操作](module/crm/price_book#界面行为)
-  * [价格表(PRICE_BOOK)](module/crm/price_book) : [编辑界面_退出操作](module/crm/price_book#界面行为)
   * [价格表(PRICE_BOOK)](module/crm/price_book) : [编辑界面_保存并退出操作](module/crm/price_book#界面行为)
+  * [价格表(PRICE_BOOK)](module/crm/price_book) : [编辑界面_退出操作](module/crm/price_book#界面行为)
+  * [价格表(PRICE_BOOK)](module/crm/price_book) : [编辑界面_保存并新建操作](module/crm/price_book#界面行为)
 
 <script>
  const { createApp } = Vue

@@ -19,8 +19,8 @@
 
 ### 关联界面行为
   * [产品(PRODUCT)](module/crm/product) : [管理标签](module/crm/product#界面行为)
-  * [产品(PRODUCT)](module/crm/product) : [导入备注](module/crm/product#界面行为)
   * [产品(PRODUCT)](module/crm/product) : [表格界面_新建操作](module/crm/product#界面行为)
+  * [产品(PRODUCT)](module/crm/product) : [导入备注](module/crm/product#界面行为)
   * [产品(PRODUCT)](module/crm/product) : [导入数据](module/crm/product#界面行为)
 
 ### 关联视图

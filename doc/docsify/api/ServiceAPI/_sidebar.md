@@ -3,7 +3,7 @@
   * [鉴权](api/ServiceAPI/ServiceAPI#鉴权)
   * [使用方式](api/ServiceAPI/ServiceAPI#使用方式)
 
-* crm
+* 客户关系管理
   * [客户](api/ServiceAPI/deapi/account#account)
   * [活动](api/ServiceAPI/deapi/activitiy#activitiy)
   * [附件](api/ServiceAPI/deapi/attachment#attachment)

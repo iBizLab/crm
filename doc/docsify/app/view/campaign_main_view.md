@@ -14,12 +14,12 @@
 
 
 ### 关联界面行为
-  * [市场活动(CAMPAIGN)](module/crm/campaign) : [编辑界面_下一个记录](module/crm/campaign#界面行为)
   * [市场活动(CAMPAIGN)](module/crm/campaign) : [编辑界面_上一个记录](module/crm/campaign#界面行为)
-  * [市场活动(CAMPAIGN)](module/crm/campaign) : [编辑](module/crm/campaign#界面行为)
-  * [市场活动(CAMPAIGN)](module/crm/campaign) : [编辑界面_删除并退出操作](module/crm/campaign#界面行为)
   * [市场活动(CAMPAIGN)](module/crm/campaign) : [编辑界面_退出操作](module/crm/campaign#界面行为)
+  * [市场活动(CAMPAIGN)](module/crm/campaign) : [编辑界面_下一个记录](module/crm/campaign#界面行为)
+  * [市场活动(CAMPAIGN)](module/crm/campaign) : [编辑](module/crm/campaign#界面行为)
   * [市场活动(CAMPAIGN)](module/crm/campaign) : [编辑界面_拷贝操作](module/crm/campaign#界面行为)
+  * [市场活动(CAMPAIGN)](module/crm/campaign) : [编辑界面_删除并退出操作](module/crm/campaign#界面行为)
 
 ### 关联视图
   * [时间轴(activitiy_time_line_view)](app/view/activitiy_time_line_view)

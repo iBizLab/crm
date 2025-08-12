@@ -13,11 +13,11 @@
 
 
 ### 关联界面行为
-  * [产品(PRODUCT)](module/crm/product) : [保存并打开产品主数据界面](module/crm/product#界面行为)
-  * [产品(PRODUCT)](module/crm/product) : [打开产品主数据视图](module/crm/product#界面行为)
-  * [产品(PRODUCT)](module/crm/product) : [编辑界面_保存并新建操作](module/crm/product#界面行为)
-  * [产品(PRODUCT)](module/crm/product) : [编辑界面_保存并退出操作](module/crm/product#界面行为)
   * [产品(PRODUCT)](module/crm/product) : [编辑界面_退出操作](module/crm/product#界面行为)
+  * [产品(PRODUCT)](module/crm/product) : [编辑界面_保存并退出操作](module/crm/product#界面行为)
+  * [产品(PRODUCT)](module/crm/product) : [保存并打开产品主数据界面](module/crm/product#界面行为)
+  * [产品(PRODUCT)](module/crm/product) : [编辑界面_保存并新建操作](module/crm/product#界面行为)
+  * [产品(PRODUCT)](module/crm/product) : [打开产品主数据视图](module/crm/product#界面行为)
 
 ### 关联视图
   * [产品信息(product_main_view)](app/view/product_main_view)

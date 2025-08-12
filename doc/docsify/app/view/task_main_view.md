@@ -15,15 +15,15 @@
 
 
 ### 关联界面行为
-  * [任务&活动(TASK)](module/crm/task) : [任务编辑](module/crm/task#界面行为)
   * [任务&活动(TASK)](module/crm/task) : [任务设为活动](module/crm/task#界面行为)
-  * [任务&活动(TASK)](module/crm/task) : [编辑界面_退出操作](module/crm/task#界面行为)
-  * [任务&活动(TASK)](module/crm/task) : [关闭任务](module/crm/task#界面行为)
-  * [任务&活动(TASK)](module/crm/task) : [编辑界面_上一个记录](module/crm/task#界面行为)
-  * [任务&活动(TASK)](module/crm/task) : [编辑界面_下一个记录](module/crm/task#界面行为)
   * [任务&活动(TASK)](module/crm/task) : [编辑界面_删除并退出操作](module/crm/task#界面行为)
+  * [任务&活动(TASK)](module/crm/task) : [编辑界面_上一个记录](module/crm/task#界面行为)
+  * [任务&活动(TASK)](module/crm/task) : [编辑界面_退出操作](module/crm/task#界面行为)
+  * [任务&活动(TASK)](module/crm/task) : [编辑界面_下一个记录](module/crm/task#界面行为)
   * [日程(SCHEDULE)](module/crm/schedule) : [表格界面_新建操作](module/crm/schedule#界面行为)
   * [日程(SCHEDULE)](module/crm/schedule) : [表格界面_查看操作](module/crm/schedule#界面行为)
+  * [任务&活动(TASK)](module/crm/task) : [关闭任务](module/crm/task#界面行为)
+  * [任务&活动(TASK)](module/crm/task) : [任务编辑](module/crm/task#界面行为)
 
 ### 关联视图
   * [时间轴(activitiy_time_line_view)](app/view/activitiy_time_line_view)
