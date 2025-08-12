@@ -1,6 +1,0 @@
-{
-  "codeName" : "Default",
-  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/lead/PSDEDATARELATIONS/Default.json",
-  "formCaption" : "线索",
-  "name" : "线索默认关系界面组"
-}

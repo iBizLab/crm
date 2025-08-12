@@ -1,6 +1,0 @@
-{
-  "codeName" : "Default",
-  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/event/PSDEDATARELATIONS/Default.json",
-  "formCaption" : "会议",
-  "name" : "会议默认关系界面组"
-}

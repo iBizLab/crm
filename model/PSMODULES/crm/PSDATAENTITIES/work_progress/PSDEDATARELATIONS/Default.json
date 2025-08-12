@@ -1,9 +1,0 @@
-{
-  "codeName" : "Default",
-  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/work_progress/PSDEDATARELATIONS/Default.json",
-  "getFormCapPSLanguageRes" : {
-    "lanResTag" : "DE.LNAME.WORK_PROGRESS"
-  },
-  "formCaption" : "工作进展",
-  "name" : "工作进展默认关系界面组"
-}

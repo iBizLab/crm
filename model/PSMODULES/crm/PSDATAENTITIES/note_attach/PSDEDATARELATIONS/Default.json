@@ -1,6 +1,0 @@
-{
-  "codeName" : "Default",
-  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/note_attach/PSDEDATARELATIONS/Default.json",
-  "formCaption" : "备注",
-  "name" : "备注默认关系界面组"
-}

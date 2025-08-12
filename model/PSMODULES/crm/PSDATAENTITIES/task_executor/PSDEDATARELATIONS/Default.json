@@ -1,9 +1,0 @@
-{
-  "codeName" : "Default",
-  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/task_executor/PSDEDATARELATIONS/Default.json",
-  "getFormCapPSLanguageRes" : {
-    "lanResTag" : "DE.LNAME.TASK_EXECUTOR"
-  },
-  "formCaption" : "任务执行人",
-  "name" : "任务执行人默认关系界面组"
-}

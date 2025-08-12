@@ -1,6 +1,0 @@
-{
-  "codeName" : "Default",
-  "dynaModelFilePath" : "PSMODULES/crm/PSDATAENTITIES/contact/PSDEDATARELATIONS/Default.json",
-  "formCaption" : "联系人",
-  "name" : "联系人默认关系界面组"
-}
