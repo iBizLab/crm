@@ -33,7 +33,7 @@ $ docker compose -f docker-compose.yml --env-file .env up -d
 > 如果你想修改MySQL、ZooKeeper、Redis、Nacos、EMQX、ebsx服务为本地已有服务，可以在 **deploy/compose/.env** 文件内根据变量注释提示调整对应参数；调整MySQL服务为本地服务需要预先导入deploy/compose/init.sql。
 
 > [!CAUTION]
-> 如果你已经安装过iBizLab的其他开源产品，比如iBizPLM，这种情况下MySQL、zk、Nacos、ebsx等环境已具备，可以使用 .env.share 启动，执行前请自行在mysql中创建crm数据库。
+> 如果你已经安装过iBizLab的其他开源产品，比如iBizPLM，这种情况下MySQL、zk、Nacos、ebsx等环境已具备，可以使用 .share 启动，执行前请自行在mysql中创建crm数据库。
 > ```
 > create database crm default character set utf8 collate utf8_general_ci;
 > create user 'crm'@'%' identified by 'crm@2024';
@@ -73,9 +73,7 @@ $ docker logs -f crmservice
 假定本机使用localhost访问，如果跨机器访问请将localhost更换为服务器ip地址或域名：
 
 
-**iBizCRM桌面端**：http://localhost:30250/ibizcrm-crmweb/
-
-**iBizCRM移动端**：http://localhost:30260/ibizcrm-crmmob/
+**iBizCRM桌面端**：http://localhost:30350/ibizcrm-crmweb/
 
 **UAA系统管理**：http://localhost:32666
 
