@@ -1,0 +1,33 @@
+import { Component, defineAsyncComponent } from 'vue';
+
+function calcAppViewId(tag: string): string {
+  let id = '';
+  if (tag.indexOf('.') !== -1) {
+    const ids = tag.split('.');
+    id = ids[ids.length - 1];
+  } else {
+    id = tag.toLowerCase();
+  }
+  return id;
+}
+
+export async function getAppViewComponent(
+  name: string,
+  appId: string,
+): Promise<Component> {
+  const _name = calcAppViewId(name).toLowerCase();
+  // 子应用视图
+  if (appId !== ibiz.env.appId) {
+      return defineAsyncComponent(
+        () => import('../../components/sub-app-view/sub-app-view.vue'),
+      );
+    }
+    switch(_name) {
+    {{#each app.pages as |page|}}
+        case '{{lowerCase page.codeName}}':
+        return defineAsyncComponent(() => import('{{#not page.psAppDataEntity}}.{{else}}./{{spinalCase page.psAppDataEntity.codeName}}{{/not}}/{{spinalCase page.codeName}}/{{spinalCase page.codeName}}.vue'));
+    {{/each}}
+     default:
+      throw new Error(`无法找到视图模型：${name}`);
+  }
+}

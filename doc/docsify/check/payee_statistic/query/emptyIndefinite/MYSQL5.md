@@ -1,0 +1,19 @@
+```sql
+SELECT T1.* FROM (
+SELECT
+0 AS AMOUNT,
+#{ctx.datacontext.n_business_line_eq} AS BUSINESS_LINE,
+NULL AS CREATE_MAN,
+NULL AS CREATE_TIME,
+UUID() AS ID,
+'未明确' AS NAME,
+#{ctx.datacontext.n_owner_eq} AS OWNER,
+NULL AS SECTOR,
+NULL AS STATISTIC_DATE,
+'0' AS TYPE,
+NULL AS UPDATE_MAN,
+NULL AS UPDATE_TIME
+FROM DUAL  
+) T1
+
+```

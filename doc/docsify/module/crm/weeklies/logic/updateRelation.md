@@ -1,0 +1,246 @@
+## 根据统计时间更新关联信息 <!-- {docsify-ignore-all} -->
+
+   根据统计时间更新关联信息
+
+### 处理过程
+
+```plantuml
+@startuml
+hide empty description
+<style>
+root {
+  HyperlinkColor #42b983
+}
+</style>
+
+hide empty description
+state "开始" as Begin <<start>> [[$./updateRelation#begin {"开始"}]]
+state "准备参数" as PREPAREPARAM2  [[$./updateRelation#prepareparam2 {"准备参数"}]]
+state "准备参数" as PREPAREPARAM3  [[$./updateRelation#prepareparam3 {"准备参数"}]]
+state "设置名称" as RAWSFCODE1  [[$./updateRelation#rawsfcode1 {"设置名称"}]]
+state "本周活动和任务" as RAWSQLCALL1  [[$./updateRelation#rawsqlcall1 {"本周活动和任务"}]]
+state "本周进展评估" as RAWSQLCALL2  [[$./updateRelation#rawsqlcall2 {"本周进展评估"}]]
+state "下周任务" as RAWSQLCALL3  [[$./updateRelation#rawsqlcall3 {"下周任务"}]]
+state "本周工作(任务)" as RAWSQLCALL4  [[$./updateRelation#rawsqlcall4 {"本周工作(任务)"}]]
+state "结束" as END1 <<end>> [[$./updateRelation#end1 {"结束"}]]
+
+
+Begin --> PREPAREPARAM3
+PREPAREPARAM3 --> RAWSFCODE1
+RAWSFCODE1 --> RAWSQLCALL4
+RAWSQLCALL4 --> RAWSQLCALL1
+RAWSQLCALL1 --> RAWSQLCALL2
+RAWSQLCALL2 --> RAWSQLCALL3
+RAWSQLCALL3 --> PREPAREPARAM2
+PREPAREPARAM2 --> END1
+
+
+@enduml
+```
+
+
+### 处理步骤说明
+
+#### 开始 :id=Begin<sup class="footnote-symbol"> <font color=gray size=1>[开始]</font></sup>
+
+
+
+*- N/A*
+#### 准备参数 :id=PREPAREPARAM3<sup class="footnote-symbol"> <font color=gray size=1>[准备参数]</font></sup>
+
+
+
+1. 将`用户全局对象.srfusername` 设置给  `Default(传入变量).name(名称)`
+
+#### 设置名称 :id=RAWSFCODE1<sup class="footnote-symbol"> <font color=gray size=1>[直接后台代码]</font></sup>
+
+
+
+<p class="panel-title"><b>执行代码[JavaScript]</b></p>
+
+```javascript
+var defaultInfo = logic.getParam("Default");
+name = defaultInfo.get('name');
+var startDate = new Date(defaultInfo.get('start_date')); 
+var endDate = new Date(defaultInfo.get('end_date')); 
+
+var formattedStartDate = startDate.getFullYear() + '-' +  
+    ('0' + (startDate.getMonth() + 1)).slice(-2) + '-' +  
+    ('0' + startDate.getDate()).slice(-2);  
+var formattedEndDate = endDate.getFullYear() + '-' +  
+    ('0' + (endDate.getMonth() + 1)).slice(-2) + '-' +  
+    ('0' + endDate.getDate()).slice(-2); 
+name = name + formattedStartDate + '至' + formattedEndDate + '周报';  
+defaultInfo.set('name', name);
+defaultInfo.set('start_date', formattedStartDate+' 00:00:00');
+defaultInfo.set('end_date', formattedEndDate+' 23:59:59');
+```
+
+#### 本周工作(任务) :id=RAWSQLCALL4<sup class="footnote-symbol"> <font color=gray size=1>[直接SQL调用]</font></sup>
+
+
+
+<p class="panel-title"><b>执行sql语句</b></p>
+
+```sql
+select
+	ID as TARGET_ID,
+	SUBJECT  as NAME,
+	'TASK' as TARGET_TYPE,
+    START_TIME,
+    PRIORITY,
+    STATUS,
+    COST,
+    DESCRIPTION 
+from
+	TASK
+where
+	`TYPE` = 'TASK'
+	and (CREATE_MAN = ?
+		or OWNER = ?)
+        and YEARWEEK(START_TIME , 1) = YEARWEEK(?, 1)
+order by START_TIME desc		
+```
+
+<p class="panel-title"><b>执行sql参数</b></p>
+
+1. `用户全局对象.srfuserid`
+2. `用户全局对象.userid`
+3. `Default(传入变量).START_DATE(开始时间)`
+
+重置参数`works(本周工作)`，并将执行sql结果赋值给参数`works(本周工作)`
+
+#### 本周活动和任务 :id=RAWSQLCALL1<sup class="footnote-symbol"> <font color=gray size=1>[直接SQL调用]</font></sup>
+
+
+
+<p class="panel-title"><b>执行sql语句</b></p>
+
+```sql
+
+select
+	ID as TARGET_ID,
+	SUBJECT  as NAME,
+	TYPE as TARGET_TYPE,
+    COALESCE(START_TIME, DUE_DATE) AS START_TIME,
+    PRIORITY,
+    STATUS,
+    COST,
+    DESCRIPTION
+from
+	TASK
+where
+	 (CREATE_MAN = ?
+		or OWNER = ?)
+		and 
+		( 
+			(YEARWEEK(START_TIME , 1) = YEARWEEK(?, 1)and TYPE = 'MANEUVER')
+			or 
+			(YEARWEEK(DUE_DATE, 1) = YEARWEEK(?, 1) and TYPE = 'TASK' )
+		)
+order by START_TIME desc
+```
+
+<p class="panel-title"><b>执行sql参数</b></p>
+
+1. `用户全局对象.srfpersonid`
+2. `用户全局对象.userid`
+3. `Default(传入变量).START_DATE(开始时间)`
+4. `Default(传入变量).START_DATE(开始时间)`
+
+将执行sql结果赋值给参数`activities(本周活动)`
+
+#### 本周进展评估 :id=RAWSQLCALL2<sup class="footnote-symbol"> <font color=gray size=1>[直接SQL调用]</font></sup>
+
+
+
+<p class="panel-title"><b>执行sql语句</b></p>
+
+```sql
+select
+*
+from
+	note_attach T1
+where
+  T1.UPDATE_TIME >= ?
+    AND T1.UPDATE_TIME <= ?
+    	and (
+    (T1.UPDATE_MAN =?)
+	or 
+	(EXISTS (SELECT 1 FROM task_executor T2 WHERE T2.TASK_ID = T1.PRINCIPAL_ID AND T2.USER_ID = ?))
+	or
+	(EXISTS (SELECT 1 FROM executor T3 WHERE T3.PRINCIPAL_ID = T1.PRINCIPAL_ID AND T3.USER_ID = ?))
+
+	)
+```
+
+<p class="panel-title"><b>执行sql参数</b></p>
+
+1. `Default(传入变量).START_DATE(开始时间)`
+2. `Default(传入变量).END_DATE(结束时间)`
+3. `用户全局对象.srfpersonid`
+4. `用户全局对象.srfpersonid`
+5. `用户全局对象.srfpersonid`
+
+将执行sql结果赋值给参数`notes(本周进展评估)`
+
+#### 下周任务 :id=RAWSQLCALL3<sup class="footnote-symbol"> <font color=gray size=1>[直接SQL调用]</font></sup>
+
+
+
+<p class="panel-title"><b>执行sql语句</b></p>
+
+```sql
+SELECT  
+    ID as TARGET_ID,  
+    SUBJECT as NAME,  
+    'TASK' as TARGET_TYPE,
+    PRIORITY,
+    STATUS,
+    DUE_DATE,
+    DESCRIPTION
+FROM  
+    TASK T1 
+WHERE  
+    T1.`TYPE` = 'TASK'  
+    AND EXISTS (SELECT 1 FROM task_executor T2 WHERE T2.TASK_ID = T1.ID AND T2.USER_ID = ?)
+		AND T1.DUE_DATE >=  DATE_ADD(? + INTERVAL (7-WEEKDAY(?)) DAY, INTERVAL 0 DAY)
+		AND T1.DUE_DATE <= DATE_ADD(?, INTERVAL (13-WEEKDAY(?)) DAY)
+```
+
+<p class="panel-title"><b>执行sql参数</b></p>
+
+1. `用户全局对象.userid`
+2. `Default(传入变量).START_DATE(开始时间)`
+3. `Default(传入变量).START_DATE(开始时间)`
+4. `Default(传入变量).START_DATE(开始时间)`
+5. `Default(传入变量).START_DATE(开始时间)`
+
+将执行sql结果赋值给参数`tasks(下周任务计划)`
+
+#### 准备参数 :id=PREPAREPARAM2<sup class="footnote-symbol"> <font color=gray size=1>[准备参数]</font></sup>
+
+
+
+1. 将`activities(本周活动)` 设置给  `Default(传入变量).ACTIVITIES(活动)`
+2. 将`works(本周工作)` 设置给  `Default(传入变量).WORKS(本周工作)`
+3. 将`tasks(下周任务计划)` 设置给  `Default(传入变量).TASKS(下周任务计划)`
+4. 将`notes(本周进展评估)` 设置给  `Default(传入变量).NOTES(进展评估)`
+
+#### 结束 :id=END1<sup class="footnote-symbol"> <font color=gray size=1>[结束]</font></sup>
+
+
+
+返回 `Default(传入变量)`
+
+
+
+### 实体逻辑参数
+
+|    中文名   |    代码名    |  数据类型    |  实体   |备注 |
+| --------| --------| -------- | -------- | --------   |
+|传入变量(<i class="fa fa-check"/></i>)|Default|数据对象|[周报(WEEKLIES)](module/crm/weeklies.md)||
+|本周活动|activities|数据对象列表|[任务&活动(TASK)](module/crm/task.md)||
+|本周进展评估|notes|数据对象列表|[备注(NOTE_ATTACH)](module/crm/note_attach.md)||
+|下周任务计划|tasks|数据对象列表|[任务&活动(TASK)](module/crm/task.md)||
+|本周工作|works|数据对象列表|[任务&活动(TASK)](module/crm/task.md)||

@@ -1,0 +1,21 @@
+```sql
+SELECT
+t1.`AMOUNT`,
+t1.`CLOSING_DATE`,
+t1.`CREATE_MAN`,
+t1.`CREATE_TIME`,
+t1.`DEAL_ID`,
+t1.`EXPECTED_REVENUE`,
+t1.`ID`,
+t1.`LAST_ACTIVITY_TIME`,
+t1.`MOVED_TO__S`,
+t1.`NAME`,
+t1.`PROBABILITY`,
+t1.`STAGE`,
+t1.`STAGE_DURATION_CALENDAR_DAYS`,
+t1.`UPDATE_MAN`,
+t1.`UPDATE_TIME`
+FROM `DEAL_HISTORY` t1 
+
+WHERE ( t1.`CREATE_MAN` = #{ctx.sessioncontext.srfpersonid} )
+```

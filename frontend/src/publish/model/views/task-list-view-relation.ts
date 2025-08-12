@@ -1,0 +1,313 @@
+export default {
+  xdataControlName: 'list',
+  loadDefault: true,
+  deviewCodeName: 'list_view_relation',
+  deviewId: '178a0f33b57464d5dac3f5ac9dcdefc3',
+  accUserMode: 2,
+  capLanguageRes: {
+    lanResTag: 'PAGE.CAPTION.TASK.LIST_VIEW_RELATION',
+  },
+  caption: '下一个活动',
+  codeName: 'task_list_view_relation',
+  appDataEntityId: 'crmweb.task',
+  appViewEngines: [
+    {
+      engineCat: 'VIEW',
+      engineType: 'ListView9',
+      id: 'engine',
+    },
+  ],
+  appViewLogics: [
+    {
+      logicTrigger: 'CUSTOM',
+      logicType: 'APPUILOGIC',
+      builtinAppUILogic: {
+        actionAfterWizard: 'DEFAULT',
+        newDataAppView: {
+          refAppViewId: 'crmweb.task_task_edit_view',
+        },
+        appUILogicRefViews: [
+          {
+            refAppViewId: 'crmweb.task_task_edit_view',
+          },
+        ],
+        builtinLogic: true,
+        logicType: 'PREDEFINED',
+        viewLogicType: 'APP_NEWDATA',
+        id: '新建数据',
+      },
+      builtinLogic: true,
+      id: 'newdata',
+    },
+    {
+      logicTrigger: 'CUSTOM',
+      logicType: 'APPUILOGIC',
+      builtinAppUILogic: {
+        openDataAppView: {
+          refAppViewId: 'crmweb.task_task_edit_view',
+        },
+        editMode: true,
+        appUILogicRefViews: [
+          {
+            refAppViewId: 'crmweb.task_task_edit_view',
+          },
+        ],
+        builtinLogic: true,
+        logicType: 'PREDEFINED',
+        viewLogicType: 'APP_OPENDATA',
+        id: '打开数据',
+      },
+      builtinLogic: true,
+      id: 'opendata',
+    },
+  ],
+  appViewNavParams: [
+    {
+      key: 'n_owner_id_eq',
+      value: 'principal_id',
+      id: 'n_owner_id_eq',
+    },
+  ],
+  appViewRefs: [
+    {
+      realTitle: '任务编辑视图',
+      realTitleLanguageRes: {
+        lanResTag: 'PAGE.TITLE.TASK.EDIT_VIEW',
+      },
+      refAppViewId: 'crmweb.task_task_edit_view',
+      name: 'NEWDATA',
+      id: 'newdata',
+    },
+    {
+      realTitle: '任务编辑视图',
+      realTitleLanguageRes: {
+        lanResTag: 'PAGE.TITLE.TASK.EDIT_VIEW',
+      },
+      refAppViewId: 'crmweb.task_task_edit_view',
+      name: 'EDITDATA',
+      id: 'editdata',
+    },
+  ],
+  controls: [
+    {
+      groupMode: 'NONE',
+      groupStyle: 'DEFAULT',
+      itemLayoutPanel: {
+        layoutMode: 'TABLE_24COL',
+        layout: {
+          columnCount: 24,
+          layout: 'TABLE_24COL',
+        },
+        rootPanelItems: [
+          {
+            actionGroupExtractMode: 'ITEM',
+            panelItems: [
+              {
+                actionGroupExtractMode: 'ITEM',
+                panelItems: [
+                  {
+                    editor: {
+                      halign: 'LEFT',
+                      renderMode: 'TEXT_DYNAMIC',
+                      valign: 'MIDDLE',
+                      wrapMode: 'NOWRAP',
+                      editorType: 'SPAN',
+                      predefinedType: 'FIELD_TEXT_DYNAMIC',
+                      valueType: 'SIMPLE',
+                      editable: true,
+                      id: 'due_date',
+                    },
+                    valueFormat: 'M月D',
+                    viewFieldName: 'due_date',
+                    allowEmpty: true,
+                    caption: '文本(动态)',
+                    cssStyle:
+                      '.reldetails_due_date{\n    margin: 0px 0px 0px 0px;\n    border-width:0px 0px 0px 0px;\n    background-color:#F14949;\n    --ibiz-form-item-text-color: #FFFFFF;\n    padding:2px 5px;\n    border-radius:2px;\n}',
+                    itemStyle: 'DEFAULT',
+                    itemType: 'FIELD',
+                    layoutPos: {
+                      shrink: 1,
+                      layout: 'FLEX',
+                      spacingRight: 'OUTERSMALL',
+                    },
+                    id: 'due_date',
+                  },
+                  {
+                    editor: {
+                      halign: 'LEFT',
+                      renderMode: 'TEXT_DYNAMIC',
+                      valign: 'MIDDLE',
+                      wrapMode: 'NOWRAP',
+                      editorType: 'SPAN',
+                      predefinedType: 'FIELD_TEXT_DYNAMIC',
+                      valueType: 'SIMPLE',
+                      editable: true,
+                      id: 'subject',
+                    },
+                    viewFieldName: 'subject',
+                    allowEmpty: true,
+                    caption: '文本(动态)',
+                    itemStyle: 'DEFAULT',
+                    itemType: 'FIELD',
+                    layoutPos: {
+                      shrink: 1,
+                      layout: 'FLEX',
+                      spacingLeft: 'OUTERSMALL',
+                    },
+                    id: 'subject',
+                  },
+                ],
+                layout: {
+                  dir: 'row',
+                  layout: 'FLEX',
+                },
+                dataRegionType: 'INHERIT',
+                caption: '容器',
+                itemStyle: 'DEFAULT',
+                itemType: 'CONTAINER',
+                layoutPos: {
+                  shrink: 1,
+                  layout: 'FLEX',
+                },
+                id: 'container',
+              },
+            ],
+            layout: {
+              dir: 'column',
+              layout: 'FLEX',
+            },
+            dataRegionType: 'INHERIT',
+            itemStyle: 'DEFAULT',
+            itemType: 'CONTAINER',
+            layoutPos: {
+              colMD: 24,
+              layout: 'TABLE_24COL',
+            },
+            id: 'page_container',
+          },
+        ],
+        codeName: 'usr0418896780',
+        controlType: 'PANEL',
+        logicName: 'List_列表项面板',
+        appDataEntityId: 'crmweb.task',
+        controlParam: {},
+        modelId: 'c9a68fbddb88b07252faed98d84ec403',
+        modelType: 'PSSYSVIEWPANEL',
+        name: 'list_itempanel',
+        id: 'crmweb.task.usr0418896780',
+      },
+      delistDataItems: [
+        {
+          appDEFieldId: 'due_date',
+          dataType: 5,
+          format: 'YYYY-MM-DD',
+          id: 'due_date',
+        },
+        {
+          appDEFieldId: 'subject',
+          dataType: 25,
+          id: 'subject',
+        },
+        {
+          appDEFieldId: 'id',
+          dataType: 25,
+          id: 'srfkey',
+        },
+        {
+          appDEFieldId: 'subject',
+          dataType: 25,
+          id: 'srfmajortext',
+        },
+      ],
+      pagingSize: 1000,
+      showHeader: true,
+      navViewPos: 'NONE',
+      createControlAction: {
+        appDEMethodId: 'create',
+        appDataEntityId: 'crmweb.task',
+        id: 'create',
+      },
+      fetchControlAction: {
+        appDEMethodId: 'fetch_not_close',
+        appDataEntityId: 'crmweb.task',
+        id: 'fetch',
+      },
+      getControlAction: {
+        appDEMethodId: 'get',
+        appDataEntityId: 'crmweb.task',
+        id: 'load',
+      },
+      dedataImportId: 'dataimport',
+      removeControlAction: {
+        appDEMethodId: 'remove',
+        appDataEntityId: 'crmweb.task',
+        id: 'remove',
+      },
+      updateControlAction: {
+        appDEMethodId: 'update',
+        appDataEntityId: 'crmweb.task',
+        id: 'update',
+      },
+      autoLoad: true,
+      showBusyIndicator: true,
+      codeName: 'list_view_relation_list',
+      controlType: 'LIST',
+      logicName: 'relation',
+      appDataEntityId: 'crmweb.task',
+      controlParam: {
+        ctrlParams: {
+          SHOWMODE: 'MIXIN',
+        },
+        id: 'list',
+      },
+      modelId: '1161ff747f17d3c05895ffe11a0af7a6',
+      modelType: 'PSDELIST',
+      name: 'list',
+      id: 'crmweb.task.list_view_relation_list',
+    },
+    {
+      groupMode: 'SINGLE',
+      controlType: 'SEARCHBAR',
+      appDataEntityId: 'crmweb.task',
+      controlParam: {
+        id: 'searchbar',
+      },
+      id: 'searchbar',
+    },
+    {
+      capLanguageRes: {
+        lanResTag: 'PAGE.CAPTION.TASK.LIST_VIEW_RELATION',
+      },
+      caption: '下一个活动',
+      codeName: 'list_view_relation_captionbar',
+      controlType: 'CAPTIONBAR',
+      appDataEntityId: 'crmweb.task',
+      controlParam: {},
+      name: 'captionbar',
+      id: 'list_view_relation_captionbar',
+    },
+  ],
+  viewLayoutPanel: {
+    layoutBodyOnly: true,
+    useDefaultLayout: true,
+    layoutPanel: true,
+    codeName: 'layoutpanel',
+    controlStyle: 'APPDELISTVIEW9',
+    controlType: 'VIEWLAYOUTPANEL',
+    appDataEntityId: 'crmweb.task',
+    controlParam: {},
+    id: 'layoutpanel',
+  },
+  title: '下一个活动',
+  titleLanguageRes: {
+    lanResTag: 'PAGE.TITLE.TASK.LIST_VIEW_RELATION',
+  },
+  viewStyle: 'DEFAULT',
+  viewType: 'DELISTVIEW9',
+  enableDP: true,
+  showCaptionBar: false,
+  modelId: '4fc91c20ecdb201991b904b34a4efe62',
+  modelType: 'PSAPPDEVIEW',
+  name: 'tasklist_view_relation',
+  id: 'crmweb.task_list_view_relation',
+};

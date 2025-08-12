@@ -1,0 +1,71 @@
+export default {
+  redirectAppViewRefs: [
+    {
+      realTitle: '用户编辑视图',
+      realTitleLanguageRes: {
+        lanResTag: 'PAGE.TITLE.USER.EDITVIEW',
+      },
+      refAppViewId: 'crmweb.user_edit_view',
+      name: 'USER:EDITVIEW',
+      id: 'user:editview',
+    },
+    {
+      realTitle: '用户编辑视图',
+      realTitleLanguageRes: {
+        lanResTag: 'PAGE.TITLE.USER.EDITVIEW',
+      },
+      refAppViewId: 'crmweb.user_edit_view',
+      name: 'EDITVIEW',
+      id: 'editview',
+    },
+  ],
+  enableWorkflow: true,
+  funcViewMode: 'REDIRECTVIEW',
+  deviewCodeName: 'RedirectView',
+  deviewId: 'b6a864b70b7ec1f7bf4164f3ae4e43d4',
+  accUserMode: 2,
+  capLanguageRes: {
+    lanResTag: 'DE.LNAME.USER',
+  },
+  caption: '用户',
+  codeName: 'user_redirect_view',
+  appDataEntityId: 'crmweb.user',
+  controls: [
+    {
+      capLanguageRes: {
+        lanResTag: 'DE.LNAME.USER',
+      },
+      caption: '用户',
+      codeName: 'redirect_view_captionbar',
+      controlType: 'CAPTIONBAR',
+      appDataEntityId: 'crmweb.user',
+      controlParam: {},
+      name: 'captionbar',
+      id: 'redirect_view_captionbar',
+    },
+  ],
+  viewLayoutPanel: {
+    layoutBodyOnly: true,
+    useDefaultLayout: true,
+    layoutPanel: true,
+    codeName: 'layoutpanel',
+    controlStyle: 'APPDEREDIRECTVIEW',
+    controlType: 'VIEWLAYOUTPANEL',
+    appDataEntityId: 'crmweb.user',
+    controlParam: {},
+    id: 'layoutpanel',
+  },
+  title: '用户数据重定向视图',
+  titleLanguageRes: {
+    lanResTag: 'PAGE.TITLE.USER.REDIRECTVIEW',
+  },
+  viewStyle: 'DEFAULT',
+  viewType: 'DEREDIRECTVIEW',
+  enableDP: true,
+  redirectView: true,
+  showCaptionBar: true,
+  modelId: '9419cc361e13f8c778f5c2858e2c8b75',
+  modelType: 'PSAPPDEVIEW',
+  name: 'userRedirectView',
+  id: 'crmweb.user_redirect_view',
+};

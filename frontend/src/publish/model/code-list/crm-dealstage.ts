@@ -1,0 +1,57 @@
+export default {
+  codeListTag: 'crm__dealstage',
+  codeListType: 'DYNAMIC',
+  codeName: 'crm__dealstage',
+  emptyText: '未定义',
+  appDEDataSetId: 'fetch_all',
+  appDataEntityId: 'crmweb.deal_stage',
+  codeItems: [
+    {
+      codeName: 'item_10',
+      text: '确认商机',
+      value: '10',
+      id: 'item_10',
+    },
+    {
+      codeName: 'item_20',
+      text: '进程控制',
+      value: '20',
+      id: 'item_20',
+    },
+    {
+      codeName: 'item_30',
+      text: '方案论证',
+      value: '30',
+      id: 'item_30',
+    },
+    {
+      codeName: 'item_40',
+      text: '商务谈判',
+      value: '40',
+      id: 'item_40',
+    },
+    {
+      codeName: 'item_50',
+      text: '成交关闭',
+      value: '50',
+      id: 'item_50',
+    },
+    {
+      codeName: 'item_60',
+      text: '失败关闭',
+      value: '60',
+      id: 'item_60',
+    },
+    {
+      codeName: 'item_70',
+      text: '挂起',
+      value: '70',
+      id: 'item_70',
+    },
+  ],
+  textAppDEFieldId: 'name',
+  valueAppDEFieldId: 'id',
+  enableCache: true,
+  name: '商机阶段',
+  id: 'crmweb.crm__dealstage',
+};

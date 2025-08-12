@@ -597,6 +597,6 @@
   } ],
   "codeName" : "crm",
   "dynaModelFilePath" : "PSMODULES/crm.json",
-  "name" : "客户关系管理",
+  "name" : "crm",
   "defaultModule" : true
 }

@@ -1,0 +1,68 @@
+export default {
+  deviewCodeName: 'custom_view',
+  deviewId: '4f14afa41bc368f9be5ea78e0efe7feb',
+  accUserMode: 2,
+  capLanguageRes: {
+    lanResTag: 'DE.LNAME.USER',
+  },
+  caption: '个人实时绩效情况',
+  codeName: 'user_custom_view',
+  appDataEntityId: 'crmweb.user',
+  viewLayoutPanel: {
+    viewProxyMode: true,
+    layoutMode: 'FLEX',
+    layout: {
+      layout: 'FLEX',
+    },
+    rootPanelItems: [
+      {
+        actionGroupExtractMode: 'ITEM',
+        layout: {
+          dir: 'column',
+          layout: 'FLEX',
+        },
+        dataRegionType: 'INHERIT',
+        itemStyle: 'DEFAULT',
+        itemType: 'CONTAINER',
+        layoutPos: {
+          shrink: 1,
+          layout: 'FLEX',
+        },
+        id: 'page_container',
+      },
+    ],
+    layoutPanel: true,
+    controls: [
+      {
+        capLanguageRes: {
+          lanResTag: 'DE.LNAME.USER',
+        },
+        caption: '个人实时绩效情况',
+        codeName: 'custom_view_captionbar',
+        controlType: 'CAPTIONBAR',
+        appDataEntityId: 'crmweb.user',
+        controlParam: {},
+        name: 'captionbar',
+        id: 'custom_view_captionbar',
+      },
+    ],
+    codeName: 'usr0531465272',
+    controlType: 'VIEWLAYOUTPANEL',
+    logicName: '个人实时绩效情况布局面板',
+    appDataEntityId: 'crmweb.user',
+    controlParam: {},
+    modelId: '7dfda32d451fec9547648177a1304ec4',
+    modelType: 'PSSYSVIEWLAYOUTPANEL',
+    name: 'layoutpanel',
+    id: 'usr0531465272',
+  },
+  title: '个人实时绩效情况',
+  viewStyle: 'DEFAULT',
+  viewType: 'DECUSTOMVIEW',
+  enableDP: true,
+  showCaptionBar: true,
+  modelId: '5c06e99264dd9597673cddc55176c9d3',
+  modelType: 'PSAPPDEVIEW',
+  name: 'usercustom_view',
+  id: 'crmweb.user_custom_view',
+};

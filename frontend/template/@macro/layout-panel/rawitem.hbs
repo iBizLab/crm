@@ -1,0 +1,26 @@
+{{#if (eq item.psRawItem.predefinedType 'AUTH_USERINFO')}}
+<i-biz-auth-userinfo
+  :modelData="panelItems.{{item.id}}.model" 
+  :controller="panelItems.{{item.id}}" 
+/>
+{{else if (eq item.psRawItem.predefinedType 'NAV_POS')}}
+<i-biz-nav-pos
+  :modelData="panelItems.{{item.id}}.model" 
+  :controller="panelItems.{{item.id}}"
+/>
+{{else if (eq item.psRawItem.predefinedType 'NAV_POS_INDEX')}}
+<i-biz-nav-pos-index
+  :modelData="panelItems.{{item.id}}.model"
+  :controller="panelItems.{{item.id}}"
+/>
+{{else if (eq item.psRawItem.predefinedType 'NAV_TABS')}}
+<i-biz-nav-tabs
+  :modelData="panelItems.{{item.id}}.model"
+  :controller="panelItems.{{item.id}}"
+/>
+{{else if (eq item.psRawItem.predefinedType 'APP_APPTITLE')}}
+<i-biz-panel-app-title
+  :modelData="panelItems.{{item.id}}.model"
+  :controller="panelItems.{{item.id}}"
+/>
+{{/if}}

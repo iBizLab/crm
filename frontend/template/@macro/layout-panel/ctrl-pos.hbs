@@ -1,0 +1,5 @@
+{{#each page.psControls}}
+{{#eq item.name name}}
+<{{codeName}}{{controlType}} :context="context" :params="props.params" />
+{{/eq}}
+{{/each}}

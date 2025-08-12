@@ -1,0 +1,15 @@
+{ "allPSAppViews": [
+{{#each app.pages as |page|}}
+  { "id": "{{page.DSL.id}}", "priority": {{page.priority}} }{{#unless @last}},{{/unless}}
+{{/each}}
+], 
+"allPSAppCodeLists":[
+{{#each app.allPSAppCodeLists as |appCodeList|}}
+  { "id": "{{appCodeList.codeName}}" }{{#unless @last}},{{/unless}}
+{{/each}}
+], 
+"allPSAppDataEntities":[
+{{#each app.allPSAppDataEntities as |entity|}}
+  {"name": "{{entity.name}}", "codeName": "{{entity.codeName}}"}{{#unless @last}},{{/unless}}
+{{/each}}
+]}

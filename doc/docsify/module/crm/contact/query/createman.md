@@ -1,0 +1,109 @@
+## 创建者(createman) <!-- {docsify-ignore-all} -->
+
+
+
+<p class="panel-title"><b>查看SQL语句</b></p>
+<br>
+
+<el-row>
+&nbsp;<el-tag @click="MYSQL5 = true">MYSQL5</el-tag>
+</el-row>
+
+<br>
+<p class="panel-title"><b>是否默认查询</b></p>
+
+* `否`
+
+<p class="panel-title"><b>是否权限使用</b></p>
+
+* `否`
+
+<p class="panel-title"><b>是否自定义SQL</b></p>
+
+* `否`
+
+<p class="panel-title"><b>查询列级别</b></p>
+
+* `默认（全部查询列）`
+
+
+
+### 查询条件
+
+(`CREATE_MAN(建立人)` EQ `用户上下文.srfpersonid`)
+
+
+
+
+
+<el-dialog v-model="MYSQL5" title="MYSQL5">
+
+```sql
+SELECT
+t1.`ACCOUNT_ID`,
+t11.`ACCOUNT_NAME`,
+t1.`ASSISTANT`,
+t1.`ASST_PHONE`,
+t1.`CHANGE_LOG_TIME__S`,
+t1.`CREATE_MAN`,
+t1.`CREATE_TIME`,
+t1.`DATE_OF_BIRTH`,
+t1.`DEPARTMENT`,
+t1.`EMAIL`,
+t1.`EMAIL_OPT_OUT`,
+t1.`ENRICH_STATUS__S`,
+t1.`FAX`,
+t1.`FIRST_NAME`,
+t1.`FULL_NAME`,
+t1.`HOME_PHONE`,
+t1.`ID`,
+t1.`LAST_ACTIVITY_TIME`,
+t1.`LAST_ENRICHED_TIME__S`,
+t1.`LAST_NAME`,
+t1.`LEAD_SOURCE`,
+t1.`LOCKED__S`,
+t1.`MAILING_CITY`,
+t1.`MAILING_COUNTRY`,
+t1.`MAILING_STATE`,
+t1.`MAILING_STREET`,
+t1.`MAILING_ZIP`,
+t1.`MOBILE`,
+t1.`NAME`,
+t1.`OTHER_CITY`,
+t1.`OTHER_COUNTRY`,
+t1.`OTHER_STATE`,
+t1.`OTHER_STREET`,
+t1.`OTHER_ZIP`,
+t1.`OWNER`,
+t1.`PHONE`,
+t1.`RECORD_IMAGE`,
+t1.`SALUTATION`,
+t1.`SECONDARY_EMAIL`,
+t1.`SKYPE_ID`,
+t1.`TAG`,
+t1.`TITLE`,
+t1.`UNSUBSCRIBED_MODE`,
+t1.`UNSUBSCRIBED_TIME`,
+t1.`UPDATE_MAN`,
+t1.`UPDATE_TIME`
+FROM `CONTACT` t1 
+LEFT JOIN `ACCOUNT` t11 ON t1.`ACCOUNT_ID` = t11.`ID` 
+
+WHERE ( t1.`CREATE_MAN` = #{ctx.sessioncontext.srfpersonid} )
+```
+
+</el-dialog>
+
+<script>
+ const { createApp } = Vue
+  createApp({
+    data() {
+      return {
+                MYSQL5 : false
+        
+      }
+    },
+    methods: {
+    }
+  }).use(ElementPlus).mount('#app')
+</script>

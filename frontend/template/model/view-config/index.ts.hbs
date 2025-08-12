@@ -1,0 +1,10 @@
+import { IViewConfig } from '@ibiz-template/runtime';
+{{#each app.pages as |page|}}
+import {{page.codeName}} from './{{spinalCase page.codeName}}'
+{{/each}}
+
+export async function initViewConfig(): Promise<void> {
+  {{#each app.pages as |page|}}
+  ibiz.hub.config.view.set('{{page.DSL.id}}', {{page.codeName}} as IViewConfig);
+  {{/each}}
+}

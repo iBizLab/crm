@@ -1,0 +1,25 @@
+```sql
+SELECT
+t1.`CASE_ORIGIN`,
+t1.`CASE_REASON`,
+t1.`COMMENTS`,
+t1.`CREATE_MAN`,
+t1.`CREATE_TIME`,
+t1.`EMAIL`,
+t1.`ID`,
+t1.`LOCKED__S`,
+t1.`NAME`,
+t1.`NO_OF_COMMENTS`,
+t1.`PHONE`,
+t1.`PRIORITY`,
+t1.`REPORTED_BY`,
+t1.`STATUS`,
+t1.`SUBJECT`,
+t1.`TAG`,
+t1.`TYPE`,
+t1.`UPDATE_MAN`,
+t1.`UPDATE_TIME`
+FROM `CASE` t1 
+
+
+```

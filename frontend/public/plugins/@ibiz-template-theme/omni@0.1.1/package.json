@@ -1,0 +1,42 @@
+{
+  "name": "@ibiz-template-theme/omni",
+  "version": "0.1.1",
+  "type": "module",
+  "main": "lib/index.cjs",
+  "module": "es/index.mjs",
+  "types": "es/index.d.ts",
+  "system": "dist/index.system.min.js",
+  "styles": "dist/index.min.css",
+  "exports": {
+    ".": {
+      "import": "./es/index.mjs",
+      "require": "./lib/index.cjs"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/iBizModeling/ibiz-template-vue-theme.git"
+  },
+  "files": [
+    "dist",
+    "es",
+    "lib",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "dev": "ibiz-temp build -w",
+    "build": "ibiz-temp build -c && vue-tsc --declaration --emitDeclarationOnly",
+    "publish:next": "npm run build && npm publish --access public --tag=next --registry=http://172.16.240.221:8081/repository/local/",
+    "publish:dev": "npm run build && npm publish --access public --tag=dev --registry=http://172.16.240.221:8081/repository/local/",
+    "publish:beta": "npm run build && npm publish --access public --tag=beta --registry=http://172.16.240.221:8081/repository/local/",
+    "publish:npm": "npm run build && npm publish --access public --registry=http://172.16.240.221:8081/repository/local/"
+  },
+  "author": "chitanda",
+  "license": "MIT",
+  "dependencies": {
+    "@ibiz-template/web-theme": "^1.1.0"
+  },
+  "devDependencies": {
+    "@ibiz-template/theme": "0.4.0"
+  }
+}

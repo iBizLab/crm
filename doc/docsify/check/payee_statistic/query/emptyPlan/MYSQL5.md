@@ -1,0 +1,35 @@
+```sql
+SELECT T1.* FROM (
+SELECT DISTINCT
+0 AS AMOUNT,
+#{ctx.datacontext.n_business_line_eq} AS BUSINESS_LINE,
+NULL AS CREATE_MAN,
+NULL AS CREATE_TIME,
+UUID() AS ID,
+DATE_FORMAT(your_date, '%Y-%m') AS NAME,
+#{ctx.datacontext.n_owner_eq} AS OWNER,
+NULL AS SECTOR,
+NULL AS STATISTIC_DATE,
+'2' AS TYPE,
+NULL AS UPDATE_MAN,
+NULL AS UPDATE_TIME
+FROM (
+    SELECT
+        DATE_ADD(
+            DATE_FORMAT(STR_TO_DATE(#{ctx.datacontext.gt},'%Y-%m-%d'), '%Y-%m-01'),
+            INTERVAL a.a + (10 * b.a) MONTH
+        ) AS your_date
+    FROM
+        (SELECT 0 a UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3
+         UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6
+         UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9) AS a
+    CROSS JOIN
+        (SELECT 0 a UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3
+         UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6
+         UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9) AS b
+    WHERE
+        DATE_ADD(DATE_FORMAT(STR_TO_DATE(#{ctx.datacontext.gt},'%Y-%m-%d'), '%Y-%m-01'),INTERVAL a.a + (10 * b.a) MONTH) <= DATE_FORMAT(STR_TO_DATE(#{ctx.datacontext.lt},'%Y-%m-%d'), '%Y-%m-01') - INTERVAL 1 DAY
+) AS months
+) T1
+
+```

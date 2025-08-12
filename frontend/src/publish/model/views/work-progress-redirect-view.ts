@@ -1,0 +1,71 @@
+export default {
+  redirectAppViewRefs: [
+    {
+      realTitle: '工作进展编辑视图',
+      realTitleLanguageRes: {
+        lanResTag: 'PAGE.TITLE.WORK_PROGRESS.EDITVIEW',
+      },
+      refAppViewId: 'crmweb.work_progress_edit_view',
+      name: 'WORK_PROGRESS:EDITVIEW',
+      id: 'work_progress:editview',
+    },
+    {
+      realTitle: '工作进展编辑视图',
+      realTitleLanguageRes: {
+        lanResTag: 'PAGE.TITLE.WORK_PROGRESS.EDITVIEW',
+      },
+      refAppViewId: 'crmweb.work_progress_edit_view',
+      name: 'EDITVIEW',
+      id: 'editview',
+    },
+  ],
+  enableWorkflow: true,
+  funcViewMode: 'REDIRECTVIEW',
+  deviewCodeName: 'RedirectView',
+  deviewId: 'cf53ccf674a7dfadcfba42fba7b73739',
+  accUserMode: 2,
+  capLanguageRes: {
+    lanResTag: 'DE.LNAME.WORK_PROGRESS',
+  },
+  caption: '工作进展',
+  codeName: 'work_progress_redirect_view',
+  appDataEntityId: 'crmweb.work_progress',
+  controls: [
+    {
+      capLanguageRes: {
+        lanResTag: 'DE.LNAME.WORK_PROGRESS',
+      },
+      caption: '工作进展',
+      codeName: 'redirect_view_captionbar',
+      controlType: 'CAPTIONBAR',
+      appDataEntityId: 'crmweb.work_progress',
+      controlParam: {},
+      name: 'captionbar',
+      id: 'redirect_view_captionbar',
+    },
+  ],
+  viewLayoutPanel: {
+    layoutBodyOnly: true,
+    useDefaultLayout: true,
+    layoutPanel: true,
+    codeName: 'layoutpanel',
+    controlStyle: 'APPDEREDIRECTVIEW',
+    controlType: 'VIEWLAYOUTPANEL',
+    appDataEntityId: 'crmweb.work_progress',
+    controlParam: {},
+    id: 'layoutpanel',
+  },
+  title: '工作进展数据重定向视图',
+  titleLanguageRes: {
+    lanResTag: 'PAGE.TITLE.WORK_PROGRESS.REDIRECTVIEW',
+  },
+  viewStyle: 'DEFAULT',
+  viewType: 'DEREDIRECTVIEW',
+  enableDP: true,
+  redirectView: true,
+  showCaptionBar: true,
+  modelId: 'a4c337b74d803ca433f93ae343647b05',
+  modelType: 'PSAPPDEVIEW',
+  name: 'work_progressRedirectView',
+  id: 'crmweb.work_progress_redirect_view',
+};

@@ -1,0 +1,48 @@
+import { CodeListService } from '@ibiz-template/runtime';
+import { IAppCodeList, IAppDataEntity, IApplication, IAppView } from '@ibiz/model-core';
+
+export async function registerCodeList(codeListService:CodeListService): Promise<void> {
+  const setCodeList = (model: IData) => {
+    codeListService.setCodeList(model as IAppCodeList);
+  };
+    {{#each app.allPSAppCodeLists as |appCodeList|}}
+  setCodeList(await import('./code-list/{{spinalCase appCodeList.codeName}}').then((m) => m.default));
+    {{/each}}
+}
+
+
+export async function getAppDataEntityModel(name: string): Promise<IAppDataEntity> {
+  const _name = name.toLowerCase();
+  switch(_name) {
+    {{#each app.allPSAppDataEntities as |entity|}}
+     case '{{lowerCase app.codeName}}.{{lowerCase entity.codeName}}':
+     case '{{lowerCase entity.codeName}}':
+      return import('./entities/{{spinalCase entity.codeName}}').then((m) => m.default as unknown as IAppDataEntity);
+    {{/each}}
+     default:
+      throw new Error(`无法找到实体模型：${name}`);
+  }
+}
+export async function getAppViewModel(name: string): Promise<IAppView> {
+    const _name = name.toLowerCase();
+    switch(_name) {
+    {{#each app.pages as |page|}}
+      case '{{lowerCase page.codeName}}':
+      return import('./views/{{spinalCase page.codeName}}').then((m) => m.default as unknown as IAppView);
+    {{/each}}
+     default:
+      throw new Error(`无法找到视图模型：${name}`);
+  }
+}
+
+export async function getAppModel(): Promise<IApplication> {
+    ibiz.hub.defaultAppIndexViewName = '{{app.defaultPSAppIndexView.codeName}}';
+    return import('./app/app').then(m => {
+    const app = m.default as IData;
+    app.appUtils?.forEach((util:IData) => {
+      util.appId = app.appId
+    });
+    // app.appId = undefined;
+    return app as IApplication;
+  });
+}

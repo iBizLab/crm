@@ -1,0 +1,63 @@
+export default {
+  caption: '应用面板视图',
+  codeName: 'app_panel_view',
+  controls: [
+    {
+      layoutMode: 'TABLE_24COL',
+      layout: {
+        columnCount: 24,
+        layout: 'TABLE_24COL',
+      },
+      rootPanelItems: [
+        {
+          actionGroupExtractMode: 'ITEM',
+          layout: {
+            dir: 'column',
+            layout: 'FLEX',
+          },
+          dataRegionType: 'INHERIT',
+          itemStyle: 'DEFAULT',
+          itemType: 'CONTAINER',
+          layoutPos: {
+            colMD: 24,
+            layout: 'TABLE_24COL',
+          },
+          id: 'page_container',
+        },
+      ],
+      codeName: 'app_panel_view',
+      controlType: 'PANEL',
+      logicName: '应用面板视图使用面板',
+      controlParam: {},
+      modelId: '02bc20aa78de9bf3f2269aa7909f50bf',
+      modelType: 'PSSYSVIEWPANEL',
+      name: 'panel',
+      id: 'app_panel_view',
+    },
+    {
+      caption: '应用面板视图',
+      codeName: 'captionbar',
+      controlType: 'CAPTIONBAR',
+      controlParam: {},
+      id: 'captionbar',
+    },
+  ],
+  viewLayoutPanel: {
+    layoutBodyOnly: true,
+    useDefaultLayout: true,
+    layoutPanel: true,
+    codeName: 'layoutpanel',
+    controlStyle: 'APPPANELVIEW',
+    controlType: 'VIEWLAYOUTPANEL',
+    controlParam: {},
+    id: 'layoutpanel',
+  },
+  title: '应用面板视图',
+  viewStyle: 'DEFAULT',
+  viewType: 'APPPANELVIEW',
+  showCaptionBar: true,
+  modelId: '4af3c776e05b011fa610679561bee395',
+  modelType: 'PSAPPPANELVIEW',
+  name: 'AppPanelView',
+  id: 'crmweb.app_panel_view',
+};

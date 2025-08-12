@@ -916,7 +916,7 @@
   "name" : "SYS_ROLE_MEMBER",
   "getPSSubSysServiceAPI" : {
     "modelref" : true,
-    "path" : "PSMODULES/ibizsysmgr/PSSUBSYSSERVICEAPIS/ibizsysmgr.json"
+    "path" : "PSMODULES/runtime/PSSUBSYSSERVICEAPIS/ibizsysmgr.json"
   },
   "getPSSubSysServiceAPIDE" : {
     "modelref" : true,

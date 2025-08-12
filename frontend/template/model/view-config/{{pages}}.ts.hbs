@@ -1,0 +1,12 @@
+export default {
+  id: '{{page.DSL.id}}',
+  codeName: '{{page.codeName}}',
+  openMode: {{#if page.openMode }}'{{page.openMode}}'{{else}}'INDEXVIEWTAB'{{/if}},
+  viewType: '{{page.viewType}}',
+  width: {{page.width}},
+  height: {{page.height}},
+  appDataEntityId: {{#if page.appEntity }}'{{page.appEntity.DSL.id}}'{{else}}undefined{{/if}},
+  redirectView: {{page.redirectView}},
+  modalOption:{{jsonStringify page.modalOption 2}},
+  appId: ''
+};

@@ -1,0 +1,75 @@
+## 查询计划和记录(findplan_payee) <!-- {docsify-ignore-all} -->
+
+用于反查计划/记录实体数据
+
+<p class="panel-title"><b>查看SQL语句</b></p>
+<br>
+
+<el-row>
+&nbsp;<el-tag @click="MYSQL5 = true">MYSQL5</el-tag>
+</el-row>
+
+<br>
+<p class="panel-title"><b>是否默认查询</b></p>
+
+* `否`
+
+<p class="panel-title"><b>是否权限使用</b></p>
+
+* `否`
+
+<p class="panel-title"><b>是否自定义SQL</b></p>
+
+* `是`
+
+<p class="panel-title"><b>查询列级别</b></p>
+
+* `默认（全部查询列）`
+
+
+
+
+
+
+<el-dialog v-model="MYSQL5" title="MYSQL5">
+
+```sql
+SELECT T1.* FROM (
+SELECT T2.O_NUMBER,T2.NAME AS PROJECT_NAME,T3.ACCOUNT_NAME,T2.BUSINESS_LINE,'0' AS TYPE,T1.AMOUNT,T1.PLANNED_TIME AS STATISTIC_DATE,T2.OWNER,T1.DESCRIPTION,T1.ID AS ID,T2.ID AS PROJECT_ID FROM PAYEE_PLAN T1,PROJECT T2,ACCOUNT T3
+WHERE T1.PROJECT_ID = T2.ID AND T2.ACCOUNT_ID = T3.ID AND '0' = #{ctx.datacontext.type} AND T1.PLANNED_TIME IS NULL AND T1.PLAN_STATUS = '10'
+UNION ALL
+
+SELECT T2.O_NUMBER,T2.NAME AS PROJECT_NAME,T3.ACCOUNT_NAME,T2.BUSINESS_LINE,'2' AS TYPE,T1.AMOUNT,T1.PLANNED_TIME AS STATISTIC_DATE,T2.OWNER,T1.DESCRIPTION,T1.ID AS ID,T2.ID AS PROJECT_ID FROM PAYEE_PLAN T1,PROJECT T2,ACCOUNT T3
+WHERE T1.PROJECT_ID = T2.ID AND T2.ACCOUNT_ID = T3.ID AND '2' = #{ctx.datacontext.type} AND CONCAT(YEAR(T1.PLANNED_TIME),'-',LPAD(MONTH(T1.PLANNED_TIME), 2, '0')) = #{ctx.datacontext.name} AND T1.PLAN_STATUS = '10'
+UNION ALL
+
+SELECT T2.O_NUMBER,T2.NAME AS PROJECT_NAME,T3.ACCOUNT_NAME,T2.BUSINESS_LINE,'1' AS TYPE,T1.AMOUNT,T1.PAYEE_DATE AS STATISTIC_DATE,T2.OWNER,T1.DESCRIPTION,T1.ID AS ID,T2.ID AS PROJECT_ID FROM PAYEE T1,PROJECT T2,ACCOUNT T3
+WHERE T1.PROJECT_ID = T2.ID AND T2.ACCOUNT_ID = T3.ID AND '1' = #{ctx.datacontext.type} AND CONCAT(YEAR(T1.PAYEE_DATE),'-',LPAD(MONTH(T1.PAYEE_DATE), 2, '0')) = #{ctx.datacontext.name} 
+UNION ALL
+
+SELECT T2.O_NUMBER,T2.NAME AS PROJECT_NAME,T3.ACCOUNT_NAME,T2.BUSINESS_LINE,'3' AS TYPE,T1.AMOUNT,T1.PLANNED_TIME AS STATISTIC_DATE,T2.OWNER,T1.DESCRIPTION,T1.ID AS ID,T2.ID AS PROJECT_ID FROM PAYEE_PLAN T1,PROJECT T2,ACCOUNT T3
+WHERE T1.PROJECT_ID = T2.ID AND T2.ACCOUNT_ID = T3.ID AND '3' = #{ctx.datacontext.type} AND T1.PLANNED_TIME > STR_TO_DATE(CONCAT(#{ctx.datacontext.lt},'-01'), '%Y-%m-%d') AND T1.PLAN_STATUS = '10'
+UNION ALL
+
+SELECT T2.O_NUMBER,T2.NAME AS PROJECT_NAME,T3.ACCOUNT_NAME,T2.BUSINESS_LINE,'1' AS TYPE,T1.AMOUNT,T1.PAYEE_DATE AS STATISTIC_DATE,T2.OWNER,T1.DESCRIPTION,T1.ID AS ID,T2.ID AS PROJECT_ID FROM PAYEE T1,PROJECT T2,ACCOUNT T3
+WHERE T1.PROJECT_ID = T2.ID AND T2.ACCOUNT_ID = T3.ID AND '3' = #{ctx.datacontext.type} AND T1.PAYEE_DATE > STR_TO_DATE(CONCAT(#{ctx.datacontext.lt},'-01'), '%Y-%m-%d')
+
+) T1
+
+```
+
+</el-dialog>
+
+<script>
+ const { createApp } = Vue
+  createApp({
+    data() {
+      return {
+                MYSQL5 : false
+        
+      }
+    },
+    methods: {
+    }
+  }).use(ElementPlus).mount('#app')
+</script>

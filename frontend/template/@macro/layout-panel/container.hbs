@@ -1,0 +1,27 @@
+{{#if (eq item.psLayout.layout "BORDER")}}
+  {{#if item.psLayoutPos.layoutPos}}
+<i-biz-scroll-container-item 
+  :modelData="panelItems.{{item.id}}.model" 
+  :controller="panelItems.{{item.id}}">
+  {{#each item.psPanelItems as | panelItem |}}
+  {{> @macro/layout-panel/include.hbs page=page item=panelItem itemType=panelItem.itemType}}
+  {{/each}}
+</i-biz-scroll-container-item>
+  {{else}}
+<i-biz-scroll-container 
+  :modelData="panelItems.{{item.id}}.model" 
+  :controller="panelItems.{{item.id}}">
+  {{#each item.psPanelItems as | panelItem |}}
+  {{> @macro/layout-panel/include.hbs page=page item=panelItem itemType=panelItem.itemType}}
+  {{/each}}
+</i-biz-scroll-container>
+  {{/if}}
+{{else}}
+<i-biz-panel-container 
+  :modelData="panelItems.{{item.id}}.model" 
+  :controller="panelItems.{{item.id}}">
+  {{#each item.psPanelItems as | panelItem |}}
+  {{> @macro/layout-panel/include.hbs page=page item=panelItem itemType=panelItem.itemType}}
+  {{/each}}
+</i-biz-panel-container>
+{{/if}}

@@ -1,0 +1,6 @@
+<slot name="{{item.id}}" :controller="panelItems.{{item.id}}">
+  {{#eq itemType "CONTAINER"~}}{{> @macro/layout-panel/container.hbs}}{{~/eq~}}
+  {{#eq itemType "RAWITEM"~}}{{> @macro/layout-panel/rawitem.hbs}}{{~/eq~}}
+  {{#eq itemType "BUTTON"~}}{{> @macro/layout-panel/button.hbs}}{{~/eq~}}
+  {{#eq itemType "CTRLPOS"~}}{{> @macro/layout-panel/ctrl-pos.hbs}}{{~/eq~}}
+</slot>

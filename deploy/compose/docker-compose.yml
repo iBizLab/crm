@@ -1,0 +1,52 @@
+include:
+  - ./docker-compose-base.yml
+services:
+  #crmservice
+  crmservice:
+    env_file: .env
+    image: ${IMAGE_URL}ibiz-service-runner:v8.1.0.570.32.4
+    container_name: crmservice
+    ports:
+      - "${SYSTEM_APIPORT}:${SYSTEM_APIPORT}"
+    networks:
+      - agent_network
+    environment:
+      - TZ=Asia/Shanghai
+      - SPRING_CLOUD_NACOS_DISCOVERY_SERVER-ADDR=http://${NACOS_HOST}:${NACOS_PORT}
+      - SPRING_CLOUD_NACOS_CONFIG_SERVER-ADDR=http://${NACOS_HOST}:${NACOS_PORT}
+      - SPRING_CLOUD_NACOS_DISCOVERY_IP=crmservice
+      - SERVER_PORT=${SYSTEM_APIPORT}
+      - IBIZ_SERVICEHUB_INITMODE=auto
+      - SPRING_DATASOURCE_DRIVER-CLASS-NAME=com.mysql.jdbc.Driver
+      - SPRING_DATASOURCE_PASSWORD=crm@2024
+      - SPRING_DATASOURCE_URL=jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/crm?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&useOldAliasMetadataBehavior=true&serverTimezone=GMT%2B8&allowMultiQueries=true&useSSL=false
+      - SPRING_DATASOURCE_USERNAME=crm
+      - JAVA_OPTS=-Xms512m -Xmx2048m -Xss256K -Dgroovy.grape.report.downloads=true
+    entrypoint: /entrypoint-waitfor.sh
+    command: ibiz-ebsx-gateway:30086
+
+
+  #crmweb
+  crmweb:
+    env_file: .env
+    image: ${IMAGE_URL}ibiz-cloud-web-runner:v9.0.7.41-alpha.17
+    container_name: crmweb
+    ports:
+      - ${SYSTEM_WEBPORT}:80
+    networks:
+      - agent_network
+    environment:
+      - TZ=Asia/Shanghai  
+      - FILE_PREVIEW_ADDRESS=http://${IPADDR:-10.144.0.1}:30012
+      - CUSTOMPARAMS={"file_preview_address":"http://${IPADDR:-10.144.0.1}:30012","ENABLEMULTILOGIN":false}
+      - MOCKDCSYSTEMID=ibizcrm
+      - APPNAME=桌面端
+      - APPCODE=ibizcrm-crmweb
+      - APICODE=ibizcrm__crmweb
+      - BASEURL=ibizcrm__crmweb
+      - PLUGINBASEURL=https://npmjs.ibizlab.cn
+      - UPLOADFILEURL=/ibizutil/upload/ibizcrm
+      - DOWNLOADFILEURL=/ibizutil/download/ibizcrm
+    entrypoint: /entrypoint-waitfor.sh
+    command: crmservice:${SYSTEM_APIPORT}
+

@@ -1,0 +1,48 @@
+<template>
+  {{#if page.psSysPFPlugin}}
+      <i-biz-special-view :context="props.context" :params="props.params" :modal="props.modal" :model-data="model">
+  {{else if (in page.viewType "APPPORTALVIEW" "DEPORTALVIEW" "DEPORTALVIEW9")}}
+      <i-biz-portal-view :context="props.context" :params="props.params" :modal="props.modal" :model-data="model">
+  {{else if (in page.viewType "DEREDIRECTVIEW")}}
+      <i-biz-de-redirect-view :context="props.context" :params="props.params" :modal="props.modal" :model-data="model">
+  {{else if (in page.viewType "APPDATAUPLOADVIEW")}}
+      <i-biz-special-view :context="props.context" :params="props.params" :modal="props.modal" :model-data="model">
+  {{else if (in page.viewType "DEHTMLVIEW")}}
+      <i-biz-html-view :context="props.context" :params="props.params" :modal="props.modal" :model-data="model">
+  {{else }}
+      <i-biz-view :context="props.context" :params="props.params" :modal="props.modal" :model-data="model">
+  {{/if}}
+
+  {{#each page.psControls as |ctrl|}}
+      {{> @macro/control/include.hbs page=page ctrl=ctrl}}
+  {{/each}}
+
+  {{#if page.psSysPFPlugin}}
+      </i-biz-special-view>
+  {{else if (in page.viewType "APPPORTALVIEW" "DEPORTALVIEW" "DEPORTALVIEW9")}}
+      </i-biz-portal-view>
+  {{else if (in page.viewType "DEREDIRECTVIEW")}}
+      </i-biz-de-redirect-view>
+  {{else if (in page.viewType "APPDATAUPLOADVIEW")}}
+      </i-biz-special-view>
+  {{else if (in page.viewType "DEHTMLVIEW")}}
+      </i-biz-html-view>       
+  {{else }}
+      </i-biz-view>
+  {{/if}}
+</template>
+<script setup lang="ts">
+import { IModal } from "@ibiz-template/runtime";
+import { defineProps, withDefaults } from 'vue';
+
+interface Props {
+  model: IModel;
+  context?: IContext;
+  params?: IParams;
+  modal?: IModal;
+}
+const props = withDefaults(defineProps<Props>(),
+  {},
+)
+
+</script>

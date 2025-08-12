@@ -699,7 +699,7 @@
   } ],
   "getAllPSSubSysServiceAPIs" : [ {
     "modelref" : true,
-    "path" : "PSMODULES/ibizsysmgr/PSSUBSYSSERVICEAPIS/ibizsysmgr.json"
+    "path" : "PSMODULES/runtime/PSSUBSYSSERVICEAPIS/ibizsysmgr.json"
   } ],
   "getAllPSSysBackServices" : [ {
     "modelref" : true,
@@ -2966,7 +2966,7 @@
     } ],
     "codeName" : "crm",
     "dynaModelFilePath" : "PSMODULES/crm.json",
-    "name" : "客户关系管理",
+    "name" : "crm",
     "defaultModule" : true
   }, {
     "getAllPSCodeLists" : [ {
@@ -2986,10 +2986,6 @@
     "codeName" : "runtime",
     "dynaModelFilePath" : "PSMODULES/runtime.json",
     "name" : "系统管理"
-  }, {
-    "codeName" : "ibizsysmgr",
-    "dynaModelFilePath" : "PSMODULES/ibizsysmgr.json",
-    "name" : "ibizsysmgr"
   } ],
   "codeName" : "iBizCRM",
   "defaultLanguage" : "ZH_CN",

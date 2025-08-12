@@ -1,0 +1,40 @@
+export default {
+  codeListTag: 'crm__collection_type',
+  codeListType: 'STATIC',
+  codeName: 'crm__collection_type',
+  emptyText: '未定义',
+  appDataEntityId: 'crmweb.payee_statistic',
+  codeItems: [
+    {
+      codeName: 'item_0',
+      color: '#585AFB',
+      text: '收款计划',
+      value: '0',
+      id: 'item_0',
+    },
+    {
+      codeName: 'item_1',
+      color: '#91CC75',
+      text: '回款记录',
+      value: '1',
+      id: 'item_1',
+    },
+    {
+      codeName: 'item_2',
+      color: '#585AFB',
+      text: '收款计划',
+      value: '2',
+      id: 'item_2',
+    },
+    {
+      codeName: 'item_3',
+      color: '#585AFB',
+      text: '统计时间外',
+      value: '3',
+      id: 'item_3',
+    },
+  ],
+  enableCache: true,
+  name: '收款情况类型',
+  id: 'crmweb.crm__collection_type',
+};

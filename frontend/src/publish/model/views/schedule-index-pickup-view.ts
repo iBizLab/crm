@@ -1,0 +1,67 @@
+export default {
+  funcViewMode: 'INDEXDEPICKUPVIEW',
+  deviewCodeName: 'index_pickup_view',
+  deviewId: '0e5542bb9a5f0b942c488059681a12ce',
+  accUserMode: 2,
+  capLanguageRes: {
+    lanResTag: 'DE.LNAME.SCHEDULE',
+  },
+  caption: '日程',
+  codeName: 'schedule_index_pickup_view',
+  appDataEntityId: 'crmweb.schedule',
+  appViewEngines: [
+    {
+      engineCat: 'VIEW',
+      engineType: 'PickupView',
+      id: 'engine',
+    },
+  ],
+  controls: [
+    {
+      embeddedAppDEViewId: 'crmweb.schedule_index_pickup_dataview',
+      codeName: 'index_pickup_view_pickupviewpanel',
+      controlType: 'PICKUPVIEWPANEL',
+      appDataEntityId: 'crmweb.schedule',
+      controlParam: {
+        id: 'pickupviewpanel',
+      },
+      name: 'pickupviewpanel',
+      id: 'index_pickup_view_pickupviewpanel',
+    },
+    {
+      capLanguageRes: {
+        lanResTag: 'DE.LNAME.SCHEDULE',
+      },
+      caption: '日程',
+      codeName: 'index_pickup_view_captionbar',
+      controlType: 'CAPTIONBAR',
+      appDataEntityId: 'crmweb.schedule',
+      controlParam: {},
+      name: 'captionbar',
+      id: 'index_pickup_view_captionbar',
+    },
+  ],
+  viewLayoutPanel: {
+    layoutBodyOnly: true,
+    useDefaultLayout: true,
+    layoutPanel: true,
+    codeName: 'layoutpanel',
+    controlStyle: 'APPDEPICKUPVIEW',
+    controlType: 'VIEWLAYOUTPANEL',
+    appDataEntityId: 'crmweb.schedule',
+    controlParam: {},
+    id: 'layoutpanel',
+  },
+  title: '日程数据选择视图',
+  titleLanguageRes: {
+    lanResTag: 'PAGE.TITLE.SCHEDULE.INDEXPICKUPVIEW',
+  },
+  viewStyle: 'DEFAULT',
+  viewType: 'DEPICKUPVIEW',
+  enableDP: true,
+  showCaptionBar: false,
+  modelId: '5679212cd10cfd97b85e58ab2e9c5237',
+  modelType: 'PSAPPDEVIEW',
+  name: 'scheduleindex_pickup_view',
+  id: 'crmweb.schedule_index_pickup_view',
+};

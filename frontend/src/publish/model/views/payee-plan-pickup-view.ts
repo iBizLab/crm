@@ -1,0 +1,67 @@
+export default {
+  funcViewMode: 'PICKUPVIEW',
+  deviewCodeName: 'PickupView',
+  deviewId: '3587c389b17507772fcf7fe6a4ee82eb',
+  accUserMode: 2,
+  capLanguageRes: {
+    lanResTag: 'DE.LNAME.PAYEE_PLAN',
+  },
+  caption: '收款计划',
+  codeName: 'payee_plan_pickup_view',
+  appDataEntityId: 'crmweb.payee_plan',
+  appViewEngines: [
+    {
+      engineCat: 'VIEW',
+      engineType: 'PickupView',
+      id: 'engine',
+    },
+  ],
+  controls: [
+    {
+      embeddedAppDEViewId: 'crmweb.payee_plan_pickup_grid_view',
+      codeName: 'pickup_view_pickupviewpanel',
+      controlType: 'PICKUPVIEWPANEL',
+      appDataEntityId: 'crmweb.payee_plan',
+      controlParam: {
+        id: 'pickupviewpanel',
+      },
+      name: 'pickupviewpanel',
+      id: 'pickup_view_pickupviewpanel',
+    },
+    {
+      capLanguageRes: {
+        lanResTag: 'DE.LNAME.PAYEE_PLAN',
+      },
+      caption: '收款计划',
+      codeName: 'pickup_view_captionbar',
+      controlType: 'CAPTIONBAR',
+      appDataEntityId: 'crmweb.payee_plan',
+      controlParam: {},
+      name: 'captionbar',
+      id: 'pickup_view_captionbar',
+    },
+  ],
+  viewLayoutPanel: {
+    layoutBodyOnly: true,
+    useDefaultLayout: true,
+    layoutPanel: true,
+    codeName: 'layoutpanel',
+    controlStyle: 'APPDEPICKUPVIEW',
+    controlType: 'VIEWLAYOUTPANEL',
+    appDataEntityId: 'crmweb.payee_plan',
+    controlParam: {},
+    id: 'layoutpanel',
+  },
+  title: '收款计划数据选择视图',
+  titleLanguageRes: {
+    lanResTag: 'PAGE.TITLE.PAYEE_PLAN.PICKUPVIEW',
+  },
+  viewStyle: 'DEFAULT',
+  viewType: 'DEPICKUPVIEW',
+  enableDP: true,
+  showCaptionBar: false,
+  modelId: '01e1750649a1ca8bd08dbe28a65b3121',
+  modelType: 'PSAPPDEVIEW',
+  name: 'payee_planPickupView',
+  id: 'crmweb.payee_plan_pickup_view',
+};

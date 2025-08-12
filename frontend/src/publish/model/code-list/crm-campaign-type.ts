@@ -1,0 +1,77 @@
+export default {
+  codeListTag: 'crm__campaign_type',
+  codeListType: 'STATIC',
+  codeName: 'crm__campaign_type',
+  emptyText: '未定义',
+  codeItems: [
+    {
+      codeName: 'item_1',
+      text: '会议',
+      value: '会议',
+      id: 'item_1',
+    },
+    {
+      codeName: 'item_2',
+      text: '交易会',
+      value: '交易会',
+      id: 'item_2',
+    },
+    {
+      codeName: 'item_3',
+      text: '公开媒介',
+      value: '公开媒介',
+      id: 'item_3',
+    },
+    {
+      codeName: 'item_4',
+      text: '合作伙伴',
+      value: '合作伙伴',
+      id: 'item_4',
+    },
+    {
+      codeName: 'item_5',
+      text: '推举程序',
+      value: '推举程序',
+      id: 'item_5',
+    },
+    {
+      codeName: 'item_6',
+      text: '广告',
+      value: '广告',
+      id: 'item_6',
+    },
+    {
+      codeName: 'item_7',
+      text: '条幅广告',
+      value: '条幅广告',
+      id: 'item_7',
+    },
+    {
+      codeName: 'item_8',
+      text: '直接邮件',
+      value: '直接邮件',
+      id: 'item_8',
+    },
+    {
+      codeName: 'item_9',
+      text: '电子邮件',
+      value: '电子邮件',
+      id: 'item_9',
+    },
+    {
+      codeName: 'item_10',
+      text: '电子市场',
+      value: '电子市场',
+      id: 'item_10',
+    },
+    {
+      codeName: 'item_11',
+      text: '其它',
+      value: '其它',
+      id: 'item_11',
+    },
+  ],
+  enableCache: true,
+  name: '市场活动类型',
+  id: 'crmweb.crm__campaign_type',
+};

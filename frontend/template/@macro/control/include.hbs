@@ -1,0 +1,51 @@
+{{#if (not (in ctrl.controlType "SEARCHBAR" "CAPTIONBAR" "TOOLBAR" "DATAINFOBAR" "VIEWLAYOUTPANEL" "CONTEXTMENU"))}}
+  <template #{{name}}="slotProps">
+  {{#if ctrl.psSysPFPlugin}}
+      <i-biz-control-shell v-bind="slotProps" />
+  {{else}}
+    {{#if (eq ctrl.controlType "APPMENU")}}
+        <i-biz-app-menu-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "FORM")}}
+        <i-biz-edit-form-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "SEARCHFORM")}}
+        <i-biz-search-form-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "DATAVIEW")}}
+        <i-biz-data-view-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "CALENDAREXPBAR")}}
+        <i-biz-calendar-exp-bar-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "CHARTEXPBAR")}}
+        <i-biz-chart-exp-bar-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "DATAVIEWEXPBAR")}}
+        <i-biz-data-view-exp-bar-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "TREEEXPBAR")}}
+        <i-biz-tree-exp-bar-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "TABEXPPANEL")}}
+        <i-biz-tab-exp-panel-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "MULTIEDITVIEWPANEL")}}
+        <i-biz-m-edit-view-panel-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "PICKUPVIEWPANEL")}}
+        <i-biz-pickup-view-panel-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "REPORTPANEL")}}
+        <i-biz-report-panel-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "TREEGRID")}}
+        <i-biz-tree-grid-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "TREEGRIDEX")}}
+        <i-biz-tree-grid-ex-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "WIZARDPANEL")}}
+        <i-biz-wizard-panel-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "DRTAB")}}
+        <i-biz-dr-tab-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "DRBAR")}}
+        <i-biz-dr-bar-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "CAPTIONBAR")}}
+        <i-biz-caption-bar-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "CONTEXTMENU")}}
+        <i-biz-context-menu-control v-bind="slotProps" />
+    {{else if (eq ctrl.controlType "TREEVIEW")}}
+        <i-biz-tree-control v-bind="slotProps" />
+    {{else}}
+        <i-biz-{{spinalCase ctrl.controlType}}-control v-bind="slotProps" />
+    {{/if}}
+  {{/if}}
+  </template>
+{{/if}}

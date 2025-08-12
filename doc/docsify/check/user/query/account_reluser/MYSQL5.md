@@ -1,0 +1,37 @@
+```sql
+SELECT
+t1.`ALIAS`,
+t1.`CITY`,
+t1.`COUNTRY`,
+t1.`COUNTRY_LOCALE`,
+t1.`CREATE_MAN`,
+t1.`CREATE_TIME`,
+t1.`DOB`,
+t1.`EMAIL`,
+t1.`ENABLE`,
+t1.`FAX`,
+t1.`FIRST_NAME`,
+t1.`FULL_NAME`,
+t1.`ID`,
+t1.`IMAGE_LINK`,
+t1.`LAST_NAME`,
+t1.`LOCALE`,
+t1.`MOBILE`,
+t1.`NAME`,
+t1.`PHONE`,
+t1.`ROLE`,
+t1.`STATE`,
+t1.`STATUS`,
+t1.`STREET`,
+t1.`SYSUSERID`,
+t1.`UPDATE_MAN`,
+t1.`UPDATE_TIME`,
+t1.`USER_NAME`,
+t1.`WEBSITE`,
+t1.`ZIP`
+FROM `USER` t1 
+
+WHERE EXISTS(SELECT * FROM `RELATION` t11 
+ WHERE 
+ t1.`ID` = t11.`TARGET_ID`  AND  ( t11.`PRINCIPAL_ID` = #{ctx.datacontext.principal_id}  AND  t11.`PRINCIPAL_TYPE` = 'ACCOUNT' ) ) AND t1.ENABLE = 1
+```
