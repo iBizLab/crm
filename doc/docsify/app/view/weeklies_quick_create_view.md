@@ -18,8 +18,8 @@ ctrl.details.name.setDataValue(context.srfusername + start_date + '至' + end_da
 
 
 ### 关联界面行为
-  * [周报(WEEKLIES)](module/crm/weeklies) : [视图_取消](module/crm/weeklies#界面行为)
   * [周报(WEEKLIES)](module/crm/weeklies) : [关闭当前视图](module/crm/weeklies#界面行为)
+  * [周报(WEEKLIES)](module/crm/weeklies) : [视图_取消](module/crm/weeklies#界面行为)
 
 <script>
  const { createApp } = Vue

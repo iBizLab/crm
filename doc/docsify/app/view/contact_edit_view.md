@@ -13,10 +13,10 @@
 
 
 ### 关联界面行为
-  * [联系人(CONTACT)](module/crm/contact) : [编辑界面_退出操作](module/crm/contact#界面行为)
-  * [联系人(CONTACT)](module/crm/contact) : [保存并打开联系人主数据页面](module/crm/contact#界面行为)
-  * [联系人(CONTACT)](module/crm/contact) : [打开联系人主数据页面](module/crm/contact#界面行为)
   * [联系人(CONTACT)](module/crm/contact) : [编辑界面_保存并新建操作](module/crm/contact#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [编辑界面_退出操作](module/crm/contact#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [打开联系人主数据页面](module/crm/contact#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [保存并打开联系人主数据页面](module/crm/contact#界面行为)
   * [联系人(CONTACT)](module/crm/contact) : [编辑界面_保存并退出操作](module/crm/contact#界面行为)
 
 ### 关联视图

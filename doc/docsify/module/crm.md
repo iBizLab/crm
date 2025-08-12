@@ -1,4 +1,4 @@
-# crm(crm) <!-- {docsify-ignore-all} -->
+# 客户关系管理(crm) <!-- {docsify-ignore-all} -->
 
 
 
@@ -54,7 +54,7 @@
 
 |  中文名col200      |   代码名col150    |  备注col450  |
 |  --------   |------------ |  -------- |
-|[zoho](er/zoho)|zoho||
+|[主模型](er/zoho)|zoho||
 |[订单](er/Usr0619854844)|Usr0619854844||
 |[产品](er/product)|product||
 

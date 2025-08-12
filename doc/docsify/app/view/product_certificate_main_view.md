@@ -14,11 +14,11 @@
 
 
 ### 关联界面行为
-  * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [编辑界面_删除并退出操作](module/crm/product_certificate#界面行为)
-  * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [编辑界面_拷贝操作](module/crm/product_certificate#界面行为)
-  * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [编辑界面_退出操作](module/crm/product_certificate#界面行为)
-  * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [编辑界面_下一个记录](module/crm/product_certificate#界面行为)
   * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [编辑](module/crm/product_certificate#界面行为)
+  * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [编辑界面_下一个记录](module/crm/product_certificate#界面行为)
+  * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [编辑界面_拷贝操作](module/crm/product_certificate#界面行为)
+  * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [编辑界面_删除并退出操作](module/crm/product_certificate#界面行为)
+  * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [编辑界面_退出操作](module/crm/product_certificate#界面行为)
   * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [编辑界面_上一个记录](module/crm/product_certificate#界面行为)
 
 ### 关联视图

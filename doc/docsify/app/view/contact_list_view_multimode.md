@@ -18,10 +18,10 @@
 
 
 ### 关联界面行为
-  * [联系人(CONTACT)](module/crm/contact) : [导入备注](module/crm/contact#界面行为)
-  * [联系人(CONTACT)](module/crm/contact) : [导入数据](module/crm/contact#界面行为)
   * [联系人(CONTACT)](module/crm/contact) : [管理标签](module/crm/contact#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [导入备注](module/crm/contact#界面行为)
   * [联系人(CONTACT)](module/crm/contact) : [表格界面_新建操作](module/crm/contact#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [导入数据](module/crm/contact#界面行为)
 
 ### 关联视图
   * [标签管理(tag_mgr_grid_view)](app/view/tag_mgr_grid_view)

@@ -18,10 +18,10 @@
 
 
 ### 关联界面行为
-  * [任务&活动(TASK)](module/crm/task) : [表格界面_刷新操作](module/crm/task#界面行为)
-  * [任务&活动(TASK)](module/crm/task) : [删除](module/crm/task#界面行为)
   * [任务&活动(TASK)](module/crm/task) : [编辑活动](module/crm/task#界面行为)
   * [任务&活动(TASK)](module/crm/task) : [创建活动](module/crm/task#界面行为)
+  * [任务&活动(TASK)](module/crm/task) : [删除](module/crm/task#界面行为)
+  * [任务&活动(TASK)](module/crm/task) : [表格界面_刷新操作](module/crm/task#界面行为)
 
 ### 关联视图
   * [活动信息(task_maneuver_main_view)](app/view/task_maneuver_main_view)

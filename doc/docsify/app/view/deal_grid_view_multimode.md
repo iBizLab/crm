@@ -18,16 +18,16 @@
 
 
 ### 关联界面行为
-  * [商机(DEAL)](module/crm/deal) : [表格界面_刷新操作](module/crm/deal#界面行为)
-  * [商机(DEAL)](module/crm/deal) : [导入备注](module/crm/deal#界面行为)
-  * [商机(DEAL)](module/crm/deal) : [添加标签](module/crm/deal#界面行为)
-  * [商机(DEAL)](module/crm/deal) : [导入数据](module/crm/deal#界面行为)
-  * [商机(DEAL)](module/crm/deal) : [创建任务](module/crm/deal#界面行为)
   * [商机(DEAL)](module/crm/deal) : [移除标签](module/crm/deal#界面行为)
-  * [商机(DEAL)](module/crm/deal) : [表格界面_新建操作](module/crm/deal#界面行为)
   * [商机(DEAL)](module/crm/deal) : [批量更新](module/crm/deal#界面行为)
-  * [商机(DEAL)](module/crm/deal) : [编辑](module/crm/deal#界面行为)
+  * [商机(DEAL)](module/crm/deal) : [表格界面_刷新操作](module/crm/deal#界面行为)
   * [商机(DEAL)](module/crm/deal) : [删除](module/crm/deal#界面行为)
+  * [商机(DEAL)](module/crm/deal) : [导入备注](module/crm/deal#界面行为)
+  * [商机(DEAL)](module/crm/deal) : [表格界面_新建操作](module/crm/deal#界面行为)
+  * [商机(DEAL)](module/crm/deal) : [创建任务](module/crm/deal#界面行为)
+  * [商机(DEAL)](module/crm/deal) : [编辑](module/crm/deal#界面行为)
+  * [商机(DEAL)](module/crm/deal) : [导入数据](module/crm/deal#界面行为)
+  * [商机(DEAL)](module/crm/deal) : [添加标签](module/crm/deal#界面行为)
 
 ### 关联视图
   * [商机(deal_edit_view)](app/view/deal_edit_view)

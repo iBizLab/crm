@@ -21,12 +21,12 @@ if (panelItems.pickupname) {
 
 
 ### 关联界面行为
-  * [产品(PRODUCT)](module/crm/product) : [移除全部数据（数据选择）](module/crm/product#界面行为)
-  * [产品(PRODUCT)](module/crm/product) : [添加全部数据（数据选择）](module/crm/product#界面行为)
-  * [产品(PRODUCT)](module/crm/product) : [添加选中数据（数据选择）](module/crm/product#界面行为)
-  * [产品(PRODUCT)](module/crm/product) : [视图_取消](module/crm/product#界面行为)
   * [产品(PRODUCT)](module/crm/product) : [移除选中数据（数据选择）](module/crm/product#界面行为)
   * [产品(PRODUCT)](module/crm/product) : [视图_确定](module/crm/product#界面行为)
+  * [产品(PRODUCT)](module/crm/product) : [添加全部数据（数据选择）](module/crm/product#界面行为)
+  * [产品(PRODUCT)](module/crm/product) : [视图_取消](module/crm/product#界面行为)
+  * [产品(PRODUCT)](module/crm/product) : [移除全部数据（数据选择）](module/crm/product#界面行为)
+  * [产品(PRODUCT)](module/crm/product) : [添加选中数据（数据选择）](module/crm/product#界面行为)
 
 ### 关联视图
   * [产品(product_pickup_grid_view)](app/view/product_pickup_grid_view)

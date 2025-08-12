@@ -10,9 +10,9 @@
 
 
 ### 关联界面行为
-  * [备注(NOTE_ATTACH)](module/crm/note_attach) : [编辑界面_保存并新建操作](module/crm/note_attach#界面行为)
-  * [备注(NOTE_ATTACH)](module/crm/note_attach) : [编辑界面_保存并退出操作](module/crm/note_attach#界面行为)
   * [备注(NOTE_ATTACH)](module/crm/note_attach) : [编辑界面_退出操作](module/crm/note_attach#界面行为)
+  * [备注(NOTE_ATTACH)](module/crm/note_attach) : [编辑界面_保存并退出操作](module/crm/note_attach#界面行为)
+  * [备注(NOTE_ATTACH)](module/crm/note_attach) : [编辑界面_保存并新建操作](module/crm/note_attach#界面行为)
 
 <script>
  const { createApp } = Vue

@@ -19,11 +19,11 @@
 
 ### 关联界面行为
   * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [批量更新](module/crm/product_certificate#界面行为)
-  * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [删除](module/crm/product_certificate#界面行为)
+  * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [表格界面_新建操作](module/crm/product_certificate#界面行为)
+  * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [创建任务](module/crm/product_certificate#界面行为)
   * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [添加标签](module/crm/product_certificate#界面行为)
   * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [移除标签](module/crm/product_certificate#界面行为)
-  * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [创建任务](module/crm/product_certificate#界面行为)
-  * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [表格界面_新建操作](module/crm/product_certificate#界面行为)
+  * [产品证书(PRODUCT_CERTIFICATE)](module/crm/product_certificate) : [删除](module/crm/product_certificate#界面行为)
 
 ### 关联视图
   * [产品证书(product_certificate_edit_view)](app/view/product_certificate_edit_view)

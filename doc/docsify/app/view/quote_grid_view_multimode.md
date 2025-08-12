@@ -18,15 +18,15 @@
 
 
 ### 关联界面行为
-  * [报价(QUOTE)](module/crm/quote) : [导入数据](module/crm/quote#界面行为)
   * [报价(QUOTE)](module/crm/quote) : [创建任务](module/crm/quote#界面行为)
-  * [报价(QUOTE)](module/crm/quote) : [删除](module/crm/quote#界面行为)
-  * [报价(QUOTE)](module/crm/quote) : [导入备注](module/crm/quote#界面行为)
-  * [报价(QUOTE)](module/crm/quote) : [表格界面_新建操作](module/crm/quote#界面行为)
   * [报价(QUOTE)](module/crm/quote) : [管理标签](module/crm/quote#界面行为)
   * [报价(QUOTE)](module/crm/quote) : [添加标签](module/crm/quote#界面行为)
   * [报价(QUOTE)](module/crm/quote) : [移除标签](module/crm/quote#界面行为)
+  * [报价(QUOTE)](module/crm/quote) : [删除](module/crm/quote#界面行为)
+  * [报价(QUOTE)](module/crm/quote) : [导入备注](module/crm/quote#界面行为)
+  * [报价(QUOTE)](module/crm/quote) : [表格界面_新建操作](module/crm/quote#界面行为)
   * [报价(QUOTE)](module/crm/quote) : [批量更新](module/crm/quote#界面行为)
+  * [报价(QUOTE)](module/crm/quote) : [导入数据](module/crm/quote#界面行为)
 
 ### 关联视图
   * [报价(quote_edit_view)](app/view/quote_edit_view)

@@ -18,10 +18,10 @@
 
 
 ### 关联界面行为
-  * [商机(DEAL)](module/crm/deal) : [导入备注](module/crm/deal#界面行为)
-  * [商机(DEAL)](module/crm/deal) : [导入数据](module/crm/deal#界面行为)
   * [商机(DEAL)](module/crm/deal) : [管理标签](module/crm/deal#界面行为)
+  * [商机(DEAL)](module/crm/deal) : [导入数据](module/crm/deal#界面行为)
   * [商机(DEAL)](module/crm/deal) : [表格界面_新建操作](module/crm/deal#界面行为)
+  * [商机(DEAL)](module/crm/deal) : [导入备注](module/crm/deal#界面行为)
 
 ### 关联视图
   * [商机(deal_edit_view_origin)](app/view/deal_edit_view_origin)

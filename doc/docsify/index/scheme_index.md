@@ -227,7 +227,7 @@
 |  列名col150 |  中文名col150 | 数据类型col150 |允许为空col100 |长度col100|精度col100 | 备注col500 |
 | --------|------------ |   -------- | -------- | -------- | -------- |-------- |
 |ACCOUNT_ID|客户ID|VARCHAR|是|100|||
-|AMOUNT|金额|VARCHAR|是|200|||
+|AMOUNT|金额|DECIMAL|是||2||
 |BUSINESS_LINE|业务条线|VARCHAR|是|60|||
 |CHANGE_LOG_TIME__S|Change Log Time|DATETIME|是||||
 |CLOSING_DATE|预计成交日期|DATETIME|是||||
@@ -236,7 +236,7 @@
 |CREATE_TIME|建立时间|DATETIME|是||||
 |DEAL_NAME|商机名称|VARCHAR|是|120|||
 |DESCRIPTION|描述|TEXT|是|32000|||
-|EXPECTED_REVENUE|预期收益|VARCHAR|是|200|||
+|EXPECTED_REVENUE|预期收益|DECIMAL|是||||
 |ID<i class="fa fa-key"></i>|标识|VARCHAR|否|100|||
 |LAST_ACTIVITY_TIME|最近操作时间|DATETIME|是||||
 |LAST_ASSESS_TIME|最近评估时间|DATETIME|是||||
@@ -247,7 +247,7 @@
 |NEXT_STEP|下一步|VARCHAR|是|100|||
 |OVERALL_SALES_DURATION|总销售时间|INT|是||||
 |OWNER|所有者|VARCHAR|是|60|||
-|PROBABILITY|可能性|INT|是||||
+|PROBABILITY|可能性|DECIMAL|是||||
 |REASON_FOR_LOSS__S|丢单原因|VARCHAR|是|60|||
 |SALES_CYCLE_DURATION|销售周期的持续时间|INT|是||||
 |STAGE|阶段|VARCHAR|是|60|||
@@ -446,7 +446,7 @@
 |NAME|名称|VARCHAR|是|200|||
 |OWNER_TYPE|所属数据对象|VARCHAR|是|100|||
 |PRINCIPAL_ID|备注主体标识|VARCHAR|是|100|||
-|PRINCIPAL_NAME|备注主体名称|VARCHAR|是|100|||
+|PRINCIPAL_NAME|备注主体名称|VARCHAR|是|200|||
 |PRINCIPAL_TYPE|备注主体类型|VARCHAR|是|100|||
 |UPDATE_MAN|更新人|VARCHAR|是|100|||
 |UPDATE_TIME|更新时间|DATETIME|是||||
@@ -468,7 +468,7 @@
 |  列名col150 |  中文名col150 | 数据类型col150 |允许为空col100 |长度col100|精度col100 | 备注col500 |
 | --------|------------ |   -------- | -------- | -------- | -------- |-------- |
 |ALLOCATE_MODEL|分配模式|VARCHAR|是|100|||
-|AMOUNT|金额|DECIMAL|是||||
+|AMOUNT|金额|DECIMAL|是||2||
 |BUSINESS_LINE|业务条线|VARCHAR|是|100|||
 |CREATE_MAN|建立人|VARCHAR|是|100|||
 |CREATE_TIME|建立时间|DATETIME|是||||
@@ -613,7 +613,7 @@
 | --------|------------ |   -------- | -------- | -------- | -------- |-------- |
 |ACCOUNT_ID|客户标识|VARCHAR|是|100|||
 |ALLOCATE_MODEL|分配模式|VARCHAR|是|100|||
-|AMOUNT|订单金额|DECIMAL|是||||
+|AMOUNT|订单金额|DECIMAL|是||2||
 |BUSINESS_LINE|业务条线|VARCHAR|是|60|||
 |CLOSED_DATE|关闭日期|DATETIME|是||||
 |CREATE_MAN|建立人|VARCHAR|是|100|||
@@ -629,10 +629,10 @@
 |OWNER|所有者|VARCHAR|是|60|||
 |O_NUMBER|订单编号|VARCHAR|是|120|||
 |PID|父标识|VARCHAR|是|100|||
-|SETTLEMENT_AMOUNT|业绩结算金额|DECIMAL|是||||
-|SETTLEMENT_COST|结算成本|DECIMAL|是||||
+|SETTLEMENT_AMOUNT|业绩结算金额|DECIMAL|是||2||
+|SETTLEMENT_COST|结算成本|DECIMAL|是||2||
 |STATUS|状态|VARCHAR|是|60|||
-|TAX|税率|VARCHAR|是|2000|||
+|TAX|税率|DECIMAL|是||||
 |UPDATE_MAN|更新人|VARCHAR|是|100|||
 |UPDATE_TIME|更新时间|DATETIME|是||||
 |YEAR|所属年度|VARCHAR|是|100|||
@@ -838,7 +838,7 @@
 |  列名col150 |  中文名col150 | 数据类型col150 |允许为空col100 |长度col100|精度col100 | 备注col500 |
 | --------|------------ |   -------- | -------- | -------- | -------- |-------- |
 |CLOSED_TIME|关闭时间|DATETIME|是||||
-|COST|费用|DECIMAL|是||||
+|COST|费用|DECIMAL|是||2||
 |CREATE_MAN|建立人|VARCHAR|是|100|||
 |CREATE_TIME|建立时间|DATETIME|是||||
 |DESCRIPTION|描述|TEXT|是|32000|||

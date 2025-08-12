@@ -18,11 +18,11 @@
   * [联系人(CONTACT)](module/crm/contact) : [编辑](module/crm/contact#界面行为)
   * [联系人(CONTACT)](module/crm/contact) : [编辑界面_下一个记录](module/crm/contact#界面行为)
   * [联系人(CONTACT)](module/crm/contact) : [编辑界面_删除并退出操作](module/crm/contact#界面行为)
-  * [联系人(CONTACT)](module/crm/contact) : [编辑界面_拷贝操作](module/crm/contact#界面行为)
-  * [联系人(CONTACT)](module/crm/contact) : [编辑界面_退出操作](module/crm/contact#界面行为)
-  * [联系人(CONTACT)](module/crm/contact) : [编辑界面_上一个记录](module/crm/contact#界面行为)
   * [日程(SCHEDULE)](module/crm/schedule) : [表格界面_新建操作](module/crm/schedule#界面行为)
   * [日程(SCHEDULE)](module/crm/schedule) : [表格界面_查看操作](module/crm/schedule#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [编辑界面_退出操作](module/crm/contact#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [编辑界面_上一个记录](module/crm/contact#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [编辑界面_拷贝操作](module/crm/contact#界面行为)
 
 ### 关联视图
   * [时间轴(activitiy_time_line_view)](app/view/activitiy_time_line_view)

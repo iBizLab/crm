@@ -15,8 +15,8 @@
 
 
 ### 关联界面行为
-  * [联系人(CONTACT)](module/crm/contact) : [表格界面_编辑操作](module/crm/contact#界面行为)
   * [联系人(CONTACT)](module/crm/contact) : [表格界面_新建操作](module/crm/contact#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [表格界面_编辑操作](module/crm/contact#界面行为)
   * [联系人(CONTACT)](module/crm/contact) : [层级视图](module/crm/contact#界面行为)
 
 ### 关联视图

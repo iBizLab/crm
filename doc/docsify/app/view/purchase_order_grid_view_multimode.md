@@ -18,13 +18,13 @@
 
 
 ### 关联界面行为
-  * [采购订单(PURCHASE_ORDER)](module/crm/purchase_order) : [添加标签](module/crm/purchase_order#界面行为)
-  * [采购订单(PURCHASE_ORDER)](module/crm/purchase_order) : [导入备注](module/crm/purchase_order#界面行为)
-  * [采购订单(PURCHASE_ORDER)](module/crm/purchase_order) : [删除](module/crm/purchase_order#界面行为)
   * [采购订单(PURCHASE_ORDER)](module/crm/purchase_order) : [导入数据](module/crm/purchase_order#界面行为)
   * [采购订单(PURCHASE_ORDER)](module/crm/purchase_order) : [批量更新](module/crm/purchase_order#界面行为)
   * [采购订单(PURCHASE_ORDER)](module/crm/purchase_order) : [表格界面_新建操作](module/crm/purchase_order#界面行为)
+  * [采购订单(PURCHASE_ORDER)](module/crm/purchase_order) : [导入备注](module/crm/purchase_order#界面行为)
   * [采购订单(PURCHASE_ORDER)](module/crm/purchase_order) : [创建任务](module/crm/purchase_order#界面行为)
+  * [采购订单(PURCHASE_ORDER)](module/crm/purchase_order) : [删除](module/crm/purchase_order#界面行为)
+  * [采购订单(PURCHASE_ORDER)](module/crm/purchase_order) : [添加标签](module/crm/purchase_order#界面行为)
   * [采购订单(PURCHASE_ORDER)](module/crm/purchase_order) : [移除标签](module/crm/purchase_order#界面行为)
 
 ### 关联视图

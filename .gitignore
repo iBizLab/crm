@@ -1,0 +1,13 @@
+*volumes
+.settings
+*dist
+*.project
+*.classpath
+*.factorypath
+.history
+.vscode
+.idea
+**.iml
+*.jar
+*.log
+.DS_Store

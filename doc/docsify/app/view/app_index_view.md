@@ -8,23 +8,23 @@
 
 
 ### 关联界面行为
-  * [用户(USER)](module/crm/user) : [表格界面_新建操作](module/crm/user#界面行为)
-  * [用户(USER)](module/crm/user) : [修改密码](module/crm/user#界面行为)
-  * [订单(PROJECT)](module/crm/project) : [导航签单情况统计表格视图(只传搜索表单参数)](module/crm/project#界面行为)
-  * [用户(USER)](module/crm/user) : [表格界面_拷贝操作](module/crm/user#界面行为)
-  * [用户(USER)](module/crm/user) : [新建用户](module/crm/user#界面行为)
   * [客户(ACCOUNT)](module/crm/account) : [过滤](module/crm/account#界面行为)
-  * [用户(USER)](module/crm/user) : [表格界面_删除操作](module/crm/user#界面行为)
-  * [用户(USER)](module/crm/user) : [表格界面_导出数据模型](module/crm/user#界面行为)
+  * [用户(USER)](module/crm/user) : [表格界面_新建操作](module/crm/user#界面行为)
   * [线索(LEAD)](module/crm/lead) : [过滤](module/crm/lead#界面行为)
   * [收款情况统计(PAYEE_STATISTIC)](module/crm/payee_statistic) : [导航收款统计表格视图(只传搜索表单参数)](module/crm/payee_statistic#界面行为)
   * [用户(USER)](module/crm/user) : [表格界面_编辑操作](module/crm/user#界面行为)
+  * [用户(USER)](module/crm/user) : [表格界面_拷贝操作](module/crm/user#界面行为)
+  * [用户(USER)](module/crm/user) : [表格界面_导出数据模型](module/crm/user#界面行为)
   * [用户(USER)](module/crm/user) : [表格界面_帮助操作](module/crm/user#界面行为)
+  * [用户(USER)](module/crm/user) : [新建用户](module/crm/user#界面行为)
+  * [订单(PROJECT)](module/crm/project) : [导航签单情况统计表格视图(只传搜索表单参数)](module/crm/project#界面行为)
+  * [用户(USER)](module/crm/user) : [表格界面_删除操作](module/crm/user#界面行为)
+  * [用户(USER)](module/crm/user) : [修改密码](module/crm/user#界面行为)
 
 ### 关联界面逻辑
+  * [商机(DEAL)](module/crm/deal) : [导航（全部商机含查询条件）](module/crm/deal/uilogic/all_deal_with_query)
   * [商机(DEAL)](module/crm/deal) : [导航到表格视图（图表导航）](module/crm/deal/uilogic/exp_to_gridview)
   * [收款情况统计(PAYEE_STATISTIC)](module/crm/payee_statistic) : [导航到表格视图（统计图表导航）](module/crm/payee_statistic/uilogic/exp_to_gridview)
-  * [商机(DEAL)](module/crm/deal) : [导航（全部商机含查询条件）](module/crm/deal/uilogic/all_deal_with_query)
 
 ### 关联视图
   * [客户(account_data_view_multimode)](app/view/account_data_view_multimode)
@@ -99,15 +99,9 @@
   * [解决方案(solution_grid_view_multimode)](app/view/solution_grid_view_multimode)
   * [解决方案(solution_list_view_multimode)](app/view/solution_list_view_multimode)
   * [解决方案(solution_tab_search_view)](app/view/solution_tab_search_view)
-  * [全部活动(task_all_maneuver_tab_search_view)](app/view/task_all_maneuver_tab_search_view)
-  * [全部任务(task_all_task_grid_view)](app/view/task_all_task_grid_view)
-  * [全部任务(task_all_task_kanban_view)](app/view/task_all_task_kanban_view)
-  * [全部任务(task_all_task_tab_search_view)](app/view/task_all_task_tab_search_view)
   * [全部活动(task_maneuver_tree_exp_view)](app/view/task_maneuver_tree_exp_view)
   * [任务&活动(task_my_activity_kanban_view)](app/view/task_my_activity_kanban_view)
-  * [我的全部任务(task_my_all_grid_view)](app/view/task_my_all_grid_view)
   * [我的全部任务(task_my_all_tab_search_view)](app/view/task_my_all_tab_search_view)
-  * [我得全部任务(task_my_all_task_kanban_view)](app/view/task_my_all_task_kanban_view)
   * [我的活动(task_my_maneuver_grid_view)](app/view/task_my_maneuver_grid_view)
   * [我的活动(task_my_maneuver_tab_search_view)](app/view/task_my_maneuver_tab_search_view)
   * [待办任务(task_my_todo_grid_view)](app/view/task_my_todo_grid_view)

@@ -15,9 +15,9 @@
 
 
 ### 关联界面行为
-  * [周报(WEEKLIES)](module/crm/weeklies) : [表格界面_删除操作](module/crm/weeklies#界面行为)
-  * [周报(WEEKLIES)](module/crm/weeklies) : [新建周报](module/crm/weeklies#界面行为)
   * [周报(WEEKLIES)](module/crm/weeklies) : [编辑界面_打印操作](module/crm/weeklies#界面行为)
+  * [周报(WEEKLIES)](module/crm/weeklies) : [新建周报](module/crm/weeklies#界面行为)
+  * [周报(WEEKLIES)](module/crm/weeklies) : [表格界面_删除操作](module/crm/weeklies#界面行为)
 
 ### 关联视图
   * [周报(weeklies_edit_view)](app/view/weeklies_edit_view)
