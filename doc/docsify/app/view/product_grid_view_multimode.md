@@ -18,15 +18,15 @@
 
 
 ### 关联界面行为
-  * [产品(PRODUCT)](module/crm/product) : [批量更新](module/crm/product#界面行为)
-  * [产品(PRODUCT)](module/crm/product) : [编辑](module/crm/product#界面行为)
   * [产品(PRODUCT)](module/crm/product) : [添加标签](module/crm/product#界面行为)
-  * [产品(PRODUCT)](module/crm/product) : [删除](module/crm/product#界面行为)
+  * [产品(PRODUCT)](module/crm/product) : [表格界面_新建操作](module/crm/product#界面行为)
+  * [产品(PRODUCT)](module/crm/product) : [批量更新](module/crm/product#界面行为)
   * [产品(PRODUCT)](module/crm/product) : [导入数据](module/crm/product#界面行为)
   * [产品(PRODUCT)](module/crm/product) : [导入备注](module/crm/product#界面行为)
-  * [产品(PRODUCT)](module/crm/product) : [表格界面_新建操作](module/crm/product#界面行为)
   * [产品(PRODUCT)](module/crm/product) : [创建任务](module/crm/product#界面行为)
+  * [产品(PRODUCT)](module/crm/product) : [编辑](module/crm/product#界面行为)
   * [产品(PRODUCT)](module/crm/product) : [移除标签](module/crm/product#界面行为)
+  * [产品(PRODUCT)](module/crm/product) : [删除](module/crm/product#界面行为)
 
 ### 关联视图
   * [产品信息(product_main_view)](app/view/product_main_view)

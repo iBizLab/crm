@@ -18,10 +18,10 @@
 
 
 ### 关联界面行为
-  * [市场活动(CAMPAIGN)](module/crm/campaign) : [管理标签](module/crm/campaign#界面行为)
   * [市场活动(CAMPAIGN)](module/crm/campaign) : [表格界面_新建操作](module/crm/campaign#界面行为)
-  * [市场活动(CAMPAIGN)](module/crm/campaign) : [导入数据](module/crm/campaign#界面行为)
   * [市场活动(CAMPAIGN)](module/crm/campaign) : [导入备注](module/crm/campaign#界面行为)
+  * [市场活动(CAMPAIGN)](module/crm/campaign) : [导入数据](module/crm/campaign#界面行为)
+  * [市场活动(CAMPAIGN)](module/crm/campaign) : [管理标签](module/crm/campaign#界面行为)
 
 ### 关联视图
   * [标签管理(tag_mgr_grid_view)](app/view/tag_mgr_grid_view)

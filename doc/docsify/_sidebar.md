@@ -1,6 +1,7 @@
 * <i class="fa fa-th-list"></i> 系统模块
-  * [crm](module/crm)
+  * [客户关系管理](module/crm)
   * [系统管理](module/runtime)
+  * [ibizsysmgr](module/ibizsysmgr)
 
 
 * <i class="fa-brands fa-gg"></i> 服务接口

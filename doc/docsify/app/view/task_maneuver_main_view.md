@@ -15,11 +15,11 @@
 
 
 ### 关联界面行为
-  * [任务&活动(TASK)](module/crm/task) : [编辑界面_退出操作](module/crm/task#界面行为)
-  * [任务&活动(TASK)](module/crm/task) : [编辑界面_下一个记录](module/crm/task#界面行为)
-  * [任务&活动(TASK)](module/crm/task) : [编辑界面_上一个记录](module/crm/task#界面行为)
-  * [任务&活动(TASK)](module/crm/task) : [活动设为任务](module/crm/task#界面行为)
   * [任务&活动(TASK)](module/crm/task) : [编辑界面_删除并退出操作](module/crm/task#界面行为)
+  * [任务&活动(TASK)](module/crm/task) : [编辑界面_上一个记录](module/crm/task#界面行为)
+  * [任务&活动(TASK)](module/crm/task) : [编辑界面_下一个记录](module/crm/task#界面行为)
+  * [任务&活动(TASK)](module/crm/task) : [活动设为任务](module/crm/task#界面行为)
+  * [任务&活动(TASK)](module/crm/task) : [编辑界面_退出操作](module/crm/task#界面行为)
   * [任务&活动(TASK)](module/crm/task) : [编辑活动](module/crm/task#界面行为)
 
 ### 关联视图

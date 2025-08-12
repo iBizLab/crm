@@ -18,16 +18,16 @@
 
 
 ### 关联界面行为
-  * [客户(ACCOUNT)](module/crm/account) : [添加标签](module/crm/account#界面行为)
-  * [客户(ACCOUNT)](module/crm/account) : [编辑](module/crm/account#界面行为)
   * [客户(ACCOUNT)](module/crm/account) : [导入数据](module/crm/account#界面行为)
-  * [客户(ACCOUNT)](module/crm/account) : [删除](module/crm/account#界面行为)
   * [客户(ACCOUNT)](module/crm/account) : [表格界面_刷新操作](module/crm/account#界面行为)
   * [客户(ACCOUNT)](module/crm/account) : [表格界面_新建操作](module/crm/account#界面行为)
   * [客户(ACCOUNT)](module/crm/account) : [导入备注](module/crm/account#界面行为)
   * [客户(ACCOUNT)](module/crm/account) : [创建任务](module/crm/account#界面行为)
-  * [客户(ACCOUNT)](module/crm/account) : [移除标签](module/crm/account#界面行为)
+  * [客户(ACCOUNT)](module/crm/account) : [编辑](module/crm/account#界面行为)
   * [客户(ACCOUNT)](module/crm/account) : [批量更新](module/crm/account#界面行为)
+  * [客户(ACCOUNT)](module/crm/account) : [删除](module/crm/account#界面行为)
+  * [客户(ACCOUNT)](module/crm/account) : [添加标签](module/crm/account#界面行为)
+  * [客户(ACCOUNT)](module/crm/account) : [移除标签](module/crm/account#界面行为)
 
 ### 关联视图
   * [客户(account_edit_view)](app/view/account_edit_view)

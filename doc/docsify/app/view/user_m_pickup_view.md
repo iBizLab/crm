@@ -21,12 +21,12 @@ if (panelItems.pickupname) {
 
 
 ### 关联界面行为
-  * [用户(USER)](module/crm/user) : [添加全部数据（数据选择）](module/crm/user#界面行为)
-  * [用户(USER)](module/crm/user) : [移除全部数据（数据选择）](module/crm/user#界面行为)
-  * [用户(USER)](module/crm/user) : [移除选中数据（数据选择）](module/crm/user#界面行为)
-  * [用户(USER)](module/crm/user) : [添加选中数据（数据选择）](module/crm/user#界面行为)
-  * [用户(USER)](module/crm/user) : [视图_确定](module/crm/user#界面行为)
   * [用户(USER)](module/crm/user) : [视图_取消](module/crm/user#界面行为)
+  * [用户(USER)](module/crm/user) : [添加选中数据（数据选择）](module/crm/user#界面行为)
+  * [用户(USER)](module/crm/user) : [移除选中数据（数据选择）](module/crm/user#界面行为)
+  * [用户(USER)](module/crm/user) : [添加全部数据（数据选择）](module/crm/user#界面行为)
+  * [用户(USER)](module/crm/user) : [视图_确定](module/crm/user#界面行为)
+  * [用户(USER)](module/crm/user) : [移除全部数据（数据选择）](module/crm/user#界面行为)
 
 ### 关联视图
   * [用户(user_pickup_grid_view)](app/view/user_pickup_grid_view)

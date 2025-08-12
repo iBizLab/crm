@@ -14,8 +14,8 @@
 
 ### 关联界面行为
   * [采购订单(PURCHASE_ORDER)](module/crm/purchase_order) : [编辑界面_保存并新建操作](module/crm/purchase_order#界面行为)
-  * [采购订单(PURCHASE_ORDER)](module/crm/purchase_order) : [编辑界面_退出操作](module/crm/purchase_order#界面行为)
   * [采购订单(PURCHASE_ORDER)](module/crm/purchase_order) : [编辑界面_保存并退出操作](module/crm/purchase_order#界面行为)
+  * [采购订单(PURCHASE_ORDER)](module/crm/purchase_order) : [编辑界面_退出操作](module/crm/purchase_order#界面行为)
 
 <script>
  const { createApp } = Vue

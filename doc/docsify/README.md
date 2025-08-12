@@ -5,8 +5,9 @@
 
 |    模块名称col200   | 代码名col200      |  模型组col200   |   备注col400  |
 | --------  |------------| -----    |-------- |
-|[crm](module/crm)|crm|||
+|[客户关系管理](module/crm)|crm|||
 |[系统管理](module/runtime)|runtime|||
+|[ibizsysmgr](module/ibizsysmgr)|ibizsysmgr|||
 
 
 #### 服务接口

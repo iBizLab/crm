@@ -15,10 +15,10 @@
 
 
 ### 关联界面行为
-  * [日程(SCHEDULE)](module/crm/schedule) : [（通用）预约通话](module/crm/schedule#界面行为)
   * [日程(SCHEDULE)](module/crm/schedule) : [（通用）创建任务](module/crm/schedule#界面行为)
-  * [日程(SCHEDULE)](module/crm/schedule) : [（通用）创建会议](module/crm/schedule#界面行为)
   * [日程(SCHEDULE)](module/crm/schedule) : [（通用）记录通话](module/crm/schedule#界面行为)
+  * [日程(SCHEDULE)](module/crm/schedule) : [（通用）创建会议](module/crm/schedule#界面行为)
+  * [日程(SCHEDULE)](module/crm/schedule) : [（通用）预约通话](module/crm/schedule#界面行为)
 
 ### 关联视图
   * [通话(call_edit_view)](app/view/call_edit_view)

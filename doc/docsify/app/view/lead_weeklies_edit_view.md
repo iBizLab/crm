@@ -10,9 +10,9 @@
 
 
 ### 关联界面行为
-  * [线索(LEAD)](module/crm/lead) : [编辑界面_退出操作](module/crm/lead#界面行为)
-  * [线索(LEAD)](module/crm/lead) : [编辑界面_保存并退出操作](module/crm/lead#界面行为)
   * [线索(LEAD)](module/crm/lead) : [编辑界面_保存并新建操作](module/crm/lead#界面行为)
+  * [线索(LEAD)](module/crm/lead) : [编辑界面_保存并退出操作](module/crm/lead#界面行为)
+  * [线索(LEAD)](module/crm/lead) : [编辑界面_退出操作](module/crm/lead#界面行为)
 
 ### 关联视图
   * [客户(account_pickup_view)](app/view/account_pickup_view)

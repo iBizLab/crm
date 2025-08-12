@@ -11,14 +11,14 @@
 
 
 ### 关联界面行为
-  * [客户(ACCOUNT)](module/crm/account) : [打开合并编辑视图](module/crm/account#界面行为)
-  * [客户(ACCOUNT)](module/crm/account) : [编辑界面_退出操作](module/crm/account#界面行为)
-  * [客户(ACCOUNT)](module/crm/account) : [编辑](module/crm/account#界面行为)
-  * [客户(ACCOUNT)](module/crm/account) : [编辑界面_删除并退出操作](module/crm/account#界面行为)
-  * [客户(ACCOUNT)](module/crm/account) : [编辑界面_下一个记录](module/crm/account#界面行为)
   * [客户(ACCOUNT)](module/crm/account) : [编辑界面_上一个记录](module/crm/account#界面行为)
+  * [客户(ACCOUNT)](module/crm/account) : [编辑界面_下一个记录](module/crm/account#界面行为)
+  * [客户(ACCOUNT)](module/crm/account) : [编辑界面_退出操作](module/crm/account#界面行为)
+  * [客户(ACCOUNT)](module/crm/account) : [编辑界面_删除并退出操作](module/crm/account#界面行为)
   * [日程(SCHEDULE)](module/crm/schedule) : [表格界面_新建操作](module/crm/schedule#界面行为)
   * [日程(SCHEDULE)](module/crm/schedule) : [表格界面_查看操作](module/crm/schedule#界面行为)
+  * [客户(ACCOUNT)](module/crm/account) : [编辑](module/crm/account#界面行为)
+  * [客户(ACCOUNT)](module/crm/account) : [打开合并编辑视图](module/crm/account#界面行为)
 
 ### 关联视图
   * [附件(account_attachment_view)](app/view/account_attachment_view)

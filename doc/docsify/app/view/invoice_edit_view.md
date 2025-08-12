@@ -13,8 +13,8 @@
 
 
 ### 关联界面行为
-  * [发货单(INVOICE)](module/crm/invoice) : [编辑界面_退出操作](module/crm/invoice#界面行为)
   * [发货单(INVOICE)](module/crm/invoice) : [编辑界面_保存并退出操作](module/crm/invoice#界面行为)
+  * [发货单(INVOICE)](module/crm/invoice) : [编辑界面_退出操作](module/crm/invoice#界面行为)
   * [发货单(INVOICE)](module/crm/invoice) : [编辑界面_保存并新建操作](module/crm/invoice#界面行为)
 
 <script>

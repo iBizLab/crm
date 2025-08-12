@@ -13,9 +13,9 @@
 
 
 ### 关联界面行为
-  * [解决方案(SOLUTION)](module/crm/solution) : [编辑界面_保存并新建操作](module/crm/solution#界面行为)
-  * [解决方案(SOLUTION)](module/crm/solution) : [编辑界面_保存并退出操作](module/crm/solution#界面行为)
   * [解决方案(SOLUTION)](module/crm/solution) : [编辑界面_退出操作](module/crm/solution#界面行为)
+  * [解决方案(SOLUTION)](module/crm/solution) : [编辑界面_保存并退出操作](module/crm/solution#界面行为)
+  * [解决方案(SOLUTION)](module/crm/solution) : [编辑界面_保存并新建操作](module/crm/solution#界面行为)
 
 <script>
  const { createApp } = Vue

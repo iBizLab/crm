@@ -16,8 +16,8 @@
 
 
 ### 关联界面行为
-  * [备注(NOTE_ATTACH)](module/crm/note_attach) : [删除评论](module/crm/note_attach#界面行为)
   * [备注(NOTE_ATTACH)](module/crm/note_attach) : [编辑](module/crm/note_attach#界面行为)
+  * [备注(NOTE_ATTACH)](module/crm/note_attach) : [删除评论](module/crm/note_attach#界面行为)
 
 <script>
  const { createApp } = Vue

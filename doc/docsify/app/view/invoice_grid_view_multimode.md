@@ -18,14 +18,14 @@
 
 
 ### 关联界面行为
+  * [发货单(INVOICE)](module/crm/invoice) : [批量更新](module/crm/invoice#界面行为)
+  * [发货单(INVOICE)](module/crm/invoice) : [删除](module/crm/invoice#界面行为)
+  * [发货单(INVOICE)](module/crm/invoice) : [添加标签](module/crm/invoice#界面行为)
   * [发货单(INVOICE)](module/crm/invoice) : [表格界面_新建操作](module/crm/invoice#界面行为)
   * [发货单(INVOICE)](module/crm/invoice) : [导入数据](module/crm/invoice#界面行为)
   * [发货单(INVOICE)](module/crm/invoice) : [移除标签](module/crm/invoice#界面行为)
   * [发货单(INVOICE)](module/crm/invoice) : [导入备注](module/crm/invoice#界面行为)
-  * [发货单(INVOICE)](module/crm/invoice) : [批量更新](module/crm/invoice#界面行为)
   * [发货单(INVOICE)](module/crm/invoice) : [创建任务](module/crm/invoice#界面行为)
-  * [发货单(INVOICE)](module/crm/invoice) : [添加标签](module/crm/invoice#界面行为)
-  * [发货单(INVOICE)](module/crm/invoice) : [删除](module/crm/invoice#界面行为)
 
 ### 关联视图
   * [发货单(invoice_edit_view)](app/view/invoice_edit_view)

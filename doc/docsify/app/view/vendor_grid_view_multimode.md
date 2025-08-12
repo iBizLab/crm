@@ -18,14 +18,14 @@
 
 
 ### 关联界面行为
-  * [供应商(VENDOR)](module/crm/vendor) : [批量更新](module/crm/vendor#界面行为)
   * [供应商(VENDOR)](module/crm/vendor) : [移除标签](module/crm/vendor#界面行为)
+  * [供应商(VENDOR)](module/crm/vendor) : [删除](module/crm/vendor#界面行为)
   * [供应商(VENDOR)](module/crm/vendor) : [导入备注](module/crm/vendor#界面行为)
-  * [供应商(VENDOR)](module/crm/vendor) : [创建任务](module/crm/vendor#界面行为)
-  * [供应商(VENDOR)](module/crm/vendor) : [添加标签](module/crm/vendor#界面行为)
   * [供应商(VENDOR)](module/crm/vendor) : [表格界面_新建操作](module/crm/vendor#界面行为)
   * [供应商(VENDOR)](module/crm/vendor) : [导入数据](module/crm/vendor#界面行为)
-  * [供应商(VENDOR)](module/crm/vendor) : [删除](module/crm/vendor#界面行为)
+  * [供应商(VENDOR)](module/crm/vendor) : [添加标签](module/crm/vendor#界面行为)
+  * [供应商(VENDOR)](module/crm/vendor) : [批量更新](module/crm/vendor#界面行为)
+  * [供应商(VENDOR)](module/crm/vendor) : [创建任务](module/crm/vendor#界面行为)
 
 ### 关联视图
   * [添加标签(tag_add_tag)](app/view/tag_add_tag)

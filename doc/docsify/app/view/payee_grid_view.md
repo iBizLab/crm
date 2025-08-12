@@ -18,10 +18,10 @@
   * [收款记录(PAYEE)](module/crm/payee) : [表格界面_刷新操作](module/crm/payee#界面行为)
   * [收款记录(PAYEE)](module/crm/payee) : [移除标签](module/crm/payee#界面行为)
   * [收款记录(PAYEE)](module/crm/payee) : [批量更新](module/crm/payee#界面行为)
-  * [收款记录(PAYEE)](module/crm/payee) : [添加标签](module/crm/payee#界面行为)
-  * [收款记录(PAYEE)](module/crm/payee) : [打开收款记录向导视图](module/crm/payee#界面行为)
   * [收款记录(PAYEE)](module/crm/payee) : [删除](module/crm/payee#界面行为)
+  * [收款记录(PAYEE)](module/crm/payee) : [添加标签](module/crm/payee#界面行为)
   * [收款记录(PAYEE)](module/crm/payee) : [表格界面_新建操作](module/crm/payee#界面行为)
+  * [收款记录(PAYEE)](module/crm/payee) : [打开收款记录向导视图](module/crm/payee#界面行为)
   * [收款记录(PAYEE)](module/crm/payee) : [创建任务](module/crm/payee#界面行为)
 
 ### 关联视图

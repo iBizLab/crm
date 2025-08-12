@@ -18,16 +18,16 @@
 
 
 ### 关联界面行为
-  * [联系人(CONTACT)](module/crm/contact) : [移除标签](module/crm/contact#界面行为)
-  * [联系人(CONTACT)](module/crm/contact) : [表格界面_新建操作](module/crm/contact#界面行为)
-  * [联系人(CONTACT)](module/crm/contact) : [导入数据](module/crm/contact#界面行为)
-  * [联系人(CONTACT)](module/crm/contact) : [编辑](module/crm/contact#界面行为)
   * [联系人(CONTACT)](module/crm/contact) : [批量更新](module/crm/contact#界面行为)
-  * [联系人(CONTACT)](module/crm/contact) : [删除](module/crm/contact#界面行为)
-  * [联系人(CONTACT)](module/crm/contact) : [表格界面_刷新操作](module/crm/contact#界面行为)
-  * [联系人(CONTACT)](module/crm/contact) : [创建任务](module/crm/contact#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [移除标签](module/crm/contact#界面行为)
   * [联系人(CONTACT)](module/crm/contact) : [添加标签](module/crm/contact#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [表格界面_刷新操作](module/crm/contact#界面行为)
   * [联系人(CONTACT)](module/crm/contact) : [导入备注](module/crm/contact#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [编辑](module/crm/contact#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [创建任务](module/crm/contact#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [导入数据](module/crm/contact#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [表格界面_新建操作](module/crm/contact#界面行为)
+  * [联系人(CONTACT)](module/crm/contact) : [删除](module/crm/contact#界面行为)
 
 ### 关联视图
   * [联系人(contact_edit_view)](app/view/contact_edit_view)
