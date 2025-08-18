@@ -141,7 +141,7 @@ $ docker compose -f docker-compose.yml --env-file .env up -d
 
 我们非常欢迎社区的贡献！如果您有兴趣，请通过以下方式参与：
 
-* **报告 Bug**：如果您发现了任何问题，请通过 GITHUB Issues提交。  
+* **报告 Bug**：如果您发现了任何问题，请通过 GITEE Issues提交。  
 * **提交建议**：欢迎提出任何关于新功能或改进的建议。  
 * **提交代码**：请遵循我们的贡献指南，提交 Pull Request。
 
