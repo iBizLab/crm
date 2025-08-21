@@ -2,7 +2,7 @@
 
 ## 项目背景
 
-采用 Groovy 语言，将传统的 Controller/Service/Repository 模板演变为每个实体对应一个 Groovy 控制类，发布 DTO 与 Runtime 控制逻辑，底层基于以SpringBoot/SpringCloud为内核 [ibiz-service-runner](https://gitee.com/ibizlab-cloud/ibiz-service-runner) 引擎，该引擎来自 iBizLab 技术中台，支持全动态解释执行与插件化扩展。
+采用 Groovy 语言，将传统的 Controller/Service/Repository 模板演变为每个实体对应一个 Groovy 控制类，发布 DTO 与 Runtime 控制逻辑，底层基于以SpringBoot/SpringCloud为内核 [ibiz-service-runner](https://gitee.com/ibizlab-cloud/ibiz-service-hub) 引擎，该引擎来自 iBizLab 技术中台，支持全动态解释执行与插件化扩展。
 
 通过引入 Groovy 动态语言特性，结合 `ibiz-service-runner` 动态执行引擎，极大简化了代码结构，提高了开发效率与可维护性。同时解决了 service-runner 不便调试的问题。
 
@@ -167,7 +167,7 @@ mvn package -Pruntime
 
 ## 动态执行引擎：`ibiz-service-runner`
 
-`ibiz-service-runner` 是基于 **iBiz 技术中台** 的全动态解释型业务引擎，具备以下核心能力：
+[ibiz-service-runner](https://gitee.com/ibizlab-cloud/ibiz-service-hub) 是基于 **iBiz 技术中台** 的全动态解释型业务引擎，具备以下核心能力：
 
 ### 🌐 全动态解释执行
 
