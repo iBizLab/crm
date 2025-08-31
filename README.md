@@ -113,6 +113,26 @@ $ docker compose -f docker-compose.yml --env-file .env up -d
 > # docker compose -f docker-compose-arm64.yml --env-file .share up -d
 > ```
 
+## 🛠 定制开发
+
+如果您需要在 iBizCRM 的基础上进行 二次开发或行业定制，推荐使用 [iBizModeling](https://modeling.ibizlab.cn/) 在线实验室：
+
+![img](doc/images/crmbuild.gif)
+
+🔹 在线创建和编辑模型，无需本地安装
+
+🔹 ModelingIDE中可视化建模配置，一键发布新模型
+
+🔹 CRM系统自动加载模型变更，实时解释执行，支持快速验证
+
+👉 [点击这里申请在线实验室](https://open.ibizlab.cn/plmweb/#/-/index/-/workspace_tab_exp_view/srfnav=oss/recent_oss_tree_exp_view/-/route-modal/dev_lab_apply_apply_edit_view/-)  免费使用
+
+当然您也可以直接基于代码进行二次开发，代码由iBizCodeGenerator基于模型发布生成，支持高开修定
+
+🔹 前端代码 👉[frontend](frontend) Vue 全家桶（Vue3、Vite、Element Plus、TSX），基于[iBizAppHub](https://github.com/ibizlab-cloud/ibiz-app-hub)开源技术框架实现
+
+🔹 后台代码 👉[backend](backend) Springboot + Groovy微服务程序，基于[iBizServiceHub](https://github.com/ibizlab-cloud/ibiz-service-hub)开源技术框架实现
+
 ## 📸 演示图
 
 ![img](doc/images/0.png)
